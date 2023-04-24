@@ -1,0 +1,15 @@
+﻿agotcch_disable_pregnancy = {
+	add_character_modifier = {
+		modifier = agotcch_prevent_pregnancy_modifier
+		years = 1
+	}
+	
+	if = {
+		limit = {
+			is_pregnant = yes
+		}
+
+		remove_trait = pregnant
+		end_pregnancy = yes
+	}
+}

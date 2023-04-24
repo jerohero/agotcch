@@ -1,0 +1,359 @@
+﻿####################################################
+####				HOUSE STARK					####
+####################################################
+
+# Robb, Sansa, Arya, Bran, Rickon
+
+agotcch_create_robb_stark_effect = {
+	create_character = {
+		age = 0
+		name = "Robb"
+		father = character:Stark_3
+		mother = character:Tully_4
+		gender = male
+		faith = faith:old_gods_south
+		culture = culture:northman	
+		dynasty = father
+
+		trait = bossy
+
+		save_scope_as = agotcch_baby_robb_stark
+	}
+	hidden_effect = {
+		scope:agotcch_baby_robb_stark = {
+			copy_inheritable_appearance_from = character:Stark_6
+			save_scope_as = latest_child
+		}
+	}
+}
+
+agotcch_create_sansa_stark_effect = {
+	create_character = {
+		age = 0
+		name = "Sansa"
+		father = character:Stark_3
+		mother = character:Tully_4
+		gender = female
+		faith = faith:old_gods_south
+		culture = culture:northman
+		dynasty = father
+		
+		trait = charming
+
+		save_scope_as = agotcch_baby_sansa_stark
+	}
+	hidden_effect = {
+		scope:agotcch_baby_sansa_stark = {
+			copy_inheritable_appearance_from = character:Stark_7
+		}
+	}
+}
+
+agotcch_create_arya_stark_effect = {
+	create_character = {
+		age = 0
+		name = "Arya"
+		father = character:Stark_3
+		mother = character:Tully_4
+		gender = female
+		faith = faith:old_gods_south
+		culture = culture:northman
+		dynasty = father
+
+		trait = rowdy
+
+		save_scope_as = agotcch_baby_arya_stark
+	}
+	hidden_effect = {
+		scope:agotcch_baby_arya_stark = {
+			copy_inheritable_appearance_from = character:Stark_9
+		}
+	}
+}
+
+agotcch_create_bran_stark_effect = {
+	create_character = {
+		age = 0
+		name = "Bran"
+		father = character:Stark_3
+		mother = character:Tully_4
+		gender = male
+		faith = faith:old_gods_south
+		culture = culture:northman
+		dynasty = father
+
+		trait = curious
+
+		save_scope_as = agotcch_baby_bran_stark
+	}
+	hidden_effect = {
+		scope:agotcch_baby_bran_stark = {
+			copy_inheritable_appearance_from = character:8059
+		}
+	}
+}
+
+agotcch_create_rickon_stark_effect = {
+	create_character = {
+		age = 0
+		name = "Rickon"
+		father = character:Stark_3
+		mother = character:Tully_4
+		gender = male
+		faith = faith:old_gods_south
+		culture = culture:northman
+		dynasty = father
+
+		trait = rowdy
+
+		save_scope_as = agotcch_baby_rickon_stark
+	}
+	hidden_effect = {
+		scope:agotcch_baby_rickon_stark = {
+			copy_inheritable_appearance_from = character:Stark_11
+		}
+	}
+}
+
+####################################################
+####		      HOUSE BARATHEON		       	####
+####################################################
+
+# Joffrey, Myrcella, Tommen
+# Gendry
+# Shireen
+
+agotcch_create_joffrey_baratheon_effect = {
+	create_character = {
+		age = 0
+		name = "Joffrey"
+		father = character:Baratheon_2
+		mother = character:Lannister_6
+		real_father = character:Lannister_7
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:crownlander
+		dynasty = father
+
+		trait = bossy
+		trait = beauty_good_2
+
+		save_scope_as = agotcch_baby_joffrey_baratheon
+	}
+	hidden_effect = {
+		scope:agotcch_baby_joffrey_baratheon = {
+			add_character_flag = flag_secret_bastard
+			copy_inheritable_appearance_from = character:Baratheon_5
+		}
+	}
+}
+
+agotcch_create_myrcella_baratheon_effect = {
+	create_character = {
+		age = 0
+		name = "Myrcella"
+		father = character:Baratheon_2
+		mother = character:Lannister_6
+		real_father = character:Lannister_7
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:crownlander
+		dynasty = father
+
+		trait = charming
+		trait = beauty_good_2
+		trait = intellect_good_1
+
+		save_scope_as = agotcch_baby_myrcella_baratheon
+	}
+	hidden_effect = {
+		scope:agotcch_baby_myrcella_baratheon = {
+			add_character_flag = flag_secret_bastard
+			copy_inheritable_appearance_from = character:Baratheon_6
+		}
+	}
+}
+
+agotcch_create_tommen_baratheon_effect = {
+	create_character = {
+		age = 0
+		name = "Tommen"
+		father = character:Baratheon_2
+		mother = character:Lannister_6
+		real_father = character:Lannister_7
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:crownlander
+		dynasty = father
+
+		trait = pensive
+
+		save_scope_as = agotcch_baby_tommen_baratheon
+	}
+	hidden_effect = {
+		scope:agotcch_baby_tommen_baratheon = {
+			add_character_flag = flag_secret_bastard
+			copy_inheritable_appearance_from = character:Baratheon_7
+		}
+	}
+}
+
+agotcch_create_gendry_effect = {
+	create_character = {
+		age = 0
+		name = "Gendry"
+		father = character:Baratheon_2
+		mother = character:Baratheon_rs_1
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:crownlander
+
+		trait = curious
+		trait = bastard
+		trait = physique_good_3
+
+		save_scope_as = agotcch_baby_gendry
+	}
+	hidden_effect = {
+		scope:agotcch_baby_gendry = {
+			set_employer = title:b_goldguard_heights.holder
+			give_nickname = nick_the_bull
+			set_variable = { name = dna value = flag:baratheon }
+		}
+	}
+}
+
+agotcch_create_shireen_baratheon_effect = {
+	create_character = {
+		age = 0
+		name = "Shireen"
+		father = character:Baratheon_3
+		mother = character:Florent_10
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:stormlander	
+		dynasty = father
+
+		trait = pensive
+		trait = greyscale
+
+		save_scope_as = agotcch_baby_shireen_baratheon
+	}
+	hidden_effect = {
+		scope:agotcch_baby_shireen_baratheon = {
+			copy_inheritable_appearance_from = character:Baratheon_13
+		}
+	}
+}
+
+####################################################
+####		        HOUSE TYRELL		       	####
+####################################################
+
+# Margaery
+
+agotcch_create_margaery_tyrell_effect = {
+	create_character = {
+		age = 0
+		name = "Margaery"
+		father = character:Tyrell_8
+		mother = character:Hightower_9
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:reachman	
+		dynasty = father
+
+		trait = charming
+		trait = beauty_good_3
+		trait = intellect_good_1
+
+		save_scope_as = agotcch_baby_margaery_tyrell
+	}
+	hidden_effect = {
+		scope:agotcch_baby_margaery_tyrell = {
+			copy_inheritable_appearance_from = character:Tyrell_14
+		}
+	}
+}
+
+####################################################
+####		        HOUSE TARLY 		       	####
+####################################################
+
+# Samwell
+
+agotcch_create_samwell_tarly_effect = {
+	create_character = {
+		age = 0
+		name = "Samwell"
+		father = character:Tarly_1
+		mother = character:Florent_8
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:marcher	
+		dynasty = father
+
+		trait = pensive
+		trait = intellect_good_2
+
+		save_scope_as = agotcch_baby_samwell_tarly
+	}
+	hidden_effect = {
+		scope:agotcch_baby_samwell_tarly = {
+			copy_inheritable_appearance_from = character:Tarly_2
+		}
+	}
+}
+
+####################################################
+####		        HOUSE ARRYN 		       	####
+####################################################
+
+# Robert
+
+agotcch_create_robert_arryn_effect = {
+	create_character = {
+		age = 0
+		name = "Robert"
+		father = character:Arryn_3
+		mother = character:Tully_6
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:valeman	
+		dynasty = father
+
+		trait = pensive
+		trait = physique_bad_3
+		trait = sickly
+		trait = stuttering
+
+		save_scope_as = agotcch_baby_robert_arryn
+	}
+	hidden_effect = {
+		scope:agotcch_baby_robert_arryn = {
+			copy_inheritable_appearance_from = character:Arryn_8
+		}
+	}
+}
+
+####################################################
+####		      HOUSE WESTERLING 		       	####
+####################################################
+
+# Jeyne
+
+agotcch_create_jeyne_westerling_effect = {
+	create_character = {
+		age = 0
+		name = "Jeyne"
+		father = character:Westerling_1
+		mother = character:Spicer_4
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:westerman	
+		dynasty = father
+
+		trait = curious
+		trait = beauty_good_2
+	}
+}

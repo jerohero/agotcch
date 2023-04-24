@@ -1,0 +1,7 @@
+﻿agotcch_child_toast = {
+	send_interface_toast = {
+		title = agotcch_canon_birth
+		left_icon = root
+		right_icon = scope:latest_child
+	}
+}

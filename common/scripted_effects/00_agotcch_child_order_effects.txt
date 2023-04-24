@@ -1,0 +1,323 @@
+﻿agotcch_handle_stark_children = {
+	if = {
+		# If character is Eddard Stark and wife is Catelyn Tully, continue
+		limit = {
+			AND = {
+				this = character:Stark_3
+				is_spouse_of = character:Tully_4
+			}
+		}
+
+		# If year is before character's last child date, prevent normal pregnancy
+		if = {
+			limit = {
+				current_year < 8295
+			}
+			character:Tully_4 = {
+				agotcch_disable_pregnancy = yes
+			}
+		}
+
+		# If year is canonical child's birth date, create child
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_robb_stark
+				}
+				current_year = 8283
+			}
+
+			# add_character_flag = had_robb_stark
+			agotcch_create_robb_stark_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_sansa_stark
+				}
+				current_year = 8286
+			}
+
+			add_character_flag = had_sansa_stark
+			agotcch_create_sansa_stark_effect = yes
+			agotcch_child_toast = yes
+		} 
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_arya_stark
+				}
+				current_year = 8289
+			}
+
+			add_character_flag = had_arya_stark
+			agotcch_create_arya_stark_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_bran_stark
+				}
+				current_year = 8290
+			}
+
+			add_character_flag = had_bran_stark
+			agotcch_create_bran_stark_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_rickon_stark
+				}
+				current_year = 8295
+			}
+
+			add_character_flag = had_rickon_stark
+			agotcch_create_rickon_stark_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+}
+
+agotcch_handle_baratheon_children = {
+	if = {
+		limit = {
+			AND = {
+				this = character:Baratheon_2 # Robert
+				is_spouse_of = character:Lannister_6 # Cersei
+			}
+		}
+
+		if = {
+			limit = {
+				current_year < 8291
+			}
+			character:Lannister_6 = {
+				agotcch_disable_pregnancy = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_joffrey_baratheon
+				}
+				current_year = 8286
+			}
+
+			add_character_flag = had_joffrey_baratheon
+			agotcch_create_joffrey_baratheon_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_myrcella_baratheon
+				}
+				current_year = 8290
+			}
+
+			add_character_flag = had_myrcella_baratheon
+			agotcch_create_myrcella_baratheon_effect = yes
+			agotcch_child_toast = yes
+		} 
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_tommen_baratheon
+				}
+				current_year = 8291
+			}
+
+			add_character_flag = had_tommen_baratheon
+			agotcch_create_tommen_baratheon_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				this = character:Baratheon_2 # Robert
+				exists = character:Baratheon_rs_1 # Joanna
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_gendry
+				}
+				current_year = 8284
+			}
+
+			add_character_flag = had_gendry
+			agotcch_create_gendry_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				this = character:Baratheon_3 # Stannis
+				is_spouse_of = character:Florent_10 # Selyse
+			}
+		}
+
+		if = {
+			limit = {
+				current_year < 8289
+			}
+			character:Florent_10 = {
+				agotcch_disable_pregnancy = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_shireen
+				}
+				current_year = 8289
+			}
+
+			add_character_flag = had_shireen
+			agotcch_create_shireen_baratheon_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+}
+
+agotcch_handle_tarly_children = {
+	if = {
+		limit = {
+			AND = {
+				this = character:Tarly_1 # Randyll
+				is_spouse_of = character:Florent_8 # Melessa
+			}
+		}
+
+		if = {
+			limit = {
+				current_year < 8283
+			}
+			character:Florent_8 = {
+				agotcch_disable_pregnancy = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_samwell_tarly
+				}
+				current_year = 8283
+			}
+
+			add_character_flag = had_samwell_tarly
+			agotcch_create_samwell_tarly_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+}
+
+agotcch_handle_arryn_children = {
+	if = {
+		limit = {
+			AND = {
+				this = character:Arryn_3 # Jon
+				is_spouse_of = character:Tully_6 # Lysa
+			}
+		}
+
+		if = {
+			limit = {
+				current_year < 8292
+			}
+			character:Tully_6 = {
+				agotcch_disable_pregnancy = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_robert_arryn
+				}
+				current_year = 8292
+			}
+
+			add_character_flag = had_robert_arryn
+			agotcch_create_robert_arryn_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+}
+
+agotcch_handle_westerling_children = {
+	if = {
+		limit = {
+			AND = {
+				this = character:Westerling_1 # Gawen
+				is_spouse_of = character:Spicer_4 # Sybell
+			}
+		}
+
+		if = {
+			limit = {
+				current_year < 8283
+			}
+			character:Spicer_4 = {
+				agotcch_disable_pregnancy = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_jeyne_westerling
+				}
+				current_year = 8283
+			}
+
+			add_character_flag = had_jeyne_westerling
+			agotcch_create_jeyne_westerling_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+}
+
+agotcch_handle_tyrell_children = {
+	if = {
+		limit = {
+			AND = {
+				this = character:Tyrell_8 # Mace
+				is_spouse_of = character:Hightower_9 # Alerie
+			}
+		}
+
+		if = {
+			limit = {
+				current_year < 8283
+			}
+			character:Hightower_9 = {
+				agotcch_disable_pregnancy = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_margaery_tyrell
+				}
+				current_year = 8283
+			}
+
+			add_character_flag = had_margaery_tyrell
+			agotcch_create_margaery_tyrell_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+}

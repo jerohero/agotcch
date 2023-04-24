@@ -1,0 +1,19 @@
+﻿namespace = agotcch_births
+
+# Create canonical children based on year
+agotcch_births.1 = {
+	hidden = yes
+
+	trigger = {
+		current_year <= 8300
+	}
+
+	immediate = {
+		agotcch_handle_stark_children = yes
+		agotcch_handle_baratheon_children = yes
+		agotcch_handle_tarly_children = yes
+		agotcch_handle_arryn_children = yes
+		agotcch_handle_westerling_children = yes
+		agotcch_handle_tarly_children = yes
+	}
+}
