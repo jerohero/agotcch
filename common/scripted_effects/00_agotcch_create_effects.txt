@@ -21,7 +21,8 @@ agotcch_create_robb_stark_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_robb_stark = {
-			copy_inheritable_appearance_from = character:Stark_6
+			add_character_flag = is_robb_stark
+			copy_inheritable_appearance_from = character:agotcch_robb_stark_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -45,6 +46,7 @@ agotcch_create_sansa_stark_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_sansa_stark = {
 			copy_inheritable_appearance_from = character:Stark_7
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -67,6 +69,7 @@ agotcch_create_arya_stark_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_arya_stark = {
 			copy_inheritable_appearance_from = character:Stark_9
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -89,6 +92,7 @@ agotcch_create_bran_stark_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_bran_stark = {
 			copy_inheritable_appearance_from = character:8059
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -111,6 +115,7 @@ agotcch_create_rickon_stark_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_rickon_stark = {
 			copy_inheritable_appearance_from = character:Stark_11
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -144,6 +149,7 @@ agotcch_create_joffrey_baratheon_effect = {
 		scope:agotcch_baby_joffrey_baratheon = {
 			add_character_flag = flag_secret_bastard
 			copy_inheritable_appearance_from = character:Baratheon_5
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -170,6 +176,7 @@ agotcch_create_myrcella_baratheon_effect = {
 		scope:agotcch_baby_myrcella_baratheon = {
 			add_character_flag = flag_secret_bastard
 			copy_inheritable_appearance_from = character:Baratheon_6
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -194,6 +201,7 @@ agotcch_create_tommen_baratheon_effect = {
 		scope:agotcch_baby_tommen_baratheon = {
 			add_character_flag = flag_secret_bastard
 			copy_inheritable_appearance_from = character:Baratheon_7
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -219,6 +227,7 @@ agotcch_create_gendry_effect = {
 			set_employer = title:b_goldguard_heights.holder
 			give_nickname = nick_the_bull
 			set_variable = { name = dna value = flag:baratheon }
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -242,6 +251,7 @@ agotcch_create_shireen_baratheon_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_shireen_baratheon = {
 			copy_inheritable_appearance_from = character:Baratheon_13
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -272,6 +282,7 @@ agotcch_create_margaery_tyrell_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_margaery_tyrell = {
 			copy_inheritable_appearance_from = character:Tyrell_14
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -301,6 +312,7 @@ agotcch_create_samwell_tarly_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_samwell_tarly = {
 			copy_inheritable_appearance_from = character:Tarly_2
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -332,6 +344,7 @@ agotcch_create_robert_arryn_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_robert_arryn = {
 			copy_inheritable_appearance_from = character:Arryn_8
+			save_scope_as = latest_child
 		}
 	}
 }
@@ -355,5 +368,12 @@ agotcch_create_jeyne_westerling_effect = {
 
 		trait = curious
 		trait = beauty_good_2
+
+		save_scope_as = agotcch_baby_jeyne_westerling
+	}
+	hidden_effect = {
+		scope:agotcch_baby_jeyne_westerling = {
+			save_scope_as = latest_child
+		}
 	}
 }

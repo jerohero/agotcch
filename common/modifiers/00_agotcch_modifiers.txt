@@ -1,4 +1,4 @@
-agotcch_prevent_pregnancy_modifier = {
+﻿agotcch_prevent_pregnancy_modifier = {
 	icon = fertility_negative
 	fertility = -10
 }

@@ -1,0 +1,26 @@
+﻿agotcch_robb_stark_dummy = {
+	name = Robb
+	dynasty = dynn_Stark
+	dna = agotcch_robb_stark_dna
+
+	religion = old_gods_south
+	culture = northman
+
+	# father = Stark_3
+	# mother = Tully_4
+
+	# trait = beauty_good_1
+	# trait = craven
+
+	1.1.1 = { birth = yes }
+	2.1.1 = {
+		death = { death_reason = death_vanished } 
+	}
+
+	portrait_override={
+		portrait_modifier_overrides={
+			custom_hair=male_hair_fp2_iberian_muslim_01
+			custom_beards=male_empty
+		}
+	}
+}
