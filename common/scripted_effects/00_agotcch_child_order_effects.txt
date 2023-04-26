@@ -27,7 +27,7 @@
 				current_year = 8283
 			}
 
-			# add_character_flag = had_robb_stark
+			add_character_flag = had_robb_stark
 			agotcch_create_robb_stark_effect = yes
 			agotcch_child_toast = yes
 		}

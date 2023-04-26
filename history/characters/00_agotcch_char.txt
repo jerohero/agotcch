@@ -3,24 +3,72 @@
 	dynasty = dynn_Stark
 	dna = agotcch_robb_stark_dna
 
+	father = Stark_49 # Random character from the tree as lowborn characters get deleted
+	mother = Bolton_18
+
 	religion = old_gods_south
 	culture = northman
 
-	# father = Stark_3
-	# mother = Tully_4
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
+}
 
-	# trait = beauty_good_1
-	# trait = craven
+agotcch_sansa_stark_dummy = {
+	name = Sansa
+	dynasty = dynn_Stark
+	dna = agotcch_sansa_stark_dna
 
-	1.1.1 = { birth = yes }
-	2.1.1 = {
-		death = { death_reason = death_vanished } 
-	}
+	father = Stark_49
+	mother = Bolton_18
 
-	portrait_override={
-		portrait_modifier_overrides={
-			custom_hair=male_hair_fp2_iberian_muslim_01
-			custom_beards=male_empty
-		}
-	}
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_arya_stark_dummy = {
+	name = Arya
+	dynasty = dynn_Stark
+	dna = agotcch_arya_stark_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_bran_stark_dummy = {
+	name = Arya
+	dynasty = dynn_Stark
+	dna = agotcch_bran_stark_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_rickon_stark_dummy = {
+	name = Rickon
+	dynasty = dynn_Stark
+	dna = agotcch_rickon_stark_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
 }

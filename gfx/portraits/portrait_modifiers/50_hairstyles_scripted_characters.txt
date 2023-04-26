@@ -5,6 +5,24 @@
 hairstyles_scripted_characters = {
 	usage = game
 	selection_behavior = max
+
+	female_hair_custom_10 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = agot_scripted_character_hairstyles_04
+				value = 0.12
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				has_character_flag = is_arya_stark # AGOTCCH
+			}
+		}
+	}
 	male_hair_western_02 = {
 		dna_modifiers = {
 			accessory = {
@@ -16,6 +34,10 @@ hairstyles_scripted_characters = {
 		}
 		weight = {
 			base = 0
+			modifier = {
+				add = 999
+				has_character_flag = is_bran_stark # AGOTCCH
+			}
 			modifier = {
 				add = 999
 				exists = character:Baelish_3
@@ -4275,6 +4297,10 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
+				has_character_flag = is_rickon_stark # AGOTCCH
+			}
+			modifier = {
+				add = 999
 				exists = character:Mallister_7
 				this = character:Mallister_7
 			}
@@ -4379,6 +4405,10 @@ hairstyles_scripted_characters = {
 		}
 		weight = {
 			base = 0
+			modifier = {
+				add = 999
+				has_character_flag = is_sansa_stark # AGOTCCH
+			}
 			modifier = {
 				add = 999
 				exists = character:Mallister_rs_2

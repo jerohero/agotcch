@@ -1,4 +1,8 @@
-﻿beards_scripted_characters = {
+﻿# This overrides AGOT's portrait modifiers, so the contents are copied here (v0.1.4)
+# Should be updated every update that adds/changes characters
+# Changed values are commented with "# AGOTCCH"
+
+beards_scripted_characters = {
 	usage = game
 	selection_behavior = max
 	clean_shaven = {
@@ -15,6 +19,10 @@
 			modifier = {
 				add = 1000
 				has_character_flag = is_robb_stark # AGOTCCH
+			}
+			modifier = {
+				add = 999
+				has_character_flag = is_bran_stark # AGOTCCH
 			}
 			modifier = {
 				add = 999

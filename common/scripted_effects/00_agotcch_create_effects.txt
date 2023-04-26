@@ -22,6 +22,7 @@ agotcch_create_robb_stark_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_robb_stark = {
 			add_character_flag = is_robb_stark
+			# copy_inheritable_appearance_from = character:Stark_6
 			copy_inheritable_appearance_from = character:agotcch_robb_stark_dummy
 			save_scope_as = latest_child
 		}
@@ -40,12 +41,15 @@ agotcch_create_sansa_stark_effect = {
 		dynasty = father
 		
 		trait = charming
+		trait = beautiful
 
 		save_scope_as = agotcch_baby_sansa_stark
 	}
 	hidden_effect = {
 		scope:agotcch_baby_sansa_stark = {
-			copy_inheritable_appearance_from = character:Stark_7
+			add_character_flag = is_sansa_stark
+			# copy_inheritable_appearance_from = character:Stark_7
+			copy_inheritable_appearance_from = character:agotcch_sansa_stark_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -68,7 +72,9 @@ agotcch_create_arya_stark_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_arya_stark = {
-			copy_inheritable_appearance_from = character:Stark_9
+			add_character_flag = is_arya_stark
+			# copy_inheritable_appearance_from = character:Stark_9
+			copy_inheritable_appearance_from = character:agotcch_arya_stark_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -91,7 +97,9 @@ agotcch_create_bran_stark_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_bran_stark = {
-			copy_inheritable_appearance_from = character:8059
+			add_character_flag = is_bran_stark
+			# copy_inheritable_appearance_from = character:8059
+			copy_inheritable_appearance_from = character:agotcch_bran_stark_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -114,7 +122,9 @@ agotcch_create_rickon_stark_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_rickon_stark = {
-			copy_inheritable_appearance_from = character:Stark_11
+			add_character_flag = is_rickon_stark
+			# copy_inheritable_appearance_from = character:Stark_11
+			copy_inheritable_appearance_from = character:agotcch_rickon_stark_dummy
 			save_scope_as = latest_child
 		}
 	}
