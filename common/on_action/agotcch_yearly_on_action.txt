@@ -1,5 +1,4 @@
-﻿# # make random
-yearly_playable_pulse = {
+﻿yearly_playable_pulse = {
 	events = {
 		agotcch_births.1
 	}

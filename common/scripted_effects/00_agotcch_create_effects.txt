@@ -41,7 +41,7 @@ agotcch_create_sansa_stark_effect = {
 		dynasty = father
 		
 		trait = charming
-		trait = beautiful
+		trait = beauty_good_3
 
 		save_scope_as = agotcch_baby_sansa_stark
 	}
@@ -254,7 +254,7 @@ agotcch_create_shireen_baratheon_effect = {
 		dynasty = father
 
 		trait = pensive
-		trait = greyscale
+		# trait = greyscale
 
 		save_scope_as = agotcch_baby_shireen_baratheon
 	}
