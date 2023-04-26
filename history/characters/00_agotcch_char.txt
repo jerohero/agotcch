@@ -1,4 +1,137 @@
-﻿agotcch_robb_stark_dummy = {
+﻿Stark_6 = {
+	name = Robb # Canon, AKA: Young Wolf
+	dynasty = dynn_Stark
+	dna = agotcch_robb_stark_dna
+
+	martial = 7
+	diplomacy = 7
+	intrigue = 3
+	stewardship = 4
+	learning = 5
+	prowess = 6
+
+	religion = old_gods_south
+	culture = northman
+	sexuality = heterosexual
+
+	father = Stark_3
+	mother = Tully_4
+
+	trait = education_martial_4
+
+	disallow_random_traits = yes
+
+	8283.1.1 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+			set_variable = { name = dna value = flag:tully }
+		}
+	}
+	8289.8.1 = { trait = authoritative }
+	8290.1.1 = {
+		trait = brave
+		trait = just
+		trait = honest
+	}
+	8291.8.1 = { trait = honorable }
+	8297.1.1 = {
+		# trait = cavalry_leader # AGOT TODO trait
+		trait = flexible_leader
+		# trait = inspiring_leader # AGOT TODO trait
+	}
+	# 8298.2.24 = { # AGOT TODO
+		# trait = direwolf # Grey Wind # AGOT TODO trait
+		# effect = {
+			# e_rebels = {
+				# create_random_steward = {
+					# name = Grey_Wind
+					# random_traits = yes
+					# dynasty = none
+					# female = no
+					# culture = direwolf_culture
+					# religion = ROOT
+				# }
+				# new_character = {
+					# ROOT = { save_persistent_event_target = { name = direwolf_name scope = PREV } }
+					# death = yes
+				# }
+			# }
+		# }
+	# }
+	8298.11.2 = {
+		effect = { 
+			create_alliance = { # Grandfather-Grandchild
+				target = character:Tully_1 # Hoster Tully
+				allied_through_owner = character:Stark_6 # Robb Stark
+				allied_through_target = character:Tully_4 # Catelyn Tully
+			}
+			add_hook = {
+				target = character:Manderly_6 # Wyman Manderly
+				type = loyalty_hook
+			}
+			add_hook = {
+				target = character:Umber_8 # Greatjon Umber
+				type = loyalty_hook
+			}
+		}
+	}
+	8298.12.20 = {
+		# effect = {
+			# k_the_north = { destroy_landed_title = THIS }
+		# }
+		give_nickname = nick_the_young_wolf
+	}
+	8299.2.11 = {
+		effect = {
+			create_betrothal = character:Frey_82 # Roslin Frey
+			set_relation_friend = character:Umber_8 # Greatjon Umber
+			# character:Westerling_2 = { # Jeyne Westerling # Isn't that too soon for it?
+				# make_pregnant = {
+					# father = ROOT
+				# }
+			# }
+			# if = {
+				# limit = { ai = no }
+				# long_character_event = { id = clash_of_kings.500 }
+			# }
+			# if = {
+				# limit = { ai = yes }
+				# long_character_event = { id = clash_of_kings.500 days = 1 }
+			# }
+			reverse_add_opinion = {
+				modifier = treachery_opinion
+				target = character:Baratheon_5 #Joffrey Baratheon
+			}
+		}
+	}
+	8299.6.1 = {
+		add_spouse = Westerling_2 # Jeyne Westerling
+		effect = {
+			set_relation_lover = character:Westerling_2 # Jeyne Westerling
+			reverse_add_opinion = {
+				modifier = broke_betrothal_opinion
+				target = character:Frey_1 # Walder Frey
+			}
+		}
+	}
+	8299.10.15 = {
+		effect = {
+			create_alliance = { # Uncle-Nephew
+				target = character:Tully_7 # Edmure Tully
+				allied_through_owner = character:Stark_6 # Robb Stark
+				allied_through_target = character:Tully_4 # Catelyn Tully
+			}
+		}
+	}
+	8299.11.5 = {
+		death = {
+			death_reason = death_murder_known # The Red Wedding
+			killer = Frey_1 #Walder Frey
+		}
+	}
+}
+agotcch_robb_stark_dummy = {
 	name = Robb
 	dynasty = dynn_Stark
 	dna = agotcch_robb_stark_dna
