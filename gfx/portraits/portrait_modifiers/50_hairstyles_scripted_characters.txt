@@ -1970,6 +1970,11 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
+				exists = character:Stark_6 
+				this = character:Stark_6 
+			}
+			modifier = {
+				add = 999
 				exists = character:Baelish_1
 				this = character:Baelish_1
 			}
@@ -4716,11 +4721,7 @@ hairstyles_scripted_characters = {
 		}
 		weight = {
 			base = 0
-			modifier = {
-				add = 999
-				exists = character:Stark_6 
-				this = character:Stark_6 
-			}
+
 			modifier = {
 				add = 999
 				exists = character:Darry_6
