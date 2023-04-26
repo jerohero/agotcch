@@ -14,6 +14,6 @@ agotcch_births.1 = {
 		agotcch_handle_tarly_children = yes
 		agotcch_handle_arryn_children = yes
 		agotcch_handle_westerling_children = yes
-		agotcch_handle_tarly_children = yes
+		agotcch_handle_tyrell_children = yes
 	}
 }
