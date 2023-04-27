@@ -146,7 +146,7 @@ agotcch_robb_stark_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
 agotcch_sansa_stark_dummy = {
@@ -161,7 +161,7 @@ agotcch_sansa_stark_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
 agotcch_arya_stark_dummy = {
@@ -176,7 +176,7 @@ agotcch_arya_stark_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
 agotcch_bran_stark_dummy = {
@@ -191,7 +191,7 @@ agotcch_bran_stark_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
 agotcch_rickon_stark_dummy = {
@@ -206,7 +206,7 @@ agotcch_rickon_stark_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
 # Baratheon
@@ -223,7 +223,7 @@ agotcch_joffrey_baratheon_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
 agotcch_myrcella_baratheon_dummy = {
@@ -238,7 +238,7 @@ agotcch_myrcella_baratheon_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
 agotcch_tommen_baratheon_dummy = {
@@ -253,5 +253,5 @@ agotcch_tommen_baratheon_dummy = {
 	culture = northman
 
 	7880.1.1 = { birth = yes }
-	788.1.1 = { death = { death_reason = death_vanished } }
+	7881.1.1 = { death = { death_reason = death_vanished } }
 }
