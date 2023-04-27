@@ -16,6 +16,7 @@ agotcch_create_robb_stark_effect = {
 		dynasty = father
 
 		trait = bossy
+		random_traits = no
 
 		save_scope_as = agotcch_baby_robb_stark
 	}
@@ -42,6 +43,7 @@ agotcch_create_sansa_stark_effect = {
 		
 		trait = charming
 		trait = beauty_good_3
+		random_traits = no
 
 		save_scope_as = agotcch_baby_sansa_stark
 	}
@@ -67,6 +69,7 @@ agotcch_create_arya_stark_effect = {
 		dynasty = father
 
 		trait = rowdy
+		random_traits = no
 
 		save_scope_as = agotcch_baby_arya_stark
 	}
@@ -92,6 +95,7 @@ agotcch_create_bran_stark_effect = {
 		dynasty = father
 
 		trait = curious
+		random_traits = no
 
 		save_scope_as = agotcch_baby_bran_stark
 	}
@@ -117,6 +121,7 @@ agotcch_create_rickon_stark_effect = {
 		dynasty = father
 
 		trait = rowdy
+		random_traits = no
 
 		save_scope_as = agotcch_baby_rickon_stark
 	}
@@ -152,6 +157,7 @@ agotcch_create_joffrey_baratheon_effect = {
 
 		trait = bossy
 		trait = beauty_good_2
+		random_traits = no
 
 		save_scope_as = agotcch_baby_joffrey_baratheon
 	}
@@ -181,6 +187,7 @@ agotcch_create_myrcella_baratheon_effect = {
 		trait = charming
 		trait = beauty_good_2
 		trait = intellect_good_1
+		random_traits = no
 
 		save_scope_as = agotcch_baby_myrcella_baratheon
 	}
@@ -208,6 +215,7 @@ agotcch_create_tommen_baratheon_effect = {
 		dynasty = father
 
 		trait = pensive
+		random_traits = no
 
 		save_scope_as = agotcch_baby_tommen_baratheon
 	}
@@ -235,6 +243,7 @@ agotcch_create_gendry_effect = {
 		trait = curious
 		trait = bastard
 		trait = physique_good_3
+		random_traits = no
 
 		save_scope_as = agotcch_baby_gendry
 	}
@@ -261,6 +270,7 @@ agotcch_create_shireen_baratheon_effect = {
 
 		trait = pensive
 		# trait = greyscale
+		random_traits = no
 
 		save_scope_as = agotcch_baby_shireen_baratheon
 	}
@@ -292,6 +302,7 @@ agotcch_create_margaery_tyrell_effect = {
 		trait = charming
 		trait = beauty_good_3
 		trait = intellect_good_1
+		random_traits = no
 
 		save_scope_as = agotcch_baby_margaery_tyrell
 	}
@@ -322,6 +333,7 @@ agotcch_create_samwell_tarly_effect = {
 
 		trait = pensive
 		trait = intellect_good_2
+		random_traits = no
 
 		save_scope_as = agotcch_baby_samwell_tarly
 	}
@@ -354,6 +366,7 @@ agotcch_create_robert_arryn_effect = {
 		trait = physique_bad_3
 		trait = sickly
 		trait = stuttering
+		random_traits = no
 
 		save_scope_as = agotcch_baby_robert_arryn
 	}
@@ -384,6 +397,7 @@ agotcch_create_jeyne_westerling_effect = {
 
 		trait = curious
 		trait = beauty_good_2
+		random_traits = no
 
 		save_scope_as = agotcch_baby_jeyne_westerling
 	}
