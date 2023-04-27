@@ -1970,12 +1970,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_robb_stark # AGOTCCH
-			}
-			modifier = {
-				add = 999
-				exists = character:Stark_6 
-				this = character:Stark_6 
+				OR = {
+					has_character_flag = is_robb_stark # AGOTCCH
+					AND = {
+						exists = character:Stark_6 
+						this = character:Stark_6 
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -3558,8 +3559,13 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				exists = character:Tyrell_14
-				this = character:Tyrell_14
+				OR = {
+					has_character_flag = is_margaery_tyrell # AGOTCCH
+					AND = {
+						exists = character:Tyrell_14
+						this = character:Tyrell_14
+					}
+				}
 			}
 			modifier = {
 				add = 999
