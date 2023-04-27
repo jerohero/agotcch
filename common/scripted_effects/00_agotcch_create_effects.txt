@@ -363,8 +363,7 @@ agotcch_create_robert_arryn_effect = {
 		dynasty = father
 
 		trait = pensive
-		trait = physique_bad_3
-		trait = sickly
+		trait = physique_bad_1
 		trait = stuttering
 		random_traits = no
 

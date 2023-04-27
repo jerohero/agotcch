@@ -1,4 +1,12 @@
-﻿agotcch_prevent_pregnancy_modifier = {
+﻿agotcch_wife_modifier = {
 	icon = fertility_negative
 	fertility = -10
+	health = major_health_bonus
+	negate_health_penalty_add = 1.5
+}
+
+agotcch_husband_modifier = {
+	icon = health_positive
+	health = major_health_bonus
+	negate_health_penalty_add = 1.5
 }

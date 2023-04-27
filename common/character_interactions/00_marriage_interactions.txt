@@ -96,9 +96,9 @@ divorce_character_interaction = {
 			}
 			scope:recipient = {
 				is_ai = yes
-				
+
 				NOT = {
-					has_character_modifier = agotcch_prevent_pregnancy_modifier # AGOTCCH
+					has_character_modifier = agotcch_wife_modifier # AGOTCCH
 				}
 				
 				fertility < 0.1

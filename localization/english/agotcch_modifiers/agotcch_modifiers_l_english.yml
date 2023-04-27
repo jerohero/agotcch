@@ -1,3 +1,5 @@
 ﻿l_english:
- agotcch_prevent_pregnancy_modifier:0 "Canonical Wife"
- agotcch_prevent_pregnancy_modifier_desc:0 "This character is already expecting to give birth to someone."
+ agotcch_wife_modifier:0 "Canonical Wife"
+ agotcch_wife_modifier_desc:0 "This character is already expecting to give birth to someone."
+ agotcch_husband_modifier:0 "Canonical Husband"
+ agotcch_husband_modifier_desc:0 "Gods he was strong then."
