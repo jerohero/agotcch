@@ -1395,6 +1395,10 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
+				has_character_flag = is_tommen_baratheon # AGOTCCH
+			}
+			modifier = {
+				add = 999
 				exists = character:Bourney_13
 				this = character:Bourney_13
 			}
@@ -2489,6 +2493,10 @@ hairstyles_scripted_characters = {
 		}
 		weight = {
 			base = 0
+			modifier = {
+				add = 999
+				has_character_flag = is_myrcella_baratheon # AGOTCCH
+			}
 			modifier = {
 				add = 999
 				exists = character:574368
@@ -5004,6 +5012,10 @@ hairstyles_scripted_characters = {
 		}
 		weight = {
 			base = 0
+			modifier = {
+				add = 999
+				has_character_flag = is_joffrey_baratheon # AGOTCCH
+			}
 			modifier = {
 				add = 999
 				exists = character:Costayne_4

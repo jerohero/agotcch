@@ -26,6 +26,14 @@ beards_scripted_characters = {
 			}
 			modifier = {
 				add = 999
+				has_character_flag = is_joffrey_baratheon # AGOTCCH
+			}
+			modifier = {
+				add = 999
+				has_character_flag = is_tommen_baratheon # AGOTCCH
+			}
+			modifier = {
+				add = 999
 				has_character_flag = is_jon_snow
 			}
 			modifier = {

@@ -158,7 +158,9 @@ agotcch_create_joffrey_baratheon_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_joffrey_baratheon = {
 			add_character_flag = flag_secret_bastard
-			copy_inheritable_appearance_from = character:Baratheon_5
+			add_character_flag = is_joffrey_baratheon
+			# copy_inheritable_appearance_from = character:Baratheon_5
+			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -185,7 +187,9 @@ agotcch_create_myrcella_baratheon_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_myrcella_baratheon = {
 			add_character_flag = flag_secret_bastard
-			copy_inheritable_appearance_from = character:Baratheon_6
+			add_character_flag = is_myrcella_baratheon
+			# copy_inheritable_appearance_from = character:Baratheon_6
+			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -210,7 +214,9 @@ agotcch_create_tommen_baratheon_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_tommen_baratheon = {
 			add_character_flag = flag_secret_bastard
-			copy_inheritable_appearance_from = character:Baratheon_7
+			add_character_flag = is_tommen_baratheon
+			# copy_inheritable_appearance_from = character:Baratheon_7
+			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
 			save_scope_as = latest_child
 		}
 	}

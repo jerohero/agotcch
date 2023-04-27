@@ -131,6 +131,9 @@
 		}
 	}
 }
+
+# Stark
+
 agotcch_robb_stark_dummy = {
 	name = Robb
 	dynasty = dynn_Stark
@@ -195,6 +198,53 @@ agotcch_rickon_stark_dummy = {
 	name = Rickon
 	dynasty = dynn_Stark
 	dna = agotcch_rickon_stark_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
+}
+
+# Baratheon
+
+agotcch_joffrey_baratheon_dummy = {
+	name = Joffrey
+	dynasty = dynn_Stark
+	dna = agotcch_joffrey_baratheon_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_myrcella_baratheon_dummy = {
+	name = Myrcella
+	dynasty = dynn_Stark
+	dna = agotcch_myrcella_baratheon_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	788.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_tommen_baratheon_dummy = {
+	name = Tommen
+	dynasty = dynn_Stark
+	dna = agotcch_tommen_baratheon_dna
 
 	father = Stark_49
 	mother = Bolton_18
