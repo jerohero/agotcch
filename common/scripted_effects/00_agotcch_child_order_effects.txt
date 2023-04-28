@@ -253,6 +253,7 @@ agotcch_handle_arryn_children = {
 			}
 			character:Arryn_3 = {
 				agotcch_add_husband_modifier = yes
+				agotcch_add_life_support_modifier = yes
 			}
 		}
 

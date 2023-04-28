@@ -5,7 +5,10 @@ agotcch_births.1 = {
 	hidden = yes
 
 	trigger = {
-		current_year <= 8300
+		AND = {
+			current_year >= 8250
+			current_year <= 8300
+		}
 	}
 
 	immediate = {

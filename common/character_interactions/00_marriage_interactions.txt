@@ -3195,6 +3195,7 @@ divorce_character_house_head_interaction = {
 						is_child_of = scope:actor
 					}
 					has_trait = eunuch
+					has_character_modifier = agotcch_wife_modifier # AGOTCCH
 				}
 			}
 		}
@@ -3442,6 +3443,9 @@ divorce_character_house_head_interaction = {
 			scope:secondary_recipient = {
 				is_ai = yes
 				fertility < 0.1
+				NOT = {
+					has_character_modifier = agotcch_wife_modifier # AGOTCCH
+				}
 			}
 		}
 		
@@ -3775,6 +3779,10 @@ divorce_character_rel_head_interaction = {
 			scope:secondary_recipient = {
 				is_ai = yes
 				fertility < 0.1
+				NOT = {
+					has_character_modifier = agotcch_wife_modifier # AGOTCCH
+				}
+				
 			}
 		}
 		
@@ -3950,6 +3958,9 @@ divorce_character_dynast_request_interaction = {
 			scope:recipient = {
 				is_ai = yes
 				fertility < 0.1
+				NOT = {
+					has_character_modifier = agotcch_wife_modifier # AGOTCCH
+				}
 			}
 			exists = scope:actor.primary_heir
 			exists = scope:actor.primary_heir.dynasty
@@ -4258,6 +4269,9 @@ divorce_character_dynast_request_rel_head_interaction = {
 			scope:secondary_recipient = {
 				is_ai = yes
 				fertility < 0.1
+				NOT = {
+					has_character_modifier = agotcch_wife_modifier # AGOTCCH
+				}
 			}
 			exists = scope:actor.primary_heir
 			exists = scope:actor.primary_heir.dynasty
