@@ -20,3 +20,11 @@ agotcch_add_husband_modifier = {
 		years = 1
 	}
 }
+
+agotcch_add_life_support_modifier = {
+	add_character_modifier = {
+		modifier = agotcch_life_support_modifier
+		years = 5
+	}
+}
+

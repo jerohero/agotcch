@@ -10,3 +10,9 @@ agotcch_husband_modifier = {
 	health = major_health_bonus
 	negate_health_penalty_add = 1.5
 }
+
+# So Jon Arryn does not drop dead instantly
+agotcch_life_support_modifier = {
+	icon = health_positive
+	health = major_health_bonus
+}
