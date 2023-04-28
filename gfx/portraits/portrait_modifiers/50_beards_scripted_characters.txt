@@ -17,7 +17,7 @@ beards_scripted_characters = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 1000
+				add = 999
 				OR = {
 					has_character_flag = is_robb_stark # AGOTCCH
 					AND = {
@@ -1593,11 +1593,11 @@ beards_scripted_characters = {
 				this = character:Baratheon_3
 				age >= 25
 			}
-			modifier = {
-				add = 999
-				exists = character:Stark_6 
-				this = character:Stark_6 
-			}
+			# modifier = {
+			# 	add = 999
+			# 	exists = character:Stark_6 
+			# 	this = character:Stark_6 
+			# }
 			modifier = {
 				add = 999
 				exists = character:Norrey_4
