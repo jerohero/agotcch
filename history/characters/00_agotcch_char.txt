@@ -122,21 +122,20 @@ agotcch_tommen_baratheon_dummy = {
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
-# No DNA in source files
-# agotcch_gendry_baratheon_dummy = {
-# 	name = Gendry
-# 	dynasty = dynn_Stark
-# 	dna = agotcch_gendry_baratheon_dna
+agotcch_gendry_baratheon_dummy = {
+	name = Gendry
+	dynasty = dynn_Stark
+	dna = agotcch_gendry_baratheon_dna
 
-# 	father = Stark_49
-# 	mother = Bolton_18
+	father = Stark_49
+	mother = Bolton_18
 
-# 	religion = old_gods_south
-# 	culture = northman
+	religion = old_gods_south
+	culture = northman
 
-# 	7880.1.1 = { birth = yes }
-# 	7881.1.1 = { death = { death_reason = death_vanished } }
-# }
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
 
 agotcch_shireen_baratheon_dummy = {
 	name = Shireen

@@ -30,6 +30,7 @@ agotcch_create_robb_stark_effect = {
 	}
 }
 
+# Stark_7
 agotcch_create_sansa_stark_effect = {
 	create_character = {
 		age = 0
@@ -143,6 +144,7 @@ agotcch_create_rickon_stark_effect = {
 # Gendry
 # Shireen
 
+# Baratheon_5
 agotcch_create_joffrey_baratheon_effect = {
 	create_character = {
 		age = 0
@@ -172,6 +174,7 @@ agotcch_create_joffrey_baratheon_effect = {
 	}
 }
 
+# Baratheon_6
 agotcch_create_myrcella_baratheon_effect = {
 	create_character = {
 		age = 0
@@ -230,6 +233,7 @@ agotcch_create_tommen_baratheon_effect = {
 	}
 }
 
+# Baratheon_9
 agotcch_create_gendry_effect = {
 	create_character = {
 		age = 0
@@ -252,13 +256,14 @@ agotcch_create_gendry_effect = {
 			add_character_flag = is_gendry_baratheon
 			set_employer = title:b_goldguard_heights.holder
 			give_nickname = nick_the_bull
-			set_variable = { name = dna value = flag:baratheon }
-			# copy_inheritable_appearance_from = character:agotcch_gendry_baratheon_dummy
+			# set_variable = { name = dna value = flag:baratheon }
+			copy_inheritable_appearance_from = character:agotcch_gendry_baratheon_dummy
 			save_scope_as = latest_child
 		}
 	}
 }
 
+# Baratheon_13
 agotcch_create_shireen_baratheon_effect = {
 	create_character = {
 		age = 0
@@ -393,6 +398,7 @@ agotcch_create_robert_arryn_effect = {
 
 # Jeyne
 
+# Westerling_2
 agotcch_create_jeyne_westerling_effect = {
 	create_character = {
 		age = 0

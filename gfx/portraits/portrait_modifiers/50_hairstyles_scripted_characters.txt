@@ -19,7 +19,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_arya_stark # AGOTCCH
+				OR = {
+					has_character_flag = is_arya_stark # AGOTCCH
+					AND = {
+						exists = character:Stark_9
+						this = character:Stark_9
+					}
+				}
 			}
 		}
 	}
@@ -36,7 +42,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_bran_stark # AGOTCCH
+				OR = {
+					has_character_flag = is_bran_stark # AGOTCCH
+					AND = {
+						exists = character:8059
+						this = character:8059
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -1395,7 +1407,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_tommen_baratheon # AGOTCCH
+				OR = {
+					has_character_flag = is_tommen_baratheon # AGOTCCH
+					AND = {
+						exists = character:Baratheon_7
+						this = character:Baratheon_7
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -1885,7 +1903,13 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				has_character_flag = is_jeyne_snow
+				OR = {
+					has_character_flag = is_jeyne_westerling # AGOTCCH
+					AND = {
+						exists = character:Westerling_2
+						this = character:Westerling_2
+					}
+				}
 			}
 		}
 	}
@@ -2496,7 +2520,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_myrcella_baratheon # AGOTCCH
+				OR = {
+					has_character_flag = is_myrcella_baratheon # AGOTCCH
+					AND = {
+						exists = character:Baratheon_6
+						this = character:Baratheon_6
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -3559,16 +3589,6 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_margaery_tyrell # AGOTCCH
-					AND = {
-						exists = character:Tyrell_14
-						this = character:Tyrell_14
-					}
-				}
-			}
-			modifier = {
-				add = 999
 				exists = character:Hightower_9
 				this = character:Hightower_9
 			}
@@ -3715,6 +3735,16 @@ hairstyles_scripted_characters = {
 		}
 		weight = {
 			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_shireen_baratheon # AGOTCCH
+					AND = {
+						exists = character:Baratheon_13
+						this = character:Baratheon_13
+					}
+				}
+			}
 			modifier = {
 				add = 999
 				exists = character:Swann_5
@@ -4316,7 +4346,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_rickon_stark # AGOTCCH
+				OR = {
+					has_character_flag = is_rickon_stark # AGOTCCH
+					AND = {
+						exists = character:Stark_11
+						this = character:Stark_11
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -4426,7 +4462,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_sansa_stark # AGOTCCH
+				OR = {
+					has_character_flag = is_sansa_stark # AGOTCCH
+					AND = {
+						exists = character:Stark_7
+						this = character:Stark_7
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -4886,6 +4928,16 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
+				OR = {
+					has_character_flag = is_margaery_tyrell # AGOTCCH
+					AND = {
+						exists = character:Tyrell_14
+						this = character:Tyrell_14
+					}
+				}
+			}
+			modifier = {
+				add = 999
 				exists = character:Fossoway_New_Barrel_6
 				this = character:Fossoway_New_Barrel_6
 			}
@@ -4924,7 +4976,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_jon_snow
+				OR = {
+					has_character_flag = is_jon_snow # AGOTCCH
+					AND = {
+						exists = character:Stark_7
+						this = character:Stark_7
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -5020,7 +5078,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				has_character_flag = is_joffrey_baratheon # AGOTCCH
+				OR = {
+					has_character_flag = is_joffrey_baratheon # AGOTCCH
+					AND = {
+						exists = character:Baratheon_5
+						this = character:Baratheon_5
+					}
+				}
 			}
 			modifier = {
 				add = 999

@@ -18,23 +18,53 @@ beards_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 1000
-				has_character_flag = is_robb_stark # AGOTCCH
+				OR = {
+					has_character_flag = is_robb_stark # AGOTCCH
+					AND = {
+						exists = character:Stark_6
+						this = character:Stark_6
+					}
+				}
 			}
 			modifier = {
 				add = 999
-				has_character_flag = is_bran_stark # AGOTCCH
+				OR = {
+					has_character_flag = is_bran_stark # AGOTCCH
+					AND = {
+						exists = character:8059
+						this = character:8059
+					}
+				}
 			}
 			modifier = {
 				add = 999
-				has_character_flag = is_joffrey_baratheon # AGOTCCH
+				OR = {
+					has_character_flag = is_joffrey_baratheon # AGOTCCH
+					AND = {
+						exists = character:Baratheon_5
+						this = character:Baratheon_5
+					}
+				}
 			}
 			modifier = {
 				add = 999
-				has_character_flag = is_tommen_baratheon # AGOTCCH
+				OR = {
+					has_character_flag = is_tommen_baratheon # AGOTCCH
+					AND = {
+						exists = character:Baratheon_7
+						this = character:Baratheon_7
+					}
+				}
 			}
 			modifier = {
 				add = 999
-				has_character_flag = is_jon_snow
+				OR = {
+					has_character_flag = is_jon_snow # AGOTCCH
+					AND = {
+						exists = character:Stark_7
+						this = character:Stark_7
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -1233,6 +1263,16 @@ beards_scripted_characters = {
 		}
 		weight = {
 			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_gendry_baratheon # AGOTCCH
+					AND = {
+						exists = character:Baratheon_9
+						this = character:Baratheon_9
+					}
+				}
+			}
 			modifier = {
 				add = 999
 				exists = character:Seaworth_2
