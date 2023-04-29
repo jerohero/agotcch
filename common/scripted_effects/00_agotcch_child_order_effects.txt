@@ -88,9 +88,45 @@
 agotcch_handle_baratheon_children = {
 	if = {
 		limit = {
-			AND = {
-				this = character:Baratheon_2 # Robert
+			
+			OR = {
+				AND = { # Robert and Cersie are married, Jaime is alive
+					this = character:Baratheon_2 # Robert
+					is_spouse_of = character:Lannister_6 # Cersei
+					character:Lannister_7 = { # Jaime
+						is_alive = yes
+					}
+				}
+				AND = { # Robert and Cersie are not married, but Jaime and Cersei are lovers
+					NOT = {
+						is_spouse_of = character:Lannister_6 # Cersei
+					}
+					character:Lannister_7 = { # Jaime
+						is_alive = yes
+						OR = {
+							has_relation_lover = character:Lannister_6 # Cersei
+							has_relation_potential_lover = character:Lannister_6 # Cersei
+						}
+					}
+				}
+			}
+		}
+
+		# Set assumed father
+		if = {
+			limit = {
 				is_spouse_of = character:Lannister_6 # Cersei
+			}
+
+			set_local_variable = {
+				name = father_flag
+				value = character:Baratheon_2
+			}
+		}
+		else = {
+			set_local_variable = {
+				name = father_flag
+				value = character:Lannister_7
 			}
 		}
 
@@ -98,49 +134,99 @@ agotcch_handle_baratheon_children = {
 			limit = {
 				current_year < 8291
 			}
+
 			character:Lannister_6 = {
 				agotcch_add_wife_modifier = yes
 			}
-			character:Baratheon_2 = {
-				agotcch_add_husband_modifier = yes
+
+			if = {
+				limit = { local_var:father_flag = character:Baratheon_2 }
+				character:Baratheon_2 = {
+					agotcch_add_husband_modifier = yes
+				}
+				character:Lannister_7 = {
+					agotcch_add_husband_modifier = yes
+				}
+			}
+			else_if = {
+				limit = { local_var:father_flag = character:Lannister_7 }
+				character:Lannister_7 = {
+					agotcch_add_husband_modifier = yes
+				}
 			}
 		}
 
 		if = {
 			limit = {
 				NOT = {
-					has_character_flag = had_joffrey_baratheon
+					character:Lannister_6 = {
+						has_character_flag = had_joffrey_baratheon
+					}
 				}
 				current_year = 8286
 			}
 
-			add_character_flag = had_joffrey_baratheon
-			agotcch_create_joffrey_baratheon_effect = yes
-			agotcch_child_toast = yes
+			character:Lannister_6 = {
+				add_character_flag = had_joffrey_baratheon
+			}
+
+			if = {
+				limit = { local_var:father_flag = character:Baratheon_2 }
+				agotcch_create_joffrey_baratheon_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = { local_var:father_flag = character:Lannister_7 }
+				agotcch_create_joffrey_lannister_effect = yes
+			}
 		}
 		else_if = {
 			limit = {
 				NOT = {
-					has_character_flag = had_myrcella_baratheon
+					character:Lannister_6 = {
+						has_character_flag = had_myrcella_baratheon
+					}
 				}
 				current_year = 8290
 			}
 
-			add_character_flag = had_myrcella_baratheon
-			agotcch_create_myrcella_baratheon_effect = yes
-			agotcch_child_toast = yes
+			character:Lannister_6 = {
+				add_character_flag = had_myrcella_baratheon
+			}
+
+			if = {
+				limit = { local_var:father_flag = character:Baratheon_2 }
+				agotcch_create_myrcella_baratheon_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = { local_var:father_flag = character:Lannister_7 }
+				agotcch_create_myrcella_lannister_effect = yes
+			}
 		} 
 		else_if = {
 			limit = {
 				NOT = {
-					has_character_flag = had_tommen_baratheon
+					character:Lannister_6 = {
+						has_character_flag = had_tommen_baratheon
+					}
 				}
 				current_year = 8291
 			}
 
-			add_character_flag = had_tommen_baratheon
-			agotcch_create_tommen_baratheon_effect = yes
-			agotcch_child_toast = yes
+			character:Lannister_6 = {
+				add_character_flag = had_tommen_baratheon
+			}
+
+			if = {
+				limit = { local_var:father_flag = character:Baratheon_2 }
+				agotcch_create_tommen_baratheon_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = { local_var:father_flag = character:Lannister_7 }
+				agotcch_create_tommen_lannister_effect = yes
+			}
 		}
 	}
 	if = {

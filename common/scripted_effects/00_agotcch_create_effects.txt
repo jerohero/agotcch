@@ -152,6 +152,7 @@ agotcch_create_joffrey_baratheon_effect = {
 		father = character:Baratheon_2
 		mother = character:Lannister_6
 		real_father = character:Lannister_7
+		
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:crownlander
@@ -169,6 +170,35 @@ agotcch_create_joffrey_baratheon_effect = {
 			add_character_flag = is_joffrey_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_5
 			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+agotcch_create_joffrey_lannister_effect = {
+	create_character = {
+		age = 0
+		name = "Joffrey"
+		father = character:Lannister_7
+		mother = character:Lannister_6
+		
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:westerman
+		dynasty = father
+
+		trait = bossy
+		trait = beauty_good_2
+		random_traits = no
+
+		save_scope_as = agotcch_baby_joffrey_baratheon
+	}
+	hidden_effect = {
+		scope:agotcch_baby_joffrey_baratheon = {
+			add_character_flag = is_joffrey_baratheon
+			# copy_inheritable_appearance_from = character:Baratheon_5
+			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
+			set_employer = title:c_casterly_rock.holder
 			save_scope_as = latest_child
 		}
 	}
@@ -205,6 +235,37 @@ agotcch_create_myrcella_baratheon_effect = {
 	}
 }
 
+agotcch_create_myrcella_lannister_effect = {
+	create_character = {
+		age = 0
+		name = "Myrcella"
+		father = character:Lannister_7
+		mother = character:Lannister_6
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:westerman
+		dynasty = father
+
+		employer = Lannister_6
+
+		trait = charming
+		trait = beauty_good_2
+		trait = intellect_good_1
+		random_traits = no
+
+		save_scope_as = agotcch_baby_myrcella_baratheon
+	}
+	hidden_effect = {
+		scope:agotcch_baby_myrcella_baratheon = {
+			add_character_flag = is_myrcella_baratheon
+			# copy_inheritable_appearance_from = character:Baratheon_6
+			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
+			set_employer = title:c_casterly_rock.holder
+			save_scope_as = latest_child
+		}
+	}
+}
+
 agotcch_create_tommen_baratheon_effect = {
 	create_character = {
 		age = 0
@@ -228,6 +289,35 @@ agotcch_create_tommen_baratheon_effect = {
 			add_character_flag = is_tommen_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_7
 			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+agotcch_create_tommen_lannister_effect = {
+	create_character = {
+		age = 0
+		name = "Tommen"
+		father = character:Lannister_7
+		mother = character:Lannister_6
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:westerman
+		dynasty = father
+
+		employer = Lannister_6
+
+		trait = pensive
+		random_traits = no
+
+		save_scope_as = agotcch_baby_tommen_baratheon
+	}
+	hidden_effect = {
+		scope:agotcch_baby_tommen_baratheon = {
+			add_character_flag = is_tommen_baratheon
+			# copy_inheritable_appearance_from = character:Baratheon_7
+			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
+			set_employer = title:c_casterly_rock.holder
 			save_scope_as = latest_child
 		}
 	}
