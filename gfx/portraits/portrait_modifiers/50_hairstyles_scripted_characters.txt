@@ -1934,16 +1934,16 @@ hairstyles_scripted_characters = {
 		}
 		weight = {
 			base = 0
-			# modifier = {
-			# 	add = 999
-			# 	OR = {
-			# 		has_character_flag = is_jon_snow # AGOTCCH
-			# 		AND = {
-			# 			exists = character:Stark_7
-			# 			this = character:Stark_7
-			# 		}
-			# 	}
-			# }
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_jon_snow # AGOTCCH
+					AND = {
+						exists = character:Stark_7
+						this = character:Stark_7
+					}
+				}
+			}
 			modifier = {
 				add = 999
 				exists = character:Tall_1
@@ -3281,16 +3281,16 @@ hairstyles_scripted_characters = {
 				exists = character:Rhysling_2
 				this = character:Rhysling_2
 			}
-			modifier = {
-				add = 999
-				OR = {
-					has_character_flag = is_jon_snow
-					AND = {
-						exists = character:Stark_7
-						this = character:Stark_7
-					}
-				}
-			}
+			# modifier = {
+			# 	add = 999
+			# 	OR = {
+			# 		has_character_flag = is_jon_snow
+			# 		AND = {
+			# 			exists = character:Stark_7
+			# 			this = character:Stark_7
+			# 		}
+			# 	}
+			# }
 			modifier = {
 				add = 999
 				exists = character:Blackwater_1
