@@ -218,7 +218,7 @@ agotcch_margaery_tyrell_dummy = {
 }
 
 agotcch_lyanna_mormont_dummy = {
-	name = Margaery
+	name = Lyanna
 	dynasty = dynn_Stark
 	# dna = agotcch_lyanna_mormont_dna
 	dna = Mormont_9
@@ -234,7 +234,7 @@ agotcch_lyanna_mormont_dummy = {
 }
 
 agotcch_jorelle_mormont_dummy = {
-	name = Margaery
+	name = Jorelle
 	dynasty = dynn_Stark
 	dna = Mormont_8
 
@@ -248,4 +248,62 @@ agotcch_jorelle_mormont_dummy = {
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
+agotcch_trystane_martell_dummy = {
+	name = Trystane
+	dynasty = dynn_Stark
+	dna = Martell_11
 
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_jeyne_poole_dummy = {
+	name = Jeyne
+	dynasty = dynn_Stark
+	dna = Poole_3
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_beth_cassel_dummy = {
+	name = Beth
+	dynasty = dynn_Stark
+	dna = Cassel_9
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_alys_karstark_dummy = {
+	name = Alys
+	dynasty = dynn_Stark
+	dna = Karstark_19
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}

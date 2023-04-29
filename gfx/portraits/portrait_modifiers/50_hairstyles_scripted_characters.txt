@@ -1041,8 +1041,13 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				exists = character:Mormont_8
-				this = character:Mormont_8
+				OR = {
+					has_character_flag = is_jorelle_mormont # AGOTCCH
+					AND = {
+						exists = character:Mormont_8
+						this = character:Mormont_8
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -1492,8 +1497,13 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				exists = character:Arryn_8
-				this = character:Arryn_8
+				OR = {
+					has_character_flag = is_robert_arryn # AGOTCCH
+					AND = {
+						exists = character:Arryn_8
+						this = character:Arryn_8
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -2555,8 +2565,13 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				exists = character:Cassel_5
-				this = character:Cassel_5
+				OR = {
+					has_character_flag = is_beth_cassel # AGOTCCH
+					AND = {
+						exists = character:Cassel_5
+						this = character:Cassel_5
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -3068,8 +3083,13 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				exists = character:Mormont_9
-				this = character:Mormont_9
+				OR = {
+					has_character_flag = is_lyanna_mormont # AGOTCCH
+					AND = {
+						exists = character:Mormont_9
+						this = character:Mormont_9
+					}
+				}
 			}
 		}
 	}
@@ -4563,8 +4583,13 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				exists = character:Poole_3
-				this = character:Poole_3
+				OR = {
+					has_character_flag = is_jeyne_poole # AGOTCCH
+					AND = {
+						exists = character:Poole_3
+						this = character:Poole_3
+					}
+				}
 			}
 			modifier = {
 				add = 999
@@ -4644,8 +4669,13 @@ hairstyles_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				exists = character:Karstark_19
-				this = character:Karstark_19
+				OR = {
+					has_character_flag = is_alys_karstark # AGOTCCH
+					AND = {
+						exists = character:Karstark_19
+						this = character:Karstark_19
+					}
+				}
 			}
 			modifier = {
 				add = 999

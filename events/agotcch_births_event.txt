@@ -18,5 +18,8 @@ agotcch_births.1 = {
 		agotcch_handle_arryn_children = yes
 		agotcch_handle_westerling_children = yes
 		agotcch_handle_tyrell_children = yes
+		agotcch_handle_martell_children = yes
+		agotcch_handle_karstark_children = yes
+		agotcch_handle_unlanded_children = yes
 	}
 }

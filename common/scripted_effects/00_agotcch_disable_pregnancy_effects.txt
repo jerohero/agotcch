@@ -28,3 +28,12 @@ agotcch_add_life_support_modifier = {
 	}
 }
 
+agotcch_set_lannincest_traits = {
+	character:Lannister_7 = {
+		add_trait = incestuous
+	}
+
+	character:Lannister_6 = {
+		add_trait = incestuous
+	}
+}
