@@ -134,7 +134,7 @@ agotcch_handle_baratheon_children = {
 		# Modifiers
 		if = {
 			limit = {
-				current_year < 8291
+				current_year < 8298
 			}
 
 			character:Lannister_6 = {
@@ -264,7 +264,51 @@ agotcch_handle_baratheon_children = {
 			agotcch_child_toast = yes
 		}
 	}
-	else_if = {
+	if = {
+		limit = {
+			AND = {
+				this = character:Baratheon_2 # Robert
+				exists = character:Baratheon_rs_5 # Thank the gods for Bessie
+			}
+		}
+
+		# Bella
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_bella
+				}
+				current_year = 8283
+			}
+
+			add_character_flag = had_bella
+			agotcch_create_bella_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				this = character:Baratheon_2 # Robert
+				exists = character:Baratheon_rs_3
+			}
+		}
+
+		# Barra
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_barra
+				}
+				current_year = 8298
+			}
+
+			add_character_flag = had_barra
+			agotcch_create_barra_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+	if = {
 		limit = {
 			AND = {
 				this = character:Baratheon_3 # Stannis
