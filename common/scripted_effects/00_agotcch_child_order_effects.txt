@@ -535,3 +535,46 @@ agotcch_handle_tyrell_children = {
 		}
 	}
 }
+
+agotcch_handle_mormont_children = {
+	if = {
+		limit = {
+			exists = character:Mormont_4 # Maege
+		}
+
+		if = {
+			limit = {
+				current_year < 8290
+			}
+			character:Mormont_4 = {
+				agotcch_add_wife_modifier = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_jorelle_mormont
+				}
+				current_year = 8284
+			}
+
+			add_character_flag = had_jorelle_mormont
+			agotcch_create_jorelle_mormont_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_lyanna_mormont
+				}
+				current_year = 8290
+			}
+
+			add_character_flag = had_lyanna_mormont
+			agotcch_create_lyanna_mormont_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+}
+

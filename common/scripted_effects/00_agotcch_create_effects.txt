@@ -704,3 +704,60 @@ agotcch_create_jeyne_westerling_effect = {
 		}
 	}
 }
+
+####################################################
+####		        HOUSE MORMONT 		       	####
+####################################################
+
+# Lyanna, Jorelle
+
+# Mormont_9
+agotcch_create_lyanna_mormont_effect = {
+	create_character = {
+		age = 0
+		name = "Lyanna"
+		mother = character:Mormont_4
+		gender = female
+		faith = faith:old_gods_south
+		culture = culture:wolfswood_clansman	
+		dynasty = mother
+
+		trait = physique_good_1
+		random_traits = no
+
+		save_scope_as = agotcch_baby_lyanna_mormont
+	}
+	hidden_effect = {
+		scope:agotcch_baby_lyanna_mormont = {
+			add_character_flag = is_lyanna_mormont
+			# copy_inheritable_appearance_from = character:agotcch_lyanna_mormont_dummy
+			copy_inheritable_appearance_from = character:agotcch_lyanna_mormont_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Mormont_8
+agotcch_create_jorelle_mormont_effect = {
+	create_character = {
+		age = 0
+		name = "Jorelle"
+		mother = character:Mormont_4
+		gender = female
+		faith = faith:old_gods_south
+		culture = culture:wolfswood_clansman	
+		dynasty = mother
+
+		trait = physique_good_1
+		random_traits = no
+
+		save_scope_as = agotcch_baby_jorelle_mormont
+	}
+	hidden_effect = {
+		scope:agotcch_baby_jorelle_mormont = {
+			add_character_flag = is_jorelle_mormont
+			copy_inheritable_appearance_from = character:agotcch_jorelle_mormont_dummy
+			save_scope_as = latest_child
+		}
+	}
+}

@@ -216,3 +216,36 @@ agotcch_margaery_tyrell_dummy = {
 	7880.1.1 = { birth = yes }
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
+
+agotcch_lyanna_mormont_dummy = {
+	name = Margaery
+	dynasty = dynn_Stark
+	# dna = agotcch_lyanna_mormont_dna
+	dna = Mormont_9
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_jorelle_mormont_dummy = {
+	name = Margaery
+	dynasty = dynn_Stark
+	dna = Mormont_8
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+
