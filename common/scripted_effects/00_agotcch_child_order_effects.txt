@@ -85,10 +85,11 @@
 	}
 }
 
+# Assumed parents can be Jaime or Robert
+# Jaime and Cersei are both unlanded, so this block will trigger for every character in the yearly loop
 agotcch_handle_baratheon_children = {
 	if = {
 		limit = {
-			
 			OR = {
 				AND = { # Robert and Cersie are married, Jaime is alive
 					this = character:Baratheon_2 # Robert
@@ -130,13 +131,22 @@ agotcch_handle_baratheon_children = {
 			}
 		}
 
+		# Modifiers
 		if = {
 			limit = {
 				current_year < 8291
 			}
 
 			character:Lannister_6 = {
-				agotcch_add_wife_modifier = yes
+				if = {
+					limit = {
+						NOT = {
+							has_character_modifier = agotcch_wife_modifier
+						}
+					}
+
+					agotcch_add_wife_modifier = yes
+				}
 			}
 
 			if = {
@@ -156,6 +166,7 @@ agotcch_handle_baratheon_children = {
 			}
 		}
 
+		# Joffrey
 		if = {
 			limit = {
 				NOT = {
@@ -180,6 +191,7 @@ agotcch_handle_baratheon_children = {
 				agotcch_create_joffrey_lannister_effect = yes
 			}
 		}
+		# Myrcella
 		else_if = {
 			limit = {
 				NOT = {
@@ -203,7 +215,8 @@ agotcch_handle_baratheon_children = {
 				limit = { local_var:father_flag = character:Lannister_7 }
 				agotcch_create_myrcella_lannister_effect = yes
 			}
-		} 
+		}
+		# Tommen
 		else_if = {
 			limit = {
 				NOT = {
@@ -237,6 +250,7 @@ agotcch_handle_baratheon_children = {
 			}
 		}
 
+		# Gendry
 		if = {
 			limit = {
 				NOT = {
