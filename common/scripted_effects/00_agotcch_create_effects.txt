@@ -506,6 +506,7 @@ agotcch_create_margaery_tyrell_effect = {
 
 # Samwell
 
+# Tarly_2
 agotcch_create_samwell_tarly_effect = {
 	create_character = {
 		age = 0
@@ -526,8 +527,112 @@ agotcch_create_samwell_tarly_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_samwell_tarly = {
 			add_character_flag = is_samwell_tarly
-			copy_inheritable_appearance_from = character:Tarly_2
+			# copy_inheritable_appearance_from = character:Tarly_2
 			# copy_inheritable_appearance_from = character:agotcch_samwell_tarly_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Tarly_3
+agotcch_create_talla_tarly_effect = {
+	create_character = {
+		age = 0
+		name = "Talla"
+		father = character:Tarly_1
+		mother = character:Florent_8
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:marcher	
+		dynasty = father
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_talla_tarly
+	}
+	hidden_effect = {
+		scope:agotcch_baby_talla_tarly = {
+			add_character_flag = is_talla_tarly
+			# copy_inheritable_appearance_from = character:Tarly_3
+			# copy_inheritable_appearance_from = character:agotcch_talla_tarly_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Tarly_6
+agotcch_create_dickon_tarly_effect = {
+	create_character = {
+		age = 0
+		name = "Dickon"
+		father = character:Tarly_1
+		mother = character:Florent_8
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:marcher	
+		dynasty = father
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_dickon_tarly
+	}
+	hidden_effect = {
+		scope:agotcch_baby_dickon_tarly = {
+			add_character_flag = is_dickon_tarly
+			# copy_inheritable_appearance_from = character:Tarly_6
+			# copy_inheritable_appearance_from = character:agotcch_dickon_tarly_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Tarly_4
+agotcch_create_samantha_tarly_effect = {
+	create_character = {
+		age = 0
+		name = "Samantha"
+		father = character:Tarly_1
+		mother = character:Florent_8
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:marcher	
+		dynasty = father
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_samantha_tarly
+	}
+	hidden_effect = {
+		scope:agotcch_baby_samantha_tarly = {
+			add_character_flag = is_samantha_tarly
+			# copy_inheritable_appearance_from = character:Tarly_4
+			# copy_inheritable_appearance_from = character:agotcch_samantha_tarly_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Tarly_5
+agotcch_create_sansara_tarly_effect = {
+	create_character = {
+		age = 0
+		name = "Sansara"
+		father = character:Tarly_1
+		mother = character:Florent_8
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:marcher	
+		dynasty = father
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_sansara_tarly
+	}
+	hidden_effect = {
+		scope:agotcch_baby_sansara_tarly = {
+			add_character_flag = is_sansara_tarly
+			copy_inheritable_appearance_from = character:Tarly_5
+			# copy_inheritable_appearance_from = character:agotcch_sansara_tarly_dummy
 			save_scope_as = latest_child
 		}
 	}

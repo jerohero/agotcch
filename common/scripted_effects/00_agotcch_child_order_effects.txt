@@ -354,7 +354,7 @@ agotcch_handle_tarly_children = {
 
 		if = {
 			limit = {
-				current_year < 8283
+				current_year < 8288
 			}
 			character:Florent_8 = {
 				agotcch_add_wife_modifier = yes
@@ -374,6 +374,54 @@ agotcch_handle_tarly_children = {
 
 			add_character_flag = had_samwell_tarly
 			agotcch_create_samwell_tarly_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_talla_tarly
+				}
+				current_year = 8284
+			}
+
+			add_character_flag = had_talla_tarly
+			agotcch_create_talla_tarly_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_samantha_tarly
+				}
+				current_year = 8285
+			}
+
+			add_character_flag = had_samantha_tarly
+			agotcch_create_samantha_tarly_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_sansara_tarly
+				}
+				current_year = 8286
+			}
+
+			add_character_flag = had_sansara_tarly
+			agotcch_create_sansara_tarly_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_dickon_tarly
+				}
+				current_year = 8288
+			}
+
+			add_character_flag = had_dickon_tarly
+			agotcch_create_dickon_tarly_effect = yes
 			agotcch_child_toast = yes
 		}
 	}
