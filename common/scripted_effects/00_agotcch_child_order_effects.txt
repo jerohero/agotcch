@@ -268,11 +268,33 @@ agotcch_handle_baratheon_children = {
 				NOT = {
 					has_character_flag = had_gendry
 				}
-				current_year = 8284
+				current_year = 8283
 			}
 
 			add_character_flag = had_gendry
 			agotcch_create_gendry_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				this = character:Baratheon_2 # Robert
+				exists = character:Florent_13
+			}
+		}
+
+		# Edric Storm
+		if = {
+			limit = {
+				NOT = {
+					has_character_flag = had_edric
+				}
+				current_year = 8287
+			}
+
+			add_character_flag = had_edric
+			agotcch_create_edric_effect = yes
 			agotcch_child_toast = yes
 		}
 	}
