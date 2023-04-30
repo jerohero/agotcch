@@ -1946,11 +1946,14 @@ hairstyles_scripted_characters = {
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_jon_snow # AGOTCCH
-					AND = {
-						exists = character:Stark_7
-						this = character:Stark_7
+				AND = { # Custom DNA hairstyle
+					has_game_rule = agotcch_vanilla_jon_snow_off
+					OR = {
+						has_character_flag = is_jon_snow
+						AND = {
+							exists = character:Stark_7
+							this = character:Stark_7
+						}
 					}
 				}
 			}
@@ -3301,16 +3304,19 @@ hairstyles_scripted_characters = {
 				exists = character:Rhysling_2
 				this = character:Rhysling_2
 			}
-			# modifier = {
-			# 	add = 999
-			# 	OR = {
-			# 		has_character_flag = is_jon_snow
-			# 		AND = {
-			# 			exists = character:Stark_7
-			# 			this = character:Stark_7
-			# 		}
-			# 	}
-			# }
+			modifier = {
+				add = 999
+				AND = { # Vanilla hairstyle
+					has_game_rule = agotcch_vanilla_jon_snow_on
+					OR = {
+						has_character_flag = is_jon_snow
+						AND = {
+							exists = character:Stark_7
+							this = character:Stark_7
+						}
+					}
+				}
+			}
 			modifier = {
 				add = 999
 				exists = character:Blackwater_1
