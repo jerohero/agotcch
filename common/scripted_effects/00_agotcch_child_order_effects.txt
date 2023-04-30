@@ -100,7 +100,9 @@ agotcch_handle_baratheon_children = {
 				}
 				AND = { # Robert and Cersie are not married, but Jaime and Cersei are lovers
 					NOT = {
-						is_spouse_of = character:Lannister_6 # Cersei
+						character:Baratheon_2 = {
+							is_spouse_of = character:Lannister_6 # Cersei
+						}
 					}
 					character:Lannister_7 = { # Jaime
 						is_alive = yes
@@ -116,7 +118,9 @@ agotcch_handle_baratheon_children = {
 		# Set assumed father
 		if = {
 			limit = {
-				is_spouse_of = character:Lannister_6 # Cersei
+				character:Baratheon_2 = {
+					is_spouse_of = character:Lannister_6 # Cersei
+				}
 			}
 
 			set_local_variable = {
@@ -124,7 +128,13 @@ agotcch_handle_baratheon_children = {
 				value = character:Baratheon_2
 			}
 		}
-		else = {
+		else_if = {
+			limit = {
+				NOT = {
+					this = character:Baratheon_2
+				}
+			}
+
 			set_local_variable = {
 				name = father_flag
 				value = character:Lannister_7

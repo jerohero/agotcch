@@ -197,10 +197,10 @@ agotcch_create_joffrey_lannister_effect = {
 		trait = beauty_good_2
 		random_traits = no
 
-		save_scope_as = agotcch_baby_joffrey_baratheon
+		save_scope_as = agotcch_baby_joffrey_lannister
 	}
 	hidden_effect = {
-		scope:agotcch_baby_joffrey_baratheon = {
+		scope:agotcch_baby_joffrey_lannister = {
 			add_character_flag = is_joffrey_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_5
 			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
@@ -258,10 +258,10 @@ agotcch_create_myrcella_lannister_effect = {
 		trait = intellect_good_1
 		random_traits = no
 
-		save_scope_as = agotcch_baby_myrcella_baratheon
+		save_scope_as = agotcch_baby_myrcella_lannister
 	}
 	hidden_effect = {
-		scope:agotcch_baby_myrcella_baratheon = {
+		scope:agotcch_baby_myrcella_lannister = {
 			add_character_flag = is_myrcella_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_6
 			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
@@ -314,10 +314,10 @@ agotcch_create_tommen_lannister_effect = {
 		trait = pensive
 		random_traits = no
 
-		save_scope_as = agotcch_baby_tommen_baratheon
+		save_scope_as = agotcch_baby_tommen_lannister
 	}
 	hidden_effect = {
-		scope:agotcch_baby_tommen_baratheon = {
+		scope:agotcch_baby_tommen_lannister = {
 			add_character_flag = is_tommen_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_7
 			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
