@@ -1,0 +1,5 @@
+﻿rule_agotcch_vanilla_jon_snow:0 "#B Canon Children: Vanilla Jon Snow DNA #!"
+setting_agotcch_vanilla_jon_snow_on:0 "Vanilla DNA"
+setting_agotcch_vanilla_jon_snow_off_desc:0 "Jon Snow's DNA will remain the same as before."
+setting_agotcch_vanilla_jon_snow_off:0 "Custom DNA"
+setting_agotcch_vanilla_jon_snow_off_desc:0 "Jon Snow's DNA will be replaced with custom DNA."

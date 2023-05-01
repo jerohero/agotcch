@@ -1,0 +1,152 @@
+﻿# Jon Snow
+# AGOT: history/characters/00_agot_char_north.txt
+Stark_7 = {
+	name = Jon # Canon, THE Jon Snow, Lord Commander of the Night's Watch, He don't want it
+	dynasty = dynn_Stark
+
+	if = {
+		limit = {
+			has_game_rule = agotcch_vanilla_jon_snow_on
+		}
+
+		dna = Stark_7
+	}
+	else = {
+		dna = agotcch_jon_snow_dna
+	}
+
+	martial = 4
+	diplomacy = 9
+	intrigue = 3
+	stewardship = 9
+	learning = 5
+	prowess = 8
+
+	religion = old_gods_south
+	culture = northman
+
+	father = Stark_3
+	
+	trait = education_martial_2
+	trait = bastard
+	give_nickname = nick_snow
+
+	disallow_random_traits = yes
+
+	8283.2.1 = {
+		birth = yes
+		effect = {
+			add_character_flag = is_jon_snow 
+			random_list = {
+				95 = { set_sexuality = heterosexual }
+				5 = { set_sexuality = bisexual }
+			}
+			set_real_father = character:Targaryen_3
+		}
+		# effect = { character_event = { id = tower_of_joy.50 } } #submod event
+	}
+	8289.9.1 = { trait = honorable }
+	8292.1.1 = {
+		trait = brave
+		trait = just
+		trait = honest
+		effect = { set_relation_friend = character:Stark_6 } #Robb Stark
+	}
+	8297.1.1 = {
+		effect = { set_relation_friend = character:Stark_9 } #Arya Stark
+	}
+	# 8298.2.24 = {
+		# trait = direwolf # Ghost # AGOT TODO trait
+		# effect = {
+			# e_rebels = {
+				# create_random_steward = {
+					# name = Ghost
+					# random_traits = yes
+					# dynasty = none
+					# female = no
+					# culture = direwolf_culture
+					# religion = ROOT
+				# }
+				# new_character = {
+					# ROOT = { save_persistent_event_target = { name = direwolf_name scope = PREV } }
+					# death = yes
+				# }
+			# }
+		# }
+	# }
+	8298.5.20 = {	
+		trait = nightswatch
+		effect = {
+			set_relation_rival = character:Thorne_3 # Allister Thorne
+			set_relation_friend = character:Tarly_2 # Samwell Tarly
+			set_relation_friend = character:121421 # Grenn
+			set_relation_friend = character:121420 # Pyp
+			set_relation_friend = character:121419 # Todder
+			set_relation_friend = character:Tollett_6 # Dolorous Edd Tollett
+			#add_character_modifier = nw_steward # AGOT TODO modifier
+			#add_character_flag = NW_personal_steward # AGOT TODO 
+			#give_council_position = councillor_personal_steward # Personal Steward of the Night's Watch AGOT TODO
+		}
+	}
+	8299.1.1 = {
+		employer = Rayder_1 # Mance Rayder
+		effect = { set_relation_lover = character:574349 } # Ygritte
+	}
+	8299.2.1 = {
+		#trait = defensive_leader # AGOT TODO trait
+		#trait = inspiring_leader # AGOT TODO trait
+	}
+	8299.2.11 = {
+		effect = { add_pressed_claim = title:e_the_north }
+	}
+	8299.11.5 = {
+		effect = {
+			set_relation_rival = character:Bolton_5 #Ramsay Snow
+			#d_the_crossing = { #Frey Blood Feud # AGOT TODO
+			#	holder_scope = {
+			#		set_dynasty_flag = in_blood_feud
+			#		trait = blood_feud #blood feud tracker
+			#		character_event = { id = feast_for_crows.29 days = 1 }
+			#		any_dynasty_member = {
+			#			limit = {
+			#				is_alive = yes
+			#				NOT = { character = PREV }
+			#			}
+			#			character_event = { id = feast_for_crows.29 days = 1 }
+			#		}
+			#	}
+			#}
+			#k_the_westerlands = { #Stark-Lannister Blood Feud # AGOT TODO
+			#	holder_scope = {
+			#		set_dynasty_flag = in_blood_feud
+			#		trait = blood_feud #blood feud tracker
+			#		character_event = { id = feast_for_crows.30 days = 1 }
+			#		any_dynasty_member = {
+			#			limit = {
+			#				is_alive = yes
+			#				NOT = { character = PREV }
+			#			}
+			#			character_event = { id = feast_for_crows.30 days = 1 }
+			#		}
+			#	}
+			#}
+		}
+	}
+	8300.3.1 = {
+		effect = {
+			set_relation_rival = character:Slynt_1 # Janos Slynt
+			add_opinion = {
+				modifier = respect_opinion
+				target = character:Baratheon_3 # Stannis Baratheon
+			}
+			reverse_add_opinion = {
+				modifier = respect_opinion
+				target = character:Baratheon_3 # Stannis Baratheon
+			}
+			reverse_add_opinion = {
+				modifier = respect_opinion
+				target = character:Melisandre_1 # Melisandre of Asshai
+			}
+		}
+	}
+}
