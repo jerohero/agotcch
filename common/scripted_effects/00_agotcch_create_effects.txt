@@ -712,7 +712,7 @@ agotcch_create_jeyne_westerling_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_jeyne_westerling = {
 			add_character_flag = is_jeyne_westerling
-			# copy_inheritable_appearance_from = character:agotcch_jeyne_westerling_dummy
+			copy_inheritable_appearance_from = character:agotcch_jeyne_westerling_dummy
 			save_scope_as = latest_child
 		}
 	}

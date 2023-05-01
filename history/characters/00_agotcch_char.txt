@@ -185,21 +185,20 @@ agotcch_robert_arryn_dummy = {
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
-# No DNA in source files
-# agotcch_jeyne_westerling_dummy = {
-# 	name = Jeyne
-# 	dynasty = dynn_Stark
-# 	dna = agotcch_jeyne_westerling_dna
+agotcch_jeyne_westerling_dummy = {
+	name = Jeyne
+	dynasty = dynn_Stark
+	dna = agotcch_jeyne_westerling_dna
 
-# 	father = Stark_49
-# 	mother = Bolton_18
+	father = Stark_49
+	mother = Bolton_18
 
-# 	religion = old_gods_south
-# 	culture = northman
+	religion = old_gods_south
+	culture = northman
 
-# 	7880.1.1 = { birth = yes }
-# 	7881.1.1 = { death = { death_reason = death_vanished } }
-# }
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
 
 agotcch_margaery_tyrell_dummy = {
 	name = Margaery

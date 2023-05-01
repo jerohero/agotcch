@@ -1921,16 +1921,6 @@ hairstyles_scripted_characters = {
 				exists = character:Bourney_21
 				this = character:Bourney_21
 			}
-			modifier = {
-				add = 999
-				OR = {
-					has_character_flag = is_jeyne_westerling # AGOTCCH
-					AND = {
-						exists = character:Westerling_2
-						this = character:Westerling_2
-					}
-				}
-			}
 		}
 	}
 	male_hair_western_08 = {
@@ -2555,6 +2545,16 @@ hairstyles_scripted_characters = {
 					AND = {
 						exists = character:Baratheon_6
 						this = character:Baratheon_6
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_jeyne_westerling # AGOTCCH
+					AND = {
+						exists = character:Westerling_2
+						this = character:Westerling_2
 					}
 				}
 			}
