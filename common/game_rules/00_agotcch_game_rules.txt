@@ -1,7 +1,7 @@
-agotcch_vanilla_jon_snow = {
-	default = agotcch_vanilla_jon_snow_off
+﻿# agotcch_vanilla_jon_snow = {
+# 	default = agotcch_vanilla_jon_snow_off
 
-	agotcch_vanilla_jon_snow_on = { }
+# 	agotcch_vanilla_jon_snow_on = { }
 
-	agotcch_vanilla_jon_snow_off = { }
-}
+# 	agotcch_vanilla_jon_snow_off = { }
+# }
