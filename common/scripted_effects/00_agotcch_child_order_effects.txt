@@ -823,6 +823,79 @@ agotcch_handle_unlanded_children = {
 			agotcch_create_beth_cassel_effect = yes
 		}
 	}
+
+	# Forrester
+	if = {
+		limit = {
+			AND = {
+				exists = character:Forrester_2 # Gregor
+				character:Forrester_2 = {
+					is_spouse_of = character:Branfield_1 # Elissa
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				current_year < 8290
+			}
+			character:Forrester_2 = {
+				if = {
+					limit = {
+						NOT = { has_character_modifier = agotcch_husband_modifier }
+					}
+					agotcch_add_husband_modifier = yes
+				}
+			}
+			character:Branfield_1 = {
+				limit = {
+					NOT = { has_character_modifier = agotcch_wife_modifier }
+				}
+				agotcch_add_wife_modifier = yes
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { character:Branfield_1 = { has_character_flag = had_mira_forrester } }
+				current_year = 8283
+			}
+
+			character:Branfield_1 = { add_character_flag = had_mira_forrester }
+			agotcch_create_mira_forrester_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { character:Branfield_1 = { has_character_flag = had_ethan_forrester } }
+				current_year = 8286
+			}
+
+			character:Branfield_1 = { add_character_flag = had_ethan_forrester }
+			agotcch_create_ethan_forrester_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { character:Branfield_1 = { has_character_flag = had_talia_forrester } }
+				current_year = 8286
+			}
+
+			character:Branfield_1 = { add_character_flag = had_talia_forrester }
+			agotcch_create_talia_forrester_effect = yes
+			agotcch_child_toast = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { character:Branfield_1 = { has_character_flag = had_ryon_forrester } }
+				current_year = 8290
+			}
+
+			character:Branfield_1 = { add_character_flag = had_ryon_forrester }
+			agotcch_create_ryon_forrester_effect = yes
+			agotcch_child_toast = yes
+		}
+	}
 }
 
 

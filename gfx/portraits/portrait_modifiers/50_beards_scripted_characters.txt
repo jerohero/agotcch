@@ -824,13 +824,23 @@ beards_scripted_characters = {
 			}
 			modifier = {
 				add = 999
-				exists = character:Forrester_6
-				this = character:Forrester_6
+				OR = {
+					has_character_flag = is_ethan_forrester # AGOTCCH
+					AND = {
+						exists = character:Forrester_6
+						this = character:Forrester_6
+					}
+				}
 			}
 			modifier = {
 				add = 999
-				exists = character:Forrester_8
-				this = character:Forrester_8
+				OR = {
+					has_character_flag = is_ryon_forrester # AGOTCCH
+					AND = {
+						exists = character:Forrester_8
+						this = character:Forrester_8
+					}
+				}
 			}
 			modifier = {
 				add = 999

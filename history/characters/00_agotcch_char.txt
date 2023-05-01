@@ -306,3 +306,48 @@ agotcch_alys_karstark_dummy = {
 	7880.1.1 = { birth = yes }
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
+
+agotcch_mira_forrester_dummy = {
+	name = Mira
+	dynasty = dynn_Stark
+	dna = Forrester_5
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_ethan_forrester_dummy = {
+	name = Ethan
+	dynasty = dynn_Stark
+	dna = Forrester_6
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_ryon_forrester_dummy = {
+	name = Ryon
+	dynasty = dynn_Stark
+	dna = Forrester_8
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}

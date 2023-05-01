@@ -734,7 +734,6 @@ agotcch_create_lyanna_mormont_effect = {
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman	
 		dynasty = mother
-		location = mother.location
 
 		trait = physique_good_1
 		random_traits = no
@@ -761,7 +760,6 @@ agotcch_create_jorelle_mormont_effect = {
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman	
 		dynasty = mother
-		location = mother.location
 
 		trait = physique_good_1
 		random_traits = no
@@ -828,7 +826,6 @@ agotcch_create_jeyne_poole_effect = {
 		faith = faith:old_gods_south
 		culture = culture:northman
 		dynasty = father
-		location = father.location
 
 		trait = beauty_good_1
 		random_traits = no
@@ -861,7 +858,6 @@ agotcch_create_beth_cassel_effect = {
 		faith = faith:old_gods_south
 		culture = culture:northman
 		dynasty = father
-		location = father.location
 
 		random_traits = no
 
@@ -903,6 +899,116 @@ agotcch_create_alys_karstark_effect = {
 		scope:agotcch_baby_alys_karstark = {
 			add_character_flag = is_alys_karstark
 			copy_inheritable_appearance_from = character:agotcch_alys_karstark_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+####################################################
+####		      HOUSE FORRESTER 		       	####
+####################################################
+
+# Mira, Ethan, Talia, Ryon
+
+# Forrester_5
+agotcch_create_mira_forrester_effect = {
+	create_character = {
+		age = 0
+		name = "Mira"
+		father = character:Forrester_2
+		mother = character:Branfield_1
+		gender = female
+		faith = faith:old_gods_south
+		culture = culture:wolfswood_clansman
+		dynasty = father
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_mira_forrester
+	}
+	hidden_effect = {
+		scope:agotcch_baby_mira_forrester = {
+			add_character_flag = is_mira_forrester
+			copy_inheritable_appearance_from = character:agotcch_mira_forrester_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Forrester_6
+agotcch_create_ethan_forrester_effect = {
+	create_character = {
+		age = 0
+		name = "Ethan"
+		father = character:Forrester_2
+		mother = character:Branfield_1
+		gender = male
+		faith = faith:old_gods_south
+		culture = culture:wolfswood_clansman
+		dynasty = father
+
+		random_traits = no
+		trait = twin
+
+		save_scope_as = agotcch_baby_ethan_forrester
+	}
+	hidden_effect = {
+		scope:agotcch_baby_ethan_forrester = {
+			add_character_flag = is_ethan_forrester
+			copy_inheritable_appearance_from = character:agotcch_ethan_forrester_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+
+# Forrester_7
+agotcch_create_talia_forrester_effect = {
+	create_character = {
+		age = 0
+		name = "Talia"
+		father = character:Forrester_2
+		mother = character:Branfield_1
+		gender = female
+		faith = faith:old_gods_south
+		culture = culture:wolfswood_clansman
+		dynasty = father
+
+		random_traits = no
+		trait = twin
+
+		save_scope_as = agotcch_baby_talia_forrester
+	}
+	hidden_effect = {
+		scope:agotcch_baby_talia_forrester = {
+			add_character_flag = is_talia_forrester
+			copy_inheritable_appearance_from = character:agotcch_talia_forrester_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Forrester_8
+agotcch_create_ryon_forrester_effect = {
+	create_character = {
+		age = 0
+		name = "Ryon"
+		father = character:Forrester_2
+		mother = character:Branfield_1
+		gender = male
+		faith = faith:old_gods_south
+		culture = culture:wolfswood_clansman
+		dynasty = father
+
+		random_traits = no
+		trait = intellect_good_1
+
+		save_scope_as = agotcch_baby_ryon_forrester
+	}
+	hidden_effect = {
+		scope:agotcch_baby_ryon_forrester = {
+			add_character_flag = is_ryon_forrester
+			copy_inheritable_appearance_from = character:agotcch_ryon_forrester_dummy
 			save_scope_as = latest_child
 		}
 	}
