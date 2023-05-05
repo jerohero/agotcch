@@ -90,45 +90,28 @@
 agotcch_handle_baratheon_children = {
 	if = {
 		limit = {
-			OR = {
-				AND = { # Robert and Cersie are married, Jaime is alive
-					this = character:Baratheon_2 # Robert
-					is_spouse_of = character:Lannister_6 # Cersei
-					character:Lannister_7 = { # Jaime
-						is_alive = yes
-					}
-				}
-				AND = { # Robert and Cersie are not married, but Jaime and Cersei are lovers
-					NOT = {
-						character:Baratheon_2 = {
-							is_spouse_of = character:Lannister_6 # Cersei
-						}
-					}
-					character:Lannister_7 = { # Jaime
-						is_alive = yes
-						OR = {
-							has_relation_lover = character:Lannister_6 # Cersei
-							has_relation_potential_lover = character:Lannister_6 # Cersei
-						}
-					}
-				}
+			character:Lannister_7 = { # Jaime
+				is_alive = yes
+			}
+			character:Lannister_6 = { # Cersei
+				is_alive = yes
 			}
 		}
 
 		# Set assumed father
-		if = {
+		if = { # Cersei married to anyone
 			limit = {
-				character:Baratheon_2 = {
-					is_spouse_of = character:Lannister_6 # Cersei
+				character:Lannister_6 = {
+					is_married = yes
 				}
 			}
 
 			set_local_variable = {
 				name = father_flag
-				value = character:Baratheon_2
+				value = character:Lannister_6.primary_spouse
 			}
 		}
-		else_if = {
+		else_if = { # Cersei not married
 			limit = {
 				NOT = {
 					this = character:Baratheon_2
@@ -137,14 +120,14 @@ agotcch_handle_baratheon_children = {
 
 			set_local_variable = {
 				name = father_flag
-				value = character:Lannister_7
+				value = character:Lannister_7 # Jaime
 			}
 		}
 
 		# Modifiers
 		if = {
 			limit = {
-				current_year < 8298
+				current_year < 8291
 			}
 
 			character:Lannister_6 = {
@@ -160,27 +143,32 @@ agotcch_handle_baratheon_children = {
 			}
 
 			if = {
-				limit = { local_var:father_flag = character:Baratheon_2 }
-				character:Baratheon_2 = {
-					agotcch_add_husband_modifier = yes
+				limit = {
+					NOT = {
+						character:Lannister_6.primary_spouse = {
+							has_character_modifier = agotcch_husband_modifier
+						}
+					}
+
+					character:Lannister_6 = {
+						is_married = yes
+					}
 				}
-				character:Lannister_7 = {
+
+				character:Lannister_6.primary_spouse = {
 					agotcch_add_husband_modifier = yes
 				}
 			}
-			else_if = {
-				limit = { local_var:father_flag = character:Lannister_7 }
 
-				character:Lannister_7 = {
-					if = {
-						limit = {
-							NOT = {
-								has_character_modifier = agotcch_husband_modifier
-							}
+			character:Lannister_7 = {
+				if = {
+					limit = {
+						NOT = {
+							has_character_modifier = agotcch_husband_modifier
 						}
-	
-						agotcch_add_husband_modifier = yes
 					}
+	
+					agotcch_add_husband_modifier = yes
 				}
 			}
 		}
@@ -201,14 +189,13 @@ agotcch_handle_baratheon_children = {
 			}
 
 			if = {
-				limit = { local_var:father_flag = character:Baratheon_2 }
-				agotcch_create_joffrey_baratheon_effect = yes
-				agotcch_child_toast = yes
-			}
-			else_if = {
 				limit = { local_var:father_flag = character:Lannister_7 }
 				agotcch_create_joffrey_lannister_effect = yes
 				agotcch_set_lannincest_traits = yes
+			}
+			else = {
+				agotcch_create_joffrey_baratheon_effect = yes
+				agotcch_child_toast = yes
 			}
 		}
 		# Myrcella
@@ -227,14 +214,13 @@ agotcch_handle_baratheon_children = {
 			}
 
 			if = {
-				limit = { local_var:father_flag = character:Baratheon_2 }
-				agotcch_create_myrcella_baratheon_effect = yes
-				agotcch_child_toast = yes
-			}
-			else_if = {
 				limit = { local_var:father_flag = character:Lannister_7 }
 				agotcch_create_myrcella_lannister_effect = yes
 				agotcch_set_lannincest_traits = yes
+			}
+			else = {
+				agotcch_create_myrcella_baratheon_effect = yes
+				agotcch_child_toast = yes
 			}
 		}
 		# Tommen
@@ -253,14 +239,13 @@ agotcch_handle_baratheon_children = {
 			}
 
 			if = {
-				limit = { local_var:father_flag = character:Baratheon_2 }
-				agotcch_create_tommen_baratheon_effect = yes
-				agotcch_child_toast = yes
-			}
-			else_if = {
 				limit = { local_var:father_flag = character:Lannister_7 }
 				agotcch_create_tommen_lannister_effect = yes
 				agotcch_set_lannincest_traits = yes
+			}
+			else = {
+				agotcch_create_tommen_baratheon_effect = yes
+				agotcch_child_toast = yes
 			}
 		}
 	}
