@@ -37,3 +37,12 @@ agotcch_set_lannincest_traits = {
 		add_trait = incestuous
 	}
 }
+
+agotcch_set_lannincest_secret = {
+	character:Lannister_6 = {
+		add_secret = {
+			type = secret_agot_disputed_heritage
+			target = scope:latest_child
+		}
+	}
+}

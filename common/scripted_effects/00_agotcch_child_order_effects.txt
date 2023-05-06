@@ -196,6 +196,7 @@ agotcch_handle_baratheon_children = {
 			else = {
 				agotcch_create_joffrey_baratheon_effect = yes
 				agotcch_child_toast = yes
+				agotcch_set_lannincest_secret = yes
 			}
 		}
 		# Myrcella
@@ -221,6 +222,7 @@ agotcch_handle_baratheon_children = {
 			else = {
 				agotcch_create_myrcella_baratheon_effect = yes
 				agotcch_child_toast = yes
+				agotcch_set_lannincest_secret = yes
 			}
 		}
 		# Tommen
@@ -246,6 +248,7 @@ agotcch_handle_baratheon_children = {
 			else = {
 				agotcch_create_tommen_baratheon_effect = yes
 				agotcch_child_toast = yes
+				agotcch_set_lannincest_secret = yes
 			}
 		}
 	}
