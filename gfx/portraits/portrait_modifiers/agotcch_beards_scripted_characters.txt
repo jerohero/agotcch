@@ -1,0 +1,102 @@
+﻿agotcch_beards_scripted_characters = {
+	usage = game
+	selection_behavior = max
+	priority = 3
+
+	agotcch_clean_shaven = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = beards
+				template = no_beard
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_robb_stark
+					AND = {
+						exists = character:Stark_6
+						this = character:Stark_6
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_bran_stark
+					AND = {
+						exists = character:8059
+						this = character:8059
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_joffrey_baratheon
+					AND = {
+						exists = character:Baratheon_5
+						this = character:Baratheon_5
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_tommen_baratheon
+					AND = {
+						exists = character:Baratheon_7
+						this = character:Baratheon_7
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_ethan_forrester
+					AND = {
+						exists = character:Forrester_6
+						this = character:Forrester_6
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_ryon_forrester
+					AND = {
+						exists = character:Forrester_8
+						this = character:Forrester_8
+					}
+				}
+			}
+		}
+	}
+	agotcch_male_beard_western_01 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = beards
+				template = all_beards
+				accessory = male_beard_western_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_gendry_baratheon
+					AND = {
+						exists = character:Baratheon_9
+						this = character:Baratheon_9
+					}
+				}
+			}
+		}
+	}
+}

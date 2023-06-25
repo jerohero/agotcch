@@ -1,0 +1,482 @@
+﻿agotcch_hairstyles_scripted_characters = {
+	usage = game
+	selection_behavior = max
+	priority = 3
+
+	agotcch_female_hair_custom_10 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_custom_10
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_arya_stark
+					AND = {
+						exists = character:Stark_9
+						this = character:Stark_9
+					}
+				}
+			}
+		}
+	}
+	agotcch_male_hair_western_02 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_western_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_bran_stark
+					AND = {
+						exists = character:8059
+						this = character:8059
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_gendry_baratheon
+					AND = {
+						exists = character:Baratheon_9
+						this = character:Baratheon_9
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_western_03 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_western_03
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_jorelle_mormont
+					AND = {
+						exists = character:Mormont_8
+						this = character:Mormont_8
+					}
+				}
+			}
+		}
+	}
+	agotcch_male_hair_mena_02 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_mena_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_tommen_baratheon
+					AND = {
+						exists = character:Baratheon_7
+						this = character:Baratheon_7
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_robert_arryn
+					AND = {
+						exists = character:Arryn_8
+						this = character:Arryn_8
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_northern_03 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_northern_03
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = character:Mormont_7
+				this = character:Mormont_7
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_mira_forrester
+					AND = {
+						exists = character:Forrester_5
+						this = character:Forrester_5
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_custom_16 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_custom_16
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_talia_forrester
+					AND = {
+						exists = character:Forrester_7
+						this = character:Forrester_7
+					}
+				}
+			}
+		}
+	}
+	agotcch_male_hair_fp2_iberian_muslim_01 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_fp2_iberian_muslim_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_robb_stark
+					AND = {
+						exists = character:Stark_6 
+						this = character:Stark_6 
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_fp2_iberian_christian_01 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_fp2_iberian_christian_01
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_myrcella_baratheon
+					AND = {
+						exists = character:Baratheon_6
+						this = character:Baratheon_6
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_jeyne_westerling
+					AND = {
+						exists = character:Westerling_2
+						this = character:Westerling_2
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_beth_cassel
+					AND = {
+						exists = character:Cassel_5
+						this = character:Cassel_5
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_fp1_03 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_fp1_03
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_lyanna_mormont
+					AND = {
+						exists = character:Mormont_9
+						this = character:Mormont_9
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_custom_02 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = agot_special_scripted_hairstyles
+				accessory = female_hair_custom_02
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				exists = character:Manderly_10
+				this = character:Manderly_10
+			}
+		}
+	}
+	agotcch_female_hair_fp1_04 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_fp1_04
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_shireen_baratheon
+					AND = {
+						exists = character:Baratheon_13
+						this = character:Baratheon_13
+					}
+				}
+			}
+		}
+	}
+	agotcch_male_hair_fp1_04 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_fp1_04
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_ethan_forrester
+					AND = {
+						exists = character:Forrester_6
+						this = character:Forrester_6
+					}
+				}
+			}
+		}
+	}
+	agotcch_male_hair_western_06 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_western_06
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_rickon_stark
+					AND = {
+						exists = character:Stark_11
+						this = character:Stark_11
+					}
+				}
+			}
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_ryon_forrester
+					AND = {
+						exists = character:Forrester_8
+						this = character:Forrester_8
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_custom_12 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles				
+				template = all_hairstyles
+				accessory = female_hair_custom_12
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_sansa_stark
+					AND = {
+						exists = character:Stark_8
+						this = character:Stark_8
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_custom_14 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_custom_14
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_jeyne_poole
+					AND = {
+						exists = character:Poole_3
+						this = character:Poole_3
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_fp2_iberian_christian_02 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_fp2_iberian_christian_02 
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_alys_karstark
+					AND = {
+						exists = character:Karstark_19
+						this = character:Karstark_19
+					}
+				}
+			}
+		}
+	}
+	agotcch_female_hair_fp2_iberian_muslim_02_common = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_fp2_iberian_muslim_02_common
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_margaery_tyrell
+					AND = {
+						exists = character:Tyrell_14
+						this = character:Tyrell_14
+					}
+				}
+			}
+		}
+	}
+	agotcch_male_hair_fp2_iberian_muslim_02 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = male_hair_fp2_iberian_muslim_02
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				OR = {
+					has_character_flag = is_joffrey_baratheon
+					AND = {
+						exists = character:Baratheon_5
+						this = character:Baratheon_5
+					}
+				}
+			}
+		}
+	}
+}
