@@ -13,7 +13,7 @@ agotcch_create_robb_stark_effect = {
 		gender = male
 		faith = faith:old_gods_south
 		culture = culture:northman	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = bossy
@@ -26,6 +26,7 @@ agotcch_create_robb_stark_effect = {
 			add_character_flag = is_robb_stark
 			# copy_inheritable_appearance_from = character:Stark_6
 			copy_inheritable_appearance_from = character:agotcch_robb_stark_dummy
+			set_variable = { name = agot_dna value = flag:stark }
 			save_scope_as = latest_child
 		}
 	}
@@ -41,7 +42,7 @@ agotcch_create_sansa_stark_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 		
 		trait = charming
@@ -55,6 +56,7 @@ agotcch_create_sansa_stark_effect = {
 			add_character_flag = is_sansa_stark
 			# copy_inheritable_appearance_from = character:Stark_7
 			copy_inheritable_appearance_from = character:agotcch_sansa_stark_dummy
+			set_variable = { name = agot_dna value = flag:stark }
 			save_scope_as = latest_child
 		}
 	}
@@ -69,7 +71,7 @@ agotcch_create_arya_stark_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = rowdy
@@ -82,6 +84,7 @@ agotcch_create_arya_stark_effect = {
 			add_character_flag = is_arya_stark
 			# copy_inheritable_appearance_from = character:Stark_9
 			copy_inheritable_appearance_from = character:agotcch_arya_stark_dummy
+			set_variable = { name = agot_dna value = flag:stark }
 			save_scope_as = latest_child
 		}
 	}
@@ -96,7 +99,7 @@ agotcch_create_bran_stark_effect = {
 		gender = male
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = curious
@@ -109,6 +112,7 @@ agotcch_create_bran_stark_effect = {
 			add_character_flag = is_bran_stark
 			# copy_inheritable_appearance_from = character:8059
 			copy_inheritable_appearance_from = character:agotcch_bran_stark_dummy
+			set_variable = { name = agot_dna value = flag:stark }
 			save_scope_as = latest_child
 		}
 	}
@@ -123,7 +127,7 @@ agotcch_create_rickon_stark_effect = {
 		gender = male
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = rowdy
@@ -136,6 +140,7 @@ agotcch_create_rickon_stark_effect = {
 			add_character_flag = is_rickon_stark
 			# copy_inheritable_appearance_from = character:Stark_11
 			copy_inheritable_appearance_from = character:agotcch_rickon_stark_dummy
+			set_variable = { name = agot_dna value = flag:stark }
 			save_scope_as = latest_child
 		}
 	}
@@ -161,7 +166,7 @@ agotcch_create_joffrey_baratheon_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:crownlander
-		dynasty = father
+		dynasty_house = character:Lannister_6.primary_spouse.house
 
 		trait = bossy
 		trait = beauty_good_2
@@ -175,6 +180,7 @@ agotcch_create_joffrey_baratheon_effect = {
 			add_character_flag = is_joffrey_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_5
 			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
+			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
 	}
@@ -190,7 +196,7 @@ agotcch_create_joffrey_lannister_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:westerman
-		dynasty = father
+		dynasty_house = character:Lannister_7.house
 
 		trait = bossy
 		trait = beauty_good_2
@@ -203,6 +209,7 @@ agotcch_create_joffrey_lannister_effect = {
 			add_character_flag = is_joffrey_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_5
 			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
+			set_variable = { name = agot_dna value = flag:lannister }
 			set_employer = title:c_casterly_rock.holder
 			save_scope_as = latest_child
 		}
@@ -220,7 +227,7 @@ agotcch_create_myrcella_baratheon_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:crownlander
-		dynasty = father
+		dynasty_house = character:Lannister_6.primary_spouse.house
 
 		trait = charming
 		trait = beauty_good_2
@@ -235,6 +242,7 @@ agotcch_create_myrcella_baratheon_effect = {
 			add_character_flag = is_myrcella_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_6
 			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
+			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
 	}
@@ -249,7 +257,7 @@ agotcch_create_myrcella_lannister_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:westerman
-		dynasty = father
+		dynasty_house = character:Lannister_7.house
 
 		trait = charming
 		trait = beauty_good_2
@@ -263,6 +271,7 @@ agotcch_create_myrcella_lannister_effect = {
 			add_character_flag = is_myrcella_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_6
 			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
+			set_variable = { name = agot_dna value = flag:lannister }
 			set_employer = title:c_casterly_rock.holder
 			save_scope_as = latest_child
 		}
@@ -279,7 +288,7 @@ agotcch_create_tommen_baratheon_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:crownlander
-		dynasty = father
+		dynasty_house = character:Lannister_6.primary_spouse.house
 
 		trait = pensive
 		random_traits = no
@@ -292,6 +301,7 @@ agotcch_create_tommen_baratheon_effect = {
 			add_character_flag = is_tommen_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_7
 			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
+			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
 	}
@@ -306,7 +316,7 @@ agotcch_create_tommen_lannister_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:westerman
-		dynasty = father
+		dynasty_house = character:Lannister_7.house
 
 		trait = pensive
 		random_traits = no
@@ -319,6 +329,7 @@ agotcch_create_tommen_lannister_effect = {
 			# copy_inheritable_appearance_from = character:Baratheon_7
 			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
 			set_employer = title:c_casterly_rock.holder
+			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
 	}
@@ -334,6 +345,7 @@ agotcch_create_gendry_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:crownlander
+		dynasty_house = father.house
 
 		trait = curious
 		trait = bastard
@@ -347,7 +359,7 @@ agotcch_create_gendry_effect = {
 			add_character_flag = is_gendry_baratheon
 			set_employer = title:b_goldguard_heights.holder
 			give_nickname = nick_the_bull
-			# set_variable = { name = dna value = flag:baratheon }
+			set_variable = { name = agot_dna value = flag:baratheon }
 			copy_inheritable_appearance_from = character:agotcch_gendry_baratheon_dummy
 			save_scope_as = latest_child
 		}
@@ -364,6 +376,7 @@ agotcch_create_bella_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:riverlander
+		dynasty_house = father.house
 
 		trait = bastard
 		trait = beauty_good_1
@@ -375,7 +388,7 @@ agotcch_create_bella_effect = {
 		scope:agotcch_baby_bella = {
 			add_character_flag = is_bella_baratheon
 			set_employer = title:b_stoney_sept.holder
-			set_variable = { name = dna value = flag:baratheon }
+			set_variable = { name = agot_dna value = flag:baratheon }
 			save_scope_as = latest_child
 		}
 	}
@@ -391,7 +404,7 @@ agotcch_create_edric_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:stormlander
-		dynasty = dynn_Baratheon
+		dynasty_house = father.house
 
 		trait = bastard
 		trait = physique_good_2
@@ -405,7 +418,7 @@ agotcch_create_edric_effect = {
 			add_character_flag = is_edric_storm
 			set_employer = title:b_storms_end.holder
 			give_nickname = nick_storm
-			set_variable = { name = dna value = flag:baratheon }
+			set_variable = { name = agot_dna value = flag:baratheon }
 			set_relation_guardian = character:Penrose_2 # Cortnay Penrose
 			save_scope_as = latest_child
 		}
@@ -423,6 +436,7 @@ agotcch_create_barra_effect = {
 		faith = faith:the_seven_main
 		culture = culture:crownlander
 		location = father.location
+		dynasty_house = father.house
 
 		trait = bastard
 		trait = beauty_good_1
@@ -433,7 +447,7 @@ agotcch_create_barra_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_barra = {
 			add_character_flag = is_barra_baratheon
-			set_variable = { name = dna value = flag:baratheon }
+			set_variable = { name = agot_dna value = flag:baratheon }
 			save_scope_as = latest_child
 		}
 	}
@@ -449,7 +463,7 @@ agotcch_create_shireen_baratheon_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:stormlander	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = pensive
@@ -462,6 +476,7 @@ agotcch_create_shireen_baratheon_effect = {
 		scope:agotcch_baby_shireen_baratheon = {
 			add_character_flag = is_shireen_baratheon
 			# copy_inheritable_appearance_from = character:Baratheon_13
+			set_variable = { name = agot_dna value = flag:baratheon }
 			copy_inheritable_appearance_from = character:agotcch_shireen_baratheon_dummy
 			save_scope_as = latest_child
 		}
@@ -483,7 +498,7 @@ agotcch_create_margaery_tyrell_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:reachman	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = charming
@@ -497,6 +512,7 @@ agotcch_create_margaery_tyrell_effect = {
 		scope:agotcch_baby_margaery_tyrell = {
 			add_character_flag = is_margaery_tyrell
 			# copy_inheritable_appearance_from = character:Tyrell_14
+			set_variable = { name = agot_dna value = flag:tyrell }
 			copy_inheritable_appearance_from = character:agotcch_margaery_tyrell_dummy
 			save_scope_as = latest_child
 		}
@@ -519,7 +535,7 @@ agotcch_create_samwell_tarly_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:marcher	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = pensive
@@ -548,7 +564,7 @@ agotcch_create_talla_tarly_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:marcher	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		random_traits = no
@@ -575,7 +591,7 @@ agotcch_create_dickon_tarly_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:marcher	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		random_traits = no
@@ -602,7 +618,7 @@ agotcch_create_samantha_tarly_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:marcher	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		random_traits = no
@@ -629,7 +645,7 @@ agotcch_create_sansara_tarly_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:marcher	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		random_traits = no
@@ -661,7 +677,7 @@ agotcch_create_robert_arryn_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:valeman	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = pensive
@@ -676,6 +692,7 @@ agotcch_create_robert_arryn_effect = {
 			add_character_flag = is_robert_arryn
 			# copy_inheritable_appearance_from = character:Arryn_8
 			copy_inheritable_appearance_from = character:agotcch_robert_arryn_dummy
+			set_variable = { name = agot_dna value = flag:arryn }
 			save_scope_as = latest_child
 		}
 	}
@@ -697,7 +714,7 @@ agotcch_create_jeyne_westerling_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:westerman	
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = curious
@@ -730,7 +747,7 @@ agotcch_create_lyanna_mormont_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman	
-		dynasty = mother
+		dynasty_house = mother.house
 
 		trait = physique_good_1
 		random_traits = no
@@ -756,7 +773,7 @@ agotcch_create_jorelle_mormont_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman	
-		dynasty = mother
+		dynasty_house = mother.house
 
 		trait = physique_good_1
 		random_traits = no
@@ -788,7 +805,7 @@ agotcch_create_trystane_martell_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:salt_dornish
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		trait = pensive
@@ -800,6 +817,7 @@ agotcch_create_trystane_martell_effect = {
 		scope:agotcch_baby_trystane_martell = {
 			add_character_flag = is_trystane_martell
 			copy_inheritable_appearance_from = character:agotcch_trystane_martell_dummy
+			set_variable = { name = agot_dna value = flag:martell }
 			save_scope_as = latest_child
 		}
 	}
@@ -822,7 +840,7 @@ agotcch_create_jeyne_poole_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty = father
+		dynasty_house = father.house
 
 		trait = beauty_good_1
 		random_traits = no
@@ -854,7 +872,7 @@ agotcch_create_beth_cassel_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty = father
+		dynasty_house = father.house
 
 		random_traits = no
 
@@ -885,7 +903,7 @@ agotcch_create_alys_karstark_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty = father
+		dynasty_house = father.house
 		location = father.location
 
 		random_traits = no
@@ -917,7 +935,7 @@ agotcch_create_mira_forrester_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty = father
+		dynasty_house = father.house
 
 		random_traits = no
 
@@ -942,7 +960,7 @@ agotcch_create_ethan_forrester_effect = {
 		gender = male
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty = father
+		dynasty_house = father.house
 
 		random_traits = no
 		trait = twin
@@ -969,7 +987,7 @@ agotcch_create_talia_forrester_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty = father
+		dynasty_house = father.house
 
 		random_traits = no
 		trait = twin
@@ -995,7 +1013,7 @@ agotcch_create_ryon_forrester_effect = {
 		gender = male
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty = father
+		dynasty_house = father.house
 
 		random_traits = no
 		trait = intellect_good_1
