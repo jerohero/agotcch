@@ -183,6 +183,26 @@ agotcch_create_joffrey_baratheon_effect = {
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
+		character:Lannister_6 = {
+			add_secret = {
+				type = secret_agot_disputed_heritage
+				target = scope:agotcch_baby_joffrey_baratheon
+			}
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_joffrey_baratheon
+			}
+		}
+		character:Lannister_7 = {
+			add_secret = {
+				type = secret_agot_disputed_heritage
+				target = scope:agotcch_baby_joffrey_baratheon
+			}
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_joffrey_baratheon
+			}
+		}
 	}
 }
 
@@ -245,6 +265,26 @@ agotcch_create_myrcella_baratheon_effect = {
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
+		character:Lannister_6 = {
+			add_secret = {
+				type = secret_agot_disputed_heritage
+				target = scope:agotcch_baby_myrcella_baratheon
+			}
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_myrcella_baratheon
+			}
+		}
+		character:Lannister_7 = {
+			add_secret = {
+				type = secret_agot_disputed_heritage
+				target = scope:agotcch_baby_myrcella_baratheon
+			}
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_myrcella_baratheon
+			}
+		}
 	}
 }
 
@@ -303,6 +343,26 @@ agotcch_create_tommen_baratheon_effect = {
 			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
+		}
+		character:Lannister_6 = {
+			add_secret = {
+				type = secret_agot_disputed_heritage
+				target = scope:agotcch_baby_tommen_baratheon
+			}
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_tommen_baratheon
+			}
+		}
+		character:Lannister_7 = {
+			add_secret = {
+				type = secret_agot_disputed_heritage
+				target = scope:agotcch_baby_tommen_baratheon
+			}
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_tommen_baratheon
+			}
 		}
 	}
 }
