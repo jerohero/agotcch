@@ -26,7 +26,7 @@
 			limit = {
 				NOT = {
 					has_character_flag = had_robb_stark
-					exists = Stark_6
+					exists = character:Stark_6
 				}
 				current_year = 8283
 			}
@@ -266,7 +266,7 @@ agotcch_handle_baratheon_children = {
 			limit = {
 				NOT = {
 					has_character_flag = had_gendry
-					exists = Baratheon_9
+					exists = character:Baratheon_9
 				}
 				current_year = 8284
 			}
@@ -402,7 +402,7 @@ agotcch_handle_tarly_children = {
 			limit = {
 				NOT = {
 					has_character_flag = had_samwell_tarly
-					exists = Tarly_2
+					exists = character:Tarly_2
 				}
 				current_year = 8283
 			}
@@ -415,7 +415,7 @@ agotcch_handle_tarly_children = {
 			limit = {
 				NOT = {
 					has_character_flag = had_talla_tarly
-					exists = Tarly_3
+					exists = character:Tarly_3
 				}
 				current_year = 8284
 			}

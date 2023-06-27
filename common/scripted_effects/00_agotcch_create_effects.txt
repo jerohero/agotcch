@@ -167,6 +167,7 @@ agotcch_create_joffrey_baratheon_effect = {
 		faith = faith:the_seven_main
 		culture = culture:crownlander
 		dynasty_house = character:Lannister_6.primary_spouse.house
+		employer = character:Lannister_6.primary_spouse
 
 		trait = bossy
 		trait = beauty_good_2
@@ -217,6 +218,7 @@ agotcch_create_joffrey_lannister_effect = {
 		faith = faith:the_seven_main
 		culture = culture:westerman
 		dynasty_house = character:Lannister_7.house
+		employer = character:Lannister_7.employer
 
 		trait = bossy
 		trait = beauty_good_2
@@ -248,6 +250,7 @@ agotcch_create_myrcella_baratheon_effect = {
 		faith = faith:the_seven_main
 		culture = culture:crownlander
 		dynasty_house = character:Lannister_6.primary_spouse.house
+		employer = character:Lannister_6.primary_spouse
 
 		trait = charming
 		trait = beauty_good_2
@@ -298,6 +301,7 @@ agotcch_create_myrcella_lannister_effect = {
 		faith = faith:the_seven_main
 		culture = culture:westerman
 		dynasty_house = character:Lannister_7.house
+		employer = character:Lannister_7.employer
 
 		trait = charming
 		trait = beauty_good_2
@@ -329,6 +333,7 @@ agotcch_create_tommen_baratheon_effect = {
 		faith = faith:the_seven_main
 		culture = culture:crownlander
 		dynasty_house = character:Lannister_6.primary_spouse.house
+		employer = character:Lannister_6.primary_spouse
 
 		trait = pensive
 		random_traits = no
@@ -377,6 +382,7 @@ agotcch_create_tommen_lannister_effect = {
 		faith = faith:the_seven_main
 		culture = culture:westerman
 		dynasty_house = character:Lannister_7.house
+		employer = character:Lannister_7.employer
 
 		trait = pensive
 		random_traits = no
@@ -405,7 +411,7 @@ agotcch_create_gendry_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:crownlander
-		dynasty_house = father.house
+		employer = title:b_goldguard_heights.holder
 
 		trait = curious
 		trait = bastard
@@ -417,11 +423,17 @@ agotcch_create_gendry_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_gendry = {
 			add_character_flag = is_gendry_baratheon
-			set_employer = title:b_goldguard_heights.holder
 			give_nickname = nick_the_bull
 			set_variable = { name = agot_dna value = flag:baratheon }
+			set_to_lowborn = yes
 			copy_inheritable_appearance_from = character:agotcch_gendry_baratheon_dummy
 			save_scope_as = latest_child
+		}
+		character:Baratheon_2 = {
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_gendry
+			}
 		}
 	}
 }
@@ -437,6 +449,7 @@ agotcch_create_bella_effect = {
 		faith = faith:the_seven_main
 		culture = culture:riverlander
 		dynasty_house = father.house
+		employer = title:b_stoney_sept.holder
 
 		trait = bastard
 		trait = beauty_good_1
@@ -447,9 +460,15 @@ agotcch_create_bella_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_bella = {
 			add_character_flag = is_bella_baratheon
-			set_employer = title:b_stoney_sept.holder
+			set_to_lowborn = yes
 			set_variable = { name = agot_dna value = flag:baratheon }
 			save_scope_as = latest_child
+		}
+		character:Baratheon_2 = {
+			add_secret = {
+				type = secret_unmarried_illegitimate_child
+				target = scope:agotcch_baby_bella
+			}
 		}
 	}
 }
@@ -715,7 +734,7 @@ agotcch_create_sansara_tarly_effect = {
 	hidden_effect = {
 		scope:agotcch_baby_sansara_tarly = {
 			add_character_flag = is_sansara_tarly
-			copy_inheritable_appearance_from = character:Tarly_5
+			# copy_inheritable_appearance_from = character:Tarly_5
 			# copy_inheritable_appearance_from = character:agotcch_sansara_tarly_dummy
 			save_scope_as = latest_child
 		}
@@ -774,8 +793,8 @@ agotcch_create_jeyne_westerling_effect = {
 		gender = female
 		faith = faith:the_seven_main
 		culture = culture:westerman	
-		dynasty_house = father.house
-		location = father.location
+		dynasty_house = character:Westerling_1.house
+		location = character:Westerling_1.location
 
 		trait = curious
 		trait = beauty_good_2
@@ -807,7 +826,8 @@ agotcch_create_lyanna_mormont_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman	
-		dynasty_house = mother.house
+		dynasty_house = character:Mormont_4.house
+		employer = character:Mormont_4.employer
 
 		trait = physique_good_1
 		random_traits = no
@@ -833,7 +853,8 @@ agotcch_create_jorelle_mormont_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman	
-		dynasty_house = mother.house
+		dynasty_house = character:Mormont_4.house
+		employer = character:Mormont_4.employer
 
 		trait = physique_good_1
 		random_traits = no
@@ -865,8 +886,8 @@ agotcch_create_trystane_martell_effect = {
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:salt_dornish
-		dynasty_house = father.house
-		location = father.location
+		dynasty_house = character:Martell_4.house
+		location = character:Martell_4.location
 
 		trait = pensive
 		random_traits = no
@@ -900,7 +921,8 @@ agotcch_create_jeyne_poole_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty_house = father.house
+		dynasty_house = character:Poole_2.house
+		location = character:Poole_2.location
 
 		trait = beauty_good_1
 		random_traits = no
@@ -932,7 +954,8 @@ agotcch_create_beth_cassel_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty_house = father.house
+		dynasty_house = character:Cassel_3.house
+		employer = character:Cassel_3.employer
 
 		random_traits = no
 
@@ -963,8 +986,8 @@ agotcch_create_alys_karstark_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:northman
-		dynasty_house = father.house
-		location = father.location
+		dynasty_house = character:Karstark_4.house
+		location = character:Karstark_4.location
 
 		random_traits = no
 
@@ -995,7 +1018,8 @@ agotcch_create_mira_forrester_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty_house = father.house
+		dynasty_house = character:Forrester_2.house
+		location = character:Forrester_2.location
 
 		random_traits = no
 
@@ -1020,7 +1044,8 @@ agotcch_create_ethan_forrester_effect = {
 		gender = male
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty_house = father.house
+		dynasty_house = character:Forrester_2.house
+		location = character:Forrester_2.location
 
 		random_traits = no
 		trait = twin
@@ -1047,7 +1072,8 @@ agotcch_create_talia_forrester_effect = {
 		gender = female
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty_house = father.house
+		dynasty_house = character:Forrester_2.house
+		location = character:Forrester_2.location
 
 		random_traits = no
 		trait = twin
@@ -1073,7 +1099,8 @@ agotcch_create_ryon_forrester_effect = {
 		gender = male
 		faith = faith:old_gods_south
 		culture = culture:wolfswood_clansman
-		dynasty_house = father.house
+		dynasty_house = character:Forrester_2.house
+		location = character:Forrester_2.location
 
 		random_traits = no
 		trait = intellect_good_1
