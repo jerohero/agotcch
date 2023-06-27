@@ -4,6 +4,7 @@
 
 # Robb, Sansa, Arya, Bran, Rickon
 
+# Stark_6
 agotcch_create_robb_stark_effect = {
 	create_character = {
 		age = 0
@@ -16,17 +17,26 @@ agotcch_create_robb_stark_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = bossy
 		random_traits = no
 
 		save_scope_as = agotcch_baby_robb_stark
 	}
 	hidden_effect = {
 		scope:agotcch_baby_robb_stark = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = bossy
+			}
+			else = {
+				add_trait = brave
+				add_trait = just
+				add_trait = honest
+				add_trait = honorable
+			}
+
 			add_character_flag = is_robb_stark
-			# copy_inheritable_appearance_from = character:Stark_6
 			copy_inheritable_appearance_from = character:agotcch_robb_stark_dummy
-			set_variable = { name = agot_dna value = flag:stark }
+			set_variable = { name = agot_dna value = flag:tully }
 			save_scope_as = latest_child
 		}
 	}
@@ -45,7 +55,6 @@ agotcch_create_sansa_stark_effect = {
 		dynasty_house = father.house
 		location = father.location
 		
-		trait = charming
 		trait = beauty_good_3
 		random_traits = no
 
@@ -53,15 +62,27 @@ agotcch_create_sansa_stark_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_sansa_stark = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = charming
+			}
+			else = {
+				add_trait = trusting
+				add_trait = content
+				add_trait = arrogant
+				add_trait = fashionable
+			}
+
 			add_character_flag = is_sansa_stark
-			# copy_inheritable_appearance_from = character:Stark_7
 			copy_inheritable_appearance_from = character:agotcch_sansa_stark_dummy
-			set_variable = { name = agot_dna value = flag:stark }
+			set_variable = { name = agot_dna value = flag:tully }
+			set_relation_guardian = character:2001159 # Septa Mordane
 			save_scope_as = latest_child
 		}
 	}
 }
 
+# Stark_9
 agotcch_create_arya_stark_effect = {
 	create_character = {
 		age = 0
@@ -74,17 +95,26 @@ agotcch_create_arya_stark_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = rowdy
 		random_traits = no
 
 		save_scope_as = agotcch_baby_arya_stark
 	}
 	hidden_effect = {
 		scope:agotcch_baby_arya_stark = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = rowdy
+			}
+			else = {
+				add_trait = wrathful
+				add_trait = brave
+				add_trait = arrogant
+			}
+
 			add_character_flag = is_arya_stark
-			# copy_inheritable_appearance_from = character:Stark_9
 			copy_inheritable_appearance_from = character:agotcch_arya_stark_dummy
 			set_variable = { name = agot_dna value = flag:stark }
+			set_relation_guardian = character:2001159 # Septa Mordane
 			save_scope_as = latest_child
 		}
 	}
@@ -102,17 +132,25 @@ agotcch_create_bran_stark_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = curious
 		random_traits = no
 
 		save_scope_as = agotcch_baby_bran_stark
 	}
 	hidden_effect = {
 		scope:agotcch_baby_bran_stark = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = curious
+			}
+			else = {
+				add_trait = arrogant
+				add_trait = honorable
+				add_trait = brave
+			}
+
 			add_character_flag = is_bran_stark
-			# copy_inheritable_appearance_from = character:8059
 			copy_inheritable_appearance_from = character:agotcch_bran_stark_dummy
-			set_variable = { name = agot_dna value = flag:stark }
+			set_variable = { name = agot_dna value = flag:tully }
 			save_scope_as = latest_child
 		}
 	}
@@ -130,17 +168,25 @@ agotcch_create_rickon_stark_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = rowdy
 		random_traits = no
 
 		save_scope_as = agotcch_baby_rickon_stark
 	}
 	hidden_effect = {
 		scope:agotcch_baby_rickon_stark = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = rowdy
+			}
+			else = {
+				add_trait = wrathful
+				add_trait = impatient
+				add_trait = stubborn
+			}
+
 			add_character_flag = is_rickon_stark
-			# copy_inheritable_appearance_from = character:Stark_11
 			copy_inheritable_appearance_from = character:agotcch_rickon_stark_dummy
-			set_variable = { name = agot_dna value = flag:stark }
+			set_variable = { name = agot_dna value = flag:tully }
 			save_scope_as = latest_child
 		}
 	}
@@ -167,9 +213,8 @@ agotcch_create_joffrey_baratheon_effect = {
 		faith = faith:the_seven_main
 		culture = culture:crownlander
 		dynasty_house = character:Lannister_6.primary_spouse.house
-		employer = character:Lannister_6.primary_spouse
+		employer = mother.employer
 
-		trait = bossy
 		trait = beauty_good_2
 		random_traits = no
 
@@ -177,9 +222,19 @@ agotcch_create_joffrey_baratheon_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_joffrey_baratheon = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = bossy
+			}
+			else = {
+				add_trait = sadistic
+				add_trait = arrogant
+				add_trait = wrathful
+				add_trait = greedy
+			}
+
 			add_character_flag = flag_secret_bastard
 			add_character_flag = is_joffrey_baratheon
-			# copy_inheritable_appearance_from = character:Baratheon_5
 			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
@@ -207,6 +262,7 @@ agotcch_create_joffrey_baratheon_effect = {
 	}
 }
 
+# Baratheon_5
 agotcch_create_joffrey_lannister_effect = {
 	create_character = {
 		age = 0
@@ -220,7 +276,6 @@ agotcch_create_joffrey_lannister_effect = {
 		dynasty_house = character:Lannister_7.house
 		employer = character:Lannister_7.employer
 
-		trait = bossy
 		trait = beauty_good_2
 		random_traits = no
 
@@ -228,8 +283,18 @@ agotcch_create_joffrey_lannister_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_joffrey_lannister = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = bossy
+			}
+			else = {
+				add_trait = sadistic
+				add_trait = arrogant
+				add_trait = wrathful
+				add_trait = greedy
+			}
+
 			add_character_flag = is_joffrey_baratheon
-			# copy_inheritable_appearance_from = character:Baratheon_5
 			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			set_employer = title:c_casterly_rock.holder
@@ -250,9 +315,8 @@ agotcch_create_myrcella_baratheon_effect = {
 		faith = faith:the_seven_main
 		culture = culture:crownlander
 		dynasty_house = character:Lannister_6.primary_spouse.house
-		employer = character:Lannister_6.primary_spouse
+		employer = mother.employer
 
-		trait = charming
 		trait = beauty_good_2
 		trait = intellect_good_1
 		random_traits = no
@@ -261,9 +325,18 @@ agotcch_create_myrcella_baratheon_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_myrcella_baratheon = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = charming
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = brave
+				add_trait = trusting
+			}
+
 			add_character_flag = flag_secret_bastard
 			add_character_flag = is_myrcella_baratheon
-			# copy_inheritable_appearance_from = character:Baratheon_6
 			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
@@ -291,6 +364,7 @@ agotcch_create_myrcella_baratheon_effect = {
 	}
 }
 
+# Baratheon_6
 agotcch_create_myrcella_lannister_effect = {
 	create_character = {
 		age = 0
@@ -303,7 +377,6 @@ agotcch_create_myrcella_lannister_effect = {
 		dynasty_house = character:Lannister_7.house
 		employer = character:Lannister_7.employer
 
-		trait = charming
 		trait = beauty_good_2
 		trait = intellect_good_1
 		random_traits = no
@@ -312,8 +385,17 @@ agotcch_create_myrcella_lannister_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_myrcella_lannister = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = charming
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = brave
+				add_trait = trusting
+			}
+
 			add_character_flag = is_myrcella_baratheon
-			# copy_inheritable_appearance_from = character:Baratheon_6
 			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			set_employer = title:c_casterly_rock.holder
@@ -322,6 +404,7 @@ agotcch_create_myrcella_lannister_effect = {
 	}
 }
 
+# Baratheon_7
 agotcch_create_tommen_baratheon_effect = {
 	create_character = {
 		age = 0
@@ -333,18 +416,27 @@ agotcch_create_tommen_baratheon_effect = {
 		faith = faith:the_seven_main
 		culture = culture:crownlander
 		dynasty_house = character:Lannister_6.primary_spouse.house
-		employer = character:Lannister_6.primary_spouse
+		employer = mother.employer
 
-		trait = pensive
 		random_traits = no
 
 		save_scope_as = agotcch_baby_tommen_baratheon
 	}
 	hidden_effect = {
 		scope:agotcch_baby_tommen_baratheon = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = honest
+				add_trait = content
+				add_trait = trusting
+			}
+
 			add_character_flag = flag_secret_bastard
 			add_character_flag = is_tommen_baratheon
-			# copy_inheritable_appearance_from = character:Baratheon_7
 			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
@@ -372,6 +464,7 @@ agotcch_create_tommen_baratheon_effect = {
 	}
 }
 
+# Baratheon_7
 agotcch_create_tommen_lannister_effect = {
 	create_character = {
 		age = 0
@@ -384,15 +477,24 @@ agotcch_create_tommen_lannister_effect = {
 		dynasty_house = character:Lannister_7.house
 		employer = character:Lannister_7.employer
 
-		trait = pensive
 		random_traits = no
 
 		save_scope_as = agotcch_baby_tommen_lannister
 	}
 	hidden_effect = {
 		scope:agotcch_baby_tommen_lannister = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = honest
+				add_trait = content
+				add_trait = trusting
+			}
+
 			add_character_flag = is_tommen_baratheon
-			# copy_inheritable_appearance_from = character:Baratheon_7
 			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
 			set_employer = title:c_casterly_rock.holder
 			set_variable = { name = agot_dna value = flag:lannister }
@@ -413,7 +515,6 @@ agotcch_create_gendry_effect = {
 		culture = culture:crownlander
 		employer = title:b_goldguard_heights.holder
 
-		trait = curious
 		trait = bastard
 		trait = physique_good_3
 		random_traits = no
@@ -422,6 +523,16 @@ agotcch_create_gendry_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_gendry = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = curious
+			}
+			else = {
+				add_trait = brave
+				add_trait = honorable
+				add_trait = stubborn
+			}
+
 			add_character_flag = is_gendry_baratheon
 			give_nickname = nick_the_bull
 			set_variable = { name = agot_dna value = flag:baratheon }
@@ -487,13 +598,23 @@ agotcch_create_edric_effect = {
 
 		trait = bastard
 		trait = physique_good_2
-		trait = curious
 		random_traits = no
 
 		save_scope_as = agotcch_baby_edric
 	}
 	hidden_effect = {
 		scope:agotcch_baby_edric = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = curious
+			}
+			else = {
+				add_trait = arrogant
+				add_trait = compassionate
+				add_trait = gregarious
+				add_trait = brave
+			}
+
 			add_character_flag = is_edric_storm
 			set_employer = title:b_storms_end.holder
 			give_nickname = nick_storm
@@ -545,16 +666,24 @@ agotcch_create_shireen_baratheon_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = pensive
-		# trait = greyscale
+		# trait = greyscale_scarred
 		random_traits = no
 
 		save_scope_as = agotcch_baby_shireen_baratheon
 	}
 	hidden_effect = {
 		scope:agotcch_baby_shireen_baratheon = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = shy
+				add_trait = compassionate
+				add_trait = humble
+			}
+
 			add_character_flag = is_shireen_baratheon
-			# copy_inheritable_appearance_from = character:Baratheon_13
 			set_variable = { name = agot_dna value = flag:baratheon }
 			copy_inheritable_appearance_from = character:agotcch_shireen_baratheon_dummy
 			save_scope_as = latest_child
@@ -568,6 +697,7 @@ agotcch_create_shireen_baratheon_effect = {
 
 # Margaery
 
+# Tyrell_14
 agotcch_create_margaery_tyrell_effect = {
 	create_character = {
 		age = 0
@@ -580,7 +710,6 @@ agotcch_create_margaery_tyrell_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = charming
 		trait = beauty_good_3
 		trait = intellect_good_1
 		random_traits = no
@@ -589,8 +718,21 @@ agotcch_create_margaery_tyrell_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_margaery_tyrell = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = charming
+			}
+			else = {
+				add_trait = family_first
+				add_trait = shrewd
+				add_trait = ambitious
+				add_trait = generous
+				add_trait = compassionate
+				add_trait = fashionable
+				add_trait = deceitful
+			}
+
 			add_character_flag = is_margaery_tyrell
-			# copy_inheritable_appearance_from = character:Tyrell_14
 			set_variable = { name = agot_dna value = flag:tyrell }
 			copy_inheritable_appearance_from = character:agotcch_margaery_tyrell_dummy
 			save_scope_as = latest_child
@@ -617,7 +759,6 @@ agotcch_create_samwell_tarly_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = pensive
 		trait = intellect_good_2
 		random_traits = no
 
@@ -625,8 +766,19 @@ agotcch_create_samwell_tarly_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_samwell_tarly = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = craven
+				add_trait = gluttonous
+				add_trait = shy
+				add_trait = compassionate
+				add_trait = honorable
+			}
+
 			add_character_flag = is_samwell_tarly
-			# copy_inheritable_appearance_from = character:Tarly_2
 			# copy_inheritable_appearance_from = character:agotcch_samwell_tarly_dummy
 			save_scope_as = latest_child
 		}
@@ -747,6 +899,7 @@ agotcch_create_sansara_tarly_effect = {
 
 # Robert
 
+# Arryn_8
 agotcch_create_robert_arryn_effect = {
 	create_character = {
 		age = 0
@@ -759,7 +912,6 @@ agotcch_create_robert_arryn_effect = {
 		dynasty_house = father.house
 		location = father.location
 
-		trait = pensive
 		trait = physique_bad_1
 		trait = stuttering
 		random_traits = no
@@ -768,6 +920,17 @@ agotcch_create_robert_arryn_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_robert_arryn = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = rude
+				add_trait = wrathful
+				add_trait = craven
+				add_trait = paranoid
+			}
+
 			add_character_flag = is_robert_arryn
 			# copy_inheritable_appearance_from = character:Arryn_8
 			copy_inheritable_appearance_from = character:agotcch_robert_arryn_dummy
@@ -796,7 +959,6 @@ agotcch_create_jeyne_westerling_effect = {
 		dynasty_house = character:Westerling_1.house
 		location = character:Westerling_1.location
 
-		trait = curious
 		trait = beauty_good_2
 		random_traits = no
 
@@ -804,6 +966,18 @@ agotcch_create_jeyne_westerling_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_jeyne_westerling = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = curious
+			}
+			else = {
+				add_trait = shy
+				add_trait = compassionate
+				add_trait = arrogant
+				add_trait = family_first
+				add_trait = charming
+			}
+
 			add_character_flag = is_jeyne_westerling
 			copy_inheritable_appearance_from = character:agotcch_jeyne_westerling_dummy
 			save_scope_as = latest_child
@@ -836,6 +1010,15 @@ agotcch_create_lyanna_mormont_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_lyanna_mormont = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = rowdy
+			}
+			else = {
+				add_trait = arrogant
+				add_trait = stubborn
+			}
+
 			add_character_flag = is_lyanna_mormont
 			# copy_inheritable_appearance_from = character:agotcch_lyanna_mormont_dummy
 			copy_inheritable_appearance_from = character:agotcch_lyanna_mormont_dummy
@@ -889,13 +1072,22 @@ agotcch_create_trystane_martell_effect = {
 		dynasty_house = character:Martell_4.house
 		location = character:Martell_4.location
 
-		trait = pensive
 		random_traits = no
 
 		save_scope_as = agotcch_baby_trystane_martell
 	}
 	hidden_effect = {
 		scope:agotcch_baby_trystane_martell = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = lustful
+				add_trait = just
+			}
+
 			add_character_flag = is_trystane_martell
 			copy_inheritable_appearance_from = character:agotcch_trystane_martell_dummy
 			set_variable = { name = agot_dna value = flag:martell }
@@ -963,6 +1155,16 @@ agotcch_create_beth_cassel_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_beth_cassel = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = gregarious
+				add_trait = humble
+			}
+
 			add_character_flag = is_beth_cassel
 			copy_inheritable_appearance_from = character:agotcch_beth_cassel_dummy
 			save_scope_as = latest_child
@@ -995,6 +1197,17 @@ agotcch_create_alys_karstark_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_alys_karstark = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = cynical
+				add_trait = arrogant
+				add_trait = brave
+				add_trait = honorable
+			}
+
 			add_character_flag = is_alys_karstark
 			copy_inheritable_appearance_from = character:agotcch_alys_karstark_dummy
 			save_scope_as = latest_child
@@ -1027,6 +1240,18 @@ agotcch_create_mira_forrester_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_mira_forrester = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = temperate
+				add_trait = humble
+				add_trait = trusting
+				add_trait = family_first
+				add_trait = shy
+			}
+
 			add_character_flag = is_mira_forrester
 			copy_inheritable_appearance_from = character:agotcch_mira_forrester_dummy
 			save_scope_as = latest_child
@@ -1054,6 +1279,17 @@ agotcch_create_ethan_forrester_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_ethan_forrester = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = brave
+				add_trait = diligent
+				add_trait = just
+				add_trait = family_first
+			}
+
 			add_character_flag = is_ethan_forrester
 			copy_inheritable_appearance_from = character:agotcch_ethan_forrester_dummy
 			save_scope_as = latest_child
@@ -1082,6 +1318,17 @@ agotcch_create_talia_forrester_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_talia_forrester = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = poet
+				add_trait = family_first
+				add_trait = just
+			}
+
 			add_character_flag = is_talia_forrester
 			copy_inheritable_appearance_from = character:agotcch_talia_forrester_dummy
 			save_scope_as = latest_child
@@ -1109,6 +1356,15 @@ agotcch_create_ryon_forrester_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_ryon_forrester = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = pensive
+				add_trait = shy
+			}
+
 			add_character_flag = is_ryon_forrester
 			copy_inheritable_appearance_from = character:agotcch_ryon_forrester_dummy
 			save_scope_as = latest_child

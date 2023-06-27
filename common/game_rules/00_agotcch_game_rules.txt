@@ -7,8 +7,8 @@
 # }
 
 agotcch_canon_traits = {
-	default = agotcch_canon_traits_on
-	
+	default = agotcch_canon_traits_off
+
 	agotcch_canon_traits_on = { }
 
 	agotcch_canon_traits_off = { }

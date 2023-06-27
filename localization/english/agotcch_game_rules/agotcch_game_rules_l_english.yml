@@ -6,7 +6,7 @@
 
 l_english:
 	rule_agotcch_canon_traits:0 "#P AGOT Canon Children:#! Canon Traits"
-	setting_agotcch_canon_traits_on:0 "Enabled"
-	setting_agotcch_canon_traits_on_desc:0 "Canon children will be born with preset traits."
-	setting_agotcch_canon_traits_off:0 "Disabled"
+	setting_agotcch_canon_traits_on:0 "On"
+	setting_agotcch_canon_traits_on_desc:0 "Some canon children will be born with preset traits."
+	setting_agotcch_canon_traits_off:0 "Off"
 	setting_agotcch_canon_traits_off_desc:0 "Canon children will be born without preset traits."
