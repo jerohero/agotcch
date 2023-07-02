@@ -1,87 +1,89 @@
 ﻿agotcch_handle_stark_children = {
-	if = {
-		# If character is Eddard Stark and wife is Catelyn Tully, continue
-		limit = {
-			AND = {
-				this = character:Stark_3
-				is_spouse_of = character:Tully_4
-			}
-		}
-
-		# If year is before character's last child date, prevent normal pregnancy and increase health
+	character:Stark_3 = {
 		if = {
+			# If character is Eddard Stark and wife is Catelyn Tully, continue
 			limit = {
-				current_year < 8295
-			}
-			character:Tully_4 = {
-				agotcch_add_wife_modifier = yes
-			}
-			character:Stark_3 = {
-				agotcch_add_husband_modifier = yes
-			}
-		}
-
-		# If year is canonical child's birth date, create child
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_robb_stark
-					exists = character:Stark_6
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Tully_4
 				}
-				current_year = 8283
 			}
-
-			add_character_flag = had_robb_stark
-			agotcch_create_robb_stark_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_sansa_stark
+	
+			# If year is before character's last child date, prevent normal pregnancy and increase health
+			if = {
+				limit = {
+					current_year < 8295
 				}
-				current_year = 8286
-			}
-
-			add_character_flag = had_sansa_stark
-			agotcch_create_sansa_stark_effect = yes
-			agotcch_child_toast = yes
-		} 
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_arya_stark
+				character:Tully_4 = {
+					agotcch_add_wife_modifier = yes
 				}
-				current_year = 8289
-			}
-
-			add_character_flag = had_arya_stark
-			agotcch_create_arya_stark_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_bran_stark
+				character:Stark_3 = {
+					agotcch_add_husband_modifier = yes
 				}
-				current_year = 8290
 			}
-
-			add_character_flag = had_bran_stark
-			agotcch_create_bran_stark_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_rickon_stark
+	
+			# If year is canonical child's birth date, create child
+			if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_robb_stark
+						is_alive = character:Stark_6
+					}
+					current_year = 8283
 				}
-				current_year = 8295
+	
+				add_character_flag = had_robb_stark
+				agotcch_create_robb_stark_effect = yes
+				agotcch_child_toast = yes
 			}
-
-			add_character_flag = had_rickon_stark
-			agotcch_create_rickon_stark_effect = yes
-			agotcch_child_toast = yes
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_sansa_stark
+					}
+					current_year = 8286
+				}
+	
+				add_character_flag = had_sansa_stark
+				agotcch_create_sansa_stark_effect = yes
+				agotcch_child_toast = yes
+			} 
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_arya_stark
+					}
+					current_year = 8289
+				}
+	
+				add_character_flag = had_arya_stark
+				agotcch_create_arya_stark_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_bran_stark
+					}
+					current_year = 8290
+				}
+	
+				add_character_flag = had_bran_stark
+				agotcch_create_bran_stark_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_rickon_stark
+					}
+					current_year = 8295
+				}
+	
+				add_character_flag = had_rickon_stark
+				agotcch_create_rickon_stark_effect = yes
+				agotcch_child_toast = yes
+			}
 		}
 	}
 }
@@ -91,34 +93,20 @@
 agotcch_handle_baratheon_children = {
 	if = {
 		limit = {
-			character:Lannister_7 = { # Jaime
-				is_alive = yes
-			}
-			character:Lannister_6 = { # Cersei
-				is_alive = yes
-			}
+			character:Lannister_7 = { is_alive = yes } # Jaime
+			character:Lannister_6 = { is_alive = yes } # Cersei
 		}
 
 		# Set assumed father
 		if = { # Cersei married to anyone
-			limit = {
-				character:Lannister_6 = {
-					is_married = yes
-				}
-			}
+			limit = { character:Lannister_6 = { is_married = yes } }
 
 			set_local_variable = {
 				name = father_flag
 				value = character:Lannister_6.primary_spouse
 			}
 		}
-		else_if = { # Cersei not married
-			limit = {
-				NOT = {
-					this = character:Baratheon_2
-				}
-			}
-
+		else = { # Cersei not married
 			set_local_variable = {
 				name = father_flag
 				value = character:Lannister_7 # Jaime
@@ -127,51 +115,22 @@ agotcch_handle_baratheon_children = {
 
 		# Modifiers
 		if = {
-			limit = {
-				current_year < 8291
-			}
+			limit = { current_year < 8291 }
 
 			character:Lannister_6 = {
-				if = {
-					limit = {
-						NOT = {
-							has_character_modifier = agotcch_wife_modifier
-						}
-					}
-
-					agotcch_add_wife_modifier = yes
-				}
+				agotcch_add_wife_modifier = yes
 			}
 
 			if = {
 				limit = {
-					NOT = {
-						character:Lannister_6.primary_spouse = {
-							has_character_modifier = agotcch_husband_modifier
-						}
-					}
-
-					character:Lannister_6 = {
-						is_married = yes
-					}
+					NOT = { character:Lannister_6.primary_spouse = { has_character_modifier = agotcch_husband_modifier } }
+					character:Lannister_6 = { is_married = yes }
 				}
 
-				character:Lannister_6.primary_spouse = {
-					agotcch_add_husband_modifier = yes
-				}
+				character:Lannister_6.primary_spouse = { agotcch_add_husband_modifier = yes }
 			}
 
-			character:Lannister_7 = {
-				if = {
-					limit = {
-						NOT = {
-							has_character_modifier = agotcch_husband_modifier
-						}
-					}
-	
-					agotcch_add_husband_modifier = yes
-				}
-			}
+			character:Lannister_7 = { agotcch_add_husband_modifier = yes }
 		}
 
 		# Joffrey
@@ -195,697 +154,573 @@ agotcch_handle_baratheon_children = {
 				agotcch_set_lannincest_traits = yes
 			}
 			else = {
-				agotcch_create_joffrey_baratheon_effect = yes
-				agotcch_child_toast = yes
-				agotcch_set_lannincest_secret = yes
+				character:Lannister_6.primary_spouse = {
+					agotcch_create_joffrey_baratheon_effect = yes
+					agotcch_child_toast = yes
+					agotcch_set_lannincest_secret = yes
+				}
 			}
 		}
 		# Myrcella
 		else_if = {
 			limit = {
-				NOT = {
-					character:Lannister_6 = {
-						has_character_flag = had_myrcella_baratheon
-					}
-				}
+				NOT = { character:Lannister_6 = { has_character_flag = had_myrcella_baratheon } }
 				current_year = 8290
 			}
 
-			character:Lannister_6 = {
-				add_character_flag = had_myrcella_baratheon
-			}
+			character:Lannister_6 = { add_character_flag = had_myrcella_baratheon }
 
 			if = {
 				limit = { local_var:father_flag = character:Lannister_7 }
+
 				agotcch_create_myrcella_lannister_effect = yes
 				agotcch_set_lannincest_traits = yes
 			}
 			else = {
-				agotcch_create_myrcella_baratheon_effect = yes
-				agotcch_child_toast = yes
-				agotcch_set_lannincest_secret = yes
+				character:Lannister_6.primary_spouse = {
+					agotcch_create_myrcella_baratheon_effect = yes
+					agotcch_child_toast = yes
+					agotcch_set_lannincest_secret = yes
+				}
 			}
 		}
 		# Tommen
 		else_if = {
 			limit = {
 				NOT = {
-					character:Lannister_6 = {
-						has_character_flag = had_tommen_baratheon
-					}
+					character:Lannister_6 = { has_character_flag = had_tommen_baratheon }
 				}
 				current_year = 8291
 			}
 
-			character:Lannister_6 = {
-				add_character_flag = had_tommen_baratheon
-			}
+			character:Lannister_6 = { add_character_flag = had_tommen_baratheon }
 
 			if = {
 				limit = { local_var:father_flag = character:Lannister_7 }
+				
 				agotcch_create_tommen_lannister_effect = yes
 				agotcch_set_lannincest_traits = yes
 			}
 			else = {
-				agotcch_create_tommen_baratheon_effect = yes
+				character:Lannister_6.primary_spouse = {
+					agotcch_create_tommen_baratheon_effect = yes
+					agotcch_child_toast = yes
+					agotcch_set_lannincest_secret = yes
+				}
+			}
+		}
+	}
+
+	character:Baratheon_2 = { # Robert
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					character:Baratheon_rs_1 = { is_alive = yes } # Joanna
+				}
+			}
+	
+			# Gendry
+			if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_gendry
+						is_alive = character:Baratheon_9
+					}
+					current_year = 8284
+				}
+	
+				add_character_flag = had_gendry
+				agotcch_create_gendry_effect = yes
 				agotcch_child_toast = yes
-				agotcch_set_lannincest_secret = yes
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					character:character:Florent_13 = { is_alive = yes } # Delena
+				}
+			}
+	
+			# Edric Storm
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_edric }
+					current_year = 8287
+				}
+	
+				add_character_flag = had_edric
+				agotcch_create_edric_effect = yes
+				agotcch_child_toast = yes
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					character:Baratheon_rs_5 = { is_alive = yes } # Thank the gods for Bessie
+				}
+			}
+	
+			# Bella
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_bella }
+					current_year = 8283
+				}
+	
+				add_character_flag = had_bella
+				agotcch_create_bella_effect = yes
+				agotcch_child_toast = yes
+			}
+		}
+		if = {
+			limit = {
+				is_alive = yes
+				character:Baratheon_rs_3 = { is_alive = yes }
+			}
+	
+			# Barra
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_barra }
+					current_year = 8298
+				}
+	
+				add_character_flag = had_barra
+				agotcch_create_barra_effect = yes
+				agotcch_child_toast = yes
 			}
 		}
 	}
-	if = {
-		limit = {
-			AND = {
-				this = character:Baratheon_2 # Robert
-				exists = character:Baratheon_rs_1 # Joanna
-			}
-		}
 
-		# Gendry
+	character:Baratheon_3 = { # Stannis
 		if = {
 			limit = {
-				NOT = {
-					has_character_flag = had_gendry
-					exists = character:Baratheon_9
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Florent_10 # Selyse
 				}
-				current_year = 8284
 			}
 
-			add_character_flag = had_gendry
-			agotcch_create_gendry_effect = yes
-			agotcch_child_toast = yes
-		}
-	}
-	if = {
-		limit = {
-			AND = {
-				this = character:Baratheon_2 # Robert
-				exists = character:Florent_13
-			}
-		}
+			if = {
+				limit = { current_year < 8289 }
 
-		# Edric Storm
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_edric
+				character:Florent_10 = { agotcch_add_wife_modifier = yes }
+				character:Baratheon_3 = { agotcch_add_husband_modifier = yes }
+			}
+
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_shireen }
+					current_year = 8289
 				}
-				current_year = 8287
-			}
 
-			add_character_flag = had_edric
-			agotcch_create_edric_effect = yes
-			agotcch_child_toast = yes
-		}
-	}
-	if = {
-		limit = {
-			AND = {
-				this = character:Baratheon_2 # Robert
-				exists = character:Baratheon_rs_5 # Thank the gods for Bessie
+				add_character_flag = had_shireen
+				agotcch_create_shireen_baratheon_effect = yes
+				agotcch_child_toast = yes
 			}
-		}
-
-		# Bella
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_bella
-				}
-				current_year = 8283
-			}
-
-			add_character_flag = had_bella
-			agotcch_create_bella_effect = yes
-			agotcch_child_toast = yes
-		}
-	}
-	if = {
-		limit = {
-			AND = {
-				this = character:Baratheon_2 # Robert
-				exists = character:Baratheon_rs_3
-			}
-		}
-
-		# Barra
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_barra
-				}
-				current_year = 8298
-			}
-
-			add_character_flag = had_barra
-			agotcch_create_barra_effect = yes
-			agotcch_child_toast = yes
-		}
-	}
-	if = {
-		limit = {
-			AND = {
-				this = character:Baratheon_3 # Stannis
-				is_spouse_of = character:Florent_10 # Selyse
-			}
-		}
-
-		if = {
-			limit = {
-				current_year < 8289
-			}
-			character:Florent_10 = {
-				agotcch_add_wife_modifier = yes
-			}
-			character:Baratheon_3 = {
-				agotcch_add_husband_modifier = yes
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_shireen
-				}
-				current_year = 8289
-			}
-
-			add_character_flag = had_shireen
-			agotcch_create_shireen_baratheon_effect = yes
-			agotcch_child_toast = yes
 		}
 	}
 }
 
 agotcch_handle_tarly_children = {
-	if = {
-		limit = {
-			AND = {
-				this = character:Tarly_1 # Randyll
-				is_spouse_of = character:Florent_8 # Melessa
-			}
-		}
-
+	character:Tarly_1 = { # Randyll
 		if = {
 			limit = {
-				current_year < 8288
-			}
-			character:Florent_8 = {
-				agotcch_add_wife_modifier = yes
-			}
-			character:Tarly_1 = {
-				agotcch_add_husband_modifier = yes
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_samwell_tarly
-					exists = character:Tarly_2
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Florent_8 # Melessa
 				}
-				current_year = 8283
 			}
 
-			add_character_flag = had_samwell_tarly
-			agotcch_create_samwell_tarly_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_talla_tarly
-					exists = character:Tarly_3
+			if = {
+				limit = {
+					current_year < 8288
 				}
-				current_year = 8284
-			}
-
-			add_character_flag = had_talla_tarly
-			agotcch_create_talla_tarly_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_samantha_tarly
+				character:Florent_8 = {
+					agotcch_add_wife_modifier = yes
 				}
-				current_year = 8285
-			}
-
-			add_character_flag = had_samantha_tarly
-			agotcch_create_samantha_tarly_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_sansara_tarly
+				character:Tarly_1 = {
+					agotcch_add_husband_modifier = yes
 				}
-				current_year = 8286
 			}
 
-			add_character_flag = had_sansara_tarly
-			agotcch_create_sansara_tarly_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_dickon_tarly
+			if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_samwell_tarly
+						is_alive = character:Tarly_2
+					}
+					current_year = 8283
 				}
-				current_year = 8288
-			}
 
-			add_character_flag = had_dickon_tarly
-			agotcch_create_dickon_tarly_effect = yes
-			agotcch_child_toast = yes
+				add_character_flag = had_samwell_tarly
+				agotcch_create_samwell_tarly_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_talla_tarly
+						is_alive = character:Tarly_3
+					}
+					current_year = 8284
+				}
+
+				add_character_flag = had_talla_tarly
+				agotcch_create_talla_tarly_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_samantha_tarly
+					}
+					current_year = 8285
+				}
+
+				add_character_flag = had_samantha_tarly
+				agotcch_create_samantha_tarly_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_sansara_tarly
+					}
+					current_year = 8286
+				}
+
+				add_character_flag = had_sansara_tarly
+				agotcch_create_sansara_tarly_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_dickon_tarly
+					}
+					current_year = 8288
+				}
+
+				add_character_flag = had_dickon_tarly
+				agotcch_create_dickon_tarly_effect = yes
+				agotcch_child_toast = yes
+			}
 		}
 	}
 }
 
 agotcch_handle_arryn_children = {
-	if = {
-		limit = {
-			AND = {
-				this = character:Arryn_3 # Jon
-				is_spouse_of = character:Tully_6 # Lysa
-			}
-		}
-
+	character:Arryn_3 = { # Jon
 		if = {
 			limit = {
-				current_year < 8292
-			}
-			character:Tully_6 = {
-				agotcch_add_wife_modifier = yes
-			}
-			character:Arryn_3 = {
-				agotcch_add_husband_modifier = yes
-				agotcch_add_life_support_modifier = yes
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_robert_arryn
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Tully_6 # Lysa
 				}
-				current_year = 8292
 			}
 
-			add_character_flag = had_robert_arryn
-			agotcch_create_robert_arryn_effect = yes
-			agotcch_child_toast = yes
+			if = {
+				limit = { current_year < 8292 }
+
+				character:Tully_6 = { agotcch_add_wife_modifier = yes }
+				character:Arryn_3 = {
+					agotcch_add_husband_modifier = yes
+					agotcch_add_life_support_modifier = yes
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_robert_arryn }
+					current_year = 8292
+				}
+
+				add_character_flag = had_robert_arryn
+				agotcch_create_robert_arryn_effect = yes
+				agotcch_child_toast = yes
+			}
 		}
 	}
 }
 
 agotcch_handle_westerling_children = {
-	if = {
-		limit = {
-			AND = {
-				this = character:Westerling_1 # Gawen
-				is_spouse_of = character:Spicer_4 # Sybell
-			}
-		}
-
+	character:Westerling_1 = { # Gawen
 		if = {
 			limit = {
-				current_year < 8283
-			}
-			character:Spicer_4 = {
-				agotcch_add_wife_modifier = yes
-			}
-			character:Westerling_1 = {
-				agotcch_add_husband_modifier = yes
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_jeyne_westerling
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Spicer_4 # Sybell
 				}
-				current_year = 8283
 			}
+	
+			if = {
+				limit = { current_year < 8283 }
 
-			add_character_flag = had_jeyne_westerling
-			agotcch_create_jeyne_westerling_effect = yes
-			agotcch_child_toast = yes
+				character:Spicer_4 = { agotcch_add_wife_modifier = yes }
+				character:Westerling_1 = { agotcch_add_husband_modifier = yes }
+			}
+	
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_jeyne_westerling }
+					current_year = 8283
+				}
+	
+				add_character_flag = had_jeyne_westerling
+				agotcch_create_jeyne_westerling_effect = yes
+				agotcch_child_toast = yes
+			}
 		}
 	}
 }
 
 agotcch_handle_tyrell_children = {
-	if = {
-		limit = {
-			AND = {
-				this = character:Tyrell_8 # Mace
-				is_spouse_of = character:Hightower_9 # Alerie
-			}
-		}
-
+	character:Tyrell_8 = { # Mace
 		if = {
 			limit = {
-				current_year < 8283
-			}
-			character:Hightower_9 = {
-				agotcch_add_wife_modifier = yes
-			}
-			character:Tyrell_8 = {
-				agotcch_add_husband_modifier = yes
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_margaery_tyrell
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Hightower_9 # Alerie
 				}
-				current_year = 8283
 			}
+	
+			if = {
+				limit = { current_year < 8283 }
 
-			add_character_flag = had_margaery_tyrell
-			agotcch_create_margaery_tyrell_effect = yes
-			agotcch_child_toast = yes
+				character:Hightower_9 = { agotcch_add_wife_modifier = yes }
+				character:Tyrell_8 = { agotcch_add_husband_modifier = yes }
+			}
+	
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_margaery_tyrell }
+					current_year = 8283
+				}
+	
+				add_character_flag = had_margaery_tyrell
+				agotcch_create_margaery_tyrell_effect = yes
+				agotcch_child_toast = yes
+			}
 		}
 	}
 }
 
 agotcch_handle_martell_children = {
-	if = {
-		limit = {
-			AND = {
-				this = character:Martell_4 # Doran
-				is_spouse_of = character:Martell_Doran_Wife # Mellario, should be updated with Essos update
-			}
-		}
-
+	character:Martell_4 = { # Doran
 		if = {
 			limit = {
-				current_year < 8287
-			}
-			character:Martell_Doran_Wife = {
-				agotcch_add_wife_modifier = yes
-			}
-			character:Martell_4 = {
-				agotcch_add_husband_modifier = yes
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_trystane_martell
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Martell_Doran_Wife # Mellario, should be updated with Essos update
 				}
-				current_year = 8287
 			}
+	
+			if = {
+				limit = { current_year < 8287 }
 
-			add_character_flag = had_trystane_martell
-			agotcch_create_trystane_martell_effect = yes
-			agotcch_child_toast = yes
+				character:Martell_Doran_Wife = { agotcch_add_wife_modifier = yes }
+				character:Martell_4 = { agotcch_add_husband_modifier = yes }
+			}
+	
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_trystane_martell }
+					current_year = 8287
+				}
+	
+				add_character_flag = had_trystane_martell
+				agotcch_create_trystane_martell_effect = yes
+				agotcch_child_toast = yes
+			}
 		}
 	}
 }
 
 agotcch_handle_karstark_children = {
-	if = {
-		limit = {
-			AND = {
-				this = character:Karstark_4 # Rickard
-				is_spouse_of = character:Karstark_rs_1 # Arrana
-			}
-		}
-
+	character:Karstark_4 = { # Rickard
 		if = {
 			limit = {
-				current_year < 8283
-			}
-			character:Karstark_4 = {
-				agotcch_add_husband_modifier = yes
-			}
-			character:Karstark_rs_1 = {
-				agotcch_add_wife_modifier = yes
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					has_character_flag = had_alys_karstark
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Karstark_rs_1 # Arrana
 				}
-				current_year = 8283
 			}
 
-			add_character_flag = had_alys_karstark
-			agotcch_create_alys_karstark_effect = yes
-			agotcch_child_toast = yes
+			if = {
+				limit = { current_year < 8283 }
+
+				character:Karstark_4 = { agotcch_add_husband_modifier = yes }
+				character:Karstark_rs_1 = { agotcch_add_wife_modifier = yes }
+			}
+
+			if = {
+				limit = {
+					NOT = { has_character_flag = had_alys_karstark }
+					current_year = 8283
+				}
+
+				add_character_flag = had_alys_karstark
+				agotcch_create_alys_karstark_effect = yes
+				agotcch_child_toast = yes
+			}
 		}
 	}
 }
 
 agotcch_handle_unlanded_children = {
 	# Mormont
-	if = {
-		limit = {
-			exists = character:Mormont_4 # Maege
-		}
-
+	character:Mormont_4 = { # Maege
 		if = {
 			limit = {
-				current_year < 8290
+				is_alive = yes
 			}
-			character:Mormont_4 = {
-				if = {
-					limit = {
-						NOT = {
-							has_character_modifier = agotcch_wife_modifier
-						}
-					}
 
-					agotcch_add_wife_modifier = yes
+			if = {
+				limit = { current_year < 8290 }
+
+				character:Mormont_4 = { agotcch_add_wife_modifier = yes }
+			}
+
+			if = {
+				limit = {
+					NOT = { character:Mormont_4 = { has_character_flag = had_jorelle_mormont } }
+					current_year = 8283
 				}
-			}
-		}
 
-		if = {
-			limit = {
-				NOT = {
-					character:Mormont_4 = {
-						has_character_flag = had_jorelle_mormont
-					}
+				character:Mormont_4 = { add_character_flag = had_jorelle_mormont }
+				agotcch_create_jorelle_mormont_effect = yes
+			}
+			else_if = {
+				limit = {
+					NOT = { character:Mormont_4 = { has_character_flag = had_lyanna_mormont } }
+					current_year = 8290
 				}
-				current_year = 8283
-			}
 
-			character:Mormont_4 = {
-				add_character_flag = had_jorelle_mormont
+				character:Mormont_4 = { add_character_flag = had_lyanna_mormont }
+				agotcch_create_lyanna_mormont_effect = yes
 			}
-			agotcch_create_jorelle_mormont_effect = yes
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					character:Mormont_4 = {
-						has_character_flag = had_lyanna_mormont
-					}
-				}
-				current_year = 8290
-			}
-
-			character:Mormont_4 = {
-				add_character_flag = had_lyanna_mormont
-			}
-			agotcch_create_lyanna_mormont_effect = yes
 		}
 	}
 
 	# Poole
-	if = {
-		limit = {
-			AND = {
-				exists = character:Poole_2 # Vayon
-				character:Poole_2 = {
+	character:Poole_2 = { # Vayon
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
 					is_spouse_of = character:Poole_rs_2 # Corinne
 				}
 			}
-		}
 
-		if = {
-			limit = {
-				current_year < 8286
+			if = {
+				limit = { current_year < 8286 }
+
+				character:Poole_rs_2 = { agotcch_add_wife_modifier = yes }
+				character:Poole_2 = { agotcch_add_husband_modifier = yes }
 			}
 
-			character:Poole_rs_2 = {
-				if = {
-					limit = {
-						NOT = {
-							has_character_modifier = agotcch_wife_modifier
-						}
-					}
-
-					agotcch_add_wife_modifier = yes
+			if = {
+				limit = {
+					NOT = { character:Poole_rs_2 = { has_character_flag = had_jeyne_poole } }
+					current_year = 8286
 				}
-			}
 
-			character:Poole_2 = {
-				if = {
-					limit = {
-						NOT = {
-							has_character_modifier = agotcch_husband_modifier
-						}
-					}
-
-					agotcch_add_husband_modifier = yes
-				}
+				character:Poole_rs_2 = { add_character_flag = had_jeyne_poole }
+				agotcch_create_jeyne_poole_effect = yes
 			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					character:Poole_rs_2 = {
-						has_character_flag = had_jeyne_poole
-					}
-				}
-				current_year = 8286
-			}
-
-			character:Poole_rs_2 = {
-				add_character_flag = had_jeyne_poole
-			}
-			agotcch_create_jeyne_poole_effect = yes
 		}
 	}
 
 	# Cassel
-	if = {
-		limit = {
-			AND = {
-				exists = character:Cassel_3 # Rodrik
-				character:Cassel_3 = {
+	character:Cassel_3 = { # Rodrick
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
 					is_spouse_of = character:Cassel_rs_4 # Berena
 				}
 			}
-		}
 
-		if = {
-			limit = {
-				current_year < 8288
+			if = {
+				limit = { current_year < 8288 }
+
+				character:Cassel_rs_4 = { agotcch_add_wife_modifier = yes }
+				character:Cassel_3 = { agotcch_add_husband_modifier = yes }
 			}
 
-			character:Cassel_rs_4 = {
-				if = {
-					limit = {
-						NOT = {
-							has_character_modifier = agotcch_wife_modifier
-						}
-					}
-
-					agotcch_add_wife_modifier = yes
+			if = {
+				limit = {
+					NOT = { character:Cassel_rs_4 = { has_character_flag = had_beth_cassel } }
+					current_year = 8288
 				}
-			}
 
-			character:Cassel_3 = {
-				if = {
-					limit = {
-						NOT = {
-							has_character_modifier = agotcch_husband_modifier
-						}
-					}
-
-					agotcch_add_husband_modifier = yes
-				}
+				character:Cassel_rs_4 = { add_character_flag = had_beth_cassel }
+				agotcch_create_beth_cassel_effect = yes
 			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					character:Cassel_rs_4 = {
-						has_character_flag = had_beth_cassel
-					}
-				}
-				current_year = 8288
-			}
-
-			character:Cassel_rs_4 = {
-				add_character_flag = had_beth_cassel
-			}
-			agotcch_create_beth_cassel_effect = yes
 		}
 	}
 
 	# Forrester
-	if = {
-		limit = {
-			AND = {
-				exists = character:Forrester_2 # Gregor
-				character:Forrester_2 = {
+	character:Forrester_2 = { # Gregor
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
 					is_spouse_of = character:Branfield_1 # Elissa
 				}
 			}
-		}
+	
+			if = {
+				limit = { current_year < 8290 }
 
-		if = {
-			limit = {
-				current_year < 8290
+				character:Forrester_2 = { agotcch_add_husband_modifier = yes }
+				character:Branfield_1 = { agotcch_add_wife_modifier = yes}
 			}
-			character:Forrester_2 = {
-				if = {
-					limit = {
-						NOT = { has_character_modifier = agotcch_husband_modifier }
-					}
-					agotcch_add_husband_modifier = yes
-				}
-			}
-			character:Branfield_1 = {
+	
+			if = {
 				limit = {
-					NOT = { has_character_modifier = agotcch_wife_modifier }
+					NOT = { character:Branfield_1 = { has_character_flag = had_mira_forrester } }
+					current_year = 8283
 				}
-				agotcch_add_wife_modifier = yes
+	
+				character:Branfield_1 = { add_character_flag = had_mira_forrester }
+				agotcch_create_mira_forrester_effect = yes
+				agotcch_child_toast = yes
 			}
-		}
-
-		if = {
-			limit = {
-				NOT = { character:Branfield_1 = { has_character_flag = had_mira_forrester } }
-				current_year = 8283
+			else_if = {
+				limit = {
+					NOT = { character:Branfield_1 = { has_character_flag = had_ethan_forrester } }
+					current_year = 8286
+				}
+	
+				character:Branfield_1 = { add_character_flag = had_ethan_forrester }
+				agotcch_create_ethan_forrester_effect = yes
+				agotcch_child_toast = yes
 			}
-
-			character:Branfield_1 = { add_character_flag = had_mira_forrester }
-			agotcch_create_mira_forrester_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = { character:Branfield_1 = { has_character_flag = had_ethan_forrester } }
-				current_year = 8286
+			else_if = {
+				limit = {
+					NOT = { character:Branfield_1 = { has_character_flag = had_talia_forrester } }
+					current_year = 8286
+				}
+	
+				character:Branfield_1 = { add_character_flag = had_talia_forrester }
+				agotcch_create_talia_forrester_effect = yes
+				agotcch_child_toast = yes
 			}
-
-			character:Branfield_1 = { add_character_flag = had_ethan_forrester }
-			agotcch_create_ethan_forrester_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = { character:Branfield_1 = { has_character_flag = had_talia_forrester } }
-				current_year = 8286
+			else_if = {
+				limit = {
+					NOT = { character:Branfield_1 = { has_character_flag = had_ryon_forrester } }
+					current_year = 8290
+				}
+	
+				character:Branfield_1 = { add_character_flag = had_ryon_forrester }
+				agotcch_create_ryon_forrester_effect = yes
+				agotcch_child_toast = yes
 			}
-
-			character:Branfield_1 = { add_character_flag = had_talia_forrester }
-			agotcch_create_talia_forrester_effect = yes
-			agotcch_child_toast = yes
-		}
-		else_if = {
-			limit = {
-				NOT = { character:Branfield_1 = { has_character_flag = had_ryon_forrester } }
-				current_year = 8290
-			}
-
-			character:Branfield_1 = { add_character_flag = had_ryon_forrester }
-			agotcch_create_ryon_forrester_effect = yes
-			agotcch_child_toast = yes
 		}
 	}
 }

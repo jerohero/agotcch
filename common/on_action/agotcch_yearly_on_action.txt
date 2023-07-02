@@ -1,4 +1,6 @@
-﻿yearly_playable_pulse = {
+﻿# random_yearly_playable_pulse loops through random landed characters every year
+# This should really only be called once a year, but yearly_global_pulse is unscoped
+random_yearly_playable_pulse = {
 	events = {
 		agotcch_births.1
 	}
