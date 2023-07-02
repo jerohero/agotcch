@@ -27,7 +27,9 @@
 				limit = {
 					NOT = {
 						has_character_flag = had_robb_stark
-						is_alive = character:Stark_6
+						character:Stark_6 = { # Robb
+							is_alive = yes
+						}
 					}
 					current_year = 8283
 				}
@@ -221,7 +223,9 @@ agotcch_handle_baratheon_children = {
 				limit = {
 					NOT = {
 						has_character_flag = had_gendry
-						is_alive = character:Baratheon_9
+						character:Baratheon_9 = { # Gendry
+							is_alive = yes
+						}
 					}
 					current_year = 8284
 				}
@@ -347,7 +351,9 @@ agotcch_handle_tarly_children = {
 				limit = {
 					NOT = {
 						has_character_flag = had_samwell_tarly
-						is_alive = character:Tarly_2
+						character:Tarly_2 = { # Samwell
+							is_alive = yes
+						}
 					}
 					current_year = 8283
 				}
@@ -360,7 +366,9 @@ agotcch_handle_tarly_children = {
 				limit = {
 					NOT = {
 						has_character_flag = had_talla_tarly
-						is_alive = character:Tarly_3
+						character:Tarly_3 = { # Talla
+							is_alive = yes
+						}
 					}
 					current_year = 8284
 				}
