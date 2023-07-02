@@ -10,3 +10,9 @@ l_english:
 	setting_agotcch_canon_traits_on_desc:0 "Some canon children will be born with preset traits."
 	setting_agotcch_canon_traits_off:0 "Off"
 	setting_agotcch_canon_traits_off_desc:0 "Canon children will be born without preset traits."
+
+	rule_agotcch_prevent_public_lannincest:0 "#P AGOT Canon Children:#! Prevent Public Lannincest"
+	setting_agotcch_prevent_public_lannincest_on:0 "On"
+	setting_agotcch_prevent_public_lannincest_on_desc:0 "Jaime and Cersei will not have children while Cersei is unmarried."
+	setting_agotcch_prevent_public_lannincest_off:0 "Off"
+	setting_agotcch_prevent_public_lannincest_off_desc:0 "Jaime and Cersei will have children while Cersei is unmarried, making them publicly incestuous."

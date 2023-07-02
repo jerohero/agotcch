@@ -106,7 +106,9 @@ agotcch_handle_baratheon_children = {
 				value = character:Lannister_6.primary_spouse
 			}
 		}
-		else = { # Cersei not married
+		else_if = { # Cersei not married AND prevent public Lannincest rule is off
+			limit = { has_game_rule = agotcch_prevent_public_lannincest_off }
+
 			set_local_variable = {
 				name = father_flag
 				value = character:Lannister_7 # Jaime
@@ -117,9 +119,7 @@ agotcch_handle_baratheon_children = {
 		if = {
 			limit = { current_year < 8291 }
 
-			character:Lannister_6 = {
-				agotcch_add_wife_modifier = yes
-			}
+			character:Lannister_6 = { agotcch_add_wife_modifier = yes }
 
 			if = {
 				limit = {
@@ -136,20 +136,16 @@ agotcch_handle_baratheon_children = {
 		# Joffrey
 		if = {
 			limit = {
-				NOT = {
-					character:Lannister_6 = {
-						has_character_flag = had_joffrey_baratheon
-					}
-				}
+				NOT = { character:Lannister_6 = { has_character_flag = had_joffrey_baratheon } }
 				current_year = 8286
 			}
 
-			character:Lannister_6 = {
-				add_character_flag = had_joffrey_baratheon
-			}
+			character:Lannister_6 = { add_character_flag = had_joffrey_baratheon }
 
 			if = {
-				limit = { local_var:father_flag = character:Lannister_7 }
+				limit = {
+					local_var:father_flag = character:Lannister_7
+				}
 				agotcch_create_joffrey_lannister_effect = yes
 				agotcch_set_lannincest_traits = yes
 			}
@@ -724,5 +720,3 @@ agotcch_handle_unlanded_children = {
 		}
 	}
 }
-
-

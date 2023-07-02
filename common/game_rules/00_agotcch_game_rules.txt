@@ -13,3 +13,11 @@ agotcch_canon_traits = {
 
 	agotcch_canon_traits_off = { }
 }
+
+agotcch_prevent_public_lannincest = {
+	default = agotcch_prevent_public_lannincest_off
+
+	agotcch_prevent_public_lannincest_on = { }
+
+	agotcch_prevent_public_lannincest_off = { }
+}
