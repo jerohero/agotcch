@@ -1229,7 +1229,7 @@ agotcch_create_edric_dayne_effect = {
 		age = 0
 		name = "Edric"
 		father = character:Dayne_3
-		mother = character:Dayne_rs_3
+		mother = character:Dayne_3.primary_spouse
 		gender = male
 		faith = faith:the_seven_main
 		culture = culture:stone_dornish
@@ -1362,6 +1362,7 @@ agotcch_create_jojen_reed_effect = {
 		employer = character:Reed_1.employer
 
 		trait = physique_bad_2
+		trait = greensight
 		random_traits = no
 
 		save_scope_as = agotcch_baby_jojen_reed
@@ -1375,7 +1376,6 @@ agotcch_create_jojen_reed_effect = {
 			else = {
 				add_trait = arrogant
 				add_trait = brave
-				add_trait = greensight
 			}
 
 			add_character_flag = is_jojen_reed
