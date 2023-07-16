@@ -692,6 +692,51 @@ agotcch_create_shireen_baratheon_effect = {
 }
 
 ####################################################
+####		       HOUSE LANNISTER 		       	####
+####################################################
+
+# Joy Hill
+
+# Lannister_14
+agotcch_create_joy_hill_effect = {
+	create_character = {
+		age = 0
+		name = "Joy"
+		father = character:Lannister_5
+		mother = character:Lannister_rs_1
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:stormlander
+		dynasty_house = character:Lannister_5.house
+		employer = character:Lannister_5.employer
+
+		trait = bastard
+		random_traits = no
+
+		save_scope_as = agotcch_baby_joy_hill
+	}
+	hidden_effect = {
+		scope:agotcch_baby_joy_hill = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = charming
+			}
+			else = {
+				add_trait = trusting
+				add_trait = compassionate
+				add_trait = shy
+			}
+
+			add_character_flag = is_joy_hill
+			# copy_inheritable_appearance_from = character:agotcch_joy_hill_dummy
+			give_nickname = nick_hill
+			set_variable = { name = agot_dna value = flag:lannister }
+			save_scope_as = latest_child
+		}
+	}
+}
+
+####################################################
 ####		        HOUSE TYRELL		       	####
 ####################################################
 
@@ -1167,6 +1212,217 @@ agotcch_create_beth_cassel_effect = {
 
 			add_character_flag = is_beth_cassel
 			copy_inheritable_appearance_from = character:agotcch_beth_cassel_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+####################################################
+####		        HOUSE DAYNE 		       	####
+####################################################
+
+# Edric
+
+# Dayne_7
+agotcch_create_edric_dayne_effect = {
+	create_character = {
+		age = 0
+		name = "Edric"
+		father = character:Dayne_3
+		mother = character:Dayne_rs_3
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:stone_dornish
+		dynasty_house = character:Dayne_3.house
+		employer = character:Dayne_3.employer
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_edric_dayne
+	}
+	hidden_effect = {
+		scope:agotcch_baby_edric_dayne = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = rowdy
+			}
+			else = {
+				add_trait = just
+				add_trait = brave
+				add_trait = honorable
+				add_trait = diligent
+			}
+
+			add_character_flag = is_edric_dayne
+			copy_inheritable_appearance_from = character:agotcch_edric_dayne_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+####################################################
+####		        HOUSE PAYNE 		       	####
+####################################################
+
+# Podrick
+
+# Payne_16
+agotcch_create_podrick_payne_effect = {
+	create_character = {
+		age = 0
+		name = "Podrick"
+		father = character:Payne_15
+		mother = character:Payne_rs_8
+		gender = male
+		faith = faith:the_seven_main
+		culture = culture:westerman
+		dynasty_house = character:Payne_15.house
+		employer = character:Payne_15.employer
+
+		trait = stuttering
+		random_traits = no
+
+		save_scope_as = agotcch_baby_podrick_payne
+	}
+	hidden_effect = {
+		scope:agotcch_baby_podrick_payne = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = shy
+				add_trait = compassionate
+				add_trait = honest
+				add_trait = trusting
+			}
+
+			add_character_flag = is_podrick_payne
+			copy_inheritable_appearance_from = character:agotcch_podrick_payne_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+####################################################
+####		         HOUSE REED 		       	####
+####################################################
+
+# Meera, Jojen
+
+# Reed_2
+agotcch_create_meera_reed_effect = {
+	create_character = {
+		age = 0
+		name = "Meera"
+		father = character:Reed_1
+		mother = character:Reed_rs_1
+		gender = female
+		faith = faith:old_gods_south
+		culture = culture:crannogman
+		dynasty_house = character:Reed_1.house
+		employer = character:Reed_1.employer
+
+		trait = beauty_good_1
+		random_traits = no
+
+		save_scope_as = agotcch_baby_meera_reed
+	}
+	hidden_effect = {
+		scope:agotcch_baby_meera_reed = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = rowdy
+			}
+			else = {
+				add_trait = diligent
+				add_trait = compassionate
+				add_trait = arrogant
+				add_trait = brave
+			}
+
+			add_character_flag = is_meera_reed
+			copy_inheritable_appearance_from = character:agotcch_meera_reed_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Jojen
+agotcch_create_jojen_reed_effect = {
+	create_character = {
+		age = 0
+		name = "Jojen"
+		father = character:Reed_1
+		mother = character:Reed_rs_1
+		gender = male
+		faith = faith:old_gods_south
+		culture = culture:crannogman
+		dynasty_house = character:Reed_1.house
+		employer = character:Reed_1.employer
+
+		trait = physique_bad_2
+		random_traits = no
+
+		save_scope_as = agotcch_baby_jojen_reed
+	}
+	hidden_effect = {
+		scope:agotcch_baby_jojen_reed = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = rowdy
+			}
+			else = {
+				add_trait = arrogant
+				add_trait = brave
+				add_trait = greensight
+			}
+
+			add_character_flag = is_jojen_reed
+			copy_inheritable_appearance_from = character:agotcch_jojen_reed_dummy
+			save_scope_as = latest_child
+		}
+	}
+}
+
+####################################################
+####		        HOUSE MANDERLY 		       	####
+####################################################
+
+# Wylla
+
+# Manderly_10
+agotcch_create_wylla_manderly_effect = {
+	create_character = {
+		age = 0
+		name = "Wylla"
+		father = character:Manderly_7
+		mother = character:Woolfield_2
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:harborman
+		dynasty_house = character:Manderly_7.house
+		employer = character:Manderly_7.employer
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_wylla_manderly
+	}
+	hidden_effect = {
+		scope:agotcch_baby_wylla_manderly = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = rowdy
+			}
+			else = {
+				add_trait = honorable
+				add_trait = honest
+				add_trait = wrathful
+				add_trait = brave
+			}
+
+			add_character_flag = is_wylla_manderly
+			copy_inheritable_appearance_from = character:agotcch_wylla_manderly_dummy
 			save_scope_as = latest_child
 		}
 	}

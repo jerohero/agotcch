@@ -292,6 +292,81 @@ agotcch_beth_cassel_dummy = {
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
+agotcch_edric_dayne_dummy = {
+	name = Edric
+	dynasty = dynn_Stark
+	dna = Dayne_7
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_podrick_payne_dummy = {
+	name = Podrick
+	dynasty = dynn_Stark
+	dna = Dayne_16
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_meera_reed_dummy = {
+	name = Meera
+	dynasty = dynn_Stark
+	dna = Reed_2
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_jojen_reed_dummy = {
+	name = Jojen
+	dynasty = dynn_Stark
+	dna = Reed_3
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_wylla_manderly_dummy = {
+	name = Wylla
+	dynasty = dynn_Manderly
+	dna = Manderly_10
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
 agotcch_alys_karstark_dummy = {
 	name = Alys
 	dynasty = dynn_Stark

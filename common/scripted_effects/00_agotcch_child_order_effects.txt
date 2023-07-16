@@ -668,6 +668,164 @@ agotcch_handle_unlanded_children = {
 		}
 	}
 
+	# Dayne
+	character:Dayne_36 = {
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					# is_spouse_of = character:Dayne_rs_3
+					character:Dayne_rs_3 = { is_alive = yes } # Parents are not married at start date
+				}
+			}
+
+			if = {
+				limit = { current_year < 8287 }
+
+				character:Dayne_rs_3 = { agotcch_add_wife_modifier = yes }
+				character:Dayne_3 = { agotcch_add_husband_modifier = yes }
+			}
+
+			if = {
+				limit = {
+					NOT = { character:Dayne_rs_3 = { has_character_flag = had_edric_dayne } }
+					current_year = 8287
+				}
+
+				character:Dayne_rs_3 = { add_character_flag = had_edric_dayne }
+				agotcch_create_edric_dayne_effect = yes
+			}
+		}
+	}
+
+	# Payne
+	character:Payne_15 = {
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					# is_spouse_of = character:Payne_rs_8
+					character:Payne_rs_8 = { is_alive = yes } # Parents are not married at start date
+				}
+			}
+
+			if = {
+				limit = { current_year < 8287 }
+
+				character:Payne_rs_8 = { agotcch_add_wife_modifier = yes }
+				character:Payne_15 = { agotcch_add_husband_modifier = yes }
+			}
+
+			if = {
+				limit = {
+					NOT = { character:Payne_rs_8 = { has_character_flag = had_podrick_payne } }
+					current_year = 8287
+				}
+
+				character:Payne_rs_8 = { add_character_flag = had_podrick_payne }
+				agotcch_create_podric_payne_effect = yes
+			}
+		}
+	}
+	
+	# Manderly
+	character:Manderly_7 = {
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Woolfield_2
+				}
+			}
+
+			if = {
+				limit = { current_year < 8284 }
+
+				character:Woolfield_2 = { agotcch_add_wife_modifier = yes }
+				character:Manderly_7 = { agotcch_add_husband_modifier = yes }
+			}
+
+			if = {
+				limit = {
+					NOT = { character:Woolfield_2 = { has_character_flag = had_wylla_manderly } }
+					current_year = 8284
+				}
+
+				character:Woolfield_2 = { add_character_flag = had_wylla_manderly }
+				agotcch_create_wylla_manderly_effect = yes
+			}
+		}
+	}
+
+	# Lannister
+	character:Lannister_5 = {
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					character:Lannister_rs_1 = { is_alive = yes }
+				}
+			}
+
+			# Joy Hill
+			if = {
+				limit = {
+					NOT = {
+						has_character_flag = had_joy_hill
+						character:Lannister_14 = { # Joy Hill
+							is_alive = yes
+						}
+					}
+					current_year = 8288
+				}
+	
+				add_character_flag = had_joy_hill
+				agotcch_create_joy_hill_effect = yes
+				agotcch_child_toast = yes
+			}
+		}
+	}
+
+	# Reed
+	character:Reed_1 = {
+		if = {
+			limit = {
+				AND = {
+					is_alive = yes
+					is_spouse_of = character:Reed_rs_1
+				}
+			}
+
+			if = {
+				limit = { current_year < 8285 }
+
+				character:Reed_1 = { agotcch_add_husband_modifier = yes }
+				character:Reed_rs_1 = { agotcch_add_wife_modifier = yes}
+			}
+
+			if = {
+				limit = {
+					NOT = { character:Reed_rs_1 = { has_character_flag = had_meera_reed } }
+					current_year = 8283
+				}
+
+				character:Reed_rs_1 = { add_character_flag = had_meera_reed }
+				agotcch_create_meera_reed_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					NOT = { character:Reed_rs_1 = { has_character_flag = had_jojen_reed } }
+					current_year = 8285
+				}
+
+				character:Reed_rs_1 = { add_character_flag = had_jojen_reed }
+				agotcch_create_jojen_reed_effect = yes
+				agotcch_child_toast = yes
+			}
+		}
+	}
+
 	# Forrester
 	character:Forrester_2 = { # Gregor
 		if = {
