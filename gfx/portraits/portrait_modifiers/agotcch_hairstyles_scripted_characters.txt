@@ -17,12 +17,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_arya_stark
-					AND = {
-						exists = character:Stark_9
-						this = character:Stark_9
+				AND = {
+					OR = {
+						has_character_flag = is_arya_stark
+						AND = {
+							exists = character:Stark_9
+							this = character:Stark_9
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -40,22 +43,28 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_bran_stark
-					AND = {
-						exists = character:8059
-						this = character:8059
+				AND = {
+					OR = {
+						has_character_flag = is_bran_stark
+						AND = {
+							exists = character:8059
+							this = character:8059
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_gendry_baratheon
-					AND = {
-						exists = character:Baratheon_9
-						this = character:Baratheon_9
+				AND = {
+					OR = {
+						has_character_flag = is_gendry_baratheon
+						AND = {
+							exists = character:Baratheon_9
+							this = character:Baratheon_9
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -74,12 +83,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_jorelle_mormont
-					AND = {
-						exists = character:Mormont_8
-						this = character:Mormont_8
+				AND = {
+					OR = {
+						has_character_flag = is_jorelle_mormont
+						AND = {
+							exists = character:Mormont_8
+							this = character:Mormont_8
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -97,22 +109,28 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_tommen_baratheon
-					AND = {
-						exists = character:Baratheon_7
-						this = character:Baratheon_7
+				AND = {
+					OR = {
+						has_character_flag = is_tommen_baratheon
+						AND = {
+							exists = character:Baratheon_7
+							this = character:Baratheon_7
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_robert_arryn
-					AND = {
-						exists = character:Arryn_8
-						this = character:Arryn_8
+				AND = {
+					OR = {
+						has_character_flag = is_robert_arryn
+						AND = {
+							exists = character:Arryn_8
+							this = character:Arryn_8
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -136,12 +154,15 @@
 			}
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_mira_forrester
-					AND = {
-						exists = character:Forrester_5
-						this = character:Forrester_5
+				AND = {
+					OR = {
+						has_character_flag = is_mira_forrester
+						AND = {
+							exists = character:Forrester_5
+							this = character:Forrester_5
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -160,12 +181,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_talia_forrester
-					AND = {
-						exists = character:Forrester_7
-						this = character:Forrester_7
+				AND = {
+					OR = {
+						has_character_flag = is_talia_forrester
+						AND = {
+							exists = character:Forrester_7
+							this = character:Forrester_7
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -183,12 +207,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_robb_stark
-					AND = {
-						exists = character:Stark_6 
-						this = character:Stark_6 
+				AND = {
+					OR = {
+						has_character_flag = is_robb_stark
+						AND = {
+							exists = character:Stark_6 
+							this = character:Stark_6 
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -207,32 +234,41 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_myrcella_baratheon
-					AND = {
-						exists = character:Baratheon_6
-						this = character:Baratheon_6
+				AND = {
+					OR = {
+						has_character_flag = is_myrcella_baratheon
+						AND = {
+							exists = character:Baratheon_6
+							this = character:Baratheon_6
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_jeyne_westerling
-					AND = {
-						exists = character:Westerling_2
-						this = character:Westerling_2
+				AND = {
+					OR = {
+						has_character_flag = is_jeyne_westerling
+						AND = {
+							exists = character:Westerling_2
+							this = character:Westerling_2
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_beth_cassel
-					AND = {
-						exists = character:Cassel_5
-						this = character:Cassel_5
+				AND = {
+					OR = {
+						has_character_flag = is_beth_cassel
+						AND = {
+							exists = character:Cassel_5
+							this = character:Cassel_5
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -251,12 +287,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_lyanna_mormont
-					AND = {
-						exists = character:Mormont_9
-						this = character:Mormont_9
+				AND = {
+					OR = {
+						has_character_flag = is_lyanna_mormont
+						AND = {
+							exists = character:Mormont_9
+							this = character:Mormont_9
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -275,8 +314,16 @@
 			base = 0
 			modifier = {
 				add = 999
-				exists = character:Manderly_10
-				this = character:Manderly_10
+				AND = {
+					OR = {
+						has_character_flag = is_wylla_manderly
+						AND = {
+							exists = character:Manderly_10
+							this = character:Manderly_10
+						}
+					}
+					has_game_rule = agotcch_custom_dna_on
+				}
 			}
 		}
 	}
@@ -294,12 +341,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_shireen_baratheon
-					AND = {
-						exists = character:Baratheon_13
-						this = character:Baratheon_13
+				AND = {
+					OR = {
+						has_character_flag = is_shireen_baratheon
+						AND = {
+							exists = character:Baratheon_13
+							this = character:Baratheon_13
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -317,12 +367,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_ethan_forrester
-					AND = {
-						exists = character:Forrester_6
-						this = character:Forrester_6
+				AND = {
+					OR = {
+						has_character_flag = is_ethan_forrester
+						AND = {
+							exists = character:Forrester_6
+							this = character:Forrester_6
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -340,22 +393,28 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_rickon_stark
-					AND = {
-						exists = character:Stark_11
-						this = character:Stark_11
+				AND = {
+					OR = {
+						has_character_flag = is_rickon_stark
+						AND = {
+							exists = character:Stark_11
+							this = character:Stark_11
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_ryon_forrester
-					AND = {
-						exists = character:Forrester_8
-						this = character:Forrester_8
+				AND = {
+					OR = {
+						has_character_flag = is_ryon_forrester
+						AND = {
+							exists = character:Forrester_8
+							this = character:Forrester_8
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -374,12 +433,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_sansa_stark
-					AND = {
-						exists = character:Stark_8
-						this = character:Stark_8
+				AND = {
+					OR = {
+						has_character_flag = is_sansa_stark
+						AND = {
+							exists = character:Stark_8
+							this = character:Stark_8
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -398,12 +460,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_jeyne_poole
-					AND = {
-						exists = character:Poole_3
-						this = character:Poole_3
+				AND = {
+					OR = {
+						has_character_flag = is_jeyne_poole
+						AND = {
+							exists = character:Poole_3
+							this = character:Poole_3
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -422,12 +487,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_alys_karstark
-					AND = {
-						exists = character:Karstark_19
-						this = character:Karstark_19
+				AND = {
+					OR = {
+						has_character_flag = is_alys_karstark
+						AND = {
+							exists = character:Karstark_19
+							this = character:Karstark_19
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -446,12 +514,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_margaery_tyrell
-					AND = {
-						exists = character:Tyrell_14
-						this = character:Tyrell_14
+				AND = {
+					OR = {
+						has_character_flag = is_margaery_tyrell
+						AND = {
+							exists = character:Tyrell_14
+							this = character:Tyrell_14
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}
@@ -469,12 +540,15 @@
 			base = 0
 			modifier = {
 				add = 999
-				OR = {
-					has_character_flag = is_joffrey_baratheon
-					AND = {
-						exists = character:Baratheon_5
-						this = character:Baratheon_5
+				AND = {
+					OR = {
+						has_character_flag = is_joffrey_baratheon
+						AND = {
+							exists = character:Baratheon_5
+							this = character:Baratheon_5
+						}
 					}
+					has_game_rule = agotcch_custom_dna_on
 				}
 			}
 		}

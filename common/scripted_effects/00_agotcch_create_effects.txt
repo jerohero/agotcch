@@ -34,8 +34,12 @@ agotcch_create_robb_stark_effect = {
 				add_trait = honorable
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_robb_stark_dummy
+			}
+
 			add_character_flag = is_robb_stark
-			copy_inheritable_appearance_from = character:agotcch_robb_stark_dummy
 			set_variable = { name = agot_dna value = flag:tully }
 			save_scope_as = latest_child
 		}
@@ -72,9 +76,13 @@ agotcch_create_sansa_stark_effect = {
 				add_trait = arrogant
 				add_trait = fashionable
 			}
+			
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_sansa_stark_dummy
+			}
 
 			add_character_flag = is_sansa_stark
-			copy_inheritable_appearance_from = character:agotcch_sansa_stark_dummy
 			set_variable = { name = agot_dna value = flag:tully }
 			set_relation_guardian = character:2001159 # Septa Mordane
 			save_scope_as = latest_child
@@ -111,8 +119,12 @@ agotcch_create_arya_stark_effect = {
 				add_trait = arrogant
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_arya_stark_dummy
+			}
+
 			add_character_flag = is_arya_stark
-			copy_inheritable_appearance_from = character:agotcch_arya_stark_dummy
 			set_variable = { name = agot_dna value = flag:stark }
 			set_relation_guardian = character:2001159 # Septa Mordane
 			save_scope_as = latest_child
@@ -147,9 +159,13 @@ agotcch_create_bran_stark_effect = {
 				add_trait = honorable
 				add_trait = brave
 			}
+			
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_bran_stark_dummy
+			}
 
 			add_character_flag = is_bran_stark
-			copy_inheritable_appearance_from = character:agotcch_bran_stark_dummy
 			set_variable = { name = agot_dna value = flag:tully }
 			save_scope_as = latest_child
 		}
@@ -184,8 +200,12 @@ agotcch_create_rickon_stark_effect = {
 				add_trait = stubborn
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_rickon_stark_dummy
+			}
+
 			add_character_flag = is_rickon_stark
-			copy_inheritable_appearance_from = character:agotcch_rickon_stark_dummy
 			set_variable = { name = agot_dna value = flag:tully }
 			save_scope_as = latest_child
 		}
@@ -233,9 +253,13 @@ agotcch_create_joffrey_baratheon_effect = {
 				add_trait = greedy
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
+			}
+
 			add_character_flag = flag_secret_bastard
 			add_character_flag = is_joffrey_baratheon
-			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
@@ -294,8 +318,12 @@ agotcch_create_joffrey_lannister_effect = {
 				add_trait = greedy
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
+			}
+
 			add_character_flag = is_joffrey_baratheon
-			copy_inheritable_appearance_from = character:agotcch_joffrey_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			set_employer = title:c_casterly_rock.holder
 			save_scope_as = latest_child
@@ -335,9 +363,13 @@ agotcch_create_myrcella_baratheon_effect = {
 				add_trait = trusting
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
+			}
+
 			add_character_flag = flag_secret_bastard
 			add_character_flag = is_myrcella_baratheon
-			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
@@ -395,8 +427,12 @@ agotcch_create_myrcella_lannister_effect = {
 				add_trait = trusting
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
+			}
+
 			add_character_flag = is_myrcella_baratheon
-			copy_inheritable_appearance_from = character:agotcch_myrcella_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			set_employer = title:c_casterly_rock.holder
 			save_scope_as = latest_child
@@ -435,9 +471,13 @@ agotcch_create_tommen_baratheon_effect = {
 				add_trait = trusting
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
+			}
+
 			add_character_flag = flag_secret_bastard
 			add_character_flag = is_tommen_baratheon
-			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
 		}
@@ -494,8 +534,12 @@ agotcch_create_tommen_lannister_effect = {
 				add_trait = trusting
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
+			}
+
 			add_character_flag = is_tommen_baratheon
-			copy_inheritable_appearance_from = character:agotcch_tommen_baratheon_dummy
 			set_employer = title:c_casterly_rock.holder
 			set_variable = { name = agot_dna value = flag:lannister }
 			save_scope_as = latest_child
@@ -533,11 +577,15 @@ agotcch_create_gendry_effect = {
 				add_trait = stubborn
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_gendry_baratheon_dummy
+			}
+
 			add_character_flag = is_gendry_baratheon
 			give_nickname = nick_the_bull
 			set_variable = { name = agot_dna value = flag:baratheon }
 			set_to_lowborn = yes
-			copy_inheritable_appearance_from = character:agotcch_gendry_baratheon_dummy
 			save_scope_as = latest_child
 		}
 		character:Baratheon_2 = {
@@ -683,9 +731,13 @@ agotcch_create_shireen_baratheon_effect = {
 				add_trait = humble
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_shireen_baratheon_dummy
+			}
+
 			add_character_flag = is_shireen_baratheon
 			set_variable = { name = agot_dna value = flag:baratheon }
-			copy_inheritable_appearance_from = character:agotcch_shireen_baratheon_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -777,9 +829,14 @@ agotcch_create_margaery_tyrell_effect = {
 				add_trait = deceitful
 			}
 
+			
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_margaery_tyrell_dummy
+			}
+
 			add_character_flag = is_margaery_tyrell
 			set_variable = { name = agot_dna value = flag:tyrell }
-			copy_inheritable_appearance_from = character:agotcch_margaery_tyrell_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -976,9 +1033,12 @@ agotcch_create_robert_arryn_effect = {
 				add_trait = paranoid
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_robert_arryn_dummy
+			}
+
 			add_character_flag = is_robert_arryn
-			# copy_inheritable_appearance_from = character:Arryn_8
-			copy_inheritable_appearance_from = character:agotcch_robert_arryn_dummy
 			set_variable = { name = agot_dna value = flag:arryn }
 			save_scope_as = latest_child
 		}
@@ -1023,8 +1083,12 @@ agotcch_create_jeyne_westerling_effect = {
 				add_trait = charming
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_jeyne_westerling_dummy
+			}
+
 			add_character_flag = is_jeyne_westerling
-			copy_inheritable_appearance_from = character:agotcch_jeyne_westerling_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1064,9 +1128,12 @@ agotcch_create_lyanna_mormont_effect = {
 				add_trait = stubborn
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_lyanna_mormont_dummy
+			}
+
 			add_character_flag = is_lyanna_mormont
-			# copy_inheritable_appearance_from = character:agotcch_lyanna_mormont_dummy
-			copy_inheritable_appearance_from = character:agotcch_lyanna_mormont_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1091,8 +1158,12 @@ agotcch_create_jorelle_mormont_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_jorelle_mormont = {
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_jorelle_mormont_dummy
+			}
+
 			add_character_flag = is_jorelle_mormont
-			copy_inheritable_appearance_from = character:agotcch_jorelle_mormont_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1133,8 +1204,12 @@ agotcch_create_trystane_martell_effect = {
 				add_trait = just
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_trystane_martell_dummy
+			}
+
 			add_character_flag = is_trystane_martell
-			copy_inheritable_appearance_from = character:agotcch_trystane_martell_dummy
 			set_variable = { name = agot_dna value = flag:martell }
 			save_scope_as = latest_child
 		}
@@ -1168,8 +1243,12 @@ agotcch_create_jeyne_poole_effect = {
 	}
 	hidden_effect = {
 		scope:agotcch_baby_jeyne_poole = {
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_jeyne_poole_dummy
+			}
+
 			add_character_flag = is_jeyne_poole
-			copy_inheritable_appearance_from = character:agotcch_jeyne_poole_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1210,8 +1289,12 @@ agotcch_create_beth_cassel_effect = {
 				add_trait = humble
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_beth_cassel_dummy
+			}
+
 			add_character_flag = is_beth_cassel
-			copy_inheritable_appearance_from = character:agotcch_beth_cassel_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1253,8 +1336,12 @@ agotcch_create_edric_dayne_effect = {
 				add_trait = diligent
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_edric_dayne_dummy
+			}
+
 			add_character_flag = is_edric_dayne
-			copy_inheritable_appearance_from = character:agotcch_edric_dayne_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1297,8 +1384,12 @@ agotcch_create_podrick_payne_effect = {
 				add_trait = trusting
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_podrick_payne_dummy
+			}
+
 			add_character_flag = is_podrick_payne
-			copy_inheritable_appearance_from = character:agotcch_podrick_payne_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1341,8 +1432,12 @@ agotcch_create_meera_reed_effect = {
 				add_trait = brave
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_meera_reed_dummy
+			}
+
 			add_character_flag = is_meera_reed
-			copy_inheritable_appearance_from = character:agotcch_meera_reed_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1378,8 +1473,12 @@ agotcch_create_jojen_reed_effect = {
 				add_trait = brave
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_jojen_reed_dummy
+			}
+
 			add_character_flag = is_jojen_reed
-			copy_inheritable_appearance_from = character:agotcch_jojen_reed_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1421,8 +1520,12 @@ agotcch_create_wylla_manderly_effect = {
 				add_trait = brave
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_wylla_manderly_dummy
+			}
+
 			add_character_flag = is_wylla_manderly
-			copy_inheritable_appearance_from = character:agotcch_wylla_manderly_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1464,8 +1567,12 @@ agotcch_create_alys_karstark_effect = {
 				add_trait = honorable
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_alys_karstark_dummy
+			}
+
 			add_character_flag = is_alys_karstark
-			copy_inheritable_appearance_from = character:agotcch_alys_karstark_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1508,8 +1615,12 @@ agotcch_create_mira_forrester_effect = {
 				add_trait = shy
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_mira_forrester_dummy
+			}
+
 			add_character_flag = is_mira_forrester
-			copy_inheritable_appearance_from = character:agotcch_mira_forrester_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1546,8 +1657,12 @@ agotcch_create_ethan_forrester_effect = {
 				add_trait = family_first
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_ethan_forrester_dummy
+			}
+
 			add_character_flag = is_ethan_forrester
-			copy_inheritable_appearance_from = character:agotcch_ethan_forrester_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1585,8 +1700,12 @@ agotcch_create_talia_forrester_effect = {
 				add_trait = just
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_talia_forrester_dummy
+			}
+
 			add_character_flag = is_talia_forrester
-			copy_inheritable_appearance_from = character:agotcch_talia_forrester_dummy
 			save_scope_as = latest_child
 		}
 	}
@@ -1621,8 +1740,12 @@ agotcch_create_ryon_forrester_effect = {
 				add_trait = shy
 			}
 
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_ryon_forrester_dummy
+			}
+
 			add_character_flag = is_ryon_forrester
-			copy_inheritable_appearance_from = character:agotcch_ryon_forrester_dummy
 			save_scope_as = latest_child
 		}
 	}

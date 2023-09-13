@@ -11,6 +11,12 @@ l_english:
 	setting_agotcch_canon_traits_off:0 "Off"
 	setting_agotcch_canon_traits_off_desc:0 "Canon children will be born without preset traits."
 
+	rule_agotcch_custom_dna:0 "#P AGOT Canon Children:#! Custom DNA"
+	setting_agotcch_custom_dna_on:0 "On"
+	setting_agotcch_custom_dna_on_desc:0 "Some canon children will be born with custom book-inspired DNA."
+	setting_agotcch_custom_dna_off:0 "Off"
+	setting_agotcch_custom_dna_off_desc:0 "Canon children will be born with randomly generated DNA."
+
 	rule_agotcch_prevent_public_lannincest:0 "#P AGOT Canon Children:#! Prevent Public Lannincest"
 	setting_agotcch_prevent_public_lannincest_on:0 "On"
 	setting_agotcch_prevent_public_lannincest_on_desc:0 "Jaime and Cersei will not have children while Cersei is unmarried."

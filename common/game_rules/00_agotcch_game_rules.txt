@@ -6,6 +6,14 @@
 	agotcch_canon_traits_off = { }
 }
 
+agotcch_custom_dna = {
+	default = agotcch_custom_dna_on
+
+	agotcch_custom_dna_on = { }
+
+	agotcch_custom_dna_off = { }
+}
+
 agotcch_prevent_public_lannincest = {
 	default = agotcch_prevent_public_lannincest_off
 
