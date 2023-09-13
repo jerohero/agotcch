@@ -447,6 +447,7 @@ arrange_marriage_interaction = {
 			scope:secondary_recipient = {
 				is_busy_in_events_localised = yes
 				is_imprisoned = no
+				bp2_valid_for_standard_interactions_trigger = yes
 			}
 		}
 		trigger_if = { #(must be here because secondary_recipient can be set at the start)
@@ -457,6 +458,7 @@ arrange_marriage_interaction = {
 			scope:secondary_actor = {
 				is_busy_in_events_localised = yes
 				is_imprisoned = no
+				bp2_valid_for_standard_interactions_trigger = yes
 			}
 		}
 		# Account for regents being bolshy.
@@ -732,7 +734,10 @@ arrange_marriage_interaction = {
 				custom_tooltip = {
 					text = grand_wedding_already_promised_tt
 					NOR = {
-						has_variable = promised_grand_wedding_marriage_countdown
+						AND = {
+							has_variable = promised_grand_wedding_marriage_countdown
+							var:promised_grand_wedding_marriage_countdown = { is_alive = yes }
+						}
 						has_variable = grand_wedding_promise_pending
 					}
 				}
@@ -1210,6 +1215,7 @@ marry_off_interaction = {
 		scope:secondary_actor = {
 			is_busy_in_events_localised = yes
 			is_imprisoned = no
+			bp2_valid_for_standard_interactions_trigger = yes
 		}
 		marriage_interaction_non_loyal_diarchs_refuse_secondary_marriage_trigger = { TARGET = secondary_actor }
 		trigger_if = {
@@ -1364,7 +1370,10 @@ marry_off_interaction = {
 				custom_tooltip = {
 					text = grand_wedding_already_promised_tt
 					NOR = {
-						has_variable = promised_grand_wedding_marriage_countdown
+						AND = {
+							has_variable = promised_grand_wedding_marriage_countdown
+							var:promised_grand_wedding_marriage_countdown = { is_alive = yes }
+						}
 						has_variable = grand_wedding_promise_pending
 					}
 				}
@@ -3599,8 +3608,15 @@ divorce_character_interaction = {
 			scope:actor = {
 				fertility > 0.1
 				NOT = {
+					#AGOT Modified
 					any_child = {
-						is_heir_of = scope:actor
+						#is_heir_of = scope:actor
+						OR = {
+							is_heir_of = scope:actor
+							any_child = {
+								is_heir_of = scope:actor
+							}
+						}
 					}
 				}
 			}
@@ -3944,7 +3960,14 @@ divorce_character_house_head_interaction = {
 				fertility > 0.1
 				NOT = {
 					any_child = {
-						is_heir_of = scope:actor
+						#AGOT Modified
+						#is_heir_of = scope:actor
+						OR = {
+							is_heir_of = scope:actor
+							any_child = {
+								is_heir_of = scope:actor
+							}
+						}
 					}
 				}
 			}
@@ -4289,7 +4312,14 @@ divorce_character_rel_head_interaction = {
 				fertility > 0.1
 				NOT = {
 					any_child = {
-						is_heir_of = scope:actor
+						#AGOT Modified
+						#is_heir_of = scope:actor
+						OR = {
+							is_heir_of = scope:actor
+							any_child = {
+								is_heir_of = scope:actor
+							}
+						}
 					}
 				}
 			}
@@ -4932,6 +4962,18 @@ elope_interaction = {
 							honest = minor_stress_impact_gain
 							just = minor_stress_impact_gain
 						}
+					}
+				}
+				if = {
+					limit = {
+						has_trait = education_intrigue_5
+					}
+					random_scheme = {
+						limit = {
+							scheme_type = elope
+							scheme_target = scope:recipient
+						}
+						add_scheme_progress = 3
 					}
 				}
 			}
