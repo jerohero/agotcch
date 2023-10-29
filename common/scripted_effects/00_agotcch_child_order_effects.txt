@@ -496,14 +496,20 @@ agotcch_handle_targaryen_children = {
 					agotcch_create_daenerys_targaryen_effect = yes
 					agotcch_child_toast = yes
 
-					# Kill Rhaella after giving birth (canon, and prevents any duplicate Daenerys spawn events from somehow happening)
-					character:Targaryen_2 = {
-						death = { death_reason = death_childbirth }
-					}
-
 					set_variable = {
 						name = agot_rr_preg_status_rhaella
 						value = flag:finished
+					}
+
+					# Kill Rhaella after giving birth (canon, and prevents any duplicate Daenerys spawn events from somehow happening)
+					if = {
+						limit = {
+							has_game_rule = agotcch_higher_dany_chance_on_kill_rhaella
+						}
+
+						character:Targaryen_2 = {
+							death = { death_reason = death_childbirth }
+						}
 					}
 				}
 			}

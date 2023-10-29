@@ -27,5 +27,7 @@ agotcch_higher_dany_chance = {
 
 	agotcch_higher_dany_chance_on = { }
 
-	agotcch_dhigher_dany_chance_off = { }
+	agotcch_higher_dany_chance_on_kill_rhaella = { }
+
+	agotcch_higher_dany_chance_off = { }
 }

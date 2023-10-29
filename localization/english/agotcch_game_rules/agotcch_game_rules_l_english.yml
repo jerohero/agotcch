@@ -26,5 +26,7 @@ l_english:
 	rule_agotcch_higher_dany_chance:0 "#P AGOT Canon Children:#! Higher Daenerys Birth Chance"
 	setting_agotcch_higher_dany_chance_on:0 "On"
 	setting_agotcch_higher_dany_chance_on_desc:0 "Makes it possible for Rhaella to give birth to Daenerys if Rhaegar wins the Battle of the Trident and Rhaella is not sent to Dragonstone."
+	setting_agotcch_higher_dany_chance_on_kill_rhaella:0 "On, Kill Rhaella"
+	setting_agotcch_higher_dany_chance_on_kill_rhaella_desc:0 "Makes it possible for Rhaella to give birth to Daenerys if Rhaegar wins the Battle of the Trident and Rhaella is not sent to Dragonstone. Rhaella will die in childbirth."
 	setting_agotcch_higher_dany_chance_off:0 "Off"
-	setting_agotcch_higher_dany_chance_off_desc:0 "Rhaella can only give birth to Daenerys if Rhaegar loses the Battle of the Trident and Rhaella is sent to Dragonstone (vanilla behaviour)."
+	setting_agotcch_higher_dany_chance_off_desc:0 "Rhaella can only give birth to Daenerys if Rhaegar loses the Battle of the Trident and Rhaella is sent to Dragonstone (vanilla)."
