@@ -15,6 +15,7 @@ agotcch_births.1 = {
 		agotcch_handle_stark_children = yes
 		agotcch_handle_baratheon_children = yes
 		agotcch_handle_tarly_children = yes
+		agotcch_handle_targaryen_children = yes
 		agotcch_handle_arryn_children = yes
 		agotcch_handle_westerling_children = yes
 		agotcch_handle_tyrell_children = yes

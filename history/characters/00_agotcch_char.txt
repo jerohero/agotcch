@@ -216,6 +216,22 @@ agotcch_margaery_tyrell_dummy = {
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
+agotcch_daenerys_targaryen_dummy = {
+	name = Daenerys
+	dynasty = dynn_Stark
+	# dna = agotcch_daenerys_targaryen_dna
+	dna = Targaryen_90
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
 agotcch_lyanna_mormont_dummy = {
 	name = Lyanna
 	dynasty = dynn_Stark

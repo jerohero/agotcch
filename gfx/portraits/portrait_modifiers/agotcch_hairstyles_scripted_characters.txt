@@ -194,6 +194,33 @@
 			}
 		}
 	}
+	agotcch_female_hair_custom_19 = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = hairstyles
+				template = all_hairstyles
+				accessory = female_hair_custom_19
+				type = female
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 999
+				AND = {
+					OR = {
+						has_character_flag = is_daenerys_targaryen
+						AND = {
+							exists = character:Targaryen_9
+							this = character:Targaryen_9
+						}
+					}
+					has_game_rule = agotcch_custom_dna_on
+				}
+			}
+		}
+	}
 	agotcch_male_hair_fp2_iberian_muslim_01 = {
 		dna_modifiers = {
 			accessory = {

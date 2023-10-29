@@ -417,6 +417,100 @@ agotcch_handle_tarly_children = {
 	}
 }
 
+agotcch_handle_targaryen_children = {
+	character:Targaryen_1 = { # Aerys
+		if = {
+			limit = {
+				AND = {
+					has_game_rule = agotcch_higher_dany_chance_on
+					is_alive = yes
+					is_spouse_of = character:Targaryen_2 # Rhaella
+					NOT = {
+						character:Targaryen_9 = { # Daenerys
+							is_alive = yes
+						}
+						character:Targaryen_2 = { # Rhaella
+							has_character_flag = rhaella_sent_to_dragonstone
+						}
+						character:Targaryen_1 = { # Aerys
+							has_character_flag = had_daenerys_targaryen
+						}
+					}
+				}
+			}
+
+			character:Targaryen_2 = { # Rhaella
+				agotcch_add_wife_modifier = yes
+			}
+			character:Targaryen_1 = { # Aerys
+				agotcch_add_husband_modifier = yes
+			}
+
+			if = {
+				limit = {
+					OR = {
+						# Rhaegar won the Battle of the Trident and nobody was sent to Dragonstone
+						AND = {
+							character:Targaryen_3 = { # Rhaegar
+								is_alive = yes
+							}
+							character:Baratheon_2 = { # Robert
+								is_alive = no
+							}
+						}
+						# Rhaegar is dead and nobody was sent to Dragonstone
+						character:Targaryen_3 = { # Rhaegar
+							is_alive = no
+							NOT = {
+								title:d_dragonstone.holder = character:Targaryen_2
+							}
+						}
+					}
+				}
+
+				# Tracking these cycles serve as a countdown to make Daenerys spawn a while after the battle and let the events play out
+				if = {
+					limit = {
+						NOT = {
+							exists = global_var:cycles_since_daenerys_birth_conditions
+						}
+					}
+					set_global_variable = {
+						name = cycles_since_daenerys_birth_conditions
+						value = 1
+					}
+				}
+				else = {
+					change_global_variable = {
+						name = cycles_since_daenerys_birth_conditions
+						add = 1
+					}
+				}
+			
+				if = {
+					limit = {
+						global_var:cycles_since_daenerys_birth_conditions > 200
+					}
+
+					add_character_flag = had_daenerys_targaryen
+					agotcch_create_daenerys_targaryen_effect = yes
+					agotcch_child_toast = yes
+
+					# Kill Rhaella after giving birth (canon, and prevents any duplicate Daenerys spawn events from somehow happening)
+					character:Targaryen_2 = {
+						death = { death_reason = death_childbirth }
+					}
+
+					set_variable = {
+						name = agot_rr_preg_status_rhaella
+						value = flag:finished
+					}
+				}
+			}
+		}
+	}
+}
+
 agotcch_handle_arryn_children = {
 	character:Arryn_3 = { # Jon
 		if = {

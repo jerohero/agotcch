@@ -996,6 +996,53 @@ agotcch_create_sansara_tarly_effect = {
 }
 
 ####################################################
+####		      HOUSE TARGARYEN 		       	####
+####################################################
+
+# Daenerys
+
+# Targaryen_x
+agotcch_create_daenerys_targaryen_effect = {
+	create_character = {
+		age = 0
+		name = "Daenerys"
+		father = character:Targaryen_1
+		mother = character:Targaryen_2
+		gender = female
+		faith = faith:the_seven_main
+		culture = culture:high_valyrian	
+		dynasty_house = father.house
+		location = father.location
+
+		trait = intellect_good_1
+		trait = beauty_good_3
+		random_traits = no
+
+		save_scope_as = agotcch_baby_daenerys_targaryen
+	}
+	hidden_effect = {
+		scope:agotcch_baby_daenerys_targaryen = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = ambitious
+				add_trait = generous
+				add_trait = wrathful
+				add_trait = compassionate
+			}
+
+			copy_inheritable_appearance_from = character:agotcch_daenerys_targaryen_dummy
+
+			add_character_flag = is_daenerys_targaryen
+			set_variable = { name = agot_dna value = flag:high_val }
+			save_scope_as = latest_child
+		}
+	}
+}
+
+####################################################
 ####		        HOUSE ARRYN 		       	####
 ####################################################
 
