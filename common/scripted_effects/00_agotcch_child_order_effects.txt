@@ -422,7 +422,10 @@ agotcch_handle_targaryen_children = {
 		if = {
 			limit = {
 				AND = {
-					has_game_rule = agotcch_higher_dany_chance_on
+					OR = {
+						has_game_rule = agotcch_higher_dany_chance_on
+						has_game_rule = agotcch_higher_dany_chance_on_kill_rhaella
+					}
 					is_alive = yes
 					is_spouse_of = character:Targaryen_2 # Rhaella
 					NOT = {
