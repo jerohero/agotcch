@@ -331,6 +331,50 @@ agotcch_create_joffrey_lannister_effect = {
 	}
 }
 
+# Baratheon_5
+agotcch_create_joffrey_targaryen_effect = {
+	create_character = {
+		age = 0
+		name = "Daeron"
+		father = character:Lannister_6.primary_spouse
+		mother = character:Lannister_6
+		
+		gender = male
+		faith = character:Lannister_6.primary_spouse.faith
+		culture = character:Lannister_6.primary_spouse.culture
+		dynasty_house = character:Lannister_6.primary_spouse.house
+		employer = character:Lannister_6.primary_spouse
+
+		trait = beauty_good_2
+		random_traits = no
+
+		save_scope_as = agotcch_baby_joffrey_targaryen
+	}
+	hidden_effect = {
+		scope:agotcch_baby_joffrey_targaryen = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = bossy
+			}
+			else = {
+				add_trait = sadistic
+				add_trait = arrogant
+				add_trait = wrathful
+				add_trait = greedy
+			}
+
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_joffrey_targaryen_dummy
+			}
+
+			add_character_flag = is_joffrey_baratheon
+			set_variable = { name = agot_dna value = flag:targaryen }
+			save_scope_as = latest_child
+		}
+	}
+}
+
 # Baratheon_6
 agotcch_create_myrcella_baratheon_effect = {
 	create_character = {
@@ -340,8 +384,8 @@ agotcch_create_myrcella_baratheon_effect = {
 		mother = character:Lannister_6
 		real_father = character:Lannister_7
 		gender = female
-		faith = faith:the_seven_main
-		culture = culture:crownlander
+		faith = character:Lannister_6.primary_spouse.faith
+		culture = character:Lannister_6.primary_spouse.culture
 		dynasty_house = character:Lannister_6.primary_spouse.house
 		employer = mother.employer
 
@@ -435,6 +479,50 @@ agotcch_create_myrcella_lannister_effect = {
 			add_character_flag = is_myrcella_baratheon
 			set_variable = { name = agot_dna value = flag:lannister }
 			set_employer = title:c_casterly_rock.holder
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Baratheon_6
+agotcch_create_myrcella_targaryen_effect = {
+	create_character = {
+		age = 0
+		name = "Visenya"
+		father = character:Lannister_6.primary_spouse
+		mother = character:Lannister_6
+		
+		gender = female
+		faith = character:Lannister_6.primary_spouse.faith
+		culture = character:Lannister_6.primary_spouse.culture
+		dynasty_house = character:Lannister_6.primary_spouse.house
+		employer = character:Lannister_6.primary_spouse
+
+		trait = beauty_good_2
+		trait = intellect_good_1
+		random_traits = no
+
+		save_scope_as = agotcch_baby_myrcella_targaryen
+	}
+	hidden_effect = {
+		scope:agotcch_baby_myrcella_targaryen = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = charming
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = brave
+				add_trait = trusting
+			}
+
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_myrcella_targaryen_dummy
+			}
+
+			add_character_flag = is_myrcella_baratheon
+			set_variable = { name = agot_dna value = flag:targaryen }
 			save_scope_as = latest_child
 		}
 	}
@@ -542,6 +630,49 @@ agotcch_create_tommen_lannister_effect = {
 			add_character_flag = is_tommen_baratheon
 			set_employer = title:c_casterly_rock.holder
 			set_variable = { name = agot_dna value = flag:lannister }
+			save_scope_as = latest_child
+		}
+	}
+}
+
+# Baratheon_7
+agotcch_create_tommen_targaryen_effect = {
+	create_character = {
+		age = 0
+		name = "Jaehaerys"
+		father = character:Lannister_6.primary_spouse
+		mother = character:Lannister_6
+		
+		gender = male
+		faith = character:Lannister_6.primary_spouse.faith
+		culture = character:Lannister_6.primary_spouse.culture
+		dynasty_house = character:Lannister_6.primary_spouse.house
+		employer = character:Lannister_6.primary_spouse
+
+		random_traits = no
+
+		save_scope_as = agotcch_baby_tommen_targaryen
+	}
+	hidden_effect = {
+		scope:agotcch_baby_tommen_targaryen = {
+			if = {
+				limit = { has_game_rule = agotcch_canon_traits_off }
+				add_trait = pensive
+			}
+			else = {
+				add_trait = compassionate
+				add_trait = honest
+				add_trait = content
+				add_trait = trusting
+			}
+
+			if = {
+				limit = { has_game_rule = agotcch_custom_dna_on }
+				copy_inheritable_appearance_from = character:agotcch_tommen_targaryen_dummy
+			}
+
+			add_character_flag = is_tommen_baratheon
+			set_variable = { name = agot_dna value = flag:targaryen }
 			save_scope_as = latest_child
 		}
 	}

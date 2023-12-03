@@ -92,6 +92,21 @@ agotcch_joffrey_baratheon_dummy = {
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
+agotcch_joffrey_targaryen_dummy = {
+	name = Daeron
+	dynasty = dynn_Stark
+	dna = agotcch_joffrey_targaryen_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
 agotcch_myrcella_baratheon_dummy = {
 	name = Myrcella
 	dynasty = dynn_Stark
@@ -107,10 +122,40 @@ agotcch_myrcella_baratheon_dummy = {
 	7881.1.1 = { death = { death_reason = death_vanished } }
 }
 
+agotcch_myrcella_targaryen_dummy = {
+	name = Visenya
+	dynasty = dynn_Stark
+	dna = agotcch_myrcella_targaryen_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
 agotcch_tommen_baratheon_dummy = {
 	name = Tommen
 	dynasty = dynn_Stark
 	dna = agotcch_tommen_baratheon_dna
+
+	father = Stark_49
+	mother = Bolton_18
+
+	religion = old_gods_south
+	culture = northman
+
+	7880.1.1 = { birth = yes }
+	7881.1.1 = { death = { death_reason = death_vanished } }
+}
+
+agotcch_tommen_targaryen_dummy = {
+	name = Jaehaerys
+	dynasty = dynn_Stark
+	dna = agotcch_tommen_targaryen_dna
 
 	father = Stark_49
 	mother = Bolton_18

@@ -22,6 +22,14 @@ agotcch_prevent_public_lannincest = {
 	agotcch_prevent_public_lannincest_off = { }
 }
 
+agotcch_lannister_rhaegar = {
+	default = agotcch_lannister_rhaegar_on
+
+	agotcch_lannister_rhaegar_on = { }
+
+	agotcch_lannister_rhaegar_off = { }
+}
+
 agotcch_higher_dany_chance = {
 	default = agotcch_higher_dany_chance_on
 

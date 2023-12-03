@@ -146,7 +146,15 @@ agotcch_handle_baratheon_children = {
 
 			if = {
 				limit = {
-					local_var:father_flag = character:Lannister_7
+					local_var:father_flag.dynasty = dynasty:dynn_Targaryen # Cersei's husband is a Targaryen (eg. Rhaegar)
+					has_game_rule = agotcch_lannister_rhaegar_on
+				}
+				agotcch_create_joffrey_targaryen_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
+				limit = {
+					local_var:father_flag = character:Lannister_7 # Jaime
 				}
 				agotcch_create_joffrey_lannister_effect = yes
 				agotcch_set_lannincest_traits = yes
@@ -169,6 +177,14 @@ agotcch_handle_baratheon_children = {
 			character:Lannister_6 = { add_character_flag = had_myrcella_baratheon }
 
 			if = {
+				limit = {
+					local_var:father_flag.dynasty = dynasty:dynn_Targaryen
+					has_game_rule = agotcch_lannister_rhaegar_on
+				}
+				agotcch_create_myrcella_targaryen_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
 				limit = { local_var:father_flag = character:Lannister_7 }
 
 				agotcch_create_myrcella_lannister_effect = yes
@@ -194,6 +210,14 @@ agotcch_handle_baratheon_children = {
 			character:Lannister_6 = { add_character_flag = had_tommen_baratheon }
 
 			if = {
+				limit = {
+					local_var:father_flag.dynasty = dynasty:dynn_Targaryen
+					has_game_rule = agotcch_lannister_rhaegar_on
+				}
+				agotcch_create_tommen_targaryen_effect = yes
+				agotcch_child_toast = yes
+			}
+			else_if = {
 				limit = { local_var:father_flag = character:Lannister_7 }
 				
 				agotcch_create_tommen_lannister_effect = yes

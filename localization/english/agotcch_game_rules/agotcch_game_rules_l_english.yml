@@ -23,6 +23,12 @@ l_english:
 	setting_agotcch_prevent_public_lannincest_off:0 "Off"
 	setting_agotcch_prevent_public_lannincest_off_desc:0 "Jaime and Cersei will have children while Cersei is unmarried, making them publicly incestuous."
 
+	rule_agotcch_lannister_rhaegar:0 "#P AGOT Canon Children:#! Lannister Children with Rhaegar"
+	setting_agotcch_lannister_rhaegar_on:0 "On"
+	setting_agotcch_lannister_rhaegar_on_desc:0 "Cersei's children will be born as Targaryens when she is married to Rhaegar."
+	setting_agotcch_lannister_rhaegar_off:0 "Off"
+	setting_agotcch_lannister_rhaegar_off_desc:0 "Cersei's children will be born as bastards when she is married to Rhaegar."
+
 	rule_agotcch_higher_dany_chance:0 "#P AGOT Canon Children:#! Higher Daenerys Birth Chance"
 	setting_agotcch_higher_dany_chance_on:0 "On"
 	setting_agotcch_higher_dany_chance_on_desc:0 "Makes it possible for Rhaella to give birth to Daenerys if Rhaegar wins the Battle of the Trident and Rhaella is not sent to Dragonstone."
