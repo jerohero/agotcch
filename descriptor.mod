@@ -4,5 +4,5 @@ tags={
 	"Fixes"
 }
 name="AGOT: Canon Children"
-supported_version="1.11.3.*"
+supported_version="1.11.*"
 remote_file_id="2966438738"
