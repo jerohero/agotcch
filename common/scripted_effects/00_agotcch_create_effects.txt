@@ -17,6 +17,7 @@ agotcch_create_robb_stark_effect = {
 		dynasty_house = father.house
 		location = father.location
 
+		add_trait = beauty_good_1
 		random_traits = no
 
 		save_scope_as = agotcch_baby_robb_stark
@@ -389,7 +390,7 @@ agotcch_create_myrcella_baratheon_effect = {
 		dynasty_house = character:Lannister_6.primary_spouse.house
 		employer = mother.employer
 
-		trait = beauty_good_2
+		trait = beauty_good_3
 		trait = intellect_good_1
 		random_traits = no
 
@@ -453,7 +454,7 @@ agotcch_create_myrcella_lannister_effect = {
 		dynasty_house = character:Lannister_7.house
 		employer = character:Lannister_7.employer
 
-		trait = beauty_good_2
+		trait = beauty_good_3
 		trait = intellect_good_1
 		random_traits = no
 
