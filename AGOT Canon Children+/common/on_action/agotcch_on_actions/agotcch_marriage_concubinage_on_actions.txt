@@ -1,0 +1,8 @@
+﻿# Character tries to marry to canon spouse
+# root = the husband
+# root.var:agot_canon_spouse = the wife-to-be
+agotcch_attempt_canon_marriage = {
+	first_valid = {
+		agotcch_marriage_on_action_events.0001 # for AI
+	}
+}

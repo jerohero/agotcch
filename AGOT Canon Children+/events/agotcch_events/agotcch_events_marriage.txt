@@ -1,0 +1,33 @@
+﻿namespace = agotcch_marriage_on_action_events
+
+agotcch_marriage_on_action_events.0001 = { # Canon marriage event (AI)
+	hidden = yes
+
+	trigger = {
+		is_ai = yes
+		can_marry_trigger = yes
+		var:agot_canon_spouse ?= {
+			is_ai = yes
+			can_marry_trigger = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_adult = no
+					var:agot_canon_spouse ?= { is_adult = no }
+				}
+			}
+			create_betrothal = var:agot_canon_spouse
+		}
+		else = {
+			marry = var:agot_canon_spouse
+		}
+
+		# Remove variable so divorces do not result in instant remarriage
+		remove_variable = agot_canon_spouse
+		var:agot_canon_spouse = { remove_variable = agot_canon_spouse }
+	}
+}

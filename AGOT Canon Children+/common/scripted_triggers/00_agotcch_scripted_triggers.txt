@@ -1,0 +1,72 @@
+﻿#AGOTCCH Overridden
+agot_canon_children_setup_trigger = {
+	OR = {
+		has_game_rule = agot_canon_children_enabled
+		has_game_rule = agot_canon_children_disabled #AGOTCCH Added, Always enable canon children with the submod
+	}
+}
+
+agot_canon_children_force_pregnancy_happy_accident_trigger = {
+    $MOTHER$ = { is_alive = yes }
+
+    # More strict conditions for players to avoid getting children with strangers (until custom events are added)
+    trigger_if = {
+        limit = {
+			has_game_rule = agotcch_bastards_with_strangers_disabled #AGOTCCH Added
+            OR = {
+                is_ai = no
+                $MOTHER$ = { is_ai = no }
+            }
+        }
+        # TODO: Check for location/title on strict mode - eg Robert should be king to make bastards in King's Landing    
+        OR = {
+            has_relation_lover = $MOTHER$
+            is_spouse_of = $MOTHER$
+        }
+    }
+}
+
+#AGOTCCH Added
+agotcch_allow_marriage_interaction_trigger = {
+    OR = {
+        OR = { # Allow if there is a player involved
+            scope:actor = { is_ai = no }
+            scope:recipient = { is_ai = no }
+        }
+        NOT = { # Allow if both do not have a canon spouse
+            scope:secondary_actor ?= { has_variable = agot_canon_spouse }
+            scope:secondary_recipient ?= { has_variable = agot_canon_spouse }
+        }
+        AND = {
+            trigger_if = { # Allow is pairing is canon
+                limit = {
+                    scope:secondary_actor ?= { has_variable = agot_canon_spouse }
+                    scope:secondary_recipient ?= { has_variable = agot_canon_spouse }
+                }
+
+                scope:secondary_actor = { var:agot_canon_spouse = scope:secondary_recipient }
+            }
+            trigger_else = { # Allow if canon marriage is not possible
+                scope:secondary_actor ?= {
+                    trigger_if = {
+                        limit = { has_variable = agot_canon_spouse }
+                        var:agot_canon_spouse = { can_marry_trigger = no }
+                    }
+                }
+                scope:secondary_recipient ?= {
+                    trigger_if = {
+                        limit = { has_variable = agot_canon_spouse }
+                        var:agot_canon_spouse = { can_marry_trigger = no }                
+                    }
+                }
+            }
+        }
+    }
+}
+
+agotcch_canon_marriage_trigger = {
+	has_game_rule = agotcch_canon_marriage_enabled
+	has_variable = agot_canon_spouse
+	is_adult = yes
+	can_marry_trigger = yes
+}

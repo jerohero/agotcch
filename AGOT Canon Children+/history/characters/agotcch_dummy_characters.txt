@@ -1,0 +1,111 @@
+﻿Dummy_Stark_6_agotcch = {
+	name = Robb
+	dna = agotcch_robb_stark_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Stark_8_agotcch = {
+	name = Sansa
+	dna = agotcch_sansa_stark_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Stark_9_agotcch = {
+	name = Arya
+	dna = agotcch_arya_stark_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Stark_10_agotcch = {
+	name = Bran
+	dna = agotcch_bran_stark_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Stark_11_agotcch = {
+	name = Rickon
+	dna = Stark_11
+	religion = agotcch_rickon_stark_dna
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+
+Dummy_Baratheon_5_agotcch = {
+	name = Joffrey
+	dna = agotcch_joffrey_baratheon_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Baratheon_6_agotcch = {
+	name = Myrcella
+	dna = agotcch_myrcella_baratheon_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Baratheon_7_agotcch = {
+	name = Tommen
+	dna = agotcch_tommen_baratheon_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Baratheon_9_agotcch = {
+	name = Gendry
+	dna = agotcch_gendry_baratheon_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+Dummy_Baratheon_13_agotcch = {
+	name = Shireen
+	dna = agotcch_shireen_baratheon_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+
+Dummy_Tyrell_14_agotcch = {
+	name = Margaery
+	dna = agotcch_margaery_tyrell_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}
+
+Dummy_Westerling_2_agotcch = {
+	name = Jeyne
+	dna = agotcch_jeyne_westerling_dna
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	18.1.1 = { birth = yes }
+	18.1.2 = { death = yes }
+}

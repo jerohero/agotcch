@@ -1,0 +1,23 @@
+﻿agotcch_canon_marriage = {
+	default = agotcch_canon_marriage_enabled
+
+	agotcch_canon_marriage_enabled = { }
+
+	agotcch_canon_marriage_disabled = { }
+}
+
+agotcch_bastards_with_strangers = {
+	default = agotcch_bastards_with_strangers_enabled
+
+	agotcch_bastards_with_strangers_enabled = { }
+
+	agotcch_bastards_with_strangers_disabled = { }
+}
+
+agotcch_custom_dna = {
+	default = agotcch_custom_dna_disabled
+
+	agotcch_custom_dna_enabled = { }
+
+	agotcch_custom_dna_disabled = { }
+}

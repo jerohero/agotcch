@@ -1,0 +1,99 @@
+﻿#AGOTCCH Overridden
+
+agot_canon_children_after_birth_effect = {
+	if = {
+		limit = { is_male = yes }
+		change_first_name = $NAME_MALE$
+	}
+	else_if = {
+		limit = { is_female = yes }
+		change_first_name = $NAME_FEMALE$
+	}
+
+	add_character_flag = $FLAG$
+
+	if = {
+		limit = { has_game_rule = agotcch_custom_dna_disabled }
+		copy_inheritable_appearance_from = character:$DNA$
+	}
+	else = { #AGOTCCH Added
+		if = {
+			limit = { exists = character:$DNA$_agotcch }
+			copy_inheritable_appearance_from = character:$DNA$_agotcch
+		}
+		else = {
+			copy_inheritable_appearance_from = character:$DNA$
+		}
+	}
+
+	add_to_global_variable_list = { # For retrieving scopes (scopes become unavailable on death)
+		name = agot_born_canon_children_scopes
+		target = this
+	}
+
+	add_to_global_variable_list = { # Permanent storage for tracking born children
+		name = agot_born_canon_children_flags
+		target = flag:$FLAG$
+	}
+}
+
+
+#AGOTCCH Added
+
+agotcch_populate_canon_spouse_effect = {
+	if = {
+		limit = {
+			has_variable = agot_canon_spouse
+		}
+
+		var:agot_canon_spouse = {
+			if = {
+				limit = {
+					is_alive = yes
+					NOT = { is_in_list = characters }
+				}
+			}
+			add_to_list = characters
+		}
+	}	
+}
+
+agotcch_setup_spouse_effect = {
+	if = {
+		limit = {
+			has_game_rule = agotcch_canon_marriage_enabled
+		}
+
+		$SPOUSE_1$ ?= {
+			save_temporary_scope_as = actor
+	
+			agot_canon_children_get_character_scope_effect = {
+				TARGET = $SPOUSE_2$
+				FLAG = $SPOUSE_2_FLAG$
+				SCOPE = spouse
+			}
+	
+			if = {
+				limit = { exists = scope:spouse }
+	
+				set_variable = {
+					name = agot_canon_spouse
+					value = scope:spouse
+				}
+	
+				scope:spouse = {
+					set_variable = {
+						name = agot_canon_spouse
+						value = scope:actor
+					}
+				}
+			}
+		}
+	}
+}
+
+agotcch_marriage_effect = {
+	trigger_event = {
+		on_action = agotcch_attempt_canon_marriage # TODO: Currently only implemented for AI
+	}
+}

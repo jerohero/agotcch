@@ -1,0 +1,19 @@
+﻿l_english:
+	rule_agotcch_canon_marriage:0 "#P AGOT Canon Children+:#! Canon Marriage"
+	setting_agotcch_canon_marriage_enabled:0 "Enabled"
+	setting_agotcch_canon_marriage_enabled_desc:0 "AI-controlled parents of canon children will end up marrying if they are not married at the start of the bookmark."
+	setting_agotcch_canon_marriage_disabled:0 "Disabled"
+	setting_agotcch_canon_marriage_disabled_desc:0 "AI-controlled parents of canon children will not be forced to marry their canon spouse."
+
+	rule_agotcch_bastards_with_strangers:0 "#P AGOT Canon Children+:#! Allow Bastards with Strangers"
+	setting_agotcch_bastards_with_strangers_enabled:0 "Enabled"
+	setting_agotcch_bastards_with_strangers_enabled_desc:0 "Player-controlled characters will be able to get their canon bastards with characters they might not have met."
+	setting_agotcch_bastards_with_strangers_disabled:0 "Disabled"
+	setting_agotcch_bastards_with_strangers_disabled_desc:0 "Player-controlled characters will only be able to get their canon bastards when they are a lover of the canon mother."
+
+	rule_agotcch_custom_dna:0 "#P AGOT Canon Children+:#! Custom DNA"
+	setting_agotcch_custom_dna_enabled:0 "Enabled"
+	setting_agotcch_custom_dna_enabled_desc:0 "Some canon children will be born with custom book-inspired DNA."
+	setting_agotcch_custom_dna_disabled:0 "Disabled"
+	setting_agotcch_custom_dna_disabled_desc:0 "Canon children will be born with their vanilla DNA."
+
