@@ -2,7 +2,7 @@
 agot_canon_children_catelyn_tully_birth_effect = {
 	scope:child = {
 		agot_canon_children_after_birth_effect = {
-			NAME_MALE = "Cetheres"
+			NAME_MALE = "Caster"
 			NAME_FEMALE = "Catelyn"
 			FLAG = is_catelyn_tully
 			DNA = Dummy_Tully_4
@@ -10,6 +10,8 @@ agot_canon_children_catelyn_tully_birth_effect = {
 
 		set_culture_same_as = scope:father
 		set_sexuality = heterosexual
+		make_trait_inactive = auburn_hair
+		make_trait_inactive = blue_eyes
 
 		agot_canon_children_schedule_trait_effect = { TRAIT = flag:charming AGE = childhood_personality_age }
 		agot_canon_children_schedule_trait_effect = { TRAIT = flag:brave AGE = agot_canon_children_trait_1_year }
