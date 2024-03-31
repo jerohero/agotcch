@@ -17,3 +17,10 @@
 	setting_agotcch_custom_dna_disabled:0 "Disabled"
 	setting_agotcch_custom_dna_disabled_desc:0 "Canon children will be born with their vanilla DNA."
 
+	rule_agotcch_block_non_canon_children:0 "#P AGOT Canon Children+:#! Block non-canon children"
+	setting_agotcch_block_non_canon_children_enabled:0 "Enabled"
+	setting_agotcch_block_non_canon_children_enabled_desc:0 "Mothers of canon children will not get pregnant with non-canon children until all canon children are born or the birth conditions are not met."
+	setting_agotcch_block_non_canon_children_disabled:0 "Disabled"
+	setting_agotcch_block_non_canon_children_disabled_desc:0 "Mothers of canon children will be able to get pregnant with non-canon children inbetween canon children."
+	setting_agotcch_block_non_canon_children_player_disabled:0 "Disabled for player only"
+	setting_agotcch_block_non_canon_children_player_disabled_desc:0 "Mothers of canon children will be able to get pregnant with non-canon children inbetween canon children when the player is involved."

@@ -2,7 +2,8 @@
 agot_canon_children_setup_trigger = {
 	OR = {
 		has_game_rule = agot_canon_children_enabled
-		has_game_rule = agot_canon_children_disabled #AGOTCCH Added, Always enable canon children with the submod
+        #AGOTCCH Added, Always enable canon children with the submod
+		has_game_rule = agot_canon_children_disabled
 	}
 }
 
@@ -12,11 +13,12 @@ agot_canon_children_force_pregnancy_happy_accident_trigger = {
     # More strict conditions for players to avoid getting children with strangers (until custom events are added)
     trigger_if = {
         limit = {
-			has_game_rule = agotcch_bastards_with_strangers_disabled #AGOTCCH Added
             OR = {
                 is_ai = no
                 $MOTHER$ = { is_ai = no }
             }
+            #AGOTCCH Added
+            has_game_rule = agotcch_bastards_with_strangers_disabled
         }
         # TODO: Check for location/title on strict mode - eg Robert should be king to make bastards in King's Landing    
         OR = {

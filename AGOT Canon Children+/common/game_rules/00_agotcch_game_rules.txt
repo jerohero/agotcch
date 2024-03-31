@@ -14,6 +14,16 @@ agotcch_bastards_with_strangers = {
 	agotcch_bastards_with_strangers_disabled = { }
 }
 
+agotcch_block_non_canon_children = {
+	default = agotcch_block_non_canon_children_enabled
+
+	agotcch_block_non_canon_children_enabled = { }
+
+	agotcch_block_non_canon_children_disabled = { }
+
+	agotcch_block_non_canon_children_player_disabled = { }
+}
+
 agotcch_custom_dna = {
 	default = agotcch_custom_dna_disabled
 

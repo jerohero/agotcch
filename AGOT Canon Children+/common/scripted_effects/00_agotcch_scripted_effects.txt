@@ -16,7 +16,8 @@ agot_canon_children_after_birth_effect = {
 		limit = { has_game_rule = agotcch_custom_dna_disabled }
 		copy_inheritable_appearance_from = character:$DNA$
 	}
-	else = { #AGOTCCH Added
+	#AGOTCCH Added
+	else = {
 		if = {
 			limit = { exists = character:$DNA$_agotcch }
 			copy_inheritable_appearance_from = character:$DNA$_agotcch
@@ -34,6 +35,71 @@ agot_canon_children_after_birth_effect = {
 	add_to_global_variable_list = { # Permanent storage for tracking born children
 		name = agot_born_canon_children_flags
 		target = flag:$FLAG$
+	}
+}
+
+agot_canon_children_setup_mother_effect = {
+	$FATHER$ = { save_scope_as = canon_father }
+
+	if = { # Mother has historical ID
+		limit = {
+			$MOTHER$ ?= {
+				exists = yes
+				is_alive = yes
+			}
+		}
+		$MOTHER$ = { save_scope_as = canon_mother }
+	}
+	else = { # Mother is canon child
+		agot_canon_children_get_canon_child_scope_effect = {
+			FLAG = $MOTHER_FLAG$
+			SCOPE = canon_mother
+		}
+	}
+
+	scope:canon_mother ?= { # Setup mother
+		if = {
+			limit = { is_pregnant = yes }
+			end_pregnancy = yes
+		}
+
+		if = {
+			limit = { NOT = { has_character_flag = $MOTHER_FLAG$ } }
+			add_character_flag = $MOTHER_FLAG$
+		}
+
+		if = {
+			limit = {
+				always = $PREVENT_PREGNANCY$
+
+				#AGOTCCH Added
+				OR = {
+					has_game_rule = agotcch_block_non_canon_children_enabled
+					AND = {
+						has_game_rule = agotcch_block_non_canon_children_player_disabled
+						is_ai = yes
+						scope:real_father = { is_ai = yes }
+						pregnancy_assumed_father = { is_ai = yes }
+					}
+				}
+			}
+
+			add_character_flag = { # For renewing the prevent pregnancy flag
+				flag = canon_children_should_prevent_pregnancy
+			}
+
+			add_character_flag = {
+				flag = canon_children_prevent_pregnancy
+				months = agot_canon_children_pregnancy_modifier_duration
+			}
+		}
+
+		scope:canon_father = {
+			add_to_variable_list = {
+				name = canon_mothers
+				target = scope:canon_mother
+			}
+		}
 	}
 }
 
