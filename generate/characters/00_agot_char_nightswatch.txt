@@ -1,0 +1,2337 @@
+﻿############################         NIGHTSWATCH        ############################
+####################################################################################
+
+###### CASTLE BLACK
+############################
+###
+###
+Noye_1 = { 
+	name = Donal # Canon, Donal Noye
+	dynasty = dynn_Noye
+
+	martial = 4
+	stewardship = 7
+	prowess = 12
+
+	religion = the_seven_main
+	culture = stormlander
+
+	trait = education_martial_2
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8248.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8262.1.1 = { 
+		trait = education_martial_prowess_2 
+		trait = strong
+		trait = honest
+		trait = just
+		trait = diligent
+		trait = compassionate
+	}
+	8280.1.1 = {
+		effect = { # Armorer at Storm's End
+			agot_appoint_as_court_position_for_castle_history_effect = {
+				CASTLE = title:c_storms_end
+				POSITION = court_smith_court_position
+			}
+		}
+	}
+	8283.6.1 = {
+		trait = one_handed
+		effect = { add_trait = maimed }
+	}
+	8284.1.1 = {
+		effect = { remove_trait = maimed }
+		trait = overseer
+	}
+	8290.1.1 = {
+		trait = nightswatch_historical
+		effect = { # Armorer at Castle Black
+			agot_appoint_as_court_position_for_castle_history_effect = {
+				CASTLE = title:c_castle_black
+				POSITION = court_smith_court_position
+			} 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 32
+			}
+		}
+	}
+	8299.11.11 = {
+		death = { # Defense of Castle Black
+			death_reason = death_duel
+			killer = 157013 # Mag the Mighty
+		}
+	}
+
+}
+121006 = {
+	name = Paul # Canon, AKA: Small Paul
+
+	martial = 3
+	learning = 1
+	diplomacy = 4
+	intrigue = 2
+	stewardship = 3
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_martial_1
+	trait = physique_good_3
+	trait = dull
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8277.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8283.8.1 = { 
+		trait = compassionate 
+		trait = trusting
+	}
+	8285.8.1 = { trait = brave }
+	8295.1.1 = {
+		trait = nightswatch_historical
+		give_nickname = nick_small
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 18
+			}
+		}
+	}
+	8299.7.15 = { # Killed by the Other
+		death = { death_reason = death_battle }
+	}
+}
+121007 = {
+	name = Yoren # Canon, a Wandering Crow
+	dna = 121007
+
+	diplomacy = 10
+	prowess = 12
+
+	religion = old_gods_south
+	culture = northman
+
+	trait = education_martial_2
+	trait = brave
+	trait = beauty_bad_1
+	trait = honest # Similar to honorable but gives him diplo boost so he's a better chancellor
+	trait = rude
+	trait = diligent
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8248.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8268.1.1 = { # Ranger for thirty years
+		trait = hunchbacked
+		trait = uncouth
+		trait = nightswatch_historical
+		effect = { # Head Wandering Crow of Night's Watch
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 20
+			}
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:c_castle_black 
+				POSITION = councillor_chancellor
+			}
+		}
+	}
+	8299.2.3 = {
+		death = {
+			death_reason = death_battle # Attack at the Gods Eye Town
+			killer = Lorch_2 # Amory Lorch
+		}
+	}
+}
+121008 = {
+	name = Chett # Canon
+
+	martial = 3
+	stewardship = 2
+	intrigue = 4
+	diplomacy = 2
+	learning = 1
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_stewardship_1
+	trait = beauty_bad_2
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.8.1 = {
+		trait = deceitful
+		trait = craven
+	}
+	8286.1.1 = {
+		trait = wrathful
+		trait = callous
+	}
+	8289.1.1 = {
+		trait = murderer # Bessa
+		trait = nightswatch_historical
+		trait = disloyal
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 19
+			}
+		}
+	}
+	8299.7.7 = {
+		death = { death_reason = death_battle } # Fist of the First Men
+	}
+}
+121010 = {
+	name = Cellador # Canon
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = education_learning_2
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8250.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8256.8.1 = { trait = arrogant }
+	8258.8.1 = { trait = rude }
+	8260.8.1 = { trait = zealous }
+	8282.1.1 = {
+		trait = nightswatch_historical
+		trait = septon # Septon
+		trait = drunkard
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 32
+			}
+		}
+	}
+}
+121410 = {
+	name = Clydas # Canon
+
+	stewardship = 7
+	learning = 8
+	martial = 1
+	intrigue = 2
+	diplomacy = 4
+
+	religion = the_seven_main
+	culture = stormlander
+
+	trait = education_stewardship_2
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8240.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8246.8.1 = { trait = shy }
+	8248.8.1 = { trait = diligent }
+	8250.8.1 = {
+		trait = content
+		trait = scholar
+	}
+	8270.1.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 30
+			}
+		}
+	}
+}
+121420 = {
+	name = Pypar # Canon, THE Pyp
+
+	martial = 2
+	intrigue = 2
+	diplomacy = 2
+	stewardship = 1
+	learning = 1
+	prowess = 6
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_martial_1
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8283.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8289.8.1 = { trait = compassionate }
+	8291.8.1 = {
+		trait = gregarious
+		trait = honest
+		trait = poet
+	}
+	8293.8.1 = { trait = cynical }
+	8298.1.1 = {
+		trait = nightswatch_historical
+		effect = {
+			if = {
+				limit = { character:121421 = { is_alive = yes } } 
+				set_relation_friend = character:121421 # Grenn
+			}
+			if = {
+				limit = { character:121419 = { is_alive = yes } } 
+				set_relation_friend = character:121419 # Todder
+			}
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 15
+			}
+		}
+	}
+}
+121421 = {
+	name = Grenn # Canon, THE Grenn
+
+	martial = 4
+	intrigue = 1
+	diplomacy = 3
+	stewardship = 1
+	learning = 1
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_martial_1
+	trait = strong
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8282.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8288.8.1 = { trait = honest }
+	8290.8.1 = { trait = honorable }
+	8296.8.1 = { trait = lustful }
+	8298.1.1 = {
+		trait = nightswatch_historical
+		effect = {
+			if = {
+				limit = { character:121419 = { is_alive = yes } } 
+				set_relation_friend = character:121419 # Todder
+			}
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 16
+			}
+		}
+	}
+}
+121419 = {
+	name = Todder # Canon, AKA: Toad
+
+	martial = 2
+	stewardship = 1
+	diplomacy = 1
+	intrigue = 2
+	learning = 1
+	prowess = 3
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = beauty_bad_2
+	trait = rude
+	trait = gregarious
+	trait = honest
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8284.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = {
+		trait = nightswatch_historical
+		give_nickname = nick_toad
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 14
+			}
+		}
+	}
+}
+121423 = {
+	name = Finn # Semi-Canon
+	# dna="cgflhibdabu"
+	# properties="0j0chk00000000"
+
+	martial = 4
+	diplomacy = 1
+	learning = 1
+	prowess = 6
+
+	religion = old_gods_south
+	culture = northman
+
+	trait = education_martial_1
+	trait = strong
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8283.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8289.8.1 = { trait = wrathful }
+	8291.8.1 = { trait = arrogant }
+	8293.8.1 = { trait = rude }
+	8300.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 17
+			}
+		}
+	}
+}
+121431 = {
+	name = Denner # Semi-Canon
+
+	martial = 4
+	prowess = 6
+	
+	religion = old_gods_south
+	culture = northman
+
+	trait = intellect_good_1
+	trait = rude
+	trait = wrathful
+	trait = stubborn
+	trait = cynical
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8246.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8275.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 29
+			}
+		}
+	}
+	8280.1.1 = {
+		trait = one_handed
+		effect = { add_trait = maimed }
+		give_nickname = nick_frostfinger
+	}
+	8281.1.1 = {
+		effect = { remove_trait = maimed }
+	}
+}
+121478 = {
+	name = Gared # Canon
+
+	martial = 8
+	prowess = 6
+
+	religion = old_gods_south
+	culture = northman
+
+	trait = education_martial_2
+
+	8243.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8251.1.1 = {
+		effect = {
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 8
+			}
+		}
+	}
+	8297.6.3 = { # Sees White Walkers, deserts Night's Watch
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		employer = Stark_3 # Cought near Winterfell
+	}
+	8298.3.1 = {
+		death = {
+			death_reason = death_decapitated
+			killer = Stark_3 # Eddard Stark
+		}
+	}
+}
+121480 = {
+	name = Will # Canon
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_martial_1
+
+	8268.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8272.1.1 = { employer = Mallister_4 } # Jason Mallister
+	8284.1.1 = {
+		effect = {
+			add_trait = lifestyle_hunter
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	8293.1.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 25
+			}
+		}
+	}
+	8297.6.3 = {
+		death = { death_reason = death_disappeared_on_ranging }
+	}
+}
+121481 = {
+	name = Conwy # Canon, a Wandering Crow
+
+	diplomacy = 10
+
+	religion = the_seven_main
+	culture = westerman
+
+	trait = education_intrigue_1
+
+	8262.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8290.1.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 28
+			}
+		}
+	}
+	8299.2.3 = {
+		effect = { # Head Wandering Crow of Night's Watch
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:c_castle_black 
+				POSITION = councillor_chancellor
+			}
+		}
+	}
+}
+121417 = {
+	name = Tim # Canon
+
+	martial = 5
+	stewardship = 3
+	diplomacy = 2
+	intrigue = 3
+	learning = 1
+	prowess = 6
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = bastard
+	give_nickname = nick_stone
+	
+	trait = education_martial_2
+	trait = honorable
+	trait = diligent
+	trait = honest
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8269.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8285.1.1 = {
+		trait = nightswatch_historical
+		trait = loyal
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 16
+			}
+		}
+	}
+}
+121474 = {
+	name = Jeren # Canon
+
+	martial = 1
+	stewardship = 2
+	diplomacy = 2
+	intrigue = 1
+	learning = 3
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = weak
+	trait = bastard
+
+	8284.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 14
+			}
+		}
+	}
+}
+
+121475 = {
+	name = Ulmer # Canon
+
+	martial = 3
+	stewardship = 1
+	diplomacy = 2
+	intrigue = 3
+	learning = 1
+	prowess = 12
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_martial_2
+	trait = greedy
+	trait = callous
+	trait = gregarious
+	trait = brave
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8248.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8281.6.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 33
+			}
+		}
+	}
+}
+121476 = {
+	name = Bernarr # Canon, AKA: Black Bernarr
+
+	martial = 3
+	stewardship = 3
+	diplomacy = 2
+	intrigue = 1
+	learning = 1
+	prowess = 6
+
+	religion = old_gods_south
+	culture = northman
+
+	trait = education_martial_2
+	trait = honorable
+	trait = cynical
+	trait = arrogant
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8286.1.1 = {
+		trait = nightswatch_historical
+		trait = loyal
+		give_nickname = nick_black
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 16
+			}
+		}
+	}
+}
+121477 = {
+	name = Bernarr # Canon, AKA: Brown Bernarr
+
+	martial = 2
+	stewardship = 3
+	diplomacy = 3
+	intrigue = 2
+	learning = 8
+
+	religion = old_gods_south
+	culture = northman
+
+	trait = education_stewardship_2
+	trait = honorable
+	trait = cynical
+
+	8273.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8289.1.1 = {
+		trait = nightswatch_historical
+		give_nickname = nick_brown
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 16
+			}
+		}
+	}
+	8299.7.7 = {
+		death = { death_reason = death_battle } # Fist of the First Men
+	}
+}
+Castle_Black_20 = {
+	name = Gueren # Canon, a Wandering Crow
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_diplomacy_2
+
+	8265.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8289.1.1 = { trait = nightswatch_historical }
+}
+Castle_Black_21 = {
+	name = Rast # Canon
+
+	religion = the_seven_main
+	culture = fingerman
+
+	trait = education_martial_1
+	trait = sadistic
+	trait = craven 
+	trait = arrogant
+	trait = rowdy 
+	
+	disallow_random_traits = yes
+
+	8280.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.5.20 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 18
+			}
+		}
+	}
+	8299.11.11 = {
+		death = { death_reason = death_battle } # Defense of Castle Black
+	}
+}
+Castle_Black_22 = {
+	name = Hobb # Canon, AKA: Three Finger Hobb
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_stewardship_2
+	trait = compassionate
+
+	8261.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8289.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 28
+			}
+		} 
+	}
+	8291.1.1 = { 
+		trait = maimed 
+		give_nickname = nick_three_finger
+	}
+}
+Castle_Black_23 = {
+	name = Halder # Canon
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = education_martial_1
+	trait = strong 
+	trait = compassionate
+	trait = honorable
+
+	8281.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.5.20 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 17
+			}
+		}
+	}
+}
+Castle_Black_24 = {
+	name = Albett # Canon
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = education_stewardship_1
+
+	8280.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.5.20 = { 
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 18
+			}
+		}
+	}
+	8299.11.11 = {
+		death = { death_reason = death_battle } # Defense of Castle Black
+	}
+}
+Castle_Black_25 = {
+	name = Mully # Canon
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_stewardship_2
+	trait = diligent
+
+	8258.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8291.1.1 = { 
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 33
+			}
+		}
+	}
+}
+Castle_Black_26 = {
+	name = Lew # Canon
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_stewardship_2
+
+	8263.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8288.1.1 = { 
+		trait = nightswatch_historical
+		give_nickname = nick_left_hand
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 25
+			}
+		}
+	}
+}
+Castle_Black_27 = {
+	name = Bannen # Canon
+
+	religion = old_gods_south
+	culture = wolfswood_clansman
+
+	trait = education_martial_2
+	trait = diligent
+
+	8255.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { 
+		trait = lifestyle_hunter
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 24
+			}
+		}
+	}	
+	8299.7.7 = { trait = wounded_3 } 
+	8299.8.5 = { trait = one_legged }
+	8299.8.8 = { death = { death_reason = death_wounded_3 } }
+}
+Castle_Black_28 = {
+	name = Kedge # Canon, AKA: Kedge Whiteye
+
+	prowess = 10
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_martial_2
+	trait = cynical
+	trait = vengeful
+
+	8256.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8266.1.1 = { 
+		trait = nightswatch_historical
+		trait = loyal 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 10
+			}
+		}
+	}
+	8290.1.1 = { give_nickname = nick_whiteye } 
+}
+Castle_Black_29 = {
+	name = Garth # Canon
+	# of Oldtown
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	8249.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.1.1 = { 
+		trait = nightswatch_historical 
+		trait = disloyal
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 31
+			}
+		}
+	}
+	8299.8.8 = { 
+		death = { 
+			death_reason = death_murder_known # Mutiny at Craster's Keep
+			killer = 121412 # Garth of Greenaway
+		} 
+	}
+}
+Castle_Black_30 = {
+	name = Bedwyck # Canon, AKA: Bedwyck the Giant, Commander of the Icemark
+
+	religion = the_seven_main
+	culture = salt_dornish
+	
+	trait = education_martial_2
+
+	8247.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8270.1.1 = { trait = lifestyle_hunter }
+	8288.1.1 = { 
+		trait = nightswatch_historical 
+		trait = loyal
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 41
+			}
+		}
+	}
+}
+Castle_Black_31 = {
+	name = Dywen # Canon
+
+	religion = weirwood_of_the_seven
+	culture = harborman
+	
+	trait = education_martial_2
+	trait = diligent
+	trait = honorable
+
+	8239.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8260.1.1 = { 
+		trait = nightswatch_historical 
+		trait = loyal
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 21
+			}
+		}
+	}
+}
+Castle_Black_32 = {
+	name = Wick # Canon
+
+	religion = the_seven_main
+	culture = riverlander
+	
+	trait = education_stewardship_2
+	trait = vengeful
+	trait = honorable
+
+	8260.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8284.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 24
+			}
+		}
+	}
+	8288.1.1 = { give_nickname = nick_whittlestick }
+}
+### Family of Owyn Cotter
+121430 = {
+	name = Munda
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	martial = 3
+	intrigue = 2
+	prowess = 6
+
+	trait = intellect_good_1
+	trait = education_martial_2
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8260.1.1 = { birth = yes }
+	8266.8.1 = { trait = rude }
+	8268.8.1 = {
+		trait = patient
+		trait = ambitious
+	}
+}
+121424 = {
+	name = Owyn # Semi-Canon, Owyn Cotter
+
+	# dna="amgchmlbabf"
+	# properties="gb0ihi00000000"
+
+	martial = 1
+	intrigue = 5
+	diplomacy = 1
+
+	religion = old_gods_btw
+	culture = forestman # Amanes: Put him in accordance with his sister below
+
+	mother = 121430
+
+	trait = education_intrigue_3
+	trait = intellect_good_1
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8281.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8287.8.1 = { trait = deceitful }
+	8289.8.1 = {
+		trait = greedy
+		trait = ambitious
+	}
+	8291.8.1 = { trait = patient }
+	8300.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 19
+			}
+		}
+	}
+}
+121429 = {
+	name = Sylvi # Semi-Canon
+	female = yes
+
+	# dna="agkbfzeaifh"
+	# properties="gl0eck00000000"
+
+	martial = 3
+	intrigue = 2
+	prowess = 6
+
+	religion = old_gods_btw
+	culture = forestman
+
+	mother = 121430
+
+	trait = education_martial_2
+	trait = intellect_good_1
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8284.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+		effect = { make_trait_inactive = neutral_silver_hair }
+	}
+	8292.8.1 = { trait = patient }
+	8294.8.1 = {
+		trait = rude
+		trait = ambitious
+	}
+}
+### Historical Commanders
+Nightswatch_38 = {
+	name = Robert # Semi-Canon, Lord Commander of the Night's Watch
+	# of Oxbridge
+	
+	religion = the_seven_main
+	culture = westerman
+	sexuality = homosexual
+	
+	trait = education_martial_2
+	trait = gregarious
+	
+	7625.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	7643.1.1 = { trait = knight }
+	7645.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 20
+			}
+		}
+	}
+	7663.1.1 = { trait = fornicator } # Morros Charlton
+	7664.1.1 = { # Maybe died in Ice Cells?
+		death = { 
+			death_reason = death_dungeon 
+			killer = Nightswatch_39 # Willem of the Dun Fort
+		}
+	}
+}
+Nightswatch_39 = {
+	name = Willem # Semi-Canon, Lord Commander of the Night's Watch
+	# of the Dun Fort
+	
+	religion = the_seven_main 
+	culture = riverlander
+	
+	trait = education_martial_2
+	trait = stubborn
+	trait = vengeful
+	trait = callous
+	
+	7630.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	7647.1.1 = { trait = knight }
+	7655.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 25
+			}
+		}
+	}
+	7683.1.1 = { 
+		death = { 
+			death_reason = death_accident # Killed by errant axe
+			killer = Baxter_1 # Jon Baxter
+		} 
+	}
+}
+### Historical Officers
+Nightswatch_40 = {
+	name = Gavin # Semi-Canon
+	
+	religion = the_seven_main
+	culture = sand_dornish
+	
+	trait = education_learning_2
+	trait = patient
+	trait = calm
+	
+	7482.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	7504.1.1 = { 
+		trait = maester_historical
+		trait = nightswatch_historical
+		effect = { # Maester of Castle Black
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_castle_black
+				POSITION = maester_court_position
+			}
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 22
+			}
+		} 
+	}
+	7549.1.1 = { death = yes }
+}
+Nightswatch_41 = {
+	name = Simeon # Semi-Canon
+	# of Ashemark
+	
+	religion = the_seven_main
+	culture = westerman
+	
+	trait = education_stewardship_3
+	
+	7620.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	7647.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 27
+			}
+		}
+	}
+	7660.5.1 = {
+		effect = { # First Builder of the Night's Watch
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:k_the_wall 
+				POSITION = councillor_steward
+			}
+		}
+	}
+	7691.1.1 = { death = yes }
+}
+
+###### EASTWATCH BY-THE-SEA
+############################
+###
+###
+121002 = {
+	name = Cotter # Canon, THE Cotter Pyke, Commander of Eastwatch-By-The-Sea
+
+	martial = 6
+	stewardship = 10
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	trait = education_martial_2
+	trait = strong
+	trait = bastard
+	trait = rude
+	trait = brave
+	trait = content
+	trait = vengeful
+	trait = rowdy
+
+	give_nickname = nick_pyke
+
+	disallow_random_traits = yes 
+
+	8256.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8275.1.1 = {
+		trait = nightswatch_historical
+		effect = { # Fleet Commander
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:k_the_wall 
+				POSITION = councillor_admiral
+			}
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_eastwatch
+				NW_JOIN_AGE = 19
+			}
+		}
+	}
+}
+88000513 = {
+	name = Harmune # Canon
+
+	learning = 5
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	trait = education_learning_2
+
+	8260.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.1.1 = {
+		trait = drunkard
+		trait = maester_historical
+		trait = nightswatch_historical
+		effect = { # Maester of Eastwatch By-The-Sea
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_eastwatch
+				POSITION = maester_court_position
+			}
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_eastwatch
+				NW_JOIN_AGE = 20
+			}
+		}
+	}
+}
+121418 = {
+	name = Emmett # Canon, AKA: Iron Emmett, Commander of the Long Barrow
+
+	martial = 4
+	stewardship = 2
+	diplomacy = 2
+	intrigue = 3
+	learning = 2
+	prowess = 10
+
+	religion = old_gods_south
+	culture = northman
+
+	trait = education_martial_2
+	trait = gregarious
+	trait = patient
+	trait = diligent
+	trait = just
+	trait = strong
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8275.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8290.1.1 = {
+		trait = nightswatch_historical
+		trait = education_martial_prowess_4
+		trait = lifestyle_blademaster 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_eastwatch
+				NW_JOIN_AGE = 15
+			}
+		}
+		give_nickname = nick_iron
+	}
+	8293.1.1 = {
+		effect = { # Master-at-arms at Eastwatch By-The-Sea
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_eastwatch
+				POSITION = master_at_arms_court_position
+			}
+		}
+	}
+	8300.3.1 = {
+		employer = Stark_7 # Jon Snow
+		effect = { # Master-at-arms at Castle Black
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_castle_black
+				POSITION = master_at_arms_court_position
+			}
+		}
+	}
+	8300.4.29 = { 
+		effect = {
+			if = {
+				limit = { character:Wildling_Nightswatch_1 = { is_alive = yes } }
+				set_relation_lover = character:Wildling_Nightswatch_1 # Black Maris
+			}
+		}
+	}
+}
+Eastwatch_By_The_Sea_5 = {
+	name = Eldric # Mentioned, AKA: Old Tattersalt
+	
+	religion = the_seven_main
+	culture = sisterman
+	
+	trait = education_martial_2
+	trait = diligent
+	trait = calm
+	trait = authoritative
+	trait = pensive
+	
+	disallow_random_traits = yes
+	
+	8241.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8270.1.1 = { trait = uncouth }
+	8287.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_eastwatch
+				NW_JOIN_AGE = 46
+			}
+		}
+	}
+	8290.1.1 = { 
+		give_nickname = nick_the_old_tattersalt 
+		effect = { # Fleet Commander
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:c_eastwatch 
+				POSITION = councillor_admiral
+			}
+		}
+	}
+}
+### Historical Commanders
+Eastwatch_By_The_Sea_4 = {
+	name = Mark # Commander of Eastwatch-By-The-Sea
+	
+	religion = old_gods_south
+	culture = harborman
+
+	trait = education_stewardship_3
+	trait = intellect_good_1
+	
+	8015.1.1 = { birth = yes }
+	8030.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_eastwatch
+				NW_JOIN_AGE = 15
+			}
+		}
+	}
+	8041.1.1 = { give_nickname = nick_mudfoot }
+	8077.1.1 = { death = yes }
+}
+### Historical Officers 
+Eastwatch_By_The_Sea_6 = {
+	name = Balder # Canon, wrote The Edge of the World
+	
+	religion = the_seven_main
+	culture = riverlander
+	
+	trait = education_learning_3
+	
+	7570.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	7598.1.1 = {
+		trait = maester_historical
+		trait = nightswatch_historical
+		effect = { # Maester of Eastwatch By-The-Sea
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_eastwatch
+				POSITION = maester_court_position
+			}
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_eastwatch
+				NW_JOIN_AGE = 28
+			}
+		}
+	}
+	7630.1.1 = { trait = scholar }
+	7651.1.1 = { death = yes }
+}
+
+###### SHADOW TOWER
+############################
+###
+###
+121005 = {
+	name = Qhorin # Canon, AKA: Qhorin Halfhand
+
+	martial = 8
+	prowess = 10
+
+	religion = the_seven_main
+	culture = westerman
+
+	trait = education_martial_3
+	trait = just
+	trait = brave
+	trait = patient
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	8252.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8268.1.1 = {
+		trait = education_martial_prowess_4
+		trait = lifestyle_blademaster_3_history 
+	}
+	8272.1.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 20
+			}
+		}
+	}
+	8278.1.1 = {
+		effect = { # Ranger Commander of the Shadow Tower
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:c_the_shadow_tower 
+				POSITION = councillor_marshal
+			}
+			add_trait = maimed
+		}
+		give_nickname = nick_halfhand
+	}
+	8279.1.1 = { # Learned how to fight his left hand
+		effect = { remove_trait = maimed }
+	}
+	8299.10.10 = {
+		death = {
+			death_reason = death_duel
+			killer = Stark_7 # Jon Snow
+		}
+	}
+}
+121001 = {
+	name = Blane # Canon
+
+	martial = 10
+	stewardship = 8
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = education_martial_3
+	trait = diligent
+
+	8255.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8275.1.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 20
+			}
+		}
+	}
+	8299.7.1 = {
+		effect = { # Ranger Commander of the Shadow Tower
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:c_the_shadow_tower 
+				POSITION = councillor_marshal
+			}
+		}
+	}
+}
+88000520 = {
+	name = Mullin # Canon
+
+	learning = 3
+	prowess = 6
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = education_learning_1
+
+	8255.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8275.1.1 = {
+		trait = maester_historical
+		trait = lifestyle_blademaster
+		trait = nightswatch_historical
+		effect = { # Maester of the Shadow Tower
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_the_shadow_tower
+				POSITION = maester_court_position
+			}
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 20
+			}
+		}
+	}
+}
+Shadow_Tower_8 = {
+	name = Ebben # Canon 
+	
+	religion = old_gods_south
+	culture = barrowman
+	
+	trait = education_martial_2
+	trait = callous
+	trait = diligent
+	trait = brave
+	trait = pensive 
+	
+	disallow_random_traits = yes
+	
+	8258.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8267.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 9
+			}
+		}
+	}
+	8299.7.1 = {
+		death = {
+			death_reason = death_battle 
+			killer = 574347 # Rattleshirt
+		}
+	}
+}
+Shadow_Tower_9 = {
+	name = Morgan # Mentioned, AKA: Stonesnake
+	
+	prowess = 10
+	
+	religion = old_gods_south
+	culture = hill_clansman
+	
+	trait = education_martial_2
+	trait = diligent
+	trait = brave
+	
+	8251.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8270.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 19
+			}
+		}
+	}
+	8275.1.1 = { give_nickname = nick_stonesnake }
+	8299.7.1 = {
+		death = { death_reason = death_disappeared_on_ranging } 
+	}
+}
+Shadow_Tower_10 = {
+	name = Leobald # Mentioned, Commander of the Greyguard
+	
+	religion = old_gods_south
+	culture = northman
+	
+	trait = education_stewardship_3
+	trait = diligent
+	
+	8242.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8265.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 23
+			}
+		}
+	}
+	8283.1.1 = { give_nickname = nick_the_limp }
+}	
+### Historical Commanders
+Shadow_Tower_5 = {
+	name = Barthogan # Night's Watch, Commander of the Shadow Tower
+	
+	religion = old_gods_south
+	culture = barrowman
+	
+	trait = education_martial_3
+	trait = brave 
+	trait = callous
+	
+	7887.1.1 = { birth = yes }
+	7920.1.1 = { 
+		trait = murderer
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 33
+			}
+		}
+	}
+	7928.1.1 = {
+		effect = { # First Ranger of the Night's Watch
+			if = {
+				limit = { game_start_date < 7933.1.1 }
+				agot_appoint_as_councillor_for_castle_history_effect = { 
+					CASTLE = title:k_the_wall 
+					POSITION = councillor_marshal 
+				}
+			}
+		}
+	}
+	7935.1.1 = { death = yes }
+}
+Shadow_Tower_6 = {
+	name = Steffon # Night's Watch, Commander of the Shadow Tower
+	
+	religion = the_seven_main
+	culture = marcher
+	
+	8003.1.1 = { birth = yes }
+	8018.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = builder
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 15
+			}
+		}
+	}
+	8020.1.1 = { give_nickname = nick_the_snowman }
+	8050.1.1 = { death = yes }
+}
+Shadow_Tower_7 = {
+	name = Eldred # Night's Watch, Commander of the Shadow Tower
+	
+	religion = the_seven_main
+	culture = fingerman
+	
+	8166.1.1 = { birth = yes }
+	8176.1.1 = { 
+		trait = nightswatch_historical 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 10
+			}
+		}
+	}
+	8190.1.1 = { give_nickname = nick_black }
+	8227.1.1 = { death = yes }
+}
+
+###### MUTINEERS
+############################
+###
+###
+121411 = {
+	name = Dirk # Canon
+
+	martial = 3
+	stewardship = 2
+	intrigue = 2
+	diplomacy = 1
+	learning = 1
+	prowess = 3
+
+	religion = the_seven_main
+	culture = stormlander
+
+	trait = education_martial_1
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8267.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8275.8.1 = { trait = rude }
+	8277.8.1 = {
+		trait = sadistic
+		trait = arbitrary
+	}
+	8283.1.1 = { trait = wrathful }
+	8295.1.1 = {
+		trait = disloyal
+		effect = { 
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 28
+			}
+		}
+	}
+	8299.8.8 = {
+		effect = { remove_trait = nightswatch_historical }
+		add_trait = deserter
+		dynasty = 559241 # of the Keep, to make him playable
+	}
+}
+121009 = {
+	name = Ollo # Canon, AKA: Ollo Lophand
+	# dna="bhagnhpnblj"
+	# properties="cd0ddk"
+
+	martial = 2
+	stewardship = 1
+	intrigue = 2
+	diplomacy = 4
+	learning = 2
+	prowess = 6
+
+	religion = trios
+	culture = tyroshi
+
+	trait = education_martial_2
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8261.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8267.8.1 = { trait = deceitful }
+	8269.8.1 = { trait = arrogant }
+	8271.8.1 = { trait = gregarious }
+	8274.1.1 = { trait = lustful }
+	8282.1.1 = {
+		give_nickname = nick_lophand
+		trait = one_handed
+		trait = disloyal
+		effect = {
+			add_trait = maimed
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 21
+			}
+		}
+	}
+	8283.1.1 = {
+		effect = { remove_trait = maimed }
+	}
+	8299.8.8 = {
+		employer = 121411 # Dirk
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+	}
+	8300.6.1 = {
+		death = { 
+			death_reason = death_battle 
+			# killer = COLDHANDS_FUTURE_ID
+		}
+	}
+}
+121412 = {
+	name = Garth # Canon 
+	# of Greenaway
+
+	martial = 2
+	stewardship = 3
+	intrigue = 2
+	diplomacy = 1
+	learning = 1
+	prowess = 3
+
+	religion = the_seven_main
+	culture = reachman
+	
+	trait = education_martial_1
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8273.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8281.8.1 = { trait = deceitful }
+	8289.1.1 = {
+		trait = arbitrary
+		trait = arrogant
+		trait = vengeful
+	}
+	8291.1.1 = {
+		effect = {
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 18
+			}
+		}
+		trait = disloyal
+	}
+	8299.8.8 = {
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		employer = 121411 # Dirk
+	}
+}
+121413 = {
+	name = Alan # Canon 
+	# of Rosby
+
+	martial = 2
+	stewardship = 1
+	intrigue = 1
+	diplomacy = 3
+	learning = 2
+	prowess = 6
+
+	religion = the_seven_main
+	culture = crownlander
+	
+	trait = education_martial_1
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8274.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.8.1 = { trait = compassionate }
+	8290.8.1 = {
+		trait = arbitrary
+		trait = greedy
+	}
+	8295.1.1 = {
+		effect = {
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 21
+			}
+		}
+		trait = disloyal
+	}
+	8299.8.8 = {
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		employer = 121411 # Dirk
+	}
+}
+121415 = {
+	name = Karl # Canon, AKA: Clubfoot Karl
+
+	martial = 1
+	stewardship = 3
+	intrigue = 2
+	diplomacy = 1
+	learning = 2
+	prowess = 3
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_stewardship_1
+	trait = clubfooted
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8276.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8282.8.1 = { trait = rude }
+	8284.8.1 = {
+		trait = arrogant
+		trait = vengeful
+	}
+	8292.1.1 = { trait = callous }
+	8294.1.1 = {
+		effect = {
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 18
+			}
+		}
+		trait = disloyal
+	}
+	8299.8.8 = {
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		employer = 121411 # Dirk
+	}
+}
+121416 = {
+	name = Mawney # Canon
+
+	martial = 1
+	stewardship = 2
+	intrigue = 3
+	diplomacy = 2
+	learning = 1
+	prowess = 6
+
+	religion = the_seven_main
+	culture = valeman
+	
+	trait = education_martial_1
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8282.8.1 = {
+		trait = deceitful
+		trait = cynical
+		trait = craven
+		trait = greedy
+	}
+	8295.1.1 = {
+		effect = {
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 23
+			}
+		}
+		trait = disloyal
+	}
+	8299.8.8 = {
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		employer = 121411 # Dirk
+	}
+	8300.6.1 = {
+		death = { 
+			death_reason = death_battle 
+			# killer = COLDHANDS_FUTURE_ID
+		}
+	}
+}
+Gin_Alley_1 = { 
+	name = Karl # Semi-Canon, AKA: Karl Tanner, he was a fookin' legend in Gin alley
+
+	martial = 4
+	stewardship = 2
+	intrigue = 5
+	diplomacy = 2
+	learning = 1
+	prowess = 9
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_martial_1
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8282.8.1 = {
+		trait = deceitful
+		trait = arrogant 
+		trait = rude 
+		trait = vengeful 
+	}
+	8286.1.1 = {
+		trait = education_martial_prowess_3
+		trait = lifestyle_blademaster 
+		give_nickname = nick_tanner
+	}
+	8295.1.1 = {
+		effect = {
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 25
+			}
+		}
+		trait = disloyal
+	}
+	8299.8.8 = {
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		employer = 121411 # Dirk
+	}
+}
+### Sistermen
+Mutineers_8 = {
+	name = Bedryn
+	
+	religion = the_seven_main
+	culture = sisterman
+
+	8222.1.1 = { birth = yes }
+	8271.1.1 = { death = yes }
+}
+Mutineers_9 = {
+	name = Deros
+	
+	religion = the_seven_main
+	culture = sisterman
+	
+	father = Mutineers_8
+
+	8248.1.1 = { birth = yes }
+	8291.1.1 = { death = yes }
+}
+Mutineers_10 = {
+	name = Haryn
+	
+	religion = the_seven_main
+	culture = sisterman
+	
+	father = Mutineers_8
+
+	8250.1.1 = { birth = yes }
+	8294.1.1 = { death = yes }
+}
+Mutineers_11 = {
+	name = Lark # Canon, AKA: Lark the Sisterman
+	
+	religion = the_seven_main
+	culture = sisterman
+	
+	father = Mutineers_9
+
+	trait = education_martial_2
+	trait = sadistic
+
+	8269.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8291.1.1 = {
+		trait = nightswatch_historical
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 22
+			}
+		}
+		trait = disloyal
+		give_nickname = nick_the_sisterman
+	}
+	8299.7.7 = {
+		death = { death_reason = death_battle } # Fist of the First Men
+	}
+}
+121414 = {
+	name = Rolley # Canon
+	# of Sisterton
+
+	martial = 1
+	stewardship = 3
+	intrigue = 2
+	diplomacy = 1
+	learning = 2
+
+	religion = the_seven_main
+	culture = sisterman
+	
+	father = Mutineers_10
+
+	trait = education_stewardship_1
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8276.8.1 = { trait = craven }
+	8278.8.1 = { trait = deceitful }
+	8280.8.1 = { trait = greedy }
+	8282.1.1 = { trait = lustful }
+	8291.1.1 = {
+		effect = {
+			add_trait = nightswatch_historical
+			agot_join_nightswatch_history_effect = {
+				ORDER = steward
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 21
+			}
+		}
+		trait = disloyal
+	}
+	8299.8.8 = {
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		employer = 121411 # Dirk
+	}
+}

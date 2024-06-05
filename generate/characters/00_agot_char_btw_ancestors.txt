@@ -1,0 +1,5769 @@
+﻿############################         FREE FOLK          ############################
+####################################################################################
+
+###### ANCIENT KINGS BEYOND THE WALL
+############################
+###
+###
+904347 = {
+	name = Joramun # Canon, fought Night's King
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_4
+	trait = honorable
+	trait = brave
+	trait = compassionate
+	trait = authoritative
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	75.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	91.1.1 = {
+		trait = lifestyle_blademaster_3_history
+		effect = {
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = trait_third_level
+			}
+		}
+	}
+	152.1.1 = { death = yes }
+}
+### The Horned Lord
+903347 = {
+	name = The_Horned_Lord # Canon
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+	trait = ambitious
+	trait = brave
+	trait = calm
+	trait = authoritative
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	3950.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	3966.1.1 = {
+		trait = lifestyle_blademaster_2_history
+		effect = {
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = trait_third_level
+			}
+			add_trait = lifestyle_hunter
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = trait_third_level
+			}
+		}
+	}
+	4025.1.1 = { death = yes }
+}
+### Gendel and Gorne
+900347 = {
+	name = Jarl 
+
+	religion = old_gods_btw
+	culture = forestman
+
+	4952.1.1 = { birth = yes }
+	4993.1.1 = { death = yes }
+}
+901347 = {
+	name = Gorne # Canon
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 900347
+
+	trait = education_martial_3
+	trait = intellect_good_1
+	trait = ambitious
+	trait = arrogant
+	trait = deceitful
+	trait = gregarious
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	4978.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	4994.1.1 = { trait = lifestyle_blademaster_3_history }
+	5024.6.1 = {
+		death = {
+			death_reason = death_battle # battle against the Starks
+		}
+	}
+}
+902347 = {
+	name = Gendel # Canon
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 900347
+
+	trait = education_martial_4
+	trait = ambitious
+	trait = stubborn
+	trait = lazy
+	trait = brave
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	4980.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	4996.1.1 = { trait = lifestyle_blademaster_2_history }
+	5025.1.1 = {
+		death = {
+			death_reason = death_vanished # Lost in the Gorne's Way
+		}
+	}
+}
+### Bael the Bard
+Bael_1 = {
+	name = Bael # Canon, AKA: Bael the Bard
+	dynasty = 559131
+	dna = Bael_1
+
+	martial = 6
+	diplomacy = 15
+	intrigue = 14
+	stewardship = 8
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_intrigue_4
+	trait = ambitious
+	trait = arrogant
+	trait = patient
+	trait = brave
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	7212.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	7228.1.1 = {
+		trait = poet
+		give_nickname = nick_the_bard
+		trait = lifestyle_blademaster_2_history 
+	}
+	7274.1.1 = {
+		death = {
+			death_reason = death_battle
+			killer = Stark_25 # Brandon VI Stark, his own son
+		}
+	}
+}
+
+###### HOUSE REDBEARD (id = house_Kingsblood)
+############################
+###
+###
+Forester_1 = {
+	name = Medger # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7832.1.1 = { birth = yes }
+	7880.1.1 = { death = yes }
+}
+Forester_2 = {
+	name = Bernarr # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_1
+
+	7855.1.1 = { birth = yes }
+	7904.1.1 = { death = yes }
+}
+Forester_3 = {
+	name = Walton # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_2
+
+	7878.1.1 = { birth = yes }
+	7925.1.1 = { death = yes }
+}
+Forester_4 = {
+	name = Torghen # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_3
+
+	7901.1.1 = { birth = yes }
+	7946.1.1 = { death = yes }
+}
+Forester_5 = {
+	name = Lenyl # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_4
+
+	7924.1.1 = { birth = yes }
+	7967.1.1 = { death = yes }
+}
+Forester_6 = {
+	name = Owen # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_5
+
+	7941.1.1 = { birth = yes }
+	7988.1.1 = { death = yes }
+}
+Forester_7 = {
+	name = Sigorn # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_6
+
+	7962.1.1 = { birth = yes }
+	8016.1.1 = { death = yes }
+}
+Forester_8 = {
+	name = Borroq # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_7
+
+	7985.1.1 = { birth = yes }
+	8037.1.1 = { death = yes }
+}
+Forester_9 = {
+	name = Vayon # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_8
+
+	8016.1.1 = { birth = yes }
+	8084.1.1 = { death = yes }
+}
+Forester_10 = {
+	name = Lenyl # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_9
+
+	8050.1.1 = { birth = yes }
+	8113.1.1 = { death = yes }
+}
+Forester_11 = {
+	name = Harle # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_10
+
+	8073.1.1 = { birth = yes }
+	8115.1.1 = { death = yes }
+}
+Forester_12 = {
+	name = Howd # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_11
+
+	8095.1.1 = { birth = yes }
+	8153.1.1 = { death = yes }
+}
+Forester_13 = {
+	name = Soren # a lord
+	dynasty = dynn_Forester
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_12
+
+	8118.1.1 = { birth = yes }
+	8175.1.1 = { death = yes }
+}
+Forester_14 = {
+	name = Sigorn 
+	dynasty = dynn_Forester 
+
+	martial = 4
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_13
+
+	trait = education_martial_3
+	trait = brave
+	trait = just
+	trait = honest
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8136.1.1 = { birth = yes }
+	8197.1.1 = { death = yes }
+}
+### Issue of Sigorn
+Forester_15 = {
+	name = Raymun # Canon, AKA: Raymun Redbeard
+	dynasty = dynn_Forester
+
+	martial = 7
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 6
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_14
+
+	trait = education_martial_3
+	trait = brave
+	trait = wrathful
+	trait = just
+	trait = honest
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	give_nickname = nick_redbeard
+
+	8188.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8226.9.9 = {
+		death = {
+			death_reason = death_battle # Battle at the Long Lake
+			killer = Stark_116 # Artos Stark
+		}
+	}
+}
+Kingsblood_1 = {
+	name = Raymond # Mentioned, AKA: Red Raven
+	dynasty = dynn_Forester 
+	#dna = "cakefzeedaz"
+
+	martial = 2
+	diplomacy = 2
+	intrigue = 1
+	stewardship = 2
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_14
+
+	trait = education_martial_3
+	trait = wrathful
+	trait = craven
+	trait = arrogant
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8192.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8226.9.9 = {
+		give_nickname = nick_redraven
+		dynasty_house = house_Kingsblood # Kingsblood
+	}
+	8230.1.1 = { death = yes }
+}
+### Issue of Raymun Redbeard
+Forester_16 = {
+	name = Gorne # Mentioned
+	dynasty = dynn_Forester 
+
+	martial = 4
+	intrigue = 3
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_15
+
+	trait = education_martial_3
+	trait = wrathful
+
+	8204.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8226.9.9 = {
+		death = {
+			death_reason = death_battle # Battle at the Long Lake
+			killer = Stark_116 # Artos Stark
+		}
+	}
+}
+Forester_17 = {
+	name = Orrell # Mentioned
+	dynasty = dynn_Forester # Forester
+
+	martial = 4
+	intrigue = 3
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Forester_15
+
+	trait = education_martial_3
+	trait = wrathful
+
+	8206.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8226.9.9 = {
+		death = {
+			death_reason = death_battle # Battle at the Long Lake
+			killer = Stark_116 # Artos Stark
+		}
+	}
+}
+### Line of Red Raven
+Kingsblood_2 = {
+	name = Borroq 
+	dynasty_house = house_Kingsblood 
+
+	martial = 4
+	intrigue = 3
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Kingsblood_1
+	
+	trait = education_martial_3
+	trait = wrathful
+
+	8215.1.1 = { birth = yes }
+	8252.1.1 = { death = yes }
+}
+Kingsblood_3 = {
+	name = Halgor 
+	dynasty_house = house_Kingsblood 
+
+	martial = 4
+	intrigue = 3
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Kingsblood_2
+
+	trait = education_martial_3
+	trait = wrathful
+
+	8231.1.1 = { birth = yes }
+	8278.1.1 = { death = yes }
+}
+
+###### ROYAL CLAN OF THENN (id = dynn_Thenn)
+############################
+###
+###
+345174344 = {
+	name = Gorne # a lord
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	7839.1.1 = { birth = yes }
+	7892.1.1 = { death = yes }
+}
+344174344 = {
+	name = Toregg # a lord
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 345174344
+
+	7865.1.1 = { birth = yes }
+	7916.1.1 = { death = yes }
+}
+343174344 = {
+	name = Sigorn # a lord
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 344174344
+
+	7881.1.1 = { birth = yes }
+	7927.1.1 = { death = yes }
+}
+342174344 = {
+	name = Cregan # a lord
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 343174344
+
+	7912.1.1 = { birth = yes }
+	7955.1.1 = { death = yes }
+}
+341174344 = {
+	name = Gendel # a lord
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 342174344
+
+	7932.1.1 = { birth = yes }
+	7979.1.1 = { death = yes }
+}
+340174344 = {
+	name = Gavin # a lord
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 341174344
+
+	7955.1.1 = { birth = yes }
+	7999.1.1 = { death = yes }
+}
+100344 = {
+	name = Sygertt
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 340174344
+
+	7978.1.1 = { birth = yes }
+	8009.1.1 = { death = yes }
+}
+102344 = {
+	name = Halgor
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 100344
+
+	7996.1.1 = { birth = yes }
+	8037.1.1 = { death = yes }
+}
+103344 = {
+	name = Gendel
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 102344
+
+	8019.1.1 = { birth = yes }
+	8052.1.1 = { death = yes }
+}
+104344 = {
+	name = Tormund
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 103344
+
+	8033.1.1 = { birth = yes }
+	8086.1.1 = { death = yes }
+}
+105344 = {
+	name = Stygett
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 104344
+
+	8054.1.1 = { birth = yes }
+	8107.1.1 = { death = yes }
+}
+106344 = {
+	name = Stiv
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 105344
+
+	8092.1.1 = { birth = yes }
+	8141.1.1 = { death = yes }
+}
+107344 = {
+	name = Halys
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 106344
+
+	8116.1.1 = { birth = yes }
+	8162.1.1 = { death = yes }
+}
+108344 = {
+	name = Harlon
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 107344
+
+	8142.1.1 = { birth = yes }
+	8168.1.1 = { death = yes }
+}
+109344 = {
+	name = Wayn
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 108344
+
+	8159.1.1 = { birth = yes }
+	8208.1.1 = { death = yes }
+}
+110344 = {
+	name = Dryn
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 109344
+
+	8187.1.1 = { birth = yes }
+	8228.1.1 = { death = yes }
+}
+111344 = {
+	name = Errok
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 110344
+
+	8210.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+112344 = {
+	name = Halleck
+	dynasty = dynn_Thenn
+
+	religion = magnaric
+	culture = thenn
+
+	father = 111344
+	
+	8235.1.1 = { birth = yes }
+	8276.1.1 = { death = yes }
+}
+
+###### CLANS OF HARDHOME
+############################
+###
+###
+Hardhome_Gorm_1 = {
+	name = Gorm # Canon, AKA: Gorm the Wolf
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_diplomacy_2
+	trait = intellect_good_1
+	trait = diligent
+	
+	7644.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	7674.1.1 = { give_nickname = nick_the_wolf }
+	7681.1.1 = { 
+		death = { death_reason = death_fight } # Drunken brawl
+	}
+}
+### Household
+Hardhome_Gorm_hh_1 = {
+	name = Wyllis # Canon 
+	
+	religion = weirwood_of_the_seven
+	culture = harborman
+	
+	trait = education_learning_2
+	trait = brave
+	
+	7615.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	7635.1.1 = {
+		trait = maester_historical
+		effect = { # Maester of Hardhome
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_hardhome
+				POSITION = maester_court_position
+			}
+		}
+	}
+	7682.1.1 = { trait = scholar }
+	7695.1.1 = { death = yes }
+}
+
+###### MINOR CHIEFTAINS
+############################
+###
+###
+Wildling_Chief_1 = {
+	name = Sylas # Canon, AKA: Sylas the Grim
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_3
+	trait = intellect_good_1
+	trait = brave
+	trait = callous
+	trait = vengeful
+	trait = ambitious
+	trait = bossy
+	
+	disallow_random_traits = yes
+	
+	8101.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8127.1.1 = { give_nickname = nick_the_grim }
+	8133.12.1 = { 
+		death = { 
+			death_reason = death_battle 
+			killer = Stark_86 # Cregan Stark
+		}
+	}
+}
+
+############################        PLACEHOLDER         ############################
+####################################################################################
+
+###### THANKSKULL (id = 559112)
+############################
+###
+###
+345559112 = {
+	name = Stiv # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7822.1.1 = { birth = yes }
+	7879.1.1 = { death = yes }
+}
+344559112 = {
+	name = Halgor # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 345559112
+
+	7846.1.1 = { birth = yes }
+	7902.1.1 = { death = yes }
+}
+343559112 = {
+	name = Yoren # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 344559112
+
+	7870.1.1 = { birth = yes }
+	7919.1.1 = { death = yes }
+}
+342559112 = {
+	name = Ygon # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 343559112
+
+	7893.1.1 = { birth = yes }
+	7945.1.1 = { death = yes }
+}
+341559112 = {
+	name = Cayn # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 342559112
+
+	7914.1.1 = { birth = yes }
+	7962.1.1 = { death = yes }
+}
+340559112 = {
+	name = Wallen # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 341559112
+
+	7931.1.1 = { birth = yes }
+	7981.1.1 = { death = yes }
+}
+101559112 = {
+	name = Lenn # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 340559112
+
+	7955.1.1 = { birth = yes }
+	8008.1.1 = { death = yes }
+}
+102559112 = {
+	name = Orell # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 101559112
+
+	7984.1.1 = { birth = yes }
+	8041.1.1 = { death = yes }
+}
+103559112 = {
+	name = Torwynd # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 102559112
+
+	8009.1.1 = { birth = yes }
+	8073.1.1 = { death = yes }
+}
+106559112 = {
+	name = Arnolf # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 103559112
+
+	8045.1.1 = { birth = yes }
+	8091.1.1 = { death = yes }
+}
+107559112 = {
+	name = Beron # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 106559112
+
+	8074.1.1 = { birth = yes }
+	8144.1.1 = { death = yes }
+}
+109559112 = {
+	name = Halleck # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 107559112
+
+	8096.1.1 = { birth = yes }
+	8176.1.1 = { death = yes }
+}
+112559112 = {
+	name = Henk
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 109559112
+
+	8124.1.1 = { birth = yes }
+	8172.1.1 = { death = yes }
+}
+114559112 = {
+	name = Lenn # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 112559112
+
+	8147.1.1 = { birth = yes }
+	8199.1.1 = { death = yes }
+}
+117559112 = {
+	name = Soren # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 114559112
+
+	8168.1.1 = { birth = yes }
+	8211.1.1 = { death = yes }
+}
+118559112 = {
+	name = Dryn # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 117559112
+
+	8189.1.1 = { birth = yes }
+	8247.1.1 = { death = yes }
+}
+119559112 = {
+	name = Ondrew # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 118559112
+
+	8210.1.1 = { birth = yes }
+	8262.1.1 = { death = yes }
+}
+121559112 = {
+	name = Borroq # a lord
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 119559112
+
+	8233.1.1 = { birth = yes }
+	8278.1.1 = { death = yes }
+}
+122559112 = {
+	name = Arthor
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 119559112
+
+	8236.1.1 = { birth = yes }
+	8272.1.1 = { death = { death_reason = death_battle } }
+}
+123559112 = {
+	name = Varamyr
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 121559112
+
+	8252.1.1 = { birth = yes }
+}
+124559112 = {
+	name = Dan
+	dynasty = 559112
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 121559112
+
+	8254.1.1 = { birth = yes }
+}
+
+###### CROWHUNTERS (id = 559122)
+############################
+###
+###
+345559122 = {
+	name = Mors # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	7822.1.1 = { birth = yes }
+	7886.1.1 = { death = yes }
+}
+344559122 = {
+	name = Kyleg # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 345559122
+
+	7845.1.1 = { birth = yes }
+	7896.1.1 = { death = yes }
+}
+343559122 = {
+	name = Ryk # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 344559122
+
+	7864.1.1 = { birth = yes }
+	7915.1.1 = { death = yes }
+}
+342559122 = {
+	name = Artos # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 343559122
+
+	7888.1.1 = { birth = yes }
+	7935.1.1 = { death = yes }
+}
+341559122 = {
+	name = Alfyn # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 342559122
+
+	7914.1.1 = { birth = yes }
+	7966.1.1 = { death = yes }
+}
+340559122 = {
+	name = Gerrick # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 341559122
+
+	7940.1.1 = { birth = yes }
+	7982.1.1 = { death = yes }
+}
+101559122 = {
+	name = Hareth # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 340559122
+
+	7962.1.1 = { birth = yes }
+	8013.1.1 = { death = yes }
+}
+103559122 = {
+	name = Dywen # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 101559122
+
+	7992.1.1 = { birth = yes }
+	8051.1.1 = { death = yes }
+}
+105559122 = {
+	name = Dormund # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 103559122
+
+	8017.1.1 = { birth = yes }
+	8065.1.1 = { death = yes }
+}
+107559122 = {
+	name = Lenn # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 105559122
+
+	8048.1.1 = { birth = yes }
+	8093.1.1 = { death = yes }
+}
+109559122 = {
+	name = Ryk # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 107559122
+
+	8066.1.1 = { birth = yes }
+	8135.1.1 = { death = { death_reason = death_accident } }
+}
+111559122 = {
+	name = Ondrew
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 109559122
+
+	8089.1.1 = { birth = yes }
+	8130.1.1 = { death = yes }
+}
+112559122 = {
+	name = Mikken # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 111559122
+
+	8123.1.1 = { birth = yes }
+	8191.1.1 = { death = yes }
+}
+113559122 = {
+	name = Joramun
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 112559122
+
+	8155.1.1 = { birth = yes }
+	8184.1.1 = { death = yes }
+}
+114559122 = {
+	name = Torwynd # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 113559122
+
+	8180.1.1 = { birth = yes }
+	8230.1.1 = { death = yes }
+}
+116559122 = {
+	name = Gerrick # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 114559122
+
+	8203.1.1 = { birth = yes }
+	8253.1.1 = { death = yes }
+}
+117559122 = {
+	name = Owen
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 114559122
+
+	8206.1.1 = { birth = yes }
+	8263.1.1 = { death = { death_reason = death_accident } }
+}
+118559122 = {
+	name = Mikken
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 116559122
+
+	8225.1.1 = { birth = yes }
+	8251.1.1 = { death = yes }
+}
+119559122 = {
+	name = Arthor # a lord
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 116559122
+
+	8227.1.1 = { birth = yes }
+	8280.1.1 = { death = yes }
+}
+120559122 = {
+	name = Mance
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 119559122
+
+	8259.1.1 = { birth = yes }
+}
+121559122 = {
+	name = Hallis
+	dynasty = 559122
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 119559122
+
+	8262.1.1 = { birth = yes }
+}
+
+### The Gorge
+345559121 = {
+	name = Doss # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	7832.1.1 = { birth = yes }
+	7884.1.1 = { death = yes }
+}
+344559121 = {
+	name = Dryn # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 345559121
+
+	7851.1.1 = { birth = yes }
+	7908.1.1 = { death = yes }
+}
+343559121 = {
+	name = Brogg # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 344559121
+
+	7869.1.1 = { birth = yes }
+	7913.1.1 = { death = yes }
+}
+342559121 = {
+	name = Borroq # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 343559121
+
+	7895.1.1 = { birth = yes }
+	7944.1.1 = { death = yes }
+}
+341559121 = {
+	name = Dormund # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 342559121
+
+	7914.1.1 = { birth = yes }
+	7961.1.1 = { death = yes }
+}
+340559121 = {
+	name = Styr # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 341559121
+
+	7939.1.1 = { birth = yes }
+	7986.1.1 = { death = yes }
+}
+10559121 = {
+	name = Yoren # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 340559121
+
+	7966.1.1 = { birth = yes }
+	8024.1.1 = { death = yes }
+}
+12559121 = {
+	name = Wallen # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 10559121
+
+	8000.1.1 = { birth = yes }
+	8052.1.1 = { death = yes }
+}
+13559121 = {
+	name = Dormund # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 12559121
+
+	8035.1.1 = { birth = yes }
+	8096.1.1 = { death = yes }
+}
+14559121 = {
+	name = Cregan # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 13559121
+
+	8069.1.1 = { birth = yes }
+	8137.1.1 = { death = yes }
+}
+15559121 = {
+	name = Henk # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 14559121
+
+	8095.1.1 = { birth = yes }
+	8148.1.1 = { death = yes }
+}
+17559121 = {
+	name = Briar # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 15559121
+
+	8118.1.1 = { birth = yes }
+	8184.1.1 = { death = yes }
+}
+18559121 = {
+	name = Joramun # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 17559121
+
+	8146.1.1 = { birth = yes }
+	8206.1.1 = { death = yes }
+}
+19559121 = {
+	name = Halleck # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 17559121
+
+	8147.1.1 = { birth = yes }
+	8210.1.1 = { death = yes }
+}
+22559121 = {
+	name = Gendel # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 19559121
+
+	8171.1.1 = { birth = yes }
+	8235.1.1 = { death = yes }
+}
+23559121 = {
+	name = Ondrew # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 22559121
+
+	8198.1.1 = { birth = yes }
+	8239.1.1 = { death = yes }
+}
+25559121 = {
+	name = Dan # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 23559121
+
+	8219.1.1 = { birth = yes }
+	8270.1.1 = { death = yes }
+}
+26559121 = {
+	name = Lenn # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 25559121
+
+	8237.1.1 = { birth = yes }
+	8294.1.1 = { death = yes }
+}
+28559121 = {
+	name = Walton # a lord
+	dynasty = 559121
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 26559121
+
+	8259.1.1 = { birth = yes }
+}
+
+###### BLOODFANGS (id = dynn_Bloodfang)
+############################
+###
+###
+354500017 = {
+	name = Sigorn # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7829.1.1 = { birth = yes }
+	7876.1.1 = { death = yes }
+}
+344500017 = {
+	name = Karlon # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 354500017
+
+	7854.1.1 = { birth = yes }
+	7900.1.1 = { death = yes }
+}
+334500017 = {
+	name = Mance # a lord
+	dynasty = dynn_Bloodfang
+
+	dna = 334500017
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 344500017
+
+	7878.1.1 = { birth = yes }
+	7924.1.1 = { death = yes }
+}
+324500017 = {
+	name = Eyron # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 334500017
+
+	7901.1.1 = { birth = yes }
+	7948.1.1 = { death = yes }
+}
+314500017 = {
+	name = Raymun # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 324500017
+
+	7928.1.1 = { birth = yes }
+	7986.1.1 = { death = yes }
+}
+304500017 = {
+	name = Beron # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 314500017
+
+	7952.1.1 = { birth = yes }
+	7991.1.1 = { death = yes }
+}
+104500017 = {
+	name = Torghen # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 304500017
+
+	7971.1.1 = { birth = yes }
+	8046.1.1 = { death = yes }
+}
+114500017 = {
+	name = Quort
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 104500017
+
+	7989.1.1 = { birth = yes }
+	8024.1.1 = { death = yes }
+}
+134500017 = {
+	name = Galbart # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 114500017
+
+	8015.1.1 = { birth = yes }
+	8082.1.1 = { death = yes }
+}
+144500017 = {
+	name = Torghen # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 134500017
+
+	8033.1.1 = { birth = yes }
+	8089.1.1 = { death = yes }
+}
+154500017 = {
+	name = Varamyr # a lord
+	dynasty = dynn_Bloodfang
+
+	dna = 154500017
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 144500017
+
+	8052.1.1 = { birth = yes }
+	8106.1.1 = { death = yes }
+}
+164500017 = {
+	name = Wayn # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 154500017
+
+	8074.1.1 = { birth = yes }
+	8131.1.1 = { death = yes }
+}
+174500017 = {
+	name = Kyleg # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 164500017
+
+	8098.1.1 = { birth = yes }
+	8149.1.1 = { death = { death_reason = death_murder } }
+}
+184500017 = {
+	name = Harlon # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 174500017
+
+	8125.1.1 = { birth = yes }
+	8188.1.1 = { death = yes }
+}
+214500017 = {
+	name = Gorne # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 184500017
+
+	8150.1.1 = { birth = yes }
+	8196.1.1 = { death = yes }
+}
+224500017 = {
+	name = Joramun # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 214500017
+
+	8178.1.1 = { birth = yes }
+	8250.1.1 = { death = yes }
+}
+234500017 = {
+	name = Mikken # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 224500017
+
+	8201.1.1 = { birth = yes }
+	8251.1.1 = { death = yes }
+}
+244500017 = {
+	name = Bodger # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 234500017
+
+	8233.1.1 = { birth = yes }
+	8298.1.1 = { death = yes }
+}
+254500017 = {
+	name = Gorne # a lord
+	dynasty = dynn_Bloodfang
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 244500017
+
+	8264.1.1 = { birth = yes }
+}
+
+###### WINTER KEEP (id = 559133)
+############################
+###
+###
+345559133 = {
+	name = Soren # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7820.1.1 = { birth = yes }
+	7868.1.1 = { death = yes }
+}
+344559133 = {
+	name = Jeor # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 345559133
+
+	7844.1.1 = { birth = yes }
+	7891.1.1 = { death = yes }
+}
+343559133 = {
+	name = Jarl # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 344559133
+
+	7867.1.1 = { birth = yes }
+	7922.1.1 = { death = yes }
+}
+342559133 = {
+	name = Torwynd # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 343559133
+
+	7890.1.1 = { birth = yes }
+	7941.1.1 = { death = yes }
+}
+341559133 = {
+	name = Mikken # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 342559133
+
+	7908.1.1 = { birth = yes }
+	7959.1.1 = { death = yes }
+}
+340559133 = {
+	name = Doss # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 341559133
+
+	7932.1.1 = { birth = yes }
+	7998.1.1 = { death = yes }
+}
+10559133 = {
+	name = Mikken # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 340559133
+
+	7955.1.1 = { birth = yes }
+	8007.1.1 = { death = yes }
+}
+11559133 = {
+	name = Orell # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 10559133
+
+	7975.1.1 = { birth = yes }
+	8020.1.1 = { death = yes }
+}
+12559133 = {
+	name = Raymun
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 10559133
+
+	7976.1.1 = { birth = yes }
+	8014.1.1 = { death = { death_reason = death_battle } }
+}
+14559133 = {
+	name = Hareth # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 12559133
+
+	8002.1.1 = { birth = yes }
+	8067.1.1 = { death = yes }
+}
+15559133 = {
+	name = Lenn
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 14559133
+
+	8020.1.1 = { birth = yes }
+	8054.1.1 = { death = yes }
+}
+17559133 = {
+	name = Henk # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 14559133
+
+	8023.1.1 = { birth = yes }
+	8079.1.1 = { death = yes }
+}
+20559133 = {
+	name = Alfyn # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 15559133
+
+	8051.1.1 = { birth = yes }
+	8127.1.1 = { death = yes }
+}
+21559133 = {
+	name = Gariss # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 20559133
+
+	8078.1.1 = { birth = yes }
+	8146.1.1 = { death = yes }
+}
+23559133 = {
+	name = Hallis # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 21559133
+
+	8104.1.1 = { birth = yes }
+	8147.1.1 = { death = { death_reason = death_accident } }
+}
+24559133 = {
+	name = Calon # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 23559133
+
+	8125.1.1 = { birth = yes }
+	8184.1.1 = { death = yes }
+}
+25559133 = {
+	name = Gendel
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 24559133
+
+	8148.1.1 = { birth = yes }
+	8182.1.1 = { death = { death_reason = death_battle } }
+}
+26559133 = {
+	name = Bernarr # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 25559133
+
+	8168.1.1 = { birth = yes }
+	8239.1.1 = { death = yes }
+}
+29559133 = {
+	name = Torwynd # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 26559133
+
+	8208.1.1 = { birth = yes }
+	8256.1.1 = { death = yes }
+}
+31559133 = {
+	name = Gerrick # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 29559133
+
+	8228.1.1 = { birth = yes }
+	8258.1.1 = { death = yes }
+}
+32559133 = {
+	name = Devyn # a lord
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 31559133
+
+	8248.1.1 = { birth = yes }
+}
+33559133 = {
+	name = Mance
+	dynasty = 559133
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 32559133
+
+	8274.1.1 = { birth = yes }
+}
+34559133 = {
+	name = Meera
+	dynasty = 559133
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 32559133
+
+	8275.1.1 = { birth = yes }
+}
+35559133 = {
+	name = Osha
+	dynasty = 559133
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 32559133
+
+	8278.1.1 = { birth = yes }
+}
+
+###### WHITETREE (id = 559134)
+############################
+###
+###
+344559134 = {
+	name = Arnolf # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7828.1.1 = { birth = yes }
+	7875.1.1 = { death = yes }
+}
+343559134 = {
+	name = Briar # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 344559134
+
+	7853.1.1 = { birth = yes }
+	7890.1.1 = { death = yes }
+}
+342559134 = {
+	name = Jorelle # a lord
+	dynasty = 559134
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 343559134
+
+	7874.1.1 = { birth = yes }
+	7942.1.1 = { death = yes }
+}
+341559134 = {
+	name = Arthor # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	mother = 342559134
+
+	7895.1.1 = { birth = yes }
+	7962.1.1 = { death = yes }
+}
+340559134 = {
+	name = Calon # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 341559134
+
+	7918.1.1 = { birth = yes }
+	7977.1.1 = { death = yes }
+}
+339559134 = {
+	name = Mors # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 340559134
+
+	7943.1.1 = { birth = yes }
+	7995.1.1 = { death = yes }
+}
+100559134 = {
+	name = Lenn # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 339559134
+
+	7970.1.1 = { birth = yes }
+	8012.1.1 = { death = yes }
+}
+103559134 = {
+	name = Toregg # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 100559134
+
+	7996.1.1 = { birth = yes }
+	8058.1.1 = { death = yes }
+}
+104559134 = {
+	name = Artos
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 100559134
+
+	7998.1.1 = { birth = yes }
+	8043.1.1 = { death = yes }
+}
+106559134 = {
+	name = Sansa
+	dynasty = 559134
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 104559134
+
+	8033.1.1 = { birth = yes }
+	8094.1.1 = { death = yes }
+}
+107559134 = {
+	name = Briar # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 104559134
+
+	8035.1.1 = { birth = yes }
+	8091.1.1 = { death = yes }
+}
+111559134 = {
+	name = Tormund # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 107559134
+
+	8070.1.1 = { birth = yes }
+	8117.1.1 = { death = yes }
+}
+112559134 = {
+	name = Halys # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 111559134
+
+	8098.1.1 = { birth = yes }
+	8149.1.1 = { death = yes }
+}
+113559134 = {
+	name = Ryk # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 112559134
+
+	8122.1.1 = { birth = yes }
+	8162.1.1 = { death = yes }
+}
+114559134 = {
+	name = Orell # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 113559134
+
+	8141.1.1 = { birth = yes }
+	8200.1.1 = { death = yes }
+}
+115559134 = {
+	name = Howd # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 114559134
+
+	8168.1.1 = { birth = yes }
+	8234.1.1 = { death = yes }
+}
+116559134 = {
+	name = Cregan
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 114559134
+
+	8170.1.1 = { birth = yes }
+	8206.1.1 = { death = yes }
+}
+120559134 = {
+	name = Kyleg # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 116559134
+
+	8194.1.1 = { birth = yes }
+	8250.1.1 = { death = yes }
+}
+121559134 = {
+	name = Jojen # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 120559134
+
+	8220.1.1 = { birth = yes }
+	8266.1.1 = { death = yes }
+}
+123559134 = {
+	name = Toregg # a lord
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 121559134
+
+	8243.1.1 = { birth = yes }
+}
+124559134 = {
+	name = Hallis
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 123559134
+
+	8270.1.1 = { birth = yes }
+}
+125559134 = {
+	name = Lenn
+	dynasty = 559134
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 123559134
+
+	8271.1.1 = { birth = yes }
+}
+
+###### HARDHOME (id = 559139)
+############################
+###
+###
+340559139 = {
+	name = Craster # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7820.1.1 = { birth = yes }
+	7869.1.1 = { death = yes }
+}
+341559139 = {
+	name = Yoren # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 340559139
+
+	7854.1.1 = { birth = yes }
+	7899.1.1 = { death = yes }
+}
+344559139 = {
+	name = Jeor # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 341559139
+
+	7892.1.1 = { birth = yes }
+	7954.1.1 = { death = yes }
+}
+345559139 = {
+	name = Harra # a lord
+	dynasty = 559139
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 344559139
+
+	7926.1.1 = { birth = yes }
+	7961.1.1 = { death = yes }
+}
+10559139 = {
+	name = Torghen # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	mother = 345559139
+
+	7944.1.1 = { birth = yes }
+	8003.1.1 = { death = yes }
+}
+11559139 = {
+	name = Karlon # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 10559139
+
+	7973.1.1 = { birth = yes }
+	8033.1.1 = { death = yes }
+}
+13559139 = {
+	name = Dryn # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 10559139
+
+	7979.1.1 = { birth = yes }
+	8035.1.1 = { death = yes }
+}
+17559139 = {
+	name = Gerrick # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 13559139
+
+	8004.1.1 = { birth = yes }
+	8062.1.1 = { death = yes }
+}
+18559139 = {
+	name = Walton
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 13559139
+
+	8005.1.1 = { birth = yes }
+	8048.1.1 = { death = yes }
+}
+22559139 = {
+	name = Harlon # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 18559139
+
+	8040.1.1 = { birth = yes }
+	8085.1.1 = { death = yes }
+}
+23559139 = {
+	name = Mors # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 22559139
+
+	8071.1.1 = { birth = yes }
+	8140.1.1 = { death = yes }
+}
+24559139 = {
+	name = Cayn # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 23559139
+
+	8093.1.1 = { birth = yes }
+	8154.1.1 = { death = yes }
+}
+26559139 = {
+	name = Quort # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 24559139
+
+	8115.1.1 = { birth = yes }
+	8168.1.1 = { death = yes }
+}
+28559139 = {
+	name = Gerrick # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 26559139
+
+	8150.1.1 = { birth = yes }
+	8210.1.1 = { death = yes }
+}
+29559139 = {
+	name = Mikken # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 28559139
+
+	8170.1.1 = { birth = yes }
+	8221.1.1 = { death = yes }
+}
+30559139 = {
+	name = Byam # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 29559139
+
+	8198.1.1 = { birth = yes }
+	8264.1.1 = { death = { death_reason = death_accident } }
+}
+33559139 = {
+	name = Raymun # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 30559139
+
+	8219.1.1 = { birth = yes }
+	8275.1.1 = { death = yes }
+}
+34559139 = {
+	name = Alfyn # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 30559139
+
+	8221.1.1 = { birth = yes }
+	8282.1.1 = { death = yes }
+}
+35559139 = {
+	name = Palla
+	dynasty = 559139
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 33559139
+
+	8250.1.1 = { birth = yes }
+}
+36559139 = {
+	name = Thistle
+	dynasty = 559139
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 33559139
+
+	8252.1.1 = { birth = yes }
+}
+37559139 = {
+	name = Ygon # a lord
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 34559139
+
+	8246.1.1 = { birth = yes }
+}
+38559139 = {
+	name = Walton
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 34559139
+
+	8248.1.1 = { birth = yes }
+	8297.1.1 = { death = yes }
+}
+39559139 = {
+	name = Erena
+	dynasty = 559139
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 37559139
+
+	8269.1.1 = { birth = yes }
+}
+40559139 = {
+	name = Kyra
+	dynasty = 559139
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 37559139
+
+	8271.1.1 = { birth = yes }
+}
+41559139 = {
+	name = Sigorn
+	dynasty = 559139
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 37559139
+
+	8274.1.1 = { birth = yes }
+}
+
+###### FIRST FOREST (id = 559141)
+############################
+###
+###
+340559141 = {
+	name = Styr # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7840.1.1 = { birth = yes }
+	7884.1.1 = { death = yes }
+}
+343559141 = {
+	name = Brogg # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 340559141
+
+	7869.1.1 = { birth = yes }
+	7911.1.1 = { death = yes }
+}
+345559141 = {
+	name = Vayon # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 343559141
+
+	7896.1.1 = { birth = yes }
+	7946.1.1 = { death = yes }
+}
+346559141 = {
+	name = Gorne # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 345559141
+
+	7931.1.1 = { birth = yes }
+	7976.1.1 = { death = yes }
+}
+349559141 = {
+	name = Quort # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 346559141
+
+	7957.1.1 = { birth = yes }
+	8010.1.1 = { death = yes }
+}
+10559141 = {
+	name = Yoren # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 349559141
+
+	7975.1.1 = { birth = yes }
+	8030.1.1 = { death = yes }
+}
+11559141 = {
+	name = Gariss # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 10559141
+
+	7996.1.1 = { birth = yes }
+	8051.1.1 = { death = yes }
+}
+15559141 = {
+	name = Jojen # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 11559141
+
+	8023.1.1 = { birth = yes }
+	8086.1.1 = { death = yes }
+}
+17559141 = {
+	name = Quort
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 11559141
+
+	8025.1.1 = { birth = yes }
+	8061.1.1 = { death = yes }
+}
+20559141 = {
+	name = Jarl # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 15559141
+
+	8055.1.1 = { birth = yes }
+	8100.1.1 = { death = yes }
+}
+24559141 = {
+	name = Alfyn # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 20559141
+
+	8087.1.1 = { birth = yes }
+	8126.1.1 = { death = yes }
+}
+25559141 = {
+	name = Quent # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 20559141
+
+	8089.1.1 = { birth = yes }
+	8152.1.1 = { death = yes }
+}
+28559141 = {
+	name = Toregg # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 25559141
+
+	8112.1.1 = { birth = yes }
+	8171.1.1 = { death = yes }
+}
+29559141 = {
+	name = Alfyn # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 28559141
+
+	8136.1.1 = { birth = yes }
+	8182.1.1 = { death = yes }
+}
+31559141 = {
+	name = Tormund # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 29559141
+
+	8166.1.1 = { birth = yes }
+	8224.1.1 = { death = yes }
+}
+33559141 = {
+	name = Lenn # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 31559141
+
+	8197.1.1 = { birth = yes }
+	8256.1.1 = { death = yes }
+}
+34559141 = {
+	name = Arthor # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 33559141
+
+	8216.1.1 = { birth = yes }
+	8264.1.1 = { death = yes }
+}
+35559141 = {
+	name = Jeor # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 34559141
+
+	8241.1.1 = { birth = yes }
+	8295.1.1 = { death = yes }
+}
+37559141 = {
+	name = Eyron
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 34559141
+
+	8245.1.1 = { birth = yes }
+}
+38559141 = {
+	name = Gavin # a lord
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 35559141
+
+	8267.1.1 = { birth = yes }
+}
+40559141 = {
+	name = Qhorin
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 35559141
+
+	8271.1.1 = { birth = yes }
+}
+41559141 = {
+	name = Toregg
+	dynasty = 559141
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 37559141
+
+	8279.1.1 = { birth = yes }
+}
+42559141 = {
+	name = Hali
+	dynasty = 559141
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 37559141
+
+	8282.1.1 = { birth = yes }
+}
+
+###### SOUTH FROSTFANGS (id = 559143)
+############################
+###
+###
+340559143 = {
+	name = Stiv # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	7830.1.1 = { birth = yes }
+	7877.1.1 = { death = yes }
+}
+341559143 = {
+	name = Qhorin # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 340559143
+
+	7862.1.1 = { birth = yes }
+	7913.1.1 = { death = yes }
+}
+343559143 = {
+	name = Walton # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 341559143
+
+	7891.1.1 = { birth = yes }
+	7938.1.1 = { death = yes }
+}
+345559143 = {
+	name = Byam # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 343559143
+
+	7914.1.1 = { birth = yes }
+	7979.1.1 = { death = yes }
+}
+347559143 = {
+	name = Doss # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 345559143
+
+	7935.1.1 = { birth = yes }
+	7986.1.1 = { death = yes }
+}
+10559143 = {
+	name = Cayn # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 347559143
+
+	7966.1.1 = { birth = yes }
+	8022.1.1 = { death = yes }
+}
+11559143 = {
+	name = Torghen # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 10559143
+
+	7985.1.1 = { birth = yes }
+	8033.1.1 = { death = yes }
+}
+13559143 = {
+	name = Dryn
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 10559143
+
+	7987.1.1 = { birth = yes }
+	8052.1.1 = { death = yes }
+}
+14559143 = {
+	name = Eyron # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 11559143
+
+	8008.1.1 = { birth = yes }
+	8052.1.1 = { death = yes }
+}
+18559143 = {
+	name = Devyn # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 13559143
+
+	8008.1.1 = { birth = yes }
+	8060.1.1 = { death = yes }
+}
+19559143 = {
+	name = Walton # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 18559143
+
+	8032.1.1 = { birth = yes }
+	8085.1.1 = { death = yes }
+}
+22559143 = {
+	name = Jojen # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 19559143
+
+	8053.1.1 = { birth = yes }
+	8096.1.1 = { death = yes }
+}
+23559143 = {
+	name = Gerrick # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 22559143
+
+	8078.1.1 = { birth = yes }
+	8127.1.1 = { death = yes }
+}
+26559143 = {
+	name = Dywen # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 23559143
+
+	8108.1.1 = { birth = yes }
+	8155.1.1 = { death = yes }
+}
+27559143 = {
+	name = Gariss # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 26559143
+
+	8127.1.1 = { birth = yes }
+	8175.1.1 = { death = yes }
+}
+28559143 = {
+	name = Quort
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 26559143
+
+	8129.1.1 = { birth = yes }
+	8150.1.1 = { death = yes }
+}
+31559143 = {
+	name = Briar # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 28559143
+
+	8150.1.1 = { birth = yes }
+	8215.1.1 = { death = yes }
+}
+33559143 = {
+	name = Dormund # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 31559143
+
+	8198.1.1 = { birth = yes }
+	8224.1.1 = { death = yes }
+}
+35559143 = {
+	name = Mance # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 33559143
+
+	8221.1.1 = { birth = yes }
+	8260.1.1 = { death = yes }
+}
+37559143 = {
+	name = Gerrick
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 33559143
+
+	8224.1.1 = { birth = yes }
+	8280.1.1 = { death = yes }
+}
+38559143 = {
+	name = Arnolf # a lord
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 35559143
+
+	8240.1.1 = { birth = yes }
+	8286.1.1 = { death = yes }
+}
+39559143 = {
+	name = Wallen
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 35559143
+
+	8242.1.1 = { birth = yes }
+	8286.1.1 = { death = yes }
+}
+40559143 = {
+	name = Dalla
+	dynasty = 559143
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 38559143
+
+	8272.1.1 = { birth = yes }
+}
+41559143 = {
+	name = Ysilla
+	dynasty = 559143
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 38559143
+
+	8275.1.1 = { birth = yes }
+}
+42559143 = {
+	name = Devyn
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 38559143
+
+	8278.1.1 = { birth = yes }
+}
+43559143 = {
+	name = Jonella
+	dynasty = 559143
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 42559143
+
+	8296.1.1 = { birth = yes }
+}
+44559143 = {
+	name = Dormund
+	dynasty = 559143
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 42559143
+
+	8297.1.1 = { birth = yes }
+}
+
+###### GIANT'S STAIRS (id = 559144)
+############################
+###
+###
+340559144 = {
+	name = Halgor # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	7834.1.1 = { birth = yes }
+	7878.1.1 = { death = yes }
+}
+343559144 = {
+	name = Sigorn # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 340559144
+
+	7861.1.1 = { birth = yes }
+	7893.1.1 = { death = { death_reason = death_battle } }
+}
+344559144 = {
+	name = Hallis # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 343559144
+
+	7881.1.1 = { birth = yes }
+	7935.1.1 = { death = yes }
+}
+345559144 = {
+	name = Gavin # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 344559144
+
+	7920.1.1 = { birth = yes }
+	7965.1.1 = { death = { death_reason = death_murder } }
+}
+348559144 = {
+	name = Torwynd # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 345559144
+
+	7943.1.1 = { birth = yes }
+	7984.1.1 = { death = yes }
+}
+10559144 = {
+	name = Bodger # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 348559144
+
+	7960.1.1 = { birth = yes }
+	8011.1.1 = { death = yes }
+}
+11559144 = {
+	name = Owen # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 10559144
+
+	7984.1.1 = { birth = yes }
+	8024.1.1 = { death = yes }
+}
+12559144 = {
+	name = Harlon # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 11559144
+
+	8019.1.1 = { birth = yes }
+	8050.1.1 = { death = yes }
+}
+15559144 = {
+	name = Mors # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 12559144
+
+	8039.1.1 = { birth = yes }
+	8079.1.1 = { death = yes }
+}
+16559144 = {
+	name = Dryn # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 12559144
+
+	8041.1.1 = { birth = yes }
+	8101.1.1 = { death = yes }
+}
+21559144 = {
+	name = Gorne # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 16559144
+
+	8068.1.1 = { birth = yes }
+	8123.1.1 = { death = yes }
+}
+22559144 = {
+	name = Harmond # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 21559144
+
+	8087.1.1 = { birth = yes }
+	8131.1.1 = { death = yes }
+}
+23559144 = {
+	name = Alfyn # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 22559144
+
+	8106.1.1 = { birth = yes }
+	8148.1.1 = { death = yes }
+}
+29559144 = {
+	name = Henk # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 23559144
+
+	8142.1.1 = { birth = yes }
+	8215.1.1 = { death = { death_reason = death_accident } }
+}
+30559144 = {
+	name = Arson # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 29559144
+
+	8176.1.1 = { birth = yes }
+	8228.1.1 = { death = yes }
+}
+32559144 = {
+	name = Jeor # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 30559144
+
+	8204.1.1 = { birth = yes }
+	8256.1.1 = { death = yes }
+}
+33559144 = {
+	name = Lenyl # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 32559144
+
+	8226.1.1 = { birth = yes }
+	8267.1.1 = { death = yes }
+}
+34559144 = {
+	name = Dorren
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 32559144
+
+	8229.1.1 = { birth = yes }
+	8280.1.1 = { death = yes }
+}
+35559144 = {
+	name = Jonnela
+	dynasty = 559144
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 33559144
+
+	8261.1.1 = { birth = yes }
+}
+36559144 = {
+	name = Halleck # a lord
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 33559144
+
+	8262.1.1 = { birth = yes }
+}
+37559144 = {
+	name = Brogg
+	dynasty = 559144
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 36559144
+
+	8291.1.1 = { birth = yes }
+}
+38559144 = {
+	name = Dalla
+	dynasty = 559144
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 36559144
+
+	8294.1.1 = { birth = yes }
+}
+39559144 = {
+	name = Harra
+	dynasty = 559144
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 36559144
+
+	8297.1.1 = { birth = yes }
+}
+40559144 = {
+	name = Bernarr
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 36559144
+
+	8300.1.1 = { birth = yes }
+}
+
+###### FROZEN SHORE (id = 559255)
+############################
+###
+###
+340559255 = {
+	name = Raven # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	7820.1.1 = { birth = yes }
+	7867.1.1 = { death = yes }
+}
+342559255 = {
+	name = Great_Badger # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 340559255
+
+	7845.1.1 = { birth = yes }
+	7889.1.1 = { death = yes }
+}
+343559255 = {
+	name = Fox # a lord
+	dynasty = 559255
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 342559255
+
+	7880.1.1 = { birth = yes }
+	7944.1.1 = { death = yes }
+}
+344559255 = {
+	name = Angry_Elk # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	mother = 343559255
+
+	7905.1.1 = { birth = yes }
+	7964.1.1 = { death = { death_reason = death_murder } }
+}
+346559255 = {
+	name = Deer # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 344559255
+
+	7938.1.1 = { birth = yes }
+	8016.1.1 = { death = yes }
+}
+10559255 = {
+	name = Direwolf # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 346559255
+
+	7967.1.1 = { birth = yes }
+	8023.1.1 = { death = yes }
+}
+11559255 = {
+	name = Donkey # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 10559255
+
+	7990.1.1 = { birth = yes }
+	8034.1.1 = { death = yes }
+}
+12559255 = {
+	name = Fox # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 11559255
+
+	8009.1.1 = { birth = yes }
+	8065.1.1 = { death = yes }
+}
+13559255 = {
+	name = Eel # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 12559255
+
+	8036.1.1 = { birth = yes }
+	8081.1.1 = { death = yes }
+}
+14559255 = {
+	name = Snowbear # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 13559255
+
+	8058.1.1 = { birth = yes }
+	8117.1.1 = { death = yes }
+}
+15559255 = {
+	name = Whale # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 14559255
+
+	8081.1.1 = { birth = yes }
+	8130.1.1 = { death = yes }
+}
+16559255 = {
+	name = Goat # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 15559255
+
+	8108.1.1 = { birth = yes }
+	8152.1.1 = { death = yes }
+}
+17559255 = {
+	name = Giant # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 16559255
+
+	8134.1.1 = { birth = yes }
+	8203.1.1 = { death = yes }
+}
+19559255 = {
+	name = Boar
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 17559255
+
+	8162.1.1 = { birth = yes }
+	8198.1.1 = { death = { death_reason = death_battle } }
+}
+20559255 = {
+	name = Donkey # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 19559255
+
+	8188.1.1 = { birth = yes }
+	8230.1.1 = { death = yes }
+}
+21559255 = {
+	name = Bat # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 20559255
+
+	8215.1.1 = { birth = yes }
+	8266.1.1 = { death = yes }
+}
+22559255 = {
+	name = Cat # a lord
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 21559255
+
+	8246.1.1 = { birth = yes }
+}
+24559255 = {
+	name = Wolf
+	dynasty = 559255
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 22559255
+
+	8274.1.1 = { birth = yes }
+}
+
+###### ICE BAY SHORE (id = 559257)
+############################
+###
+###
+340559257 = {
+	name = Bear # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	7823.1.1 = { birth = yes }
+	7878.1.1 = { death = yes }
+}
+341559257 = {
+	name = Frog # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 340559257
+
+	7844.1.1 = { birth = yes }
+	7909.1.1 = { death = yes }
+}
+343559257 = {
+	name = Eel # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 341559257
+
+	7869.1.1 = { birth = yes }
+	7941.1.1 = { death = yes }
+}
+345559257 = {
+	name = Eel # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 343559257
+
+	7896.1.1 = { birth = yes }
+	7951.1.1 = { death = yes }
+}
+346559257 = {
+	name = Stag # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 345559257
+
+	7919.1.1 = { birth = yes }
+	7989.1.1 = { death = yes }
+}
+10559257 = {
+	name = Fox # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 346559257
+
+	7942.1.1 = { birth = yes }
+	8009.1.1 = { death = yes }
+}
+11559257 = {
+	name = Lion # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 10559257
+
+	7960.1.1 = { birth = yes }
+	8015.1.1 = { death = yes }
+}
+15559257 = {
+	name = Direwolf # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 11559257
+
+	7990.1.1 = { birth = yes }
+	8031.1.1 = { death = yes }
+}
+17559257 = {
+	name = Lion # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 15559257
+
+	8020.1.1 = { birth = yes }
+	8066.1.1 = { death = { death_reason = death_accident } }
+}
+19559257 = {
+	name = Cat # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 17559257
+
+	8054.1.1 = { birth = yes }
+	8089.1.1 = { death = yes }
+}
+20559257 = {
+	name = Eagle # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 17559257
+
+	8055.1.1 = { birth = yes }
+	8114.1.1 = { death = yes }
+}
+22559257 = {
+	name = Snowbear # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 20559257
+
+	8073.1.1 = { birth = yes }
+	8137.1.1 = { death = { death_reason = death_murder } }
+}
+23559257 = {
+	name = Unicorn
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 22559257
+
+	8098.1.1 = { birth = yes }
+	8131.1.1 = { death = yes }
+}
+24559257 = {
+	name = Anteater # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 22559257
+
+	8099.1.1 = { birth = yes }
+	8139.1.1 = { death = yes }
+}
+26559257 = {
+	name = Giant # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 23559257
+
+	8131.1.1 = { birth = yes }
+	8206.1.1 = { death = yes }
+}
+27559257 = {
+	name = Mammoth # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 24559257
+
+	8125.1.1 = { birth = yes }
+	8174.1.1 = { death = yes }
+}
+30559257 = {
+	name = Seal # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 27559257
+
+	8159.1.1 = { birth = yes }
+	8220.1.1 = { death = yes }
+}
+34559257 = {
+	name = Elk
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 30559257
+
+	8186.1.1 = { birth = yes }
+	8217.1.1 = { death = yes }
+}
+35559257 = {
+	name = Elk # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 30559257
+
+	8189.1.1 = { birth = yes }
+	8245.1.1 = { death = yes }
+}
+37559257 = {
+	name = Bear # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 34559257
+
+	8206.1.1 = { birth = yes }
+	8261.1.1 = { death = yes }
+}
+41559257 = {
+	name = Goat
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 35559257
+
+	8223.1.1 = { birth = yes }
+	8272.1.1 = { death = yes }
+}
+Frozen_Shore_20 = {
+    name = Long_Weasel # a lord
+    dynasty = 559257
+
+    religion = old_gods_frozen_shore
+    culture = frozen_shoreman
+
+    father = 41559257
+
+    trait = education_learning_2
+    trait = calm
+    trait = patient
+    trait = shy
+    trait = cynical
+    trait = curious
+
+    disallow_random_traits = yes
+
+    8244.1.1 = { birth = yes }
+    8277.1.1 = { trait = lifestyle_blademaster }
+}
+38559257 = {
+	name = Donkey # a lord
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 37559257
+
+	8225.1.1 = { birth = yes }
+	8271.1.1 = { death = yes }
+}
+39559257 = {
+	name = Bear
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 37559257
+
+	8227.1.1 = { birth = yes }
+	8264.1.1 = { death = yes }
+}
+40559257 = {
+	name = Beetle
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 38559257
+
+	8243.1.1 = { birth = yes }
+	8290.1.1 = { death = { death_reason = death_accident } }
+}
+43559257 = {
+	name = Deer
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 38559257
+
+	8244.1.1 = { birth = yes }
+	8289.1.1 = { death = yes }
+}
+44559257 = {
+	name = Goat
+	dynasty = 559257
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 43559257
+
+	8278.1.1 = { birth = yes }
+}
+45559257 = {
+	name = Unicorn
+	dynasty = 559257
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 43559257
+
+	8268.1.1 = { birth = yes }
+}
+
+###### GREAT ICE RIVER (id = 559354)
+############################
+###
+###
+340559354 = {
+	name = Doss # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	7830.1.1 = { birth = yes }
+	7883.1.1 = { death = yes }
+}
+341559354 = {
+	name = Myrtle # a lord
+	dynasty = 559354
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 340559354
+
+	7849.1.1 = { birth = yes }
+	7897.1.1 = { death = yes }
+}
+342559354 = {
+	name = Cayn # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	mother = 341559354
+
+	7869.1.1 = { birth = yes }
+	7925.1.1 = { death = yes }
+}
+345559354 = {
+	name = Haggon # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 342559354
+
+	7905.1.1 = { birth = yes }
+	7971.1.1 = { death = yes }
+}
+346559354 = {
+	name = Sansa # a lord
+	dynasty = 559354
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 345559354
+
+	7929.1.1 = { birth = yes }
+	7987.1.1 = { death = yes }
+}
+10559354 = {
+	name = Gerrick # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	mother = 346559354
+
+	7963.1.1 = { birth = yes }
+	8019.1.1 = { death = yes }
+}
+11559354 = {
+	name = Bump # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 10559354
+
+	7986.1.1 = { birth = yes }
+	8035.1.1 = { death = yes }
+}
+13559354 = {
+	name = Beron # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 11559354
+
+	8012.1.1 = { birth = yes }
+	8066.1.1 = { death = yes }
+}
+17559354 = {
+	name = Gerrick # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 13559354
+
+	8036.1.1 = { birth = yes }
+	8101.1.1 = { death = yes }
+}
+18559354 = {
+	name = Dan # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 17559354
+
+	8062.1.1 = { birth = yes }
+	8120.1.1 = { death = yes }
+}
+19559354 = {
+	name = Stiv # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 18559354
+
+	8086.1.1 = { birth = yes }
+	8141.1.1 = { death = yes }
+}
+20559354 = {
+	name = Torghen # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 19559354
+
+	8114.1.1 = { birth = yes }
+	8174.1.1 = { death = yes }
+}
+21559354 = {
+	name = Harlon # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 19559354
+
+	8115.1.1 = { birth = yes }
+	8177.1.1 = { death = yes }
+}
+22559354 = {
+	name = Galbart
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 20559354
+
+	8148.1.1 = { birth = yes }
+	8181.1.1 = { death = yes }
+}
+25559354 = {
+	name = Qhorin # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 21559354
+
+	8143.1.1 = { birth = yes }
+	8207.1.1 = { death = { death_reason = death_accident } }
+}
+27559354 = {
+	name = Alfyn # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 22559354
+
+	8180.1.1 = { birth = yes }
+	8231.1.1 = { death = yes }
+}
+29559354 = {
+	name = Halys # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 27559354
+
+	8204.1.1 = { birth = yes }
+	8267.1.1 = { death = yes }
+}
+30559354 = {
+	name = Dorren # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 27559354
+
+	8207.1.1 = { birth = yes }
+	8278.1.1 = { death = yes }
+}
+31559354 = {
+	name = Morna
+	dynasty = 559354
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 29559354
+
+	8233.1.1 = { birth = yes }
+	8293.1.1 = { death = yes }
+}
+32559354 = {
+	name = Raymun # a lord
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 30559354
+
+	8234.1.1 = { birth = yes }
+}
+34559354 = {
+	name = Hallis
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 30559354
+
+	8236.1.1 = { birth = yes }
+	8274.1.1 = { death = yes }
+}
+35559354 = {
+	name = Karlon
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 32559354
+
+	8267.1.1 = { birth = yes }
+}
+36559354 = {
+	name = Morna
+	dynasty = 559354
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 32559354
+
+	8270.1.1 = { birth = yes }
+}
+37559354 = {
+	name = Jojen
+	dynasty = 559354
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 32559354
+
+	8271.1.1 = { birth = yes }
+}
+
+###### THE WEST SHELF (id = dynn_Riverblood)
+############################
+###
+###
+340559357 = {
+	name = Gavin # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	7826.1.1 = { birth = yes }
+	7880.1.1 = { death = yes }
+}
+342559357 = {
+	name = Doss # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 340559357
+
+	7861.1.1 = { birth = yes }
+	7921.1.1 = { death = yes }
+}
+343559357 = {
+	name = Briar # a lord
+	dynasty = dynn_Riverblood
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 342559357
+
+	7881.1.1 = { birth = yes }
+	7939.1.1 = { death = yes }
+}
+344559357 = {
+	name = Craster # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	mother = 343559357
+
+	7900.1.1 = { birth = yes }
+	7952.1.1 = { death = yes }
+}
+345559357 = {
+	name = Gariss # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 344559357
+
+	7935.1.1 = { birth = yes }
+	7991.1.1 = { death = yes }
+}
+10559357 = {
+	name = Quent # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 345559357
+
+	7974.1.1 = { birth = yes }
+	8047.1.1 = { death = yes }
+}
+11559357 = {
+	name = Gerrick # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 10559357
+
+	7992.1.1 = { birth = yes }
+	8069.1.1 = { death = yes }
+}
+16559357 = {
+	name = Arson # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 11559357
+
+	8017.1.1 = { birth = yes }
+	8078.1.1 = { death = yes }
+}
+17559357 = {
+	name = Errok # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 16559357
+
+	8039.1.1 = { birth = yes }
+	8092.1.1 = { death = yes }
+}
+19559357 = {
+	name = Ondrew # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 17559357
+
+	8061.1.1 = { birth = yes }
+	8097.1.1 = { death = yes }
+}
+20559357 = {
+	name = Eyron # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 19559357
+
+	8080.1.1 = { birth = yes }
+	8128.1.1 = { death = yes }
+}
+21559357 = {
+	name = Arson # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 20559357
+
+	8106.1.1 = { birth = yes }
+	8159.1.1 = { death = yes }
+}
+22559357 = {
+	name = Henk # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 21559357
+
+	8134.1.1 = { birth = yes }
+	8178.1.1 = { death = { death_reason = death_accident } }
+}
+23559357 = {
+	name = Gorne # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 22559357
+
+	8163.1.1 = { birth = yes }
+	8222.1.1 = { death = { death_reason = death_accident } }
+}
+25559357 = {
+	name = Bael # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 23559357
+
+	8186.1.1 = { birth = yes }
+	8265.1.1 = { death = yes }
+}
+27559357 = {
+	name = Jeor	
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 23559357
+
+	8191.1.1 = { birth = yes }
+	8226.1.1 = { death = yes }
+}
+28559357 = {
+	name = Gavin
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 25559357
+
+	8209.1.1 = { birth = yes }
+	8265.1.1 = { death = yes }
+}
+30559357 = {
+	name = Toregg # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 28559357
+
+	8234.1.1 = { birth = yes }
+	8300.1.1 = { death = yes }
+}
+31559357 = {
+	name = Arthor # a lord
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 30559357
+
+	8253.1.1 = { birth = yes }
+}
+32559357 = {
+	name = Galbart
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 30559357
+
+	8255.1.1 = { birth = yes }
+}
+33559357 = {
+	name = Dywen
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 31559357
+
+	8279.1.1 = { birth = yes }
+}
+34559357 = {
+	name = Medger
+	dynasty = dynn_Riverblood
+
+	religion = old_gods_frozen_shore
+	culture = ice_riverman
+
+	father = 31559357
+
+	8282.1.1 = { birth = yes }
+}
+
+###### SHIVERING FOREST (id = 559161)
+############################
+###
+###
+340559161 = {
+	name = Dormund # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	7835.1.1 = { birth = yes }
+	7884.1.1 = { death = yes }
+}
+342559161 = {
+	name = Errok # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 340559161
+
+	7857.1.1 = { birth = yes }
+	7896.1.1 = { death = yes }
+}
+345559161 = {
+	name = Torwynd # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 342559161
+
+	7881.1.1 = { birth = yes }
+	7928.1.1 = { death = yes }
+}
+346559161 = {
+	name = Walton # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 345559161
+
+	7911.1.1 = { birth = yes }
+	7987.1.1 = { death = yes }
+}
+347559161 = {
+	name = Soren # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 346559161
+
+	7936.1.1 = { birth = yes }
+	8010.1.1 = { death = yes }
+}
+10559161 = {
+	name = Toregg # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 347559161
+
+	7958.1.1 = { birth = yes }
+	8015.1.1 = { death = yes }
+}
+11559161 = {
+	name = Torwynd # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 10559161
+
+	7993.1.1 = { birth = yes }
+	8038.1.1 = { death = yes }
+}
+12559161 = {
+	name = Haggon
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 10559161
+
+	7994.1.1 = { birth = yes }
+	8023.1.1 = { death = yes }
+}
+13559161 = {
+	name = Joramun # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 11559161
+
+	8018.1.1 = { birth = yes }
+	8068.1.1 = { death = yes }
+}
+14559161 = {
+	name = Ysilla
+	dynasty = 559161
+	female = yes
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 13559161
+
+	8051.1.1 = { birth = yes }
+	8085.1.1 = { death = yes }
+}
+15559161 = {
+	name = Quort
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 12559161
+
+	8014.1.1 = { birth = yes }
+	8047.1.1 = { death = yes }
+}
+19559161 = {
+	name = Jarl # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 15559161
+
+	8046.1.1 = { birth = yes }
+	8081.1.1 = { death = yes }
+}
+20559161 = {
+	name = Quent # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 19559161
+
+	8069.1.1 = { birth = yes }
+	8115.1.1 = { death = yes }
+}
+23559161 = {
+	name = Owen # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 20559161
+
+	8096.1.1 = { birth = yes }
+	8170.1.1 = { death = yes }
+}
+24559161 = {
+	name = Lenyl # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 23559161
+
+	8123.1.1 = { birth = yes }
+	8183.1.1 = { death = yes }
+}
+26559161 = {
+	name = Doss # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 24559161
+
+	8151.1.1 = { birth = yes }
+	8192.1.1 = { death = yes }
+}
+31559161 = {
+	name = Mors # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 26559161
+
+	8180.1.1 = { birth = yes }
+	8228.1.1 = { death = yes }
+}
+32559161 = {
+	name = Ryk # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 31559161
+
+	8200.1.1 = { birth = yes }
+	8266.1.1 = { death = yes }
+}
+33559161 = {
+	name = Soren # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 31559161
+
+	8202.1.1 = { birth = yes }
+	8273.1.1 = { death = yes }
+}
+36559161 = {
+	name = Eyron # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 33559161
+
+	8232.1.1 = { birth = yes }
+	8288.1.1 = { death = yes }
+}
+38559161 = {
+	name = Mors # a lord
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 33559161
+
+	8237.1.1 = { birth = yes }
+}
+39559161 = {
+	name = Ysilla
+	dynasty = 559161
+	female = yes
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 36559161
+
+	8263.1.1 = { birth = yes }
+}
+40559161 = {
+	name = Jyana
+	dynasty = 559161
+	female = yes
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 38559161
+
+	8265.1.1 = { birth = yes }
+}
+41559161 = {
+	name = Orell
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 38559161
+
+	8268.1.1 = { birth = yes }
+}
+42559161 = {
+	name = Styr
+	dynasty = 559161
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 38559161
+
+	8269.1.1 = { birth = yes }
+}
+
+###### FREE VALE (id = 559165)
+############################
+###
+###
+340559165 = {
+	name = Brogg # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	7820.1.1 = { birth = yes }
+	7871.1.1 = { death = yes }
+}
+342559165 = {
+	name = Harmond # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 340559165
+
+	7857.1.1 = { birth = yes }
+	7922.1.1 = { death = yes }
+}
+344559165 = {
+	name = Halleck # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 342559165
+
+	7878.1.1 = { birth = yes }
+	7944.1.1 = { death = yes }
+}
+345559165 = {
+	name = Toregg # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 344559165
+
+	7904.1.1 = { birth = yes }
+	7946.1.1 = { death = yes }
+}
+346559165 = {
+	name = Myrtle # a lord
+	dynasty = 559165
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 345559165
+
+	7937.1.1 = { birth = yes }
+	7992.1.1 = { death = { death_reason = death_accident } }
+}
+10559165 = {
+	name = Henk # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	mother = 346559165
+
+	7971.1.1 = { birth = yes }
+	8021.1.1 = { death = yes }
+}
+12559165 = {
+	name = Hareth # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 10559165
+
+	7990.1.1 = { birth = yes }
+	8024.1.1 = { death = { death_reason = death_battle } }
+}
+13559165 = {
+	name = Walton # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 12559165
+
+	8008.1.1 = { birth = yes }
+	8053.1.1 = { death = yes }
+}
+14559165 = {
+	name = Arson # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 13559165
+
+	8036.1.1 = { birth = yes }
+	8089.1.1 = { death = yes }
+}
+15559165 = {
+	name = Doss # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 14559165
+
+	8062.1.1 = { birth = yes }
+	8118.1.1 = { death = yes }
+}
+16559165 = {
+	name = Mance # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 14559165
+
+	8065.1.1 = { birth = yes }
+	8134.1.1 = { death = yes }
+}
+18559165 = {
+	name = Bodger
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 15559165
+
+	8084.1.1 = { birth = yes }
+	8133.1.1 = { death = { death_reason = death_battle } }
+}
+22559165 = {
+	name = Vayon # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 18559165
+
+	8115.1.1 = { birth = yes }
+	8166.1.1 = { death = yes }
+}
+23559165 = {
+	name = Eyron
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 22559165
+
+	8139.1.1 = { birth = yes }
+	8176.1.1 = { death = yes }
+}
+24559165 = {
+	name = Sigorn # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 22559165
+
+	8142.1.1 = { birth = yes }
+	8191.1.1 = { death = yes }
+}
+25559165 = {
+	name = Lenyl # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 23559165
+
+	8166.1.1 = { birth = yes }
+	8213.1.1 = { death = yes }
+}
+26559165 = {
+	name = Ondrew # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 24559165
+
+	8165.1.1 = { birth = yes }
+	8196.1.1 = { death = yes }
+}
+28559165 = {
+	name = Mance # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 25559165
+
+	8194.1.1 = { birth = yes }
+	8243.1.1 = { death = yes }
+}
+30559165 = {
+	name = Quort # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 28559165
+
+	8221.1.1 = { birth = yes }
+	8273.1.1 = { death = yes }
+}
+32559165 = {
+	name = Del # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 30559165
+
+	8242.1.1 = { birth = yes }
+	8290.1.1 = { death = yes }
+}
+33559165 = {
+	name = Vayon # a lord
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 32559165
+
+	8270.1.1 = { birth = yes }
+}
+35559165 = {
+	name = Alfyn
+	dynasty = 559165
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 32559165
+
+	8274.1.1 = { birth = yes }
+}
+
+###### HORNFOOTS (id = dynn_Hornfoot)
+############################
+###
+###
+340559301 = {
+	name = Ryk # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	7837.1.1 = { birth = yes }
+	7884.1.1 = { death = yes }
+}
+341559301 = {
+	name = Esgred # a lord
+	dynasty = dynn_Hornfoot
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 340559301
+
+	7863.1.1 = { birth = yes }
+	7948.1.1 = { death = yes }
+}
+342559301 = {
+	name = Lenyl # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	mother = 341559301
+
+	7921.1.1 = { birth = yes }
+	7972.1.1 = { death = yes }
+}
+10559301 = {
+	name = Dryn # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 342559301
+
+	7955.1.1 = { birth = yes }
+	8020.1.1 = { death = yes }
+}
+11559301 = {
+	name = Tormund # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 10559301
+
+	7981.1.1 = { birth = yes }
+	8038.1.1 = { death = yes }
+}
+13559301 = {
+	name = Jojen # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 11559301
+
+	8009.1.1 = { birth = yes }
+	8067.1.1 = { death = yes }
+}
+15559301 = {
+	name = Calon # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 13559301
+
+	8046.1.1 = { birth = yes }
+	8101.1.1 = { death = yes }
+}
+16559301 = {
+	name = Stiv # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 15559301
+
+	8075.1.1 = { birth = yes }
+	8135.1.1 = { death = yes }
+}
+17559301 = {
+	name = Medger # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 15559301
+
+	8076.1.1 = { birth = yes }
+	8156.1.1 = { death = yes }
+}
+19559301 = {
+	name = Del # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 17559301
+
+	8097.1.1 = { birth = yes }
+	8166.1.1 = { death = yes }
+}
+22559301 = {
+	name = Bernarr
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 19559301
+
+	8116.1.1 = { birth = yes }
+	8140.1.1 = { death = { death_reason = death_battle } }
+}
+23559301 = {
+	name = Brogg # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 22559301
+
+	8140.1.1 = { birth = yes }
+	8204.1.1 = { death = yes }
+}
+25559301 = {
+	name = Arson # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 23559301
+
+	8171.1.1 = { birth = yes }
+	8233.1.1 = { death = yes }
+}
+29559301 = {
+	name = Arnolf
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 25559301
+
+	8194.1.1 = { birth = yes }
+	8228.1.1 = { death = yes }
+}
+30559301 = {
+	name = Howd # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 29559301
+
+	8216.1.1 = { birth = yes }
+	8273.1.1 = { death = yes }
+}
+31559301 = {
+	name = Soren # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 30559301
+
+	8245.1.1 = { birth = yes }
+	8289.1.1 = { death = yes }
+}
+32559301 = {
+	name = Wallen
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 30559301
+
+	8246.1.1 = { birth = yes }
+	8294.1.1 = { death = yes }
+}
+33559301 = {
+	name = Errok # a lord
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 31559301
+
+	8264.1.1 = { birth = yes }
+}
+34559301 = {
+	name = Harle
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 31559301
+
+	8265.1.1 = { birth = yes }
+}
+36559301 = {
+	name = Ryk
+	dynasty = dynn_Hornfoot
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	father = 33559301
+
+	8295.1.1 = { birth = yes }
+}
+
+###### NIGHTRUNNERS (id = dynn_Nightrunner)
+############################
+###
+###
+340560345 = {
+	name = Dormund # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	7830.1.1 = { birth = yes }
+	7877.1.1 = { death = yes }
+}
+341560345 = {
+	name = Quort # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 340560345
+
+	7850.1.1 = { birth = yes }
+	7894.1.1 = { death = yes }
+}
+342560345 = {
+	name = Joseth # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 341560345
+
+	7879.1.1 = { birth = yes }
+	7904.1.1 = { death = { death_reason = death_battle } }
+}
+343560345 = {
+	name = Harlon # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 342560345
+
+	7898.1.1 = { birth = yes }
+	7963.1.1 = { death = yes }
+}
+344560345 = {
+	name = Zia # a lord
+	dynasty = dynn_Nightrunner
+	female = yes
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 343560345
+
+	7924.1.1 = { birth = yes }
+	7980.1.1 = { death = yes }
+}
+345560345 = {
+	name = Joramun # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	mother = 344560345
+
+	7948.1.1 = { birth = yes }
+	7996.1.1 = { death = yes }
+}
+10560345 = {
+	name = Brogg # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 345560345
+
+	7965.1.1 = { birth = yes }
+	8021.1.1 = { death = { death_reason = death_battle } }
+}
+11560345 = {
+	name = Torwynd # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 10560345
+
+	7994.1.1 = { birth = yes }
+	8049.1.1 = { death = yes }
+}
+12560345 = {
+	name = Bump # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 10560345
+
+	7997.1.1 = { birth = yes }
+	8074.1.1 = { death = yes }
+}
+14560345 = {
+	name = Yoren
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 12560345
+
+	8019.1.1 = { birth = yes }
+	8073.1.1 = { death = yes }
+}
+15560345 = {
+	name = Brogg # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 12560345
+
+	8020.1.1 = { birth = yes }
+	8077.1.1 = { death = yes }
+}
+20560345 = {
+	name = Dormund # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 15560345
+
+	8048.1.1 = { birth = yes }
+	8108.1.1 = { death = yes }
+}
+22560345 = {
+	name = Ondrew # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 20560345
+
+	8069.1.1 = { birth = yes }
+	8132.1.1 = { death = yes }
+}
+23560345 = {
+	name = Jojen # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 22560345
+
+	8102.1.1 = { birth = yes }
+	8166.1.1 = { death = yes }
+}
+24560345 = {
+	name = Bump # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 23560345
+
+	8130.1.1 = { birth = yes }
+	8189.1.1 = { death = yes }
+}
+25560345 = {
+	name = Galbart # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 24560345
+
+	8148.1.1 = { birth = yes }
+	8200.1.1 = { death = yes }
+}
+28560345 = {
+	name = Del # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 25560345
+
+	8174.1.1 = { birth = yes }
+	8219.1.1 = { death = yes }
+}
+29560345 = {
+	name = Bump # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 28560345
+
+	8208.1.1 = { birth = yes }
+	8273.1.1 = { death = yes }
+}
+31560345 = {
+	name = Errok # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 29560345
+
+	8235.1.1 = { birth = yes }
+	8286.1.1 = { death = yes }
+}
+32560345 = {
+	name = Raymun
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 29560345
+
+	8236.1.1 = { birth = yes }
+	8257.1.1 = { death = { death_reason = death_battle } }
+}
+33560345 = {
+	name = Frenya
+	dynasty = dynn_Nightrunner
+	female = yes
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 31560345
+
+	8268.1.1 = { birth = yes }
+	8314.1.1 = { death = yes }
+}
+34560345 = {
+	name = Wallen # a lord
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 32560345
+
+	8255.1.1 = { birth = yes }
+}
+36560345 = {
+	name = Galbart
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 32560345
+
+	8257.1.1 = { birth = yes }
+}
+37560345 = {
+	name = Bernarr
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 34560345
+
+	8282.1.1 = { birth = yes }
+}
+40560345 = {
+	name = Sigorn
+	dynasty = dynn_Nightrunner
+
+	religion = old_gods_btw
+	culture = nightrunner
+
+	father = 34560345
+
+	8287.1.1 = { birth = yes }
+}

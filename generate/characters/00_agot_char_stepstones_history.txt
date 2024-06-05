@@ -1,0 +1,2348 @@
+﻿############################           PIRATES          ############################
+####################################################################################
+
+###### HOUSE SAAN (id = dynn_Saan)
+############################
+### Pirates of Dark Den
+###
+345982370 = {
+	name = Dynerro # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	7841.1.1 = { birth = yes }
+	7886.1.1 = { death = yes }
+}
+344982370 = {
+	name = Draqane # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 345982370
+
+	7862.1.1 = { birth = yes }
+	7905.1.1 = { death = yes }
+}
+343982370 = {
+	name = Lysandro # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 344982370
+
+	7886.1.1 = { birth = yes }
+	7931.1.1 = { death = yes }
+}
+342982370 = {
+	name = Silvario # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 343982370
+
+	7909.1.1 = { birth = yes }
+	7955.1.1 = { death = yes }
+}
+341982370 = {
+	name = Syrodos # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 342982370
+
+	7930.1.1 = { birth = yes }
+	7977.1.1 = { death = yes }
+}
+340982370 = {
+	name = Alassor # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 341982370
+
+	7952.1.1 = { birth = yes }
+	7993.1.1 = { death = yes }
+}
+100982370 = {
+	name = Sargoso # Canon, a lord
+	dynasty = dynn_Saan
+
+	prowess = 6
+
+	religion = weeping_lady
+	culture = lyseni
+
+	father = 340982370
+
+	trait = education_martial_2
+	trait = callous
+
+	7975.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8034.1.1 = { death = yes }
+}
+101982370 = {
+	name = Salassor # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady
+	culture = lyseni
+
+	father = 100982370
+
+	trait = education_martial_2
+	trait = callous
+
+	8007.1.1 = { birth = yes }
+	8057.1.1 = { death = yes }
+}
+105982370 = {
+	name = Collio # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 101982370
+
+	8047.1.1 = { birth = yes }
+	8115.1.1 = { death = yes }
+}
+106982370 = {
+	name = Tregar # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 105982370
+
+	8075.1.1 = { birth = yes }
+	8138.1.1 = { death = yes }
+}
+### Issue of Tregar
+110982370 = {
+	name = Gyleno
+	dynasty = dynn_Saan
+
+	religion = weeping_lady
+	culture = lyseni
+
+	father = 106982370
+
+	8101.1.1 = { birth = yes }
+	8156.1.1 = { death = yes }
+}
+150982370 = {
+	name = Saathos # Canon, Corsair King
+	dynasty = dynn_Saan
+
+	martial = 5
+	stewardship = 3
+	diplomacy = 5
+	intrigue = 4
+	learning = 2
+	prowess = 6
+
+	religion = weeping_lady # pirate
+	culture = lyseni
+
+	father = 106982370
+
+	trait = education_martial_3
+	trait = ambitious
+	trait = deceitful
+	trait = brave
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8102.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8120.1.1 = {
+		employer = Haen_8 # Silvario Haen, Lys
+		religion = rhllor
+	}
+	8125.1.1 = { # Becomes Corsair King
+		effect = { add_prestige_level = 1 }
+	}
+	8155.1.1 = { death = yes }
+}
+### Main Line
+111982370 = {
+	name = Sullehman # Semi-Canon, a lord
+	dynasty = dynn_Saan
+
+	prowess = 12
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 110982370 # Gyleno Saan
+
+	8128.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8165.2.20 = { 
+		death = { 
+			death_reason = death_battle # Storming of Stonedance
+			killer = Saltcliffe_26 # Dagur Saltcliffe
+		} 
+	}
+}
+112982370 = {
+	name = Lysono # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 111982370
+
+	8147.1.1 = { birth = yes }
+	8219.1.1 = { death = yes }
+}
+114982370 = {
+	name = Noho # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 112982370
+
+	8190.1.1 = { birth = yes }
+	8250.1.1 = { death = yes }
+}
+115982370 = {
+	name = Ordello # a lord
+	dynasty = dynn_Saan
+
+	religion = weeping_lady 
+	culture = lyseni
+
+	father = 112982370
+
+	8191.1.1 = { birth = yes }
+	8253.1.1 = { death = yes }
+}
+### Household
+Quanis_1 = {
+	name = Vaario # Semi-Canon
+	dynasty = dynn_Quanis
+
+	martial = 6
+	diplomacy = 2
+	intrigue = 5
+	stewardship = 2
+	prowess = 6
+	
+	religion = rhllor
+	culture = lyseni
+	
+	trait = education_martial_1
+	trait = physique_good_2
+	trait = giant
+	
+	8135.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8156.1.1 = { employer = 111982370 } # Sullehman Saan
+	8165.2.20 = { trait = burned }
+	8182.1.1 = { death = yes }
+}
+
+###### HOUSE QELITAR (id = dynn_Qelitar)
+############################
+### Pirates of Bloodstone
+###
+Qelitar_2 = {
+	name = Racallio # a lord
+	dynasty = dynn_Qelitar
+
+	religion = trios
+	culture = tyroshi
+
+	8204.1.1 = { birth = yes }
+	8221.1.1 = { add_spouse = Qelitar_rs_2 }
+	8265.1.1 = { death = yes }
+}
+Qelitar_rs_2 = {
+	name = Kiera
+	female = yes
+
+	religion = trios
+	culture = tyroshi
+
+	8204.1.1 = { birth = yes }
+	8265.1.1 = { death = yes }
+}
+### Issue of Racallio
+Qelitar_21 = {
+	name = Bessaro
+	dynasty = dynn_Qelitar
+
+	religion = trios
+	culture = tyroshi
+
+	father = Qelitar_2
+	mother = Qelitar_rs_2
+
+	8222.1.1 = { birth = yes }
+	8246.1.1 = { death = yes }
+}
+Qelitar_1 = {
+	name = Rogo # a lord
+	dynasty = dynn_Qelitar
+
+	religion = trios
+	culture = tyroshi
+
+	father = Qelitar_2
+	mother = Qelitar_rs_2
+
+	8233.1.1 = { birth = yes }
+	8262.1.1 = { add_spouse = Qelitar_rs_1 }
+	8281.1.1 = { death = yes }
+}
+Qelitar_rs_1 = {
+	name = Lusana
+	female = yes
+
+	religion = trios
+	culture = tyroshi
+
+	8233.1.1 = { birth = yes }
+	8270.1.1 = { death = yes }
+}
+
+###### HOUSE RYBAGHAS (id = dynn_Rybaghas)
+############################
+### Pirates of Blood Point
+###
+Rybaghas_8 = {
+	name = Paro # a lord
+	dynasty = dynn_Rybaghas
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	8081.1.1 = { birth = yes }
+	8142.1.1 = { death = yes }
+}
+Rybaghas_7 = {
+	name = Alethya # a lord
+	dynasty = dynn_Rybaghas
+	female = yes
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	father = Rybaghas_8
+
+	8099.1.1 = { birth = yes }
+	8160.1.1 = { death = yes }
+}
+Rybaghas_6 = {
+	name = Clario # a lord
+	dynasty = dynn_Rybaghas
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	mother = Rybaghas_7
+
+	8121.1.1 = { birth = yes }
+	8176.1.1 = { death = yes }
+}
+Rybaghas_5 = {
+	name = Tennia # a lord
+	dynasty = dynn_Rybaghas
+	female = yes
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	father = Rybaghas_6
+
+	8144.1.1 = { birth = yes }
+	8213.1.1 = { death = yes }
+}
+Rybaghas_4 = {
+	name = Pello # a lord
+	dynasty = dynn_Rybaghas
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	mother = Rybaghas_5
+
+	8164.1.1 = { birth = yes }
+	8190.1.1 = { add_spouse = Rybaghas_rs_4 }
+	8220.1.1 = { death = yes }
+}
+Rybaghas_rs_4 = {
+	name = Yasabaela
+	female = yes
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	8164.1.1 = { birth = yes }
+	8220.1.1 = { death = yes }
+}
+Rybaghas_3 = {
+	name = Yasabaela # a lord
+	dynasty = dynn_Rybaghas
+	female = yes
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	father = Rybaghas_4
+	mother = Rybaghas_rs_4
+
+	8191.1.1 = { birth = yes }
+	8208.1.1 = { add_matrilineal_spouse = Rybaghas_rs_3 }
+	8249.1.1 = { death = yes }
+}
+Rybaghas_rs_3 = {
+	name = Roggerio
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	8191.1.1 = { birth = yes }
+	8249.1.1 = { death = yes }
+}
+Rybaghas_2 = {
+	name = Mazio # a lord
+	dynasty = dynn_Rybaghas
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	father = Rybaghas_rs_3
+	mother = Rybaghas_3
+
+	8209.1.1 = { birth = yes }
+	8232.1.1 = { add_spouse = Rybaghas_rs_2 }
+	8263.1.1 = { death = yes }
+}
+Rybaghas_rs_2 = {
+	name = Shiera
+	female = yes
+
+	religion = weeping_lady
+	culture = tyroshi
+
+	8209.1.1 = { birth = yes }
+	8271.1.1 = { death = yes }
+}
+
+###### HOUSE NOVYRDION (id = dynn_Novyrdion)
+############################
+### Pirates of Upper Sunstone
+###
+Novyrdion_1 = {
+	name = Allaquo # a lord
+	dynasty = dynn_Novyrdion
+
+	religion = rhllor 
+	culture = myrish
+
+	8077.1.1 = { birth = yes }
+	8144.1.1 = { death = yes }
+}
+Novyrdion_2 = {
+	name = Tycho # a lord
+	dynasty = dynn_Novyrdion
+
+	religion = rhllor
+	culture = myrish
+
+	father = Novyrdion_1
+
+	8115.1.1 = { birth = yes }
+	8160.1.1 = { death = yes }
+}
+Novyrdion_3 = {
+	name = Ordello # a lord
+	dynasty = dynn_Novyrdion
+
+	religion = rhllor 
+	culture = myrish
+
+	father = Novyrdion_2
+
+	8137.1.1 = { birth = yes }
+	8175.1.1 = { death = { death_reason = death_murder } }
+}
+Novyrdion_4 = {
+	name = Sallodhor # a lord
+	dynasty = dynn_Novyrdion
+
+	religion = rhllor 
+	culture = myrish
+
+	father = Novyrdion_3
+
+	8156.1.1 = { birth = yes }
+	8202.1.1 = { death = { death_reason = death_murder } }
+}
+Novyrdion_5 = {
+	name = Meralyn # a lord
+	dynasty = dynn_Novyrdion
+
+	religion = rhllor 
+	culture = myrish
+
+	father = Novyrdion_4
+
+	8180.1.1 = { birth = yes }
+	8234.1.1 = { death = yes }
+}
+Novyrdion_6 = {
+	name = Daario # a lord
+	dynasty = dynn_Novyrdion
+
+	religion = rhllor
+	culture = myrish
+
+	father = Novyrdion_5
+
+	8208.1.1 = { birth = yes }
+	8254.1.1 = { death = yes }
+}
+
+###### HOUSE TOLIMORGHIS (id = dynn_Tolimorghis)
+############################
+### Pirates of Grey Gallows
+###
+Tolimorghis_4 = {
+	name = Eloros # a lord
+	dynasty = dynn_Tolimorghis
+
+	religion = weeping_lady
+	culture = lyseni
+
+	8161.1.1 = { birth = yes }
+	8187.1.1 = { add_spouse = Tolimorghis_rs_4 }
+	8228.1.1 = { death = yes }
+}
+Tolimorghis_rs_4 = {
+	name = Lysara
+	female = yes
+
+	religion = weeping_lady
+	culture = lyseni
+
+	8161.1.1 = { birth = yes }
+	8228.1.1 = { death = yes }
+}
+Tolimorghis_3 = {
+	name = Tybarro # a lord
+	dynasty = dynn_Tolimorghis
+
+	religion = weeping_lady
+	culture = lyseni
+
+	father = Tolimorghis_4
+	mother = Tolimorghis_rs_4
+
+	8188.1.1 = { birth = yes }
+	8205.1.1 = { add_spouse = Tolimorghis_rs_3 }
+	8235.1.1 = { death = yes }
+}
+Tolimorghis_rs_3 = {
+	name = Serala
+	female = yes
+
+	religion = weeping_lady
+	culture = lyseni
+
+	8188.1.1 = { birth = yes }
+	8235.1.1 = { death = yes }
+}
+### Issue of Tybarro
+Tolimorghis_2 = {
+	name = Ashaella # a lord
+	dynasty = dynn_Tolimorghis
+	female = yes
+
+	religion = weeping_lady
+	culture = lyseni
+
+	father = Tolimorghis_3
+	mother = Tolimorghis_rs_3
+
+	trait = twin
+
+	8212.1.1 = { birth = yes }
+	8232.1.1 = { add_matrilineal_spouse = Tolimorghis_rs_2 }
+	8262.1.1 = { 
+		death = {
+			death_reason = death_murder_known
+			killer = Ruartis_2 # Sathandro Ruartis
+		}
+	}
+}
+Tolimorghis_rs_2 = {
+	name = Narbo
+
+	religion = weeping_lady
+	culture = lyseni
+
+	8212.1.1 = { birth = yes }
+	8259.1.1 = { death = yes }
+}
+Tolimorghis_20 = {
+	name = Syrella
+	dynasty = dynn_Tolimorghis
+	female = yes
+
+	religion = weeping_lady
+	culture = lyseni
+
+	father = Tolimorghis_3
+	mother = Tolimorghis_rs_3
+
+	trait = twin
+
+	8206.1.1 = { birth = yes }
+	8257.1.1 = { death = yes }
+}
+Tolimorghis_21 = {
+	name = Lotharo
+	dynasty = dynn_Tolimorghis
+
+	religion = weeping_lady
+	culture = lyseni
+
+	father = Tolimorghis_3
+	mother = Tolimorghis_rs_3
+
+	8209.1.1 = { birth = yes }
+	8226.1.1 = { add_spouse = Tolimorghis_rs_21 }
+	8267.1.1 = { death = yes }
+}
+Tolimorghis_rs_21 = {
+	name = Lysana
+	female = yes
+
+	religion = weeping_lady
+	culture = lyseni
+
+	8209.1.1 = { birth = yes }
+	8267.1.1 = { death = yes }
+}
+
+###### HOUSE SORRYR (id = dynn_Sorryr)
+############################
+### Pirates of Dwarfstone
+###
+Sorryr_4 = {
+	name = Jaharo
+	dynasty = dynn_Sorryr
+
+	religion = princely_arbiter
+	culture = pentoshi
+
+	8145.1.1 = { birth = yes }
+	8203.1.1 = { add_spouse = Sorryr_rs_4 }
+	8212.1.1 = { death = yes }
+}
+Sorryr_rs_4 = {
+	name = Ferria
+	female = yes
+
+	religion = princely_arbiter
+	culture = pentoshi
+
+	8145.1.1 = { birth = yes }
+	8212.1.1 = { death = yes }
+}
+### Issue of Jaharo
+Sorryr_3 = {
+	name = Parmello # a lord
+	dynasty = dynn_Sorryr
+
+	religion = princely_arbiter
+	culture = pentoshi
+
+	father = Sorryr_4
+	mother = Sorryr_rs_4
+
+	trait = twin
+
+	8178.1.1 = { birth = yes }
+	8203.1.1 = { add_spouse = Sorryr_rs_3 }
+	8234.1.1 = { death = yes }
+}
+Sorryr_rs_3 = {
+	name = Fadrana
+	female = yes
+
+	religion = princely_arbiter
+	culture = pentoshi
+
+	8178.1.1 = { birth = yes }
+	8234.1.1 = { death = yes }
+}
+Sorryr_24 = {
+	name = Oddio
+	dynasty = dynn_Sorryr
+
+	religion = princely_arbiter
+	culture = pentoshi
+
+	father = Sorryr_4
+	mother = Sorryr_rs_4
+
+	trait = twin
+
+	8178.1.1 = { birth = yes }
+	8204.1.1 = { add_spouse = Sorryr_rs_24 }
+	8223.1.1 = { death = yes }
+}
+Sorryr_rs_24 = {
+	name = Myana
+	female = yes
+
+	religion = princely_arbiter
+	culture = pentoshi
+
+	8178.1.1 = { birth = yes }
+	8223.1.1 = { death = yes }
+}
+
+###### HOUSE UHORIS (id = dynn_Uhoris)
+############################
+### Pirates of Skullhammer
+###
+Uhoris_22 = {
+	name = Ghirio # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	7751.1.1 = { birth = yes }
+	7787.1.1 = { death = yes }
+}
+Uhoris_21 = {
+	name = Abrys # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_22
+
+	7779.1.1 = { birth = yes }
+	7816.1.1 = { death = yes }
+}
+Uhoris_20 = {
+	name = Garros # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_21
+
+	7809.1.1 = { birth = yes }
+	7870.1.1 = { death = yes }
+}
+Uhoris_19 = {
+	name = Seraena # a lord
+	dynasty = dynn_Uhoris
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_20
+
+	7833.1.1 = { birth = yes }
+	7902.1.1 = { death = yes }
+}
+Uhoris_18 = {
+	name = Ladono # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	mother = Uhoris_19
+
+	7864.1.1 = { birth = yes }
+	7930.1.1 = { death = yes }
+}
+Uhoris_17 = {
+	name = Qonane # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_18
+
+	7880.1.1 = { birth = yes }
+	7948.1.1 = { death = yes }
+}
+Uhoris_16 = { 
+	name = Mallor # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_17
+
+	7910.1.1 = { birth = yes }
+	7954.1.1 = { death = yes }
+}
+Uhoris_15 = { 
+	name = Geras # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_16
+
+	7933.1.1 = { birth = yes }
+	7997.1.1 = { death = yes }
+}
+Uhoris_14 = {
+	name = Tymeo # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_15
+
+	7960.1.1 = { birth = yes }
+	8013.1.1 = { death = yes }
+}
+Uhoris_13 = {
+	name = Orello # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_14
+
+	7979.1.1 = { birth = yes }
+	8047.1.1 = { death = yes }
+}
+Uhoris_12 = { 
+	name = Togosh # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_13
+
+	7999.1.1 = { birth = yes }
+	8067.1.1 = { death = yes }
+}
+Uhoris_11 = {
+	name = Bylar # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_12
+
+	8025.1.1 = { birth = yes }
+	8090.1.1 = { death = yes }
+}
+Uhoris_10 = {
+	name = Moleo # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_11
+
+	8045.1.1 = { birth = yes }
+	8112.1.1 = { death = yes }
+}
+Uhoris_9 = {
+	name = Qarrash # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_10
+
+	8069.1.1 = { birth = yes }
+	8125.1.1 = { death = yes }
+}
+Uhoris_8 = {
+	name = Manto # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_9
+
+	8091.1.1 = { birth = yes }
+	8150.1.1 = { death = yes }
+}
+Uhoris_rs_8 = {
+	name = Aya
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	8091.1.1 = { birth = yes }
+	8150.1.1 = { death = yes }
+}
+Uhoris_7 = {
+	name = Pallio # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_8
+	mother = Uhoris_rs_8
+
+	8116.1.1 = { birth = yes }
+	8163.1.1 = { death = yes }
+}
+Uhoris_6 = {
+	name = Haego # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_7
+
+	8132.1.1 = { birth = yes }
+	8198.1.1 = { death = yes }
+}
+Uhoris_5 = {
+	name = Nisario # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_6
+
+	8152.1.1 = { birth = yes }
+	8208.1.1 = { death = yes }
+}
+Uhoris_4 = {
+	name = Thoros # a lord
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_5
+
+	8171.1.1 = { birth = yes }
+	8190.1.1 = { add_spouse = Uhoris_rs_4 }
+	8237.1.1 = { death = yes }
+}
+Uhoris_rs_4 = {
+	name = Alyandra
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	8171.1.1 = { birth = yes }
+	8237.1.1 = { death = yes }
+}
+### Issue of Thoros
+Uhoris_25 = {
+	name = Anagros
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_4
+	mother = Uhoris_rs_4
+
+	8191.1.1 = { birth = yes }
+	8218.1.1 = { death = yes }
+}
+Uhoris_3 = {
+	name = Melaen # a lord
+	dynasty = dynn_Uhoris
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_4
+	mother = Uhoris_rs_4
+
+	8195.1.1 = { birth = yes }
+	8214.1.1 = { add_matrilineal_spouse = Uhoris_rs_3 }
+	8241.1.1 = { death = yes }
+}
+Uhoris_rs_3 = {
+	name = Denano
+
+	religion = rhllor
+	culture = hartalari
+
+	8195.1.1 = { birth = yes }
+	8241.1.1 = { death = yes }
+}
+Uhoris_26 = {
+	name = Maeris
+	dynasty = dynn_Uhoris
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_4
+	mother = Uhoris_rs_4
+
+	8197.1.1 = { birth = yes }
+	8262.1.1 = { death = yes }
+}
+### Issue of Melaen
+Uhoris_2 = {
+	name = Roro # Canon, AKA: The Blind Bastard, a lord 
+	dynasty = dynn_Uhoris
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_rs_3
+	mother = Uhoris_3
+
+	trait = education_stewardship_2
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8226.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8242.1.1 = {
+		trait = arrogant
+		trait = eccentric
+		trait = greedy
+	}
+	8244.1.1 = { add_spouse = Uhoris_rs_2 }
+	8245.1.1 = { give_nickname = nick_the_blind_bastard }
+	8270.1.1 = { 
+		death = {
+			death_reason = death_execution 
+			killer = Webber_27 # Reynard Webber
+		}
+	}
+}
+Uhoris_rs_2 = {
+	name = Cassiane
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	8226.1.1 = { birth = yes }
+	8272.1.1 = { death = yes }
+}
+Uhoris_23 = {
+	name = Seren
+	dynasty = dynn_Uhoris
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_rs_3
+	mother = Uhoris_3
+
+	8221.1.1 = { birth = yes }
+	8278.1.1 = { death = yes }
+}
+Uhoris_24 = {
+	name = Taela
+	dynasty = dynn_Uhoris
+	female = yes
+
+	religion = rhllor
+	culture = hartalari
+
+	father = Uhoris_rs_3
+	mother = Uhoris_3
+
+	8226.1.1 = { birth = yes }
+	8269.1.1 = { death = yes }
+}
+
+###### HOUSE RAAQOS (id = dynn_Raaqos)
+############################
+### Pirates of Pyrwell
+###
+Raaqos_4 = {
+	name = Melio # a lord
+	dynasty = dynn_Raaqos
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8150.1.1 = { birth = yes }
+	8176.1.1 = { add_spouse = Raaqos_rs_4 }
+	8207.1.1 = { death = yes }
+}
+Raaqos_rs_4 = {
+	name = Syrella
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8150.1.1 = { birth = yes }
+	8207.1.1 = { death = yes }
+}
+Raaqos_3 = {
+	name = Balarro # a lord
+	dynasty = dynn_Raaqos
+
+	religion = weeping_lady
+	culture = braavosi
+
+	father = Raaqos_4
+	mother = Raaqos_rs_4
+
+	8177.1.1 = { birth = yes }
+	8207.1.1 = { add_spouse = Raaqos_rs_3 }
+	8242.1.1 = { death = yes }
+}
+Raaqos_rs_3 = {
+	name = Serala
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8177.1.1 = { birth = yes }
+	8242.1.1 = { death = yes }
+}
+Raaqos_2 = {
+	name = Brusco # a lord
+	dynasty = dynn_Raaqos
+
+	religion = weeping_lady
+	culture = braavosi
+
+	father = Raaqos_3
+	mother = Raaqos_rs_3
+
+	8213.1.1 = { birth = yes }
+	8244.1.1 = { add_spouse = Raaqos_rs_2 }
+	8261.1.1 = { death = yes }
+}
+Raaqos_rs_2 = {
+	name = Zea
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8213.1.1 = { birth = yes }
+	8261.1.1 = { death = yes }
+}
+
+### HOUSE SAERANYS (id = dynn_Saeranys)
+############################
+### Pirates of Denmaiden
+###
+Saeranys_3 = {
+	name = Senerra
+	dynasty = dynn_Saeranys
+	female = yes
+
+	religion = trios
+	culture = lyseni
+
+	8179.1.1 = { birth = yes }
+	8195.1.1 = { add_matrilineal_spouse = Saeranys_rs_3 }
+	8234.1.1 = { death = yes }
+}
+Saeranys_rs_3 = {
+	name = Novenko
+
+	religion = trios
+	culture = lyseni
+
+	8179.1.1 = { birth = yes }
+	8234.1.1 = { death = yes }
+}
+### Issue of Senerra
+Saeranys_24 = {
+	name = Dranas
+	dynasty = dynn_Saeranys
+
+	religion = trios
+	culture = lyseni
+
+	father = Saeranys_rs_3
+	mother = Saeranys_3
+
+	8196.1.1 = { birth = yes }
+	8221.1.1 = { death = yes }
+}
+Saeranys_25 = {
+	name = Ralla
+	dynasty = dynn_Saeranys
+	female = yes
+
+	religion = trios
+	culture = lyseni
+
+	father = Saeranys_rs_3
+	mother = Saeranys_3
+
+	8199.1.1 = { birth = yes }
+	8232.1.1 = { death = yes }
+}
+Saeranys_2 = {
+	name = Stamatys # a lord
+	dynasty = dynn_Saeranys
+
+	religion = trios
+	culture = lyseni
+
+	father = Saeranys_rs_3
+	mother = Saeranys_3
+
+	8200.1.1 = { birth = yes }
+	8222.1.1 = { add_spouse = Saeranys_rs_2 }
+	8239.1.1 = { death = yes }
+}
+Saeranys_rs_2 = {
+	name = Arana
+	female = yes
+
+	religion = trios
+	culture = lyseni
+
+	8204.1.1 = { birth = yes }
+	8248.1.1 = { death = yes }
+}
+### Issue of Stamatys
+Saeranys_23 = {
+	name = Kaamaro
+	dynasty = dynn_Saeranys
+
+	religion = trios
+	culture = lyseni
+
+	father = Saeranys_2
+	mother = Saeranys_rs_2
+
+	8223.1.1 = { birth = yes }
+	8247.1.1 = { death = yes }
+}
+
+###### HOUSE NOMEMBON (id = dynn_Nomembon)
+############################
+### Pirates of Raidmaiden
+###
+Nomembon_4 = {
+	name = Elara # a lord
+	dynasty = dynn_Nomembon
+	female = yes
+
+	religion = trios
+	culture = hartalari
+
+	8178.1.1 = { birth = yes }
+	8194.1.1 = { add_matrilineal_spouse = Nomembon_rs_4 }
+	8226.1.1 = { death = yes }
+}
+Nomembon_rs_4 = {
+	name = Togosh
+
+	religion = trios
+	culture = hartalari
+
+	8178.1.1 = { birth = yes }
+	8226.1.1 = { death = yes }
+}
+### Issue of Elara
+Nomembon_3 = {
+	name = Ghirio # a lord
+	dynasty = dynn_Nomembon
+
+	religion = trios
+	culture = hartalari
+
+	father = Nomembon_rs_4
+	mother = Nomembon_4
+
+	trait = twin
+
+	8195.1.1 = { birth = yes }
+	8212.1.1 = { add_spouse = Nomembon_rs_3 }
+	8252.1.1 = { death = yes }
+}
+Nomembon_rs_3 = {
+	name = Serenna
+	female = yes
+
+	religion = trios
+	culture = hartalari
+
+	8195.1.1 = { birth = yes }
+	8252.1.1 = { death = yes }
+}
+Nomembon_24 = {
+	name = Syrella
+	dynasty = dynn_Nomembon
+	female = yes
+
+	religion = trios
+	culture = hartalari
+
+	father = Nomembon_rs_4
+	mother = Nomembon_4
+
+	trait = twin
+
+	8195.1.1 = { birth = yes }
+	8261.1.1 = { death = yes }
+}
+Nomembon_25 = {
+	name = Irea
+	dynasty = dynn_Nomembon
+	female = yes
+
+	religion = trios
+	culture = hartalari
+
+	father = Nomembon_rs_4
+	mother = Nomembon_4
+
+	8202.1.1 = { birth = yes }
+	8257.1.1 = { death = yes }
+}
+### Issue of Ghirio
+Nomembon_2 = {
+	name = Denano # a lord
+	dynasty = dynn_Nomembon
+
+	religion = trios
+	culture = hartalari
+
+	father = Nomembon_3
+	mother = Nomembon_rs_3
+
+	8213.1.1 = { birth = yes }
+	8232.1.1 = { add_spouse = Nomembon_rs_2 }
+	8263.1.1 = { death = yes }
+}
+Nomembon_rs_2 = {
+	name = Serenna
+	female = yes
+
+	religion = trios
+	culture = hartalari
+
+	8213.1.1 = { birth = yes }
+	8263.1.1 = { death = yes }
+}
+Nomembon_22 = {
+	name = Beqqo
+	dynasty = dynn_Nomembon
+
+	religion = trios
+	culture = hartalari
+
+	father = Nomembon_3
+	mother = Nomembon_rs_3
+
+	8220.1.1 = { birth = yes }
+	8237.1.1 = { add_spouse = Nomembon_rs_22 }
+	8258.1.1 = { death = yes }
+}
+Nomembon_rs_22 = {
+	name = Taela
+	female = yes
+
+	religion = trios
+	culture = hartalari
+
+	8220.1.1 = { birth = yes }
+	8258.1.1 = { death = yes }
+}
+Nomembon_23 = {
+	name = Mylla
+	dynasty = dynn_Nomembon
+	female = yes
+
+	religion = trios
+	culture = hartalari
+
+	father = Nomembon_3
+	mother = Nomembon_rs_3
+
+	8222.1.1 = { birth = yes }
+	8289.1.1 = { death = yes }
+}
+
+###### HOUSE QORAENYR (id = dynn_Qoraenyr)
+############################
+### Tiger's Island
+###
+Qoraenyr_8 = {
+	name = Beloro # a lord
+	dynasty = dynn_Qoraenyr
+
+	religion = rhllor
+	culture = volantene
+
+	8062.1.1 = { birth = yes }
+	8126.1.1 = { death = yes }
+}
+Qoraenyr_7 = {
+	name = Agono # a lord
+	dynasty = dynn_Qoraenyr
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_8
+
+	8081.1.1 = { birth = yes }
+	8149.1.1 = { death = yes }
+}
+Qoraenyr_6 = {
+	name = Anarro # a lord
+	dynasty = dynn_Qoraenyr
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_7
+
+	8112.1.1 = { birth = yes }
+	8174.1.1 = { death = yes }
+}
+Qoraenyr_5 = {
+	name = Pandulo # a lord
+	dynasty = dynn_Qoraenyr
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_6
+
+	8140.1.1 = { birth = yes }
+	8204.1.1 = { death = yes }
+}
+Qoraenyr_4 = {
+	name = Qavo # a lord
+	dynasty = dynn_Qoraenyr
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_5
+
+	8163.1.1 = { birth = yes }
+	8183.1.1 = { add_spouse = Qoraenyr_rs_4 }
+	8231.1.1 = { death = yes }
+}
+Qoraenyr_rs_4 = {
+	name = Melane
+	female = yes
+
+	religion = rhllor
+	culture = volantene
+
+	8163.1.1 = { birth = yes }
+	8231.1.1 = { death = yes }
+}
+### Issue of Qavo
+Qoraenyr_3 = {
+	name = Donano # a lord
+	dynasty = dynn_Qoraenyr
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_4
+	mother = Qoraenyr_rs_4
+
+	8193.1.1 = { birth = yes }
+	8215.1.1 = { add_spouse = Qoraenyr_rs_3 }
+	8259.1.1 = { death = yes }
+}
+Qoraenyr_rs_3 = {
+	name = Syrana
+	female = yes
+
+	religion = rhllor
+	culture = volantene
+
+	8184.1.1 = { birth = yes }
+	8249.1.1 = { death = yes }
+}
+Qoraenyr_22 = {
+	name = Dorella
+	dynasty = dynn_Qoraenyr
+	female = yes
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_4
+	mother = Qoraenyr_rs_4
+
+	8187.1.1 = { birth = yes }
+	8245.1.1 = { death = yes }
+}
+Qoraenyr_23 = {
+	name = Trianna
+	dynasty = dynn_Qoraenyr
+	female = yes
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_4
+	mother = Qoraenyr_rs_4
+
+	8188.1.1 = { birth = yes }
+	8249.1.1 = { death = yes }
+}
+### Issue of Donano
+Qoraenyr_2 = {
+	name = Pharasos # a lord
+	dynasty = dynn_Qoraenyr
+
+	religion = rhllor
+	culture = volantene
+
+	father = Qoraenyr_3
+	mother = Qoraenyr_rs_3
+
+	8220.1.1 = { birth = yes }
+	8239.1.1 = { add_spouse = Qoraenyr_rs_2 }
+	8286.1.1 = { death = yes }
+}
+Qoraenyr_rs_2 = {
+	name = Vyrana
+	female = yes
+
+	religion = rhllor
+	culture = volantene
+
+	8211.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+
+###### HOUSE VASTAERYN (id = dynn_Vastaeryn)
+############################
+### Pirates of Duskrane
+###
+Vastaeryn_20 = {
+	name = Togosh # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	7799.1.1 = { birth = yes }
+	7860.1.1 = { death = yes }
+}
+Vastaeryn_19 = {
+	name = Morgo
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_20
+
+	7816.1.1 = { birth = yes }
+	7860.1.1 = { death = yes }
+}
+Vastaeryn_18 = {
+	name = Andrio # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_19
+
+	7835.1.1 = { birth = yes }
+	7893.1.1 = { death = yes }
+}
+Vastaeryn_17 = {
+	name = Garros # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_18
+
+	7863.1.1 = { birth = yes }
+	7922.1.1 = { death = yes }
+}
+Vastaeryn_16 = {
+	name = Ghilorros # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_17
+
+	7891.1.1 = { birth = yes }
+	7943.1.1 = { death = yes }
+}
+Vastaeryn_15 = {
+	name = Malo # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_16
+
+	7914.1.1 = { birth = yes }
+	7970.1.1 = { death = yes }
+}
+Vastaeryn_14 = {
+	name = Costos # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_15
+
+	7931.1.1 = { birth = yes }
+	7996.1.1 = { death = yes }
+}
+Vastaeryn_13 = {
+	name = Morosh # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_14
+
+	7958.1.1 = { birth = yes }
+	8008.1.1 = { death = yes }
+}
+Vastaeryn_12 = {
+	name = Andrio # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_13
+
+	7982.1.1 = { birth = yes }
+	8018.1.1 = { death = yes }
+}
+Vastaeryn_11 = {
+	name = Terelas # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_12
+
+	8001.1.1 = { birth = yes }
+	8066.1.1 = { death = yes }
+}
+Vastaeryn_10 = {
+	name = Visario # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_11
+
+	8031.1.1 = { birth = yes }
+	8086.1.1 = { death = yes }
+}
+Vastaeryn_9 = {
+	name = Alyandra # a lord
+	dynasty = dynn_Vastaeryn
+	female = yes
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_10
+
+	8048.1.1 = { birth = yes }
+	8104.1.1 = { death = yes }
+}
+Vastaeryn_8 = {
+	name = Qasqos # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	mother = Vastaeryn_9
+
+	8078.1.1 = { birth = yes }
+	8130.1.1 = { death = yes }
+}
+Vastaeryn_7 = {
+	name = Corso # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_8
+
+	8096.1.1 = { birth = yes }
+	8156.1.1 = { death = yes }
+}
+Vastaeryn_6 = {
+	name = Rhogarro # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_7
+
+	8114.1.1 = { birth = yes }
+	8162.1.1 = { death = yes }
+}
+Vastaeryn_5 = {
+	name = Amana # a lord
+	dynasty = dynn_Vastaeryn
+	female = yes
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_6
+
+	8130.1.1 = { birth = yes }
+	8192.1.1 = { death = yes }
+}
+Vastaeryn_4 = {
+	name = Alyandra # a lord
+	dynasty = dynn_Vastaeryn
+	female = yes
+
+	religion = trios
+	culture = myrish
+
+	mother = Vastaeryn_5
+
+	8160.1.1 = { birth = yes }
+	8185.1.1 = { add_matrilineal_spouse = Vastaeryn_rs_4 }
+	8223.1.1 = { death = yes }
+}
+Vastaeryn_rs_4 = {
+	name = Sotros
+
+	religion = trios
+	culture = myrish
+
+	8160.1.1 = { birth = yes }
+	8223.1.1 = { death = yes }
+}
+Vastaeryn_3 = {
+	name = Rogo # a lord
+	dynasty = dynn_Vastaeryn
+
+	religion = trios
+	culture = myrish
+
+	father = Vastaeryn_rs_4
+	mother = Vastaeryn_4
+
+	8186.1.1 = { birth = yes }
+	8249.1.1 = { death = yes }
+}
+
+###### HOUSE AGOMEMYS (id = dynn_Agomemys)
+############################
+###
+###
+Agomemys_5 = {
+	name = Ballabar # a lord
+	dynasty = dynn_Agomemys
+
+	religion = trios
+	culture = lyseni
+
+	8144.1.1 = { birth = yes }
+	8193.1.1 = { death = yes }
+}
+Agomemys_4 = {
+	name = Vasandro # a lord
+	dynasty = dynn_Agomemys
+
+	religion = trios
+	culture = lyseni
+
+	father = Agomemys_5
+
+	8164.1.1 = { birth = yes }
+	8181.1.1 = { add_spouse = Agomemys_rs_4 }
+	8214.1.1 = { death = yes }
+}
+Agomemys_rs_4 = {
+	name = Myrmadora
+	female = yes
+
+	religion = trios
+	culture = lyseni
+
+	8164.1.1 = { birth = yes }
+	8214.1.1 = { death = yes }
+}
+### Issue of Vasandro
+Agomemys_22 = {
+	name = Dorallos
+	dynasty = dynn_Agomemys
+
+	religion = trios
+	culture = lyseni
+
+	father = Agomemys_4
+	mother = Agomemys_rs_4
+
+	8182.1.1 = { birth = yes }
+	8183.1.1 = { death = yes }
+}
+Agomemys_3 = {
+	name = Tessario # a lord
+	dynasty = dynn_Agomemys
+
+	religion = trios
+	culture = lyseni
+
+	father = Agomemys_4
+	mother = Agomemys_rs_4
+
+	8191.1.1 = { birth = yes }
+	8211.1.1 = { add_spouse = Agomemys_rs_3 }
+	8260.1.1 = { death = yes }
+}
+Agomemys_rs_3 = {
+	name = Mysaria
+	female = yes
+
+	religion = trios
+	culture = lyseni
+
+	8191.1.1 = { birth = yes }
+	8260.1.1 = { death = yes }
+}
+### Issue of Tessario
+Agomemys_21 = {
+	name = Seria
+	dynasty = dynn_Agomemys
+	female = yes
+
+	religion = trios
+	culture = lyseni
+
+	father = Agomemys_3
+	mother = Agomemys_rs_3
+
+	8212.1.1 = { birth = yes }
+	8280.1.1 = { death = yes }
+}
+Agomemys_2 = {
+	name = Moredo # a lord
+	dynasty = dynn_Agomemys
+
+	religion = trios
+	culture = lyseni
+
+	father = Agomemys_3
+	mother = Agomemys_rs_3
+
+	8214.1.1 = { birth = yes }
+	8232.1.1 = { add_spouse = Agomemys_rs_2 }
+	8274.1.1 = { death = yes }
+}
+Agomemys_rs_2 = {
+	name = Shiera
+	female = yes
+
+	religion = trios
+	culture = lyseni
+
+	8214.1.1 = { birth = yes }
+	8274.1.1 = { death = yes }
+}
+
+###### HOUSE MIRTAYNE (id = dynn_Mirtayne)
+############################
+###
+###
+Mirtayne_21 = { 
+	name = Nymeria # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	7796.1.1 = { birth = yes }
+	7851.1.1 = { death = yes }
+}
+Mirtayne_20 = { 
+	name = Caroley
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_21
+
+	7816.1.1 = { birth = yes }
+	7844.1.1 = { death = yes }
+}
+Mirtayne_19 = { 
+	name = Maron # a lord
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_20
+
+	7833.1.1 = { birth = yes }
+	7893.1.1 = { death = yes }
+}
+Mirtayne_18 = { 
+	name = Sarelya # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_19
+
+	7857.1.1 = { birth = yes }
+	7916.1.1 = { death = yes }
+}
+Mirtayne_17 = { 
+	name = Quentyn # a lord
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_18
+
+	7883.1.1 = { birth = yes }
+	7938.1.1 = { death = yes }
+}
+Mirtayne_16 = { 
+	name = Alleras # a lord
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_17
+
+	7909.1.1 = { birth = yes }
+	7974.1.1 = { death = yes }
+}
+Mirtayne_15 = { 
+	name = Elia # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_16
+
+	7935.1.1 = { birth = yes }
+	8000.1.1 = { death = yes }
+}
+Mirtayne_14 = { 
+	name = Allar # a lord
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_15
+
+	7953.1.1 = { birth = yes }
+	8021.1.1 = { death = yes }
+}
+Mirtayne_13 = { 
+	name = Delonne # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_14
+
+	7972.1.1 = { birth = yes }
+	8040.1.1 = { death = yes }
+}
+Mirtayne_12 = { 
+	name = Allyria
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_13
+
+	7994.1.1 = { birth = yes }
+	8040.1.1 = { death = yes }
+}
+Mirtayne_11 = { 
+	name = Nysterica # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_12
+
+	8017.1.1 = { birth = yes }
+	8075.1.1 = { death = yes }
+}
+Mirtayne_10 = { 
+	name = Aliandra # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_11
+
+	8038.1.1 = { birth = yes }
+	8087.1.1 = { death = yes }
+}
+Mirtayne_9 = { 
+	name = Senelle # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_10
+
+	8068.1.1 = { birth = yes }
+	8123.1.1 = { death = yes }
+}
+Mirtayne_8 = { 
+	name = Ashara # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_9
+
+	8095.1.1 = { birth = yes }
+	8145.1.1 = { death = yes }
+}
+Mirtayne_7 = { 
+	name = Beyandra # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_8
+
+	8114.1.1 = { birth = yes }
+	8179.1.1 = { death = yes }
+}
+Mirtayne_6 = { 
+	name = Rycas # a lord
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	mother = Mirtayne_7
+
+	8134.1.1 = { birth = yes }
+	8200.1.1 = { death = yes }
+}
+Mirtayne_5 = { 
+	name = Nymor # a lord
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_6
+
+	8154.1.1 = { birth = yes }
+	8177.1.1 = { add_spouse = Mirtayne_rs_5 } 
+	8214.1.1 = { death = yes }
+}
+Mirtayne_rs_5 = {
+	name = Donyse
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	8154.1.1 = { birth = yes }
+	8214.1.1 = { death = yes }
+}
+### Issue of Nymor
+Mirtayne_28 = { 
+	name = Ellaria
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_5
+	mother = Mirtayne_rs_5
+
+	8178.1.1 = { birth = yes }
+	8184.1.1 = { death = yes }
+}
+Mirtayne_4 = { 
+	name = Belyar # a lord
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_5
+	mother = Mirtayne_rs_5
+
+	8185.1.1 = { birth = yes }
+	8208.1.1 = { add_spouse = Mirtayne_rs_4 } 
+	8244.1.1 = { death = yes }
+}
+Mirtayne_rs_4 = {
+	name = Morra
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	8185.1.1 = { birth = yes }
+	8244.1.1 = { death = yes }
+}
+### Issue of Belyar
+Mirtayne_25 = { 
+	name = Sarelya
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_4
+	mother = Mirtayne_rs_4
+
+	8209.1.1 = { birth = yes }
+	8210.1.1 = { death = yes }
+}
+Mirtayne_26 = { 
+	name = Quentyn
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_4
+	mother = Mirtayne_rs_4
+
+	8211.1.1 = { birth = yes }
+	8214.1.1 = { death = yes }
+}
+Mirtayne_3 = { 
+	name = Loreza # a lord
+	dynasty = dynn_Mirtayne
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_4
+	mother = Mirtayne_rs_4
+
+	8214.1.1 = { birth = yes }
+	8231.1.1 = { add_matrilineal_spouse = Mirtayne_rs_3 } 
+	8276.1.1 = { death = yes }
+}
+Mirtayne_rs_3 = {
+	name = Qoren
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	8214.1.1 = { birth = yes }
+	8276.1.1 = { death = yes }
+}
+Mirtayne_27 = { 
+	name = Manfrey
+	dynasty = dynn_Mirtayne
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	father = Mirtayne_4
+	mother = Mirtayne_rs_4
+
+	8219.1.1 = { birth = yes }
+	8236.1.1 = { add_spouse = Mirtayne_rs_27 } 
+	8286.1.1 = { death = yes }
+}
+Mirtayne_rs_27 = {
+	name = Cassella
+	female = yes
+
+	religion = mother_rhoyne
+	culture = rhoynish
+
+	8219.1.1 = { birth = yes }
+	8286.1.1 = { death = yes }
+}
+
+###### KINGS OF THE STEPSTONES
+############################
+### Successors of Daemon Targaryen
+###
+Daemon_Successor_1 = { 
+	name = Garynos # Mentioned
+
+	religion = rhllor
+	culture = hartalari
+
+	8078.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8117.1.1 = { 
+		death = {
+			death_reason = death_murder_known
+			killer = Daemon_Successor_2 # Kaeron
+		}
+	}
+}
+Daemon_Successor_2 = { 
+	name = Kaeron # Mentioned
+
+	religion = the_seven_main
+	culture = westerosi_valyrian 
+
+	trait = impatient
+	trait = ambitious
+	trait = deceitful
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8092.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8121.1.1 = { 
+		death = {
+			death_reason = death_execution
+			killer = Daemon_Successor_3 # Qos
+		}
+	}
+}
+Daemon_Successor_3 = { 
+	name = Qos # Mentioned
+
+	religion = trios
+	culture = myrish
+
+	trait = just
+
+	8062.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8127.1.1 = { 
+		death = { death_reason = death_accident }
+	}
+}
+Daemon_Successor_4 = { 
+	name = Jate # Mentioned
+
+	religion = the_seven_main
+	culture = crownlander 
+
+	8087.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8131.9.1 = { 
+		death = { 
+			death_reason = death_execution
+			killer = Ryndoon_8_B # Racallio Ryndoon
+		}
+	}
+}

@@ -1,0 +1,46 @@
+﻿#####################################
+#####     HISTORICAL HEROES     #####
+#####################################
+
+####################
+# SYMEON STAR-EYES #
+####################
+Heroes_24 = {
+	name = Symeon # Canon, Symeon, AKA: Symeon Star-Eyes
+	dna = Heroes_24
+
+	martial = 10
+	prowess = 50  # To counter the blind nerf, since it didn't affect him
+	# AGOT TODO: If we ever figure out how to get 'blademaster' to be properly added,
+	#            then reduce prowess to 40.
+
+	religion = old_gods_south
+	culture = first_man
+
+	trait = education_martial_3
+	trait = education_martial_prowess_4
+	trait = intellect_good_1
+	trait = brave
+	trait = just
+	trait = honorable
+	trait = diligent
+
+	2500.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	2525.1.1 = {
+		trait = blind
+		give_nickname = nick_star_eyes
+	}
+	2530.1.1 = {
+		effect = {
+			add_trait = lifestyle_blademaster
+			add_trait_xp = {
+				trait = lifestyle_blademaster
+				value = trait_third_level
+			}
+		}
+	}
+	2560.1.1 = { death = yes }
+}

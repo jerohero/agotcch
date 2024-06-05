@@ -1,0 +1,2811 @@
+﻿############################           DRAGONS          ############################
+####################################################################################
+
+###### DRAGONS OF HOUSE TARGARYEN
+############################
+###
+###
+dragon_ancestor_5 = {
+	name = Volon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_friendly
+	trait = dragon_supporting
+	trait = dragon_calculating
+
+	disallow_random_traits = yes
+
+	7594.1.1 = { birth = yes }
+	7801.1.1 = { death = { death_reason = death_old_age } }
+}
+dragon_ancestor_1 = {
+	name = Vaedar
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+	
+	mother = dragon_ancestor_5
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_imperious
+	trait = dragon_voracious
+	trait = dragon_calculating
+
+	disallow_random_traits = yes
+
+	7630.1.1 = { birth = yes }
+	7866.1.1 = { death = { death_reason = death_old_age } }
+}
+dragon_ancestor_6 = {
+	name = Telarion
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+	
+	mother = dragon_ancestor_5
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_imperious
+	trait = dragon_voracious
+	trait = dragon_calculating
+
+	disallow_random_traits = yes
+
+	7644.1.1 = { birth = yes }
+	7866.1.1 = { death = { death_reason = death_old_age } }
+}
+### Three Semi-Canon dragons that didn't fit the chronology
+dragon_essovius = {
+	name = Essovius # Semi-Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_6
+
+	trait = dragon
+	trait = education_dragon_3
+
+	disallow_random_traits = yes
+
+	7733.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	7849.1.1 = { death = yes }
+}
+dragon_valryon = {
+	name = Valryon # Semi-Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_6
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	7740.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	7853.1.1 = { death = yes }
+}
+dragon_ghiscar = {
+	name = Ghiscar # Semi-Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_6
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	7780.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	7853.1.1 = { death = yes }
+}
+### Five Dragons of Aenar the Exile
+dragon_vermithrax = {
+	name = Vermithrax # Semi-Canon
+	
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_1
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_slow
+	trait = dragon_cooperative
+	trait = dragon_imperious
+	trait = dragon_friendly
+
+	disallow_random_traits = yes
+
+	7761.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_semicanon
+		effect = { add_character_flag = owned_dragon }
+	}
+	7841.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_13_A # Maegor Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7873.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_13 # Aenar the Exile
+				DRAGON = ROOT
+			}
+		}
+	}
+	7887.1.1 = {
+		effect = { 
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	7931.1.1 = { death = { death_reason = death_old_age } }
+}
+dragon_anogaros = {
+	name = Anogaros # Mentioned
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_1
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_ugly
+	trait = dragon_physique_good_2
+	trait = dragon_aggressive
+	trait = dragon_voracious
+	trait = dragon_impulsive
+
+	disallow_random_traits = yes
+
+	7825.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_13_B # Gael Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7838.1.1 = { 
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_13_B # Gael Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7887.1.1 = {
+		effect = { 
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	7889.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_14 # Gaemon the Glorious
+				DRAGON = ROOT
+			}
+		}
+	}
+	7930.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_18 # Daena Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7954.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_23 # Baelon Targaryen
+				DRAGON = ROOT
+			}
+		}	
+	}
+	7955.6.1 = { trait = dragon_wounded_5 } # Duel with Archonei
+	7956.1.1 = { death = { death_reason = death_wounded_3 } }
+}
+dragon_balerion = {
+	name = Balerion # Canon
+	dna = dragon_balerion
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_anogaros
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_physique_good_3
+	trait = dragon_calculating
+	trait = dragon_cooperative
+	trait = dragon_imperious
+	trait = dragon_bloodthirsty
+
+	disallow_random_traits = yes
+
+	7842.4.23 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = { 
+			add_character_flag = owned_dragon 
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_13_C # Rhaella Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7856.1.1 = {
+		effect = { 
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_13_C # Rhaella Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7887.1.1 = {
+		effect = { 
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	7910.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_17 # Elaena Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7950.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_20 # Aerys Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7986.1.1 = {
+		agot_tame_dragon = {
+			TAMER = character:Targaryen_27 # Aegon I Targaryen
+			DRAGON = ROOT
+		}
+	}
+	7992.1.1 = { give_nickname = nick_the_black_dread } # Matched with Siroricide
+	8037.9.9 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_31 # Maegor Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8054.12.1 = {
+		agot_tame_dragon = {
+			TAMER = character:Targaryen_41 # Aerea Targaryen
+			DRAGON = ROOT
+		}
+	}
+	8056.4.14 = { # Aerea's death
+		trait = dragon_wounded_3
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8093.1.1 = {
+		agot_tame_dragon = {
+			TAMER = character:Targaryen_60 # Viserys I Targaryen
+			DRAGON = ROOT
+		}
+	}
+	8093.10.1 = {
+		# AGOT TODO: Add Skull
+		death = { death_reason = death_old_age }
+	}
+}
+dragon_nessarion = {
+	name = Nessarion # Mentioned
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_anogaros
+
+	trait = dragon
+	trait = dragon_majestic
+	trait = education_dragon_2
+	trait = dragon_friendly
+	trait = dragon_skittish
+	trait = dragon_defiant
+
+	disallow_random_traits = yes
+
+	7850.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+		effect = { add_character_flag = owned_dragon }
+	}
+	7882.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_15 # Daenys the Dreamer
+				DRAGON = ROOT
+			}
+		}
+	}
+	7887.1.1 = {
+		effect = { 
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	7930.1.1 = { trait = depressed_1 } # Daenys died, didn't accepted new rider
+	7955.6.1 = {
+		death = { death_reason = death_vanished } # Flew off to Valyria
+	}
+}
+dragon_archonei = {
+	name = Archonei # Semi-Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_nessarion
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_physique_bad_1
+	trait = dragon_cooperative
+	trait = dragon_friendly
+	trait = dragon_restrained
+
+	disallow_random_traits = yes
+
+	7882.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_semicanon
+		effect = {
+			add_character_flag = owned_dragon
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_13_D # Valarr Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7887.1.1 = {
+		effect = { 
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	7890.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_13_D # Valarr Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7907.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_16 # Aegon 0 Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7935.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_19 # Maegon Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7950.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_22 # Aelyx Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7955.6.1 = {
+		death = {
+			death_reason = death_dragon_duel
+			killer = dragon_anogaros # Anogaros
+		}
+	}
+}
+### The Cannibal
+dragon_cannibal = {
+	name = Cannibal # Canon
+	dna = dragon_cannibal
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_anogaros
+
+	trait = dragon
+	trait = education_dragon_1
+	trait = dragon_physique_good_3
+	trait = dragon_solitary
+	trait = dragon_bloodthirsty
+	trait = dragon_voracious
+	trait = dragon_defiant
+
+	disallow_random_traits = yes
+
+	7974.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	7990.1.1 = { trait = dragon_cannibal }
+	8142.1.1 = { death = yes }
+}
+
+### Post-Doom Dragons
+############################
+dragon_meraxes = {
+	name = Meraxes # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_nessarion
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_cooperative
+	trait = dragon_calculating
+	trait = dragon_skittish
+
+	disallow_random_traits = yes
+
+	7925.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			add_character_flag = owned_dragon
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_21 # Rhaella Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7930.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_21 # Rhaella Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7953.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_24 # Daemion Targaryen
+				DRAGON = ROOT
+			}
+		}	
+	}
+	7971.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_26 # Aerion Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7996.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_29 # Rhaenys Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8010.1.1 = {
+		death = {
+			death_reason = death_dragon_scorpion # Battle of Hellholt
+			killer = Uller_19 # Uthor Uller
+		}
+		# AGOT TODO: Add Skull
+	}
+}
+dragon_vhagar = {
+	name = Vhagar # Canon
+	female = yes
+	dna = dragon_vhagar
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_nessarion
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_solitary
+	trait = dragon_accepting
+	trait = dragon_impulsive
+
+	disallow_random_traits = yes
+
+	7949.1.1 = { 
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = { 
+			add_character_flag = owned_dragon
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	7991.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_28 # Visenya Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8044.7.1 = {
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		} 	
+	}
+	8056.1.1 = {
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}	
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8073.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_46 # Baelon the Brave
+				DRAGON = ROOT
+			}
+		}
+	}
+	8104.1.1 = {
+		effect = {		
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}	
+			agot_tame_dragon = {
+				TAMER = character:Velaryon_34 # Laena Velaryon
+				DRAGON = ROOT
+			}
+		}
+	}
+	8120.2.20 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_67 # Aemond One-Eye
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.5.22 = {
+		death = {
+			death_reason = death_dragon_duel # Battle above the God's Eye
+			killer = dragon_caraxes # Caraxes
+		}
+		# AGOT TODO: Add Skull
+	}
+}
+### Clutch of Meraxes
+dragon_quicksilver = {
+	name = Quicksilver # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+	
+	mother = dragon_meraxes
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_swift # Assumed based on name
+	trait = dragon_supporting
+	trait = dragon_restrained
+	trait = dragon_impulsive
+	
+	disallow_random_traits = yes
+
+	8007.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_30 # Aenys I Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8015.9.9 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_30 # Aenys I Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8042.1.1 = { 
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_33 # Aegon the Uncrowned
+				DRAGON = ROOT
+			}
+		}
+	}
+	8043.11.2 = {
+		death = {
+			death_reason = death_dragon_duel
+			killer = dragon_balerion # Balerion Black Dread
+		}
+	}
+}
+dragon_serporoth = {
+	name = Serporoth 
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_meraxes
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8009.1.1 = { 
+		birth = yes 
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8025.1.1 = {
+		death = {
+			death_reason = death_dragon_duel
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_1 = {
+	name = Tyriax # Mentioned, hatchling offered to Maegor
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_meraxes
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8017.1.1 = { 
+		birth = yes
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8019.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+### Clutch of Serporoth, needed for Maegor-Aenys fourteen hatchlings
+dragon_maegor_2 = {
+	name = Lorcan # Mentioned, hatchling offered to Maegor
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_serporoth 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8022.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8023.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_3 = {
+	name = Orion # Mentioned, hatchling offered to Maegor
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_serporoth 
+
+	trait = dragon
+	trait = education_dragon_3
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8022.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8036.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_4 = {
+	name = Blackfyre # Mentioned, hatchling offered to Maegor
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_serporoth 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8024.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8025.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+### First clutch of Vhagar
+dragon_dreamfyre = {
+	name = Dreamfyre # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_vhagar
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_calculating
+	trait = dragon_imperious
+	trait = dragon_defiant
+
+	disallow_random_traits = yes
+
+	8029.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+	}
+	8032.1.1 = {
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_32 # Rhaena Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8037.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_32 # Rhaena Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8073.7.1 = { # Rhaena's death
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8119.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_66 # Helaena Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.10.9 = {
+		death = {
+			death_reason = death_crushed # Storming of the Dragonpit
+		}
+	}
+}
+dragon_vermithor = {
+	name = Vermithor # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_vhagar 
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_physique_good_2
+	trait = dragon_cooperative
+	trait = dragon_imperious
+	trait = dragon_aggressive
+
+	disallow_random_traits = yes
+
+	8034.9.20 = { 
+		birth = yes # Craddle-Egg of Jaehaerys I Targaryen
+		add_character_flag = canon_status_canon
+		give_nickname = nick_the_bronze_fury
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_35 # Jaehaerys I Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8042.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_35 # Jaehaerys I Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8103.10.3 = { # Jaehaerys' death
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8129.12.6 = {
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+			agot_tame_dragon = {
+				TAMER = character:Hammer_1 # Hugh the Hammer
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.10.15 = {
+		death = {
+			death_reason = death_battle # Second Battle of Tumbleton
+			killer = dragon_seasmoke
+		}
+	}
+}
+dragon_silverwing = {
+	name = Silverwing # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_vhagar
+
+	trait = dragon
+	trait = education_dragon_5
+	trait = dragon_accepting
+	trait = dragon_cooperative
+	trait = dragon_friendly
+
+	disallow_random_traits = yes
+
+	8036.6.1 = { 
+		birth = yes # Craddle-Egg of Alysanne Targaryen
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_36 # Alysanne Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8040.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_36 # Alysanne Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8100.7.1 = { # Alysanne's death
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8129.12.6 = {
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+			agot_tame_dragon = {
+				TAMER = character:White_1 # Ulf White
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.10.16 = { # Ulf's death
+		effect = {
+			remove_character_flag = owned_dragon
+			agot_safe_set_location_history_effect = { CASTLE = title:c_red_lake }
+		}
+	}
+	8142.1.1 = { death = yes }
+}
+### Clutch of Quicksilver
+dragon_maegor_6 = {
+	name = Morghon # Mentioned, hatchling offered to Maegor
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_quicksilver 
+
+	trait = dragon
+	trait = education_dragon_3
+
+	disallow_random_traits = yes
+
+	8023.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8039.1.1 = {
+		death = {
+			death_reason = death_dragon_duel
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_5 = {
+	name = Ryax # Mentioned, hatchling offered to Maegor
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_quicksilver
+
+	trait = dragon
+	trait = education_dragon_4
+
+	disallow_random_traits = yes
+
+	8030.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8032.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_7 = {
+	name = Lykax # Mentioned, hatchling offered to Maegor
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_quicksilver 
+
+	trait = dragon
+	trait = education_dragon_3
+
+	disallow_random_traits = yes
+
+	8031.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8032.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_8 = {
+	name = Malrax # Mentioned, hatchling offered to Maegor
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_quicksilver 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8031.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8033.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_meleys = {
+	name = Meleys # Canon, hatchling offered to Maegor
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_quicksilver 
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_swift # Fastest dragon ever known
+	trait = dragon_imperious
+	trait = dragon_accepting
+	trait = dragon_restrained
+
+	disallow_random_traits = yes
+
+	8036.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8056.1.1 = {
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8075.1.1 = {
+		give_nickname = nick_the_red_queen
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_47 # Alyssa Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8087.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_59 # Rhaenys Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8089.1.1 = { # Rhaenys' marriage
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8129.11.21 = {
+		death = {
+			death_reason = death_dragon_duel # Battle of Rooks Rest
+			killer = dragon_vhagar # Vhagar
+		}
+		# AGOT TODO: Add Skull
+	}
+}
+### Clutch of Orion, needed for Maegor-Aenys fourteen hatchlings
+dragon_maegor_9 = {
+	name = Spyrax # Mentioned, hatchling offered to Maegor
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_quicksilver 
+
+	trait = dragon
+	trait = education_dragon_1
+
+	disallow_random_traits = yes
+
+	8034.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8035.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_10 = {
+	name = Tallfyre # Mentioned, hatchling offered to Maegor
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_maegor_3 
+
+	trait = dragon
+	trait = education_dragon_1
+
+	disallow_random_traits = yes
+
+	8034.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8036.1.1 = {
+		effect = {
+			remove_character_flag = owned_dragon
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8051.1.1 = {
+		death = {
+			death_reason = death_dragon_duel
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_maegor_11 = {
+	name = Zuvdar # Mentioned, hatchling offered to Maegor
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_maegor_3 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8034.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8036.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+### Clutch of Morghon, needed for Maegor-Aenys fourteen hatchlings
+dragon_aenys_1 = {
+	name = Goldfyre # Mentioned, hatchling born in Aenys' reign
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_maegor_6 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8038.10.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8039.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_aenys_2 = {
+	name = Deltherion # Mentioned, hatchling born in Aenys' reign
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_maegor_6 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8038.10.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8039.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+### First clutch of Silverwing
+dragon_caraxes = {
+	name = Caraxes # Canon
+	dna = dragon_caraxes
+
+	religion = valyrian
+	culture = dragon
+
+	father = dragon_vermithor
+	mother = dragon_silverwing 
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_spindly
+	trait = dragon_physique_good_1
+	trait = dragon_aggressive # Aggressive
+	trait = dragon_bloodthirsty # So sayeth dragonkeepers
+	trait = dragon_calculating # Considered cunning
+
+	disallow_random_traits = yes
+
+	8050.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8056.1.1 = {
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8072.1.1 = {
+		give_nickname = nick_the_blood_wyrm
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_45 # Aemon Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8099.1.1 = {
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_61 # Daemon Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.5.22 = {
+		death = {
+			death_reason = death_dragon_duel # Battle above the God's Eye
+			killer = dragon_vhagar # Vhagar
+		}
+		# AGOT TODO - Add Skull
+	}
+}
+dragon_grey_ghost = {
+	name = Grey_Ghost # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	father = dragon_vermithor
+	mother = dragon_silverwing
+
+	trait = dragon
+	trait = education_dragon_1
+	trait = dragon_solitary
+	trait = dragon_calculating
+	trait = dragon_skittish
+
+	disallow_random_traits = yes
+
+	8087.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	8130.3.15 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_sunfyre # Sunfyre
+		}
+	}
+}
+### First clutch of Dreamfyre
+dragon_aerea_1 = {
+	name = Laengar # Mentioned, hatchling offered to Aerea
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8052.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8054.6.1 = { 
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_aerea_2 = {
+	name = Moonfyre # Mentioned, hatchling offered to Aerea
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_1
+	trait = dragon_swift
+
+	disallow_random_traits = yes
+
+	8052.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8057.1.1 = {
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+			remove_character_flag = owned_dragon
+		}
+	}
+	8069.1.1 = { 
+		death = {
+			death_reason = death_dragon_duel
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_aerea_3 = {
+	name = Adereon # Mentioned, hatchling offered to Aerea
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_5
+	trait = dragon_friendly
+	trait = dragon_cooperative
+
+	disallow_random_traits = yes
+
+	8054.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8055.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_sheepstealer = {
+	name = Sheepstealer # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_1
+	trait = dragon_physique_bad_1
+	trait = dragon_ugly
+	trait = dragon_voracious
+	trait = dragon_defiant
+	trait = dragon_aggressive
+
+	disallow_random_traits = yes
+
+	8056.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_safe_set_location_history_effect = { CASTLE = title:c_dragonstone }
+		}
+	}
+	8129.12.6 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Farseed_1 # Nettles
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.5.22 = { # Never seen again after the dance
+		death = { death_reason = death_vanished }
+	}
+}
+dragon_daenerys_1 = {
+	name = Hurax # Mentioned, hatchling offered to Daenerys
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_3
+
+	disallow_random_traits = yes
+
+	8059.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8061.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+
+### Dance of the Dragons
+############################
+
+### Second clutch of Silverwing
+dragon_sunfyre = {
+	name = Sunfyre # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	father = dragon_vermithor 
+	mother = dragon_silverwing 
+
+	trait = dragon
+	trait = education_dragon_5
+	trait = dragon_majestic
+	trait = dragon_impulsive
+	trait = dragon_imperious
+	trait = dragon_bloodthirsty
+
+	disallow_random_traits = yes
+
+	8088.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8118.1.1 = {
+		give_nickname = nick_the_golden
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_65 # Aegon II Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8129.9.2 = { # Duel with Meleys
+		effect = { add_trait = dragon_wounded_3 }
+	}
+	8130.3.15 = { # Duel with Grey Ghost
+		effect = { 
+			remove_trait = dragon_wounded_3
+			add_trait = dragon_wounded_4
+		}
+	}
+	8130.4.30 = { # Duel with Moondancer
+		effect = { remove_trait = dragon_wounded_4 }
+		trait = dragon_wounded_5
+	}
+	8130.12.9 = {
+		death = { death_reason = death_maimed }
+	}
+}
+dragon_aemond_1 = {
+	name = Winged_Stranger # Mentioned, hatchling offered to Aemond
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	father = dragon_vermithor 
+	mother = dragon_silverwing 
+
+	trait = dragon
+	trait = education_dragon_1
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8118.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8122.1.1 = {
+		effect = {
+			remove_character_flag = owned_dragon
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8124.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_aemond_2 = {
+	name = Hegagon # Mentioned, hatchling offered to Aemond
+
+	religion = valyrian
+	culture = dragon
+
+	father = dragon_vermithor 
+	mother = dragon_silverwing 
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_physique_good_1
+
+	disallow_random_traits = yes
+
+	8118.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8120.6.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+dragon_aemond_3 = {
+	name = Qelos # Mentioned, hatchling offered to Aemond
+
+	religion = valyrian
+	culture = dragon
+
+	father = dragon_vermithor 
+	mother = dragon_silverwing 
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_swift
+
+	disallow_random_traits = yes
+
+	8119.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8121.1.1 = {
+		death = {
+			death_reason = death_dragon_duel_ate
+			killer = dragon_cannibal # Cannibal
+		}
+	}
+}
+### Clutch of Meleys
+dragon_seasmoke = {
+	name = Seasmoke # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_meleys 
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_supporting
+	trait = dragon_calculating
+	trait = dragon_solitary
+
+	disallow_random_traits = yes
+
+	8094.1.1 = {
+		birth = yes # Craddle-Egg of Laenor Velaryon
+		add_character_flag = canon_status_canon
+		effect = { 
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Velaryon_35 # Laenor Velaryon
+				DRAGON = ROOT
+			}
+		}
+	}
+	8112.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Velaryon_35 # Laenor Velaryon
+				DRAGON = ROOT
+			}
+		}
+	}
+	8120.2.18 = {
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8129.12.6 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Velaryon_43 # Addam Velaryon
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.10.15 = {
+		death = {
+			death_reason = death_dragon_duel_ate # Second Battle of Tumbleton
+			killer = dragon_vermithor # Vermithor
+		}
+	}
+}
+dragon_syrax = {
+	name = Syrax # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_meleys 
+
+	trait = dragon
+	trait = education_dragon_5
+	trait = dragon_slow # Fat and had not flown in years - best candidate for slow trait
+	trait = dragon_voracious # Ate a lot
+	trait = dragon_bloodthirsty # Rushed towards battle - likely enjoyed it
+	trait = dragon_calculating # Docile
+
+	disallow_random_traits = yes
+
+	8087.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8104.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_63 # Rhaenyra Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8105.9.10 = { # Rhaenyra gets Dragonstone
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8130.10.9 = {
+		death = {
+			death_reason = death_torn_to_pieces_by_mob # Storming of the Dragonpit
+		}
+	}
+}
+dragon_moondancer = {
+	name = Moondancer # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_meleys 
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_physique_good_1
+	trait = dragon_swift
+	trait = dragon_restrained
+	trait = dragon_solitary
+	trait = dragon_friendly
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8121.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			add_trait = dragon_physique_good_1
+			add_trait = dragon_swift
+			add_trait = dragon_restrained
+			add_trait = dragon_solitary
+			add_trait = dragon_friendly
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_69 # Baela Targaryen
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8130.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_69 # Baela Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.4.30 = {
+		death = {
+			death_reason = death_dragon_duel
+			killer = dragon_sunfyre # Sunfyre
+		}
+	}
+}
+### Second clutch of Dreamfyre
+dragon_tessarion = {
+	name = Tessarion # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_aggressive
+	trait = dragon_imperious
+	trait = dragon_impulsive
+	trait = dragon_swift # Actions in dance
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8114.12.27 = {
+		birth = yes # Craddle-Egg of Daeron Targaryen
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			add_trait = dragon_aggressive
+			add_trait = dragon_imperious
+			add_trait = dragon_impulsive
+			add_trait = dragon_swift
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_68 # Daeron Targaryen
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8127.1.1 = {
+		give_nickname = nick_the_blue_queen
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_68 # Daeron Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.10.15 = { 
+		trait = dragon_wounded_4 
+		effect = { add_trait = dragon_wounded_4 }
+	}
+	8130.10.16 = {
+		death = {
+			death_reason = death_piteously_cut_down
+			killer = Burley_16 # Billy Burley
+		}
+	}
+}
+dragon_shrykos = {
+	name = Shrykos # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_3
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8123.4.13 = {
+		birth = yes # Craddle-Egg of Jaehaerys Targaryen
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_72 # Jaehaerys Targaryen
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8130.10.9 = {
+		death = {
+			death_reason = death_battle # Storming of the Dragonpit
+			killer = Targaryen_hh_29 # Hobb the Hewer
+		}
+	}
+}
+dragon_morghul = {
+	name = Morghul # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre 
+
+	trait = dragon
+	trait = education_dragon_3
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8123.4.13 = {
+		birth = yes # Craddle-Egg of Jaehaera Targaryen
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_71 # Jaehaera Targaryen
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8130.10.9 = {
+		death = {
+			death_reason = death_torn_to_pieces_by_mob # Storming of the Dragonpit
+		}
+	}
+}
+### Clutch of Syrax
+dragon_vermax = {
+	name = Vermax # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_syrax 
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_physique_good_2
+	trait = dragon_solitary
+	trait = dragon_aggressive
+	trait = dragon_impulsive
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8114.11.29 = { 
+		birth = yes # Craddle-Egg of Jacaerys Velaryon
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			add_trait = dragon_physique_good_2
+			add_trait = dragon_solitary
+			add_trait = dragon_aggressive
+			add_trait = dragon_impulsive
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_75 # Jacaerys Velaryon
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8120.2.20 = { 
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8127.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_75 # Jacaerys Velaryon
+				DRAGON = ROOT
+			}
+		}
+	}
+	8130.1.5 = {
+		death = {
+			death_reason = death_battle # Battle of the Gullet
+		}
+	}
+}
+dragon_arrax = {
+	name = Arrax # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_syrax 
+
+	trait = dragon
+	trait = education_dragon_3
+	trait = dragon_swift # Said to be fast repeatedly, even though he died young
+	trait = dragon_defiant
+	trait = dragon_aggressive
+	trait = dragon_solitary
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8115.10.3 = {
+		birth = yes # Craddle-Egg of Lucerys Velaryon
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			add_trait = dragon_swift
+			add_trait = dragon_defiant
+			add_trait = dragon_aggressive
+			add_trait = dragon_solitary
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_76 # Lucerys Velaryon
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8120.2.20 = { 
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8128.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_76 # Lucerys Velaryon
+				DRAGON = ROOT
+			}
+		}
+	}
+	8129.4.10 = {
+		death = {
+			death_reason = death_dragon_duel_ate # Duel above Storm's End
+			killer = dragon_vhagar # Vhagar
+		}
+	}
+}
+dragon_tyraxes = {
+	name = Tyraxes # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_syrax 
+
+	trait = dragon
+	trait = dragon_physique_good_2
+	trait = dragon_bloodthirsty
+	trait = dragon_impulsive
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8117.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			add_trait = dragon_physique_good_2
+			add_trait = dragon_bloodthirsty
+			add_trait = dragon_impulsive
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_77 # Joffrey Velaryon
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+		}
+	}
+	8120.2.20 = { 
+		effect = {
+			agot_free_dragon_from_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_kings_landing
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8130.10.9 = {
+		death = {
+			death_reason = death_torn_to_pieces_by_mob # Storming of the Dragonpit
+		}
+	}
+}
+dragon_stormcloud = {
+	name = Stormcloud # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_syrax 
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_friendly
+	trait = dragon_impulsive
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8124.4.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			add_trait = dragon_friendly
+			add_trait = dragon_impulsive
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_78 # Aegon III Targaryen
+				DRAGON = ROOT
+			}
+			agot_assign_dragon_to_pit_history_effect = {
+				DRAGONPIT_COUNTY = title:c_dragonstone
+			}
+		}
+	}
+	8129.12.30 = {
+		trait = dragon_wounded_2
+		death = yes
+	}
+}
+dragon_morning = {
+	name = Morning # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_syrax 
+
+	trait = dragon
+	trait = education_dragon_2
+
+	disallow_random_traits = yes
+
+	8131.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			add_character_flag = owned_dragon
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_70 # Rhaena Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8135.3.3 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_70 # Rhaena Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8151.1.1 = {
+		death = { 
+			death_reason = death_dragon_duel
+			killer = dragon_nightfyre # Nightfyre
+		}
+	}
+}
+### Clutch of Morning
+dragon_the_last = {
+	name = Zalagon # Mentioned, AKA: The Last Dragon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_morning 
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_physique_bad_3
+	trait = dragon_spindly
+	trait = dragon_ugly
+
+	# disallow_random_traits = yes # FORBIDDEN - use agot_scripted_effects_posthistory_effects instead
+
+	8148.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+		effect = {
+			clear_traits = yes # Character dead as a child
+			add_trait = dragon
+			add_trait = dragon_physique_bad_3
+			add_trait = dragon_spindly
+			add_trait = dragon_ugly
+			add_character_flag = owned_dragon
+			agot_safe_set_location_history_effect = { CASTLE = title:c_kings_landing }
+		}
+	}
+	8153.1.1 = {
+		death = { death_reason = death_sickly }
+	}
+}
+### Second clutch of Vhagar
+dragon_nightfyre = {
+	name = Nightfyre # Mentioned
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_vhagar
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_physique_good_2
+	trait = dragon_aggressive
+	trait = dragon_voracious
+	trait = dragon_imperious
+
+	disallow_random_traits = yes
+
+	8130.8.1 = {
+		birth = yes # Craddle-Egg of Aemond Rivers
+		add_character_flag = canon_status_mentioned
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_74 # Aemond Rivers
+				DRAGON = ROOT
+			}
+		}
+	}
+	8144.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_74 # Aemond Rivers
+				DRAGON = ROOT
+			}
+		}
+	}
+	8151.1.1 = {
+		death = { 
+			death_reason = death_dragon_duel
+			killer = dragon_morning # Morning
+		}
+	}
+}
+
+### A Game of Thrones
+############################
+dragon_drogon = {
+	name = Drogon # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_physique_good_3
+	trait = dragon_defiant
+	trait = dragon_voracious
+
+	disallow_random_traits = yes
+
+	8298.10.10 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Targaryen_9 # Daenerys Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	8300.3.1 = {
+		effect = {
+			# agot_safe_set_location_history_effect = { CASTLE = title: } # AGOT TODO
+		}
+	}
+	8300.4.1 = {
+		trait = dragon_impulsive
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Targaryen_9 # Daenerys Targaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+}
+dragon_rhaegal = {
+	name = Rhaegal # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_physique_good_2
+	trait = dragon_defiant
+
+	disallow_random_traits = yes
+
+	8298.10.10 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+	}
+	8300.3.1 = {
+		trait = dragon_impulsive
+		effect = {
+			# agot_assign_dragon_to_pit_history_effect = { 
+				# DRAGONPIT_COUNTY = title:c_meereen
+			# }
+		}
+	}
+	8300.4.2 = {
+		effect = {
+			# agot_free_dragon_from_pit_history_effect = {
+				# DRAGONPIT_COUNTY = title:c_meereen
+			# }
+		}
+	}
+}
+dragon_viserion = {
+	name = Viserion # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_dreamfyre
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_physique_good_2
+	trait = dragon_voracious
+	trait = dragon_aggressive
+
+	disallow_random_traits = yes
+
+	8298.10.10 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+	}
+	8300.3.1 = {
+		trait = dragon_bloodthirsty
+		effect = {
+			# agot_assign_dragon_to_pit_history_effect = { 
+				# DRAGONPIT_COUNTY = title:c_meereen
+			# }
+		}
+	}
+	8300.4.2 = {
+		effect = {
+			# agot_free_dragon_from_pit_history_effect = {
+				# DRAGONPIT_COUNTY = title:c_meereen
+			# }
+		}
+	}
+}
+
+###### DRAGONS OF OTHER HOUSES
+############################
+###
+###
+
+### House Varezys
+############################
+dragon_ancestor_2 = {
+	name = Vezojaes
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	trait = dragon
+	trait = education_dragon_3
+
+	disallow_random_traits = yes
+
+	7680.1.1 = { birth = yes }
+	7778.1.1 = { death = yes }
+}
+dragon_vassarion = {
+	name = Vassarion # Mentioned
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_2
+
+	trait = dragon
+	trait = education_dragon_5 # Grew up in Valyria
+	trait = dragon_physique_good_2
+	trait = dragon_aggressive
+	trait = dragon_defiant
+	trait = dragon_imperious
+
+	disallow_random_traits = yes
+
+	7708.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+	}
+	7885.1.1 = { 
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Varezys_1 # Aurion Varezys
+				DRAGON = ROOT
+			}
+		}
+	}
+	7900.1.1 = {
+		death = { death_reason = death_vanished } # Went to Valyria
+	}
+}
+
+### House Urnebar 
+############################
+dragon_ancestor_3 = {
+	name = Falkael
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	trait = dragon
+	trait = education_dragon_3
+
+	disallow_random_traits = yes
+
+	7784.1.1 = { birth = yes }
+	7899.1.1 = { death = { death_reason = death_burned } } # Doom of Valyria
+}
+dragon_rovax = {
+	name = Rovax # Mentioned
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_3
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_aggressive
+	trait = dragon_impulsive
+	trait = dragon_bloodthirsty
+
+	disallow_random_traits = yes
+
+	7842.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+	}
+	7887.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Urnebar_1 # Rhogar Urnebar
+				DRAGON = ROOT
+			}
+		}
+	}
+	7902.1.1 = { 
+		death = { 
+			death_reason = death_dragon_scorpion 
+			killer = Camardoon_21 # Casuto Camardoon
+		}
+	}
+}
+
+### House Sonaryen 
+############################
+dragon_ancestor_4 = {
+	name = Peldion
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	trait = dragon
+	trait = education_dragon_3
+
+	disallow_random_traits = yes
+
+	7793.1.1 = { birth = yes }
+	7899.1.1 = { death = { death_reason = death_burned } } # Doom of Valyria
+}
+dragon_neltharion = {
+	name = Neltharion # Mentioned
+
+	religion = valyrian
+	culture = dragon
+
+	mother = dragon_ancestor_4
+
+	trait = dragon
+	trait = education_dragon_4
+	trait = dragon_voracious
+	trait = dragon_calculating
+	trait = dragon_solitary
+
+	disallow_random_traits = yes
+
+	7860.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_mentioned
+	}
+	7879.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Sonaryen_1 # Aelyx Sonaryen
+				DRAGON = ROOT
+			}
+		}
+	}
+	7906.1.1 = {
+		death = {
+			death_reason = death_murder_known
+			killer = Bazanne_21 # Vesillan Bazanne
+		}
+	}
+}
+
+### House Mataeryon
+############################
+dragon_pythax = {
+	name = Pythax # Semi-Canon, mentioned
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+
+	trait = dragon
+	trait = education_dragon_2
+	trait = dragon_friendly
+	trait = dragon_restrained
+	trait = dragon_skittish
+
+	disallow_random_traits = yes
+	
+	7869.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_semicanon
+	}
+	7885.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Mataeryon_1 # Jaehaelor Mataeryon
+				DRAGON = ROOT
+			}
+		}
+	}
+	7899.1.1 = { trait = depressed_1 }
+	7902.1.1 = { death = { death_reason = death_depressed } }
+}
+
+### House Belaerys
+############################
+dragon_terrax = {
+	name = Terrax # Canon
+
+	religion = valyrian
+	culture = dragon
+
+	trait = dragon
+	trait = education_dragon_4
+
+	disallow_random_traits = yes
+
+	7809.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		effect = {
+			agot_bond_dragon_relation_effect = {
+				ACTOR = character:Belaerys_1 # Jaenara Belaerys
+				DRAGON = ROOT
+			}
+		}
+	}
+	7825.1.1 = {
+		effect = {
+			agot_tame_dragon = {
+				TAMER = character:Belaerys_1 # Jaenara Belaerys
+				DRAGON = ROOT
+			}
+		}
+	}
+	7870.1.1 = { death = yes }
+}
+
+###### ANCIENT DRAGONS
+############################
+###
+###
+dragon_nagga = {
+	name = Nagga # Canon
+	female = yes
+
+	religion = valyrian
+	culture = dragon
+	
+	trait = dragon
+	trait = education_dragon_1
+	trait = dragon_physique_good_3
+	trait = dragon_aggressive
+
+	disallow_random_traits = yes
+
+	18.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+		give_nickname = nick_the_sea_dragon
+	}
+	300.1.1 = {
+		death = {
+			death_reason = death_duel
+			killer = Grey_King_2 # Grey King
+		}
+	}
+}
+dragon_urrax = {
+	name = Urrax # Canon
+
+	religion = valyrian
+	culture = dragon
+	
+	trait = dragon
+	trait = education_dragon_1
+	trait = dragon_accepting
+	trait = dragon_impulsive
+	trait = dragon_solitary
+	
+	50.1.1 = {
+		birth = yes
+		add_character_flag = canon_status_canon
+	}
+	112.1.1 = {
+		death = {
+			death_reason = death_battle 
+			# killer = SERWYN_OF_THE_MIRROR_SHIELD_FUTURE_ID
+		}
+	}
+}

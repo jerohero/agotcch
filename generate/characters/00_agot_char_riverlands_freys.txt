@@ -1,0 +1,3186 @@
+﻿############################        THE CROSSING        ############################
+####################################################################################
+
+###### HOUSE FREY (id = dynn_Frey)
+############################
+### We Stand Together
+###
+Frey_1 = {
+	name = Walder # Canon, THE Walder Frey
+	dynasty = dynn_Frey
+	dna = Frey_1
+
+	martial = 3
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 9
+	learning = 5
+	prowess = 3
+	#health = 11 # AGOT TODO
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_132
+	mother = Frey_rs_7
+
+	trait = education_intrigue_3
+	trait = rude
+	trait = fecund
+	trait = deceitful
+	trait = ambitious
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8208.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8220.1.1 = { 
+		trait = lustful
+		trait = lifestyle_reveler
+	}
+	8230.1.1 = { # First Marriage - Mother to Stevron, Emmon, Aenys and Perriane
+		add_spouse = Royce_80 # Perra Royce
+	}
+	8235.1.1 = { trait = knight }
+	8247.1.1 = { # Second Marriage - Mother to Jared and Lucion
+		add_spouse = Swann_7 # Cyrenna Swann
+	}
+	8255.1.1 = { # Third Marriage - Mother to Hosteen, Lythene, Danwell, Merret, Geremy and Rymund
+		trait = family_first
+		add_spouse = Crakehall_2 # Amarei Crackhall
+	}
+	8266.1.1 = { # Fourth Marriage - Mother to Lothar, Jammos, Whelan, Morya and Tyta
+		add_spouse = Blackwood_5 # Alyssa Blackwood
+	}
+	8271.1.1 = { # Fifth Marriage - No progeny
+		add_spouse = Whent_7 # Sarya Whent
+	}
+	8276.1.1 = { # Sixth Marriage - Mother to Perwyn, Benfry, Willamen, Olyvar and Roslin
+		add_spouse = Rosby_3 # Bethany Rosby
+	}
+	8283.3.1 = { # Battle of the Trident
+		trait = disloyal
+		give_nickname = nick_the_late_lord 
+	}
+	8284.1.1 = { # Seventh Marriage - Mother to Arwyn, Wendel, Colmar, Waltyr, Elmar and Shirei
+		add_spouse = Farring_4 # Annara Farring
+	}
+	8298.1.1 = { # Eight Marriage
+		add_spouse = Erenford_3 # Joyeuse Erenford
+	}
+	8299.11.5 = {
+		trait = murderer # Red Wedding
+		effect = {
+			if = { 
+				limit = { character:Stark_7 = { is_alive = yes } }
+				reverse_add_opinion = {
+					modifier = murdered_close_family_crime
+					target = character:Stark_7 # Jon Snow
+				}
+				reverse_add_opinion = {
+					modifier = treachery_opinion
+					target = character:Stark_7 # Jon Snow
+				}
+			}
+			if = { 
+				limit = { character:Stark_Dummy_8 = { is_alive = yes } }
+				reverse_add_opinion = {
+					modifier = murdered_close_family_crime
+					target = character:Stark_Dummy_8 # Sansa Stark
+				}
+				reverse_add_opinion = {
+					modifier = treachery_opinion
+					target = character:Stark_Dummy_8 # Sansa Stark
+				}
+			}
+			if = { 
+				limit = { character:Stark_Dummy_9 = { is_alive = yes } }
+				reverse_add_opinion = {
+					modifier = murdered_close_family_crime
+					target = character:Stark_Dummy_9 # Arya Stark
+				}
+				reverse_add_opinion = {
+					modifier = treachery_opinion
+					target = character:Stark_Dummy_9 # Arya Stark
+				}
+			}
+			if = { 
+				limit = { character:Stark_Dummy_10 = { is_alive = yes } }
+				reverse_add_opinion = {
+					modifier = murdered_close_family_crime
+					target = character:Stark_Dummy_10 # Brandon Stark
+				}
+				reverse_add_opinion = {
+					modifier = treachery_opinion
+					target = character:Stark_Dummy_10 # Brandon Stark
+				}
+			}
+			if = { 
+				limit = { character:Stark_Dummy_11 = { is_alive = yes } }
+				reverse_add_opinion = {
+					modifier = murdered_close_family_crime
+					target = character:Stark_Dummy_11 # Rickon Stark
+				}
+				reverse_add_opinion = {
+					modifier = treachery_opinion
+					target = character:Stark_Dummy_11 # Rickon Stark
+				}
+			}
+			if = {
+				limit = { character:Baratheon_3 = { is_alive = yes } }
+				reverse_add_opinion = {
+					modifier = treachery_opinion
+					target = character:Baratheon_3 # Stannis Baratheon
+				}
+			}
+		}
+	}
+}
+
+### Alpha-Freys, Lydden-Freys, Waynwood-Freys
+############################
+Frey_2 = {
+	name = Stevron # Canon
+	dynasty = dynn_Frey
+
+	dna = Frey_2
+
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 6
+	learning = 5
+	prowess = 6
+	#health = 7 # AGOT TODO
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_1
+	mother = Royce_80
+
+	trait = education_martial_2
+	trait = gregarious
+	trait = patient
+	trait = vengeful
+	trait = honorable
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8234.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8249.1.1 = { add_spouse = Swann_8 } # Corenna Swann - Mother to Ryman.
+	8250.1.1 = { 
+		trait = knight 
+		trait = cautious_leader
+	}
+	8251.1.1 = { add_spouse = Lydden_2 } # Jeyne Lydden - Mother to Aegon and Maegelle.
+	8253.1.1 = { add_spouse = Waynwood_4 } # Marsella Waynwood - Mother to Walton.
+	8255.1.1 = { trait = widowed }
+	8299.6.1 = { trait = wounded_2 }
+	8299.6.4 = { # Died 3 days after the battle of Oxcross
+		death = { death_reason = death_wounded_2 }
+	}
+}
+### Issue of Stevron
+Frey_3 = {
+	name = Ryman # Canon, competent knight, killed Dacey Mormont
+	dynasty = dynn_Frey
+
+	dna = Frey_3
+
+	martial = 3
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 6
+	learning = 5
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_2 # Stevron Frey
+	mother = Swann_8 # Corenna Swann
+
+	trait = education_martial_1
+	trait = dull 
+	trait = ambitious
+	trait = gluttonous
+	trait = greedy
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8250.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8264.1.1 = { 
+		trait = drunkard 
+		trait = lustful
+	}
+	8266.1.1 = { trait = knight }
+	8268.1.1 = { add_spouse = Blount_2 } # Eleanor Blount
+	8299.11.5 = { trait = murderer } # Red Wedding
+	8300.4.13 = {
+		death = {
+			death_reason = death_execution
+			killer = Tully_5 # Lady Stoneheart
+		}
+	}
+}
+Frey_4 = {
+	name = Aegon # Canon, AKA: Jinglebell
+	dynasty = dynn_Frey
+	dna = Frey_4
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Frey_2 # Stevron Frey
+	mother = Lydden_2 # Jeyne Lydden
+
+	# trait = harelip # AGOT TODO trait
+	trait = intellect_bad_3
+	trait = compassionate
+	trait = content
+	trait = honest
+	trait = generous
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8251.12.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8271.12.1 = { give_nickname = nick_jingelbells}
+	8299.11.5 = {
+		death = {
+			death_reason = death_murder_known
+			killer = Tully_4 # Catelyn Tully
+		}
+	}
+}
+Frey_5 = {
+	name = Maegelle # Canon, married Dafyn Vance
+	dynasty = dynn_Frey
+	female = yes
+	dna = Frey_5
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_2 # Stevron Frey
+	mother = Lydden_2 # Jeyne Lydden
+
+	8252.8.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8288.1.1 = {
+		death = { death_reason = death_childbirth } 
+	}
+}
+Frey_6 = {
+	name = Walton # Canon
+	dynasty = dynn_Frey
+
+	prowess = 6
+
+	dna = Frey_6
+
+	religion = the_seven_main
+	culture = westerman
+	sexuality = heterosexual
+
+	father = Frey_2 # Stevron Frey
+	mother = Waynwood_4 # Marsella Waynwood
+
+	trait = education_martial_2
+	trait = brave
+	trait = temperate
+	trait = callous
+	trait = content
+
+	8255.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8271.1.1 = { trait = knight }
+	8275.1.1 = { add_spouse = Hardyng_6 } # Deana Hardyng
+}
+### Issue of Ryman
+Frey_7 = {
+	name = Edwyn # Canon
+	dynasty = dynn_Frey
+	# dna = Frey_7
+
+	martial = 3
+	intrigue = 6
+	prowess = 2 
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_3
+	mother = Blount_2
+
+	trait = education_intrigue_2
+	trait = wrathful
+	trait = rude
+	trait = paranoid
+	trait = rowdy
+
+	disallow_random_traits = yes
+	
+	8269.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8285.1.1 = {
+		trait = knight
+		effect = {
+			if = {
+				limit = { character:Frey_8 = { is_alive = yes } }
+				set_relation_rival = {
+					target = character:Frey_8 # Black Walder Frey
+					reason = rival_inter_heir_rivalry
+				}
+			}
+		}
+	}
+	8288.1.1 = { add_spouse = Hunter_5 } # Janyce Hunter
+}
+Frey_8 = {
+	name = Walder # Canon, AKA: Black Walder
+	dynasty = dynn_Frey
+	# dna = Frey_8
+
+	martial = 7
+	diplomacy = 5
+	intrigue = 10
+	stewardship = 6
+	learning = 4
+	prowess = 7
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_3
+	mother = Blount_2
+
+	trait = education_martial_2
+	trait = callous
+	trait = arrogant
+	trait = ambitious
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8271.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { give_nickname = nick_the_black_prefix }
+	8288.1.1 = {
+		effect = { 
+			if = {
+				limit = { character:Hunter_5 = { is_alive = yes } }
+				set_relation_lover = character:Hunter_5 # Janyce Hunter, his brother's wife
+			}
+		}
+	}
+	8291.1.1 = {
+		effect = { 
+			if = {
+				limit = { character:Caron_4 = { is_alive = yes } }
+				set_relation_lover = character:Caron_4 # Mylenda Caron, his brother's wife
+			}
+		}
+	}
+	8297.1.1 = {
+		effect = { 
+			if = {
+				limit = { character:Frey_13 = { is_alive = yes } }
+				set_relation_lover = character:Frey_13 # Fair Walda, his first cousin
+			}
+		}
+	}
+	8299.11.5 = { trait = murderer } # Red Wedding
+}
+Frey_9 = {
+	name = Petyr # Canon, AKA: Petyr Pimple
+	dynasty = dynn_Frey
+	# dna = Frey_9
+
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_3
+	mother = Blount_2
+
+	trait = education_intrigue_1
+	trait = beauty_bad_2
+	trait = craven
+
+	8281.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8289.1.1 = { give_nickname = nick_pimple }
+	8291.1.1 = { add_spouse = Caron_4 } # Mylenda Caron
+	8294.1.1 = { trait = lustful }
+	8299.11.5 = { trait = murderer } # Red Wedding
+	8300.1.1 = {
+		death = {
+			death_reason = death_execution
+			killer = Tully_5 # Lady Stoneheart
+		}
+	}
+}
+### Issue of Edwyn
+Frey_10 = {
+	name = Walda # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	mother = Hunter_5
+	father = Frey_7
+
+	trait = disputed_heritage
+
+	8291.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		effect = { set_real_father = character:Frey_8 } # Black Walder Frey
+	}
+}
+### Issue of Petyr
+Frey_11 = {
+	name = Perra # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_9
+	mother = Caron_4
+
+	trait = disputed_heritage
+
+	8294.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		effect = { set_real_father = character:Frey_8 } # Black Walder Frey
+	}
+}
+### Issue of Walton
+Frey_12 = {
+	name = Steffon # Canon
+	dynasty = dynn_Frey
+	dna = Frey_12
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_6
+	mother = Hardyng_6
+
+	trait = compassionate
+	trait = gregarious
+
+	8278.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8294.1.1 = { give_nickname = nick_the_sweet }
+}
+Frey_13 = {
+	name = Walda # Canon, AKA: Fair Walda
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_13
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_6
+	mother = Hardyng_6
+
+	trait = beauty_good_2
+
+	8281.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8297.1.1 = { give_nickname = nick_fair }
+}
+Frey_14 = {
+	name = Bryan # Canon
+	dynasty = dynn_Frey
+	dna = Frey_14
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_6
+	mother = Hardyng_6
+
+	8282.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	#8295.1.1 = { trait = squire } # AGOT TODO trait
+}
+
+### Lannister-Freys
+############################
+Frey_15 = {
+	name = Emmon # Canon, a lord of the Riverrun
+	dynasty = dynn_Frey
+
+	dna = Frey_15
+
+	martial = 3
+	diplomacy = 7
+	intrigue = 3
+	stewardship = 6
+	learning = 5
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_1
+	mother = Royce_80
+
+	trait = education_intrigue_2
+	trait = dull
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8238.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8244.8.1 = { trait = craven }
+	8246.8.1 = { 
+		trait = greedy 
+		trait = vengeful 
+	}
+	8248.8.1 = { trait = ambitious }
+	8252.1.1 = { add_spouse = Lannister_3 } # Genna Lannister, seven at the time
+	8254.1.1 = { trait = knight }
+	8267.1.1 = { employer = Lannister_1 } # Tywin Lannister
+	8300.2.9 = { employer = Lannister_6 } # Cersei Lannister
+}
+### Issue of Emmon
+Frey_16 = {
+	name = Cleos # Canon, sent as an envoy to King's Landing
+	dynasty = dynn_Frey
+	# dna = Frey_16
+
+	martial = 5
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 5
+	learning = 5
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_15
+	mother = Lannister_3
+
+	trait = education_martial_1
+	trait = arrogant
+	trait = craven
+	trait = trusting
+	trait = honorable
+	trait = curious
+	
+	disallow_random_traits = yes
+
+	8265.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8267.1.1 = { employer = Lannister_1 } # Tywin Lannister
+	8281.1.1 = {
+		effect = { agot_create_personal_coa_for_historical_ai = { ACTOR = character:Frey_16 COA_KEY = cleos_frey_personal_coa } }
+	}
+	8282.1.1 = {
+		add_spouse = Darry_9 # Jeyne Darry
+		trait = knight
+	}
+	8299.2.11 = {
+		effect = { # Battle of Whispering Wood
+			title:c_winterfell.holder = { # Robb Stark
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+	8299.7.1 = {
+		death = { death_reason = death_attacked } # Attacked by outlaws
+		effect = {
+			agot_prune_personal_coa = yes
+		}
+	}
+}
+Frey_17 = {
+	name = Lyonel # Canon
+	dynasty = dynn_Frey
+	#dna = "ajege0cfca0"
+
+	martial = 6
+	prowess = 3
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Frey_15
+	mother = Lannister_3
+
+	trait = education_martial_2
+	trait = arrogant
+
+	8276.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Lannister_1 # Tywin Lannister
+	}
+	8292.1.1 = {
+		add_spouse = Crakehall_6 # Melesa Crakehall
+		trait = knight
+	}
+	8300.2.9 = { employer = Lannister_6 } # Cersei Lannister
+	8300.4.15 = { employer = Frey_15 } # Emmon Frey
+}
+Frey_18 = {
+	name = Tion # Canon
+	dynasty = dynn_Frey
+	#dna = "akdkf0bjab0"
+
+	martial = 6
+	prowess = 6
+
+	religion = the_seven_main
+	culture = westerman
+
+	trait = education_martial_2
+
+	father = Frey_15
+	mother = Lannister_3
+
+	8284.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Lannister_1 # Tywin Lannister
+	}
+	# 8298.1.1 = { trait = squire } # AGOT TODO trait
+	8299.2.11 = {
+		effect = { # Battle of Whispering Wood
+			title:c_winterfell.holder = { # Robb Stark
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+	8299.8.1 = {
+		death = {
+			death_reason = death_murder_known
+			killer = Karstark_4 # Rickard Karstark
+		}
+	}
+}
+Frey_19 = {
+	name = Walder # Canon, AKA: Red Walder
+	dynasty = dynn_Frey
+	#dna = "dkckg0ajcb0"
+
+	martial = 6
+
+	religion = the_seven_main
+	culture = westerman
+
+	trait = education_martial_2
+
+	father = Frey_15
+	mother = Lannister_3
+
+	8285.2.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Lannister_1 # Tywin Lannister
+		give_nickname = nick_the_red
+	}
+	8300.2.9 = { employer = Lannister_6 } # Cersei Lannister
+	8300.4.15 = { employer = Frey_15 } # Emmon Frey
+}
+### Issue of Cleos
+Frey_20 = {
+	name = Tywin # Canon
+	dynasty = dynn_Frey
+	#dna = "ahcge0ffab0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_16
+	mother = Darry_9
+
+	8288.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Lannister_1 # Tywin Lannister
+	}
+	#8298.1.1 = { trait = squire } # AGOT TODO trait
+	8300.2.9 = { employer = Lannister_6 } # Cersei Lannister
+	8300.4.15 = { employer = Frey_15 } # Emmon Frey
+}
+Frey_21 = {
+	name = Willem # Canon
+	dynasty = dynn_Frey
+	#dna = "ahfge0ddab0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_16
+	mother = Darry_9
+
+	8290.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Lannister_1 # Tywin Lannister
+	}
+	8298.1.1 = {
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Marbrand_1 } # Damon Marbrand
+		}
+	}
+	8300.2.9 = { employer = Lannister_6 } # Cersei Lannister
+	8300.4.15 = { employer = Frey_15 } # Emmon Frey
+}
+
+### Aenys and Perianne Branch
+############################
+Frey_22 = {
+	name = Aenys # Canon, took Harrenhal with the Vargo Hoat and Roose Bolton
+	dynasty = dynn_Frey
+	dna = Frey_22
+
+	martial = 8
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 5
+	learning = 5
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Royce_80
+
+	trait = education_martial_3
+	trait = sadistic
+	trait = diligent
+	trait = content
+	trait = deceitful
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8242.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8258.1.1 = {
+		trait = knight
+		add_spouse = Wylde_6 # Tyana Wylde
+	}
+	8270.1.1 = { trait = widowed }
+	8300.5.1 = {
+		death = {
+			death_reason = death_accident
+			killer = Umber_3 # Mors Umber
+		}
+	}
+}
+Frey_23 = {
+	name = Perriane # Canon, married Leslyn Haigh
+	dynasty = dynn_Frey
+	female = yes
+	dna = Frey_23
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Royce_80
+
+	8244.10.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+### Issue of Aenys
+Frey_24 = {
+	name = Aegon # Canon, AKA: Aegon the Bloodborn
+	dynasty = dynn_Frey
+
+	martial = 3
+	diplomacy = 2
+	intrigue = 5
+	stewardship = 3
+	learning = 3
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_22
+	mother = Wylde_6
+
+	trait = education_martial_2
+	trait = gregarious
+	trait = arbitrary
+	trait = greedy
+	trait = callous
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8262.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8278.1.1 = { trait = knight }
+	8284.1.1 = { # Became an outlaw
+		give_nickname = nick_bloodborn
+		trait = disinherited
+		trait = murderer 
+		effect = { banish = yes }
+	}
+}
+Frey_25 = {
+	name = Rhaegar # Canon
+	dynasty = dynn_Frey
+	#dna = "ciaij0hgda0"
+
+	martial = 5
+	diplomacy = 5
+	intrigue = 3
+	stewardship = 3
+	learning = 5
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_22
+	mother = Wylde_6
+
+	trait = education_martial_2
+	trait = deceitful
+	trait = rude
+	trait = vengeful
+	trait = arbitrary
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8284.1.1 = { add_spouse = Beesbury_6 } # Jeyne Beesbury
+	8286.1.1 = { trait = knight }
+	8300.2.1 = {
+		death = {
+			death_reason = death_vanished # Manderly Pie
+		}
+	}
+}
+### Issue of Rhaegar
+Frey_26 = {
+	name = Robert # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_25
+	mother = Beesbury_6
+
+	8286.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_27 = {
+	name = Walda # Canon, AKA: White Walda
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_25
+	mother = Beesbury_6
+
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = { give_nickname = nick_white }
+}
+Frey_28 = {
+	name = Jonos # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_25
+	mother = Beesbury_6
+
+	8291.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+
+### Swann-Freys
+############################
+Frey_29 = {
+	name = Jared # Canon
+	dynasty = dynn_Frey
+	dna = Frey_29
+
+	martial = 5
+	diplomacy = 3
+	intrigue = 5
+	stewardship = 7
+	learning = 5
+	prowess = 12
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Swann_7
+
+	trait = education_diplomacy_3
+	trait = brave
+	trait = deceitful
+	trait = arbitrary
+	trait = arrogant
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8248.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8264.1.1 = {
+		add_spouse = Frey_99 # Alys Frey
+		trait = knight
+	}
+	8285.1.1 = { trait = widowed }
+	8299.1.16 = { # Battle of the Green Fork
+		effect = {
+			title:k_the_westerlands.holder = { # Tywin Lannister
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+	8299.6.1 = {
+		effect = { release_from_prison = yes }
+	}
+	8300.2.1 = {
+		death = {
+			death_reason = death_vanished # Manderly Pie
+		}
+	}
+}
+Frey_30 = {
+	name = Luceon # Canon, Septon Luceon
+	dynasty = dynn_Frey
+	dna = Frey_30
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Swann_7
+
+	trait = education_learning_1
+	trait = temperate
+	trait = generous
+	trait = chaste
+	trait = zealous
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8249.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8269.1.1 = {
+		trait = septon
+		effect = { 
+			agot_safe_set_location_history_effect = { CASTLE = title:b_visenyas_hill }
+		}
+	}
+	8283.1.1 = { trait = most_devout_member }
+}
+### Issue of Jared
+Frey_31 = {
+	name = Tytos # Canon
+	dynasty = dynn_Frey
+
+	martial = 6
+	diplomacy = 2
+	intrigue = 5
+	stewardship = 4
+	learning = 5
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_29
+	mother = Frey_99
+
+	trait = education_martial_2
+
+	8266.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8281.1.1 = { add_spouse = Blanetree_22 } # Zoe Blantree
+	8285.1.1 = { trait = knight }
+	8299.11.5 = {
+		death = {
+			death_reason = death_battle
+			# killer = Clegane_4 # Sandor Clegane
+			killer = Stark_6 # Robb Stark, officially
+		}
+	}
+}
+Frey_32 = {
+	name = Kyra # Canon, married Garse Goodbrook
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	dna = Frey_32
+
+	father = Frey_29
+	mother = Frey_99
+
+	8267.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8299.11.5 = { trait = widowed }
+}
+### Issue of Tytos
+Frey_33 = {
+	name = Zia # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_31
+	mother = Blanetree_22
+
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_34 = {
+	name = Zachery # Canon
+	dynasty = dynn_Frey
+
+	learning = 15
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_31
+	mother = Blanetree_22
+
+	trait = education_learning_2
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8287.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8293.1.1 = { trait = temperate }
+	8295.1.1 = { trait = diligent }
+	8297.1.1 = {
+		trait = humble
+		trait = zealous
+		effect = { 
+			agot_safe_set_location_history_effect = { CASTLE = title:b_the_starry_sept }
+		}
+	}
+}
+
+### Crakehall-Freys
+############################
+Frey_35 = {
+	name = Hosteen # Canon, good tourney knight
+	dynasty = dynn_Frey
+	dna = Frey_35
+
+	martial = 7
+	diplomacy = 3
+	intrigue = 5
+	stewardship = 4
+	learning = 5
+	prowess = 8
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Crakehall_2
+
+	trait = education_martial_1
+	trait = dull
+	trait = brave
+	trait = arrogant
+	trait = wrathful
+	trait = callous
+	trait = physique_good_2
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8257.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8273.1.1 = {
+		trait = knight
+		trait = education_martial_prowess_3
+		trait = lifestyle_blademaster
+		add_spouse = Hawick_4 # Bellena Hawick
+	}
+	8299.1.16 = { # Battle of the Green Fork
+		effect = {
+			title:k_the_westerlands.holder = { # Tywin Lannister
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+	8299.6.1 = {
+		effect = { release_from_prison = yes }
+	}
+	8299.11.5 = { trait = murderer } # Red Wedding
+}
+Frey_36 = {
+	name = Lythene # Canon, married Lucias Vypren
+	dynasty = dynn_Frey
+	female = yes
+	dna = Frey_36
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Crakehall_2
+
+	trait = physique_good_1
+
+	8259.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_37 = {
+	name = Symond # Canon
+	dynasty = dynn_Frey
+	dna = Frey_37
+
+	intrigue = 9
+	stewardship = 9
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Crakehall_2
+
+	trait = education_intrigue_3
+	trait = deceitful
+	trait = patient
+	trait = generous
+	trait = physique_good_1
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8260.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8277.1.1 = { add_spouse = Frey_hh_1 } # Betharios of Braavos
+	8287.1.1 = {
+		effect = { # Spymaster of The Twins
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:c_the_twins 
+				POSITION = councillor_spymaster
+			}
+		}
+	}
+	8300.2.1 = {
+		death = {
+			death_reason = death_vanished # Manderly Pie
+		}
+	}
+}
+Frey_38 = {
+	name = Danwell # Canon 
+	dynasty = dynn_Frey
+	dna = Frey_38
+
+	martial = 5
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 5
+	learning = 4
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_1
+	mother = Crakehall_2
+
+	trait = education_martial_1
+	trait = arrogant
+	trait = physique_good_1
+	trait = rowdy
+	
+	8261.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Frey_1 # Walder Frey
+	}
+	8277.1.1 = {
+		add_spouse = Whent_8 # Wynafrei Whent
+		trait = knight
+		trait = drunkard
+	}
+	8299.1.16 = { # Battle of the Green Fork
+		effect = {
+			title:k_the_westerlands.holder = { # Tywin Lannister
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+	8299.6.1 = {
+		effect = { release_from_prison = yes }
+	}
+	8299.11.5 = { trait = murderer } # Red Wedding
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+Frey_39 = {
+	name = Merrett # Canon
+	dynasty = dynn_Frey
+	dna = Frey_39
+
+	martial = 5
+	diplomacy = 3
+	intrigue = 3
+	stewardship = 1
+	learning = 3
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_1
+	mother = Crakehall_2
+
+	trait = gregarious
+	trait = physique_good_2
+	trait = education_martial_2
+	trait = vengeful
+	trait = lazy
+	trait = wrathful
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8262.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8268.1.1 = {
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Crakehall_1 } # Sumner Crakehall
+		}
+	}
+	8273.1.1 = {
+		effect = {
+			agot_set_as_ward_and_squire_history_effect = { KNIGHT = character:Crakehall_1 } # Sumner Crakehall
+		}
+	}
+	8279.1.1 = {
+		# remove_trait = squire # AGOT TODO trait
+		trait = scarred
+		trait = infirm # Wound that made him incapable of fighting
+		trait = drunkard
+		trait = depressed_1
+	}
+	8282.1.1 = { add_spouse = Darry_5 } # Marya Darry
+	8299.11.5 = { trait = murderer } # Red Wedding
+	8300.3.1 = {
+		death = {
+			death_reason = death_hanged
+			killer = Tully_5 # Lady Stoneheart
+		}
+	}
+}
+Frey_40 = {
+	name = Geremy # Canon
+	dynasty = dynn_Frey
+	dna = Frey_40
+
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 3
+	learning = 5
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Crakehall_2
+
+	trait = education_martial_1
+	trait = arrogant
+	trait = wrathful
+	trait = arbitrary
+	trait = rowdy 
+	
+	disallow_random_traits = yes
+
+	8263.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { trait = knight }
+	8285.1.1 = { add_spouse = Waynwood_18 } # Carolei Waynwood
+	8293.1.1 = {
+		death = { death_reason = death_drowned }
+	}
+}
+Frey_41 = {
+	name = Raymund # Canon, killed Catelyn Tully
+	dynasty = dynn_Frey
+	dna = Frey_41
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Frey_1
+	mother = Crakehall_2
+
+	trait = education_martial_2
+	trait = callous
+
+	8264.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.1.1 = {
+		trait = knight
+		add_spouse = Beesbury_4 # Beony Beesbury
+	}
+	8299.11.5 = { trait = murderer } # Red Wedding
+}
+### Issue of Hosteen
+Frey_42 = {
+	name = Arwood # Canon
+	dynasty = dynn_Frey
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_35
+	mother = Hawick_4
+
+	trait = education_martial_2
+	trait = craven
+
+	8274.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8290.1.1 = {
+		add_spouse = RoyceGOTM_13 # Ryella Royce
+		trait = knight
+	}
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+### Issue of Arwood
+Frey_43 = {
+	name = Ryella # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_42
+	mother = RoyceGOTM_13
+
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+Frey_44 = {
+	name = Androw # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_42
+	mother = RoyceGOTM_13
+
+	trait = twin
+
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+Frey_45 = {
+	name = Alyn # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_42
+	mother = RoyceGOTM_13
+
+	trait = twin
+
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+Frey_46 = {
+	name = Hostella # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_42
+	mother = RoyceGOTM_13
+
+	8300.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+### Issue of Symond
+Frey_47 = {
+	name = Alesander # Canon, excluded from Red Wedding
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_37
+	mother = Frey_hh_1
+
+	trait = education_diplomacy_2
+	trait = gregarious
+	trait = honorable
+
+	8278.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8294.1.1 = { trait = poet }
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+Frey_48 = {
+	name = Alyx # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_48
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_37
+	mother = Frey_hh_1
+	
+	trait = beauty_good_2
+
+	8282.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_49 = {
+	name = Bradamar # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_37
+	mother = Frey_hh_1
+
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8297.1.1 = {
+		effect = {
+			# agot_set_as_ward_history_effect = { GUARDIAN = character:600000048 } # Oro Tendyris AGOT TODO Essos People
+		}
+	}
+}
+### Issue of Merrett
+Frey_50 = {
+	name = Amerei # Canon, AKA: Gatehouse Amy, married Pate of the Blue Fork, Lancel Lannister and Martyn Lannister
+	dynasty = dynn_Frey
+	female = yes
+	dna = Frey_50
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_39
+	mother = Darry_5
+
+	trait = education_diplomacy_1
+	trait = beauty_good_2
+	trait = craven
+	trait = gregarious
+	trait = compassionate
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8282.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8295.1.1 = { trait = lustful }
+}
+Frey_52 = {
+	name = Walda # Canon, AKA: Fat Walda, married Roose Bolton
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_52
+
+	martial = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_39
+	mother = Darry_5
+
+	trait = education_intrigue_2
+	trait = gluttonous
+	trait = arrogant
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8284.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8294.1.1 = { give_nickname = nick_fat }
+	8297.1.1 = { trait = lustful }
+	8300.1.1 = {
+		effect = {
+			make_pregnant = {
+				father = character:Bolton_1 # Roose Bolton
+			}
+		}
+	}
+}
+Frey_53 = {
+	name = Marissa # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_39
+	mother = Darry_5
+
+	8286.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+Frey_54 = {
+	name = Walder # Canon, AKA: Little Walder
+	dynasty = dynn_Frey
+	#dna = "bifdf0ekaa0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_39
+	mother = Darry_5
+
+	trait = physique_good_2 
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8291.4.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8297.4.1 = { trait = gluttonous }
+	8298.4.1 = { trait = arrogant }
+	8299.2.11 = {
+		employer = Stark_6 # Robb Stark
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Stark_6 } # Robb Stark
+		}
+	}
+	8299.4.1 = { trait = wrathful }
+	8299.6.29 = {
+		employer = Bolton_1 # Roose Bolton
+		# trait = squire # AGOT TODO trait
+		trait = sadistic
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Bolton_5 } # Ramsay Snow
+		}
+	}
+	8299.11.5 = { employer = Bolton_5 } # Ramsay Snow
+	8300.5.1 = {
+		death = {
+			death_reason = death_murder
+			# killer = Rayder_1 # Mance Rayder, debatable
+			# killer = Bolton_5 # Ramsay Snow, probable
+		}
+	}
+}
+### Issue of Geremy
+Frey_55 = {
+	name = Sandor # Canon
+	dynasty = dynn_Frey
+
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_40
+	mother = Waynwood_18
+
+	8287.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8297.1.1 = {
+		# trait = squire # AGOT TODO trait
+		employer = Waynwood_5 # Anya Waynwood
+		effect = {
+			agot_set_as_ward_and_squire_history_effect = { KNIGHT = character:Waynwood_19 } # Donnel Waynwood
+		}
+	}
+}
+Frey_56 = {
+	name = Cynthea # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_40
+	mother = Waynwood_18
+
+	8290.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = {
+		employer = Waynwood_5 # Anya Waynwood
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Waynwood_5 } # Anya Waynwood
+		}
+	}
+}
+### Issue of Raymund
+Frey_57 = {
+	name = Robert # Canon
+	dynasty = dynn_Frey
+	#dna = "bflke0heba0"
+
+	learning = 15
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_41
+	mother = Beesbury_4
+
+	8283.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = {
+		effect = {
+			agot_send_to_citadel_effect = { MAESTER_CANDIDATE = ROOT }
+		}
+	}
+	8299.1.1 = {
+		effect = { agot_maester_safe_forge_link_history_effect = yes }
+	}
+	8300.1.1 = {
+		effect = { agot_maester_safe_forge_link_history_effect = yes }
+	}
+}
+Frey_58 = {
+	name = Malwyn # Canon
+	dynasty = dynn_Frey
+
+	learning = 9
+	martial = 1
+	intrigue = 4
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_41
+	mother = Beesbury_4
+
+	trait = education_intrigue_3
+	trait = diligent
+
+	8284.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.1.1 = { 
+		employer = Bazanne_1 # Errano Bazanne
+		trait = scholar
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Lowborn_Lys_1 } # Alchemist Drasaro
+		}
+	}
+}
+Frey_59 = {
+	name = Serra # Canon
+	dynasty = dynn_Frey
+	female = yes
+	#dna = "bflke0heba0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_41
+	mother = Beesbury_4
+
+	trait = twin
+	trait = beauty_bad_1
+
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_60 = {
+	name = Sarra # Canon
+	dynasty = dynn_Frey
+	female = yes
+	#dna = "bfike0heba0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_41
+	mother = Beesbury_4
+
+	trait = twin
+	trait = beauty_bad_1
+
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_61 = {
+	name = Cersei # Canon, AKA: The Little Bee
+	dynasty = dynn_Frey 
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_41
+	mother = Beesbury_4
+
+	8293.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = { give_nickname = nick_the_little_bee }
+}
+Frey_62 = {
+	name = Jaime # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_41
+	mother = Beesbury_4
+
+	trait = twin
+
+	8299.12.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_63 = {
+	name = Tywin # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_41
+	mother = Beesbury_4
+
+	trait = twin
+
+	8299.12.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+### Household
+Frey_hh_1 = {
+	name = Betharios # Canon, married Symond Frey
+	female = yes
+	#dna = "dadfcsdbdci"
+
+	religion = the_seven_main
+	culture = braavosi
+
+	trait = beauty_good_1
+
+	8261.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_51 = {
+	name = Pate # Canon
+	dynasty = dynn_Blue_Fork # of the Blue Fork
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_martial_1
+	trait = greedy
+	trait = brave
+
+	8278.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8294.1.1 = {
+		trait = knight
+		employer = Frey_1 # Walder Frey
+	}
+	8297.1.1 = { add_spouse = Frey_50 } # Gatehouse Ami Frey
+	8299.1.16 = {
+		death = {
+			death_reason = death_battle
+			killer = Clegane_3 # Gregor Clegane
+		}
+	}
+}
+
+### Blackwood-Freys
+############################
+Frey_64 = {
+	name = Lothar # Canon, AKA: Lame Lothar
+	dynasty = dynn_Frey
+	dna = Frey_64
+
+	martial = 1
+	diplomacy = 7
+	intrigue = 10 # Lothar was one of the prime engineers of the Red Wedding massacre
+	stewardship = 7
+	learning = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Blackwood_5
+
+	trait = education_diplomacy_4
+	trait = intellect_good_3
+	trait = clubfooted
+	trait = patient
+	trait = gregarious
+	trait = callous
+	trait = deceitful
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8266.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8269.1.1 = { give_nickname = nick_lame }
+	8287.1.1 = {
+		effect = { # Steward of The Twins
+			agot_appoint_as_councillor_for_castle_history_effect = { 
+				CASTLE = title:c_the_twins 
+				POSITION = councillor_steward
+			}
+		}
+	}
+	8290.1.1 = { add_spouse = Lefford_3 } # Leonella Lefford
+	8299.11.5 = { trait = murderer } # Red Wedding
+}
+Frey_65 = {
+	name = Jammos # Canon
+	dynasty = dynn_Frey
+	dna = Frey_65
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Blackwood_5
+
+	8267.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8283.1.1 = { trait = knight }
+	8289.1.1 = { add_spouse = Paege_3 } # Sallei Paege
+}
+Frey_66 = {
+	name = Whalen # Canon
+	dynasty = dynn_Frey
+	dna = Frey_66
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Blackwood_5
+
+	8268.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8284.1.1 = { trait = knight }
+	8286.1.1 = { add_spouse = Paege_2 } # Sylwa Paege
+	8299.11.5 = { trait = murderer } # Red Wedding
+}
+Frey_67 = {
+	name = Morya # Canon, married Flement Brax
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_67
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Blackwood_5
+
+	8269.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_68 = {
+	name = Tyta # Canon
+	dynasty = dynn_Frey
+	female = yes
+	dna = Frey_68
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Blackwood_5
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8297.1.1 = { give_nickname = nick_the_maid }
+}
+### Issue of Lothar
+Frey_69 = {
+	name = Tysane # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_64
+	mother = Lefford_3
+
+	8292.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_70 = {
+	name = Walda # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_64
+	mother = Lefford_3
+
+	8295.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_71 = {
+	name = Emberlei # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_64
+	mother = Lefford_3
+
+	8297.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_72 = {
+	name = Leana # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_64
+	mother = Lefford_3
+
+	8300.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+
+### Issue of Jammos
+Frey_73 = {
+	name = Walder # Canon, AKA: Big Walder
+	dynasty = dynn_Frey
+	#dna = "ajfii0hgda0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_65
+	mother = Paege_3
+	
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8291.2.8 = { 
+		birth = yes # 52 days older than Little Walder
+		add_character_flag = canon_status_canon
+	}
+	8297.2.8 = { trait = patient }
+	8298.2.8 = { trait = ambitious }
+	8299.2.8 = { trait = arrogant }
+	8299.2.11 = {
+		employer = Stark_6 # Robb Stark
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Stark_6 } # Robb Stark
+		}
+	}
+	8299.6.29 = {
+		employer = Bolton_1 # Roose Bolton
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Bolton_5 } # Ramsay Snow
+		}
+		trait = deceitful
+	}
+	8299.11.5 = { employer = Bolton_5 } # Ramsay Snow
+}
+Frey_74 = {
+	name = Dickon # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = twin
+
+	father = Frey_65
+	mother = Paege_3
+
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_75 = {
+	name = Mathis # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = twin
+
+	father = Frey_65
+	mother = Paege_3
+
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+### Issue of Whalen
+Frey_76 = {
+	name = Hoster # Canon
+	dynasty = dynn_Frey
+
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_66
+	mother = Paege_2
+
+	8287.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8297.1.1 = {
+		effect = {
+			agot_set_as_ward_and_squire_history_effect = { KNIGHT = character:Paege_5 } # Damon Paege
+		}
+	}
+}
+Frey_77 = {
+	name = Merianne # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_66
+	mother = Paege_2
+
+	8288.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+
+}
+
+### Rosby-Freys
+############################
+Frey_78 = {
+	name = Perwyn # Canon
+	dynasty = dynn_Frey
+	dna = Frey_78
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Rosby_3
+
+	trait = education_martial_2
+	trait = compassionate
+	trait = honest
+
+	8277.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8293.1.1 = { trait = knight }
+	8295.1.1 = {
+		effect = {
+			add_pressed_claim = title:d_rosby
+			add_pressed_claim = title:c_rosby
+		}
+	}
+}
+Frey_79 = {
+	name = Benfrey # Canon
+	dynasty = dynn_Frey
+	dna = Frey_79
+
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Rosby_3
+
+	8278.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8285.1.1 = {
+		effect = {
+			agot_create_personal_coa_for_historical_ai = { ACTOR = character:Frey_79 COA_KEY = benfrey_frey_personal_coa }
+		}
+	}
+	8294.1.1 = {
+		trait = knight
+		add_spouse = Frey_101 # Jyanna Frey
+	}
+	8299.11.5 = {
+		trait = murderer # Red Wedding
+		trait = wounded_3
+		death = {
+			death_reason = death_wounded_3 # The Red Wedding
+		}
+	}
+}
+Frey_80 = {
+	name = Willamen # Canon
+	dynasty = dynn_Frey
+	dna = Frey_80
+
+	learning = 13
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Rosby_3
+
+	trait = education_learning_2
+
+	8279.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = {
+		trait = maester_historical
+		effect = { # Maester of Longbow Hall
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = {
+				CASTLE = title:c_longbow_hills
+				POSITION = maester_court_position
+			}
+		}
+	}
+}
+Frey_81 = {
+	name = Olyvar # Canon
+	dynasty = dynn_Frey
+	dna = Frey_81
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Rosby_3
+
+	trait = education_martial_1
+	trait = honest
+	trait = brave
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8281.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8287.1.1 = { trait = diligent }
+	8297.1.1 = { trait = honorable }
+	8299.2.1 = {
+		# trait = squire # AGOT TODO trait
+		employer = Stark_6 # Robb Stark
+	}
+	8299.3.3 = { employer = Frey_1 } # Walder Frey
+	8300.3.1 = { employer = Lannister_9 } # Lancel Lannister
+	8300.4.1 = { employer = Lannister_11 } # Martyn Lannister
+}
+Frey_82 = {
+	name = Roslin # Canon, married Edmure Tully
+	dynasty = dynn_Frey
+	female = yes
+	dna = Frey_82
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Rosby_3
+
+	trait = education_diplomacy_1
+	trait = beauty_good_2
+	trait = compassionate
+	trait = craven
+	trait = shy
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8283.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+### Issue of Benfrey
+Frey_83 = {
+	name = Della # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_79
+	mother = Frey_101
+
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_84 = {
+	name = Osmund # Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_79
+	mother = Frey_101
+
+	8297.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+
+### Farring-Freys
+############################
+Frey_85 = {
+	name = Arwyn # Canon
+	dynasty = dynn_Frey
+	female = yes
+	#dna = "bdafk0lfgc0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Farring_4
+
+	8285.6.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon	 
+		trait = disputed_heritage
+	}
+}
+Frey_86 = {
+	name = Wendel # Canon
+	dynasty = dynn_Frey
+	#dna = "bkafk0kfgc0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Farring_4
+
+	8286.5.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon	 
+		trait = disputed_heritage
+	}
+	8292.5.1 = {
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Mallister_4 } # Jason Mallister
+		}
+	}
+}
+Frey_87 = {
+	name = Colmar # Canon, promised to Faith
+	dynasty = dynn_Frey
+
+	learning = 10
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Farring_4
+	
+	trait = curious
+
+	disallow_random_traits = yes
+
+	8288.4.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon	 
+		trait = disputed_heritage
+	}
+	8294.4.1 = { trait = chaste }
+	8296.4.1 = { trait = generous }
+	8298.4.1 = {
+		trait = patient
+		trait = zealous
+		effect = {
+			set_focus = education_learning
+			agot_safe_set_location_history_effect = { CASTLE = title:b_the_starry_sept }
+		}
+	}
+}
+Frey_88 = {
+	name = Waltyr # Canon
+	dynasty = dynn_Frey
+	#dna = "dmmdb0lfgc0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Farring_4
+
+	8289.3.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon	 
+		trait = disputed_heritage
+	}
+}
+Frey_89 = {
+	name = Elmar # Canon, betrothed to Arya Stark
+	dynasty = dynn_Frey
+	#dna = "ckcdb0lfgc0"
+
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Farring_4
+	
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	8290.2.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon	 
+		trait = disputed_heritage
+	}
+	8296.2.1 = { trait = arrogant }
+	8297.2.1 = { trait = greedy }
+	8299.2.1 = {
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Bolton_1 } # Roose Bolton
+		}
+	}
+}
+Frey_90 = {
+	name = Shirei # Canon
+	dynasty = dynn_Frey
+	female = yes
+	#dna = "ckcdb0lfgc0"
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+	mother = Farring_4
+
+	8293.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon	 
+		trait = disputed_heritage
+	}
+}
+
+### Bastard Freys
+############################
+Crossing_1 = {
+	name = Walder # Canon
+	dynasty = dynn_Frey
+
+	dna = Crossing_1
+
+	martial = 12
+	stewardship = 10
+	prowess = 12 
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+
+	give_nickname = nick_rivers
+	trait = bastard
+	
+	trait = education_martial_2
+	trait = callous
+	trait = cynical
+	trait = deceitful
+	trait = brave
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8246.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8262.1.1 = { trait = knight }
+	8269.1.1 = {
+		add_spouse = Charlton_2 # Alys Charlton
+		dynasty_house = house_Crossing
+	}
+	8299.11.5 = { trait = murderer } # Red Wedding
+}
+Frey_91 = {
+	name = Melwys # Canon
+	dynasty = dynn_Frey
+
+	dna = Frey_91
+
+	learning = 14
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+
+	give_nickname = nick_rivers
+	trait = bastard
+
+	trait = education_learning_2
+
+	8250.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8270.1.1 = {
+		trait = maester_historical
+		effect = { # Maester of Rosby
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = {
+				CASTLE = title:c_rosby
+				POSITION = maester_court_position
+			}
+		}
+	}
+}
+Frey_92 = {
+	name = Jeyne # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_92
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+
+	give_nickname = nick_rivers
+	trait = bastard
+
+	8265.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_93 = {
+	name = Martyn # Canon
+	dynasty = dynn_Frey
+
+	martial = 8
+	prowess = 6
+
+	dna = Frey_93
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+
+	give_nickname = nick_rivers
+	trait = bastard
+
+	trait = education_martial_2
+
+	8271.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_94 = {
+	name = Ryger # Canon
+	dynasty = dynn_Frey
+
+	prowess = 3
+
+	dna = Frey_94
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+
+	give_nickname = nick_rivers 
+	trait = bastard
+
+	trait = compassionate
+	trait = honorable
+
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Frey_95 = {
+	name = Ronel # Canon
+	dynasty = dynn_Frey
+
+	dna = Frey_95
+
+	martial = 8
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+
+	give_nickname = nick_rivers
+	trait = bastard
+
+	trait = education_martial_2
+
+	8273.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8299.1.16 = { # Battle of the Green Fork
+		effect = {
+			title:k_the_westerlands.holder = { # Tywin Lannister
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+	8299.6.1 = {
+		effect = { release_from_prison = yes }
+	}
+	8299.11.5 = {
+		effect = {
+			agot_safe_betrothal_history_effect = { TARGET = character:Lannister_14 } # Joy Hill
+		}
+	}
+}
+Frey_96 = {
+	name = Mellara # Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_96
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_1
+
+	give_nickname = nick_rivers
+
+	trait = bastard
+
+	8274.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+### Issue of Walder Rivers
+Crossing_2 = {
+	name = Walda # Canon
+	dynasty_house = house_Crossing
+	female = yes
+
+	dna = Crossing_2
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Crossing_1
+	mother = Charlton_2
+
+	give_nickname = nick_rivers
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+Crossing_3 = {
+	name = Aemon # Canon
+	dynasty_house = house_Crossing
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Crossing_1
+	mother = Charlton_2
+
+	give_nickname = nick_rivers
+	trait = arrogant
+
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8288.1.1 = { 
+		trait = knight
+		effect = { agot_create_personal_coa_for_historical_ai = { ACTOR = character:Crossing_3 COA_KEY = aemon_rivers_personal_coa } }
+	}
+	8293.1.1 = { add_spouse = Frey_rs_2 }
+}
+Frey_rs_2 = {
+	name = Alys
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8274.1.1 = { birth = yes }
+}
+### Issue of Aemon
+Crossing_4 = {
+	name = Walda # Canon
+	dynasty_house = house_Crossing
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Crossing_3
+	mother = Frey_rs_2
+
+	give_nickname = nick_rivers
+
+	8295.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+
+### Frey Junior Branch
+############################
+Frey_97 = {
+	name = Waldron # brother of Walder Frey
+	dynasty = dynn_Frey
+
+	dna = Frey_97
+
+	prowess = 6
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_132 
+	mother = Frey_rs_7
+
+	8211.2.9 = { birth = yes }
+	8227.4.1 = {
+		trait = knight
+		add_spouse = Frey_rs_3
+	}
+	8236.2.1 = {
+		death = { death_reason = death_battle } # Fourth Blackfyre Rebellion
+	}
+}
+Frey_rs_3 = {
+	name = Mellara
+	female = yes
+
+	dna = Frey_rs_3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8211.1.1 = { birth = yes }
+	8288.1.1 = { death = yes }
+}
+### Issue of Waldron
+Frey_98 = {
+	name = Roland 
+	dynasty = dynn_Frey
+
+	dna = Frey_98
+
+	prowess = 3
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_97
+	mother = Frey_rs_3
+
+	8230.4.10 = { birth = yes }
+	8246.7.4 = {
+		trait = knight
+		add_spouse = Frey_rs_4
+	}
+	8260.1.1 = {
+		death = { death_reason = death_battle } # War of the Ninepenny Kings
+	}
+}
+Frey_138 = {
+	name = Alianna # married Tomas Weller
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_138
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_97
+	mother = Frey_rs_3
+
+	trait = education_stewardship_3
+	trait = stubborn
+	trait = shy
+	trait = ambitious
+
+	8231.6.1 = { birth = yes }
+}
+Frey_rs_4 = {
+	name = Jeyne
+	female = yes
+
+	dna = Frey_rs_4
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8230.1.1 = { birth = yes }
+	8276.1.1 = { death = yes }
+}
+### Issue of Roland
+Frey_99 = {
+	name = Alys # Canon, married Jared Frey
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_99
+
+	father = Frey_98
+	mother = Frey_rs_4
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8248.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8285.1.1 = { death = yes }
+}
+Frey_139 = {
+	name = Walder
+	dynasty = dynn_Frey
+
+	dna = Frey_139
+
+	father = Frey_98
+	mother = Frey_rs_4
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8250.1.1 = { birth = yes }
+	8268.1.1 = { add_spouse = Frey_p_1 }
+	8292.1.1 = { death = yes }
+}
+Frey_p_1 = {
+	name = Jeyne # placeholder wife
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8250.1.1 = { birth = yes }
+}
+Frey_100 = {
+	name = Theo # Canon
+	dynasty = dynn_Frey
+
+	dna = Frey_100
+
+	prowess = 6
+
+	father = Frey_98
+	mother = Frey_rs_4
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8257.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	#8267.1.1 = { trait = squire } # AGOT TODO trait
+	8273.1.1 = {
+		#remove_trait = squire # AGOT TODO trait
+		trait = knight
+		add_spouse = Frey_rs_5
+	}
+}
+Frey_rs_5 = {
+	name = Della
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8257.1.1 = { birth = yes }
+}
+### Issue of Theo
+Frey_146 = {
+	name = Willem # Semi-Canon
+	dynasty = dynn_Frey
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_100
+	mother = Frey_rs_5
+
+	8277.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8296.1.1 = { add_spouse = Frey_rs_146 }
+}
+Frey_rs_146 = {
+	name = Melesa # Mentioned
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8280.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Frey_101 = {
+	name = Jyanna # Canon, married Benfrey Frey
+	dynasty = dynn_Frey
+	female = yes
+	dna = Frey_101
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_100
+	mother = Frey_rs_5
+
+	8279.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+}
+### Issue of Walder
+Frey_140 = {
+	name = Bria # Semi-Canon
+	dynasty = dynn_Frey
+	female = yes
+
+	dna = Frey_140
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Frey_139
+	mother = Frey_p_1
+
+	trait = education_diplomacy_3
+	trait = gregarious
+	trait = diligent
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8286.1.1 = { trait = authoritative }
+}
+### Household
+5599127 = { 
+	name = Brenett # Canon
+
+	religion = the_seven_main
+	culture = riverlander
+
+	learning = 9
+
+	trait = education_learning_3
+	trait = gluttonous
+	trait = humble
+	trait = content
+	trait = curious
+	
+	disallow_random_traits = yes
+
+	8262.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8282.1.1 = {
+		trait = maester_historical
+		effect = { # Maester of the Twins
+			agot_maester_starting_setup_history_effect = yes
+			agot_appoint_as_court_position_for_castle_history_effect = {
+				CASTLE = title:c_the_twins
+				POSITION = maester_court_position
+			}
+		}
+	}
+}

@@ -1,0 +1,1512 @@
+﻿############################         THE FAITH          ############################
+####################################################################################
+
+###### HIGH SEPTONS
+############################
+###
+###
+Most_Devout_1 = { 
+	name = Robeson # Canon, the first High Septon
+	dynasty = dynn_Most_Devout
+
+	learning = 9
+	diplomacy = 8
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_4
+	trait = zealous
+	trait = diligent
+	trait = patient
+	trait = honorable
+
+	6633.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	6653.1.1 = { trait = septon } # Septon
+	6675.1.1 = { trait = most_devout_member }
+	6685.1.1 = { trait = high_septon }
+	6704.1.1 = { death = yes }
+}
+Most_Devout_29 = {
+	name = Petyr
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = valeman
+
+	7808.1.1 = { birth = yes }
+	7834.1.1 = { trait = septon } # Septon
+	7850.1.1 = { trait = most_devout_member }
+	7877.1.1 = { trait = high_septon }
+	7890.1.1 = { death = yes }
+}
+Most_Devout_30 = {
+	name = Marq
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	7840.1.1 = { birth = yes }
+	7874.1.1 = { trait = septon } # Septon
+	7881.1.1 = { trait = most_devout_member }
+	7890.1.1 = { trait = high_septon }
+	7914.1.1 = { death = yes }
+}
+Most_Devout_31 = {
+	name = Tommen
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = westerman
+
+	7844.1.1 = { birth = yes }
+	7865.1.1 = { trait = septon } # Septon
+	7902.1.1 = { trait = most_devout_member }
+	7914.1.1 = { trait = high_septon }
+	7920.1.1 = { death = yes }
+}
+Most_Devout_32 = {
+	name = Victor
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = reachman
+
+	7861.1.1 = { birth = yes }
+	7885.1.1 = { trait = septon } # Septon
+	7911.1.1 = { trait = most_devout_member }
+	7920.1.1 = { trait = high_septon }
+	7934.1.1 = { death = yes }
+}
+Most_Devout_33 = {
+	name = Barth
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = reachman
+
+	7870.1.1 = { birth = yes }
+	7892.1.1 = { trait = septon } # Septon
+	7900.1.1 = { trait = most_devout_member }
+	7934.1.1 = { trait = high_septon }
+	7943.1.1 = { death = yes }
+}
+Most_Devout_34 = {
+	name = Yohn
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = valeman
+
+	7892.1.1 = { birth = yes }
+	7910.1.1 = { trait = septon } # Septon
+	7925.1.1 = { trait = most_devout_member }
+	7943.1.1 = { trait = high_septon }
+	7961.1.1 = { death = yes }
+}
+Most_Devout_28 = {
+	name = Robert
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	7910.1.1 = { birth = yes }
+	7930.1.1 = { trait = septon } # Septon
+	7940.1.1 = { trait = most_devout_member }
+	7961.1.1 = { trait = high_septon }
+	7977.1.1 = { death = yes }
+}
+Most_Devout_27 = {
+	name = Perceon
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+	
+	trait = education_learning_3
+
+	7933.1.1 = { birth = yes }
+	7952.1.1 = { trait = septon } # Septon
+	7970.1.1 = { trait = most_devout_member }
+	7977.1.1 = { trait = high_septon }
+	7990.1.1 = { death = yes }
+}
+Most_Devout_2 = { 
+	name = Garth # Mentioned, High Septon who crowned Aegon
+	dynasty = dynn_Most_Devout
+
+	learning = 9
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_3
+	trait = patient
+	trait = diligent
+	trait = temperate
+	trait = content
+
+	7950.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		#effect = { set_global_flag = faith_armed } # AGOT TODO
+	}
+	7966.1.1 = { trait = septon } # Septon
+	7981.1.1 = { trait = most_devout_member }
+	7990.1.1 = { trait = high_septon }
+	8011.1.1 = { death = yes }
+}
+Most_Devout_3 = {
+	name = Ryam # Mentioned, one of six High Septons of Aegon I's reign
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = education_learning_3
+
+	7953.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	7969.1.1 = { trait = septon } # Septon
+	7982.1.1 = { trait = most_devout_member }
+	8011.1.1 = { trait = high_septon }
+	8013.1.1 = { death = yes }
+}
+Most_Devout_4 = {
+	name = Humfrey # Mentioned, one of six High Septons of Aegon I's reign
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_4
+
+	7958.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	7974.1.1 = { trait = septon } # Septon
+	7989.1.1 = { trait = most_devout_member }
+	8013.1.1 = { trait = high_septon }
+	8015.1.1 = { death = yes }
+}
+Most_Devout_5 = {
+	name = Wolmer # Mentioned, one of six High Septons of Aegon I's reign
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_2
+
+	7955.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	7971.1.1 = { trait = septon } # Septon
+	7988.1.1 = { trait = most_devout_member }
+	8015.1.1 = { trait = high_septon }
+	8017.1.1 = { death = yes }
+}
+Most_Devout_6 = {
+	name = Perwyn # Mentioned, one of six High Septons of Aegon I's reign
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_3
+
+	7961.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	7977.1.1 = { trait = septon } # Septon
+	7990.1.1 = { trait = most_devout_member }
+	8017.1.1 = { trait = high_septon }
+	8021.1.1 = { death = yes }
+}
+Most_Devout_7 = {
+	name = Martyn # Mentioned, one of six High Septons of Aegon I's reign
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = westerman
+
+	trait = education_learning_3
+
+	7967.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	7983.1.1 = { trait = septon } # Septon
+	7992.1.1 = { trait = most_devout_member }
+	8021.1.1 = { trait = high_septon }
+	8022.1.1 = { death = yes }
+}
+# Redwyne_26 moved to his dynasty;
+Most_Devout_8 = {
+	name = Pater # Canon
+	dynasty = dynn_Most_Devout
+
+	learning = 9
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = education_learning_2
+	trait = forgiving
+	trait = content
+	trait = gregarious
+	trait = compassionate
+
+	7953.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	7980.1.1 = { trait = septon } # Septon
+	8022.1.1 = {
+		trait = infirm
+		trait = blind
+		trait = most_devout_member
+		employer = Redwyne_26 # High Septon (Paxter Redwyne)
+	}
+	8043.5.10 = { trait = high_septon }
+	8044.1.1 = { death = yes }
+}
+Most_Devout_9 = {
+	name = Runcel # Mentioned, AKA: High Lickspittle
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_3
+	trait = patient
+	trait = trusting
+	trait = craven
+
+	7980.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8020.1.1 = { trait = septon } # Septon
+	8031.1.1 = { trait = most_devout_member }
+	8044.1.1 = { 
+		trait = high_septon 
+		give_nickname = nick_the_high_lickspittle 
+	}
+	8054.1.1 = { death = yes }
+}
+Most_Devout_10 = {
+	name = Alfyn # Canon, Seven Speakers
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_learning_3
+	trait = diligent
+	trait = zealous
+	trait = content
+	trait = authoritative
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	7990.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8010.1.1 = { trait = septon } # Septon
+	8020.1.1 = { 
+		trait = theologian
+		trait = crippled # Lost legs
+	}
+	8042.1.1 = { trait = most_devout_member }
+	8054.1.1 = { trait = high_septon }
+	8059.2.1 = {
+		trait = ill
+		death = { death_reason = death_ill } # Died of Shivers
+	}
+}
+# Hightower_67 moved to his dynasty;
+Most_Devout_11 = {
+	name = Lorcas # Mentioned, High Septon during Great Council 101 AC
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+	
+	trait = education_learning_3
+
+	8040.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8060.1.1 = { trait = septon } # Septon
+	8065.1.1 = { trait = most_devout_member }
+	8070.1.1 = { trait = high_septon }
+	8102.1.1 = { death = yes }
+}
+Most_Devout_12 = {
+	name = Omer # Mentioned, High Septon during Dance of the Dragons
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+	
+	trait = education_learning_2
+
+	8068.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8084.1.1 = { trait = septon } # Septon
+	8095.1.1 = { trait = most_devout_member }
+	8102.1.1 = { trait = high_septon }
+	8128.1.1 = { trait = infirm }
+	8130.1.1 = { death = yes }
+}
+Most_Devout_13 = {
+	name = Jon # Mentioned, High Septon who forbade marriage between Lyonel Hightower and Samantha Tarly
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = vineman
+
+	trait = education_learning_3
+	trait = wrathful
+	trait = zealous
+	trait = stubborn
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8081.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8097.1.1 = { trait = septon } # Septon
+	8118.1.1 = { trait = most_devout_member }
+	8130.1.1 = { trait = high_septon }
+	8144.1.1 = { death = yes }
+}
+Most_Devout_14 = { 
+	name = Manfred # Mentioned, first High Septon of Baelor Targaryen's reign
+	dynasty = dynn_Most_Devout
+
+	learning = 8
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_3
+	trait = zealous
+	trait = ambitious
+
+	8101.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8117.1.1 = { trait = septon } # Septon
+	8129.1.1 = { trait = most_devout_member }
+	8144.1.1 = { trait = high_septon }
+	8166.1.1 = { death = yes }
+}
+Most_Devout_15 = { 
+	name = Pate # Canon, second High Septon of Baelor Targaryen's reign
+	dynasty = dynn_Most_Devout
+
+	learning = 0
+	diplomacy = 4
+	intrigue = 3
+	martial = 0
+	stewardship = 1
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_stewardship_1
+	trait = intellect_bad_2 #simple-minded
+	trait = humble
+	trait = diligent
+	trait = patient
+	trait = architect
+
+	8129.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8168.1.1 = {
+		trait = septon # Septon
+		trait = most_devout_member
+		trait = high_septon
+		give_nickname = nick_the_stonemason
+	}
+	8169.1.1 = {
+		trait = ill
+		death = { death_reason = death_ill }
+	}
+}
+Most_Devout_16 = { 
+	name = Hobb # Mentioned, third High Septon of Baelor Targaryen's reign
+	dynasty = dynn_Most_Devout
+
+	learning = 3
+	diplomacy = 3
+	intrigue = 2
+	martial = 0
+	stewardship = 1
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_1
+	trait = compassionate
+	trait = trusting
+	trait = zealous
+
+	8161.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8169.1.1 = {
+		trait = septon # Septon
+		trait = most_devout_member
+		trait = high_septon
+		give_nickname = nick_the_child
+		effect = {
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	8186.1.1 = { death = yes }
+}
+Most_Devout_17 = {
+	name = Leo # Mentioned, High Septon who distrusted bastards
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = honeywiner
+
+	trait = education_learning_3
+	trait = paranoid 
+
+	8146.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8162.1.1 = { trait = septon } # Septon
+	8178.1.1 = { trait = most_devout_member }
+	8186.1.1 = { trait = high_septon }
+	8209.6.1 = {
+		trait = spring_sickness
+		death = { death_reason = death_spring_sickness } # Great Spring Sickness
+	}
+}
+Most_Devout_18 = {
+	name = Addam
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = crownlander
+	
+	trait = education_learning_3
+
+	8179.1.1 = { birth = yes }
+	8195.1.1 = { trait = septon } # Septon
+	8205.1.1 = { trait = most_devout_member }
+	8209.6.1 = { trait = high_septon }
+	8220.1.1 = { death = { death_reason = death_accident } }
+}
+Most_Devout_19 = {
+	name = Raymund # Mentioned, offered to absolve Aemon Targaryen from his vows
+	dynasty = dynn_Most_Devout
+
+	religion = the_seven_main
+	culture = crownlander
+	
+	trait = education_learning_2
+
+	8200.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8216.1.1 = { trait = septon } # Septon
+	8219.1.1 = { trait = most_devout_member }
+	8220.1.1 = { trait = high_septon }
+	8260.1.1 = { death = yes }
+}
+Most_Devout_20 = {
+	name = Humfrey # Mentioned, AKA: The Fat One
+	dynasty = dynn_Most_Devout
+
+	martial = 2
+	diplomacy = 4
+	intrigue = 3
+	stewardship = 4
+	learning = 9
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_2
+	trait = gluttonous
+	trait = greedy
+	trait = craven
+
+	8230.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+		effect = { change_current_weight = 100 }
+		# effect = { set_immune_to_pruning = yes }
+	}
+	8250.1.1 = {
+		trait = septon # Septon
+		effect = {
+			add_trait = lifestyle_reveler
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	8255.1.1 = { trait = most_devout_member }
+	8260.1.1 = {
+		give_nickname = nick_the_fat_one
+		trait = high_septon
+	}
+	# 8294.1.1 = { #Lends Iron Throne gold
+		# effect = { # Can be only one debt at a time
+			# title:e_the_iron_throne.holder = { # Robert; Joffrey; Tommen
+				# set_up_loan_effect = {
+					# LENDER = ROOT
+					# AMOUNT = 1000
+				# }
+			# }
+		# }
+	# }
+	8299.5.1 = {
+		death = {
+			death_reason = death_rabble # Riots in King's Landing
+		}
+	}
+}
+Most_Devout_21 = {
+	name = Simon # Mentioned, AKA: Tyrion's High Septon
+	dynasty = dynn_Most_Devout
+
+	martial = 0
+	diplomacy = 2
+	intrigue = 0
+	stewardship = 3
+	learning = 9
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_3
+	trait = honest
+	trait = content
+	trait = craven
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8223.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8248.1.1 = { trait = septon } # Septon
+	8285.1.1 = { trait = most_devout_member }
+	8299.4.1 = { 
+		trait = high_septon
+		give_nickname = nick_the_one_after_the_fat_one
+		# effect = { # Lends Iron Throne gold
+			# title:e_the_iron_throne.holder = { # Robert; Joffrey; Tommen
+				# set_up_loan_effect = {
+					# LENDER = ROOT
+					# AMOUNT = 1000
+				# }
+			# }
+		# }
+	}
+	8300.3.1 = {
+		death = {
+			death_reason = death_murder_known
+			killer = Kettleblack_4 #Osney Kettleblack
+		}
+	}
+}
+Most_Devout_22 = {
+	name = Sparrow # Canon, AKA: High Sparrow
+	dynasty = dynn_Most_Devout
+	# High Septon
+
+	martial = 5
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 7
+	learning = 9
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_3
+	trait = zealous
+	trait = ambitious
+	trait = diligent
+	trait = authoritative
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8243.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+		effect = { change_first_name = Pate }
+	}
+	8266.1.1 = { trait = septon } # Septon
+	8298.1.1 = { 
+		effect = { change_first_name = Sparrow }
+	}
+	8300.3.1 = {
+		trait = most_devout_member
+		trait = high_septon
+		give_nickname = nick_the_sparrow
+		effect = {
+			#add_character_flag = high_sparrow # AGOT TODO
+			add_character_flag = nickname_event
+		}
+	}
+}
+
+###### THE MOST DEVOUT
+############################
+###
+###
+77900 = {
+	name = Ollidor # Canon
+
+	learning = 9
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_3
+
+	8240.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8255.1.1 = { trait = lustful }
+	8265.1.1 = { trait = septon } # Septon
+	8289.1.1 = {
+		trait = most_devout_member
+		employer = Most_Devout_20 # High Septon (the Fat One)
+	}
+	8299.5.1 = { employer = Most_Devout_21 } # High Septon (Tyrion's)
+	8300.3.1 = { employer = Most_Devout_22 } # High Sparrow
+}
+77901 = {
+	name = Raynard # Canon 
+	
+	learning = 8
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_3
+
+	8242.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8255.1.1 = { trait = lustful }
+	8268.1.1 = { trait = septon } # Septon
+	8290.1.1 = {
+		trait = most_devout_member
+		employer = Most_Devout_20 # High Septon (the Fat One)
+	}
+	8299.5.1 = { employer = Most_Devout_21 } # High Septon (Tyrion's)
+	8300.3.1 = { employer = Most_Devout_22 } # High Sparrow
+}
+77902 = {
+	name = Torbert # Canon
+	
+	learning = 8
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = gluttonous
+	trait = humble
+	trait = education_learning_3
+
+	8236.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8278.1.1 = { trait = septon } # Septon
+	8292.1.1 = {
+		trait = most_devout_member
+		employer = Most_Devout_20 # High Septon (the Fat One)
+	}
+	8299.5.1 = { employer = Most_Devout_21 } # High Septon (Tyrion's)
+	8300.3.1 = { employer = Most_Devout_22 } # High Sparrow
+}
+Most_Devout_23 = {
+	name = Unella # Canon
+	female = yes
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = education_learning_1
+	trait = vengeful
+	trait = arrogant
+	trait = zealous
+	trait = calm
+
+	8254.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8270.1.1 = { trait = septon } # Septa
+	8292.1.1 = { employer = Most_Devout_20 } # High Septon (the Fat One)
+	8299.5.1 = { employer = Most_Devout_21 } # High Septon (Tyrion's)
+	8300.3.1 = { employer = Most_Devout_22 } # High Sparrow
+}
+Most_Devout_24 = {
+	name = Melicent # Canon
+	female = yes
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_2
+
+	8263.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { trait = septon } # Septa
+	8292.1.1 = { employer = Most_Devout_20 } # High Septon (the Fat One)
+	8299.5.1 = { employer = Most_Devout_21 } # High Septon (Tyrion's)
+	8300.3.1 = { employer = Most_Devout_22 } # High Sparrow
+}
+Most_Devout_25 = {
+	name = Aglantine # Canon
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_learning_2
+
+	8260.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8276.1.1 = { trait = septon } # Septa
+	8292.1.1 = { employer = Most_Devout_20 } # High Septon (the Fat One)
+	8299.5.1 = { employer = Most_Devout_21 } # High Septon (Tyrion's)
+	8300.3.1 = { employer = Most_Devout_22 } # High Sparrow
+}
+Most_Devout_26 = {
+	name = Moelle # Canon
+	female = yes
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_learning_2
+	trait = zealous
+	trait = paranoid
+
+	8260.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8276.1.1 = { trait = septon } # Septa
+	8292.1.1 = { employer = Most_Devout_20 } # High Septon (the Fat One)
+	8299.5.1 = { employer = Most_Devout_21 } # High Septon (Tyrion's)
+	8300.3.1 = { employer = Most_Devout_22 } # High Sparrow
+}
+
+# drogon = {
+# 	name="Drogon"
+# 	dynasty = 497001
+
+# 	#religion="dragon_rel"
+# 	#culture="dragon_culture"
+# 	culture = high_valyrian
+# 	religion = the_seven_main
+
+# 	trait = dragon
+
+# 	disallow_random_traits = yes
+
+# 	# father = 77990029 #unknown dragon
+# 	# mother = Targaryen_9 #Dany
+
+# 	8278.10.10 = {
+# 		birth=yes
+# 	}
+# }
+
+# drogon_1 = {
+# 	name = Drogon
+# 	dynasty = 497001
+
+# 	martial = 8
+# 	diplomacy = 9
+# 	intrigue = 1
+# 	stewardship = 6
+# 	learning = 5
+# 	prowess = 6
+
+# 	religion = old_gods_south
+# 	culture = northman
+
+# 	disallow_random_traits = yes
+
+# 	8263.1.1 = {
+# 		birth = yes
+# 		trait = dragon
+# 	}
+# 	8298.11.2 = {
+# 		death = {
+# 			death_reason = death_execution
+# 		}
+# 	}
+# }
+
+############################         ELDEN RING         ############################
+####################################################################################
+
+###### HOUSE CARIAN (id = dynn_Carian)
+############################
+###
+### Carian royal family
+Carian_1 = {
+	name = Rennala	# Rennala of the Full Moon
+	dynasty = dynn_Carian
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	trait = education_learning_4
+	trait = intellect_good_2
+	trait = physique_bad_1
+	trait = patient
+	trait = trusting
+	trait = calm
+	trait = compassionate
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8242.1.1 = {
+		birth = yes
+		make_trait_inactive = black_hair
+		effect = {
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = trait_third_level
+			}
+		}
+
+	}
+	8258.1.1 = { add_matrilineal_spouse = Erdtree_3 } # Radagon Erdtree
+	8285.1.1 = {
+		remove_spouse = Erdtree_3 # Radagon Erdtree
+		trait = depressed_1
+		trait = lunatic_1
+	}
+}
+
+Carian_2 = {
+	name = Radahn # Starscourge Radahn
+	dynasty = dynn_Carian
+
+	martial = 10
+	diplomacy = 2
+	intrigue = 2
+	stewardship = 2
+	learning = 10
+	prowess = 10
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Erdtree_3	#Radagon
+	mother = Carian_1	#Rennala
+
+	trait = education_martial_4
+	trait = giant
+	trait = physique_good_3
+	trait = brave
+	trait = arrogant
+	trait = gregarious
+	trait = wrathful
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8266.1.1 = {
+		birth = yes
+		make_trait_inactive = kissed_by_fire_hair
+		make_trait_inactive = gold_eyes
+	}
+	8282.1.1 = {
+		trait = knight
+		trait = education_martial_prowess_4
+	}
+	8290.1.1 = { trait = cannibal }
+	#Killed by Malenia?
+}
+
+Carian_3 = {
+	name = Rykard # Praetor Rykard, the Blasphemous
+	dynasty = dynn_Carian
+
+	martial = 10
+	diplomacy = 2
+	intrigue = 10
+	stewardship = 7
+	learning = 10
+	prowess = 1
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = heterosexual
+
+	father = Erdtree_3	#Radagon
+	mother = Carian_1	#Rennala
+
+	trait = education_intrigue_4
+	trait = arbitrary
+	trait = ambitious
+	trait = greedy
+	trait = sadistic
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8268.1.1 = {
+		birth = yes
+		make_trait_inactive = kissed_by_fire_hair
+		make_trait_inactive = gold_eyes
+	}
+	8284.1.1 = {
+		trait = torturer
+		religion = rhllor # Blasphemy
+		add_spouse = Carian_rs_1 # Tanith of Myr
+		effect = {
+			set_relation_lover = character:Carian_rs_1
+		}
+	}
+}
+
+Carian_rs_1 = {
+	name = Tanith # Tanith of Myr
+	female = yes
+
+	religion = rhllor
+	culture = myrish
+	sexuality = heterosexual
+
+	trait = education_intrigue_3
+	trait = beauty_good_2
+	trait = ambitious
+	trait = deceitful
+	trait = zealous
+	trait = sadistic
+	trait = fire_obsessed
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	8270.1.1 = { birth = yes }
+}
+
+Carian_4 = {
+	name = Ranni # Ranni the Witch
+	dynasty = dynn_Carian
+	female = yes
+
+	martial = 4
+	diplomacy = 2
+	intrigue = 10
+	stewardship = 7
+	learning = 10
+	prowess = 0
+
+	religion = the_seven_main
+	culture = riverlander
+	sexuality = bisexual	#will marry tarnished of either gender?
+
+	father = Erdtree_3	#Radagon
+	mother = Carian_1	#Rennala
+
+	trait = education_learning_4
+	trait = physique_bad_2
+	trait = beauty_good_2
+	trait = intellect_good_2
+	trait = calm
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8270.1.1 = {
+		birth = yes
+		make_trait_inactive = kissed_by_fire_hair
+		make_trait_inactive = gold_eyes
+	}
+	8273.1.1 = { trait = patient }
+	8276.1.1 = { trait = ambitious }
+	8279.1.1 = {
+		trait = callous
+		effect = {
+			add_character_modifier = {
+				modifier = bluejay_hair_dye
+			}
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = trait_third_level
+			}
+		}
+	}
+}
+
+#Rya - Dedicar - Tanith
+#Issue of Rykard
+Carian_5 = {
+	name = Rya # Daughter of Rykard
+	female = yes
+
+	religion = rhllor
+	culture = riverlander
+
+	father = Carian_3
+
+	trait = bastard
+	trait = beauty_good_1
+	trait = hunchbacked
+	trait = trusting
+	trait = calm
+	trait = honest
+	trait = compassionate
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8283.1.1 = {
+		birth = yes
+		effect = { give_nickname = nick_rivers }
+	}
+}
+
+###### HOUSE ERDTREE (id = dynn_Erdtree)
+############################
+###
+### The Golden Order
+Erdtree_1 = {
+	name = Godwyn	#Father for Marika and Radogan
+	dynasty = dynn_Erdtree
+	
+	religion = the_seven_main
+	culture = reachman
+	
+	8200.1.1 = {
+		birth = yes
+		make_trait_inactive = red_hair
+	}
+	8258.1.1 = { death = yes }
+}
+
+Erdtree_2 = {
+	name = Marika	# Marika's Tits!
+	dynasty = dynn_Erdtree
+	female = yes
+
+	martial = 2
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 6
+	learning = 4
+
+	religion = the_seven_main
+	culture = reachman
+	sexuality = bisexual
+
+	father = Erdtree_1
+
+	trait = education_intrigue_3
+	trait = beauty_good_2
+	trait = twin
+	trait = fickle
+	trait = vengeful
+	trait = ambitious
+	trait = zealous
+	trait = bossy
+
+	disallow_random_traits = yes
+
+	8242.1.1 = {
+		birth = yes
+		make_trait_inactive = gold_hair
+	}
+	8258.1.1 = { add_matrilineal_spouse = Loux_2 } #Horah Loux
+	#Godwyn the Golden
+	#The Twins
+}
+
+Erdtree_3 = {
+	name = Radagon	# Radagon of the Golden Order
+	dynasty = dynn_Erdtree
+	dna = Erdtree_3
+
+	martial = 9
+	diplomacy = 4
+	intrigue = 3
+	stewardship = 4
+	learning = 4
+	prowess = 10
+
+	religion = the_seven_main
+	culture = reachman
+	sexuality = bisexual
+
+	father = Erdtree_1
+
+	trait = education_martial_4
+	trait = beauty_good_2
+	trait = twin
+	trait = brave
+	trait = compassionate
+	trait = just
+	trait = diligent
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8242.1.1 = {
+		birth = yes
+		make_trait_inactive = kissed_by_fire_hair
+		make_trait_inactive = gold_eyes
+	}
+	8258.1.1 = {
+		trait = education_martial_prowess_4
+		trait = lifestyle_blademaster_3_history 
+		trait = disinherited # Disinherited for Marrying Rennala
+	}
+}
+#Issue of Marika - Children with Godfrey
+Erdtree_4 = {
+	name = Godwyn # Godwyn the Golden, murdered by Ranni
+	dynasty = dynn_Erdtree
+
+	martial = 10
+	diplomacy = 2
+	intrigue = 10
+	stewardship = 7
+	learning = 10
+	prowess = 1
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Loux_2	#Godfrey
+	mother = Erdtree_2	#Marika
+
+	trait = education_diplomacy_3
+	trait = beauty_good_3
+	trait = gregarious
+	trait = generous
+	trait = brave
+	trait = temperate
+	trait = charming
+
+	disallow_random_traits = yes
+
+	8266.1.1  = {
+		birth = yes
+		make_trait_inactive = gold_hair
+	}
+	8282.1.1 = { #Old enough to have fought in the Greyjoy Rebellion
+		trait = education_martial_prowess_3
+		effect = { give_nickname = nick_the_golden }
+	}
+	8297.1.1 = {
+		death = {
+			death_reason = death_mysterious
+			killer = Carian_4 #Ranni
+		}
+	}
+}
+
+Erdtree_5 = {
+	name = Mohg	#Mohg
+	dynasty = dynn_Erdtree
+
+	religion = the_seven_main
+	culture = reachman
+	sexuality = homosexual
+
+	father = Loux_2	#Godfrey
+	mother = Erdtree_2	#Marika
+
+	trait = education_intrigue_4
+	trait = beauty_bad_3
+	trait = scaly
+	trait = albino
+	trait = twin
+	trait = possessed_1
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	8269.1.1 = { birth = yes }
+	8272.1.1 = { trait = sadistic }
+	8275.1.1 = { trait = arbitrary }
+	8278.1.1 = { trait = zealous }
+	8281.1.1 = { trait = greedy }
+	8285.1.1 = { trait = education_martial_prowess_2 }
+}
+
+Erdtree_6 = {
+	name = Morgott	#Morgott the Omen
+	dynasty = dynn_Erdtree
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Loux_2	#Godfrey
+	mother = Erdtree_2	#Marika
+
+	trait = education_stewardship_3
+	trait = beauty_bad_3
+	trait = scaly
+	trait = albino
+	trait = twin
+	trait = pensive
+
+	disallow_random_traits = yes
+
+	8269.1.1 = { birth = yes }
+	8272.1.1 = { trait = just }
+	8275.1.1 = { trait = brave }
+	8278.1.1 = { trait = forgiving }
+	8281.1.1 = { trait = shy }
+	8285.1.1 = { trait = education_martial_prowess_3 }
+}
+Erdtree_7 = {
+	name = Miquella	#Miquella - Older Twin
+	dynasty = dynn_Erdtree
+
+	religion = the_seven_main
+	culture = reachman
+
+	mother = Erdtree_2	#Marika
+
+	trait = education_learning_3
+	trait = physique_bad_3
+	trait = beauty_good_1
+	trait = twin
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8269.1.1 = {
+		birth = yes
+		make_trait_inactive = gold_hair
+		make_trait_inactive = gold_eyes
+		effect = {
+			set_real_father = character:Erdtree_3 #Radagon
+		}
+	}
+	8272.1.1 = { trait = compassionate }
+	8275.1.1 = { trait = zealous }
+	8278.1.1 = { trait = forgiving }
+	8281.1.1 = { trait = shy }
+	8285.1.1 = { trait = lifestyle_gardener }
+}
+
+Erdtree_8 = {
+	name = Malenia	#Malenia - Younger Twin
+	dynasty = dynn_Erdtree
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = education_martial_3
+	trait = twin
+	trait = scarred
+	trait = one_eyed
+	#Grayscale?
+	trait = rowdy
+
+	disallow_random_traits = yes
+
+	mother = Erdtree_2	#Marika
+
+	8269.1.1 = {
+		birth = yes
+		make_trait_inactive = red_hair
+		make_trait_inactive = gold_eyes
+		effect = {
+			set_real_father = character:Erdtree_3 #Radagon
+		}
+	}
+	8272.1.1 = { trait = honest }
+	8275.1.1 = { trait = brave }
+	8278.1.1 = { trait = vengeful }
+	8281.1.1 = {
+		trait = calm
+		trait = lifestyle_blademaster_3_history 
+	}
+	8285.1.1 = { trait = education_martial_prowess_4 }
+}
+
+
+# Erdtree_5 #Melina - bastard
+
+#Millicent - Mary-Maureen-Amy-Polyanna
+# arbitrary
+# honest
+# diligent
+# brave
+
+###### HOUSE LOUX (id = dynn_Loux)
+############################
+###
+### 
+Loux_1 = {
+	name = Godfrey #Father for the Loux siblings
+	dynasty = dynn_Loux
+	dna = Loux_1
+
+	religion = the_seven_main
+	culture = sand_dornish
+
+	8220.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+Loux_2 = {
+	#Godfrey/Hoarah Loux
+	name = Hoarah
+	dynasty = dynn_Loux
+	dna = Loux_2
+
+	martial = 7
+	prowess = 8
+
+	religion = the_seven_main
+	culture = sand_dornish
+	
+	father = Loux_1
+
+	trait = education_martial_4
+	trait = strong
+	trait = physique_good_3
+	trait = education_martial_prowess_4
+	trait = brave
+	trait = wrathful
+	trait = just
+	
+	8240.1.1 = { birth = yes }
+}
+
+Loux_3 = {
+	name = Godfrey #Splitting Godfrey/Hoarah into brothers for some dynastic stability
+	dynasty = dynn_Loux
+
+	religion = the_seven_main
+	culture = sand_dornish
+	
+	father = Loux_1
+
+	trait = strong
+	trait = physique_good_1
+	trait = education_martial_2
+	trait = education_martial_prowess_3
+
+	8250.1.1 = { birth = yes }
+}
+
+Loux_4 = { #Older by necessity so Godfrey's lands don't pass to Marika
+	name = Nepheli	#Nepheli Loux
+	dynasty = dynn_Loux
+	female = yes
+
+	martial = 7
+	prowess = 12
+	
+	religion = the_seven_main
+	culture = sand_dornish
+	
+	father = Loux_2
+	
+	trait = education_martial_4
+	trait = strong
+	trait = physique_good_2
+	trait = rowdy
+
+	8256.1.1 = { birth = yes }
+	8258.1.1 = { trait = brave }
+	8272.1.1 = {
+		trait = compassionate
+		trait = just
+		trait = trusting
+		trait = education_martial_prowess_4
+	}
+}
+
+#Trusty Patches
+Patches_1 = {
+	name = Patches
+	intrigue = 7
+	prowess = 8
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_intrigue_2
+	trait = education_martial_prowess_2
+	trait = shrewd
+	trait = deceitful
+	trait = cynical
+	trait = craven
+	trait = greedy
+
+	8260.1.1 = { birth = yes }
+	8275.1.1 = { give_nickname = nick_trusty }
+}

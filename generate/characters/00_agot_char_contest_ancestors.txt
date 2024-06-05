@@ -1,0 +1,2971 @@
+﻿####################################################
+####			ROYAL PROGRESS WINNERS			####
+####################################################
+
+###### HOUSE LORELEY (id = dynn_Loreley)
+############################
+###
+###
+Loreley_6 = {
+	name = Melusine
+	dynasty = dynn_Loreley
+	female = yes
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	7850.1.1 = { birth = yes }
+	7912.1.1 = { death = yes }
+}
+Loreley_7 = {
+	name = Elys
+	dynasty = dynn_Loreley
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	mother = Loreley_6
+
+	7870.1.1 = { birth = yes }
+	7924.1.1 = { death = yes }
+}
+Loreley_8 = {
+	name = Rolland
+	dynasty = dynn_Loreley
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_7
+
+	7889.1.1 = { birth = yes }
+	7935.1.1 = { death = yes }
+}
+Loreley_21 = {
+	name = Waymar
+	dynasty = dynn_Loreley
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_8
+
+	7912.1.1 = { birth = yes }
+	7987.1.1 = { death = yes }
+}
+Loreley_22 = {
+	name = Godric
+	dynasty = dynn_Loreley
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_21
+
+	7937.1.1 = { birth = yes }
+	8001.1.1 = { death = yes }
+}
+Loreley_23 = {
+	name = Steffon
+	dynasty = dynn_Loreley
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_22
+
+	7960.1.1 = { birth = yes }
+	8018.1.1 = { death = yes }	
+}
+Loreley_24 = {
+	name = Waymar
+	dynasty = dynn_Loreley
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_23
+
+	7984.1.1 = { birth = yes }
+	8040.1.1 = { death = yes }	
+}
+Loreley_9 = {
+	name = Raymund
+	dynasty = dynn_Loreley
+
+	religion = lady_of_the_waves
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_24
+
+	8006.1.1 = { birth = yes }
+	8056.1.1 = { death = yes }
+}
+Loreley_10 = {
+	name = Samwell
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_9
+
+	8027.1.1 = { birth = yes }
+	8078.1.1 = { death = yes }
+}
+Loreley_11 = {
+	name = Rodrik
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_10
+
+	8047.1.1 = { birth = yes }
+	8098.1.1 = { death = yes }
+}
+Loreley_12 = {
+	name = Robert
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_11
+
+	8066.1.1 = { birth = yes }
+	8110.1.1 = { death = yes }
+}
+Loreley_13 = {
+	name = Rolland
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_12
+
+	8086.1.1 = { birth = yes }
+	8131.1.1 = { death = yes }
+}
+Loreley_14 = {
+	name = Guy
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_13
+
+	8103.1.1 = { birth = yes }
+	8135.1.1 = { death = { death_reason = death_battle } }
+}
+Loreley_15 = {
+	name = Roger
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_14
+
+	8121.1.1 = { birth = yes }
+	8176.1.1 = { death = yes }
+}
+Loreley_16 = {
+	name = Othor
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_15
+
+	8154.1.1 = { birth = yes }
+	8213.1.1 = { death = yes }
+}
+Loreley_17 = {
+	name = Raymund
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_16
+
+	8173.1.1 = { birth = yes }
+	8220.1.1 = { death = yes }
+}
+Loreley_18 = {
+	name = Reynard
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_17
+
+	8196.1.1 = { birth = yes }
+	8257.1.1 = { death = yes }
+}
+Loreley_19 = {
+	name = Royce
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_18
+
+	8215.1.1 = { birth = yes }
+	8267.1.1 = { death = yes }
+}
+Loreley_20 = {
+	name = Qarl
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_19
+
+	8236.1.1 = { birth = yes }
+	8281.1.1 = { death = yes }
+}
+Loreley_25 = {
+	name = Roger
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+
+	father = Loreley_20
+
+	8262.1.1 = { birth = yes }
+}
+Loreley_26 = {
+	name = Robert
+	dynasty = dynn_Loreley
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+	trait = beauty_good_1
+	trait = twin	
+
+	father = Loreley_25
+
+	8283.1.1 = { birth = yes }
+}
+Loreley_27 = {
+	name = Melusine
+	dynasty = dynn_Loreley
+	female = yes
+
+	religion = the_seven_main
+	culture = sisterman
+	trait = the_mark
+	trait = beauty_good_1
+	trait = twin	
+
+	father = Loreley_25
+
+	8283.1.1 = { birth = yes }
+}
+
+
+###### HOUSE TETTING (id = dynn_Tetting)
+############################
+###
+###
+Tetting_12 = {
+	name = Colmar
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	7949.1.1 = { birth = yes }
+	7965.1.1 = { trait = knight }
+	7970.1.1 = { add_spouse = Tetting_rs_14 }
+	7990.1.1 = { death = yes }
+}
+Tetting_rs_14 = {
+	name = Lysa
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	7951.1.1 = { birth = yes }
+	7981.1.1 = { death = { death_reason = death_childbirth } }
+}
+### Issue of Colmar
+Tetting_13 = {
+	name = Ambrose
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_12
+	mother = Tetting_rs_14
+
+	trait = brave
+
+	7975.1.1 = { birth = yes }
+	7991.1.1 = { trait = knight }
+	8000.5.1 = {
+		death = {
+			death_reason = death_battle_dragon_fire # Field of Fire
+			killer = Targaryen_27 # Aegon I Targaryen
+		}
+	}
+}
+Tetting_14 = {
+	name = Amory
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_12
+	mother = Tetting_rs_14
+
+	trait = brave
+
+	7977.1.1 = { birth = yes }
+	7993.1.1 = { trait = knight }
+	8000.5.1 = {
+		death = {
+			death_reason = death_battle_dragon_fire # Field of Fire
+			killer = Targaryen_27 # Aegon I Targaryen
+		}
+	}
+}
+Tetting_15 = {
+	name = Alan
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_12
+	mother = Tetting_rs_14
+
+	trait = twin
+	trait = brave
+
+	7978.1.1 = { birth = yes }
+	7994.1.1 = { trait = knight }
+	8000.5.1 = {
+		death = {
+			death_reason = death_battle_dragon_fire # Field of Fire
+			killer = Targaryen_27 # Aegon I Targaryen
+		}
+	}
+}
+Tetting_16 = {
+	name = Alyn
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_12
+	mother = Tetting_rs_14
+
+	trait = twin
+	trait = brave
+
+	7978.1.1 = { birth = yes }
+	7994.1.1 = { trait = knight }
+	8000.5.1 = {
+		death = {
+			death_reason = death_battle_dragon_fire # Field of Fire
+			killer = Targaryen_27 # Aegon I Targaryen
+		}
+	}
+}
+Tetting_17 = {
+	name = Addam
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_12
+	mother = Tetting_rs_14
+
+	trait = brave
+
+	7980.1.1 = { birth = yes }
+	7996.1.1 = { trait = knight }
+	8000.5.1 = {
+		death = {
+			death_reason = death_battle_dragon_fire # Field of Fire
+			killer = Targaryen_27 # Aegon I Targaryen
+		}
+	}
+}
+Tetting_18 = {
+	name = Axell # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_12
+	mother = Tetting_rs_14
+
+	trait = brave
+
+	7981.1.1 = { birth = yes }
+	7997.1.1 = { trait = knight }
+	8000.1.1 = { add_spouse = Tetting_marbrand }
+	8035.1.1 = { death = yes }
+}
+Tetting_marbrand = { # make a Marbrand
+	name = Lysa
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	7981.1.1 = { birth = yes }
+	8047.1.1 = { death = yes }
+}
+### Issue of Axell
+Tetting_19 = {
+	name = Hugh # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_18
+	mother = Tetting_marbrand
+
+	8001.1.1 = { birth = yes }
+	8017.1.1 = { trait = knight }
+	8019.1.1 = { add_spouse = Tetting_rs_5 }
+	8020.1.1 = { trait = widowed }
+	8049.1.1 = { death = yes }
+}
+Tetting_rs_5 = {
+	name = Shiera
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8003.1.1 = { birth = yes }
+	8020.1.1 = { death = { death_reason = death_childbirth } }
+}
+Tetting_20 = {
+	name = Genna # marry off to someone
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_18
+	mother = Tetting_marbrand
+
+	8003.1.1 = { birth = yes }
+	8057.1.1 = { death = yes }
+}
+Tetting_21 = {
+	name = Axell # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_19
+	mother = Tetting_rs_5
+
+	8020.1.1 = { birth = yes }
+	8035.1.1 = { add_spouse = Tetting_parren }
+	8036.1.1 = { trait = knight }
+	8057.1.1 = { death = yes }
+}
+Tetting_parren = { # make a Parren
+	name = Perianne
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8020.1.1 = { birth = yes }
+	8069.1.1 = { death = yes }
+}
+### Issue of Axell
+Tetting_22 = {
+	name = Tytos
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_21
+	mother = Tetting_parren
+
+	8036.1.1 = { birth = yes }
+	8052.1.1 = { trait = knight }
+	8056.1.1 = { death = yes }
+}
+Tetting_23 = {
+	name = Colmar # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_21
+	mother = Tetting_parren
+
+	8037.1.1 = { birth = yes }
+	8053.1.1 = { trait = knight }
+	8060.1.1 = { add_spouse = Tetting_lanny }
+	8092.1.1 = { death = yes }
+}
+Tetting_lanny = { # make a Lanny
+	name = Cerissa
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8039.1.1 = { birth = yes }
+	8085.1.1 = { death = yes }
+}
+Tetting_24 = {
+	name = Addam
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_21
+	mother = Tetting_parren
+
+	8038.1.1 = { birth = yes }
+	8054.1.1 = { trait = knight }
+	8065.1.1 = { add_spouse = Tetting_rs_6 }
+	8088.1.1 = { death = yes }
+}
+Tetting_rs_6 = {
+	name = Joy
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8040.1.1 = { birth = yes }
+	8090.1.1 = { death = yes }
+}
+### Issue of Colmar
+Tetting_25 = {
+	name = Alyn # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_23
+	mother = Tetting_lanny
+
+	8068.1.1 = { birth = yes }
+	8084.1.1 = { trait = knight }
+	8086.1.1 = { add_spouse = Tetting_rs_7 }
+	8108.1.1 = { death = yes }
+}
+Tetting_rs_7 = {
+	name = Helicent
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8068.1.1 = { birth = yes }
+	8120.1.1 = { death = yes }
+}
+Tetting_26 = {
+	name = Alys # marry off
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_23
+	mother = Tetting_lanny
+
+	8071.1.1 = { birth = yes }
+	8128.1.1 = { death = yes }
+}
+### Issue of Addam
+Tetting_27 = {
+	name = Rohanne
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_24
+	mother = Tetting_rs_6
+
+	8066.1.1 = { birth = yes }
+	8082.1.1 = { trait = septon }
+	8111.1.1 = { death = yes }
+}
+### Issue of Alyn
+Tetting_28 = {
+	name = Leona # marry off
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_25
+	mother = Tetting_rs_7
+
+	8088.1.1 = { birth = yes }
+	8150.1.1 = { death = yes }
+}
+Tetting_29 = {
+	name = Byron # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_25
+	mother = Tetting_rs_7
+
+	trait = fickle
+
+	8090.1.1 = { birth = yes }
+	8106.1.1 = { trait = knight }
+	8107.1.1 = { add_spouse = Tetting_rs_8 }
+	8165.1.1 = { death = yes }
+}
+Tetting_rs_8 = {
+	name = Sybell
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8092.1.1 = { birth = yes }
+	8147.1.1 = { death = yes }
+}
+### Issue of Byron
+Tetting_30 = {
+	name = Ambrose
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_29
+	mother = Tetting_rs_8
+
+	8108.1.1 = { birth = yes }
+	8124.1.1 = { trait = knight }
+	8126.1.1 = { add_spouse = Tetting_foote }
+	8162.1.1 = { death = yes }
+}
+Tetting_foote = {
+	name = Myranda # make a Foote
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8109.1.1 = { birth = yes }
+	8174.1.1 = { death = yes }
+}
+Tetting_31 = {
+	name = Amory
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_29
+	mother = Tetting_rs_8
+
+	trait = brave
+
+	8110.1.1 = { birth = yes }
+	8126.1.1 = { trait = knight }
+	8130.1.1 = {
+		death = {
+			death_reason = death_battle #Battle by the Lakeshore
+		}
+	}
+}
+Tetting_32 = {
+	name = Lysa
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_29
+	mother = Tetting_rs_8
+
+	8112.1.1 = { birth = yes }
+	8170.1.1 = { death = yes }
+}
+### Issue of Ambrose
+Tetting_33 = {
+	name = Lollys
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_30
+	mother = Tetting_foote
+
+	8132.1.1 = { birth = yes }
+	8178.1.1 = { death = yes }
+}
+Tetting_34 = {
+	name = Willem # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_30
+	mother = Tetting_foote
+
+	8136.1.1 = { birth = yes }
+	8152.1.1 = { trait = knight }
+	8155.1.1 = { add_spouse = Tetting_rs_9 }
+	8183.1.1 = { death = yes }
+}
+Tetting_rs_9 = {
+	name = Alysanne
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8136.1.1 = { birth = yes }
+	8197.1.1 = { death = yes }
+}
+Tetting_35 = {
+	name = Perianne
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_30
+	mother = Tetting_foote
+
+	8137.1.1 = { birth = yes }
+	8178.1.1 = { death = yes }
+}
+### Issue of Willem
+Tetting_36 = {
+	name = Addam # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_34
+	mother = Tetting_rs_9
+
+	8157.1.1 = { birth = yes }
+	8173.1.1 = { trait = knight }
+	8174.1.1 = { add_spouse = Tetting_rs_10 }
+	8200.1.1 = { death = yes }
+}
+Tetting_rs_10 = {
+	name = Amarei
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8157.1.1 = { birth = yes }
+	8209.1.1 = { death = yes }
+}
+Tetting_37 = {
+	name = Alyn
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_34
+	mother = Tetting_rs_9
+
+	8159.1.1 = { birth = yes }
+	8175.1.1 = { trait = knight }
+	8178.1.1 = { add_spouse = Tetting_rs_11 }
+	8189.1.1 = { death = yes }
+}
+Tetting_rs_11 = {
+	name = Jocasta
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8159.1.1 = { birth = yes }
+	8199.1.1 = { death = yes }
+}
+### Issue of Addam
+Tetting_38 = {
+	name = Duncan # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_36
+	mother = Tetting_rs_10
+
+	trait = brave
+
+	8175.1.1 = { birth = yes }
+	8189.1.1 = {
+		trait = knight
+		trait = education_martial_prowess_3
+	}
+	8190.1.1 = { add_spouse = Tetting_rs_12 }
+	8218.1.1 = { death = yes }
+}
+Tetting_rs_12 = {
+	name = Elinor
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8175.1.1 = { birth = yes }
+	8221.1.1 = { death = yes }
+}
+Tetting_39 = {
+	name = Alysanne
+	dynasty = dynn_Tetting
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_36
+	mother = Tetting_rs_10
+
+	8178.1.1 = { birth = yes }
+	8235.1.1 = { death = yes }
+}
+### Issue of Alyn
+Tetting_40 = {
+	name = Willem
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_37
+	mother = Tetting_rs_11
+
+	8179.1.1 = { birth = yes }
+	8195.1.1 = { trait = knight }
+	8224.1.1 = { death = yes }
+}
+### Issue of Duncan
+Tetting_41 = {
+	name = Tytos # a lord
+	dynasty = dynn_Tetting
+
+	religion = the_seven_main
+	culture = westerman
+
+	father = Tetting_38
+	mother = Tetting_rs_12
+
+	8191.1.1 = { birth = yes }
+	8207.1.1 = { trait = knight }
+	8210.1.1 = { add_spouse = Tetting_rs_13 }
+	8243.1.1 = { death = yes }
+}
+Tetting_rs_13 = {
+	name = Teora
+	female = yes
+
+	religion = the_seven_main
+	culture = westerman
+
+	8191.1.1 = { birth = yes }
+	8222.1.1 = { death = yes }
+}
+
+###### HOUSE REDSTEEL (id = dynn_Redsteel)
+############################
+###
+###
+Redsteel_13 = {
+	name = Roland
+	dynasty = dynn_Redsteel
+
+	religion = the_seven_main
+	culture = stone_dornish
+
+	8181.1.1 = { birth = yes }
+	8200.1.1 = { trait = knight }
+	8238.1.1 = { death = yes }
+}
+
+###### HOUSE DUNKEL (id = dynn_Dunkel)
+############################
+###
+###
+Dunkel_7 = {
+	name = Robert
+
+	religion = the_seven_main
+	culture = crownlander
+
+	8063.1.1 = { birth = yes }
+	8082.1.1 = { trait = knight }
+	8129.1.1 = { death = { death_reason = death_battle } }
+}
+Dunkel_8 = {
+	name = Donnel
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_7
+
+	trait = education_stewardship_3
+	trait = diligent
+
+	8084.1.1 = { birth = yes }
+	8104.1.1 = { trait = knight }
+	8144.1.1 = { death = yes }
+}
+### Issue of Donnel
+Dunkel_9 = {
+	name = Dale
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_8
+
+	trait = education_martial_2
+	trait = brave
+
+	8111.1.1 = { birth = yes }
+	8127.1.1 = { trait = lustful }
+	8130.1.1 = { trait = knight }
+	8142.1.1 = { death = { death_reason = death_accident } }
+}
+Dunkel_10 = {
+	name = Denys
+	dynasty = dynn_Dunkel
+	sexuality = homosexual
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_8
+
+	trait = education_diplomacy_3
+	trait = content
+
+	8112.1.1 = { birth = yes }
+	8130.1.1 = { trait = knight }
+	8167.1.1 = { death = yes }
+}
+### Issue of Dale
+Dunkel_11 = {
+	name = Davos
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_9
+
+	trait = education_stewardship_3
+	trait = ambitious
+	trait = diligent
+	trait = patient
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8133.1.1 = { birth = yes }
+	8154.1.1 = { 
+		trait = architect
+		trait = knight 
+	}
+	8194.1.1 = { death = yes }
+}
+### Issue of Davos
+Dunkel_12 = {
+	name = Dale
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_11
+
+	trait = education_martial_2
+	trait = ambitious
+	trait = wrathful
+	trait = brave
+	trait = arrogant
+
+	8166.1.1 = { birth = yes }
+	8184.1.1 = { trait = knight }
+	8196.6.1 = { death = { death_reason = death_battle } }
+}
+Dunkel_13 = {
+	name = Jonquil
+	dynasty = dynn_Dunkel
+	female = yes
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_11
+
+	trait = education_stewardship_3
+	trait = arrogant
+	trait = brave
+
+	8167.1.1 = { birth = yes }
+	8190.1.1 = { add_matrilineal_spouse = Dunkel_rs_1 }
+	8220.1.1 = { death = yes }
+}
+Dunkel_14 = {
+	name = Jeyne
+	dynasty = dynn_Dunkel
+	female = yes
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_11
+
+	trait = education_diplomacy_3
+
+	8169.1.1 = { birth = yes }
+	8225.1.1 = { death = yes }
+}
+Dunkel_15 = {
+	name = Robert
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_11
+
+	trait = education_stewardship_1
+	trait = content
+
+	8176.1.1 = { birth = yes }
+	8195.1.1 = { trait = knight }
+	8209.6.1 = {
+		trait = spring_sickness
+		death = { death_reason = death_spring_sickness } # Great spring sickness.
+	}
+}
+Dunkel_rs_1 = {
+	name = Rolland
+
+	religion = the_seven_main
+	culture = crownlander
+
+	trait = education_martial_2
+	trait = brave
+
+	8165.1.1 = { birth = yes }
+	8211.1.1 = { death = yes }
+}
+### Issue of Jonquil
+Dunkel_16 = {
+	name = Oswell
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_rs_1
+	mother = Dunkel_13
+
+	trait = education_stewardship_3
+	trait = calm
+	trait = zealous
+
+	8191.1.1 = { birth = yes }
+	8210.1.1 = { trait = knight }
+	8243.1.1 = { death = yes }
+}
+Dunkel_17 = {
+	name = Davos
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_rs_1
+	mother = Dunkel_13
+
+	trait = education_martial_2
+	trait = wrathful
+
+	8194.1.1 = { birth = yes }
+	8208.1.1 = { trait = lustful }
+	8222.1.1 = { 
+		trait = nightswatch_historical  
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_eastwatch
+				NW_JOIN_AGE = 28
+			}
+		}
+	}
+	8239.1.1 = { death = yes }
+}
+### Issue of Robert
+Dunkel_18 = {
+	name = Davos
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_15
+
+	8199.1.1 = { birth = yes }
+	8209.6.1 = {
+		trait = spring_sickness
+		death = { death_reason = death_spring_sickness } # Great spring sickness.
+	}
+}
+### Issue of Oswell
+Dunkel_19 = {
+	name = Duran
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_16
+
+	8212.1.1 = { birth = yes }
+	8230.1.1 = { trait = knight }
+	8260.1.1 = { death = yes }
+}
+Dunkel_20 = {
+	name = Aethelred
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_16
+
+	8216.1.1 = { birth = yes }
+	8235.1.1 = { trait = knight }
+	8272.1.1 = { death = yes }
+}
+### Issue of Davos
+Dunkel_21 = {
+	name = Emerick
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_17
+
+	8214.1.1 = { birth = yes }
+	8236.1.1 = { death = yes }
+}
+### Issue of Duran
+Dunkel_22 = {
+	name = Oswell
+	dynasty = dynn_Dunkel
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_19
+
+	8232.1.1 = { birth = yes }
+	8250.1.1 = { trait = knight }
+	8260.1.1 = { death = { death_reason = death_battle } }
+}
+### Issue of Emerick
+Dunkel_23 = {
+	name = Larra
+	dynasty = dynn_Dunkel
+	female = yes
+
+	religion = the_seven_main
+	culture = crownlander
+
+	father = Dunkel_21
+
+	8236.1.1 = { birth = yes }
+}
+
+###### HOUSE DULE (id = dynn_Dule)
+############################
+###
+###
+Dule_9 = {
+	name = Robin
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = education_martial_2
+	trait = brave
+	trait = deceitful
+
+	7300.1.1 = { birth = yes }
+	7320.1.1 = { trait = knight }
+	7355.1.1 = { death = yes }
+}
+Dule_10 = {
+	name = Line_of_Robin
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_9
+
+	trait = line_of_char
+	disallow_random_traits = yes
+
+	7333.1.1 = { birth = yes }
+	7840.1.1 = { death = yes }
+}
+Dule_39 = { 
+	name = Myles # a lord
+	dynasty = dynn_Dule
+ 
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_10
+ 
+	7840.1.1 = { birth = yes }
+	7895.1.1 = { death = yes }
+}
+Dule_38 = { 
+	name = Denys
+	dynasty = dynn_Dule
+ 
+	religion = the_seven_main
+	culture = reachman
+ 
+	father = Dule_39
+ 
+	7865.1.1 = { birth = yes }
+	7919.1.1 = { death = yes }
+}
+Dule_37 = { 
+	name = Wyman
+	dynasty = dynn_Dule
+ 
+	religion = the_seven_main
+	culture = reachman
+ 
+	father = Dule_38
+ 
+	7885.1.1 = { birth = yes }
+	7950.1.1 = { death = yes }
+}
+Dule_36 = { 
+	name = Osmund
+	dynasty = dynn_Dule
+ 
+	religion = the_seven_main
+	culture = reachman
+ 
+	father = Dule_37
+ 
+	7908.1.1 = { birth = yes }
+	7954.1.1 = { death = yes }
+}
+Dule_35 = { 
+	name = Simon 
+	dynasty = dynn_Dule
+ 
+	religion = the_seven_main
+	culture = reachman
+ 
+	father = Dule_36
+ 
+	7931.1.1 = { birth = yes }
+	7987.1.1 = { death = yes }
+}
+Dule_11 = {
+	name = Arthor
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = education_martial_2
+	trait = brave
+	trait = arrogant
+
+	father = Dule_35
+
+	7962.1.1 = { birth = yes }
+	7980.1.1 = { trait = knight }
+	7990.1.1 = { add_spouse = Dule_graceford }
+	8000.5.1 = { trait = maimed }
+	8002.1.1 = { death = { death_reason = death_maimed } }
+}
+Dule_graceford = {
+	name = Alysanne # make a Graceford
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	7966.1.1 = { birth = yes }
+	8021.1.1 = { death = yes }
+}
+### Issue of Arthor
+Dule_12 = {
+	name = Alan
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	trait = education_martial_2
+	trait = brave
+	trait = zealous
+	trait = chaste
+
+	father = Dule_11
+	mother = Dule_graceford
+
+	7991.1.1 = { birth = yes }
+	8010.1.1 = { trait = knight }
+	8041.1.1 = { death = { death_reason = death_battle } }
+}
+Dule_13 = {
+	name = Jon
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_11
+	mother = Dule_graceford
+
+	trait = zealous
+
+	7995.1.1 = { birth = yes }
+	8014.1.1 = { trait = knight }
+	8015.1.1 = { add_spouse = Dule_lowther }
+	8041.1.1 = { death = { death_reason = death_battle } }
+}
+Dule_lowther = {
+	name = Janna # make a Lowther
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	7984.1.1 = { birth = yes }
+	8056.1.1 = { death = yes }
+}
+### Issue of Alan
+Dule_29 = {
+	name = Arthor
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_12
+	mother = Dule_graceford
+
+	8019.1.1 = { birth = yes }
+	8038.1.1 = { trait = knight }
+	8041.1.1 = { death = { death_reason = death_battle } }
+}
+### Issue of Jon
+Dule_14 = {
+	name = Elwood
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_13
+	mother = Dule_lowther
+
+	trait = brave
+
+	8021.1.1 = { birth = yes }
+	8040.1.1 = { trait = knight }
+	8041.1.1 = { death = { death_reason = death_battle } }
+}
+Dule_15 = {
+	name = Owen
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_13
+	mother = Dule_lowther
+
+	trait = education_learning_3
+	trait = shrewd
+	trait = just
+	trait = gregarious
+	trait = generous
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8025.1.1 = { birth = yes }
+	8050.1.1 = { add_spouse = Dule_osgrey }
+	8064.1.1 = { trait = widowed }
+	8086.1.1 = { death = yes }
+}
+Dule_osgrey = {
+	name = Olenna # make an Osgrey of Leafy Lake
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	8027.1.1 = { birth = yes }
+	8064.1.1 = { death = yes }
+}
+### Issue of Owen
+Dule_30 = {
+	name = Bethany # marry to a Beesbury
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_15
+	mother = Dule_osgrey
+
+	8050.1.1 = { birth = yes }
+	8106.1.1 = { death = yes }
+}
+Dule_16 = {
+	name = Guyard
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_15
+	mother = Dule_osgrey
+
+	trait = education_martial_1
+	trait = generous
+	trait = lazy
+	trait = fickle
+	trait = curious
+	
+	disallow_random_traits = yes
+
+	8055.1.1 = { birth = yes }
+	8070.1.1 = { trait = drunkard }
+	8072.1.1 = { add_spouse = Dule_peake }
+	8075.1.1 = { trait = knight }
+	8103.1.1 = { death = yes }
+}
+Dule_peake = {
+	name = Jeyne # make a peake of lesser branch
+	female = yes
+
+	religion = the_seven_main
+	culture = marcher
+
+	8055.1.1 = { birth = yes }
+	8106.1.1 = { death = yes }
+}
+### Issue of Guyard
+Dule_17 = {
+	name = Robin
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_16
+	mother = Dule_peake
+
+	trait = education_stewardship_2
+	trait = arrogant
+	trait = stubborn
+	trait = wrathful
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8072.1.1 = { birth = yes }
+	8090.1.1 = { trait = knight }
+	8129.1.1 = { give_nickname = nick_the_black }
+	8129.9.1 = { death = { death_reason = death_rabble } }
+}
+### Issue of Robin
+Dule_18 = {
+	name = Margaery
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_16
+	mother = Dule_peake
+
+	8089.1.1 = { birth = yes }
+	8112.1.1 = { death = yes }
+}
+Dule_19 = {
+	name = Robin
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_17
+
+	trait = education_martial_2
+	trait = arrogant
+	trait = ambitious
+	trait = arbitrary
+	trait = brave
+
+	8090.1.1 = { birth = yes }
+	8108.1.1 = { trait = knight }
+	8111.1.1 = { add_spouse = Dule_hastwyck }
+	8129.1.1 = { give_nickname = nick_the_green }
+	8130.5.8 = {
+		death = {
+			death_reason = death_battle_dragon_fire # Second Battle of Tumbleton
+			killer = Velaryon_43 # Addam Velaryon
+		}
+	}
+}
+Dule_hastwyck = {
+	name = Marian # make a Hastwyck
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	8088.1.1 = { birth = yes }
+	8167.1.1 = { death = yes }
+}
+Dule_31 = {
+	name = Rickard
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_16
+	mother = Dule_peake
+
+	trait = education_martial_2
+	trait = honest
+
+	8102.1.1 = { birth = yes }
+	8120.1.1 = { trait = knight }
+	8130.1.1 = { add_spouse = Dule_bushy }
+	8148.1.1 = { death = yes }
+}
+Dule_bushy = {
+	name = Beony # make a Bushy
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	8110.1.1 = { birth = yes }
+	8166.1.1 = { death = yes }
+}
+### Issue of Robin
+Dule_20 = {
+	name = Marian
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_19
+	mother = Dule_hastwyck
+
+	trait = education_stewardship_2
+	trait = shy
+	trait = lazy
+	trait = content
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8115.1.1 = { birth = yes }
+	8135.1.1 = { add_matrilineal_spouse = Dule_rs_1 }
+	8158.1.1 = { trait = widowed }
+	8165.1.1 = { death = yes }
+}
+Dule_rs_1 = {
+	name = Hyle
+
+	religion = the_seven_main
+	culture = marcher
+
+	trait = education_martial_2
+	trait = compassionate
+
+	8112.1.1 = { birth = yes }
+	8131.1.1 = { trait = knight }
+	8158.1.1 = { death = yes }
+}
+### Issue of Rickard
+Dule_32 = {
+	name = Margaery # marry to Addam Hutcheson
+	dynasty = dynn_Dule
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_31
+	mother = Dule_bushy
+
+	8132.1.1 = { birth = yes }
+	8187.1.1 = { death = yes }
+}
+### Issue of Marian
+Dule_21 = {
+	name = Robin
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_rs_1
+	mother = Dule_20
+
+	trait = education_martial_3
+	trait = brave
+	trait = impatient
+	trait = arrogant
+
+	8151.1.1 = { birth = yes }
+	8170.1.1 = { trait = knight }
+	8180.1.1 = { give_nickname = nick_the_red }
+	8196.6.1 = { death = { death_reason = death_battle } }
+}
+Dule_22 = {
+	name = Willam
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_rs_1
+	mother = Dule_20
+
+	trait = education_martial_2
+	trait = brave
+
+	8153.1.1 = { birth = yes }
+	8172.1.1 = { trait = knight }
+	8196.6.1 = { death = { death_reason = death_battle } }
+}
+Dule_23 = {
+	name = Gilbert
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_rs_1
+	mother = Dule_20
+
+	trait = education_diplomacy_2
+
+	8154.1.1 = { birth = yes }
+	8174.1.1 = { trait = knight }
+	8190.1.1 = { add_spouse = Dule_norridge }
+	8213.1.1 = { death = yes }
+}
+Dule_norridge = {
+	name = Florence # make a Norridge
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	8160.1.1 = { birth = yes }
+	8223.1.1 = { death = yes }
+}
+### Issue of Gilbert
+Dule_24 = {
+	name = Gerold
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_23
+	mother = Dule_norridge
+
+	trait = education_martial_3
+	trait = physique_good_2
+	trait = brave
+	trait = callous
+	trait = diligent
+
+	8192.1.1 = { birth = yes }
+	8209.1.1 = { trait = knight }
+	8219.1.1 = { trait = scarred }
+	8220.1.1 = { add_spouse = Dule_varner }
+	8255.1.1 = { trait = gout_ridden }
+	8264.1.1 = { death = yes }
+}
+Dule_varner = {
+	name = Alla
+	female = yes
+
+	religion = the_seven_main
+	culture = reachman
+
+	8192.1.1 = { birth = yes }
+	8266.1.1 = { death = yes }
+}
+### Issue of Willam
+Dule_25 = {
+	name = Daemon
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_22
+
+	give_nickname = nick_flowers
+	trait = bastard
+
+	trait = education_martial_2
+	trait = brave
+	trait = arrogant
+	trait = wrathful
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8196.5.1 = { birth = yes }
+	8216.1.1 = { trait = knight }
+	8236.1.1 = { death = { death_reason = death_battle } }
+}
+Dule_26 = {
+	name = Willam
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_25
+
+	give_nickname = nick_flowers
+
+	8220.1.1 = { birth = yes }
+	8239.1.1 = { trait = knight }
+	8265.1.1 = { death = yes }
+}
+Dule_27 = {
+	name = Arthor
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_26
+
+	give_nickname = nick_flowers
+
+	8239.1.1 = { birth = yes }
+	8290.1.1 = { death = yes }
+}
+Dule_28 = {
+	name = Richard
+	dynasty = dynn_Dule
+
+	religion = the_seven_main
+	culture = reachman
+
+	father = Dule_27
+
+	give_nickname = nick_flowers
+
+	trait = arrogant
+	trait = brave
+
+	8260.1.1 = { birth = yes }
+}
+
+###### HOUSE MOONFELL (id = dynn_Moonfell)
+############################
+###
+###
+Moonfell_1 = {
+	name = Uthor
+	dynasty = dynn_Moonfell
+
+	religion = old_gods_south
+	culture = first_man
+
+	trait = education_martial_3
+	trait = ambitious
+	trait = zealous
+	trait = brave
+
+	100.1.1 = { birth = yes }
+	116.1.1 = {
+		effect = {
+			add_trait = lifestyle_hunter
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = trait_third_level
+			}
+		}
+	}
+	190.1.1 = { death = yes }
+}
+Moonfell_2 = {
+	name = Line_of_Uthor
+	dynasty = dynn_Moonfell
+
+	religion = old_gods_south
+	culture = first_man
+
+	father = Moonfell_1
+
+	trait = line_of_char
+	disallow_random_traits = yes
+
+	120.1.1 = { birth = yes }
+	6010.1.1 = { death = yes }
+}
+Moonfell_3 = {
+	name = Hugh
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	trait = education_martial_2
+	trait = brave
+
+	father = Moonfell_2
+
+	6000.1.1 = { birth = yes }
+	6040.1.1 = { trait = knight }
+	6050.1.1 = { death = yes }
+}
+Moonfell_4 = {
+	name = Line_of_Hugh
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_3
+
+	trait = line_of_char
+	disallow_random_traits = yes
+
+	6040.1.1 = { birth = yes }
+	7811.1.1 = { death = yes }
+}
+Moonfell_35 = { 
+	name = Elbyn
+	dynasty = dynn_Moonfell
+ 
+	religion = the_seven_main
+	culture = valeman
+	
+	father = Moonfell_4
+ 
+	7811.1.1 = { birth = yes }
+	7857.1.1 = { death = yes }
+}
+Moonfell_34 = { 
+	name = Hubert
+	dynasty = dynn_Moonfell
+ 
+	religion = the_seven_main
+	culture = valeman
+ 
+	father = Moonfell_35
+ 
+	7836.1.1 = { birth = yes }
+	7880.1.1 = { death = yes }
+}
+Moonfell_33 = { 
+	name = Creighton
+	dynasty = dynn_Moonfell
+ 
+	religion = the_seven_main
+	culture = valeman
+ 
+	father = Moonfell_34
+ 
+	7857.1.1 = { birth = yes }
+	7922.1.1 = { death = yes }
+}
+Moonfell_5 = {
+	name = Uthor
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_33
+
+	7880.1.1 = { birth = yes }
+	7900.1.1 = { trait = knight }
+	7950.1.1 = { death = yes }
+}
+Moonfell_6 = {
+	name = Uthor
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_5
+
+	7905.1.1 = { birth = yes }
+	7923.1.1 = { trait = knight }
+	7967.1.1 = { death = yes }
+}
+### Issue of Uthor
+Moonfell_7 = {
+	name = Lyn
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_6
+
+	7935.1.1 = { birth = yes }
+	7954.1.1 = { trait = knight }
+	7972.1.1 = { add_spouse = Moonfell_rs_7 }
+	8009.1.1 = { death = yes }
+}
+Moonfell_rs_7 = {
+	name = Rhea
+	female = yes
+
+	religion = the_seven_main
+	culture = valeman
+
+	7955.1.1 = { birth = yes }
+	8020.1.1 = { death = yes }
+}
+Moonfell_8 = {
+	name = Robar
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_6
+
+	7940.1.1 = { birth = yes }
+	7958.1.1 = { trait = knight }
+	7992.1.1 = { death = yes }
+}
+### Issue of Lyn
+Moonfell_9 = {
+	name = Alyn
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_7
+
+	give_nickname = nick_stone
+	trait = bastard
+
+	trait = education_martial_3
+	trait = content
+	trait = diligent
+	trait = honorable
+
+	7970.1.1 = { birth = yes }
+	7990.1.1 = { trait = knight }
+	8025.1.1 = { death = yes }
+}
+Moonfell_10 = {
+	name = Hugh
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_7
+	mother = Moonfell_rs_7
+
+	7973.1.1 = {
+		birth = yes
+		death = { death_reason = death_delivery }
+	}
+}
+Moonfell_11 = {
+	name = Jeyne
+	dynasty = dynn_Moonfell
+	female = yes
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_7
+	mother = Moonfell_rs_7
+
+	7979.1.1 = {
+		birth = yes
+		death = { death_reason = death_delivery }
+	}
+}
+Moonfell_12 = {
+	name = Uthor
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_7
+	mother = Moonfell_rs_7
+
+	7989.1.1 = {
+		birth = yes
+		death = { death_reason = death_delivery }
+	}
+}
+Moonfell_13 = {
+	name = Lyn
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_7
+	mother = Moonfell_rs_7
+
+	7998.1.1 = { birth = yes }
+	8016.1.1 = { trait = knight }
+	8050.1.1 = { death = yes }
+}
+### Issue of Lyn
+Moonfell_14 = {
+	name = Jon
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_13
+
+	8020.1.1 = { birth = yes }
+	8047.1.1 = { trait = knight }
+	8095.1.1 = { death = yes }
+}
+Moonfell_15 = {
+	name = Arlan
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_14
+
+	8052.1.1 = { birth = yes }
+	8070.1.1 = { trait = knight }
+	8110.1.1 = { death = yes }
+}
+Moonfell_16 = {
+	name = Roland
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_15
+
+	8081.1.1 = { birth = yes }
+	8100.1.1 = { trait = knight }
+	8105.1.1 = { add_spouse = Moonfell_rs_16 }
+	8126.1.1 = { death = yes }
+}
+Moonfell_rs_16 = {
+	name = Janyce
+	female = yes
+
+	religion = the_seven_main
+	culture = valeman
+
+	8081.1.1 = { birth = yes }
+	8127.1.1 = { death = yes }
+}
+Moonfell_17 = {
+	name = Lymond
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_16
+	mother = Moonfell_rs_16
+
+	trait = education_martial_3
+	trait = brave
+	trait = honorable
+	trait = cynical
+
+	8109.1.1 = { birth = yes }
+	8128.1.1 = { trait = knight }
+	8170.1.1 = { death = yes }
+}
+Moonfell_18 = {
+	name = Lyn
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_17
+
+	8130.1.1 = { birth = yes }
+	8148.1.1 = { trait = knight }
+	8179.1.1 = { death = yes }
+}
+Moonfell_19 = {
+	name = Harwyn
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_18
+
+	trait = education_diplomacy_2
+	trait = trusting
+	trait = gluttonous
+	trait = compassionate
+
+	8151.1.1 = { birth = yes }
+	8169.1.1 = { add_spouse = Moonfell_rs_19 }
+	8170.1.1 = {
+		trait = knight
+		trait = drunkard
+	}
+	8193.1.1 = { death = yes }
+}
+Moonfell_rs_19 = {
+	name = Alyssa
+	female = yes
+
+	religion = the_seven_main
+	culture = valeman
+
+	8151.1.1 = { birth = yes }
+	8194.1.1 = { death = yes }
+}
+### Issue of Harwyn
+Moonfell_20 = {
+	name = Harrold
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_19
+	mother = Moonfell_rs_19
+
+	8170.1.1 = { birth = yes }
+	8184.1.1 = { death = yes }
+}
+Moonfell_21 = {
+	name = Arwen
+	dynasty = dynn_Moonfell
+	female = yes
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_19
+	mother = Moonfell_rs_19
+
+	trait = education_intrigue_3
+	trait = deceitful
+	trait = sadistic
+	trait = calm
+
+	8172.1.1 = { birth = yes }
+	8230.1.1 = { death = yes }
+}
+Moonfell_22 = {
+	name = Hugh
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_19
+	mother = Moonfell_rs_19
+
+	8174.1.1 = { birth = yes }
+	8183.1.1 = { death = yes }
+}
+Moonfell_23 = {
+	name = Hyle
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_19
+	mother = Moonfell_rs_19
+
+	8177.1.1 = { birth = yes }
+	8183.1.1 = { death = yes }
+}
+Moonfell_24 = {
+	name = Marla
+	dynasty = dynn_Moonfell
+	female = yes
+
+	religion = the_seven_main
+	culture = valeman
+
+	father = Moonfell_19
+	mother = Moonfell_rs_19
+
+	8180.1.1 = { birth = yes }
+	8233.1.1 = { death = yes }
+}
+Moonfell_25 = {
+	name = Jon
+	dynasty = dynn_Moonfell
+
+	religion = the_seven_main
+	culture = valeman
+
+	mother = Moonfell_21
+
+	8200.1.1 = { birth = yes }
+	8220.1.1 = { trait = knight }
+	8255.1.1 = { death = yes }
+}
+
+###### HOUSE RUST (id = dynn_Rust)
+############################
+###
+###
+Rust_1 = {
+	name = Rickard
+	dynasty = dynn_Rust
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	7918.1.1 = { birth = yes }
+	7938.1.1 = { add_spouse = Rust_piper }
+	7971.1.1 = { death = yes }
+}
+Rust_piper = {
+	name = Hanna
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	7920.1.1 = { birth = yes }
+	7977.1.1 = { death = yes }
+}
+### Issue of Rickard
+Rust_2 = {
+	name = Harwyn
+	dynasty = dynn_Rust
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	father = Rust_1
+	mother = Rust_piper
+
+	7939.1.1 = { birth = yes }
+	7960.1.1 = { add_spouse = Rust_rs_2 }
+	7994.1.1 = { death = yes }
+}
+Rust_rs_2 = {
+	name = Marla
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	7948.1.1 = { birth = yes }
+	8004.1.1 = { death = yes }
+}
+Rust_3 = {
+	name = Harlan
+	dynasty = dynn_Rust
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	father = Rust_1
+	mother = Rust_piper
+
+	7946.1.1 = { birth = yes }
+	7965.1.1 = { add_spouse = Rust_rs_3 }
+	7980.1.1 = { death = yes }
+}
+Rust_rs_3 = {
+	name = Asha
+	female = yes
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	7948.1.1 = { birth = yes }
+	8004.1.1 = { death = yes }
+}
+### Issue of Harwyn
+Rust_4 = {
+	name = Erich
+	dynasty = dynn_Rust
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	father = Rust_2
+	mother = Rust_rs_2
+
+	7965.1.1 = { birth = yes }
+	7986.1.1 = { add_spouse = Rust_rs_4 }
+	8000.1.1 = { religion = the_seven_main }
+	8030.1.1 = { death = yes }
+}
+Rust_rs_4 = {
+	name = Penelope
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	7970.1.1 = { birth = yes }
+	8033.1.1 = { death = yes }
+}
+Rust_5 = {
+	name = Robyn
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	father = Rust_2
+	mother = Rust_rs_2
+
+	7969.1.1 = { birth = yes }
+	8000.1.1 = { religion = the_seven_main }
+	8025.1.1 = { death = yes }
+}
+Rust_6 = {
+	name = Alyssa
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	father = Rust_2
+	mother = Rust_rs_2
+
+	7972.1.1 = { birth = yes }
+	8000.1.1 = { religion = the_seven_main }
+	8039.1.1 = { death = yes }
+}
+### Issue of Harlan
+Rust_7 = {
+	name = Rodrik
+	dynasty = dynn_Rust
+
+	religion = drowned_god_main
+	culture = ironborn
+
+	father = Rust_3
+	mother = Rust_rs_3
+
+	trait = sickly
+
+	7973.1.1 = { birth = yes }
+	7974.1.1 = { death = { death_reason = death_sickly } }
+}
+### Issue of Erich
+Rust_26 = {
+	name = Harys
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_4
+	mother = Rust_rs_4
+
+	8006.1.1 = { birth = yes }
+	8028.1.1 = { death = { death_reason = death_murder } }
+}
+Rust_8 = {
+	name = Roland
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_4
+	mother = Rust_rs_4
+
+	8008.1.1 = { birth = yes }
+	8026.1.1 = { trait = knight }
+	8030.1.1 = { add_spouse = Rust_rs_8 }
+	8043.1.1 = { death = { death_reason = death_battle } }
+}
+Rust_rs_8 = {
+	name = Jeyne
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8006.1.1 = { birth = yes }
+	8057.1.1 = { death = yes }
+}
+### Issue of Roland
+Rust_9 = {
+	name = Bronn
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_8
+	mother = Rust_rs_8
+
+	trait = sickly
+
+	8026.1.1 = { birth = yes }
+	8027.1.1 = { death = { death_reason = death_sickly } }
+}
+Rust_10 = {
+	name = Lothar
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_8
+	mother = Rust_rs_8
+
+	8030.1.1 = { birth = yes }
+	8050.1.1 = { trait = knight }
+	8051.1.1 = { add_spouse = Rust_rs_10 }
+	8061.1.1 = { death = { death_reason = death_accident } }
+}
+Rust_rs_10 = {
+	name = Mariya
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8033.1.1 = { birth = yes }
+	8112.1.1 = { death = yes }
+}
+Rust_11 = {
+	name = Qarl
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_8
+	mother = Rust_rs_8
+
+	8036.1.1 = { birth = yes }
+	8055.1.1 = { trait = knight }
+	8058.1.1 = { death = { death_reason = death_accident } }
+}
+### Issue of Lothar
+Rust_12 = {
+	name = Willem
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_10
+	mother = Rust_rs_10
+
+	8050.1.1 = { birth = yes }
+	8068.1.1 = { trait = knight }
+	8078.1.1 = { add_spouse = Rust_strong }
+	8116.1.1 = { death = yes }
+}
+Rust_strong = {
+	name = Amanda
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8060.1.1 = { birth = yes }
+	8120.1.1 = { death = yes }
+}
+Rust_13 = {
+	name = Constance
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_10
+	mother = Rust_rs_10
+
+	8057.1.1 = { birth = yes }
+	8102.1.1 = { death = yes }
+}
+### Issue of Willem
+Rust_14 = {
+	name = Eleanor
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_12
+	mother = Rust_strong
+
+	8078.1.1 = { birth = yes }
+	8144.1.1 = { death = yes }
+}
+Rust_15 = {
+	name = Marq
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_12
+	mother = Rust_strong
+
+	8080.1.1 = { birth = yes }
+	8097.1.1 = { trait = knight }
+	8105.1.1 = { add_spouse = Rust_rs_15 }
+	8130.1.1 = { death = { death_reason = death_battle } }
+}
+Rust_rs_15 = {
+	name = Emma
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8087.1.1 = { birth = yes }
+	8147.1.1 = { death = yes }
+}
+Rust_16 = {
+	name = Desmond
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_12
+	mother = Rust_strong
+
+	8084.1.1 = { birth = yes }
+	8100.1.1 = { trait = knight }
+	8106.1.1 = { add_spouse = Rust_rs_16 }
+	8153.1.1 = { death = yes }
+}
+Rust_rs_16 = {
+	name = Johanna
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8087.1.1 = { birth = yes }
+	8160.1.1 = { death = yes }
+}
+Rust_17 = {
+	name = Robert
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_12
+	mother = Rust_strong
+
+	8088.1.1 = { birth = yes }
+	8106.1.1 = { trait = knight }
+	8109.1.1 = { add_spouse = Rust_rs_17 }
+	8150.1.1 = { death = yes }
+}
+Rust_rs_17 = {
+	name = Pia
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8090.1.1 = { birth = yes }
+	8161.1.1 = { death = yes }
+}
+Rust_18 = {
+	name = Zhoe
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_12
+	mother = Rust_strong
+
+	8090.1.1 = { birth = yes }
+	8178.1.1 = { death = yes }
+}
+Rust_19 = {
+	name = Androw
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_12
+	mother = Rust_strong
+
+	8097.1.1 = { birth = yes }
+	8116.1.1 = { trait = knight }
+	8158.1.1 = { death = yes }
+}
+### Issue of Marq
+Rust_20 = {
+	name = Lucas
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_15
+	mother = Rust_rs_15
+
+	8106.1.1 = { birth = yes }
+	8125.1.1 = { trait = knight }
+	8126.1.1 = { add_spouse = Rust_rs_20 }
+	8151.1.1 = { death = yes }
+}
+Rust_rs_20 = {
+	name = Elissa
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8110.1.1 = { birth = yes }
+	8172.1.1 = { death = yes }
+}
+Rust_27 = {
+	name = Simon
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_15
+	mother = Rust_rs_15
+
+	8110.1.1 = { birth = yes }
+	8126.1.1 = { add_spouse = Rust_rs_27 }
+	8127.1.1 = { trait = knight }
+	8177.1.1 = { death = yes }
+}
+Rust_rs_27 = {
+	name = Kyra
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8112.1.1 = { birth = yes }
+	8156.1.1 = { death = yes }
+}
+Rust_28 = {
+	name = Lewys
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_15
+	mother = Rust_rs_15
+
+	8117.1.1 = { birth = yes }
+	8135.1.1 = { trait = knight }
+	8180.1.1 = { death = yes }
+}
+### Issue of Desmond
+Rust_21 = {
+	name = Jonos
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_16
+	mother = Rust_rs_16
+
+	8110.1.1 = { birth = yes }
+	8130.1.1 = { trait = knight }
+	8173.1.1 = { death = yes }
+}
+Rust_22 = {
+	name = Jeyne
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_16
+	mother = Rust_rs_16
+
+	8114.1.1 = { birth = yes }
+	8174.1.1 = { death = yes }
+}
+Rust_23 = {
+	name = Jocelyn
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_16
+	mother = Rust_rs_16
+
+	8116.1.1 = { birth = yes }
+	8176.1.1 = { death = yes }
+}
+### Issue of Robert
+Rust_29 = {
+	name = Jon
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_17
+	mother = Rust_rs_17
+
+	8119.1.1 = { birth = yes }
+	8138.1.1 = { trait = knight }
+	8176.1.1 = { death = yes }
+}
+### Issue of Lucas
+Rust_24 = {
+	name = Denys
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_20
+	mother = Rust_rs_20
+
+	8139.1.1 = { birth = yes }
+	8156.1.1 = { trait = knight }
+	8158.1.1 = { add_spouse = Rust_grell }
+	8168.1.1 = { death = { death_reason = death_accident } }
+}
+Rust_grell = {
+	name = Bethany
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8149.1.1 = { birth = yes }
+	8217.1.1 = { death = yes }
+}
+### Issue of Simon
+Rust_30 = {
+	name = Joy
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_27
+	mother = Rust_rs_27
+
+	8132.1.1 = { birth = yes }
+	8189.1.1 = { death = yes }
+}
+### Issue of Denys
+Rust_25 = {
+	name = Patrek
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_24
+	mother = Rust_grell
+
+	8166.1.1 = { birth = yes }
+	8185.1.1 = { trait = knight }
+	8186.1.1 = { add_spouse = Rust_rs_25 }
+	8201.1.1 = { death = { death_reason = death_accident } }
+}
+Rust_rs_25 = {
+	name = Holly
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8165.1.1 = { birth = yes }
+	8221.1.1 = { death = yes }
+}
+### Issue of Patrek
+Rust_31 = {
+	name = Gwenys
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_25
+	mother = Rust_rs_25
+
+	8189.1.1 = { birth = yes }
+	8254.1.1 = { death = yes }
+}
+Rust_32 = {
+	name = Olyver
+	dynasty = dynn_Rust
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_25
+	mother = Rust_rs_25
+
+	8191.1.1 = { birth = yes }
+	8216.1.1 = { trait = knight }
+	8220.1.1 = { add_spouse = Rust_rs_32 }
+	8245.1.1 = { death = yes }
+}
+Rust_rs_32 = {
+	name = Bessa
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	8200.1.1 = { birth = yes }
+	8271.1.1 = { death = yes }
+}
+Rust_33 = {
+	name = Edyth
+	dynasty = dynn_Rust
+	female = yes
+
+	religion = the_seven_main
+	culture = riverlander
+
+	father = Rust_25
+	mother = Rust_rs_25
+
+	8198.1.1 = { birth = yes }
+	8268.1.1 = { death = yes }
+}

@@ -1,0 +1,2414 @@
+﻿############################         FREE FOLK          ############################
+####################################################################################
+
+###### HOUSE RAYDER (id = dynn_Rayder)
+############################
+###
+###
+Rayder_1 = { 
+	name = Mance # Canon, THE Mance Rayder, a lord
+	dynasty = dynn_Rayder
+
+	# dna = Rayder_1
+
+	martial = 10
+	diplomacy = 4
+	stewardship = 3
+	intrigue = 7
+	learning = 4
+	prowess = 10
+
+	religion = old_gods_south
+	culture = northman
+
+	trait = education_diplomacy_5
+	trait = intellect_good_2
+	trait = strong
+	trait = gregarious
+	trait = brave
+	trait = calm
+	trait = ambitious
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8256.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		effect = {
+			if = {
+				limit = { NOT = { has_trait = deserter } } 
+				agot_safe_set_location_history_effect = { CASTLE = title:k_the_wall }
+			}
+		}
+	}
+	8282.1.1 = {
+		trait = poet
+		trait = education_martial_prowess_4
+		effect = {
+			add_trait = nightswatch_historical 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_the_shadow_tower
+				NW_JOIN_AGE = 26
+			}
+		}
+	}
+	8292.1.1 = {
+		effect = { remove_trait = nightswatch_historical }
+		trait = deserter
+		religion = old_gods_btw
+		culture = fangman
+	}
+	8295.1.1 = { add_spouse = 57000 } # Dalla
+	8300.2.10 = {
+		employer = Baratheon_3 # Stannis Baratheon
+		effect = {
+			add_pressed_claim = title:e_beyond_the_wall 
+			character:Baratheon_3 = { # Stannis Baratheon
+				imprison = {
+					target = ROOT
+					type = dungeon
+				}
+			}
+			reverse_add_opinion = {
+				target = character:Baratheon_3 # Stannis Baratheon
+				modifier = treachery_opinion
+			}
+		}
+	}
+	8300.3.1 = {
+		death = {
+			death_reason = death_burned_witch # Officially
+			killer = Baratheon_3 # Stannis Baratheon
+		}
+	}
+}
+### Dalla and Val
+57002 = {
+	name = Eirik 
+
+	religion = old_gods_btw
+	culture = forestman
+
+	8256.1.1 = { birth = yes }
+	8295.3.11 = { death = yes }
+}
+57000 = {
+	name = Dalla # Canon, married Mance Rayder
+	female = yes
+
+	# AGOT TODO dna = 57000
+
+	diplomacy = 12
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 57002
+
+	#dna = "adbgc0igab0"
+
+	trait = education_diplomacy_3
+	trait = beauty_good_2
+	trait = brave
+	trait = compassionate
+
+	8278.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.2.10 = {
+		death = { death_reason = death_childbirth }
+	}
+}
+57001 = {
+	name = Val # Canon
+	female = yes
+
+	dna = 57001
+
+	diplomacy = 9
+	martial = 6
+	stewardship = 9
+	intrigue = 7
+	learning = 6
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 57002
+
+	trait = education_diplomacy_3
+	trait = beauty_good_3
+	trait = brave
+	trait = diligent
+	trait = arrogant
+	trait = honest
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8279.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8292.1.1 = { trait = education_martial_prowess_3 }
+	8298.1.1 = {
+		effect = {
+			if = {
+				limit = { character:574348 = { is_alive = yes } }
+				set_relation_lover = character:574348 # Jarl
+			}
+		}
+	}
+	8300.2.10 = {
+		employer = Baratheon_3 # Stannis Baratheon
+		effect = {
+			character:Baratheon_3 = { # Stannis Baratheon
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+}
+574348 = { 
+	name = Jarl # Canon, lover of Val
+
+	#dna = "behhf0dhg00"
+
+	martial = 7
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+	trait = strong
+	trait = brave
+	trait = diligent
+
+	8273.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8286.1.1 = {
+		trait = education_martial_prowess_2
+		# employer = 157004 # Alfyn Crowkiller, AGOT TODO Employer isn't landed
+	}
+	8299.11.11 = {
+		death = { death_reason = death_fell_off_the_wall }
+	}
+}
+### Issue of Mance 
+Rayder_2 = {
+	name = Aemon # Canon, AKA: Aemon Steelsong
+	dynasty = dynn_Rayder
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = Rayder_1
+	mother = 57000
+
+	trait = strong
+
+	8300.2.10 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Baratheon_3 # Stannis Baratheon
+		give_nickname = nick_steelsong
+		effect = {
+			add_pressed_claim = title:e_beyond_the_wall
+			character:Baratheon_3 = { # Stannis Baratheon
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+	8300.3.1 = {
+		effect = {
+			agot_set_as_ward_history_effect = { GUARDIAN = character:574368 } # Gilly
+		}
+	}
+}
+
+###### ROYAL CLAN OF THENN (id = dynn_Thenn)
+############################
+###
+###
+174344 = {
+	name = Styr # Canon, a lord
+	dynasty = dynn_Thenn
+	dna = 174344
+
+	martial = 8
+
+	religion = magnaric
+	culture = thenn
+
+	father = 112344
+
+	trait = education_martial_2
+	trait = sadistic
+	trait = arrogant
+	trait = authoritative
+	trait = stubborn
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8252.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8266.1.1 = { trait = education_martial_prowess_2 }
+	8299.11.11 = { death = yes }
+}
+274344 = {
+	name = Sigorn # Canon
+	dynasty = dynn_Thenn
+
+	martial = 6
+
+	religion = magnaric
+	culture = thenn
+
+	father = 174344
+
+	trait = education_martial_2
+	trait = patient
+	trait = honorable
+	trait = authoritative
+	trait = compassionate
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8286.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = {
+		employer = Stark_7 # Jon Snow
+		dynasty = dynn_ThennNew # House Thenn
+		add_spouse = Karstark_19 # Alys Karstark
+	}
+}
+
+###### CLAN OF TORMUND GIANTSBANE (id = dynn_Ruddy_Hall)
+############################
+###
+###
+174345 = {
+	name = Tormund # Canon, THE Tormund Giantsbane, a lord
+	dynasty = dynn_Ruddy_Hall
+
+	dna = 174345
+
+	martial = 8
+	
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_martial_2
+	trait = physique_good_2
+	trait = gregarious
+	trait = brave
+	trait = generous 
+	trait = compassionate
+	trait = rowdy 
+	
+	disallow_random_traits = yes
+
+	8252.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8266.1.1 = {
+		trait = education_martial_prowess_3
+		trait = berserker
+		trait = drunkard
+		effect = {
+			add_trait = lifestyle_reveler 
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = trait_third_level
+			}
+		}
+	}
+	8279.1.1 = { give_nickname = nick_giantsbane }
+}
+### Issue of Tormund
+274345 = {
+	name = Toregg # Canon
+	dynasty = dynn_Ruddy_Hall
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 174345
+
+	trait = education_martial_2
+	trait = physique_good_2
+	trait = patient
+	trait = lazy
+	trait = honest 
+	trait = charming
+	
+	disallow_random_traits = yes
+
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8286.1.1 = {
+		trait = education_martial_prowess_2
+		give_nickname = nick_the_tall
+	}
+}
+374345 = {
+	name = Torwynd # Canon
+	dynasty = dynn_Ruddy_Hall
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 174345
+
+	trait = education_martial_2
+	trait = physique_good_1
+	trait = calm
+	trait = compassionate
+	trait = craven
+
+	8274.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8288.1.1 = { 
+		trait = education_martial_prowess_1 
+		give_nickname = nick_the_tame
+	}
+	8300.2.10 = { 
+		death = { death_reason = death_hypothermia }
+	}
+}
+574345 = {
+	name = Dormund # Canon
+	dynasty = dynn_Ruddy_Hall
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 174345
+
+	trait = education_martial_2
+	trait = physique_good_1
+	trait = patient
+	trait = diligent
+	trait = honorable
+	trait = rowdy 
+	
+	disallow_random_traits = yes
+
+	8277.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.2.10 = {
+		death = {
+			death_reason = death_battle # Battle of the Wall
+			killer = Horpe_3 # Richard Horpe
+		}
+	}
+}
+574346 = {
+	name = Munda # Canon, married Longspear Ryk
+	dynasty = dynn_Ruddy_Hall
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 174345
+
+	trait = education_martial_2
+	trait = brave
+	trait = honorable
+
+	8278.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8292.1.1 = { trait = education_martial_prowess_2 }
+}
+474345 = {
+	name = Dryn # Canon
+	dynasty = dynn_Ruddy_Hall
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 174345
+
+	trait = education_martial_2
+	trait = physique_good_1
+	trait = diligent
+	trait = brave
+	trait = honorable
+	trait = rowdy
+	
+	disallow_random_traits = yes 
+
+	8292.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Stark_7 } # Jon Snow
+		}
+	}
+}
+
+###### HOUSE REDBEARD (id = house_Kingsblood)
+############################
+###
+###
+Kingsblood_4 = {
+	name = Gerrick # Canon, a lord
+	dynasty_house = house_Kingsblood
+	#dna = "cakefzeedaz"
+
+	martial = 8
+	diplomacy = 5
+	intrigue = 9
+	stewardship = 4
+	learning = 5
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Kingsblood_3
+
+	trait = education_martial_2
+	trait = vengeful
+	trait = arrogant
+	trait = ambitious
+	trait = authoritative
+	trait = bossy 
+	
+	disallow_random_traits = yes 
+
+	8256.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.8.17 = {
+		dynasty = dynn_Redbeard # House Redbeard
+		employer = Baratheon_3 # Stannis Baratheon (Actually Selyse)
+	}
+}
+### Issue of Gerrick
+Kingsblood_5 = {
+	name = Gerris # Mentioned, betrothed Axell Florent
+	dynasty_house = house_Kingsblood
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Kingsblood_4
+
+	trait = beauty_good_1
+	trait = calm
+	trait = craven
+	trait = forgiving
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8281.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.8.17 = {
+		dynasty = dynn_Redbeard # House Redbeard
+		employer = Baratheon_3 # Stannis Baratheon (Actually Selyse)
+	}
+}
+Kingsblood_7 = {
+	name = Gerra # Mentioned, betrothed Brus Buckler
+	dynasty_house = house_Kingsblood
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Kingsblood_4
+
+	trait = beauty_good_1
+	trait = humble
+	trait = patient
+	trait = calm
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8283.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.8.17 = {
+		dynasty = dynn_Redbeard # House Redbeard
+		employer = Baratheon_3 # Stannis Baratheon (Actually Selyse)
+	}
+}
+Kingsblood_8 = {
+	name = Grisel # Mentioned, betrothed Malegorn of Redpool
+	dynasty_house = house_Kingsblood
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Kingsblood_4
+
+	trait = beauty_good_1
+	trait = content
+	trait = pensive
+
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.8.17 = {
+		dynasty = dynn_Redbeard # House Redbeard
+		employer = Baratheon_3 # Stannis Baratheon (Actually Selyse)
+	}
+}
+Kingsblood_6 = {
+	name = Gerreck # Mentioned, hostage on the Wall
+	dynasty_house = house_Kingsblood
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = Kingsblood_4
+
+	trait = education_martial_2
+	trait = beauty_good_1
+
+	8286.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.8.17 = { # Hostage on the Wall
+		dynasty = dynn_Redbeard # House Redbeard
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+###### CLAN OF VARAMYR SIXSKINS (id = dynn_Mossfoot)
+############################
+###
+###
+102174349 = {
+	name = Kyleg
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+	trait = wrathful
+	trait = arrogant
+
+	8232.1.1 = { birth = yes }
+	8248.1.1 = { add_spouse = 103174349 }
+	8284.1.1 = { death = yes }
+}
+103174349 = {
+	name = Munda
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	8232.1.1 = { birth = yes }
+	8284.1.1 = { death = yes }
+}
+### Issue of Kyleg and Munda
+105174349 = {
+	name = Meha # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	mother = 103174349
+	father = 102174349
+
+	8251.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.1.1 = { death = yes }
+}
+157000 = {
+	name = Varamyr # Canon
+
+	dna = 157000
+
+	martial = 1
+
+	religion = old_gods_btw
+	culture = forestman
+
+	mother = 103174349
+	father = 102174349
+
+	trait = education_martial_2
+	trait = arrogant
+	trait = ambitious
+	trait = vengeful
+	trait = callous
+	trait = sickly
+	trait = pensive 
+	
+	disallow_random_traits = yes 	
+
+	8256.1.1 = {
+		birth = yes 
+		add_character_flag = canon_status_canon
+		effect = { change_first_name = Lump }
+	}
+	8262.1.1 = {
+		effect = { 
+			agot_set_as_ward_history_effect = { GUARDIAN = character:Skinchanger_1 } # Haggon
+		}			
+	}
+	8266.1.1 = {
+		effect = { change_first_name = Varamyr }
+	}
+	8270.1.1 = {
+		give_nickname = nick_threeskins
+		# trait = wolf # AGOT TODO trait
+	}
+	8272.1.1 = {
+		dynasty = dynn_Mossfoot
+		trait = education_martial_prowess_2
+		give_nickname = nick_fourskins
+	}
+	8280.1.1 = {
+		give_nickname = nick_sixskins
+		# trait = shadowcat # AGOT TODO trait
+		# trait = snowbear # AGOT TODO trait
+	}
+	# 8299.10.10 = { trait = eagle } # Takes Orell's eagle # AGOT TODO trait
+	# 8300.2.10 = { remove_trait = eagle } # Burned by Melisandre # AGOT TODO trait
+	8300.2.13 = {
+		death = { death_reason = death_vanished }
+	}
+}
+104174349 = {
+	name = Bump # Canon
+
+	religion = old_gods_btw
+	culture = forestman
+
+	mother = 103174349
+	father = 102174349
+
+	trait = strong
+
+	8260.7.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8263.6.27 = {
+		death = {
+			death_reason = death_murder_known
+			killer = 157000 # Varamyr Sixskins
+		}
+	}
+}
+### Issue of Varamyr Sixskins
+101174349 = {
+	name = Vayon # Mentioned
+	dynasty = dynn_Mossfoot
+	
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157000
+
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+
+###### HARLE BROTHERS
+############################
+###
+###
+157100 = {
+	name = Harle
+	
+	religion = old_gods_btw
+	culture = forestman
+
+	8240.1.1 = { birth = yes }
+	8256.1.1 = { add_spouse = 157101 }
+	8295.1.1 = { death = yes }
+}
+157101 = {
+	name = Ygritte
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	8240.1.1 = { birth = yes }
+	8295.1.1 = { death = yes }
+}
+### Issue of Harle and Ygritte
+157010 = {
+	name = Harle # Canon, AKA: Harle the Handsome
+
+	martial = 4
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157100
+	mother = 157101
+
+	trait = education_martial_2
+	trait = beauty_good_2
+	trait = brave
+	trait = greedy
+	trait = wrathful
+	trait = honorable
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8265.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { give_nickname = nick_the_handsome }
+	8280.1.1 = { trait = education_martial_prowess_2 }
+	8283.1.1 = { employer = 157009 } # Soren Shieldbreaker
+	8286.1.1 = {
+		effect = {
+			if = {
+				limit = { character:157011 = { is_alive = yes } }
+				set_relation_rival = character:157011 # Harle the Huntsman
+			}
+		}
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+}
+157011 = {
+	name = Harle # Canon, AKA: Harle the Huntsman
+
+	martial = 4
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157100
+	mother = 157101
+
+	trait = education_martial_2
+	trait = brave
+	trait = arrogant
+	trait = vengeful
+	trait = honorable
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8266.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { give_nickname = nick_the_huntsman }
+	8280.1.1 = {
+		trait = education_martial_prowess_2
+		effect = {
+			add_trait = lifestyle_hunter 
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	8283.1.1 = { employer = 157009 } # Soren Shieldbreaker
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+}
+### Woman they both have a son with
+157102 = { 
+	name = Holly # Mentioned
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = beauty_good_2
+	trait = arrogant
+	trait = authoritative
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8267.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8283.1.1 = {
+		employer = 157009 # Soren Shieldbreaker
+		trait = lustful
+		trait = education_martial_prowess_2
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+}
+### Issue of Harle the Handsome
+157103 = {
+	name = Harlon # Mentioned
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157010
+	mother = 157102
+
+	trait = beauty_good_1
+
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8299.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Issue of Harle the Huntsman
+157104 = {
+	name = Harleg # Mentioned
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157011
+	mother = 157102
+
+	8286.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8299.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+
+###### CLAN OF KARSI
+############################
+###
+###
+Karsi_8 = {
+	name = Brogg
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	8220.1.1 = { birth = yes }
+	8281.1.1 = { death = yes }
+}
+### Issue of Brogg
+Karsi_7 = {
+	name = Quort # Semi-Canon, Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Karsi_8
+	
+	8244.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8300.2.10 = {
+		death = { death_reason = death_battle } # Battle of the Wall
+	}
+}
+Karsi_6 = {
+	name = Quenn # Semi-Canon, Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Karsi_8
+	
+	8247.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8300.2.10 = {
+		death = { death_reason = death_battle } # Battle of the Wall
+	}
+}
+### Issue of Quort
+Karsi_3 = {
+	name = Henk # Semi-Canon, Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Karsi_7
+	
+	8267.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8300.2.10 = {
+		death = { death_reason = death_battle } # Battle of the Wall
+	}
+}
+Karsi_1 = {
+	name = Karsi # Semi-Canon
+	female = yes
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Karsi_7
+	
+	trait = education_martial_2
+	trait = physique_good_1
+	trait = beauty_good_1
+	trait = compassionate
+	trait = honest
+	trait = calm
+	trait = brave
+	trait = bossy
+	
+	disallow_random_traits = yes
+	
+	8269.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8285.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = 157015 } # Mother Mole
+}
+Karsi_2 = {
+	name = Eirik # Semi-Canon, Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Karsi_7
+	
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8300.2.10 = {
+		death = { death_reason = death_battle } # Battle of the Wall
+	}
+}
+### Issue of Karsi
+Karsi_4 = {
+	name = Johnna # Semi-Canon
+	female = yes 
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	mother = Karsi_1
+	
+	8288.1.1  = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+}
+Karsi_5 = {
+	name = Willa # Semi-Canon
+	female = yes 
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	mother = Karsi_1
+	
+	8294.1.1  = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+}
+
+###### MINOR CHIEFTAINS
+############################
+###
+###
+574347 = { 
+	name = Halgor # Canon, AKA: Lord of Bones, AKA: Rattleshirt
+	dynasty = dynn_Skirling_Pass
+
+	martial = 6
+
+	#dna = "blaak0kjg00"
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_martial_2
+	trait = sadistic
+	trait = arrogant
+	trait = deceitful
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8259.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8263.1.1 = { trait = education_martial_prowess_2 }
+	8279.1.1 = { give_nickname = nick_rattleshirt }
+	8300.1.1 = {
+		effect = {
+			title:k_the_wall.holder = { # Janos Slynt; Jon Snow
+				imprison = {
+					target = ROOT
+					type = dungeon
+				}
+			}
+		}
+	}
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { # Swapped with Mance if loaded as alive
+		employer = Stark_7 # Jon Snow
+		effect = {
+			clear_traits = yes 
+			copy_traits = character:Rayder_1 # Mance Rayder
+		}
+	}
+}
+### Harma Dogshead
+570003 = {
+	name = Hallis
+
+	religion = old_gods_btw
+	culture = fangman
+
+	8252.1.1 = { birth = yes }
+	8274.11.11 = { death = yes }
+}
+57003 = {
+	name = Harma # Canon, AKA: Harma Dogshead
+	female = yes
+	dna = 57003
+
+	martial = 7
+
+	religion = old_gods_btw
+	culture = fangman
+	
+	father = 570003
+
+	trait = education_martial_2
+	trait = sadistic
+	trait = arrogant
+	trait = deceitful
+	trait = vengeful
+	trait = rowdy
+	
+	disallow_random_traits = yes
+
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8282.1.1 = { employer = 157001 } # The Weeper
+	8286.1.1 = {
+		trait = education_martial_prowess_2
+		give_nickname = nick_the_dogshead
+	}
+	8299.11.11 = { employer = Rayder_1 } # Mance Rayder
+	8300.2.10 = {
+		death = {
+			death_reason = death_battle # Battle of the Wall
+			killer = Baratheon_3 # Stannis Baratheon
+		}
+	}
+}
+57004 = {
+	name = Halleck # Canon
+
+	martial = 7
+
+	religion = old_gods_btw
+	culture = fangman
+	
+	father = 570003
+
+	trait = education_martial_2
+	trait = arrogant
+	trait = honorable
+	trait = forgiving
+	trait = rowdy 
+	
+	disallow_random_traits = yes
+
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8282.1.1 = { employer = 157001 } # The Weeper
+	8299.11.11 = { employer = Rayder_1 } # Mance Rayder
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+}
+### The Weeper
+157001 = {
+	name = Gendel # Canon, AKA: The Weeper, AKA: The Weeping Man
+	dynasty = dynn_Warriormane
+
+	dna = 157001
+
+	martial = 6
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_martial_3
+	trait = sadistic
+	trait = arrogant
+	trait = deceitful
+	trait = vengeful
+	trait = pensive
+	
+	disallow_random_traits = yes
+
+	8259.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8275.1.1 = { trait = education_martial_prowess_3 }
+	8279.1.1 = { give_nickname = nick_the_weeper }
+}
+### Devyn Sealskinner
+157002 = {
+	name = Devyn # Canon, AKA: Devyn Sealskinner
+	dynasty = 174352
+
+	martial = 8
+	diplomacy = 5
+	intrigue = 9
+	stewardship = 4
+	learning = 5
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	trait = education_martial_2
+	trait = brave
+	trait = diligent
+
+	8256.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { give_nickname = nick_sealskinner }
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+}
+1570021 = {
+	name = Rory # Mentioned
+	dynasty = 174352
+
+	martial = 8
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 6
+	learning = 6
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 157002
+
+	trait = twin
+	trait = brave
+
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { employer = 157002 } # Devyn Sealskinner
+}
+1570022 = {
+	name = Cory # Mentioned
+	dynasty = 174352
+
+	martial = 8
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 6
+	learning = 6
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 157002
+
+	trait = twin
+	trait = brave
+
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Morna White-Mask
+157003 = {
+	name = Morna # Canon, AKA: Morna White Mask
+	dynasty = dynn_Whitemask
+	female = yes
+	#dna = "clfddfgbgaz"
+
+	martial = 8
+	diplomacy = 5
+	intrigue = 9
+	stewardship = 4
+	learning = 5
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+	trait = authoritative
+
+	8256.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8272.1.1 = { trait = education_martial_prowess_3 }
+	8279.1.1 = { give_nickname = nick_white_mask }
+	8280.1.1 = { trait = lifestyle_mystic }
+}
+157153 = {
+	name = Soren # Mentioned
+	dynasty = dynn_Whitemask
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+
+	mother = 157003
+
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Alfyn Crowkiller
+157004 = {
+	name = Alfyn # Canon, Alfyn Crowkiller
+	dynasty = 174351
+
+	martial = 6
+
+	#dna = "bljkejkagau"
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_3
+	trait = callous
+	trait = brave
+	trait = vengeful
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8259.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8275.1.1 = { 
+		trait = lustful
+		trait = education_martial_prowess_3 
+	}
+	8279.1.1 = { give_nickname = nick_crowkiller }
+	8299.6.1 = {
+		death = {
+			death_reason = death_battle
+			killer = 121005 # Qhorin Halfhand
+		}
+	}
+}
+Crowkiller_2 = {
+	name = Garris # Mentioned
+	dynasty = 174351
+
+	religion = old_gods_btw
+	culture = forestman	
+
+	father = 157004
+
+	8288.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+}
+1570042 = {
+	name = Bran # Mentioned
+	dynasty = 174351
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157004
+
+	8290.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+1570043 = {
+	name = Darkund # Mentioned
+	dynasty = 174351
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157004
+
+	8292.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+1570044 = {
+	name = Joseth # Mentioned
+	dynasty = 174351
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157004
+
+	8295.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Borroq
+157006 = {
+	name = Borroq # Canon
+
+	martial = 3
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+	trait = brave
+	#trait = boar # AGOT TODO trait
+
+	8250.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.11.11 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { employer = 157009 } # Soren Shieldbreaker
+}
+### Kyleg of the Wooden Ear
+157008 = {
+	name = Kyleg # Canon
+	dynasty = dynn_Wooden_Ear
+
+	martial = 6
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+
+	8259.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8288.1.1 = { add_spouse = 40559143 }
+}
+157018 = {
+	name = Lorn # Mentioned
+	dynasty = dynn_Wooden_Ear
+
+	martial = 6
+
+	religion = old_gods_btw
+	culture = forestman
+
+	father = 157008
+	mother = 40559143
+
+	trait = beauty_good_1
+
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Soren Shieldbreaker
+157009 = {
+	name = Soren # Canon, AKA: Soren Shieldbreaker
+	dynasty = dynn_Shivers
+
+	martial = 8
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	trait = education_martial_3
+	trait = physique_good_1
+
+	8252.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8278.1.1 = { trait = education_martial_prowess_3 }
+	8279.1.1 = { give_nickname = nick_shieldbreaker }
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+}
+157059 = {
+	name = Stiv # Mentioned
+	dynasty = dynn_Shivers
+
+	religion = old_gods_btw
+	culture = lakeman
+
+	father = 157009
+
+	trait = education_martial_2
+	trait = physique_good_1
+
+	8275.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Great Walrus
+174404 = {
+	name = Walrus # Canon, Great Walrus
+	dynasty = 174404
+
+	martial = 8
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	trait = education_martial_2
+	trait = honorable
+	trait = brave
+	trait = authoritative
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8252.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8268.1.1 = { trait = education_martial_prowess_3 }
+	8279.1.1 = { give_nickname = nick_the_great }
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+}
+1744041 = {
+	name = Little_Fox
+	female = yes
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	intrigue = 8
+
+	trait = education_martial_1
+	trait = arrogant
+
+	8268.1.1 = { birth = yes }
+	8284.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+}
+1744042 = {
+	name = Young_Walrus # Mentioned
+	dynasty = 174404
+
+	martial = 8
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 174404
+	mother = 1744041
+
+	trait = education_martial_3
+	trait = brave
+
+	8284.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+1744043 = {
+	name = Ice_Cat
+	dynasty = 174404
+	female = yes
+
+	martial = 6
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 174404
+	mother = 1744041
+
+	trait = diligent
+
+	8285.1.1 = { birth = yes }
+	8299.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+}
+1744044 = {
+	name = Little_Walrus # Mentioned
+	dynasty = 174404
+
+	martial = 4
+
+	religion = old_gods_frozen_shore
+	culture = frozen_shoreman
+
+	father = 174404
+	mother = 1744041
+
+	trait = trusting
+
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Mother Mole
+157015 = {
+	name = Mother_Mole # Canon
+	dynasty = 4500016
+	female = yes
+
+	diplomacy = 5
+	intrigue = 9
+	stewardship = 4
+	learning = 5
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_diplomacy_3
+	trait = greensight
+	trait = authoritative
+	trait = arrogant
+
+	8243.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8251.1.1 = {
+		effect = {
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+}
+### Brogg
+157024 = {
+	name = Brogg # Canon
+	dynasty = dynn_Axebar
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_martial_2
+	trait = honest
+	trait = honorable
+	trait = brave
+	trait = bossy 
+
+	disallow_random_traits = yes
+
+	8263.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+	8300.8.17 = { employer = Stark_7 } # Jon Snow
+}
+157023 = {
+	name = Borroq # Mentioned
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 157024
+
+	8288.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Howd Wanderer
+157019 = {
+	name = Howd # Canon
+	dynasty = 559108
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_martial_2
+	trait = arrogant
+	trait = shy
+	trait = authoritative
+	trait = honorable
+	trait = pensive 
+	
+	disallow_random_traits = yes 
+
+	8259.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8275.1.1 = { give_nickname = nick_wanderer }
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+	8300.8.17 = { employer = Stark_7 } # Jon Snow
+}
+157022 = {
+	name = Hoag # Mentioned
+	dynasty = 559108
+
+	religion = old_gods_btw
+	culture = fangman
+
+	father = 157019
+
+	8290.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { # Hostage on the Wall
+		effect = {
+			title:k_the_wall.holder = { take_hostage = ROOT }
+		}
+	}
+}
+### Blind Doss
+157020 = {
+	name = Doss # Canon, Blind Doss
+	dynasty = dynn_Skullsmorn
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_martial_2
+
+	8251.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8267.1.1 = { give_nickname = nick_the_blind }
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+	8300.8.17 = { employer = Stark_7 } # Jon Snow
+}
+### Gavin the Trader
+157021 = {
+	name = Gavin # Canon, Gavin the Trader
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_stewardship_3
+
+	8265.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8281.1.1 = { give_nickname = nick_the_trader }
+	8300.2.10 = { employer = 174345	} # Tormund Giantsbane
+	8300.8.17 = { employer = Stark_7 } # Jon Snow
+}
+### Loboda
+Loboda_1 = {
+	name = Loboda # Semi-Canon
+
+	religion = magnaric
+	culture = thenn
+
+	trait = education_martial_1
+	trait = strong
+	trait = honorable
+	trait = vengeful
+	trait = authoritative
+	trait = brave 
+	trait = bossy
+	
+	disallow_random_traits = yes
+
+	8272.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8289.1.1 = { trait = education_martial_prowess_3 }
+	8300.2.10 = { employer = 157015 } # Mother Mole
+}
+### Dim Dalba
+Dalba_1 = {
+	name = Dalba # Semi-Canon, AKA: Dim Dalba
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_diplomacy_2
+	trait = trusting
+	
+	8244.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_semicanon
+	}
+	8277.1.1 = { give_nickname = nick_dim }
+	8300.2.10 = { employer = 157015 } # Mother Mole
+}
+
+###### GIANTS
+############################
+###
+###
+157013 = {
+	name = Mag # Canon, AKA: Mag the Mighty
+	dynasty = 6660010
+
+	martial = 8
+
+	religion = old_gods_btw
+	culture = giant
+
+	trait = strong
+	trait = physique_good_3
+	trait = giant
+
+	8247.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8279.1.1 = { give_nickname = nick_the_mighty }
+	8298.11.11 = { employer = Rayder_1 } # Mance Rayder
+	8299.11.11 = {
+		death = {
+			death_reason = death_duel
+			killer = Noye_1 # Donal Noye
+		}
+	}
+}
+157014 = {
+	name = Wun # Canon, AKA: Wun Wun
+	dynasty = 6660011
+
+	martial = 8
+
+	religion = old_gods_btw
+	culture = giant
+
+	trait = strong
+	trait = physique_good_3
+	trait = giant
+
+	8264.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8298.11.11 = { employer = Rayder_1 } # Mance Rayder
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.4.29 = { employer = Stark_7 } # Jon Snow
+}
+
+###### MINOR WILDLINGS
+############################
+###
+###
+574349 = {
+	name = Ygritte # Canon, THE Ygritte
+	female = yes
+
+	dna = 574349
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_diplomacy_2
+	trait = diligent
+	trait = brave
+	trait = stubborn
+	trait = honest 
+	trait = bossy 
+	
+	disallow_random_traits = yes
+
+	8280.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Kingsblood_4 # Gerrick Kingsblood
+	}
+	8290.1.1 = {
+		effect = {
+			if = {
+				limit = { character:157005 = { is_alive = yes } }
+				set_relation_friend = character:157005 # Longspear Ryk
+			}
+		}
+	}
+	8294.1.1 = { trait = education_martial_prowess_2 }
+	8298.1.1 = { employer = 574347 } # Rattleshirt
+	8299.7.1 = { employer = 174345 } # Tormund Giantsbane
+	8299.11.11 = { death = yes }
+}
+157005 = {
+	name = Ryk # Canon, AKA: Ryk Longspear
+
+	#dna = "behhf0dhg00"
+
+	martial = 7
+
+	religion = old_gods_btw
+	culture = forestman
+
+	trait = education_martial_2
+	trait = brave
+	trait = diligent
+	trait = compassionate
+
+	8273.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+		employer = Kingsblood_3 # Halgor Kingsblood
+	}
+	8278.1.1 = { employer = Kingsblood_4 } # Gerrick Kingsblood
+	8282.1.1 = { give_nickname = nick_longspear }
+	8289.1.1 = { trait = education_martial_prowess_2 }
+	8298.1.1 = { employer = 574347 } # Rattleshirt
+	8299.7.1 = { employer = 174345 } # Tormund Giantsbane
+	8300.1.1 = { add_spouse = 574346 } # Munda, daughter of Tormund Giantsbane
+}
+157007 = {
+	name = Orell # Canon
+	dna = 157007
+
+	martial = 4
+
+	religion = old_gods_btw
+	culture = fangman
+
+	trait = education_martial_2
+	trait = vengeful
+	#trait = eagle # AGOT TODO trait
+
+	8265.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.11.11 = { employer = 574347 } # Rattleshirt
+	8299.7.1 = {
+		death = {
+			death_reason = death_duel
+			killer = Stark_7 # Jon Snow
+		}
+	}
+}
+### Mance's Spearwives
+Spearwife_1 = {
+	name = Frenya # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_1
+	trait = strong
+	trait = brave
+	
+	8264.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.8.6 = {
+		death = { death_reason = death_battle } # Freeing of Jeyne Poole
+	}
+}
+Spearwife_2 = {
+	name = Holly # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_2
+	trait = brave
+	
+	8284.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8299.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.8.6 = {
+		death = { death_reason = death_battle } # Freeing of Jeyne Poole
+	}
+}
+Spearwife_3 = {
+	name = Myrtle # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_2
+	trait = brave
+	
+	8238.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8255.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.8.6 = {
+		death = { death_reason = death_battle } # Freeing of Jeyne Poole
+	}
+}
+Spearwife_4 = {
+	name = Rowan # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_2
+	trait = brave
+	trait = ruthless
+	trait = arrogant
+	trait = bossy
+	
+	disallow_random_traits = yes
+	
+	8268.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8285.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.8.6 = {
+		death = { death_reason = death_battle } # Freeing of Jeyne Poole
+	}
+}
+Spearwife_6 = {
+	name = Willow # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_2
+	trait = brave
+	
+	8262.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8280.1.1 = {
+		trait = education_martial_prowess_2
+		give_nickname = nick_witch_eye
+	}
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.8.6 = {
+		death = { death_reason = death_battle } # Freeing of Jeyne Poole
+	}
+}
+Spearwife_7 = {
+	name = Hallis
+
+	religion = old_gods_btw
+	culture = fangman
+	
+	8260.1.1 = { birth = yes }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.2.10 = {
+		death = { death_reason = death_battle } # Battle of the Wall
+	}
+}
+Spearwife_5 = {
+	name = Squirrel # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = fangman
+	
+	father = Spearwife_7
+	
+	trait = education_martial_1
+	trait = brave
+	
+	8282.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8295.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.8.6 = {
+		effect = {
+			title:c_winterfell.holder = { # Ramsay Snow
+				imprison = {
+					target = ROOT
+					type = dungeon
+				}
+			}
+		}
+	}
+}
+Spearwife_8 = {
+	name = Rory # Mentioned, Squirrel's brother
+
+	religion = old_gods_btw
+	culture = fangman
+	
+	father = Spearwife_7
+	
+	8280.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8300.2.10 = {
+		death = { death_reason = death_battle } # Battle of the Wall
+	}
+}
+### Spearwives of Long Barrow
+Wildling_Nightswatch_1 = {
+	name = Maris # Canon, AKA: Black Maris
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_2
+	trait = physique_good_1
+	trait = stubborn
+	
+	8274.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8290.1.1 = {
+		trait = lifestyle_blademaster
+		trait = education_martial_prowess_2
+		give_nickname = nick_black
+	}
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.4.29 = { employer = 121418 } # Iron Emmett		
+}
+Wildling_Nightswatch_2 = {
+	name = Nettles # Canon
+	female = yes
+
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_1
+	
+	8270.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8288.1.1 = { trait = education_martial_prowess_2 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { employer = Stark_7 } # Jon Snow
+	8300.4.29 = { employer = 121418 } # Iron Emmett		
+}
+### Family of Leathers
+Wildling_Nightswatch_3 = {
+	name = Leathers # Canon
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_martial_3
+	trait = honest
+	trait = diligent
+	trait = wrathful
+	trait = bossy
+	
+	disallow_random_traits = yes 
+	
+	8255.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8271.1.1 = { trait = education_martial_prowess_3 }
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 45
+			}
+		}
+	}
+	8300.4.29 = {
+		effect = { # Master-at-arms at Castle Black
+			agot_appoint_as_court_position_for_castle_history_effect = { 
+				CASTLE = title:c_castle_black
+				POSITION = master_at_arms_court_position
+			}
+		}
+	}
+}
+Wildling_Nightswatch_4 = {
+	name = Harmond # Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Wildling_Nightswatch_3
+	
+	8277.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	} 
+}
+Wildling_Nightswatch_5 = {
+	name = Dan # Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Wildling_Nightswatch_4
+	
+	8295.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	} 	
+}
+### Family of Jax
+Wildling_Nightswatch_6 = {
+	name = Jax # Canon
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	8251.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8300.2.10 = { employer = Slynt_1 } # Janos Slynt
+	8300.3.1 = { 
+		effect = { 
+			agot_join_nightswatch_history_effect = {
+				ORDER = ranger
+				CASTLE = title:c_castle_black
+				NW_JOIN_AGE = 49
+			}
+		}
+	}
+}
+Wildling_Nightswatch_7 = {
+	name = Doss # Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Wildling_Nightswatch_6
+	
+	8275.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	} 
+}
+Wildling_Nightswatch_8 = {
+	name = Soren # Mentioned
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	father = Wildling_Nightswatch_7
+	
+	8293.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	} 	
+}
+### Skinchangers
+Skinchanger_1 = {
+	name = Haggon # Canon 
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	trait = education_diplomacy_2
+	trait = honorable
+	trait = temperate
+	trait = diligent
+	trait = content
+	trait = bossy
+	
+	disallow_random_traits = yes
+	
+	8205.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	# 8224.1.1 = { trait = wolf } # AGOT TODO trait
+	8272.1.1 = { death = yes }
+}
+Skinchanger_2 = {
+	name = Briar # Canon
+	female = yes 
+	
+	religion = old_gods_btw
+	culture = forestman
+	
+	8222.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	# 8240.1.1 = { trait = shadowcat } # AGOT TODO trait
+	8281.1.1 = { death = yes }
+}
+Skinchanger_3 = {
+	name = Grisella # Canon
+	female = yes 
+	
+	religion = old_gods_btw
+	culture = fangman
+	
+	8230.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	# 8247.1.1 = { trait = goat } # AGOT TODO trait
+	8278.1.1 = { death = yes }
+}
