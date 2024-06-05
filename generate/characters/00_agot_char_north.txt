@@ -738,7 +738,7 @@ Stark_7 = {
 	}
 }
 Stark_8 = {
-	name = Sansa # Canon, C-Child, THE Sansa, married Tyrion Lannister
+	name = Sansa # Canon, C-Child2, THE Sansa, married Tyrion Lannister
 	dynasty = dynn_Stark
 	female = yes
 	dna = Stark_8
