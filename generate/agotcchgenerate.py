@@ -1,5 +1,4 @@
 import os
-import re
 import json
 from util import file, text
 
@@ -64,12 +63,12 @@ def Dumpster_Fire(character):
 def init_character():
     return {
         "id": "",
-        "flag": "",
         "name": {
             "primary": "",
             "male": "",
             "female": ""
         },
+        "birth": 0,
         "is_female": False,
         "house": "",
         "dna": "",
@@ -103,11 +102,14 @@ def init_character():
 
 def process_lines():
     is_reading_character = False
+    current_year_block = 0
 
     for i, line in enumerate(lines):
         is_line_empty = not line or line[0] == '#'
         is_line_character_name = "\tname = " in line # Marks beginning of character
         is_line_canon_child = " C-Child2" in line # Marks character as canon child
+        is_line_block_start = "{" in line
+        is_line_block_end = "}" in line
 
         if is_line_empty:
             continue
@@ -129,6 +131,18 @@ def process_lines():
 
         # Read character
         if is_reading_character:
+            is_after_adulthood = False
+
+            if is_line_block_start:
+                if text.match_date(line.strip()):
+                    current_year_block = text.extract_date_block_year(line.strip())
+                    is_after_adulthood = character["birth"] > 0 and current_year_block > character["birth"] + 16
+            elif is_line_block_end:
+                current_year_block = 0
+
+            if is_after_adulthood:
+                continue
+
             if "=" in line:
                 key, value = line.split("=", 1)
                 key, value = key.strip(), value.split("#", 1)[0].strip() # Remove comments and whitespaces
@@ -174,6 +188,8 @@ def process_lines():
                 # Sexuality
                 elif key == "sexuality":
                     character["sexuality"] = value
+                elif key == "birth":
+                    character["birth"] = current_year_block
 
 # Ścieżka do folderu z plikami tekstowymi
 folder_path = 'D:/projects/agotcch/generate/characters'
