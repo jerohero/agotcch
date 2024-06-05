@@ -70,7 +70,7 @@ def init_character():
             "male": "",
             "female": ""
         },
-        "is_male": False,
+        "is_female": False,
         "house": "",
         "dna": "",
         "sexuality": "",
@@ -129,45 +129,51 @@ def process_lines():
 
         # Read character
         if is_reading_character:
-            if "name = " in line:
-                character["id"] = lines[i - 1].split(" = ")[0]
-                character["name"]["primary"] = line.split(" = ")[1].split(" #")[0]
-            if "dynn_" in line or "house_" in line:
-                character["house"] = line.split(" = ")[1].split(" #")[0]
-                if "dynn_" in character["house"]:
-                    character["house"] = character["house"].split("dynn_")[1]
-                if "house_" in character["house"]:
-                    character["house"] = character["house"].split("house_")[1]
-                if character["flag"] == "FLAG_MISSING":
-                    character["flag"] = character["name"]["primary"].lower().split("\n")[0] + "_" + character["house"].lower().split("\n")[0]
-            # Gender
-            if "female = yes" in line:
-                character["is_male"] = False
-                character["name"]["female"] = character["name"]["primary"]
-            if "female = no" in line:
-                character["is_male"] = True
-                character["name"]["male"] = character["name"]["primary"]
-            # DNA
-            if "dna = " in line:
-                character["dna"] = text.take_line_value(line)
-            # Traits
-            if "trait = " in line and not "remove_trait" in line:
-                trait = text.take_line_value(line)
-                
-                if trait in childhood_personality_traits_dumpster:
-                     character["traits"]["childhood"] = trait
-                elif trait in personality_traits_dumpster:
-                    if len(character["traits"]["education"]) < 4:
-                        character["traits"]["education"].append(trait)
-                elif trait in physical_traits_dumpster:
-                    character["traits"]["inherited"].append(trait)
-            if "inactive" in line:
-                character["traits"]["inactive"].append(text.take_line_value(line))
-            if "flag = " in line:
-                character["flags"].append(text.take_line_value(line))
-            # Sexuality
-            if "sexuality = " in line:
-                character["sexuality"] = text.take_line_value(line)
+            if "=" in line:
+                key, value = line.split("=", 1)
+                key, value = key.strip(), value.split("#", 1)[0].strip() # Remove comments and whitespaces
+
+                # ID
+                if key == "name":
+                    character["id"] = lines[i - 1].split(" = ")[0]
+                    character["name"]["primary"] = value
+                    character["name"]["male"] = value # Set male name before knowing gender
+                # House
+                elif key in ["dynasty", "dynasty_house"]:
+                    character["house"] = value
+                    # character["house"] = line.split(" = ")[1].split(" #")[0]
+                    # if "dynn_" in character["house"]:
+                    #     character["house"] = character["house"].split("dynn_")[1]
+                    # if "house_" in character["house"]:
+                    #     character["house"] = character["house"].split("house_")[1]
+                    # if character["flag"] == "FLAG_MISSING":
+                    #     character["flag"] = character["name"]["primary"].lower().split("\n")[0] + "_" + character["house"].lower().split("\n")[0]
+                # Gender
+                elif key == "female":
+                    if value == "yes":
+                        character["is_female"] = True
+                        character["name"]["female"] = character["name"]["primary"]
+                        character["name"]["male"] = ""
+                # DNA
+                elif key == "dna":
+                    character["dna"] = value
+                # Traits
+                elif key == "trait" or key == "add_trait":                
+                    if value in childhood_personality_traits_dumpster:
+                        character["traits"]["childhood"] = value
+                    elif value in personality_traits_dumpster:
+                        if len(character["traits"]["education"]) < 4:
+                            character["traits"]["education"].append(value)
+                    elif value in physical_traits_dumpster:
+                        character["traits"]["inherited"].append(value)
+                elif key == "make_trait_inactive":
+                    character["traits"]["inactive"].append(value)
+                # Flags
+                elif key == "add_character_flag":
+                    character["flags"].append(value)
+                # Sexuality
+                elif key == "sexuality":
+                    character["sexuality"] = value
 
 # Ścieżka do folderu z plikami tekstowymi
 folder_path = 'D:/projects/agotcch/generate/characters'
