@@ -26,7 +26,7 @@ physical_traits_dumpster = [
 ]
     
 
-def get_birth_effect(character):
+def get_birth_effect(character, is_chained_mother = False):
     indent = '    '
 
     def get_culture():
@@ -67,19 +67,26 @@ def get_birth_effect(character):
 
     def get_childhood_traits():
         output = ''
+        has_childhood_traits = character["traits"]["childhood"] != ""
+        has_education_traits = len(character["traits"]["education"]) > 0
 
-        if character["traits"]["childhood"] != "":
-            output += f'\n\nagot_canon_children_schedule_trait_effect = {{ TRAIT = flag:{character["traits"]["childhood"]} AGE = childhood_personality_age }}\n'
+        if has_childhood_traits or has_education_traits:
+            output += '\n\n'
 
-        if len(character["traits"]["education"]) > 0:
+        if has_childhood_traits:
+            output += f'agot_canon_children_schedule_trait_effect = {{ TRAIT = flag:{character["traits"]["childhood"]} AGE = childhood_personality_age }}\n'
+
+        if has_education_traits:
             for i, trait in enumerate(character["traits"]["education"]):
                 output += f'agot_canon_children_schedule_trait_effect = {{ TRAIT = flag:{trait} AGE = agot_canon_children_trait_{i + 1}_year }}\n'
 
         return output
 
     def get_canon_guardian():
+        # TODO implement
         if character["guardian"]["primary"]["id"]:
             return ''
+        return ''
 
     def inject_data():
         output = '\n'
@@ -92,6 +99,24 @@ def get_birth_effect(character):
         output += get_childhood_traits()
 
         return textwrap.indent(output, indent + indent + indent).rstrip()
+
+    # TODO: There can be multiple canon baby fathers
+    def inject_canon_mother_setup(): # TODO FIX LINE 1
+        mother_setup = textwrap.dedent(f"""
+            agot_canon_children_get_canon_child_scope_effect = {{ FLAG = is_{character["id"]} SCOPE = canon_baby_father }}
+            if = {{
+                limit = {{ scope:canon_baby_father ?= {{ is_alive = yes }} }}
+
+                scope:canon_baby_father = {{
+                    agot_canon_children_setup_mother_effect = {{
+                        FATHER = scope:canon_baby_father
+                        MOTHER = scope:child
+                        MOTHER_FLAG = is_{character["id"]}
+                        PREVENT_PREGNANCY = {"yes" if character["config"]["prevent_pregnancy"] else "no"}
+				    }}
+                }}
+            }}
+        """)
 
     birth_effect = textwrap.dedent(f"""
         # {character["name"]["primary"]} - {character["id"]}
@@ -280,7 +305,22 @@ def process_lines():
         # print(get_birth_effect(character))
         # print(json.dumps(character, sort_keys=True, indent=4))
     
-    generate_family_trees(characters)
+    fathers, mothers = find_ancestries(characters)
+    print(generate_birth_effects(characters, fathers, mothers))
+
+def generate_birth_effects(characters, fathers, mothers):
+    birth_effects = []
+
+    chained_mothers = find_chained_mothers(mothers)
+
+    for child in characters:
+        is_chained_mother = child["is_female"] and child["id"] in chained_mothers
+
+        birth_effect = get_birth_effect(child, is_chained_mother)
+
+        birth_effects.append(birth_effect)
+
+    return ''.join(birth_effects)
 
 def group_by_parent(children, parent_id_cb):
     parent_dict = {}
@@ -298,16 +338,18 @@ def group_by_parent(children, parent_id_cb):
     return parent_dict
 
 # For making sure the child will be set up as a canon mother on birth
-def find_mother_chains(mothers):
-    mother_chains = []
+def find_chained_mothers(mothers):
+    chained_mothers = []
 
     for mother_id, child_ids in mothers.items():
         for child_id in child_ids:
             if child_id in mothers:
-                mother_chains.append(child_id)
+                chained_mothers.append(child_id)
+
+    return chained_mothers
 
 
-def generate_family_trees(characters):
+def find_ancestries(characters):
     def father_id_cb(character):
         return character["real_father"] if character["real_father"] else character["father"]
 
@@ -316,7 +358,8 @@ def generate_family_trees(characters):
 
     fathers = group_by_parent(characters, father_id_cb)
     mothers = group_by_parent(characters, mother_id_cb)
-    mother_chains = find_mother_chains(mothers)
+
+    return fathers, mothers
 
                 
 
