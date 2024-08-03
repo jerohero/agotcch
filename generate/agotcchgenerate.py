@@ -26,7 +26,7 @@ physical_traits_dumpster = [
 ]
     
 
-def get_birth_effect(character, is_chained_mother = False):
+def get_birth_effect(character, chained_child_fathers = []):
     indent = '    '
 
     def get_culture():
@@ -97,26 +97,32 @@ def get_birth_effect(character, is_chained_mother = False):
         output += get_inherited_traits()
         output += get_canon_guardian()
         output += get_childhood_traits()
+        output += get_canon_mother_setup()
 
         return textwrap.indent(output, indent + indent + indent).rstrip()
 
     # TODO: There can be multiple canon baby fathers
-    def inject_canon_mother_setup(): # TODO FIX LINE 1
-        mother_setup = textwrap.dedent(f"""
-            agot_canon_children_get_canon_child_scope_effect = {{ FLAG = is_{character["id"]} SCOPE = canon_baby_father }}
-            if = {{
-                limit = {{ scope:canon_baby_father ?= {{ is_alive = yes }} }}
+    def get_canon_mother_setup():
+        mother_setup = ""
 
-                scope:canon_baby_father = {{
-                    agot_canon_children_setup_mother_effect = {{
-                        FATHER = scope:canon_baby_father
-                        MOTHER = scope:child
-                        MOTHER_FLAG = is_{character["id"]}
-                        PREVENT_PREGNANCY = {"yes" if character["config"]["prevent_pregnancy"] else "no"}
-				    }}
+        for father in chained_child_fathers:
+            mother_setup += textwrap.dedent(f"""
+                agot_canon_children_get_canon_child_scope_effect = {{ FLAG = is_{father} SCOPE = father_{father} }}
+                if = {{
+                    limit = {{ scope:father_{father} ?= {{ is_alive = yes }} }}
+
+                    scope:father_{father} = {{
+                        agot_canon_children_setup_mother_effect = {{
+                            FATHER = scope:father_{father}
+                            MOTHER = scope:child
+                            MOTHER_FLAG = is_{character["id"]}
+                            PREVENT_PREGNANCY = {"yes" if character["config"]["prevent_pregnancy"] else "no"}
+                        }}
+                    }}
                 }}
-            }}
-        """)
+            """)
+
+        return mother_setup
 
     birth_effect = textwrap.dedent(f"""
         # {character["name"]["primary"]} - {character["id"]}
@@ -171,9 +177,7 @@ def init_character():
         },
         "nickname": "",
         "on_birth": "",
-        "config": [
-            { "prevent_pregnancy": False }
-        ]
+        "config": { "prevent_pregnancy": False }
     }
 
 def get_nested_value(value):
@@ -183,7 +187,7 @@ def process_lines():
     is_reading_character = False
     current_year_block = 0
 
-    characters = []
+    characters = {}
 
     for i, line in enumerate(lines):
         is_line_empty = not line or line[0] == '#'
@@ -199,7 +203,7 @@ def process_lines():
         if is_line_character_name:
             # Print previous character
             if is_reading_character:
-                characters.append(character)
+                characters[character["id"]] = character
             is_reading_character = False
 
             # character = Character()
@@ -300,42 +304,54 @@ def process_lines():
                 # TODO Scripted appearance flags + traits
                 # TODO On birth
 
-    for character in characters:
-        continue
+    # for character in characters:
+    #     continue
         # print(get_birth_effect(character))
         # print(json.dumps(character, sort_keys=True, indent=4))
     
     fathers, mothers = find_ancestries(characters)
-    print(generate_birth_effects(characters, fathers, mothers))
+    birth_effects = generate_birth_effects(characters, fathers, mothers)
+
+    print(birth_effects)
 
 def generate_birth_effects(characters, fathers, mothers):
     birth_effects = []
 
     chained_mothers = find_chained_mothers(mothers)
 
-    for child in characters:
-        is_chained_mother = child["is_female"] and child["id"] in chained_mothers
+    for child_id, child in characters.items():
+        chained_child_fathers = []
 
-        birth_effect = get_birth_effect(child, is_chained_mother)
+        if child["is_female"] and child_id in chained_mothers:
+            chained_child_ids = mothers[child_id]
+
+            for chained_child_id in chained_child_ids:
+                chained_child = characters[chained_child_id]
+                chained_child_father = chained_child["real_father"] or chained_child["father"]
+
+                if chained_child_father not in chained_child_fathers:
+                    chained_child_fathers.append(chained_child_father)
+
+        birth_effect = get_birth_effect(child, chained_child_fathers)
 
         birth_effects.append(birth_effect)
 
     return ''.join(birth_effects)
 
 def group_by_parent(children, parent_id_cb):
-    parent_dict = {}
+    parents = {}
 
-    for child in children:
-        child_id = child["id"]
+    for child_id, child in children.items():
+        child_id = child_id
         parent_id = parent_id_cb(child)
 
-        if parent_id not in parent_dict:
-            parent_dict[parent_id] = []
-        parent_dict[parent_id].append(child_id)
+        if parent_id not in parents:
+            parents[parent_id] = []
+        parents[parent_id].append(child_id)
         
-    # result = [{'id': parent_id, 'children': children} for parent_id, children in parent_dict.items()]
+    # result = [{'id': parent_id, 'children': children} for parent_id, children in parents.items()]
 
-    return parent_dict
+    return parents
 
 # For making sure the child will be set up as a canon mother on birth
 def find_chained_mothers(mothers):
