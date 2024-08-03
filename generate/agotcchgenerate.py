@@ -1,6 +1,7 @@
 import os
 import json
 from util import file, text
+import textwrap
 
 
 class Character:
@@ -23,41 +24,88 @@ physical_traits_dumpster = [
     "pure_blooded","fecund","strong","shrewd","clubfooted","hunchbacked","lisping","stuttering","dwarf","giant",
     "inbred","weak","dull","impotent","spindly","scaly","albino","wheezing","bleeder","infertile"
 ]
+    
+
+def get_birth_effect(character):
+    indent = '    '
+
+    def get_culture():
+        return 'set_culture_same_as = scope:father\n'
+
+    def get_flags():
+        output = 'add_character_flag = has_scripted_appearance\n'
+
+        if len(character["flags"]) > 0:
+            for flag in character["flags"]:
+                output += f'add_character_flag = {flag}\n'
+
+        return output
+
+    def get_inactive_traits():
+        output = 'make_trait_inactive = scripted_appearance\n'
+
+        if len(character["traits"]["inactive"]) > 0:
+            for trait in character["traits"]["inactive"]:
+                output += f'make_trait_inactive = {trait}\n'
+
+        return output
+
+    def get_sexuality():
+        if character["sexuality"]:
+            return f'set_sexuality = {character["sexuality"]}\n'
+
+    def get_inherited_traits():
+        output = ''
+
+        if character["traits"]["inherited"]:
+            for trait in character["traits"]["inherited"]:
+                output += f'add_trait = {trait}'
+
+        return output
+
+    def get_childhood_traits():
+        output = ''
+
+        if character["traits"]["childhood"] != "":
+            output += f'\n\nagot_canon_children_schedule_trait_effect = {{ TRAIT = flag:{character["traits"]["childhood"]} AGE = childhood_personality_age }}\n'
+
+        if len(character["traits"]["education"]) > 0:
+            for i, trait in enumerate(character["traits"]["education"]):
+                output += f'agot_canon_children_schedule_trait_effect = {{ TRAIT = flag:{trait} AGE = agot_canon_children_trait_{i + 1}_year }}\n'
+
+        return output
+
+    def get_canon_guardian():
+        if character["guardian"]["primary"]["id"]:
+            return ''
+
+    def inject_data():
+        output = '\n'
+        output += get_culture()
+        output += get_flags()
+        output += get_inactive_traits()
+        output += get_sexuality()
+        output += get_inherited_traits()
+        output += get_canon_guardian()
+        output += get_childhood_traits()
+
+        return textwrap.indent(output, indent + indent + indent).rstrip()
 
 
-def Dumpster_Fire(character):
-    bigass_string = ''
-    bigass_string += 'agot_canon_children_' + character["flag"] + '_birth_effect = {\n'
-    bigass_string += '	scope:child = {\n'
-    bigass_string += '		agot_canon_children_after_birth_effect = {\n'
-    bigass_string += '			NAME_MALE = "' + character["name"]["male"] + '"\n'
-    bigass_string += '			FEMALE_MALE = "' + character["name"]["female"] + '"\n'
-    bigass_string += '			FLAG = "is_' + character["flag"] + '"\n'
-    bigass_string += '			DNA = "' + character["dna"] + '"\n'
-    bigass_string += '		}'
-    bigass_string += '\n\n'
-    bigass_string += '		set_culture_same_as = scope:father'
-    if not "no_sexuality_sex_is_illegal" in character["sexuality"]:
-        bigass_string += '\n		set_sexuality = ' + character["sexuality"]
-    bigass_string += '\n\n'
-    for x in character["traits"]["inactive"]: # Inactive traits
-        bigass_string += '		make_trait_inactive = ' + x + '\n'
-    for x in character["flags"]: # Flags
-        bigass_string += '		add_character_flag = ' + x + '\n'
-    for x in character["traits"]["inherited"]: # Genetic Traits
-        if x in physical_traits_dumpster:
-            bigass_string += '		add_trait = ' + x + '\n'
-    bigass_string += '\n'
-    trait_count = 1
-    for x in character["traits"]["education"]: # Traits
-        if x in childhood_personality_traits_dumpster:
-            bigass_string += '		agot_canon_children_schedule_trait_effect = { TRAIT = flag:' + x + ' AGE = childhood_personality_age }\n'
-        if x in personality_traits_dumpster:
-            bigass_string += '		agot_canon_children_schedule_trait_effect = { TRAIT = flag:' + x + ' AGE = agot_canon_children_trait_' + str(trait_count) + '_year }\n'
-            trait_count += 1
-    bigass_string += '	}\n'
-    bigass_string += '}'
-
+    bigass_string = textwrap.dedent(f"""
+        # {character["name"]["primary"]} - {character["id"]}
+        agot_canon_children_{character["id"]}_birth_effect = {{
+            scope:child = {{
+                agot_canon_children_after_birth_effect = {{
+                    NAME_PRIMARY = "{character["name"]["primary"]}"
+                    NAME_ALT = "{character["name"]["alt"]}"
+                    FLAG = "is_{character["id"]}"
+                    DNA = "Dummy_{character["dna"]}"
+                }}
+            }}
+            {inject_data()}
+        }}
+    """)
     return bigass_string
 
 def init_character():
@@ -65,15 +113,13 @@ def init_character():
         "id": "",
         "name": {
             "primary": "",
-            "male": "",
-            "female": ""
+            "alt": ""
         },
         "birth": 0,
         "is_female": False,
         "house": "",
         "dna": "",
         "sexuality": "",
-        "culture": "",
         "employer:": "",
         "traits": {
             "inherited": [],
@@ -83,10 +129,10 @@ def init_character():
         },
         "flags": [],
         "guardian": {
-            "male": {
+            "primary": {
                 "id": ""
             },
-            "female": {
+            "alt": {
                 "id": ""
             },
             "use_liege_for_heir": False,
@@ -118,8 +164,8 @@ def process_lines():
         if is_line_character_name:
             # Print previous character
             if is_reading_character:
-                # print(Dumpster_Fire(character))
-                print(json.dumps(character, sort_keys=True, indent=4))
+                print(get_birth_effect(character))
+                # print(json.dumps(character, sort_keys=True, indent=4))
 
             is_reading_character = False
 
@@ -140,8 +186,12 @@ def process_lines():
             elif is_line_block_end:
                 current_year_block = 0
 
+            # History after adulthood (16+) should be ignored
             if is_after_adulthood:
                 continue
+
+            # Some history after the child's birth should be ignored
+            is_birth_block = current_year_block == 0 or current_year_block == character["birth"]
 
             if "=" in line:
                 key, value = line.split("=", 1)
@@ -151,7 +201,6 @@ def process_lines():
                 if key == "name":
                     character["id"] = lines[i - 1].split(" = ")[0]
                     character["name"]["primary"] = value
-                    character["name"]["male"] = value # Set male name before knowing gender
                 # House
                 elif key in ["dynasty", "dynasty_house"]:
                     character["house"] = value
@@ -166,8 +215,6 @@ def process_lines():
                 elif key == "female":
                     if value == "yes":
                         character["is_female"] = True
-                        character["name"]["female"] = character["name"]["primary"]
-                        character["name"]["male"] = ""
                 # DNA
                 elif key == "dna":
                     character["dna"] = value
@@ -190,8 +237,28 @@ def process_lines():
                     character["sexuality"] = value
                 elif key == "birth":
                     character["birth"] = current_year_block
+                # Employer
+                elif key == "employer":
+                    if is_birth_block:
+                        character["employer"] = value
+                # Guardian
+                elif key == "agot_set_as_ward_history_effect":
+                    # TODO gender differences
+                    # TODO canon guardians may canonically be too dependent on story events, so maybe only set this if it is set at birth
+                    # TODO converting, use_liege_for_heir
+                    is_first_guardian = character["guardian"]["primary"]["id"] == ""
+                    if is_first_guardian:
+                        guardian_id = value[value.find('=') + 1 : value.find('}')].strip()
+                        character["guardian"]["primary"]["id"] = guardian_id
+                # Nickname
+                elif key == "give_nickname":
+                    if is_birth_block:
+                        character["nickname"] = value
+                # Scripted appearance flags + traits
+                # On birth
+                
+                
 
-# Ścieżka do folderu z plikami tekstowymi
 folder_path = 'D:/projects/agotcch/generate/characters'
 lines = file.read_text_files_to_lines(folder_path)
 
