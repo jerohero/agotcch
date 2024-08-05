@@ -191,9 +191,160 @@ def process_lines():
         # print(json.dumps(character, sort_keys=True, indent=4))
     
     fathers, mothers = find_ancestries(characters)
-    birth_effects = generate_birth_effects(characters, fathers, mothers)
+    # birth_effects = generate_birth_effects(characters, fathers, mothers)
+    story_cycles = generate_story_cycles(characters, fathers, mothers)
 
-    print(birth_effects)
+    # print(birth_effects)
+    print(story_cycles)
+
+def generate_story_cycles(characters, fathers, mothers):
+    story_cycles = []
+
+    print(fathers)
+
+    for father_id, child_ids in fathers.items():
+        story_cycle = get_story_cycle(characters, father_id, child_ids)
+
+        story_cycles.append(story_cycle)
+
+    return ''.join(story_cycles)
+
+def get_story_cycle(characters, father_id, child_ids):
+    indent = '    '
+
+    children = []
+    mother_ids = []
+    real_father_ids = []
+
+    for child_id in child_ids:
+        child = characters[child_id]
+
+        if child["mother"] not in mother_ids:
+            mother_ids.append(child["mother"])
+        
+        if child["real_father"] != "" and child["real_father"] not in real_father_ids:
+            real_father_ids.append(child["real_father"])
+
+    if father_id in characters.keys():
+        print() #TODO?
+
+    def get_setup():
+        setup = ""
+
+        setup += textwrap.dedent(f"""
+            agot_canon_children_setup_father_effect = {{
+                FATHER = story_owner
+                FATHER_FLAG = is_{father_id}
+            }}
+        """).lstrip()
+
+        # TODO: Handle prevent pregnancy (get relation status? handle prevent pregnancy in its effect unless manually overwritten?)
+        for mother_id in mother_ids:
+            setup += textwrap.dedent(f"""
+                agot_canon_children_setup_mother_effect = {{
+                    FATHER = story_owner
+                    MOTHER = character:{mother_id}
+                    MOTHER_FLAG = is_{mother_id}
+                    PREVENT_PREGNANCY = yes
+                }}
+            """)
+
+        for i, real_father_id in enumerate(real_father_ids):
+            setup += textwrap.dedent(f"""
+                agot_canon_children_setup_real_father_effect = {{
+                    FATHER = story_owner
+                    REAL_FATHER = character:{real_father_id}
+                    REAL_FATHER_FLAG = is_{real_father_id}
+                    REAL_FATHER_VAR = agot_canon_children_real_father_{i + 1}
+                }}
+            """)
+
+        return textwrap.indent(setup, indent + indent).rstrip()
+
+    def get_pregnancy_effects():
+        indent = '    '
+        effects = ""
+
+        for mother_i, mother_id in enumerate(mother_ids):
+            mother_children = []
+
+            def get_children_effects():
+                children_effects = ""
+
+                for child_i, child_id in enumerate(child_ids):
+                    child = characters[child_id]
+
+                    if child["mother"] is mother_id:
+                        mother_children.append(child)
+                        #TODO: different pregnancy types (eg bastards)
+                        children_effects += textwrap.dedent(f"""
+                            # {child_id}
+                            {"if" if child_i == 0 else "else_if"} = {{
+                                limit = {{
+                                    agot_canon_children_child_pregnancy_trigger = {{
+                                        ID = {child_id}
+                                        FLAG = is_{child_id}
+                                        BIRTH_YEAR = agot_canon_children_birth_year_{child_id}
+                                    }}
+                                }}
+                                agot_canon_children_force_pregnancy_basic_effect = {{
+                                    CHILD_FLAG = is_{child_id}
+                                    IS_FEMALE = {"yes" if child["is_female"] else "no"}
+                                }}
+                            }}
+                        """).lstrip()
+
+                return textwrap.indent(children_effects, indent * 5)
+
+            # TODO: Not always spouse
+            effects += textwrap.indent(textwrap.dedent(f"""
+                # {mother_id}
+                {"if" if mother_i == 0 else "else_if"} = {{
+                    limit = {{
+                        has_character_flag = is_{mother_id}
+                        scope:canon_father = {{
+                            agot_canon_children_force_pregnancy_spouse_trigger = {{
+                                SPOUSE = scope:canon_mother
+                            }}
+                        }}
+                    }}
+                    {get_children_effects()}
+                }}
+            """), indent * 4).lstrip()
+
+        return textwrap.indent(effects, indent + indent + indent + indent).rstrip()
+
+    story_cycle = textwrap.dedent(f"""
+        story_agot_canon_children_{father_id} = {{
+            on_setup = {{
+{textwrap.indent(get_setup(), indent + indent)}
+            }}
+
+            on_end = {{ }}
+            on_owner_death = {{ agot_canon_children_on_owner_death_effect = yes }}
+
+            # Pregnancies
+            effect_group = {{
+                months = agot_canon_children_pregnancies_cycle_months
+
+                triggered_effect = {{
+                    effect = {{
+                        story_owner = {{
+                            save_scope_as = canon_father
+                            every_in_list = {{
+                                variable = canon_mothers
+                                save_scope_as = canon_mother
+
+                                {get_pregnancy_effects()}
+                            }}
+                        }}
+                    }}
+                }}
+            }}
+        }}
+    """)
+
+    return story_cycle
                 
 
 folder_path = 'D:/projects/agotcch/generate/characters'
