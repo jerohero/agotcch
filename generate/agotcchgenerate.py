@@ -291,7 +291,7 @@ def get_story_cycle(characters, father_id, child_ids):
                                     IS_FEMALE = {"yes" if child["is_female"] else "no"}
                                 }}
                             }}
-                        """).lstrip()
+                        """)
 
                 return textwrap.indent(children_effects, indent * 5).rstrip()
 
