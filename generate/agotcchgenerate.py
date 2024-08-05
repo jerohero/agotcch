@@ -226,7 +226,7 @@ def get_story_cycle(characters, father_id, child_ids):
             real_father_ids.append(child["real_father"])
 
     if father_id in characters.keys():
-        print() #TODO?
+        print()  # TODO?
 
     def get_setup():
         setup = ""
@@ -259,10 +259,9 @@ def get_story_cycle(characters, father_id, child_ids):
                 }}
             """)
 
-        return textwrap.indent(setup, indent + indent).rstrip()
+        return textwrap.indent(setup, indent * 2).rstrip()
 
     def get_pregnancy_effects():
-        indent = '    '
         effects = ""
 
         for mother_i, mother_id in enumerate(mother_ids):
@@ -274,7 +273,7 @@ def get_story_cycle(characters, father_id, child_ids):
                 for child_i, child_id in enumerate(child_ids):
                     child = characters[child_id]
 
-                    if child["mother"] is mother_id:
+                    if child["mother"] == mother_id:
                         mother_children.append(child)
                         #TODO: different pregnancy types (eg bastards)
                         children_effects += textwrap.dedent(f"""
@@ -294,10 +293,9 @@ def get_story_cycle(characters, father_id, child_ids):
                             }}
                         """).lstrip()
 
-                return textwrap.indent(children_effects, indent * 5)
+                return textwrap.indent(children_effects, indent * 5).rstrip()
 
-            # TODO: Not always spouse
-            effects += textwrap.indent(textwrap.dedent(f"""
+            effects += textwrap.dedent(f"""
                 # {mother_id}
                 {"if" if mother_i == 0 else "else_if"} = {{
                     limit = {{
@@ -310,14 +308,14 @@ def get_story_cycle(characters, father_id, child_ids):
                     }}
                     {get_children_effects()}
                 }}
-            """), indent * 4).lstrip()
+            """).lstrip()
 
-        return textwrap.indent(effects, indent + indent + indent + indent).rstrip()
+        return textwrap.indent(effects, indent * 4).rstrip()
 
     story_cycle = textwrap.dedent(f"""
         story_agot_canon_children_{father_id} = {{
             on_setup = {{
-{textwrap.indent(get_setup(), indent + indent)}
+{textwrap.indent(get_setup(), indent * 2)}
             }}
 
             on_end = {{ }}
@@ -335,14 +333,14 @@ def get_story_cycle(characters, father_id, child_ids):
                                 variable = canon_mothers
                                 save_scope_as = canon_mother
 
-                                {get_pregnancy_effects()}
+{textwrap.indent(get_pregnancy_effects(), indent * 4)}
                             }}
                         }}
                     }}
                 }}
             }}
         }}
-    """)
+    """).rstrip()
 
     return story_cycle
                 
