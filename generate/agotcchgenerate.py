@@ -212,71 +212,56 @@ def generate_story_cycles(characters, fathers, mothers):
 def get_story_cycle(characters, father_id, child_ids):
     indent = '    '
 
-    children = []
-    mother_ids = []
-    real_father_ids = []
-
-    for child_id in child_ids:
-        child = characters[child_id]
-
-        if child["mother"] not in mother_ids:
-            mother_ids.append(child["mother"])
-        
-        if child["real_father"] != "" and child["real_father"] not in real_father_ids:
-            real_father_ids.append(child["real_father"])
-
-    if father_id in characters.keys():
-        print()  # TODO?
+    mother_ids = list(set(
+        characters[child_id]["mother"] for child_id in child_ids
+    ))
+    real_father_ids = list(set(
+        characters[child_id]["real_father"] for child_id in child_ids if characters[child_id]["real_father"]
+    ))
 
     def get_setup():
-        setup = ""
+        setup = []
 
-        setup += textwrap.dedent(f"""
+        setup.append(textwrap.dedent(f"""
             agot_canon_children_setup_father_effect = {{
                 FATHER = story_owner
                 FATHER_FLAG = is_{father_id}
             }}
-        """).lstrip()
+        """).lstrip())
 
-        # TODO: Handle prevent pregnancy (get relation status? handle prevent pregnancy in its effect unless manually overwritten?)
         for mother_id in mother_ids:
-            setup += textwrap.dedent(f"""
+            setup.append(textwrap.dedent(f"""
                 agot_canon_children_setup_mother_effect = {{
                     FATHER = story_owner
                     MOTHER = character:{mother_id}
                     MOTHER_FLAG = is_{mother_id}
                     PREVENT_PREGNANCY = yes
                 }}
-            """)
+            """))
 
         for i, real_father_id in enumerate(real_father_ids):
-            setup += textwrap.dedent(f"""
+            setup.append(textwrap.dedent(f"""
                 agot_canon_children_setup_real_father_effect = {{
                     FATHER = story_owner
                     REAL_FATHER = character:{real_father_id}
                     REAL_FATHER_FLAG = is_{real_father_id}
                     REAL_FATHER_VAR = agot_canon_children_real_father_{i + 1}
                 }}
-            """)
+            """))
 
-        return textwrap.indent(setup, indent * 2).rstrip()
+        return textwrap.indent('\n'.join(setup), indent * 2).rstrip()
 
     def get_pregnancy_effects():
-        effects = ""
+        effects = []
 
         for mother_i, mother_id in enumerate(mother_ids):
-            mother_children = []
-
             def get_children_effects():
-                children_effects = ""
+                children_effects = []
 
                 for child_i, child_id in enumerate(child_ids):
                     child = characters[child_id]
-
                     if child["mother"] == mother_id:
-                        mother_children.append(child)
-                        #TODO: different pregnancy types (eg bastards)
-                        children_effects += textwrap.dedent(f"""
+                        children_effects.append(textwrap.dedent(f"""
                             # {child_id}
                             {"if" if child_i == 0 else "else_if"} = {{
                                 limit = {{
@@ -291,11 +276,11 @@ def get_story_cycle(characters, father_id, child_ids):
                                     IS_FEMALE = {"yes" if child["is_female"] else "no"}
                                 }}
                             }}
-                        """)
+                        """))
 
-                return textwrap.indent(children_effects, indent * 5).rstrip()
+                return textwrap.indent('\n'.join(children_effects), indent * 5).rstrip()
 
-            effects += textwrap.dedent(f"""
+            effects.append(textwrap.dedent(f"""
                 # {mother_id}
                 {"if" if mother_i == 0 else "else_if"} = {{
                     limit = {{
@@ -308,9 +293,9 @@ def get_story_cycle(characters, father_id, child_ids):
                     }}
                     {get_children_effects()}
                 }}
-            """).lstrip()
+            """))
 
-        return textwrap.indent(effects, indent * 4).rstrip()
+        return textwrap.indent('\n'.join(effects), indent * 4).rstrip()
 
     story_cycle = textwrap.dedent(f"""
         story_agot_canon_children_{father_id} = {{
@@ -332,7 +317,6 @@ def get_story_cycle(characters, father_id, child_ids):
                             every_in_list = {{
                                 variable = canon_mothers
                                 save_scope_as = canon_mother
-
 {textwrap.indent(get_pregnancy_effects(), indent * 4)}
                             }}
                         }}
