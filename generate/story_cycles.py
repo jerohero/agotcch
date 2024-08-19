@@ -54,6 +54,24 @@ def get_story_cycle(characters, father_id, child_ids):
 
         return textwrap.indent('\n'.join(setup), indent * 2).rstrip()
 
+    def get_pregnancy_trigger(child):
+        trigger = ""
+
+        if child["real_father"] == "":
+            trigger = textwrap.dedent(f"""
+                agot_canon_children_force_pregnancy_spouse_trigger = {{
+                    SPOUSE = scope:canon_mother
+                }}
+            """)
+        else:
+            trigger = textwrap.dedent(f"""
+                agot_canon_children_force_pregnancy_happy_accident_trigger = {{
+                    MOTHER = scope:canon_mother
+                }}
+            """)
+
+        return textwrap.indent(trigger, indent * 8).strip()
+
     def get_pregnancy_effect(child):
         effect = ""
 
@@ -82,6 +100,10 @@ def get_story_cycle(characters, father_id, child_ids):
 
     def get_pregnancy_effects():
         effects = []
+        is_married_couple = yes
+
+        # TODO: Rework this so that it generates the children effects in advance,
+        # > So I can check whether the parents are married before generating the output
 
         for mother_i, mother_id in enumerate(mother_ids):
             def get_children_effects():
@@ -113,9 +135,7 @@ def get_story_cycle(characters, father_id, child_ids):
                     limit = {{
                         has_character_flag = is_{mother_id}
                         scope:canon_father = {{
-                            agot_canon_children_force_pregnancy_spouse_trigger = {{
-                                SPOUSE = scope:canon_mother
-                            }}
+                            {get_pregnancy_trigger(child)}
                         }}
                     }}
                     {get_children_effects()}

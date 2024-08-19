@@ -14,7 +14,7 @@ def generate_birth_effects(characters, fathers, mothers):
 
             for chained_child_id in chained_child_ids:
                 chained_child = characters[chained_child_id]
-                chained_child_father = chained_child["real_father"] or chained_child["father"]
+                chained_child_father = chained_child["real_father"] or chained_child["father"] # TODO: maybe father should be prioritized?
 
                 if chained_child_father not in chained_child_fathers:
                     chained_child_fathers.append(chained_child_father)
