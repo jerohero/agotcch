@@ -54,23 +54,23 @@ def get_story_cycle(characters, father_id, child_ids):
 
         return textwrap.indent('\n'.join(setup), indent * 2).rstrip()
 
-    def get_pregnancy_trigger(child):
+    def get_pregnancy_trigger(first_child_is_bastard):
         trigger = ""
 
-        if child["real_father"] == "":
-            trigger = textwrap.dedent(f"""
-                agot_canon_children_force_pregnancy_spouse_trigger = {{
-                    SPOUSE = scope:canon_mother
-                }}
-            """)
-        else:
+        if first_child_is_bastard:
             trigger = textwrap.dedent(f"""
                 agot_canon_children_force_pregnancy_happy_accident_trigger = {{
                     MOTHER = scope:canon_mother
                 }}
             """)
+        else:
+            trigger = textwrap.dedent(f"""
+                agot_canon_children_force_pregnancy_spouse_trigger = {{
+                    SPOUSE = scope:canon_mother
+                }}
+            """)
 
-        return textwrap.indent(trigger, indent * 8).strip()
+        return textwrap.indent(trigger, indent * 7).strip()
 
     def get_pregnancy_effect(child):
         effect = ""
@@ -96,38 +96,36 @@ def get_story_cycle(characters, father_id, child_ids):
                 }}
             """)
 
-        return textwrap.indent(effect, indent * 8).strip()
+        return textwrap.indent(effect, indent * 7).strip()
 
     def get_pregnancy_effects():
         effects = []
-        is_married_couple = yes
 
-        # TODO: Rework this so that it generates the children effects in advance,
-        # > So I can check whether the parents are married before generating the output
+        def get_children_effects():
+            children_effects = []
+
+            for child_i, child_id in enumerate(child_ids):
+                child = characters[child_id]
+
+                if child["mother"] == mother_id:
+                    children_effects.append(textwrap.dedent(f"""
+                        # {child_id}
+                        {"if" if child_i == 0 else "else_if"} = {{
+                            limit = {{
+                                agot_canon_children_child_pregnancy_trigger = {{
+                                    ID = {child_id}
+                                    FLAG = is_{child_id}
+                                    BIRTH_YEAR = agot_canon_children_birth_year_{child_id}
+                                }}
+                            }}
+                            {get_pregnancy_effect(child)}
+                        }}
+                    """))
+
+            return textwrap.indent('\n'.join(children_effects), indent * 5).rstrip()
 
         for mother_i, mother_id in enumerate(mother_ids):
-            def get_children_effects():
-                children_effects = []
-
-                for child_i, child_id in enumerate(child_ids):
-                    child = characters[child_id]
-
-                    if child["mother"] == mother_id:
-                        children_effects.append(textwrap.dedent(f"""
-                            # {child_id}
-                            {"if" if child_i == 0 else "else_if"} = {{
-                                limit = {{
-                                    agot_canon_children_child_pregnancy_trigger = {{
-                                        ID = {child_id}
-                                        FLAG = is_{child_id}
-                                        BIRTH_YEAR = agot_canon_children_birth_year_{child_id}
-                                    }}
-                                }}
-                                {get_pregnancy_effect(child)}
-                            }}
-                        """))
-
-                return textwrap.indent('\n'.join(children_effects), indent * 5).rstrip()
+            first_child = characters[child_ids[0]]
 
             effects.append(textwrap.dedent(f"""
                 # {mother_id}
@@ -135,12 +133,13 @@ def get_story_cycle(characters, father_id, child_ids):
                     limit = {{
                         has_character_flag = is_{mother_id}
                         scope:canon_father = {{
-                            {get_pregnancy_trigger(child)}
+                            {get_pregnancy_trigger(first_child["is_bastard"])}
                         }}
                     }}
                     {get_children_effects()}
                 }}
             """))
+
 
         return textwrap.indent('\n'.join(effects), indent * 4).rstrip()
 

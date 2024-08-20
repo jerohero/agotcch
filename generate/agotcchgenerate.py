@@ -46,6 +46,7 @@ def init_character():
             "education": []
         },
         "flags": [],
+        "is_bastard": False,
         "guardian": {
             "primary": {
                 "id": ""
@@ -137,13 +138,19 @@ def process_lines():
                 # Father
                 elif key == "father":
                     character["father"] = value
+                # TODO REFACTOR THIS
                 # Real father
+                elif key == "real_father" or key == "set_real_father":
+                    character["real_father"] = value.split(':')[-1]
                 elif key == "effect" and "set_real_father" in value:
                     real_father_id = get_nested_value(value)
-                    character["real_father"] = real_father_id
+                    character["real_father"] = real_father_id.split(':')[-1]
                 # Mother
-                elif key == "mother":
-                    character["mother"] = value
+                elif key == "mother" or key == "set_real_mother":
+                    character["mother"] = value.split(':')[-1]
+                elif key == "effect" and "set_real_mother" in value:
+                    mother_id = get_nested_value(value)
+                    character["mother"] = mother_id.split(':')[-1]
                 # DNA
                 elif key == "dna":
                     character["dna"] = value
@@ -156,6 +163,8 @@ def process_lines():
                             character["traits"]["education"].append(value)
                     elif value in physical_traits_dumpster:
                         character["traits"]["inherited"].append(value)
+                    elif value == "bastard":
+                        character["is_bastard"] = True
                 elif key == "make_trait_inactive":
                     character["traits"]["inactive"].append(value)
                 # Flags
