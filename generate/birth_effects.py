@@ -8,8 +8,7 @@ def generate_birth_effects(characters, fathers, mothers):
     chained_mothers = find_chained_mothers(mothers)
 
     setup_cycles_effect = create_setup_cycles_effect(fathers)
-
-    print(setup_cycles_effect)
+    base_birth_effect = create_base_birth_effect(mothers)
 
     for child_id, child in characters.items():
         chained_child_fathers = get_chained_child_fathers(child, child_id, characters, mothers, chained_mothers)
@@ -39,6 +38,39 @@ def create_setup_cycles_effect(fathers):
                 }}
                 {textwrap.indent(''.join(setup_effects), indent * 4).rstrip()}
             }}
+        }}
+    """)
+
+def create_base_birth_effect(mothers):
+    setup_effects = []
+
+    for i, mother in enumerate(mothers):
+        child_effects = []
+
+        for j, child in enumerate(mothers[mother]):
+            # TODO HANDLE TWIN
+            child_effects.append(textwrap.dedent(f"""
+                {"if" if j == 0 else "else_if"} = {{
+                    limit = {{ agot_canon_children_check_pregnancy_child_trigger = {{ FLAG = is_{child} }} }}
+                    agot_canon_children_{child}_birth_effect = yes
+                }}
+            """).rstrip())
+
+        setup_effects.append(textwrap.dedent(f"""
+            {"if" if i == 0 else "else_if"} = {{
+                limit = {{
+                    scope:mother = {{ has_character_flag = is_{mother} }}
+                }}
+                {textwrap.indent(''.join(child_effects), indent * 4).rstrip()}
+            }}
+        """))
+
+    return textwrap.dedent(f"""
+        agot_canon_children_birth_effect = {{
+            scope:child = {{
+                agot_canon_children_clear_genetic_traits_effect = yes
+            }}
+            {textwrap.indent(''.join(setup_effects), indent * 3).rstrip()}
         }}
     """)
 
