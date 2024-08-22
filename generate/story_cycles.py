@@ -104,6 +104,7 @@ def generate_pregnancy_trigger(is_first_child_bastard, indent):
 
 def generate_pregnancy_effect(child, indent):
     if child["real_father"] == "":
+        # TODO: stillborn, death on childbirth etc
         effect = textwrap.dedent(f"""
             agot_canon_children_force_pregnancy_basic_effect = {{
                 CHILD_FLAG = is_{child["id"]}
@@ -111,6 +112,7 @@ def generate_pregnancy_effect(child, indent):
             }}
         """)
     else:
+        # TODO: real father knows & known bastard
         effect = textwrap.dedent(f"""
             agot_canon_children_force_bastard_pregnancy_basic_effect = {{
                 CHILD_FLAG = is_{child["id"]}
@@ -172,5 +174,14 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
                     {pregnancy_effect}
                 }}
             """))
+
+    children_effects.append(textwrap.dedent(f"""
+        # Lifecycle
+        agot_canon_children_life_cycle_effect = {{
+            MOTHER = scope:canon_mother
+            FINAL_CHILD_FLAG = is_{child_ids[-1]}
+            FINAL_CHILD_ID = {child_ids[-1]}
+        }}
+    """))
 
     return textwrap.indent('\n'.join(children_effects), indent * 4).rstrip()

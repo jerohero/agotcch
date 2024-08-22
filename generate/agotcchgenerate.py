@@ -137,7 +137,8 @@ def process_lines():
                         character["is_female"] = True
                 # Father
                 elif key == "father":
-                    character["father"] = value
+                    if character["father"] == "":
+                        character["father"] = value
                 # TODO REFACTOR THIS
                 # Real father
                 elif key == "real_father" or key == "set_real_father":
