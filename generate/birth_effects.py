@@ -1,10 +1,15 @@
 import textwrap
 from lookups import *
 
+indent = '    '
 
 def generate_birth_effects(characters, fathers, mothers):
     birth_effects = []
     chained_mothers = find_chained_mothers(mothers)
+
+    setup_cycles_effect = create_setup_cycles_effect(fathers)
+
+    print(setup_cycles_effect)
 
     for child_id, child in characters.items():
         chained_child_fathers = get_chained_child_fathers(child, child_id, characters, mothers, chained_mothers)
@@ -13,6 +18,29 @@ def generate_birth_effects(characters, fathers, mothers):
 
     return ''.join(birth_effects)
 
+def create_setup_cycles_effect(fathers):
+    setup_effects = []
+
+    for father in fathers:
+        setup_effects.append(textwrap.dedent(f"""
+            character:{father} ?= {{
+                if = {{
+                    limit = {{ is_alive = yes }}
+                    create_story = {{ type = story_agot_canon_children_{father} }}
+                }}
+            }}
+        """))
+
+    return textwrap.dedent(f"""
+        agot_canon_children_setup_story_cycles_effect = {{
+            if = {{
+                limit = {{
+                    agot_canon_children_setup_trigger = yes
+                }}
+                {textwrap.indent(''.join(setup_effects), indent * 4).rstrip()}
+            }}
+        }}
+    """)
 
 def get_chained_child_fathers(child, child_id, characters, mothers, chained_mothers):
     chained_child_fathers = []
@@ -48,7 +76,6 @@ def create_birth_effect(character, chained_child_fathers):
 
 
 def inject_data(character, chained_child_fathers):
-    indent = '    '
     output = '\n'
     output += get_culture()
     output += get_flags(character)
