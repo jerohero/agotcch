@@ -1,4 +1,576 @@
 ﻿############################################################################################
+### 						        Viserys TARGARYEN									 ###
+###																						 ###
+### - Aemma Arryn: Aemon, Rhaenyra, Baelon 												 ###
+### - Alicent Hightower: Aegon, Helaena, Aemond, Daeron 								 ###
+############################################################################################
+story_agot_canon_children_viserys_targaryen = {
+	on_setup = {
+		agot_canon_children_setup_father_effect = {
+			FATHER = story_owner
+			FATHER_FLAG = is_viserys_targaryen
+		}
+
+		agot_canon_children_setup_mother_effect = {
+			FATHER = story_owner
+			MOTHER = character:Arryn_80
+			MOTHER_FLAG = is_aemma_arryn
+			PREVENT_PREGNANCY = yes
+		}
+
+		agot_canon_children_setup_mother_effect = {
+			FATHER = story_owner
+			MOTHER = character:Hightower_97
+			MOTHER_FLAG = is_alicent_hightower
+			PREVENT_PREGNANCY = yes
+		}
+	}
+
+	on_end = { }
+
+	on_owner_death = { agot_canon_children_on_owner_death_effect = yes }
+
+	# Pregnancies
+	effect_group = {
+		months = agot_canon_children_pregnancies_cycle_months
+
+		triggered_effect = {
+			effect = {
+				story_owner = {
+					save_scope_as = canon_father
+					every_in_list = {
+						variable = canon_mothers
+						save_scope_as = canon_mother
+
+						# 1. Aemma (Arryn)
+						if = {
+							limit = {
+								has_character_flag = is_aemma_arryn
+								scope:canon_father = {
+									agot_canon_children_force_pregnancy_spouse_trigger = {
+										SPOUSE = scope:canon_mother
+									}
+								}
+							}
+
+							# 1-1. Aemon
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_131
+										FLAG = is_aemon_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_aemon_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_effect = {
+									CHILD_FLAG = is_aemon_targaryen
+									IS_FEMALE = no
+									FATHER = scope:canon_father
+									BIRTH_FLAG = birth_child_will_become_sickly
+								}
+							}
+							# 1-2. Rhaenyra
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_63
+										FLAG = is_rhaenyra_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_rhaenyra_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_rhaenyra_targaryen
+									IS_FEMALE = yes
+								}
+							}
+							# 1-3. Baelon
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_64
+										FLAG = is_baelon_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_baelon_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_effect = {
+									CHILD_FLAG = is_baelon_targaryen
+									IS_FEMALE = no
+									FATHER = scope:canon_father
+									BIRTH_FLAG = agot_birth_child_will_be_stillborn
+								}
+							}
+
+							# Lifecycle
+							agot_canon_children_life_cycle_effect = {
+								MOTHER = scope:canon_mother
+								FINAL_CHILD_FLAG = is_baelon_targaryen
+								FINAL_CHILD_ID = Targaryen_64
+							}
+						}
+
+						# 1. Alicent (Hightower)
+						else_if = {
+							limit = {
+								has_character_flag = is_alicent_hightower
+								scope:canon_father = {
+									agot_canon_children_force_pregnancy_spouse_trigger = {
+										SPOUSE = scope:canon_mother
+									}
+								}
+							}
+
+							# 1-1. Aegon
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_65
+										FLAG = is_aegon_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_aegon_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_aegon_targaryen
+									IS_FEMALE = no
+								}
+							}
+							# 1-2. Helaena
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_66
+										FLAG = is_helaena_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_helaena_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_helaena_targaryen
+									IS_FEMALE = yes
+								}
+							}
+							# 1-3. Aemond
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_67
+										FLAG = is_aemond_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_aemond_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_aemond_targaryen
+									IS_FEMALE = no
+								}
+							}
+							# 1-4. Daeron
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_68
+										FLAG = is_daeron_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_daeron_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_daeron_targaryen
+									IS_FEMALE = no
+								}
+							}
+
+							# Lifecycle
+							agot_canon_children_life_cycle_effect = {
+								MOTHER = scope:canon_mother
+								FINAL_CHILD_FLAG = is_daeron_targaryen
+								FINAL_CHILD_ID = Targaryen_68
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############################################################################################
+### 						       		 Laenor VELARYON								 ###
+###																						 ###
+### - Rhaenyra Targaryen (Harwin Strong as real father): Jacaerys, Lucerys, Joffrey 	 ###
+############################################################################################
+story_agot_canon_children_laenor_velaryon = {
+	on_setup = {
+		agot_canon_children_setup_father_effect = {
+			FATHER = story_owner
+			FATHER_FLAG = is_laenor_velaryon
+		}
+
+		agot_canon_children_setup_real_father_effect = {
+			FATHER = story_owner
+			REAL_FATHER = character:Strong_30
+			REAL_FATHER_FLAG = is_harwin_strong
+			REAL_FATHER_VAR = agot_canon_children_real_father_1
+		}
+
+		agot_canon_children_setup_mother_effect = {
+			FATHER = story_owner
+			MOTHER = character:Targaryen_63
+			MOTHER_FLAG = is_rhaenyra_targaryen
+			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
+		}
+	}
+
+	on_end = { }
+
+	on_owner_death = { agot_canon_children_on_owner_death_effect = yes }
+
+	# Pregnancies
+	effect_group = {
+		months = agot_canon_children_pregnancies_cycle_months
+
+		triggered_effect = {
+			effect = {
+				story_owner = {
+					save_scope_as = canon_father
+					every_in_list = {
+						variable = canon_mothers
+						save_scope_as = canon_mother
+
+						# 1. Rhaenyra (Targaryen)
+						if = {
+							limit = {
+								has_character_flag = is_rhaenyra_targaryen
+								scope:canon_father = {
+									agot_canon_children_force_pregnancy_spouse_trigger = {
+										SPOUSE = scope:canon_mother
+									}
+								}
+								agot_canon_children_force_pregnancy_real_father_trigger = {
+									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
+									MOTHER = scope:canon_mother
+								}
+							}
+
+							# 1-1. Jacaerys
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_75
+										FLAG = is_jacaerys_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_jacaerys_targaryen
+									}
+								}
+								agot_canon_children_force_bastard_pregnancy_basic_effect = {
+									CHILD_FLAG = is_jacaerys_targaryen
+									IS_FEMALE = no
+									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
+									REAL_FATHER_KNOWS = yes #AGOTCCH-TODO: does he?
+									KNOWN_BASTARD = no #AGOTCCH-TODO: is it known?
+								}
+							}
+							# 1-2. Lucerys
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_76
+										FLAG = is_lucerys_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
+									}
+								}
+								agot_canon_children_force_bastard_pregnancy_basic_effect = {
+									CHILD_FLAG = is_lucerys_targaryen
+									IS_FEMALE = no
+									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
+									REAL_FATHER_KNOWS = yes
+									KNOWN_BASTARD = no
+								}
+							}
+							# 1-3. Lucerys
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_77
+										FLAG = is_joffrey_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
+									}
+								}
+								agot_canon_children_force_bastard_pregnancy_basic_effect = {
+									CHILD_FLAG = is_joffrey_targaryen
+									IS_FEMALE = no
+									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
+									REAL_FATHER_KNOWS = yes
+									KNOWN_BASTARD = no
+								}
+							}
+
+							# Lifecycle
+							agot_canon_children_life_cycle_effect = {
+								MOTHER = scope:canon_mother
+								FINAL_CHILD_FLAG = is_joffrey_targaryen
+								FINAL_CHILD_ID = Targaryen_77
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############################################################################################
+### 						       	 Harwin STRONG (married edition)					 ###
+###																						 ###
+### - Rhaenyra Targaryen: Jacaerys, Lucerys, Joffrey 									 ###
+############################################################################################
+story_agot_canon_children_harwin_strong = {
+	on_setup = {
+		agot_canon_children_setup_father_effect = {
+			FATHER = story_owner
+			FATHER_FLAG = is_harwin_strong
+		}
+
+		agot_canon_children_setup_mother_effect = {
+			FATHER = story_owner
+			MOTHER = character:Targaryen_63
+			MOTHER_FLAG = is_rhaenyra_targaryen
+			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
+		}
+	}
+
+	on_end = { }
+
+	on_owner_death = { agot_canon_children_on_owner_death_effect = yes }
+
+	# Pregnancies
+	effect_group = {
+		months = agot_canon_children_pregnancies_cycle_months
+
+		triggered_effect = {
+			effect = {
+				story_owner = {
+					save_scope_as = canon_father
+					every_in_list = {
+						variable = canon_mothers
+						save_scope_as = canon_mother
+
+						# 1. Rhaenyra (Targaryen)
+						if = {
+							limit = {
+								has_character_flag = is_rhaenyra_targaryen
+								scope:canon_father = {
+									agot_canon_children_force_pregnancy_spouse_trigger = {
+										SPOUSE = scope:canon_mother
+									}
+								}
+							}
+
+							# 1-1. Jacaerys
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_75
+										FLAG = is_jacaerys_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_jacaerys_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_jacaerys_targaryen
+									IS_FEMALE = no
+								}
+							}
+							# 1-2. Lucerys
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_76
+										FLAG = is_lucerys_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_lucerys_targaryen
+									IS_FEMALE = no
+								}
+							}
+							# 1-3. Lucerys
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_77
+										FLAG = is_joffrey_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_joffrey_targaryen
+									IS_FEMALE = no
+								}
+							}
+
+							# Lifecycle
+							agot_canon_children_life_cycle_effect = {
+								MOTHER = scope:canon_mother
+								FINAL_CHILD_FLAG = is_joffrey_targaryen
+								FINAL_CHILD_ID = Targaryen_77
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############################################################################################
+### 						       		 Daemon TARGARYEN								 ###
+###																						 ###
+### - Rhaenyra Targaryen: Aegon, Viserys, Visenya	 									 ###
+### - Laena Velaryon: Baela, Rhaena														 ###
+############################################################################################
+story_agot_canon_children_daemon_targaryen = {
+	on_setup = {
+		agot_canon_children_setup_father_effect = {
+			FATHER = story_owner
+			FATHER_FLAG = is_daemon_targaryen
+		}
+
+		agot_canon_children_setup_mother_effect = {
+			FATHER = story_owner
+			MOTHER = character:Targaryen_63
+			MOTHER_FLAG = is_rhaenyra_targaryen
+			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
+		}
+
+		agot_canon_children_setup_mother_effect = {
+			FATHER = story_owner
+			MOTHER = character:Velaryon_34
+			MOTHER_FLAG = is_laena_velaryon
+			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
+		}
+	}
+
+	on_end = { }
+
+	on_owner_death = { agot_canon_children_on_owner_death_effect = yes }
+
+	# Pregnancies
+	effect_group = {
+		months = agot_canon_children_pregnancies_cycle_months
+
+		triggered_effect = {
+			effect = {
+				story_owner = {
+					save_scope_as = canon_father
+					every_in_list = {
+						variable = canon_mothers
+						save_scope_as = canon_mother
+
+						# 1. Rhaenyra (Targaryen)
+						if = {
+							limit = {
+								has_character_flag = is_rhaenyra_targaryen
+								scope:canon_father = {
+									agot_canon_children_force_pregnancy_spouse_trigger = {
+										SPOUSE = scope:canon_mother
+									}
+								}
+							}
+
+							# 1-1. Aegon
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_78
+										FLAG = is_aegon_targaryen_2
+										BIRTH_YEAR = agot_canon_children_birth_year_aegon_targaryen_2
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_aegon_targaryen_2
+									IS_FEMALE = no
+								}
+							}
+
+							# 1-2. Viserys
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_79
+										FLAG = is_viserys_targaryen_2
+										BIRTH_YEAR = agot_canon_children_birth_year_viserys_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_viserys_targaryen_2
+									IS_FEMALE = no
+								}
+							}
+
+							#AGOTCCH-TODO: Stillborn
+							# 1-3. Visenya
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_80
+										FLAG = is_visenya_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_visenya_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_effect = {
+									CHILD_FLAG = is_visenya_targaryen
+									IS_FEMALE = yes
+									FATHER = scope:canon_father
+									BIRTH_FLAG = agot_birth_child_will_be_stillborn
+								}
+							}
+
+
+							# Lifecycle
+							agot_canon_children_life_cycle_effect = {
+								MOTHER = scope:canon_mother
+								FINAL_CHILD_FLAG = is_visenya_targaryen
+								FINAL_CHILD_ID = Targaryen_80
+							}
+						}
+
+						# 2. Laena (Velaryon)
+						if = {
+							limit = {
+								has_character_flag = is_laena_velaryon
+								scope:canon_father = {
+									agot_canon_children_force_pregnancy_spouse_trigger = {
+										SPOUSE = scope:canon_mother
+									}
+								}
+							}
+
+							# 1-1. Baela + Rhaena (twins)
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Targaryen_69
+										FLAG = is_baela_targaryen
+										BIRTH_YEAR = agot_canon_children_birth_year_baela_targaryen
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_baela_targaryen
+									IS_FEMALE = yes
+								}
+							}
+
+							# Lifecycle
+							agot_canon_children_life_cycle_effect = {
+								MOTHER = scope:canon_mother
+								FINAL_CHILD_FLAG = is_baela_targaryen
+								FINAL_CHILD_ID = Targaryen_69
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+############################################################################################
 ### 								   Rickard STARK									 ###
 ###																						 ###
 ### - Lyarra Stark: Brandon, Eddard, Benjen, Lyanna										 ###
@@ -216,7 +788,7 @@ story_agot_canon_children_eddard_stark = {
 							else_if = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
-										ID = 8059
+										ID = Stark_10
 										FLAG = is_bran_stark
 										BIRTH_YEAR = agot_canon_children_birth_year_bran_stark
 									}
@@ -1153,6 +1725,113 @@ story_agot_canon_children_hoster_tully = {
 	}
 }
 
+###########################################################################################
+### 						             Leyton HIGHTOWER								###
+###																						###
+### - Mychella Hightower: Baelor, Malora, Alerie										###
+### - Victaria Hightower: Garth, Denyse, Leyla, Alysanne								###
+### - Rhea Florent: Lynesse, Gunthor, Humfrey      		     							###
+###########################################################################################
+story_agot_canon_children_leyton_hightower = {
+	on_setup = {
+		agot_canon_children_setup_father_effect = {
+			FATHER = story_owner
+			FATHER_FLAG = is_leyton_hightower
+		}
+
+		agot_canon_children_setup_mother_effect = {
+			FATHER = story_owner
+			MOTHER = character:Haen_58
+			MOTHER_FLAG = is_mychella_hightower
+			PREVENT_PREGNANCY = yes
+		}
+	}
+
+	on_end = { }
+
+	on_owner_death = { agot_canon_children_on_owner_death_effect = yes }
+
+	# Pregnancies
+	effect_group = {
+		months = agot_canon_children_pregnancies_cycle_months
+
+		triggered_effect = {
+			effect = {
+				story_owner = {
+					save_scope_as = canon_father
+					every_in_list = {
+						variable = canon_mothers
+						save_scope_as = canon_mother
+
+						# 1. Mychella (Hightower)
+						if = {
+							limit = {
+								has_character_flag = is_mychella_hightower
+								scope:canon_father = {
+									agot_canon_children_force_pregnancy_spouse_trigger = {
+										SPOUSE = scope:canon_mother
+									}
+								}
+							}
+
+							# 1-1. Baelor
+							if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Hightower_7
+										FLAG = is_baelor_hightower
+										BIRTH_YEAR = agot_canon_children_birth_year_baelor_hightower
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_baelor_hightower
+									IS_FEMALE = no
+								}
+							}
+
+							# 1-2. Malora
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Hightower_8
+										FLAG = is_malora_hightower
+										BIRTH_YEAR = agot_canon_children_birth_year_malora_hightower
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_malora_hightower
+									IS_FEMALE = yes
+								}
+							}
+
+							# 1-3. Alerie
+							else_if = {
+								limit = {
+									agot_canon_children_child_pregnancy_trigger = {
+										ID = Hightower_9
+										FLAG = is_alerie_hightower
+										BIRTH_YEAR = agot_canon_children_birth_year_alerie_hightower
+									}
+								}
+								agot_canon_children_force_pregnancy_basic_effect = {
+									CHILD_FLAG = is_alerie_hightower
+									IS_FEMALE = yes
+								}
+							}
+
+							# Lifecycle
+							agot_canon_children_life_cycle_effect = {
+								MOTHER = scope:canon_mother
+								FINAL_CHILD_FLAG = is_alerie_hightower
+								FINAL_CHILD_ID = Hightower_9
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 ###########################################################################################
 ### 						             Mace TYRELL									###

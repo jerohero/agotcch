@@ -1,4 +1,6 @@
-﻿###
+﻿
+
+###
 #	SPECIAL NOTE
 #
 #	When evaluating whether or not the AI can send this interaction to the
@@ -351,6 +353,16 @@ arrange_marriage_interaction = {
 		NOT = {
 			scope:actor = { has_trait = nightswatch }
 			scope:recipient = { has_trait = nightswatch }
+		}
+
+		#AGOT Added, banned marriage with artifact keeper
+		trigger_if = {
+			limit = { exists = global_var:agot_artifact_keeper }
+			NOR = {
+				scope:actor = global_var:agot_artifact_keeper
+				scope:recipient = global_var:agot_artifact_keeper
+				scope:recipient.liege_or_court_owner = global_var:agot_artifact_keeper
+			}
 		}
 
 		#AGOTCCH Added, prevent canon spouses from being married off to others by AI
@@ -1163,6 +1175,14 @@ marry_off_interaction = {
 							faith.religious_head = this
 							NOT = { scope:secondary_actor.faith = faith }
 						}
+						#AGOT Added, banned marriage with artifact keeper
+						trigger_if = {
+							limit = { exists = global_var:agot_artifact_keeper }
+							NOR = {
+								this = global_var:agot_artifact_keeper
+								this.liege_or_court_owner = global_var:agot_artifact_keeper
+							}
+						}
 					}
 					add_to_list = characters
 				}
@@ -1172,6 +1192,14 @@ marry_off_interaction = {
 							is_landless_ruler = yes
 							faith.religious_head = this
 							NOT = { scope:secondary_actor.faith = faith }
+						}
+						#AGOT Added, banned marriage with artifact keeper
+						trigger_if = {
+							limit = { exists = global_var:agot_artifact_keeper }
+							NOR = {
+								this = global_var:agot_artifact_keeper
+								this.liege_or_court_owner = global_var:agot_artifact_keeper
+							}
 						}
 					}
 					add_to_list = characters
@@ -1184,6 +1212,14 @@ marry_off_interaction = {
 							is_landless_ruler = yes
 							faith.religious_head = this
 							NOT = { scope:secondary_actor.faith = faith }
+						}
+						#AGOT Added, banned marriage with artifact keeper
+						trigger_if = {
+							limit = { exists = global_var:agot_artifact_keeper }
+							NOR = {
+								this = global_var:agot_artifact_keeper
+								this.liege_or_court_owner = global_var:agot_artifact_keeper
+							}
 						}
 					}
 					add_to_list = characters
@@ -1202,6 +1238,11 @@ marry_off_interaction = {
 					exists = scope:actor
 					exists = scope:recipient
 					exists = scope:secondary_recipient
+					#AGOT Added: Vanilla bugfix
+					# Only add prestige cost if secondary actor is close family of actor,
+					# as in arrange_marriage_interaction
+					exists = scope:secondary_actor
+					scope:secondary_actor = { is_close_family_of = scope:actor }
 					scope:recipient = {
 						OR = {
 							AND = {
@@ -1929,7 +1970,12 @@ break_betrothal_interaction = {
 		#Identifies the "injured party"
 		scope:recipient = {
 			if = {
-				limit = { matchmaker = scope:actor }
+				#AGOT Modified
+				#limit = { matchmaker = scope:actor }
+				limit = {
+					matchmaker = scope:actor
+					exists = betrothed
+				}
 				betrothed = { save_scope_as = rejected_betrothed }
 				save_scope_as = rejecting_betrothed
 			}
@@ -1948,7 +1994,12 @@ break_betrothal_interaction = {
 							is_betrothed = yes
 							is_ai = yes
 							betrothed = scope:actor
-							target_is_liege_or_above = scope:recipient
+							#AGOT Modfied to match show interaction
+							#target_is_liege_or_above = scope:recipient
+							OR = {
+								is_landed = no
+								target_is_liege_or_above = scope:recipient
+							}
 						}
 					}
 				}
@@ -3787,6 +3838,7 @@ divorce_character_interaction = {
 					any_child = {
 						#AGOT Modified
 						#is_heir_of = scope:actor
+						even_if_dead = yes
 						OR = {
 							is_heir_of = scope:actor
 							any_child = {
@@ -4161,6 +4213,7 @@ divorce_character_house_head_interaction = {
 					any_child = {
 						#AGOT Modified
 						#is_heir_of = scope:actor
+						even_if_dead = yes
 						OR = {
 							is_heir_of = scope:actor
 							any_child = {
@@ -4532,6 +4585,7 @@ divorce_character_rel_head_interaction = {
 					any_child = {
 						#AGOT Modified
 						#is_heir_of = scope:actor
+						even_if_dead = yes
 						OR = {
 							is_heir_of = scope:actor
 							any_child = {
@@ -5070,8 +5124,10 @@ elope_interaction = {
 	notification_text = elope_interaction_notification
 	
 	ai_targets = {
-		ai_recipients = realm_characters
-		chance = 0.25
+		# AGOT Modified for performance
+		#ai_recipients = realm_characters
+		#chance = 0.25
+		ai_recipients = scripted_relations
 	}
 	
 	ai_target_quick_trigger = {
