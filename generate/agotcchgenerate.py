@@ -4,6 +4,8 @@ from util import file, text
 import textwrap
 from birth_effects import generate_birth_effects
 from story_cycles import generate_story_cycles
+from script_values import generate_script_values
+from dummy_characters import generate_dummy_characters
 from lookups import *
 
 personality_traits_dumpster = [
@@ -156,7 +158,7 @@ def process_lines():
                 elif key == "dna":
                     character["dna"] = value
                 # Traits
-                elif key == "trait" or key == "add_trait":                
+                elif key == "trait" or key == "add_trait":
                     if value in childhood_personality_traits_dumpster:
                         character["traits"]["childhood"] = value
                     elif value in personality_traits_dumpster:
@@ -202,13 +204,19 @@ def process_lines():
         # print(json.dumps(character, sort_keys=True, indent=4))
     
     fathers, mothers = find_ancestries(characters)
+
     # birth_effects = generate_birth_effects(characters, fathers, mothers)
-    story_cycles = generate_story_cycles(characters, fathers, mothers)
-
     # print(birth_effects)
-    print(story_cycles)
 
-folder_path = 'D:/projects/agotcch/generate/characters'
+    # story_cycles = generate_story_cycles(characters, fathers, mothers)
+    # print(story_cycles)
+
+    # script_values = generate_script_values(characters)
+    # print(script_values)
+
+    dummy_characters = generate_dummy_characters(characters)
+    print(dummy_characters)
+
 lines = file.read_text_files_to_lines(folder_path)
 
 process_lines()
