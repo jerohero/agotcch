@@ -6,7 +6,7 @@ def generate_dummy_characters(characters):
     for child_id, child in characters.items():
         dummy_characters.append(create_dummy_character(child))
 
-    return ''.join(dummy_characters)
+    return ''.join(dummy_characters).lstrip()
 
 def create_dummy_character(child):
     return textwrap.dedent(f"""

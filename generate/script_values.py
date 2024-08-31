@@ -53,6 +53,8 @@ base_values = textwrap.dedent(f"""
             add = {{ value = 100 }}
         }}
     }}
+
+    # Birth years
 """)
 
 def generate_script_values(characters):
@@ -61,7 +63,7 @@ def generate_script_values(characters):
     for child_id, child in characters.items():
         script_values.append(create_child_script_value(child))
 
-    return base_values + ''.join(script_values)
+    return (base_values + ''.join(script_values)).strip()
 
 def create_child_script_value(child):
     return textwrap.dedent(f"""

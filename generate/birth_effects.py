@@ -15,7 +15,7 @@ def generate_birth_effects(characters, fathers, mothers):
         birth_effect = create_birth_effect(child, chained_child_fathers)
         birth_effects.append(birth_effect)
 
-    return ''.join(birth_effects)
+    return ''.join(birth_effects).strip()
 
 def create_setup_cycles_effect(fathers):
     setup_effects = []

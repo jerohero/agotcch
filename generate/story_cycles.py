@@ -8,7 +8,7 @@ def generate_story_cycles(characters, fathers, mothers):
         story_cycle = create_story_cycle(characters, father_id, child_ids)
         story_cycles.append(story_cycle)
 
-    return ''.join(story_cycles)
+    return ''.join(story_cycles).strip()
 
 
 def create_story_cycle(characters, father_id, child_ids):
@@ -49,7 +49,7 @@ def create_story_cycle(characters, father_id, child_ids):
                 }}
             }}
         }}
-    """).rstrip()
+    """)
 
 
 def generate_setup(father_id, mother_ids, real_father_ids, indent):
@@ -103,12 +103,24 @@ def generate_pregnancy_trigger(is_first_child_bastard, indent):
 
 
 def generate_pregnancy_effect(child, indent):
+    is_female = "yes" if child["is_female"] else "no"
+
+    birth_flag = ""
+
+    if child["birth_options"]["is_stillborn"]:
+        birth_flag = "birth_will_be_stillborn"
+    else if child["birth_options"]["mother_dies"]:
+        birth_flag = "agot_birth_mother_will_die"
+    else if child["birth_options"]["will_become_sickly"]:
+        birth_flag = "birth_child_will_become_sickly"
+
     if child["real_father"] == "":
-        # TODO: stillborn, death on childbirth etc
         effect = textwrap.dedent(f"""
-            agot_canon_children_force_pregnancy_basic_effect = {{
+            agot_canon_children_force_pregnancy_effect = {{
                 CHILD_FLAG = is_{child["id"]}
-                IS_FEMALE = {"yes" if child["is_female"] else "no"}
+                IS_FEMALE = {is_female}
+                FATHER = scope:canon_father
+                BIRTH_FLAG = {birth_flag}
             }}
         """)
     else:
@@ -116,7 +128,7 @@ def generate_pregnancy_effect(child, indent):
         effect = textwrap.dedent(f"""
             agot_canon_children_force_bastard_pregnancy_basic_effect = {{
                 CHILD_FLAG = is_{child["id"]}
-                IS_FEMALE = {"yes" if child["is_female"] else "no"}
+                IS_FEMALE = {is_female}
                 REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_{child["real_father"]}
                 REAL_FATHER_KNOWS = yes
                 KNOWN_BASTARD = no
@@ -173,7 +185,7 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
                     }}
                     {pregnancy_effect}
                 }}
-            """))
+            """).rstrip())
 
     children_effects.append(textwrap.dedent(f"""
         # Lifecycle

@@ -8,6 +8,8 @@ from script_values import generate_script_values
 from dummy_characters import generate_dummy_characters
 from lookups import *
 
+path = "C:/Users/Jeroen/Documents/Paradox Interactive/Crusader Kings III/mod/agotcch/generate"
+
 personality_traits_dumpster = [
     "lustful","chaste","gluttonous","temperate","greedy","generous","lazy","diligent","wrathful","calm","patient","impatient","arrogant",
     "humble","deceitful","honest","craven","brave","shy","gregarious","ambitious","content","arbitrary","just","cynical","zealous",
@@ -49,6 +51,11 @@ def init_character():
         },
         "flags": [],
         "is_bastard": False,
+        "birth_options": {
+            "is_born_sickly": False,
+            "is_stillborn": False,
+            "mother_dies": False
+        },
         "guardian": {
             "primary": {
                 "id": ""
@@ -86,12 +93,10 @@ def process_lines():
 
         # Setup reading new character
         if is_line_character_name:
-            # Print previous character
             if is_reading_character:
                 characters[character["id"]] = character
             is_reading_character = False
 
-            # character = Character()
             character = init_character()
 
             if is_line_canon_child:
@@ -116,6 +121,10 @@ def process_lines():
             is_birth_block = current_year_block == 0 or current_year_block == character["birth"]
 
             if "=" in line:
+                # Custom attributes
+                if "# canon_children" in line:
+                    line = line.replace("# ", "")
+
                 key, value = line.split("=", 1)
                 key, value = key.strip(), value.split("#", 1)[0].strip() # Remove comments and whitespaces
 
@@ -126,13 +135,6 @@ def process_lines():
                 # House
                 elif key in ["dynasty", "dynasty_house"]:
                     character["house"] = value
-                    # character["house"] = line.split(" = ")[1].split(" #")[0]
-                    # if "dynn_" in character["house"]:
-                    #     character["house"] = character["house"].split("dynn_")[1]
-                    # if "house_" in character["house"]:
-                    #     character["house"] = character["house"].split("house_")[1]
-                    # if character["flag"] == "FLAG_MISSING":
-                    #     character["flag"] = character["name"]["primary"].lower().split("\n")[0] + "_" + character["house"].lower().split("\n")[0]
                 # Gender
                 elif key == "female":
                     if value == "yes":
@@ -168,6 +170,9 @@ def process_lines():
                         character["traits"]["inherited"].append(value)
                     elif value == "bastard":
                         character["is_bastard"] = True
+                    elif value == "sickly":
+                        if is_birth_block:
+                            character["birth_options"]["is_born_sickly"] = True
                 elif key == "make_trait_inactive":
                     character["traits"]["inactive"].append(value)
                 # Flags
@@ -195,28 +200,32 @@ def process_lines():
                 elif key == "give_nickname":
                     if is_birth_block:
                         character["nickname"] = value
+                # Birth options
+                elif key == "death":
+                    if "death_stillborn" in value:
+                        character["birth_options"]["is_stillborn"] = True
+                elif key == "canon_children_mother_dies":
+                    if value == "yes":
+                        character["birth_options"]["mother_dies"] = True
+                
                 # TODO Scripted appearance flags + traits
                 # TODO On birth
-
-    # for character in characters:
-    #     continue
-        # print(get_birth_effect(character))
-        # print(json.dumps(character, sort_keys=True, indent=4))
     
     fathers, mothers = find_ancestries(characters)
 
-    # birth_effects = generate_birth_effects(characters, fathers, mothers)
-    # print(birth_effects)
+    with open(path + '/output/agot_canon_children_story_cycles.txt', 'w') as f:
+        f.write(generate_story_cycles(characters, fathers, mothers))
 
-    # story_cycles = generate_story_cycles(characters, fathers, mothers)
-    # print(story_cycles)
+    with open(path + '/output/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
+        f.write(generate_birth_effects(characters, fathers, mothers))
 
-    # script_values = generate_script_values(characters)
-    # print(script_values)
+    with open(path + '/output/00_agot_canon_children_values.txt', 'w') as f:
+        f.write(generate_script_values(characters))
 
-    dummy_characters = generate_dummy_characters(characters)
-    print(dummy_characters)
+    with open(path + '/output/canon_children_dummy_characters.txt', 'w') as f:
+        f.write(generate_dummy_characters(characters))
 
+folder_path = path + '/characters'
 lines = file.read_text_files_to_lines(folder_path)
 
 process_lines()
