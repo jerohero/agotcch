@@ -105,7 +105,7 @@ def generate_pregnancy_trigger(is_first_child_bastard, indent):
 def generate_pregnancy_effect(child, indent):
     is_female = "yes" if child["is_female"] else "no"
 
-    birth_flag = ""
+    birth_flag = "birth_will_go_smoothly"
 
     if child["birth_options"]["is_stillborn"]:
         birth_flag = "birth_will_be_stillborn"

@@ -40,7 +40,6 @@ def init_character():
         "father": "",
         "real_father": "",
         "mother": "",
-        "dna": "",
         "sexuality": "",
         "employer:": "",
         "traits": {
@@ -139,9 +138,6 @@ def process_character(character_start_index):
             elif key == "effect" and "set_real_mother" in value:
                 mother_id = get_nested_value(value)
                 character["mother"] = mother_id.split(':')[-1]
-            # DNA
-            elif key == "dna":
-                character["dna"] = value
             # Traits
             elif key == "trait" or key == "add_trait":
                 if value in childhood_personality_traits_dumpster:
@@ -193,19 +189,19 @@ def process_character(character_start_index):
             
             # TODO Scripted appearance flags + traits
             # TODO On birth
+
     return character
 
 def process_lines():
     current_year_block = 0
+    character_start_index = 0
 
     characters = {}
 
-    character_start_index = 0
-
     for i, line in enumerate(lines):
         # TODO TEMP
-        if len(characters) > 30:
-            break
+        # if len(characters) > 30:
+        #     break
 
         is_line_empty = not line or line[0] == '#'
         is_line_character_name = "\tname = " in line
@@ -221,6 +217,11 @@ def process_lines():
 
         if is_line_canon_child:
             character = process_character(character_start_index)
+
+            if character["father"] == "" or character["mother"] == "":
+                # TODO allow exceptions, such as Maege Mormont's children
+                continue
+
             print(character)
             characters[character["id"]] = character
     

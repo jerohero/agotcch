@@ -7,7 +7,7 @@ def generate_birth_effects(characters, fathers, mothers):
     birth_effects = []
     chained_mothers = find_chained_mothers(mothers)
 
-    setup_cycles_effect = create_setup_cycles_effect(fathers)
+    setup_cycles_effect = create_setup_cycles_effect(fathers).lstrip()
     base_birth_effect = create_base_birth_effect(mothers)
 
     for child_id, child in characters.items():
@@ -15,7 +15,7 @@ def generate_birth_effects(characters, fathers, mothers):
         birth_effect = create_birth_effect(child, chained_child_fathers)
         birth_effects.append(birth_effect)
 
-    return ''.join(birth_effects).strip()
+    return setup_cycles_effect + base_birth_effect + "\n" + "".join(birth_effects).strip()
 
 def create_setup_cycles_effect(fathers):
     setup_effects = []
@@ -99,7 +99,7 @@ def create_birth_effect(character, chained_child_fathers):
                     NAME_PRIMARY = "{character["name"]["primary"]}"
                     NAME_ALT = "{character["name"]["alt"]}"
                     FLAG = "is_{character["id"]}"
-                    DNA = "Dummy_{character["dna"]}"
+                    DNA = "Dummy_{character["id"]}"
                 }}
             }}
             {inject_data(character, chained_child_fathers)}
