@@ -18,7 +18,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_robb_stark
+						has_character_flag = is_stark_6
 						AND = {
 							exists = character:Stark_6
 							this = character:Stark_6
@@ -31,10 +31,10 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_bran_stark
+						has_character_flag = is_stark_10
 						AND = {
-							exists = character:8059
-							this = character:8059
+							exists = character:Stark_10
+							this = character:Stark_10
 						}
 					}
 					has_game_rule = agotcch_custom_dna_enabled
@@ -44,7 +44,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_joffrey_baratheon
+						has_character_flag = is_baratheon_5
 						AND = {
 							exists = character:Baratheon_5
 							this = character:Baratheon_5
@@ -57,7 +57,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_tommen_baratheon
+						has_character_flag = is_baratheon_7
 						AND = {
 							exists = character:Baratheon_7
 							this = character:Baratheon_7
@@ -83,7 +83,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_gendry_baratheon
+						has_character_flag = is_baratheon_9
 						AND = {
 							exists = character:Baratheon_9
 							this = character:Baratheon_9

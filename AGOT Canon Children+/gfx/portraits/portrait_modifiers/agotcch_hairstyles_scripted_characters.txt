@@ -19,7 +19,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_arya_stark
+						has_inactive_trait = is_stark_9
 						AND = {
 							exists = character:Stark_9
 							this = character:Stark_9
@@ -45,10 +45,10 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_bran_stark
+						has_inactive_trait = is_stark_10
 						AND = {
-							exists = character:8059
-							this = character:8059
+							exists = character:Stark_10
+							this = character:Stark_10
 						}
 					}
 					has_game_rule = agotcch_custom_dna_enabled
@@ -58,7 +58,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_gendry_baratheon
+						has_inactive_trait = is_baratheon_9
 						AND = {
 							exists = character:Baratheon_9
 							this = character:Baratheon_9
@@ -84,7 +84,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_tommen_baratheon
+						has_inactive_trait = is_baratheon_7
 						AND = {
 							exists = character:Baratheon_7
 							this = character:Baratheon_7
@@ -110,7 +110,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_robb_stark
+						has_inactive_trait = is_stark_6
 						AND = {
 							exists = character:Stark_6 
 							this = character:Stark_6 
@@ -137,7 +137,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_myrcella_baratheon
+						has_inactive_trait = is_baratheon_6
 						AND = {
 							exists = character:Baratheon_6
 							this = character:Baratheon_6
@@ -150,7 +150,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_jeyne_westerling
+						has_inactive_trait = is_westerling_2
 						AND = {
 							exists = character:Westerling_2
 							this = character:Westerling_2
@@ -177,7 +177,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_shireen_baratheon
+						has_inactive_trait = is_baratheon_13
 						AND = {
 							exists = character:Baratheon_13
 							this = character:Baratheon_13
@@ -203,7 +203,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_rickon_stark
+						has_inactive_trait = is_stark_11
 						AND = {
 							exists = character:Stark_11
 							this = character:Stark_11
@@ -230,7 +230,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_sansa_stark
+						has_inactive_trait = is_stark_8
 						AND = {
 							exists = character:Stark_8
 							this = character:Stark_8
@@ -257,7 +257,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_margaery_tyrell
+						has_inactive_trait = is_tyrell_14
 						AND = {
 							exists = character:Tyrell_14
 							this = character:Tyrell_14
@@ -283,7 +283,7 @@
 				add = 999
 				AND = {
 					OR = {
-						has_character_flag = is_joffrey_baratheon
+						has_inactive_trait = is_baratheon_5
 						AND = {
 							exists = character:Baratheon_5
 							this = character:Baratheon_5
