@@ -4,7 +4,7 @@ agot_canon_children_catelyn_tully_birth_effect = {
 		agot_canon_children_after_birth_effect = {
 			NAME_MALE = "Caster"
 			NAME_FEMALE = "Catelyn"
-			FLAG = is_catelyn_tully
+			TRAIT = is_tully_4
 			DNA = Dummy_Tully_4
 		}
 
@@ -20,7 +20,7 @@ agot_canon_children_catelyn_tully_birth_effect = {
 		agot_canon_children_schedule_trait_effect = { TRAIT = flag:wrathful AGE = agot_canon_children_trait_4_year }
 
 		# Setup mother (for Eddard Stark)
-		agot_canon_children_get_canon_child_scope_effect = { FLAG = is_eddard_stark SCOPE = eddard }
+		agot_canon_children_get_canon_child_scope_effect = { TRAIT = is_stark_3 SCOPE = eddard }
 		if = {
 			limit = { scope:eddard ?= { is_alive = yes } }
 
@@ -28,7 +28,7 @@ agot_canon_children_catelyn_tully_birth_effect = {
 				agot_canon_children_setup_mother_effect = {
 					FATHER = scope:eddard
 					MOTHER = scope:child
-					MOTHER_FLAG = is_catelyn_tully
+					MOTHER_TRAIT = is_tully_4
 					PREVENT_PREGNANCY = yes
 				}
 
@@ -36,7 +36,7 @@ agot_canon_children_catelyn_tully_birth_effect = {
 				agotcch_setup_spouse_effect = {
 					SPOUSE_1 = scope:eddard
 					SPOUSE_2 = character:Tully_4
-					SPOUSE_2_FLAG = is_catelyn_tully
+					SPOUSE_2_TRAIT = is_tully_4
 				}
 			}
 		}

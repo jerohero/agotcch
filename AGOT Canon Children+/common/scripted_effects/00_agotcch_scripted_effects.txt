@@ -10,7 +10,9 @@ agot_canon_children_after_birth_effect = {
 		change_first_name = $NAME_FEMALE$
 	}
 
-	add_character_flag = $FLAG$
+	#add_character_flag = $FLAG$
+	make_trait_inactive = $TRAIT$
+	copy_inheritable_appearance_from = character:$DNA$
 
 	if = {
 		limit = { has_game_rule = agotcch_custom_dna_disabled }
@@ -31,11 +33,6 @@ agot_canon_children_after_birth_effect = {
 		name = agot_born_canon_children_scopes
 		target = this
 	}
-
-	add_to_global_variable_list = { # Permanent storage for tracking born children
-		name = agot_born_canon_children_flags
-		target = flag:$FLAG$
-	}
 }
 
 agot_canon_children_setup_mother_effect = {
@@ -52,7 +49,7 @@ agot_canon_children_setup_mother_effect = {
 	}
 	else = { # Mother is canon child
 		agot_canon_children_get_canon_child_scope_effect = {
-			FLAG = $MOTHER_FLAG$
+			TRAIT = $MOTHER_TRAIT$
 			SCOPE = canon_mother
 		}
 	}
@@ -64,8 +61,8 @@ agot_canon_children_setup_mother_effect = {
 		}
 
 		if = {
-			limit = { NOT = { has_character_flag = $MOTHER_FLAG$ } }
-			add_character_flag = $MOTHER_FLAG$
+			limit = { NOT = { has_inactive_trait = $MOTHER_TRAIT$ } }
+			make_trait_inactive = $MOTHER_TRAIT$
 		}
 
 		if = {
@@ -135,7 +132,7 @@ agotcch_setup_spouse_effect = {
 	
 			agot_canon_children_get_character_scope_effect = {
 				TARGET = $SPOUSE_2$
-				FLAG = $SPOUSE_2_FLAG$
+				TRAIT = $SPOUSE_2_TRAIT$
 				SCOPE = spouse
 			}
 	

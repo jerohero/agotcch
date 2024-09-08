@@ -870,6 +870,13 @@
 						target = scope:secondary_recipient
 					}
 				}
+				#AGOT Added
+				primary_title = {
+					place_in_line_of_succession = {
+						target = scope:secondary_recipient
+						value <= 3
+					}
+				}
 				has_realm_law = equal_law
 				AND = {
 					scope:secondary_recipient = { is_female = yes }
@@ -903,6 +910,95 @@
 									value <= 2 #First 3 heirs
 									target = scope:secondary_recipient
 								}
+							}
+							#AGOT Added
+							trigger_if = {
+								limit = {
+									has_realm_law = equal_law
+								}
+								OR = {
+									primary_title = {
+										place_in_line_of_succession = {
+											target = scope:secondary_recipient
+											value <= 2
+										}
+									}
+									AND = {
+										primary_title = {
+											place_in_line_of_succession = {
+												target = scope:secondary_recipient
+												value <= 3
+											}
+										}
+										NOT = { is_parent_of = scope:secondary_recipient }
+									}
+								}
+							}
+							trigger_if = {
+								limit = {
+									OR = {
+										AND = {
+											OR = {
+												has_realm_law = male_only_law
+												has_realm_law = male_preference_law
+											}
+											scope:secondary_recipient = { is_male = yes }
+										}
+										AND = {
+											OR = {
+												has_realm_law = female_only_law
+												has_realm_law = female_preference_law
+											}
+											scope:secondary_recipient = { is_female = yes }
+										}
+									}
+								}
+								primary_title = {
+									place_in_line_of_succession = {
+										target = scope:secondary_recipient
+										value <= 3
+									}
+								}
+							}
+							trigger_else_if = {
+								limit = {
+									OR = {
+										AND = {
+											OR = {
+												has_realm_law = male_only_law
+												has_realm_law = male_preference_law
+											}
+											scope:secondary_recipient = { is_female = yes }
+										}
+										AND = {
+											OR = {
+												has_realm_law = female_only_law
+												has_realm_law = female_preference_law
+											}
+											scope:secondary_recipient = { is_male = yes }
+										}
+									}
+								}
+								OR = {
+									primary_title = {
+										place_in_line_of_succession = {
+											target = scope:secondary_recipient
+											value <= 1
+										}
+									}
+									AND = {
+										primary_heir ?= { is_parent_of = scope:secondary_recipient }
+										primary_title = {
+											place_in_line_of_succession = {
+												target = scope:secondary_recipient
+												value <= 2
+											}
+										}
+									}
+								}
+							}
+							trigger_else = {
+								always = no
 							}
 						}
 					}

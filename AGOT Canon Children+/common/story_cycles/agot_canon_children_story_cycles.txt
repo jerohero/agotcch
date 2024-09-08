@@ -8,20 +8,20 @@ story_agot_canon_children_viserys_targaryen = {
 	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_viserys_targaryen
+			FATHER_TRAIT = is_targaryen_60
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Arryn_80
-			MOTHER_FLAG = is_aemma_arryn
+			MOTHER_TRAIT = is_arryn_80
 			PREVENT_PREGNANCY = yes
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Hightower_97
-			MOTHER_FLAG = is_alicent_hightower
+			MOTHER_TRAIT = is_hightower_97
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -45,7 +45,7 @@ story_agot_canon_children_viserys_targaryen = {
 						# 1. Aemma (Arryn)
 						if = {
 							limit = {
-								has_character_flag = is_aemma_arryn
+								has_inactive_trait = is_arryn_80
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -58,12 +58,12 @@ story_agot_canon_children_viserys_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_131
-										FLAG = is_aemon_targaryen
+										TRAIT = is_targaryen_131
 										BIRTH_YEAR = agot_canon_children_birth_year_aemon_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_effect = {
-									CHILD_FLAG = is_aemon_targaryen
+									CHILD_FLAG = is_targaryen_131
 									IS_FEMALE = no
 									FATHER = scope:canon_father
 									BIRTH_FLAG = birth_child_will_become_sickly
@@ -74,12 +74,12 @@ story_agot_canon_children_viserys_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_63
-										FLAG = is_rhaenyra_targaryen
+										TRAIT = is_targaryen_63
 										BIRTH_YEAR = agot_canon_children_birth_year_rhaenyra_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_rhaenyra_targaryen
+									CHILD_FLAG = is_targaryen_63
 									IS_FEMALE = yes
 								}
 							}
@@ -88,12 +88,12 @@ story_agot_canon_children_viserys_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_64
-										FLAG = is_baelon_targaryen
+										TRAIT = is_targaryen_64
 										BIRTH_YEAR = agot_canon_children_birth_year_baelon_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_effect = {
-									CHILD_FLAG = is_baelon_targaryen
+									CHILD_FLAG = is_targaryen_64
 									IS_FEMALE = no
 									FATHER = scope:canon_father
 									BIRTH_FLAG = agot_birth_child_will_be_stillborn
@@ -103,7 +103,7 @@ story_agot_canon_children_viserys_targaryen = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_baelon_targaryen
+								FINAL_CHILD_TRAIT = is_targaryen_64
 								FINAL_CHILD_ID = Targaryen_64
 							}
 						}
@@ -111,7 +111,7 @@ story_agot_canon_children_viserys_targaryen = {
 						# 1. Alicent (Hightower)
 						else_if = {
 							limit = {
-								has_character_flag = is_alicent_hightower
+								has_inactive_trait = is_hightower_97
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -124,12 +124,12 @@ story_agot_canon_children_viserys_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_65
-										FLAG = is_aegon_targaryen
+										TRAIT = is_targaryen_65
 										BIRTH_YEAR = agot_canon_children_birth_year_aegon_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_aegon_targaryen
+									CHILD_FLAG = is_targaryen_65
 									IS_FEMALE = no
 								}
 							}
@@ -138,12 +138,12 @@ story_agot_canon_children_viserys_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_66
-										FLAG = is_helaena_targaryen
+										TRAIT = is_targaryen_66
 										BIRTH_YEAR = agot_canon_children_birth_year_helaena_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_helaena_targaryen
+									CHILD_FLAG = is_targaryen_66
 									IS_FEMALE = yes
 								}
 							}
@@ -152,12 +152,12 @@ story_agot_canon_children_viserys_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_67
-										FLAG = is_aemond_targaryen
+										TRAIT = is_targaryen_67
 										BIRTH_YEAR = agot_canon_children_birth_year_aemond_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_aemond_targaryen
+									CHILD_FLAG = is_targaryen_67
 									IS_FEMALE = no
 								}
 							}
@@ -166,12 +166,12 @@ story_agot_canon_children_viserys_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_68
-										FLAG = is_daeron_targaryen
+										TRAIT = is_targaryen_68
 										BIRTH_YEAR = agot_canon_children_birth_year_daeron_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_daeron_targaryen
+									CHILD_FLAG = is_targaryen_68
 									IS_FEMALE = no
 								}
 							}
@@ -179,7 +179,7 @@ story_agot_canon_children_viserys_targaryen = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_daeron_targaryen
+								FINAL_CHILD_TRAIT = is_targaryen_68
 								FINAL_CHILD_ID = Targaryen_68
 							}
 						}
@@ -199,20 +199,20 @@ story_agot_canon_children_laenor_velaryon = {
 	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_laenor_velaryon
+			FATHER_TRAIT = is_velaryon_35
 		}
 
 		agot_canon_children_setup_real_father_effect = {
 			FATHER = story_owner
 			REAL_FATHER = character:Strong_30
-			REAL_FATHER_FLAG = is_harwin_strong
+			REAL_FATHER_TRAIT = is_strong_30
 			REAL_FATHER_VAR = agot_canon_children_real_father_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Targaryen_63
-			MOTHER_FLAG = is_rhaenyra_targaryen
+			MOTHER_TRAIT = is_targaryen_63
 			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
 		}
 	}
@@ -236,7 +236,7 @@ story_agot_canon_children_laenor_velaryon = {
 						# 1. Rhaenyra (Targaryen)
 						if = {
 							limit = {
-								has_character_flag = is_rhaenyra_targaryen
+								has_inactive_trait = is_targaryen_63
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -253,12 +253,12 @@ story_agot_canon_children_laenor_velaryon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_75
-										FLAG = is_jacaerys_targaryen
+										TRAIT = is_targaryen_75
 										BIRTH_YEAR = agot_canon_children_birth_year_jacaerys_targaryen
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_jacaerys_targaryen
+									CHILD_FLAG = is_targaryen_75
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
 									REAL_FATHER_KNOWS = yes #AGOTCCH-TODO: does he?
@@ -270,12 +270,12 @@ story_agot_canon_children_laenor_velaryon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_76
-										FLAG = is_lucerys_targaryen
+										TRAIT = is_targaryen_76
 										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_lucerys_targaryen
+									CHILD_FLAG = is_targaryen_76
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
 									REAL_FATHER_KNOWS = yes
@@ -287,12 +287,12 @@ story_agot_canon_children_laenor_velaryon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_77
-										FLAG = is_joffrey_targaryen
+										TRAIT = is_targaryen_77
 										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_joffrey_targaryen
+									CHILD_FLAG = is_targaryen_77
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
 									REAL_FATHER_KNOWS = yes
@@ -303,7 +303,7 @@ story_agot_canon_children_laenor_velaryon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_joffrey_targaryen
+								FINAL_CHILD_TRAIT = is_targaryen_77
 								FINAL_CHILD_ID = Targaryen_77
 							}
 						}
@@ -323,13 +323,13 @@ story_agot_canon_children_harwin_strong = {
 	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_harwin_strong
+			FATHER_TRAIT = is_strong_30
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Targaryen_63
-			MOTHER_FLAG = is_rhaenyra_targaryen
+			MOTHER_TRAIT = is_targaryen_63
 			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
 		}
 	}
@@ -353,7 +353,7 @@ story_agot_canon_children_harwin_strong = {
 						# 1. Rhaenyra (Targaryen)
 						if = {
 							limit = {
-								has_character_flag = is_rhaenyra_targaryen
+								has_inactive_trait = is_targaryen_63
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -366,12 +366,12 @@ story_agot_canon_children_harwin_strong = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_75
-										FLAG = is_jacaerys_targaryen
+										TRAIT = is_targaryen_75
 										BIRTH_YEAR = agot_canon_children_birth_year_jacaerys_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_jacaerys_targaryen
+									CHILD_FLAG = is_targaryen_75
 									IS_FEMALE = no
 								}
 							}
@@ -380,12 +380,12 @@ story_agot_canon_children_harwin_strong = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_76
-										FLAG = is_lucerys_targaryen
+										TRAIT = is_targaryen_76
 										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_lucerys_targaryen
+									CHILD_FLAG = is_targaryen_76
 									IS_FEMALE = no
 								}
 							}
@@ -394,12 +394,12 @@ story_agot_canon_children_harwin_strong = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_77
-										FLAG = is_joffrey_targaryen
+										TRAIT = is_targaryen_77
 										BIRTH_YEAR = agot_canon_children_birth_year_lucerys_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_joffrey_targaryen
+									CHILD_FLAG = is_targaryen_77
 									IS_FEMALE = no
 								}
 							}
@@ -407,7 +407,7 @@ story_agot_canon_children_harwin_strong = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_joffrey_targaryen
+								FINAL_CHILD_TRAIT = is_targaryen_77
 								FINAL_CHILD_ID = Targaryen_77
 							}
 						}
@@ -428,20 +428,20 @@ story_agot_canon_children_daemon_targaryen = {
 	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_daemon_targaryen
+			FATHER_TRAIT = is_targaryen_61
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Targaryen_63
-			MOTHER_FLAG = is_rhaenyra_targaryen
+			MOTHER_TRAIT = is_targaryen_63
 			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Velaryon_34
-			MOTHER_FLAG = is_laena_velaryon
+			MOTHER_TRAIT = is_velaryon_34
 			PREVENT_PREGNANCY = yes #AGOTCCH-TODO: should it prevent?
 		}
 	}
@@ -465,7 +465,7 @@ story_agot_canon_children_daemon_targaryen = {
 						# 1. Rhaenyra (Targaryen)
 						if = {
 							limit = {
-								has_character_flag = is_rhaenyra_targaryen
+								has_inactive_trait = is_targaryen_63
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -478,12 +478,12 @@ story_agot_canon_children_daemon_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_78
-										FLAG = is_aegon_targaryen_2
+										TRAIT = is_targaryen_78
 										BIRTH_YEAR = agot_canon_children_birth_year_aegon_targaryen_2
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_aegon_targaryen_2
+									CHILD_FLAG = is_targaryen_78
 									IS_FEMALE = no
 								}
 							}
@@ -493,12 +493,12 @@ story_agot_canon_children_daemon_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_79
-										FLAG = is_viserys_targaryen_2
+										TRAIT = is_targaryen_79
 										BIRTH_YEAR = agot_canon_children_birth_year_viserys_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_viserys_targaryen_2
+									CHILD_FLAG = is_targaryen_79
 									IS_FEMALE = no
 								}
 							}
@@ -507,14 +507,15 @@ story_agot_canon_children_daemon_targaryen = {
 							# 1-3. Visenya
 							else_if = {
 								limit = {
+									always = no
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_80
-										FLAG = is_visenya_targaryen
+										TRAIT = is_targaryen_80
 										BIRTH_YEAR = agot_canon_children_birth_year_visenya_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_effect = {
-									CHILD_FLAG = is_visenya_targaryen
+									CHILD_FLAG = is_targaryen_80
 									IS_FEMALE = yes
 									FATHER = scope:canon_father
 									BIRTH_FLAG = agot_birth_child_will_be_stillborn
@@ -525,15 +526,15 @@ story_agot_canon_children_daemon_targaryen = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_visenya_targaryen
-								FINAL_CHILD_ID = Targaryen_80
+								FINAL_CHILD_TRAIT = is_targaryen_79
+								FINAL_CHILD_ID = Targaryen_79
 							}
 						}
 
 						# 2. Laena (Velaryon)
 						if = {
 							limit = {
-								has_character_flag = is_laena_velaryon
+								has_inactive_trait = is_velaryon_34
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -546,12 +547,12 @@ story_agot_canon_children_daemon_targaryen = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Targaryen_69
-										FLAG = is_baela_targaryen
+										TRAIT = is_targaryen_69
 										BIRTH_YEAR = agot_canon_children_birth_year_baela_targaryen
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_baela_targaryen
+									CHILD_FLAG = is_targaryen_69
 									IS_FEMALE = yes
 								}
 							}
@@ -559,7 +560,7 @@ story_agot_canon_children_daemon_targaryen = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_baela_targaryen
+								FINAL_CHILD_TRAIT = is_targaryen_69
 								FINAL_CHILD_ID = Targaryen_69
 							}
 						}
@@ -576,16 +577,16 @@ story_agot_canon_children_daemon_targaryen = {
 ### - Lyarra Stark: Brandon, Eddard, Benjen, Lyanna										 ###
 ############################################################################################
 story_agot_canon_children_rickard_stark = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_rickard_stark
+			FATHER_TRAIT = is_stark_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Stark_127
-			MOTHER_FLAG = is_lyarra_stark
+			MOTHER_TRAIT = is_stark_127
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -605,11 +606,11 @@ story_agot_canon_children_rickard_stark = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Lyarra (Stark)
 						if = {
 							limit = {
-								has_character_flag = is_lyarra_stark
+								has_inactive_trait = is_stark_127
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -622,12 +623,12 @@ story_agot_canon_children_rickard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_2
-										FLAG = is_brandon_stark
+										TRAIT = is_stark_2
 										BIRTH_YEAR = agot_canon_children_birth_year_brandon_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_brandon_stark
+									CHILD_FLAG = is_stark_2
 									IS_FEMALE = no
 								}
 							}
@@ -636,12 +637,12 @@ story_agot_canon_children_rickard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_3
-										FLAG = is_eddard_stark
+										TRAIT = is_stark_3
 										BIRTH_YEAR = agot_canon_children_birth_year_eddard_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_eddard_stark
+									CHILD_FLAG = is_stark_3
 									IS_FEMALE = no
 								}
 							}
@@ -650,12 +651,12 @@ story_agot_canon_children_rickard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_4
-										FLAG = is_benjen_stark
+										TRAIT = is_stark_4
 										BIRTH_YEAR = agot_canon_children_birth_year_benjen_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_benjen_stark
+									CHILD_FLAG = is_stark_4
 									IS_FEMALE = no
 								}
 							}
@@ -664,12 +665,12 @@ story_agot_canon_children_rickard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_5
-										FLAG = is_lyanna_stark
+										TRAIT = is_stark_5
 										BIRTH_YEAR = agot_canon_children_birth_year_lyanna_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_lyanna_stark
+									CHILD_FLAG = is_stark_5
 									IS_FEMALE = yes
 								}
 							}
@@ -677,7 +678,7 @@ story_agot_canon_children_rickard_stark = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_lyanna_stark
+								FINAL_CHILD_TRAIT = is_stark_5
 								FINAL_CHILD_ID = Stark_5
 							}
 						}
@@ -694,16 +695,16 @@ story_agot_canon_children_rickard_stark = {
 ### - Catelyn Tully: Robb (will be born in TOJ chain later), Sansa, Arya, Bran, Rickon	 ###
 ############################################################################################
 story_agot_canon_children_eddard_stark = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_eddard_stark
+			FATHER_TRAIT = is_stark_3
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Tully_4
-			MOTHER_FLAG = is_catelyn_tully
+			MOTHER_TRAIT = is_tully_4
 			PREVENT_PREGNANCY = yes
 		}
 
@@ -711,7 +712,7 @@ story_agot_canon_children_eddard_stark = {
 		agotcch_setup_spouse_effect = {
 			SPOUSE_1 = story_owner
 			SPOUSE_2 = character:Tully_4
-			SPOUSE_2_FLAG = is_catelyn_tully
+			SPOUSE_2_TRAIT = is_tully_4
 		}
 	}
 
@@ -730,11 +731,11 @@ story_agot_canon_children_eddard_stark = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Catelyn (Tully)
 						if = {
 							limit = {
-								has_character_flag = is_catelyn_tully
+								has_inactive_trait = is_tully_4
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -747,12 +748,12 @@ story_agot_canon_children_eddard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_6
-										FLAG = is_robb_stark
+										TRAIT = is_stark_6
 										BIRTH_YEAR = agot_canon_children_birth_year_robb_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_robb_stark
+									CHILD_FLAG = is_stark_6
 									IS_FEMALE = no
 								}
 							}
@@ -761,12 +762,12 @@ story_agot_canon_children_eddard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_8
-										FLAG = is_sansa_stark
+										TRAIT = is_stark_8
 										BIRTH_YEAR = agot_canon_children_birth_year_sansa_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_sansa_stark
+									CHILD_FLAG = is_stark_8
 									IS_FEMALE = yes
 								}
 							}
@@ -775,12 +776,12 @@ story_agot_canon_children_eddard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_9
-										FLAG = is_arya_stark
+										TRAIT = is_stark_9
 										BIRTH_YEAR = agot_canon_children_birth_year_arya_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_arya_stark
+									CHILD_FLAG = is_stark_9
 									IS_FEMALE = yes
 								}
 							}
@@ -789,12 +790,12 @@ story_agot_canon_children_eddard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_10
-										FLAG = is_bran_stark
+										TRAIT = is_stark_10
 										BIRTH_YEAR = agot_canon_children_birth_year_bran_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_bran_stark
+									CHILD_FLAG = is_stark_10
 									IS_FEMALE = no
 								}
 							}
@@ -803,12 +804,12 @@ story_agot_canon_children_eddard_stark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Stark_11
-										FLAG = is_rickon_stark
+										TRAIT = is_stark_11
 										BIRTH_YEAR = agot_canon_children_birth_year_rickon_stark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_rickon_stark
+									CHILD_FLAG = is_stark_11
 									IS_FEMALE = no
 								}
 							}
@@ -816,7 +817,7 @@ story_agot_canon_children_eddard_stark = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_rickon_stark
+								FINAL_CHILD_TRAIT = is_stark_11
 								FINAL_CHILD_ID = Stark_11
 							}
 						}
@@ -850,16 +851,16 @@ story_agot_canon_children_eddard_stark = {
 ### - Cassana Estermont: Robert, Stannis, Renly 										###
 ###########################################################################################
 story_agot_canon_children_steffon_baratheon = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_steffon_baratheon
+			FATHER_TRAIT = is_baratheon_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Estermont_5
-			MOTHER_FLAG = is_cassana_estermont
+			MOTHER_TRAIT = is_estermont_5
 			PREVENT_PREGNANCY = yes
 		}
 
@@ -867,7 +868,7 @@ story_agot_canon_children_steffon_baratheon = {
 		agotcch_setup_spouse_effect = {
 			SPOUSE_1 = story_owner
 			SPOUSE_2 = character:Estermont_5
-			SPOUSE_2_FLAG = is_cassana_estermont
+			SPOUSE_2_TRAIT = is_estermont_5
 		}
 	}
 
@@ -886,11 +887,11 @@ story_agot_canon_children_steffon_baratheon = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Cassana (Estermont)
 						if = {
 							limit = {
-								has_character_flag = is_cassana_estermont
+								has_inactive_trait = is_estermont_5
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -903,12 +904,12 @@ story_agot_canon_children_steffon_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_2
-										FLAG = is_robert_baratheon
+										TRAIT = is_baratheon_2
 										BIRTH_YEAR = agot_canon_children_birth_year_robert_baratheon
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_robert_baratheon
+									CHILD_FLAG = is_baratheon_2
 									IS_FEMALE = no
 								}
 							}
@@ -917,12 +918,12 @@ story_agot_canon_children_steffon_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_3
-										FLAG = is_stannis_baratheon
+										TRAIT = is_baratheon_3
 										BIRTH_YEAR = agot_canon_children_birth_year_stannis_baratheon
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_stannis_baratheon
+									CHILD_FLAG = is_baratheon_3
 									IS_FEMALE = no
 								}
 							}
@@ -931,12 +932,12 @@ story_agot_canon_children_steffon_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_4
-										FLAG = is_renly_baratheon
+										TRAIT = is_baratheon_4
 										BIRTH_YEAR = agot_canon_children_birth_year_renly_baratheon
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_renly_baratheon
+									CHILD_FLAG = is_baratheon_4
 									IS_FEMALE = no
 								}
 							}
@@ -944,7 +945,7 @@ story_agot_canon_children_steffon_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_renly_baratheon
+								FINAL_CHILD_TRAIT = is_baratheon_4
 								FINAL_CHILD_ID = Baratheon_4
 							}
 						}
@@ -982,23 +983,23 @@ story_agot_canon_children_steffon_baratheon = {
 ### - Mhaegen: Barra																	###
 ###########################################################################################
 story_agot_canon_children_robert_baratheon = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_robert_baratheon
+			FATHER_TRAIT = is_baratheon_2
 		}
 
 		# For Lannincest (Cersei + Jaime)
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Lannister_6
-			MOTHER_FLAG = is_cersei_lannister
+			MOTHER_TRAIT = is_lannister_6
 			PREVENT_PREGNANCY = yes
 		}
 		agot_canon_children_setup_real_father_effect = {
 			FATHER = story_owner
 			REAL_FATHER = character:Lannister_7
-			REAL_FATHER_FLAG = is_jaime_lannister
+			REAL_FATHER_TRAIT = is_lannister_7
 			REAL_FATHER_VAR = agot_canon_children_real_father_1
 		}
 
@@ -1006,31 +1007,31 @@ story_agot_canon_children_robert_baratheon = {
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Florent_13
-			MOTHER_FLAG = is_delena_florent
+			MOTHER_TRAIT = is_florent_13
 			PREVENT_PREGNANCY = no
 		}
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Baratheon_rs_1
-			MOTHER_FLAG = is_thank_the_gods_for_joanna
+			MOTHER_TRAIT = is_baratheon_rs_1
 			PREVENT_PREGNANCY = no
 		}
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Baratheon_rs_5
-			MOTHER_FLAG = is_thank_the_gods_for_bessie
+			MOTHER_TRAIT = is_baratheon_rs_5
 			PREVENT_PREGNANCY = no
 		}
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Baratheon_rs_3
-			MOTHER_FLAG = is_thank_the_gods_for_mhaegen
+			MOTHER_TRAIT = is_baratheon_rs_3
 			PREVENT_PREGNANCY = no
 		}
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Baratheon_rs_2
-			MOTHER_FLAG = is_thank_the_gods_for_anya
+			MOTHER_TRAIT = is_baratheon_rs_2
 			PREVENT_PREGNANCY = no
 		}
 	}
@@ -1050,11 +1051,11 @@ story_agot_canon_children_robert_baratheon = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Cersei (Lannister)
 						if = {
 							limit = {
-								has_character_flag = is_cersei_lannister
+								has_inactive_trait = is_lannister_6
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -1067,12 +1068,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_5
-										FLAG = is_joffrey_baratheon
+										TRAIT = is_baratheon_5
 										BIRTH_YEAR = agot_canon_children_birth_year_joffrey_baratheon
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_joffrey_baratheon
+									CHILD_FLAG = is_baratheon_5
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
 									REAL_FATHER_KNOWS = yes
@@ -1084,12 +1085,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_6
-										FLAG = is_myrcella_baratheon
+										TRAIT = is_baratheon_6
 										BIRTH_YEAR = agot_canon_children_birth_year_myrcella_baratheon
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_myrcella_baratheon
+									CHILD_FLAG = is_baratheon_6
 									IS_FEMALE = yes
 									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
 									REAL_FATHER_KNOWS = yes
@@ -1101,12 +1102,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_7
-										FLAG = is_tommen_baratheon
+										TRAIT = is_baratheon_7
 										BIRTH_YEAR = agot_canon_children_birth_year_tommen_baratheon
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_tommen_baratheon
+									CHILD_FLAG = is_baratheon_7
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_1
 									REAL_FATHER_KNOWS = yes
@@ -1117,7 +1118,7 @@ story_agot_canon_children_robert_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_tommen_baratheon
+								FINAL_CHILD_TRAIT = is_baratheon_7
 								FINAL_CHILD_ID = Baratheon_7
 							}
 						}
@@ -1125,7 +1126,7 @@ story_agot_canon_children_robert_baratheon = {
 						# 2. Delena (Florent)
 						else_if = {
 							limit = {
-								has_character_flag = is_delena_florent
+								has_inactive_trait = is_florent_13
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_happy_accident_trigger = {
 										MOTHER = scope:canon_mother
@@ -1138,12 +1139,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_8
-										FLAG = is_edric_storm
+										TRAIT = is_baratheon_8
 										BIRTH_YEAR = agot_canon_children_birth_year_edric_storm
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_edric_storm
+									CHILD_FLAG = is_baratheon_8
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father
 									REAL_FATHER_KNOWS = yes
@@ -1154,7 +1155,7 @@ story_agot_canon_children_robert_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_edric_storm
+								FINAL_CHILD_TRAIT = is_baratheon_8
 								FINAL_CHILD_ID = Baratheon_8
 							}
 						}
@@ -1162,7 +1163,7 @@ story_agot_canon_children_robert_baratheon = {
 						# 3. Joanna (Lowborn)
 						else_if = {
 							limit = {
-								has_character_flag = is_thank_the_gods_for_joanna
+								has_inactive_trait = is_baratheon_rs_1
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_happy_accident_trigger = {
 										MOTHER = scope:canon_mother
@@ -1175,12 +1176,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_9
-										FLAG = is_gendry_baratheon
+										TRAIT = is_baratheon_9
 										BIRTH_YEAR = agot_canon_children_birth_year_gendry_baratheon
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_gendry_baratheon
+									CHILD_FLAG = is_baratheon_9
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father
 									REAL_FATHER_KNOWS = no
@@ -1191,7 +1192,7 @@ story_agot_canon_children_robert_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_gendry_baratheon
+								FINAL_CHILD_TRAIT = is_baratheon_9
 								FINAL_CHILD_ID = Baratheon_9
 							}
 						}
@@ -1199,7 +1200,7 @@ story_agot_canon_children_robert_baratheon = {
 						# 4. Bessie (Lowborn)
 						else_if = {
 							limit = {
-								has_character_flag = is_thank_the_gods_for_bessie
+								has_inactive_trait = is_baratheon_rs_5
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_happy_accident_trigger = {
 										MOTHER = scope:canon_mother
@@ -1212,12 +1213,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_rs_6
-										FLAG = is_bella_baratheon
+										TRAIT = is_baratheon_rs_6
 										BIRTH_YEAR = agot_canon_children_birth_year_bella_baratheon
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_bella_baratheon
+									CHILD_FLAG = is_baratheon_rs_6
 									IS_FEMALE = yes
 									REAL_FATHER =  scope:canon_father
 									REAL_FATHER_KNOWS = no
@@ -1228,7 +1229,7 @@ story_agot_canon_children_robert_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_bella_baratheon
+								FINAL_CHILD_TRAIT = is_baratheon_rs_6
 								FINAL_CHILD_ID = Baratheon_rs_6
 							}
 						}
@@ -1236,7 +1237,7 @@ story_agot_canon_children_robert_baratheon = {
 						# 5. Mhaegen (Lowborn)
 						else_if = {
 							limit = {
-								has_character_flag = is_thank_the_gods_for_mhaegen
+								has_inactive_trait = is_baratheon_rs_3
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_happy_accident_trigger = {
 										MOTHER = scope:canon_mother
@@ -1249,12 +1250,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_rs_4
-										FLAG = is_barra_baratheon
+										TRAIT = is_baratheon_rs_4
 										BIRTH_YEAR = agot_canon_children_birth_year_barra_baratheon
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_barra_baratheon
+									CHILD_FLAG = is_baratheon_rs_4
 									IS_FEMALE = yes
 									REAL_FATHER = scope:canon_father
 									REAL_FATHER_KNOWS = no
@@ -1265,7 +1266,7 @@ story_agot_canon_children_robert_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_barra_baratheon
+								FINAL_CHILD_TRAIT = is_baratheon_rs_4
 								FINAL_CHILD_ID = Baratheon_rs_3
 							}
 						}
@@ -1273,7 +1274,7 @@ story_agot_canon_children_robert_baratheon = {
 						# 6. Anya (Lowborn)
 						else_if = {
 							limit = {
-								has_character_flag = is_thank_the_gods_for_anya
+								has_inactive_trait = is_baratheon_rs_2
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_happy_accident_trigger = {
 										MOTHER = scope:canon_mother
@@ -1286,12 +1287,12 @@ story_agot_canon_children_robert_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_10
-										FLAG = is_mya_stone
+										TRAIT = is_baratheon_10
 										BIRTH_YEAR = agot_canon_children_birth_year_mya_stone
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_mya_stone
+									CHILD_FLAG = is_baratheon_10
 									IS_FEMALE = yes
 									REAL_FATHER = scope:canon_father
 									REAL_FATHER_KNOWS = yes
@@ -1302,7 +1303,7 @@ story_agot_canon_children_robert_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_mya_stone
+								FINAL_CHILD_TRAIT = is_baratheon_10
 								FINAL_CHILD_ID = Baratheon_10
 							}
 						}
@@ -1319,16 +1320,16 @@ story_agot_canon_children_robert_baratheon = {
 ### - Selyse Florent: Shireen															###
 ###########################################################################################
 story_agot_canon_children_stannis_baratheon = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_stannis_baratheon
+			FATHER_TRAIT = is_baratheon_3
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Florent_10
-			MOTHER_FLAG = is_selyse_florent
+			MOTHER_TRAIT = is_florent_10
 			PREVENT_PREGNANCY = yes
 		}
 
@@ -1336,7 +1337,7 @@ story_agot_canon_children_stannis_baratheon = {
 		agotcch_setup_spouse_effect = {
 			SPOUSE_1 = story_owner
 			SPOUSE_2 = character:Florent_10
-			SPOUSE_2_FLAG = is_selyse_florent
+			SPOUSE_2_TRAIT = is_florent_10
 		}
 	}
 
@@ -1355,11 +1356,11 @@ story_agot_canon_children_stannis_baratheon = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Selyse (Florent)
 						if = {
 							limit = {
-								has_character_flag = is_selyse_florent
+								has_inactive_trait = is_florent_10
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -1372,12 +1373,12 @@ story_agot_canon_children_stannis_baratheon = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Baratheon_13
-										FLAG = is_shireen_baratheon
+										TRAIT = is_baratheon_13
 										BIRTH_YEAR = agot_canon_children_birth_year_shireen_baratheon
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_shireen_baratheon
+									CHILD_FLAG = is_baratheon_13
 									IS_FEMALE = yes
 								}
 							}
@@ -1385,7 +1386,7 @@ story_agot_canon_children_stannis_baratheon = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_shireen_baratheon
+								FINAL_CHILD_TRAIT = is_baratheon_13
 								FINAL_CHILD_ID = Baratheon_13
 							}
 						}
@@ -1418,16 +1419,16 @@ story_agot_canon_children_stannis_baratheon = {
 ### - Melessa Florent: Samwell, Talla, Dickon, Samantha, Sansara	     				###
 ###########################################################################################
 story_agot_canon_children_randyll_tarly = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_randyll_tarly
+			FATHER_TRAIT = is_tarly_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Florent_8
-			MOTHER_FLAG = is_melessa_florent
+			MOTHER_TRAIT = is_florent_8
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -1447,11 +1448,11 @@ story_agot_canon_children_randyll_tarly = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Melessa (Florent)
 						if = {
 							limit = {
-								has_character_flag = is_melessa_florent
+								has_inactive_trait = is_florent_8
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -1464,12 +1465,12 @@ story_agot_canon_children_randyll_tarly = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tarly_2
-										FLAG = is_samwell_tarly
+										TRAIT = is_tarly_2
 										BIRTH_YEAR = agot_canon_children_birth_year_samwell_tarly
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_samwell_tarly
+									CHILD_FLAG = is_tarly_2
 									IS_FEMALE = no
 								}
 							}
@@ -1479,12 +1480,12 @@ story_agot_canon_children_randyll_tarly = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tarly_3
-										FLAG = is_talla_tarly
+										TRAIT = is_tarly_3
 										BIRTH_YEAR = agot_canon_children_birth_year_talla_tarly
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_talla_tarly
+									CHILD_FLAG = is_tarly_3
 									IS_FEMALE = yes
 								}
 							}
@@ -1494,12 +1495,12 @@ story_agot_canon_children_randyll_tarly = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tarly_4
-										FLAG = is_samantha_tarly
+										TRAIT = is_tarly_4
 										BIRTH_YEAR = agot_canon_children_birth_year_samantha_tarly
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_samantha_tarly
+									CHILD_FLAG = is_tarly_4
 									IS_FEMALE = yes
 								}
 							}
@@ -1509,12 +1510,12 @@ story_agot_canon_children_randyll_tarly = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tarly_5
-										FLAG = is_sansara_tarly
+										TRAIT = is_tarly_5
 										BIRTH_YEAR = agot_canon_children_birth_year_sansara_tarly
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_sansara_tarly
+									CHILD_FLAG = is_tarly_5
 									IS_FEMALE = yes
 								}
 							}
@@ -1524,12 +1525,12 @@ story_agot_canon_children_randyll_tarly = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tarly_6
-										FLAG = is_dickon_tarly
+										TRAIT = is_tarly_6
 										BIRTH_YEAR = agot_canon_children_birth_year_dickon_tarly
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_dickon_tarly
+									CHILD_FLAG = is_tarly_6
 									IS_FEMALE = no
 								}
 							}
@@ -1537,7 +1538,7 @@ story_agot_canon_children_randyll_tarly = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_dickon_tarly
+								FINAL_CHILD_TRAIT = is_tarly_6
 								FINAL_CHILD_ID = Tarly_6
 							}
 						}
@@ -1555,16 +1556,16 @@ story_agot_canon_children_randyll_tarly = {
 ### - Minisa Whent: Edmund, Denys, Catelyn, Lysa, Edmure, Patrek   	     				###
 ###########################################################################################
 story_agot_canon_children_hoster_tully = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_hoster_tully
+			FATHER_TRAIT = is_tully_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Whent_6
-			MOTHER_FLAG = is_minisa_whent
+			MOTHER_TRAIT = is_whent_6
 			PREVENT_PREGNANCY = yes
 		}
 
@@ -1572,7 +1573,7 @@ story_agot_canon_children_hoster_tully = {
 		agotcch_setup_spouse_effect = {
 			SPOUSE_1 = story_owner
 			SPOUSE_2 = character:Whent_6
-			SPOUSE_2_FLAG = is_minisa_whent
+			SPOUSE_2_TRAIT = is_whent_6
 		}
 	}
 
@@ -1591,11 +1592,11 @@ story_agot_canon_children_hoster_tully = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Minisa (Whent)
 						if = {
 							limit = {
-								has_character_flag = is_minisa_whent
+								has_inactive_trait = is_whent_6
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -1639,12 +1640,12 @@ story_agot_canon_children_hoster_tully = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tully_4
-										FLAG = is_catelyn_tully
+										TRAIT = is_tully_4
 										BIRTH_YEAR = agot_canon_children_birth_year_catelyn_tully
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_catelyn_tully
+									CHILD_FLAG = is_tully_4
 									IS_FEMALE = yes
 								}
 							}
@@ -1654,12 +1655,12 @@ story_agot_canon_children_hoster_tully = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tully_6
-										FLAG = is_lysa_tully
+										TRAIT = is_tully_6
 										BIRTH_YEAR = agot_canon_children_birth_year_lysa_tully
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_lysa_tully
+									CHILD_FLAG = is_tully_6
 									IS_FEMALE = yes
 								}
 							}
@@ -1669,12 +1670,12 @@ story_agot_canon_children_hoster_tully = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tully_7
-										FLAG = is_edmure_tully
+										TRAIT = is_tully_7
 										BIRTH_YEAR = agot_canon_children_birth_year_edmure_tully
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_edmure_tully
+									CHILD_FLAG = is_tully_7
 									IS_FEMALE = no
 								}
 							}
@@ -1697,7 +1698,7 @@ story_agot_canon_children_hoster_tully = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_edmure_tully
+								FINAL_CHILD_TRAIT = is_tully_7
 								FINAL_CHILD_ID = Tully_7
 							}
 						}
@@ -1736,13 +1737,13 @@ story_agot_canon_children_leyton_hightower = {
 	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_leyton_hightower
+			FATHER_TRAIT = is_hightower_5
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Haen_58
-			MOTHER_FLAG = is_mychella_hightower
+			MOTHER_TRAIT = is_haen_58
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -1766,7 +1767,7 @@ story_agot_canon_children_leyton_hightower = {
 						# 1. Mychella (Hightower)
 						if = {
 							limit = {
-								has_character_flag = is_mychella_hightower
+								has_inactive_trait = is_haen_58
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -1779,12 +1780,12 @@ story_agot_canon_children_leyton_hightower = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Hightower_7
-										FLAG = is_baelor_hightower
+										TRAIT = is_hightower_7
 										BIRTH_YEAR = agot_canon_children_birth_year_baelor_hightower
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_baelor_hightower
+									CHILD_FLAG = is_hightower_7
 									IS_FEMALE = no
 								}
 							}
@@ -1794,12 +1795,12 @@ story_agot_canon_children_leyton_hightower = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Hightower_8
-										FLAG = is_malora_hightower
+										TRAIT = is_hightower_8
 										BIRTH_YEAR = agot_canon_children_birth_year_malora_hightower
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_malora_hightower
+									CHILD_FLAG = is_hightower_8
 									IS_FEMALE = yes
 								}
 							}
@@ -1809,12 +1810,12 @@ story_agot_canon_children_leyton_hightower = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Hightower_9
-										FLAG = is_alerie_hightower
+										TRAIT = is_hightower_9
 										BIRTH_YEAR = agot_canon_children_birth_year_alerie_hightower
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_alerie_hightower
+									CHILD_FLAG = is_hightower_9
 									IS_FEMALE = yes
 								}
 							}
@@ -1822,7 +1823,7 @@ story_agot_canon_children_leyton_hightower = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_alerie_hightower
+								FINAL_CHILD_TRAIT = is_hightower_9
 								FINAL_CHILD_ID = Hightower_9
 							}
 						}
@@ -1833,22 +1834,23 @@ story_agot_canon_children_leyton_hightower = {
 	}
 }
 
+
 ###########################################################################################
 ### 						             Mace TYRELL									###
 ###																						###
 ### - Alerie Hightower: Willas, Garlan, Loras, Margaery     		     				###
 ###########################################################################################
 story_agot_canon_children_mace_tyrell = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_mace_tyrell
+			FATHER_TRAIT = is_tyrell_8
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Hightower_9
-			MOTHER_FLAG = is_alerie_hightower
+			MOTHER_TRAIT = is_hightower_9
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -1868,11 +1870,11 @@ story_agot_canon_children_mace_tyrell = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Alerie (Hightower)
 						if = {
 							limit = {
-								has_character_flag = is_alerie_hightower
+								has_inactive_trait = is_hightower_9
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -1885,12 +1887,12 @@ story_agot_canon_children_mace_tyrell = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tyrell_11
-										FLAG = is_willas_tyrell
+										TRAIT = is_tyrell_11
 										BIRTH_YEAR = agot_canon_children_birth_year_willas_tyrell
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_willas_tyrell
+									CHILD_FLAG = is_tyrell_11
 									IS_FEMALE = no
 								}
 							}
@@ -1900,12 +1902,12 @@ story_agot_canon_children_mace_tyrell = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tyrell_12
-										FLAG = is_garlan_tyrell
+										TRAIT = is_tyrell_12
 										BIRTH_YEAR = agot_canon_children_birth_year_garlan_tyrell
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_garlan_tyrell
+									CHILD_FLAG = is_tyrell_12
 									IS_FEMALE = no
 								}
 							}
@@ -1915,12 +1917,12 @@ story_agot_canon_children_mace_tyrell = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tyrell_13
-										FLAG = is_loras_tyrell
+										TRAIT = is_tyrell_13
 										BIRTH_YEAR = agot_canon_children_birth_year_loras_tyrell
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_loras_tyrell
+									CHILD_FLAG = is_tyrell_13
 									IS_FEMALE = no
 								}
 							}
@@ -1930,12 +1932,12 @@ story_agot_canon_children_mace_tyrell = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Tyrell_14
-										FLAG = is_margaery_tyrell
+										TRAIT = is_tyrell_14
 										BIRTH_YEAR = agot_canon_children_birth_year_margaery_tyrell
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_margaery_tyrell
+									CHILD_FLAG = is_tyrell_14
 									IS_FEMALE = yes
 								}
 							}
@@ -1943,7 +1945,7 @@ story_agot_canon_children_mace_tyrell = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_margaery_tyrell
+								FINAL_CHILD_TRAIT = is_tyrell_14
 								FINAL_CHILD_ID = Tyrell_14
 							}
 						}
@@ -1961,16 +1963,16 @@ story_agot_canon_children_mace_tyrell = {
 ### - Lysa Tully: Robert (Sweetrobin)							          				###
 ###########################################################################################
 story_agot_canon_children_jon_arryn = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_jon_arryn
+			FATHER_TRAIT = is_arryn_3
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Tully_6
-			MOTHER_FLAG = is_lysa_tully
+			MOTHER_TRAIT = is_tully_6
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -1990,11 +1992,11 @@ story_agot_canon_children_jon_arryn = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Lysa (Tully)
 						if = {
 							limit = {
-								has_character_flag = is_lysa_tully
+								has_inactive_trait = is_tully_6
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2007,12 +2009,12 @@ story_agot_canon_children_jon_arryn = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Arryn_8
-										FLAG = is_robert_arryn
+										TRAIT = is_arryn_8
 										BIRTH_YEAR = agot_canon_children_birth_year_robert_arryn
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_robert_arryn
+									CHILD_FLAG = is_arryn_8
 									IS_FEMALE = no
 								}
 							}
@@ -2020,7 +2022,7 @@ story_agot_canon_children_jon_arryn = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_robert_arryn
+								FINAL_CHILD_TRAIT = is_arryn_8
 								FINAL_CHILD_ID = Arryn_8
 							}
 						}
@@ -2038,16 +2040,16 @@ story_agot_canon_children_jon_arryn = {
 ### - Joanna Lannister: Cersei, Jaime, Tyrion								            ###
 ###########################################################################################
 story_agot_canon_children_tywin_lannister = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_tywin_lannister
+			FATHER_TRAIT = is_lannister_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Lannister_17
-			MOTHER_FLAG = is_joanna_lannister
+			MOTHER_TRAIT = is_lannister_17
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -2067,11 +2069,11 @@ story_agot_canon_children_tywin_lannister = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Joanna (Lannister)
 						if = {
 							limit = {
-								has_character_flag = is_joanna_lannister
+								has_inactive_trait = is_lannister_17
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2084,12 +2086,12 @@ story_agot_canon_children_tywin_lannister = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Lannister_6
-										FLAG = is_cersei_lannister
+										TRAIT = is_lannister_6
 										BIRTH_YEAR = agot_canon_children_birth_year_cersei_lannister
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_cersei_lannister
+									CHILD_FLAG = is_lannister_6
 									IS_FEMALE = yes
 								}
 							}
@@ -2099,22 +2101,22 @@ story_agot_canon_children_tywin_lannister = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Lannister_8
-										FLAG = is_tyrion_lannister
+										TRAIT = is_lannister_8
 										BIRTH_YEAR = agot_canon_children_birth_year_tyrion_lannister
 									}
 								}
 								agot_canon_children_force_pregnancy_effect = {
-									CHILD_FLAG = is_tyrion_lannister
+									CHILD_FLAG = is_lannister_8
 									IS_FEMALE = no
 									FATHER = scope:canon_father
-									BIRTH_FLAG = birth_mother_will_die
+									BIRTH_FLAG = agot_birth_mother_will_die
 								}
 							}
 
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_tyrion_lannister
+								FINAL_CHILD_TRAIT = is_lannister_8
 								FINAL_CHILD_ID = Lannister_8
 							}
 						}
@@ -2132,16 +2134,16 @@ story_agot_canon_children_tywin_lannister = {
 ### - Briony: Joy Hill								             	     				###
 ###########################################################################################
 story_agot_canon_children_gerion_lannister = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_gerion_lannister
+			FATHER_TRAIT = is_lannister_5
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Lannister_rs_1
-			MOTHER_FLAG = is_briony_lannister
+			MOTHER_TRAIT = is_lannister_rs_1
 			PREVENT_PREGNANCY = no
 		}
 	}
@@ -2161,11 +2163,11 @@ story_agot_canon_children_gerion_lannister = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Briony (Lannister)
 						if = {
 							limit = {
-								has_character_flag = is_briony_lannister
+								has_inactive_trait = is_lannister_rs_1
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_happy_accident_trigger = {
 										MOTHER = scope:canon_mother
@@ -2178,12 +2180,12 @@ story_agot_canon_children_gerion_lannister = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Lannister_14
-										FLAG = is_joy_hill
+										TRAIT = is_lannister_14
 										BIRTH_YEAR = agot_canon_children_birth_year_joy_hill
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_joy_hill
+									CHILD_FLAG = is_lannister_14
 									IS_FEMALE = yes
 									REAL_FATHER = scope:canon_father
 									REAL_FATHER_KNOWS = yes
@@ -2194,7 +2196,7 @@ story_agot_canon_children_gerion_lannister = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_joy_hill
+								FINAL_CHILD_TRAIT = is_lannister_14
 								FINAL_CHILD_ID = Lannister_14
 							}
 						}
@@ -2216,13 +2218,13 @@ story_agot_canon_children_gerion_lannister = {
 #     on_setup = {
 # 		agot_canon_children_setup_father_effect = {
 # 			FATHER = story_owner
-# 			FATHER_FLAG = is_aerys_targaryen
+# 			FATHER_TRAIT = is_aerys_targaryen
 # 		}
 
 # 		agot_canon_children_setup_mother_effect = {
 #			FATHER = story_owner
 # 			MOTHER = character:Targaryen_2
-# 			MOTHER_FLAG = is_rhaella_targaryen
+# 			MOTHER_TRAIT = is_targaryen_2
 # 			PREVENT_PREGNANCY = yes
 # 		}
 # 	}
@@ -2242,7 +2244,7 @@ story_agot_canon_children_gerion_lannister = {
 # 					every_in_list = {
 # 						variable = canon_mothers
 # 						save_scope_as = canon_mother
-	
+
 # 						# 1. Rhaella (Targaryen)
 # 						if = {
 # 							limit = {
@@ -2259,7 +2261,7 @@ story_agot_canon_children_gerion_lannister = {
 # 								limit = {
 # 									agot_canon_children_child_pregnancy_trigger = {
 # 										ID = Targaryen_9
-# 										FLAG = is_dany
+# 										TRAIT = is_dany
 # 										BIRTH_YEAR = agot_canon_children_birth_year_daenerys_targaryen
 # 									}
 # 								}
@@ -2272,7 +2274,7 @@ story_agot_canon_children_gerion_lannister = {
 # 							# Lifecycle
 # 							agot_canon_children_life_cycle_effect = {
 # 								MOTHER = scope:canon_mother
-# 								FINAL_CHILD_FLAG = is_dany
+# 								FINAL_CHILD_TRAIT = is_dany
 # 								FINAL_CHILD_ID = Targaryen_9
 # 							}
 # 						}
@@ -2290,16 +2292,16 @@ story_agot_canon_children_gerion_lannister = {
 ### - Sybell Spicer: Jeyne								          						###
 ###########################################################################################
 story_agot_canon_children_gawen_westerling = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_gawen_westerling
+			FATHER_TRAIT = is_westerling_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Spicer_4
-			MOTHER_FLAG = is_sybell_spicer
+			MOTHER_TRAIT = is_spicer_4
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -2319,11 +2321,11 @@ story_agot_canon_children_gawen_westerling = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Sybell (Spicer)
 						if = {
 							limit = {
-								has_character_flag = is_sybell_spicer
+								has_inactive_trait = is_spicer_4
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2336,12 +2338,12 @@ story_agot_canon_children_gawen_westerling = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Westerling_2
-										FLAG = is_jeyne_westerling
+										TRAIT = is_westerling_2
 										BIRTH_YEAR = agot_canon_children_birth_year_jeyne_westerling
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_jeyne_westerling
+									CHILD_FLAG = is_westerling_2
 									IS_FEMALE = yes
 								}
 							}
@@ -2349,7 +2351,7 @@ story_agot_canon_children_gawen_westerling = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_jeyne_westerling
+								FINAL_CHILD_TRAIT = is_westerling_2
 								FINAL_CHILD_ID = Westerling_2
 							}
 						}
@@ -2376,16 +2378,16 @@ story_agot_canon_children_gawen_westerling = {
 ### - Mellario Martell: Arianne, Quentyn, Trystane     		     						###
 ###########################################################################################
 story_agot_canon_children_doran_martell = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_doran_martell
+			FATHER_TRAIT = is_martell_4
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Martell_Doran_Wife
-			MOTHER_FLAG = is_mellario_martell
+			MOTHER_TRAIT = is_martell_doran_wife
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -2405,11 +2407,11 @@ story_agot_canon_children_doran_martell = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Mellario (Martell)
 						if = {
 							limit = {
-								has_character_flag = is_mellario_martell
+								has_inactive_trait = is_martell_doran_wife
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2422,12 +2424,12 @@ story_agot_canon_children_doran_martell = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Martell_9
-										FLAG = is_arianne_martell
+										TRAIT = is_martell_9
 										BIRTH_YEAR = agot_canon_children_birth_year_arianne_martell
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_arianne_martell
+									CHILD_FLAG = is_martell_9
 									IS_FEMALE = yes
 								}
 							}
@@ -2437,12 +2439,12 @@ story_agot_canon_children_doran_martell = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Martell_10
-										FLAG = is_quentyn_martell
+										TRAIT = is_martell_10
 										BIRTH_YEAR = agot_canon_children_birth_year_quentyn_martell
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_quentyn_martell
+									CHILD_FLAG = is_martell_10
 									IS_FEMALE = no
 								}
 							}
@@ -2452,12 +2454,12 @@ story_agot_canon_children_doran_martell = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Martell_11
-										FLAG = is_trystane_martell
+										TRAIT = is_martell_11
 										BIRTH_YEAR = agot_canon_children_birth_year_trystane_martell
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_trystane_martell
+									CHILD_FLAG = is_martell_11
 									IS_FEMALE = no
 								}
 							}
@@ -2465,7 +2467,7 @@ story_agot_canon_children_doran_martell = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_trystane_martell
+								FINAL_CHILD_TRAIT = is_martell_11
 								FINAL_CHILD_ID = Martell_11
 							}
 						}
@@ -2483,16 +2485,16 @@ story_agot_canon_children_doran_martell = {
 ### - Corinne Poole: Jeyne										          				###
 ###########################################################################################
 story_agot_canon_children_vayon_poole = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_vayon_poole
+			FATHER_TRAIT = is_poole_2
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Poole_rs_2
-			MOTHER_FLAG = is_corinne_poole
+			MOTHER_TRAIT = is_poole_rs_2
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -2512,11 +2514,11 @@ story_agot_canon_children_vayon_poole = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Corinne (Poole)
 						if = {
 							limit = {
-								has_character_flag = is_corinne_poole
+								has_inactive_trait = is_poole_rs_2
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2529,12 +2531,12 @@ story_agot_canon_children_vayon_poole = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Poole_3
-										FLAG = is_jeyne_poole
+										TRAIT = is_poole_3
 										BIRTH_YEAR = agot_canon_children_birth_year_jeyne_poole
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_jeyne_poole
+									CHILD_FLAG = is_poole_3
 									IS_FEMALE = yes
 								}
 							}
@@ -2542,7 +2544,7 @@ story_agot_canon_children_vayon_poole = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_jeyne_poole
+								FINAL_CHILD_TRAIT = is_poole_3
 								FINAL_CHILD_ID = Poole_3
 							}
 						}
@@ -2560,16 +2562,16 @@ story_agot_canon_children_vayon_poole = {
 ### - Serena Cassel: Beth										          			    ###
 ###########################################################################################
 story_agot_canon_children_rodrick_cassel = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_rodrick_cassel
+			FATHER_TRAIT = is_cassel_3
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Cassel_rs_3
-			MOTHER_FLAG = is_serena_cassel
+			MOTHER_TRAIT = is_cassel_rs_3
 			PREVENT_PREGNANCY = yes
 		}
 
@@ -2577,7 +2579,7 @@ story_agot_canon_children_rodrick_cassel = {
 		agotcch_setup_spouse_effect = {
 			SPOUSE_1 = story_owner
 			SPOUSE_2 = character:Cassel_rs_3
-			SPOUSE_2_FLAG = is_serena_cassel
+			SPOUSE_2_TRAIT = is_cassel_rs_3
 		}
 	}
 
@@ -2596,11 +2598,11 @@ story_agot_canon_children_rodrick_cassel = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Serena (Cassel)
 						if = {
 							limit = {
-								has_character_flag = is_serena_cassel
+								has_inactive_trait = is_cassel_rs_3
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2613,12 +2615,12 @@ story_agot_canon_children_rodrick_cassel = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Cassel_5
-										FLAG = is_beth_cassel
+										TRAIT = is_cassel_5
 										BIRTH_YEAR = agot_canon_children_birth_year_beth_cassel
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_beth_cassel
+									CHILD_FLAG = is_cassel_5
 									IS_FEMALE = yes
 								}
 							}
@@ -2626,7 +2628,7 @@ story_agot_canon_children_rodrick_cassel = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_beth_cassel
+								FINAL_CHILD_TRAIT = is_cassel_5
 								FINAL_CHILD_ID = Cassel_5
 							}
 						}
@@ -2660,16 +2662,16 @@ story_agot_canon_children_rodrick_cassel = {
 ### - Elia Dayne: Edric					     					          			    ###
 ###########################################################################################
 story_agot_canon_children_ulrick_dayne = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_ulrick_dayne
+			FATHER_TRAIT = is_dayne_3
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Dayne_rs_3
-			MOTHER_FLAG = is_elia_dayne
+			MOTHER_TRAIT = is_dayne_rs_3
 			PREVENT_PREGNANCY = yes
 		}
 
@@ -2677,7 +2679,7 @@ story_agot_canon_children_ulrick_dayne = {
 		agotcch_setup_spouse_effect = {
 			SPOUSE_1 = story_owner
 			SPOUSE_2 = character:Dayne_rs_3
-			SPOUSE_2_FLAG = is_elia_dayne
+			SPOUSE_2_TRAIT = is_dayne_rs_3
 		}
 	}
 
@@ -2696,11 +2698,11 @@ story_agot_canon_children_ulrick_dayne = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Elia (Dayne)
 						if = {
 							limit = {
-								has_character_flag = is_elia_dayne
+								has_inactive_trait = is_dayne_rs_3
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2713,12 +2715,12 @@ story_agot_canon_children_ulrick_dayne = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Dayne_7
-										FLAG = is_edric_dayne
+										TRAIT = is_dayne_7
 										BIRTH_YEAR = agot_canon_children_birth_year_edric_dayne
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_edric_dayne
+									CHILD_FLAG = is_dayne_7
 									IS_FEMALE = no
 								}
 							}
@@ -2726,7 +2728,7 @@ story_agot_canon_children_ulrick_dayne = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_edric_dayne
+								FINAL_CHILD_TRAIT = is_dayne_7
 								FINAL_CHILD_ID = Dayne_7
 							}
 						}
@@ -2760,16 +2762,16 @@ story_agot_canon_children_ulrick_dayne = {
 ### - Sallei Payne: Podrick				     					          			    ###
 ###########################################################################################
 story_agot_canon_children_eldrick_payne = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_eldrick_payne
+			FATHER_TRAIT = is_payne_15
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Payne_rs_8
-			MOTHER_FLAG = is_sallei_payne
+			MOTHER_TRAIT = is_payne_rs_8
 			PREVENT_PREGNANCY = yes
 		}
 
@@ -2777,7 +2779,7 @@ story_agot_canon_children_eldrick_payne = {
 		agotcch_setup_spouse_effect = {
 			SPOUSE_1 = story_owner
 			SPOUSE_2 = character:Payne_rs_8
-			SPOUSE_2_FLAG = is_sallei_payne
+			SPOUSE_2_TRAIT = is_payne_rs_8
 		}
 	}
 
@@ -2796,11 +2798,11 @@ story_agot_canon_children_eldrick_payne = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Sallei (Payne)
 						if = {
 							limit = {
-								has_character_flag = is_sallei_payne
+								has_inactive_trait = is_payne_rs_8
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2808,17 +2810,17 @@ story_agot_canon_children_eldrick_payne = {
 								}
 							}
 
-							# 1-1. Edric
+							# 1-1. Podrick
 							if = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Payne_16
-										FLAG = is_podrick_payne
+										TRAIT = is_payne_16
 										BIRTH_YEAR = agot_canon_children_birth_year_podrick_payne
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_podrick_payne
+									CHILD_FLAG = is_payne_16
 									IS_FEMALE = no
 								}
 							}
@@ -2826,7 +2828,7 @@ story_agot_canon_children_eldrick_payne = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_podrick_payne
+								FINAL_CHILD_TRAIT = is_payne_16
 								FINAL_CHILD_ID = Payne_16
 							}
 						}
@@ -2860,16 +2862,16 @@ story_agot_canon_children_eldrick_payne = {
 ### - Jyana Reed: Meera, Jojen    				    		     						###
 ###########################################################################################
 story_agot_canon_children_howland_reed = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_howland_reed
+			FATHER_TRAIT = is_reed_1
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Reed_rs_1
-			MOTHER_FLAG = is_jyana_reed
+			MOTHER_TRAIT = is_reed_rs_1
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -2889,11 +2891,11 @@ story_agot_canon_children_howland_reed = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Jyana (Reed)
 						if = {
 							limit = {
-								has_character_flag = is_jyana_reed
+								has_inactive_trait = is_reed_rs_1
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2906,12 +2908,12 @@ story_agot_canon_children_howland_reed = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Reed_2
-										FLAG = is_meera_reed
+										TRAIT = is_reed_2
 										BIRTH_YEAR = agot_canon_children_birth_year_meera_reed
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_meera_reed
+									CHILD_FLAG = is_reed_2
 									IS_FEMALE = yes
 								}
 							}
@@ -2921,12 +2923,12 @@ story_agot_canon_children_howland_reed = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Reed_3
-										FLAG = is_jojen_reed
+										TRAIT = is_reed_3
 										BIRTH_YEAR = agot_canon_children_birth_year_jojen_reed
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_jojen_reed
+									CHILD_FLAG = is_reed_3
 									IS_FEMALE = no
 								}
 							}
@@ -2934,7 +2936,7 @@ story_agot_canon_children_howland_reed = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_jojen_reed
+								FINAL_CHILD_TRAIT = is_reed_3
 								FINAL_CHILD_ID = Reed_3
 							}
 						}
@@ -2952,16 +2954,16 @@ story_agot_canon_children_howland_reed = {
 ### - Leona Woolfield: Wynafryd, Wylla   				    		        			###
 ###########################################################################################
 story_agot_canon_children_wylis_manderly = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_wylis_manderly
+			FATHER_TRAIT = is_manderly_7
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Woolfield_2
-			MOTHER_FLAG = is_leona_woolfield
+			MOTHER_TRAIT = is_woolfield_2
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -2981,11 +2983,11 @@ story_agot_canon_children_wylis_manderly = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Leone (Woolfield)
 						if = {
 							limit = {
-								has_character_flag = is_leona_woolfield
+								has_inactive_trait = is_woolfield_2
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -2998,12 +3000,12 @@ story_agot_canon_children_wylis_manderly = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Manderly_9
-										FLAG = is_wynafryd_manderly
+										TRAIT = is_manderly_9
 										BIRTH_YEAR = agot_canon_children_birth_year_wynafryd_manderly
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_wynafryd_manderly
+									CHILD_FLAG = is_manderly_9
 									IS_FEMALE = yes
 								}
 							}
@@ -3013,12 +3015,12 @@ story_agot_canon_children_wylis_manderly = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Manderly_10
-										FLAG = is_wylla_manderly
+										TRAIT = is_manderly_10
 										BIRTH_YEAR = agot_canon_children_birth_year_wylla_manderly
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_wylla_manderly
+									CHILD_FLAG = is_manderly_10
 									IS_FEMALE = yes
 								}
 							}
@@ -3026,7 +3028,7 @@ story_agot_canon_children_wylis_manderly = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_wylla_manderly
+								FINAL_CHILD_TRAIT = is_manderly_10
 								FINAL_CHILD_ID = Manderly_10
 							}
 						}
@@ -3044,16 +3046,16 @@ story_agot_canon_children_wylis_manderly = {
 ### - Arrana Karstark: Harrion, Eddard, Torrhen, Alys  				    		       	###
 ###########################################################################################
 story_agot_canon_children_rickard_karstark = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_rickard_karstark
+			FATHER_TRAIT = is_karstark_4
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Karstark_rs_1
-			MOTHER_FLAG = is_arrana_karstark
+			MOTHER_TRAIT = is_karstark_rs_1
 			PREVENT_PREGNANCY = yes
 		}
 	}
@@ -3073,11 +3075,11 @@ story_agot_canon_children_rickard_karstark = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Arrana (Karstark)
 						if = {
 							limit = {
-								has_character_flag = is_arrana_karstark
+								has_inactive_trait = is_karstark_rs_1
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -3090,12 +3092,12 @@ story_agot_canon_children_rickard_karstark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Karstark_16
-										FLAG = is_harrion_karstark
+										TRAIT = is_karstark_16
 										BIRTH_YEAR = agot_canon_children_birth_year_harrion_karstark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_harrion_karstark
+									CHILD_FLAG = is_karstark_16
 									IS_FEMALE = no
 								}
 							}
@@ -3105,12 +3107,12 @@ story_agot_canon_children_rickard_karstark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Karstark_17
-										FLAG = is_eddard_karstark
+										TRAIT = is_karstark_17
 										BIRTH_YEAR = agot_canon_children_birth_year_eddard_karstark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_eddard_karstark
+									CHILD_FLAG = is_karstark_17
 									IS_FEMALE = no
 								}
 							}
@@ -3120,12 +3122,12 @@ story_agot_canon_children_rickard_karstark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Karstark_18
-										FLAG = is_torrhen_karstark
+										TRAIT = is_karstark_18
 										BIRTH_YEAR = agot_canon_children_birth_year_torrhen_karstark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_torrhen_karstark
+									CHILD_FLAG = is_karstark_18
 									IS_FEMALE = no
 								}
 							}
@@ -3135,12 +3137,12 @@ story_agot_canon_children_rickard_karstark = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Karstark_19
-										FLAG = is_alys_karstark
+										TRAIT = is_karstark_19
 										BIRTH_YEAR = agot_canon_children_birth_year_alys_karstark
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_alys_karstark
+									CHILD_FLAG = is_karstark_19
 									IS_FEMALE = yes
 								}
 							}
@@ -3148,7 +3150,7 @@ story_agot_canon_children_rickard_karstark = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_alys_karstark
+								FINAL_CHILD_TRAIT = is_karstark_19
 								FINAL_CHILD_ID = Karstark_19
 							}
 						}
@@ -3167,23 +3169,23 @@ story_agot_canon_children_rickard_karstark = {
 ### - Joslyn: Josera, Elsera									  				    	###
 ###########################################################################################
 story_agot_canon_children_gregor_forrester = {
-    on_setup = {
+	on_setup = {
 		agot_canon_children_setup_father_effect = {
 			FATHER = story_owner
-			FATHER_FLAG = is_gregor_forrester
+			FATHER_TRAIT = is_forrester_2
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Branfield_1
-			MOTHER_FLAG = is_elissa_branfield
+			MOTHER_TRAIT = is_branfield_1
 			PREVENT_PREGNANCY = yes
 		}
 
 		agot_canon_children_setup_mother_effect = {
 			FATHER = story_owner
 			MOTHER = character:Forrester_rs_4
-			MOTHER_FLAG = is_joslyn_forrester
+			MOTHER_TRAIT = is_forrester_rs_4
 			PREVENT_PREGNANCY = no
 		}
 	}
@@ -3203,11 +3205,11 @@ story_agot_canon_children_gregor_forrester = {
 					every_in_list = {
 						variable = canon_mothers
 						save_scope_as = canon_mother
-	
+
 						# 1. Elissa (Brookfield)
 						if = {
 							limit = {
-								has_character_flag = is_elissa_branfield
+								has_inactive_trait = is_branfield_1
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_spouse_trigger = {
 										SPOUSE = scope:canon_mother
@@ -3220,12 +3222,12 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_3
-										FLAG = is_rodrik_forrester
+										TRAIT = is_forrester_3
 										BIRTH_YEAR = agot_canon_children_birth_year_rodrik_forrester
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_rodrik_forrester
+									CHILD_FLAG = is_forrester_3
 									IS_FEMALE = no
 								}
 							}
@@ -3235,12 +3237,12 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_4
-										FLAG = is_asher_forrester
+										TRAIT = is_forrester_4
 										BIRTH_YEAR = agot_canon_children_birth_year_asher_forrester
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_asher_forrester
+									CHILD_FLAG = is_forrester_4
 									IS_FEMALE = no
 								}
 							}
@@ -3250,12 +3252,12 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_5
-										FLAG = is_mira_forrester
+										TRAIT = is_forrester_5
 										BIRTH_YEAR = agot_canon_children_birth_year_mira_forrester
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_mira_forrester
+									CHILD_FLAG = is_forrester_5
 									IS_FEMALE = yes
 								}
 							}
@@ -3265,13 +3267,13 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_6
-										FLAG = is_ethan_forrester
+										TRAIT = is_forrester_6
 										BIRTH_YEAR = agot_canon_children_birth_year_ethan_forrester
 									}
 									# TODO: Talia, Forrester_7, is_talia_forrester
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_ethan_forrester
+									CHILD_FLAG = is_forrester_6
 									IS_FEMALE = no
 								}
 							}
@@ -3282,12 +3284,12 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_7
-										FLAG = is_talia_forrester
+										TRAIT = is_forrester_7
 										BIRTH_YEAR = agot_canon_children_birth_year_talia_forrester
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_talia_forrester
+									CHILD_FLAG = is_forrester_7
 									IS_FEMALE = yes
 								}
 							}
@@ -3297,12 +3299,12 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_8
-										FLAG = is_ryon_forrester
+										TRAIT = is_forrester_8
 										BIRTH_YEAR = agot_canon_children_birth_year_ryon_forrester
 									}
 								}
 								agot_canon_children_force_pregnancy_basic_effect = {
-									CHILD_FLAG = is_ryon_forrester
+									CHILD_FLAG = is_forrester_8
 									IS_FEMALE = no
 								}
 							}
@@ -3310,14 +3312,14 @@ story_agot_canon_children_gregor_forrester = {
 							# Lifecycle
 							agot_canon_children_life_cycle_effect = {
 								MOTHER = scope:canon_mother
-								FINAL_CHILD_FLAG = is_ryon_forrester
+								FINAL_CHILD_TRAIT = is_forrester_8
 								FINAL_CHILD_ID = Forrester_8
 							}
 						}
 						# 2. Joslyn (Lowborn)
 						else_if = {
 							limit = {
-								has_character_flag = is_joslyn_forrester
+								has_inactive_trait = is_forrester_rs_4
 								scope:canon_father = {
 									agot_canon_children_force_pregnancy_happy_accident_trigger = {
 										MOTHER = scope:canon_mother
@@ -3330,13 +3332,13 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_30
-										FLAG = is_josera_forrester
+										TRAIT = is_forrester_30
 										BIRTH_YEAR = agot_canon_children_birth_year_josera_forrester
 									}
 									# TODO: Elsera, Forrester_31, is_elsera_forrester
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_josera_forrester
+									CHILD_FLAG = is_forrester_30
 									IS_FEMALE = no
 									REAL_FATHER = scope:canon_father
 									REAL_FATHER_KNOWS = yes
@@ -3350,12 +3352,12 @@ story_agot_canon_children_gregor_forrester = {
 								limit = {
 									agot_canon_children_child_pregnancy_trigger = {
 										ID = Forrester_31
-										FLAG = is_elsera_forrester
+										TRAIT = is_forrester_31
 										BIRTH_YEAR = agot_canon_children_birth_year_elsera_forrester
 									}
 								}
 								agot_canon_children_force_bastard_pregnancy_basic_effect = {
-									CHILD_FLAG = is_elsera_forrester
+									CHILD_FLAG = is_forrester_31
 									IS_FEMALE = yes
 									REAL_FATHER = scope:canon_father
 									REAL_FATHER_KNOWS = yes
