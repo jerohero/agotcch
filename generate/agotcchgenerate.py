@@ -6,191 +6,10 @@ from birth_effects import generate_birth_effects
 from story_cycles import generate_story_cycles
 from script_values import generate_script_values
 from dummy_characters import generate_dummy_characters
+from character import process_character
 from lookups import *
 
 path = "C:/Users/Jeroen/Documents/Paradox Interactive/Crusader Kings III/mod/agotcch/generate"
-
-personality_traits_dumpster = [
-    "lustful","chaste","gluttonous","temperate","greedy","generous","lazy","diligent","wrathful","calm","patient","impatient","arrogant",
-    "humble","deceitful","honest","craven","brave","shy","gregarious","ambitious","content","arbitrary","just","cynical","zealous",
-    "paranoid","trusting","compassionate","callous","sadistic","stubborn","fickle","eccentric","vengeful","forgiving",
-    "honorable","authoritative","rude","ruthless"
-]
-childhood_personality_traits_dumpster = [
-    "curious","bossy","pensive","rowdy","charming"
-]
-physical_traits_dumpster = [
-    "beauty_bad_1","beauty_bad_2","beauty_bad_3","beauty_good_1","beauty_good_2","beauty_good_3",
-    "intellect_bad_1","intellect_bad_2","intellect_bad_3","intellect_good_1","intellect_good_2","intellect_good_3",
-    "physique_bad_1","physique_bad_2","physique_bad_3","physique_good_1","physique_good_2","physique_good_3",
-    "pure_blooded","fecund","strong","shrewd","clubfooted","hunchbacked","lisping","stuttering","dwarf","giant",
-    "inbred","weak","dull","impotent","spindly","scaly","albino","wheezing","bleeder","infertile"
-]
-
-def init_character():
-    return {
-        "id": "",
-        "name": {
-            "primary": "",
-            "alt": ""
-        },
-        "birth": 0,
-        "is_female": False,
-        "house": "",
-        "father": "",
-        "real_father": "",
-        "mother": "",
-        "sexuality": "",
-        "employer:": "",
-        "traits": {
-            "inherited": [],
-            "inactive": [],
-            "childhood": "",
-            "education": []
-        },
-        "flags": [],
-        "is_bastard": False,
-        "birth_options": {
-            "is_born_sickly": False,
-            "is_stillborn": False,
-            "mother_dies": False
-        },
-        "guardian": {
-            "primary": {
-                "id": ""
-            },
-            "alt": {
-                "id": ""
-            },
-            "use_liege_for_heir": False,
-            "convert_culture": False,
-            "convert_religion": False
-        },
-        "nickname": "",
-        "on_birth": "",
-        "config": { "prevent_pregnancy": False }
-    }
-
-def get_nested_value(value):
-    return value[value.find('=') + 1 : value.find('}')].strip() # eg. x = { y = z }
-
-def process_character(character_start_index):
-    character = init_character()
-    current_year_block = 0
-    is_after_adulthood = False
-
-    for i, line in enumerate(lines[character_start_index:], start=character_start_index):
-        is_line_block_start = "{" in line
-        is_line_block_end = "}" in line
-
-        is_next_character = "\tname = " in line and character["name"]["primary"] != ""
-
-        if is_next_character:
-            break
-
-        if is_line_block_start:
-            if text.match_date(line.strip()):
-                current_year_block = text.extract_date_block_year(line.strip())
-                is_after_adulthood = character["birth"] > 0 and current_year_block > character["birth"] + 16
-        elif is_line_block_end:
-            current_year_block = 0
-
-        # History after adulthood (16+) should be ignored
-        if is_after_adulthood:
-            continue
-
-        # Some history after the child's birth should be ignored
-        is_birth_block = current_year_block == 0 or current_year_block == character["birth"]
-
-        if "=" in line:
-            # Custom attributes
-            if "# canon_children" in line:
-                line = line.replace("# ", "")
-
-            key, value = line.split("=", 1)
-            key, value = key.strip(), value.split("#", 1)[0].strip() # Remove comments and whitespaces
-
-            # ID
-            if key == "name":
-                character["id"] = lines[i - 1].split(" = ")[0]
-                character["name"]["primary"] = value
-            # House
-            elif key in ["dynasty", "dynasty_house"]:
-                character["house"] = value
-            # Gender
-            elif key == "female":
-                if value == "yes":
-                    character["is_female"] = True
-            # Father
-            elif key == "father":
-                if character["father"] == "":
-                    character["father"] = value
-            # TODO REFACTOR THIS
-            # Real father
-            elif key == "real_father" or key == "set_real_father":
-                character["real_father"] = value.split(':')[-1]
-            elif key == "effect" and "set_real_father" in value:
-                real_father_id = get_nested_value(value)
-                character["real_father"] = real_father_id.split(':')[-1]
-            # Mother
-            elif key == "mother" or key == "set_real_mother":
-                character["mother"] = value.split(':')[-1]
-            elif key == "effect" and "set_real_mother" in value:
-                mother_id = get_nested_value(value)
-                character["mother"] = mother_id.split(':')[-1]
-            # Traits
-            elif key == "trait" or key == "add_trait":
-                if value in childhood_personality_traits_dumpster:
-                    character["traits"]["childhood"] = value
-                elif value in personality_traits_dumpster:
-                    if len(character["traits"]["education"]) < 4:
-                        character["traits"]["education"].append(value)
-                elif value in physical_traits_dumpster:
-                    character["traits"]["inherited"].append(value)
-                elif value == "bastard":
-                    character["is_bastard"] = True
-                elif value == "sickly":
-                    if is_birth_block:
-                        character["birth_options"]["is_born_sickly"] = True
-            elif key == "make_trait_inactive":
-                character["traits"]["inactive"].append(value)
-            # Flags
-            elif key == "add_character_flag":
-                character["flags"].append(value)
-            # Sexuality
-            elif key == "sexuality":
-                character["sexuality"] = value
-            elif key == "birth":
-                character["birth"] = current_year_block
-            # Employer
-            elif key == "employer":
-                if is_birth_block:
-                    character["employer"] = value
-            # Guardian
-            elif key == "agot_set_as_ward_history_effect":
-                # TODO gender differences
-                # TODO canon guardians may canonically be too dependent on story events, so maybe only set this if it is set at birth
-                # TODO converting, use_liege_for_heir
-                is_first_guardian = character["guardian"]["primary"]["id"] == ""
-                if is_first_guardian:
-                    guardian_id = get_nested_value(value)
-                    character["guardian"]["primary"]["id"] = guardian_id
-            # Nickname
-            elif key == "give_nickname":
-                if is_birth_block:
-                    character["nickname"] = value
-            # Birth options
-            elif key == "death":
-                if "death_stillborn" in value:
-                    character["birth_options"]["is_stillborn"] = True
-            elif key == "canon_children_mother_dies":
-                if value == "yes":
-                    character["birth_options"]["mother_dies"] = True
-            
-            # TODO Scripted appearance flags + traits
-            # TODO On birth
-
-    return character
 
 def process_lines():
     current_year_block = 0
@@ -216,7 +35,7 @@ def process_lines():
             character_start_index = i
 
         if is_line_canon_child:
-            character = process_character(character_start_index)
+            character = process_character(lines, character_start_index)
 
             if character["father"] == "" or character["mother"] == "":
                 # TODO allow exceptions, such as Maege Mormont's children
@@ -224,6 +43,8 @@ def process_lines():
 
             print(character)
             characters[character["id"]] = character
+
+    print(len(characters))
     
     fathers, mothers = find_ancestries(characters)
 

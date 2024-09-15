@@ -13,3 +13,6 @@ def extract_date_block_year(line):
         year = match.group(1)
         return int(year)
     return 0
+
+def get_nested_value(value):
+    return value[value.find('=') + 1 : value.find('}')].strip() # eg. x = { y = z }
