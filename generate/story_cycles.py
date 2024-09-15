@@ -15,9 +15,7 @@ def create_story_cycle(characters, father_id, child_ids):
     indent = '    '
 
     mother_ids = {characters[child_id]["mother"] for child_id in child_ids}
-    real_father_ids = {
-        characters[child_id]["real_father"] for child_id in child_ids if characters[child_id]["real_father"]
-    }
+    real_father_ids = {characters[child_id]["real_father"] for child_id in child_ids if characters[child_id]["real_father"]}
 
     setup = generate_setup(father_id, mother_ids, real_father_ids, indent)
     pregnancy_effects = generate_pregnancy_effects(characters, child_ids, mother_ids, indent)
@@ -73,6 +71,9 @@ def generate_setup(father_id, mother_ids, real_father_ids, indent):
         """))
 
     for real_father_id in real_father_ids:
+        if real_father_id == father_id:
+            continue
+            
         setup_lines.append(textwrap.dedent(f"""
             agot_canon_children_setup_real_father_effect = {{
                 FATHER = story_owner
@@ -104,6 +105,7 @@ def generate_pregnancy_trigger(is_first_child_bastard, indent):
 
 def generate_pregnancy_effect(child, indent):
     is_female = "yes" if child["is_female"] else "no"
+    is_bastard_with_assumed_father = child["real_father"] != "" and child["father"] != ""
 
     birth_flag = "birth_will_go_smoothly"
 
@@ -129,7 +131,10 @@ def generate_pregnancy_effect(child, indent):
             agot_canon_children_force_bastard_pregnancy_basic_effect = {{
                 CHILD_FLAG = is_{child["id"]}
                 IS_FEMALE = {is_female}
-                REAL_FATHER = scope:canon_father.var:agot_canon_children_real_father_{child["real_father"]}
+                REAL_FATHER = {
+                    f"scope:canon_father.var:agot_canon_children_real_father_{child['real_father']}" if is_bastard_with_assumed_father  
+                    else "scope:canon_father"
+                }
                 REAL_FATHER_KNOWS = yes
                 KNOWN_BASTARD = no
             }}
