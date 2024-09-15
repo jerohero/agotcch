@@ -4,8 +4,7 @@ personality_traits_dumpster = [
     "lustful","chaste","gluttonous","temperate","greedy","generous","lazy","diligent","wrathful","calm","patient","impatient","arrogant",
     "humble","deceitful","honest","craven","brave","shy","gregarious","ambitious","content","arbitrary","just","cynical","zealous",
     "paranoid","trusting","compassionate","callous","sadistic","stubborn","fickle","eccentric","vengeful","forgiving",
-    "honorable","authoritative","rude","ruthless"
-]
+] # TODO: authoritative, honorable, rude, ruthless (modded traits without events)
 
 childhood_personality_traits_dumpster = [
     "curious","bossy","pensive","rowdy","charming"
@@ -38,7 +37,7 @@ def process_character(lines, character_start_index):
         is_next_character = "\tname = " in line and character["name"]["primary"] != ""
 
         if is_next_character:
-            continue
+            break
 
         if is_line_block_start:
             if text.match_date(line.strip()):
@@ -49,17 +48,25 @@ def process_character(lines, character_start_index):
 
         # History after adulthood (16+) should be ignored
         if is_after_adulthood:
-            break
+            continue
 
         # Some history after the child's birth should be ignored
         is_birth_block = current_year_block == 0 or current_year_block == character["birth"]
 
         if "=" in line:
-            if "# canon_children" in line:
+            if "# canon_children" in line: # Custom attributes
                 line = line.replace("# ", "")
 
+            if "effect = { " in line: # Nested one-liner attributes
+                line = line.replace("effect = { ", "")
+                if "=" not in line:
+                    continue
+            
             key, value = line.split("=", 1)
-            key, value = key.strip(), value.split("#", 1)[0].strip()  # Remove comments and whitespaces
+            key, value = key.strip(), value.split("#", 1)[0].replace("{", "").replace("}", "").strip() # Remove comments and whitespaces
+
+            if "canon_children_skip" in key and value == "yes":
+                return None
 
             if key in key_action_map:
                 key_action_map[key](character, value)
@@ -189,6 +196,9 @@ def process_canon_children_mother_dies(character, value):
     if value == "yes":
         character["birth_options"]["mother_dies"] = True
 
+def process_canon_children_alt_name(character, value):
+    character["name"]["alt"] = value
+
 key_action_map = {
     "name": process_name,
     "dynasty": process_house,
@@ -197,10 +207,8 @@ key_action_map = {
     "father": process_father,
     "real_father": process_real_father,
     "set_real_father": process_real_father,
-    "effect_real_father": process_effect_real_father,
     "mother": process_mother,
     "set_real_mother": process_mother,
-    "effect_real_mother": process_effect_real_mother,
     "trait": process_trait,
     "add_trait": process_trait,
     "make_trait_inactive": process_make_trait_inactive,
@@ -212,4 +220,5 @@ key_action_map = {
     "give_nickname": process_nickname,
     "death": process_death,
     "canon_children_mother_dies": process_canon_children_mother_dies,
+    "canon_children_alt_name": process_canon_children_alt_name
 }

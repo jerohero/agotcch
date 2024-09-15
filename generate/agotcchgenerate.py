@@ -22,14 +22,13 @@ def process_lines():
         # if len(characters) > 30:
         #     break
 
-        is_line_empty = not line or line[0] == '#'
+        if not line or line[0] == '#':
+            continue
+        
         is_line_character_name = "\tname = " in line
 
         canon_statuses = ["canon_status_canon", "canon_status_semicanon", "canon_status_mentioned"]
         is_line_canon_child = any(status in line for status in canon_statuses)
-
-        if is_line_empty:
-            continue
 
         if is_line_character_name:
             character_start_index = i
@@ -37,7 +36,11 @@ def process_lines():
         if is_line_canon_child:
             character = process_character(lines, character_start_index)
 
-            if character["father"] == "" or character["mother"] == "":
+            if character is None:
+                continue
+
+            # Skip characters without two parents
+            if (character["father"] == "" and character["real_father"] == "") or character["mother"] == "":
                 # TODO allow exceptions, such as Maege Mormont's children
                 continue
 
