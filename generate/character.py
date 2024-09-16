@@ -15,7 +15,7 @@ physical_traits_dumpster = [
     "intellect_bad_1","intellect_bad_2","intellect_bad_3","intellect_good_1","intellect_good_2","intellect_good_3",
     "physique_bad_1","physique_bad_2","physique_bad_3","physique_good_1","physique_good_2","physique_good_3",
     "pure_blooded","fecund","strong","shrewd","clubfooted","hunchbacked","lisping","stuttering","dwarf","giant",
-    "inbred","weak","dull","impotent","spindly","scaly","albino","wheezing","bleeder","infertile"
+    "inbred","weak","dull","impotent","spindly","scaly","albino","wheezing","bleeder","infertile","twin"
 ]
 
 def process_character(lines, character_start_index):

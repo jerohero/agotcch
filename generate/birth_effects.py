@@ -8,7 +8,7 @@ def generate_birth_effects(characters, fathers, mothers):
     chained_mothers = find_chained_mothers(mothers)
 
     setup_cycles_effect = create_setup_cycles_effect(fathers).lstrip()
-    base_birth_effect = create_base_birth_effect(mothers)
+    base_birth_effect = create_base_birth_effect(characters, mothers)
 
     for child_id, child in characters.items():
         chained_child_fathers = get_chained_child_fathers(child, child_id, characters, mothers, chained_mothers)
@@ -41,18 +41,33 @@ def create_setup_cycles_effect(fathers):
         }}
     """)
 
-def create_base_birth_effect(mothers):
+def create_base_birth_effect(characters, mothers):
     setup_effects = []
 
     for i, mother in enumerate(mothers):
         child_effects = []
 
-        for j, child in enumerate(mothers[mother]):
-            # TODO HANDLE TWIN
+        twins = [child for child in mothers[mother] if "twin" in characters[child]["traits"]["inherited"]]
+        twin_birth_effects = []
+
+        for j, child_id in enumerate(mothers[mother]):
+            child = characters[child_id]
+
+            if "twin" in child["traits"]["inherited"]:
+                child_twins = [twin for twin in twins if twin != child["id"] and characters[twin]["birth"] == child["birth"]]
+
+                if twin_birth_effects:
+                    continue
+
+                for twin in child_twins:
+                    twin_birth_effects.append(textwrap.dedent(f"""\nagot_canon_children_{twin}_birth_effect = yes"""))
+            else:
+                twin_birth_effects = []
+
             child_effects.append(textwrap.dedent(f"""
-                {"if" if j == 0 else "else_if"} = {{
-                    limit = {{ agot_canon_children_check_pregnancy_child_trigger = {{ FLAG = is_{child} }} }}
-                    agot_canon_children_{child}_birth_effect = yes
+                {"if" if j == 0 else "else_if"} = {{ # {child["name"]["primary"]} {f"+ twin{'s' if len(twin_birth_effects) > 1 else ''}" if twin_birth_effects else ''}
+                    limit = {{ agot_canon_children_check_pregnancy_child_trigger = {{ FLAG = is_{child["id"]} }} }}
+                    agot_canon_children_{child["id"]}_birth_effect = yes{textwrap.indent(''.join(twin_birth_effects), indent * 5).rstrip()}
                 }}
             """).rstrip())
 

@@ -172,14 +172,23 @@ def generate_pregnancy_effects(characters, child_ids, mother_ids, indent):
 def generate_children_effects(characters, child_ids, mother_id, indent):
     children_effects = []
 
+    twin_pointer = None
+
     for child_index, child_id in enumerate(child_ids):
         child = characters[child_id]
+
         if child["mother"] == mother_id:
             child_condition = "if" if child_index == 0 else "else_if"
             pregnancy_effect = generate_pregnancy_effect(child, indent)
 
+            if "twin" in child["traits"]["inherited"]:
+                # Only create an effect for the first child of a pair of twins
+                if twin_pointer and twin_pointer["birth"] == child["birth"]:
+                    continue
+                twin_pointer = child
+
             children_effects.append(textwrap.dedent(f"""
-                # {child_id}
+                # {child_id}{" (twin)" if "twin" in child["traits"]["inherited"] else ""} 
                 {child_condition} = {{
                     limit = {{
                         agot_canon_children_child_pregnancy_trigger = {{
