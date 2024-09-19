@@ -151,6 +151,7 @@ def inject_data(character: dict, chained_fathers: list, indent: int = 3) -> str:
         get_culture(),
         get_flags(character),
         get_inactive_traits(character),
+        get_nickname(character),
         get_sexuality(character),
         get_inherited_traits(character),
         get_canon_guardian(character),
@@ -196,6 +197,13 @@ def get_inactive_traits(character):
         traits.extend(f'make_trait_inactive = {trait}' for trait in character["traits"]["inactive"])
 
     return '\n'.join(traits) + '\n'
+
+def get_nickname(character):
+    if character["nickname"]:
+        if character["is_bastard"]:
+            return f'agot_canon_children_give_bastard_nickname_effect = {{ NICKNAME = {character["nickname"]} }}\n'
+        return f'give_nickname = {character["nickname"]}\n'
+    return ''
 
 
 def get_sexuality(character):
