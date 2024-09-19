@@ -3,16 +3,28 @@ from lookups import *
 
 INDENT = '    '
 
-def generate_birth_effects(characters: dict, fathers: list, mothers: dict) -> str:
+def generate_birth_effects(characters: dict, fathers: list, mothers_to_children: dict) -> str:
     birth_effects = []
-    chained_mothers = find_chained_mothers(mothers)
+    chained_mothers = find_chained_mothers(mothers_to_children)
 
     setup_cycles_effect = create_setup_cycles_effect(fathers).lstrip()
-    base_birth_effect = create_base_birth_effect(characters, mothers)
+    base_birth_effect = create_base_birth_effect(characters, mothers_to_children)
 
     for child_id, child in characters.items():
-        chained_fathers = get_chained_fathers(child, child_id, characters, mothers, chained_mothers)
-        birth_effect = create_birth_effect(child, chained_fathers)
+        chained_fathers = get_chained_fathers(child, child_id, characters, mothers_to_children, chained_mothers)
+
+        should_create_twin_birth_effect = False
+        birth_effect = ''
+
+        if ("twin" in child["traits"]["inherited"]):
+            twins = get_mother_twins(characters, mothers_to_children[child["mother"]])
+            should_create_twin_birth_effect = twins[0] != child_id
+        
+        if not should_create_twin_birth_effect:
+            birth_effect = create_birth_effect(child, chained_fathers)
+        else:
+            birth_effect = create_twin_birth_effect(child, chained_fathers)
+
         birth_effects.append(birth_effect)
 
     return f"{setup_cycles_effect}{base_birth_effect}\n{''.join(birth_effects).strip()}"
@@ -38,15 +50,18 @@ def create_setup_cycles_effect(fathers: list) -> str:
         }}
     """)
 
-def create_base_birth_effect(characters: dict, mothers: dict) -> str:
+def get_mother_twins(characters: dict, mother_to_children: dict) -> list:
+    return [child for child in mother_to_children if "twin" in characters[child]["traits"]["inherited"]]
+
+def create_base_birth_effect(characters: dict, mothers_to_children: dict) -> str:
     setup_effects = []
 
-    for i, mother in enumerate(mothers):
+    for i, mother in enumerate(mothers_to_children):
         child_effects = []
-        twins = [child for child in mothers[mother] if "twin" in characters[child]["traits"]["inherited"]]
+        twins = [child for child in mothers_to_children[mother] if "twin" in characters[child]["traits"]["inherited"]]
         twin_birth_effects = []
 
-        for j, child_id in enumerate(mothers[mother]):
+        for j, child_id in enumerate(mothers_to_children[mother]):
             child = characters[child_id]
             if "twin" in child["traits"]["inherited"]:
                 twin_birth_effects = handle_twin_births(child, twins, characters)
@@ -69,11 +84,11 @@ def create_base_birth_effect(characters: dict, mothers: dict) -> str:
         }}
     """)
 
-def get_chained_fathers(child: dict, child_id: str, characters: dict, mothers: dict, chained_mothers: list) -> list:
+def get_chained_fathers(child: dict, child_id: str, characters: dict, mothers_to_children: dict, chained_mothers: list) -> list:
     chained_fathers = []
 
     if child["is_female"] and child_id in chained_mothers:
-        chained_child_ids = mothers[child_id]
+        chained_child_ids = mothers_to_children[child_id]
         for chained_child_id in chained_child_ids:
             chained_child = characters[chained_child_id]
             father = chained_child.get("real_father") or chained_child.get("father")
@@ -98,7 +113,40 @@ def create_birth_effect(character: dict, chained_fathers: list) -> str:
         }}
     """)
 
-def inject_data(character: dict, chained_fathers: list) -> str:
+def create_twin_birth_effect(character: dict, chained_fathers: list) -> str:
+    return textwrap.dedent(f"""
+        # {character["name"]["primary"]} - {character["id"]} (Twin)
+        agot_canon_children_{character["id"]}_birth_effect = {{
+            create_character = {{
+                name = "{character['name']['primary']}"
+                father = scope:child.father
+                mother = scope:child.mother
+                gender = {'female' if character['is_female'] else 'male'}
+                faith = scope:child.father.faith
+                culture = scope:child.father.culture
+                dynasty_house = scope:child.father.house
+                employer = scope:child.mother.employer
+
+                random_traits = no
+                save_scope_as = new_child
+            }}
+            hidden_effect = {{
+                scope:new_child = {{
+                    scope:child = {{
+                        agot_canon_children_after_birth_effect = {{
+                            NAME_PRIMARY = "{character['name']['primary']}"
+                            NAME_ALT = "{character['name']['alt']}"
+                            FLAG = "is_{character['id']}"
+                            DNA = "Dummy_{character['id']}"
+                        }}
+                    }}
+                    {inject_data(character, chained_fathers, 5)}
+                }}
+            }}
+        }}
+    """)
+
+def inject_data(character: dict, chained_fathers: list, indent: int = 3) -> str:
     data_parts = [
         get_culture(),
         get_flags(character),
@@ -109,7 +157,7 @@ def inject_data(character: dict, chained_fathers: list) -> str:
         get_childhood_traits(character),
         get_canon_mother_setup(character, chained_fathers)
     ]
-    return textwrap.indent('\n' + ''.join(data_parts), INDENT * 3).rstrip()
+    return textwrap.indent('\n' + ''.join(data_parts), INDENT * indent).rstrip()
 
 def handle_twin_births(child: dict, twins: list, characters: dict) -> list:
     twin_birth_effects = []
