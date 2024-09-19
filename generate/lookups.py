@@ -12,16 +12,16 @@ def group_by_parent(children, parent_id_cb):
 
     return parents
 
-# For making sure the child will be set up as a canon mother on birth
-def find_chained_mothers(mothers):
-    chained_mothers = []
+# For making sure the child will be set up on birth
+def find_chained_parents(parents):
+    chained_parents = []
 
-    for mother_id, child_ids in mothers.items():
+    for parent_id, child_ids in parents.items():
         for child_id in child_ids:
-            if child_id in mothers:
-                chained_mothers.append(child_id)
+            if child_id in parents:
+                chained_parents.append(child_id)
 
-    return chained_mothers
+    return chained_parents
 
 def find_ancestries(characters):
     def father_id_cb(character):

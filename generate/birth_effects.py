@@ -3,15 +3,16 @@ from lookups import *
 
 INDENT = '    '
 
-def generate_birth_effects(characters: dict, fathers: list, mothers_to_children: dict) -> str:
+def generate_birth_effects(characters: dict, fathers_to_children: dict, mothers_to_children: dict) -> str:
     birth_effects = []
-    chained_mothers = find_chained_mothers(mothers_to_children)
+    chained_mothers = find_chained_parents(mothers_to_children)
+    chained_fathers = find_chained_parents(fathers_to_children)
 
-    setup_cycles_effect = create_setup_cycles_effect(fathers).lstrip()
+    setup_cycles_effect = create_setup_cycles_effect(fathers_to_children).lstrip()
     base_birth_effect = create_base_birth_effect(characters, mothers_to_children)
 
     for child_id, child in characters.items():
-        chained_fathers = get_chained_fathers(child, child_id, characters, mothers_to_children, chained_mothers)
+        chained_child_fathers = get_chained_child_fathers(child, characters, mothers_to_children, fathers_to_children, chained_mothers, chained_fathers)
 
         should_create_twin_birth_effect = False
         birth_effect = ''
@@ -21,15 +22,15 @@ def generate_birth_effects(characters: dict, fathers: list, mothers_to_children:
             should_create_twin_birth_effect = twins[0] != child_id
         
         if not should_create_twin_birth_effect:
-            birth_effect = create_birth_effect(child, chained_fathers)
+            birth_effect = create_birth_effect(child, chained_child_fathers)
         else:
-            birth_effect = create_twin_birth_effect(child, chained_fathers)
+            birth_effect = create_twin_birth_effect(child, chained_child_fathers)
 
         birth_effects.append(birth_effect)
 
     return f"{setup_cycles_effect}{base_birth_effect}\n{''.join(birth_effects).strip()}"
 
-def create_setup_cycles_effect(fathers: list) -> str:
+def create_setup_cycles_effect(fathers_to_children: list) -> str:
     setup_effects = [
         textwrap.dedent(f"""
             character:{father} ?= {{
@@ -38,7 +39,7 @@ def create_setup_cycles_effect(fathers: list) -> str:
                     create_story = {{ type = story_agot_canon_children_{father} }}
                 }}
             }}
-        """) for father in fathers
+        """) for father in fathers_to_children
     ]
 
     return textwrap.dedent(f"""
@@ -84,20 +85,30 @@ def create_base_birth_effect(characters: dict, mothers_to_children: dict) -> str
         }}
     """)
 
-def get_chained_fathers(child: dict, child_id: str, characters: dict, mothers_to_children: dict, chained_mothers: list) -> list:
-    chained_fathers = []
+def get_chained_child_fathers(child: dict, characters: dict, mothers_to_children: dict, fathers_to_children: dict, chained_mothers: list, chained_x: list) -> list:
+    chained_child_fathers = []
 
-    if child["is_female"] and child_id in chained_mothers:
-        chained_child_ids = mothers_to_children[child_id]
-        for chained_child_id in chained_child_ids:
-            chained_child = characters[chained_child_id]
-            father = chained_child.get("real_father") or chained_child.get("father")
-            if father and father not in chained_fathers:
-                chained_fathers.append(father)
+    if child["is_female"] and child["id"] in chained_mothers:
+        chained_child_fathers = get_child_fathers(child, characters, mothers_to_children)
+    elif not child["is_female"] and child["id"] in chained_x:
+        chained_child_fathers = get_child_fathers(child, characters, fathers_to_children)
 
-    return chained_fathers
+    return chained_child_fathers
 
-def create_birth_effect(character: dict, chained_fathers: list) -> str:
+def get_child_fathers(child: dict, characters: dict, parents_to_children: dict):
+    chained_child_fathers = []
+    chained_child_ids = parents_to_children[child["id"]]
+
+    for chained_child_id in chained_child_ids:
+        chained_child = characters[chained_child_id]
+        father = chained_child.get("father") or chained_child.get("real_father") # TODO: should it use real_father if father is not set?
+
+        if father and father not in chained_child_fathers:
+            chained_child_fathers.append(father)
+
+    return chained_child_fathers
+
+def create_birth_effect(character: dict, chained_child_fathers: list) -> str:
     return textwrap.dedent(f"""
         # {character["name"]["primary"]} - {character["id"]}
         agot_canon_children_{character["id"]}_birth_effect = {{
@@ -109,11 +120,11 @@ def create_birth_effect(character: dict, chained_fathers: list) -> str:
                     DNA = "Dummy_{character['id']}"
                 }}
             }}
-            {inject_data(character, chained_fathers)}
+            {inject_data(character, chained_child_fathers)}
         }}
     """)
 
-def create_twin_birth_effect(character: dict, chained_fathers: list) -> str:
+def create_twin_birth_effect(character: dict, chained_child_fathers: list) -> str:
     return textwrap.dedent(f"""
         # {character["name"]["primary"]} - {character["id"]} (Twin)
         agot_canon_children_{character["id"]}_birth_effect = {{
@@ -128,25 +139,23 @@ def create_twin_birth_effect(character: dict, chained_fathers: list) -> str:
                 employer = scope:child.mother.employer
 
                 random_traits = no
-                save_scope_as = new_child
+                save_scope_as = child
             }}
             hidden_effect = {{
-                scope:new_child = {{
-                    scope:child = {{
-                        agot_canon_children_after_birth_effect = {{
-                            NAME_PRIMARY = "{character['name']['primary']}"
-                            NAME_ALT = "{character['name']['alt']}"
-                            FLAG = "is_{character['id']}"
-                            DNA = "Dummy_{character['id']}"
-                        }}
+                scope:child = {{
+                    agot_canon_children_after_birth_effect = {{
+                        NAME_PRIMARY = "{character['name']['primary']}"
+                        NAME_ALT = "{character['name']['alt']}"
+                        FLAG = "is_{character['id']}"
+                        DNA = "Dummy_{character['id']}"
                     }}
-                    {inject_data(character, chained_fathers, 5)}
+                    {inject_data(character, chained_child_fathers, 5)}
                 }}
             }}
         }}
     """)
 
-def inject_data(character: dict, chained_fathers: list, indent: int = 3) -> str:
+def inject_data(character: dict, chained_child_fathers: list, indent: int = 3) -> str:
     data_parts = [
         get_culture(),
         get_flags(character),
@@ -156,7 +165,8 @@ def inject_data(character: dict, chained_fathers: list, indent: int = 3) -> str:
         get_inherited_traits(character),
         get_canon_guardian(character),
         get_childhood_traits(character),
-        get_canon_mother_setup(character, chained_fathers)
+        get_canon_mother_setup(character, chained_child_fathers),
+        get_canon_father_setup(character, chained_child_fathers)
     ]
     return textwrap.indent('\n' + ''.join(data_parts), INDENT * indent).rstrip()
 
@@ -236,18 +246,21 @@ def get_canon_guardian(character):
 
 
 def get_canon_mother_setup(character, chained_child_fathers):
+    if not character["is_female"]:
+        return ''
+    
     mother_setup = []
 
-    for father in chained_child_fathers:
+    for child_father in chained_child_fathers:
         setup = textwrap.dedent(f"""
-            agot_canon_children_get_canon_child_scope_effect = {{ FLAG = is_{father} SCOPE = father_{father} }}
+            agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{child_father} SCOPE = father_{child_father} }}
             if = {{
-                limit = {{ scope:father_{father} ?= {{ is_alive = yes }} }}
-                scope:father_{father} = {{
+                limit = {{ scope:father_{child_father} ?= {{ is_alive = yes }} }}
+                scope:father_{child_father} = {{
                     agot_canon_children_setup_mother_effect = {{
-                        FATHER = scope:father_{father}
+                        FATHER = scope:father_{child_father}
                         MOTHER = scope:child
-                        MOTHER_FLAG = is_{character["id"]}
+                        MOTHER_TRAIT = is_{character["id"]}
                         PREVENT_PREGNANCY = {"yes" if character["config"]["prevent_pregnancy"] else "no"}
                     }}
                 }}
@@ -256,3 +269,30 @@ def get_canon_mother_setup(character, chained_child_fathers):
         mother_setup.append(setup)
 
     return ''.join(mother_setup)
+
+def get_canon_father_setup(character, chained_child_fathers):
+    if character["is_female"]:
+        return ''
+    
+    father_setup = []
+
+    for child_father in chained_child_fathers:
+        if child_father == character["id"]:
+            father_setup.append(f"\ncreate_story = story_agot_canon_children_{character['id']}")
+        else:
+            father_setup.append(textwrap.dedent(f"""
+                agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{child_father} SCOPE = father_{child_father} }}
+                if = {{
+                    limit = {{ scope:father_{child_father} ?= {{ is_alive = yes }} }}
+                    scope:father_{child_father} = {{
+                        agot_canon_children_setup_real_father_effect = {{
+                            FATHER = scope:father_{child_father}
+                            REAL_FATHER = scope:child
+                            REAL_FATHER_TRAIT = is_{character["id"]}
+                            REAL_FATHER_VAR = agot_canon_children_real_father_{character["id"]}
+                        }}
+                    }}
+                }}
+            """))
+
+    return ''.join(father_setup)
