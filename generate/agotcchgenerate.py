@@ -72,12 +72,6 @@ def process_lines():
     with open(path + '/output/canon_children_dummy_characters.txt', 'w') as f:
         f.write(generate_dummy_characters(characters))
 
-    with open(path + '/output/00_agot_canon_children_traits.txt', 'w') as f:
-        f.write(generate_traits(characters))
-        
-    with open(path + '/output/agot_scripted_triggers_canon_characters.txt', 'w') as f:
-        f.write(generate_triggers(characters))
-
 
 folder_path = path + '/characters/small'
 lines = file.read_text_files_to_lines(folder_path)
