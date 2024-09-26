@@ -73,7 +73,7 @@ def create_base_birth_effect(characters: dict, mothers_to_children: dict) -> str
 
         setup_effects.append(textwrap.dedent(f"""
             {"if" if i == 0 else "else_if"} = {{
-                limit = {{ scope:mother = {{ has_character_flag = is_{mother} }} }}
+                limit = {{ scope:mother = {{ has_character_flag = is_{lower(mother)} }} }}
                 {textwrap.indent(''.join(child_effects), INDENT * 4).rstrip()}
             }}
         """))
@@ -116,7 +116,7 @@ def create_birth_effect(character: dict, chained_child_fathers: list) -> str:
                 agot_canon_children_after_birth_effect = {{
                     NAME_PRIMARY = "{character['name']['primary']}"
                     NAME_ALT = "{character['name']['alt']}"
-                    TRAIT = "is_{character['id']}"
+                    TRAIT = "is_{lower(character['id'])}"
                     DNA = "Dummy_{character['id']}"
                 }}
             }}
@@ -146,7 +146,7 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list) -> st
                     agot_canon_children_after_birth_effect = {{
                         NAME_PRIMARY = "{character['name']['primary']}"
                         NAME_ALT = "{character['name']['alt']}"
-                        TRAIT = "is_{character['id']}"
+                        TRAIT = "is_{lower(character['id'])}"
                         DNA = "Dummy_{character['id']}"
                     }}
                     {inject_data(character, chained_child_fathers, 5)}
@@ -182,7 +182,7 @@ def handle_twin_births(child: dict, twins: list, characters: dict) -> list:
 def create_child_effect(index: int, child: dict, twin_birth_effects: list) -> str:
     return textwrap.dedent(f"""
         {"if" if index == 0 else "else_if"} = {{
-            limit = {{ agot_canon_children_check_pregnancy_child_trigger = {{ FLAG = is_{child['id']} }} }}
+            limit = {{ agot_canon_children_check_pregnancy_child_trigger = {{ FLAG = is_{lower(child['id'])} }} }}
             agot_canon_children_{child['id']}_birth_effect = yes{textwrap.indent(''.join(twin_birth_effects), INDENT * 5).rstrip()}
         }}
     """)
@@ -253,14 +253,14 @@ def get_canon_mother_setup(character, chained_child_fathers):
 
     for child_father in chained_child_fathers:
         setup = textwrap.dedent(f"""
-            agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{child_father} SCOPE = father_{child_father} }}
+            agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{lower(child_father)} SCOPE = father_{child_father} }}
             if = {{
                 limit = {{ scope:father_{child_father} ?= {{ is_alive = yes }} }}
                 scope:father_{child_father} = {{
                     agot_canon_children_setup_mother_effect = {{
                         FATHER = scope:father_{child_father}
                         MOTHER = scope:child
-                        MOTHER_TRAIT = is_{character["id"]}
+                        MOTHER_TRAIT = is_{lower(character["id"])}
                         PREVENT_PREGNANCY = yes
                     }}
                 }}
@@ -281,14 +281,14 @@ def get_canon_father_setup(character, chained_child_fathers):
             father_setup.append(f"\ncreate_story = story_agot_canon_children_{character['id']}")
         else:
             father_setup.append(textwrap.dedent(f"""
-                agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{child_father} SCOPE = father_{child_father} }}
+                agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{lower(child_father)} SCOPE = father_{child_father} }}
                 if = {{
                     limit = {{ scope:father_{child_father} ?= {{ is_alive = yes }} }}
                     scope:father_{child_father} = {{
                         agot_canon_children_setup_real_father_effect = {{
                             FATHER = scope:father_{child_father}
                             REAL_FATHER = scope:child
-                            REAL_FATHER_TRAIT = is_{character["id"]}
+                            REAL_FATHER_TRAIT = is_{lower(character["id"])}
                             REAL_FATHER_VAR = agot_canon_children_real_father_{character["id"]}
                         }}
                     }}
