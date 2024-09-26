@@ -68,8 +68,14 @@ def process_lines():
         f.write(generate_script_values(characters))
 
     # with open(path + '/output/history/characters/canon_children_dummy_characters.txt', 'w') as f:
-    with open('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/canon_children_dummy_characters.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/agot_canon_children_dummy_characters.txt', 'w') as f:
         f.write(generate_dummy_characters(characters))
+
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_scripted_triggers_canon_characters.txt', 'w') as f:
+        f.write(generate_triggers(characters))
+        
+    with open('CC:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w') as f:
+        f.write(generate_traits(characters))
 
 
 # folder_path = path + '/characters/small'

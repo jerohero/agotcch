@@ -73,7 +73,7 @@ def create_base_birth_effect(characters: dict, mothers_to_children: dict) -> str
 
         setup_effects.append(textwrap.dedent(f"""
             {"if" if i == 0 else "else_if"} = {{
-                limit = {{ scope:mother = {{ has_character_flag = is_{mother.lower()} }} }}
+                limit = {{ scope:mother = {{ has_inactive_trait = is_{mother.lower()} }} }}
                 {textwrap.indent(''.join(child_effects), INDENT * 4).rstrip()}
             }}
         """))
@@ -109,13 +109,16 @@ def get_child_fathers(child: dict, characters: dict, parents_to_children: dict):
     return chained_child_fathers
 
 def create_birth_effect(character: dict, chained_child_fathers: list) -> str:
+    name_male = character["name"]["primary"] if not character['is_female'] else character["name"]["alt"]
+    name_female = character["name"]["primary"] if character['is_female'] else character["name"]["alt"]
+
     return textwrap.dedent(f"""
         # {character["name"]["primary"]} - {character["id"]}
         agot_canon_children_{character["id"].lower()}_birth_effect = {{
             scope:child = {{
                 agot_canon_children_after_birth_effect = {{
-                    NAME_PRIMARY = "{character['name']['primary']}"
-                    NAME_ALT = "{character['name']['alt']}"
+                    NAME_MALE = "{name_male}"
+                    NAME_FEMALE = "{name_female}"
                     TRAIT = "is_{character["id"].lower()}"
                     DNA = "Dummy_{character['id']}"
                 }}

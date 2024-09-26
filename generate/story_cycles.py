@@ -210,7 +210,7 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
         agot_canon_children_life_cycle_effect = {{
             MOTHER = scope:canon_mother
             FINAL_CHILD_TRAIT = is_{child_ids[-1].lower()}
-            FINAL_CHILD_ID = {child_ids[-1].lower()}
+            FINAL_CHILD_ID = {child_ids[-1]}
         }}
     """))
 
