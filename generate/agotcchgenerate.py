@@ -6,6 +6,8 @@ from birth_effects import generate_birth_effects
 from story_cycles import generate_story_cycles
 from script_values import generate_script_values
 from dummy_characters import generate_dummy_characters
+from traits import generate_traits
+from triggers import generate_triggers
 from character import process_character
 from lookups import *
 
@@ -18,7 +20,7 @@ def process_lines():
     characters = {}
 
     for i, line in enumerate(lines):
-        # TODO TEMP
+        # TEMP
         # if len(characters) > 30:
         #     break
 
@@ -39,12 +41,19 @@ def process_lines():
             if character is None:
                 continue
 
-            # Skip characters without two parents
-            if (character["father"] == "" and character["real_father"] == "") or character["mother"] == "":
-                # TODO allow exceptions, such as Maege Mormont's children
-                continue
+            has_mother = character["mother"] != ""
+            has_father = character["father"] != "" or character["real_father"] != ""
 
-            print(character)
+            # Skip characters without parents
+            if not has_mother and not has_father:
+                continue
+            elif not has_mother:
+                # TODO handle characters with only a father
+                continue
+            elif not has_father:
+                # TODO handle characters with only a mother (eg Maege Mormont's children)
+                continue
+            
             characters[character["id"]] = character
 
     print(len(characters))
@@ -63,7 +72,14 @@ def process_lines():
     with open(path + '/output/canon_children_dummy_characters.txt', 'w') as f:
         f.write(generate_dummy_characters(characters))
 
-folder_path = path + '/characters'
+    with open(path + '/output/00_agot_canon_children_traits.txt', 'w') as f:
+        f.write(generate_traits(characters))
+        
+    with open(path + '/output/agot_scripted_triggers_canon_characters.txt', 'w') as f:
+        f.write(generate_triggers(characters))
+
+
+folder_path = path + '/characters/small'
 lines = file.read_text_files_to_lines(folder_path)
 
 process_lines()
