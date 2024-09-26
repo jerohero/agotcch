@@ -62,7 +62,7 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
 
     for mother_id in mother_ids:
         should_prevent_pregnancy = all(
-            not (child["is_bastard"] and (child["father"] == father_id or (child["real_father"] == father_id and child["father"] == ""))) # Does not have a known bastard
+            not (child["bastard"]["is_known"] and (child["father"] == father_id or (child["real_father"] == father_id and child["father"] == ""))) # Does not have a known bastard
             for child in (characters[child_id] for child_id in child_ids if characters[child_id]["mother"] == mother_id)
         )
 
@@ -131,7 +131,6 @@ def generate_pregnancy_effect(child, indent):
             }}
         """)
     else:
-        # TODO: real father knows & known bastard
         effect = textwrap.dedent(f"""
             agot_canon_children_force_bastard_pregnancy_basic_effect = {{
                 CHILD_FLAG = is_{child["id"]}
@@ -140,8 +139,8 @@ def generate_pregnancy_effect(child, indent):
                     f"scope:canon_father.var:agot_canon_children_real_father_{child['real_father']}" if is_bastard_with_assumed_father  
                     else "scope:canon_father"
                 }
-                REAL_FATHER_KNOWS = yes
-                KNOWN_BASTARD = no
+                REAL_FATHER_KNOWS = {"yes" if child["bastard"]["real_father_knows"] else "no"}	
+                KNOWN_BASTARD = {"yes" if child["bastard"]["is_known"] else "no"}
             }}
         """)
 
@@ -155,7 +154,7 @@ def generate_pregnancy_effects(characters, child_ids, mother_ids, indent):
         first_child = characters[child_ids[0]]
         mother_condition = "if" if mother_index == 0 else "else_if"
 
-        pregnancy_trigger = generate_pregnancy_trigger(first_child["is_bastard"], indent)
+        pregnancy_trigger = generate_pregnancy_trigger(first_child["bastard"]["is_known"], indent)
         children_effects = generate_children_effects(characters, child_ids, mother_id, indent)
 
         effects.append(textwrap.dedent(f"""

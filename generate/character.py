@@ -98,7 +98,10 @@ def init_character():
             "education": []
         },
         "flags": [],
-        "is_bastard": False,
+        "bastard": {
+            "is_known": False,
+            "real_father_knows": True
+        },
         "birth_options": {
             "is_born_sickly": False,
             "is_stillborn": False,
@@ -157,7 +160,7 @@ def process_trait(character, value):
     elif value in physical_traits_dumpster:
         character["traits"]["inherited"].append(value)
     elif value == "bastard":
-        character["is_bastard"] = True
+        character["bastard"]["is_known"] = True
     elif value == "sickly":
         if is_birth_block:
             character["birth_options"]["is_born_sickly"] = True
@@ -189,15 +192,16 @@ def process_nickname(character, value):
         character["nickname"] = value
 
 def process_death(character, value):
-    if "death_stillborn" in value:
-        character["birth_options"]["is_stillborn"] = True
+    character["birth_options"]["is_stillborn"] = True if value == "yes" else False
 
 def process_canon_children_mother_dies(character, value):
-    if value == "yes":
-        character["birth_options"]["mother_dies"] = True
+    character["birth_options"]["mother_dies"] = True if value == "yes" else False
 
 def process_canon_children_alt_name(character, value):
     character["name"]["alt"] = value
+
+def process_canon_children_real_father_knows(character, value):
+    character["bastard"]["real_father_knows"] = True if value == "yes" else False
 
 key_action_map = {
     "name": process_name,
@@ -220,5 +224,6 @@ key_action_map = {
     "give_nickname": process_nickname,
     "death": process_death,
     "canon_children_mother_dies": process_canon_children_mother_dies,
-    "canon_children_alt_name": process_canon_children_alt_name
+    "canon_children_alt_name": process_canon_children_alt_name,
+    "canon_children_real_father_knows": process_canon_children_real_father_knows,
 }

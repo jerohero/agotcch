@@ -210,7 +210,7 @@ def get_inactive_traits(character):
 
 def get_nickname(character):
     if character["nickname"]:
-        if character["is_bastard"]:
+        if character["bastard"]["is_known"]:
             return f'agot_canon_children_give_bastard_nickname_effect = {{ NICKNAME = {character["nickname"]} }}\n'
         return f'give_nickname = {character["nickname"]}\n'
     return ''
