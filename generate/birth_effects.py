@@ -119,7 +119,8 @@ def create_birth_effect(character: dict, chained_child_fathers: list, has_dna: b
                 {"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
                     NAME_MALE = "{name_male}"
                     NAME_FEMALE = "{name_female}"
-                    TRAIT = "is_{character["id"].lower()}"{ textwrap.indent(f'\nDNA = "Dummy_{character["id"]}"', INDENT * 3) if has_dna else "" }
+                    TRAIT = "is_{character["id"].lower()}"{ f'''
+                    DNA = "Dummy_{character["id"]}"''' if has_dna else "" }
                 }}
             }}
             {inject_data(character, chained_child_fathers)}
@@ -151,8 +152,8 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list, has_d
                     {"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
                         NAME_MALE = "{name_male}"
                         NAME_FEMALE = "{name_female}"
-                        TRAIT = "is_{character["id"].lower()}"
-                        { f'DNA = "Dummy_{character["id"]}"' if has_dna else "" }
+                        TRAIT = "is_{character["id"].lower()}"{ f'''
+                        DNA = "Dummy_{character["id"]}"''' if has_dna else "" }
                     }}
                     {inject_data(character, chained_child_fathers, 5)}
                 }}

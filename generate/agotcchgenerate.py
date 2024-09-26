@@ -60,7 +60,7 @@ def process_character_lines(lines, dnas):
                 # TODO handle characters with only a mother (eg Maege Mormont's children)
                 continue
 
-            if charachter["dragons"]["is_dragonrider"]:
+            if character["dragons"]["is_dragonrider"]:
                 dragonriders.append(character["id"])
             
             characters[character["id"]] = character

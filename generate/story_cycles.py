@@ -124,7 +124,7 @@ def generate_pregnancy_effect(child, indent):
     if child["real_father"] == "":
         effect = textwrap.dedent(f"""
             agot_canon_children_force_pregnancy_effect = {{
-                CHILD_FLAG = is_{child["id"].lower()}
+                CHILD_FLAG = flag:is_{child["id"].lower()}
                 IS_FEMALE = {is_female}
                 FATHER = scope:canon_father
                 BIRTH_FLAG = {birth_flag}
@@ -133,7 +133,7 @@ def generate_pregnancy_effect(child, indent):
     else:
         effect = textwrap.dedent(f"""
             agot_canon_children_force_bastard_pregnancy_basic_effect = {{
-                CHILD_FLAG = is_{child["id"].lower()}
+                CHILD_FLAG = flag:is_{child["id"].lower()}
                 IS_FEMALE = {is_female}
                 REAL_FATHER = {
                     f"scope:canon_father.var:agot_canon_children_real_father_{child['real_father'].lower()}" if is_bastard_with_assumed_father  
@@ -178,11 +178,11 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
 
     twin_pointer = None
 
-    for child_index, child_id in enumerate(child_ids):
+    for child_id in child_ids:
         child = characters[child_id]
 
         if child["mother"] == mother_id:
-            child_condition = "if" if child_index == 0 else "else_if"
+            child_condition = "if" if len(children_effects) == 0 else "else_if"
             pregnancy_effect = generate_pregnancy_effect(child, indent)
 
             if "twin" in child["traits"]["inherited"]:
