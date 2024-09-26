@@ -23,7 +23,7 @@ def process_lines():
         
         is_line_character_name = "\tname = " in line
 
-        canon_statuses = ["canon_status_canon", "canon_status_semicanon", "canon_status_mentioned"]
+        canon_statuses = ["canon_status_canon", "canon_status_semicanon"] # ... canon_status_mentioned
         is_line_canon_child = any(status in line for status in canon_statuses)
 
         if is_line_character_name:
@@ -55,16 +55,20 @@ def process_lines():
     
     fathers, mothers = find_ancestries(characters)
 
-    with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
+    # with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
         f.write(generate_story_cycles(characters, fathers, mothers))
 
-    with open(path + '/output/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
+    # with open(path + '/output/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
         f.write(generate_birth_effects(characters, fathers, mothers))
 
-    with open(path + '/output/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
+    # with open(path + '/output/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
         f.write(generate_script_values(characters))
 
-    with open(path + '/output/history/characters/canon_children_dummy_characters.txt', 'w') as f:
+    # with open(path + '/output/history/characters/canon_children_dummy_characters.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/canon_children_dummy_characters.txt', 'w') as f:
         f.write(generate_dummy_characters(characters))
 
 

@@ -67,6 +67,6 @@ def generate_script_values(characters):
 
 def create_child_script_value(child):
     return textwrap.dedent(f"""
-        agot_canon_children_birth_year_{child["id"]} = {child["birth"]}
-        agot_canon_children_birth_year_{child["id"]}_min = {{ value = agot_canon_children_birth_year_{child["id"]} add = -1 }}
+        agot_canon_children_birth_year_{child["id"].lower()} = {child["birth"]}
+        agot_canon_children_birth_year_{child["id"].lower()}_min = {{ value = agot_canon_children_birth_year_{child["id"].lower()} add = -1 }}
     """)
