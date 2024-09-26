@@ -17,7 +17,7 @@ def create_story_cycle(characters, father_id, child_ids):
     mother_ids = {characters[child_id]["mother"] for child_id in child_ids}
     real_father_ids = {characters[child_id]["real_father"] for child_id in child_ids if characters[child_id]["real_father"]}
 
-    setup = generate_setup(father_id, mother_ids, real_father_ids, indent)
+    setup = generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters, indent)
     pregnancy_effects = generate_pregnancy_effects(characters, child_ids, mother_ids, indent)
 
     return textwrap.dedent(f"""
@@ -50,7 +50,7 @@ def create_story_cycle(characters, father_id, child_ids):
     """)
 
 
-def generate_setup(father_id, mother_ids, real_father_ids, indent):
+def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters, indent):
     setup_lines = [
         textwrap.dedent(f"""
         agot_canon_children_setup_father_effect = {{
@@ -61,12 +61,19 @@ def generate_setup(father_id, mother_ids, real_father_ids, indent):
     ]
 
     for mother_id in mother_ids:
+        has_known_bastard = (child["father"] == father_id or (child["real_father"] == father_id and child["father"] == ""))
+
+        should_prevent_pregnancy = all(
+            not (child["is_bastard"] and has_known_bastard)
+            for child in (characters[child_id] for child_id in child_ids if characters[child_id]["mother"] == mother_id)
+        )
+
         setup_lines.append(textwrap.dedent(f"""
             agot_canon_children_setup_mother_effect = {{
                 FATHER = story_owner
                 MOTHER = character:{mother_id}
                 MOTHER_FLAG = is_{mother_id}
-                PREVENT_PREGNANCY = yes
+                PREVENT_PREGNANCY = {"yes" if should_prevent_pregnancy else "no"}
             }}
         """))
 

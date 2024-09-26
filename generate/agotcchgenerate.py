@@ -6,8 +6,6 @@ from birth_effects import generate_birth_effects
 from story_cycles import generate_story_cycles
 from script_values import generate_script_values
 from dummy_characters import generate_dummy_characters
-from traits import generate_traits
-from triggers import generate_triggers
 from character import process_character
 from lookups import *
 
