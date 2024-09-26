@@ -61,10 +61,8 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
     ]
 
     for mother_id in mother_ids:
-        has_known_bastard = (child["father"] == father_id or (child["real_father"] == father_id and child["father"] == ""))
-
         should_prevent_pregnancy = all(
-            not (child["is_bastard"] and has_known_bastard)
+            not (child["is_bastard"] and (child["father"] == father_id or (child["real_father"] == father_id and child["father"] == ""))) # Does not have a known bastard
             for child in (characters[child_id] for child_id in child_ids if characters[child_id]["mother"] == mother_id)
         )
 

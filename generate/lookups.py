@@ -25,7 +25,7 @@ def find_chained_parents(parents):
 
 def find_ancestries(characters):
     def father_id_cb(character):
-        return character["real_father"] if character["real_father"] else character["father"]
+        return character["father"] if character["father"] else character["real_father"]
 
     def mother_id_cb(character):
         return character["mother"]

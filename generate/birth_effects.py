@@ -261,7 +261,7 @@ def get_canon_mother_setup(character, chained_child_fathers):
                         FATHER = scope:father_{child_father}
                         MOTHER = scope:child
                         MOTHER_TRAIT = is_{character["id"]}
-                        PREVENT_PREGNANCY = {"yes" if character["config"]["prevent_pregnancy"] else "no"}
+                        PREVENT_PREGNANCY = yes
                     }}
                 }}
             }}
