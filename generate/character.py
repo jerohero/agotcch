@@ -48,6 +48,7 @@ def process_character(lines, character_start_index):
 
         # History after adulthood (16+) should be ignored
         if is_after_adulthood:
+            character["dragons"]["is_dragonrider"] = "trait = dragonrider" in line
             continue
 
         # Some history after the child's birth should be ignored
@@ -118,6 +119,9 @@ def init_character():
             "convert_culture": False,
             "convert_religion": False
         },
+        "dragons": {
+            "is_dragonrider": False
+        },
         "nickname": "",
         "on_birth": "",
         "skipped": False,
@@ -162,6 +166,8 @@ def process_trait(character, value):
         character["traits"]["inherited"].append(value)
     elif value == "bastard":
         character["bastard"]["is_known"] = True
+    elif value == "dragonrider":
+        character["dragons"]["is_dragonrider"] = True
     elif value == "sickly":
         if is_birth_block:
             character["birth_options"]["is_born_sickly"] = True

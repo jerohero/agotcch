@@ -3,7 +3,7 @@ from lookups import *
 
 INDENT = '    '
 
-def generate_birth_effects(characters: dict, fathers_to_children: dict, mothers_to_children: dict) -> str:
+def generate_birth_effects(characters: dict, fathers_to_children: dict, mothers_to_children: dict, dnas: list) -> str:
     birth_effects = []
     chained_mothers = find_chained_parents(mothers_to_children)
     chained_fathers = find_chained_parents(fathers_to_children)
@@ -22,9 +22,9 @@ def generate_birth_effects(characters: dict, fathers_to_children: dict, mothers_
             should_create_twin_birth_effect = twins[0] != child_id
         
         if not should_create_twin_birth_effect:
-            birth_effect = create_birth_effect(child, chained_child_fathers)
+            birth_effect = create_birth_effect(child, chained_child_fathers, child_id in dnas)
         else:
-            birth_effect = create_twin_birth_effect(child, chained_child_fathers)
+            birth_effect = create_twin_birth_effect(child, chained_child_fathers, child_id in dnas)
 
         birth_effects.append(birth_effect)
 
@@ -108,7 +108,7 @@ def get_child_fathers(child: dict, characters: dict, parents_to_children: dict):
 
     return chained_child_fathers
 
-def create_birth_effect(character: dict, chained_child_fathers: list) -> str:
+def create_birth_effect(character: dict, chained_child_fathers: list, has_dna: bool) -> str:
     name_male = character["name"]["primary"] if not character['is_female'] else character["name"]["alt"]
     name_female = character["name"]["primary"] if character['is_female'] else character["name"]["alt"]
 
@@ -116,18 +116,20 @@ def create_birth_effect(character: dict, chained_child_fathers: list) -> str:
         # {character["name"]["primary"]} - {character["id"]}
         agot_canon_children_{character["id"].lower()}_birth_effect = {{
             scope:child = {{
-                agot_canon_children_after_birth_effect = {{
+                {"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
                     NAME_MALE = "{name_male}"
                     NAME_FEMALE = "{name_female}"
-                    TRAIT = "is_{character["id"].lower()}"
-                    DNA = "Dummy_{character['id']}"
+                    TRAIT = "is_{character["id"].lower()}"{ textwrap.indent(f'\nDNA = "Dummy_{character["id"]}"', INDENT * 3) if has_dna else "" }
                 }}
             }}
             {inject_data(character, chained_child_fathers)}
         }}
     """)
 
-def create_twin_birth_effect(character: dict, chained_child_fathers: list) -> str:
+def create_twin_birth_effect(character: dict, chained_child_fathers: list, has_dna: bool) -> str:
+    name_male = character["name"]["primary"] if not character['is_female'] else character["name"]["alt"]
+    name_female = character["name"]["primary"] if character['is_female'] else character["name"]["alt"]
+
     return textwrap.dedent(f"""
         # {character["name"]["primary"]} - {character["id"]} (Twin)
         agot_canon_children_{character["id"].lower()}_birth_effect = {{
@@ -146,11 +148,11 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list) -> st
             }}
             hidden_effect = {{
                 scope:child = {{
-                    agot_canon_children_after_birth_effect = {{
-                        NAME_PRIMARY = "{character['name']['primary']}"
-                        NAME_ALT = "{character['name']['alt']}"
+                    {"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
+                        NAME_MALE = "{name_male}"
+                        NAME_FEMALE = "{name_female}"
                         TRAIT = "is_{character["id"].lower()}"
-                        DNA = "Dummy_{character['id']}"
+                        { f'DNA = "Dummy_{character["id"]}"' if has_dna else "" }
                     }}
                     {inject_data(character, chained_child_fathers, 5)}
                 }}

@@ -1,11 +1,11 @@
 import textwrap
 
-def generate_traits(characters: dict) -> str:
+def generate_traits(ids: list) -> str:
     traits = []
 
-    for child_id, child in characters.items():
+    for character_id in ids:
         trait = textwrap.dedent(f"""
-            is_{child_id} = {{
+            is_{character_id.lower()} = {{
                 physical = no
                 shown_in_ruler_designer = no
                 name = trait_hidden

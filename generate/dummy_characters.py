@@ -1,10 +1,11 @@
 import textwrap
 
-def generate_dummy_characters(characters):
+def generate_dummy_characters(characters, dnas):
     dummy_characters = []
 
     for child_id, child in characters.items():
-        dummy_characters.append(create_dummy_character(child))
+        if child_id in dnas:
+            dummy_characters.append(create_dummy_character(child))
 
     return ''.join(dummy_characters).lstrip()
 

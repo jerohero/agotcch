@@ -6,16 +6,28 @@ from birth_effects import generate_birth_effects
 from story_cycles import generate_story_cycles
 from script_values import generate_script_values
 from dummy_characters import generate_dummy_characters
+from triggers import generate_triggers
+from traits import generate_traits
 from character import process_character
 from lookups import *
 
 path = "C:/Users/Jeroen/Documents/Paradox Interactive/Crusader Kings III/mod/agotcch/generate"
 
-def process_lines():
+def process_dna_lines(lines):
+    dnas = []
+
+    for i, line in enumerate(lines):
+        if "portrait_info" in line:
+            dnas.append(lines[i - 1].split(" = ")[0])
+
+    return dnas
+
+def process_character_lines(lines, dnas):
     current_year_block = 0
     character_start_index = 0
 
     characters = {}
+    dragonriders = []
 
     for i, line in enumerate(lines):
         if not line or line[0] == '#':
@@ -47,6 +59,9 @@ def process_lines():
             elif not has_father:
                 # TODO handle characters with only a mother (eg Maege Mormont's children)
                 continue
+
+            if charachter["dragons"]["is_dragonrider"]:
+                dragonriders.append(character["id"])
             
             characters[character["id"]] = character
             print(f'\rProcessed: {character["id"]} - {character["name"]["primary"]}', end='\x1b[2K')
@@ -55,13 +70,15 @@ def process_lines():
     
     fathers, mothers = find_ancestries(characters)
 
+    all_ids = set(characters.keys()).union(fathers.keys(), mothers.keys(), dragonriders)
+
     # with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
     with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
         f.write(generate_story_cycles(characters, fathers, mothers))
 
     # with open(path + '/output/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
     with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
-        f.write(generate_birth_effects(characters, fathers, mothers))
+        f.write(generate_birth_effects(characters, fathers, mothers, dnas))
 
     # with open(path + '/output/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
     with open('C:/Users/Jeroen/Documents/GitHub/agot/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
@@ -69,18 +86,23 @@ def process_lines():
 
     # with open(path + '/output/history/characters/canon_children_dummy_characters.txt', 'w') as f:
     with open('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/agot_canon_children_dummy_characters.txt', 'w') as f:
-        f.write(generate_dummy_characters(characters))
+        f.write(generate_dummy_characters(characters, dnas))
 
     with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_scripted_triggers_canon_characters.txt', 'w') as f:
-        f.write(generate_triggers(characters))
+        f.write(generate_triggers(all_ids))
         
-    with open('CC:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w') as f:
-        f.write(generate_traits(characters))
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w') as f:
+        f.write(generate_traits(all_ids))
 
 
-# folder_path = path + '/characters/small'
-folder_path = 'C:/Users/Jeroen/Documents/GitHub/agot/history/characters'
-excluded_files = ['00_agot_char_dragons.txt']
-lines = file.read_text_files_to_lines(folder_path, excluded_files)
+# characters_folder_path = path + '/characters/small'
+characters_folder_path = 'C:/Users/Jeroen/Documents/GitHub/agot/history/characters'
+excluded_character_files = ['00_agot_char_dragons.txt']
+character_lines = file.read_text_files_to_lines(characters_folder_path, excluded_character_files)
 
-process_lines()
+dna_folder_path = 'C:/Users/Jeroen/Documents/GitHub/agot/common/dna_data'
+excluded_dna_files = ['agot_dna_dragons.txt']
+dna_lines = file.read_text_files_to_lines(dna_folder_path, excluded_dna_files)
+
+dnas = process_dna_lines(dna_lines)
+process_character_lines(character_lines, dnas)

@@ -1,16 +1,16 @@
 import textwrap
 
-def generate_triggers(characters: dict) -> str:
+def generate_triggers(ids: list) -> str:
     triggers = []
 
-    for child_id, child in characters.items():
+    for character_id in ids:
         trigger = textwrap.dedent(f"""
-            is_{child_id} = {{
+            is_character_{character_id.lower()} = {{
                 OR = {{
-                    has_inactive_trait = is_{child_id}
+                    has_inactive_trait = is_{character_id.lower()}
                     AND = {{
-                        exists = character:{child_id}
-                        this = character:{child_id}
+                        exists = character:{character_id}
+                        this = character:{character_id}
                     }}
                 }}
             }}
