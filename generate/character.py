@@ -120,6 +120,7 @@ def init_character():
         },
         "nickname": "",
         "on_birth": "",
+        "skipped": False,
         "config": { "prevent_pregnancy": False }
     }
 
@@ -203,6 +204,9 @@ def process_canon_children_alt_name(character, value):
 def process_canon_children_real_father_knows(character, value):
     character["bastard"]["real_father_knows"] = True if value == "yes" else False
 
+def process_canon_children_skip(character, value):
+    character["skipped"] = True if value == "yes" else False
+
 key_action_map = {
     "name": process_name,
     "dynasty": process_house,
@@ -226,4 +230,5 @@ key_action_map = {
     "canon_children_mother_dies": process_canon_children_mother_dies,
     "canon_children_alt_name": process_canon_children_alt_name,
     "canon_children_real_father_knows": process_canon_children_real_father_knows,
+    "canon_children_skip": process_canon_children_skip
 }

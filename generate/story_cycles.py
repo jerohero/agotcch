@@ -55,7 +55,7 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
         textwrap.dedent(f"""
         agot_canon_children_setup_father_effect = {{
             FATHER = story_owner
-            FATHER_FLAG = is_{father_id}
+            FATHER_TRAIT = is_{father_id}
         }}
         """)
     ]
@@ -70,7 +70,7 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
             agot_canon_children_setup_mother_effect = {{
                 FATHER = story_owner
                 MOTHER = character:{mother_id}
-                MOTHER_FLAG = is_{mother_id}
+                MOTHER_TRAIT = is_{mother_id}
                 PREVENT_PREGNANCY = {"yes" if should_prevent_pregnancy else "no"}
             }}
         """))
@@ -83,7 +83,7 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
             agot_canon_children_setup_real_father_effect = {{
                 FATHER = story_owner
                 REAL_FATHER = character:{real_father_id}
-                REAL_FATHER_FLAG = is_{real_father_id}
+                REAL_FATHER_TRAIT = is_{real_father_id}
                 REAL_FATHER_VAR = agot_canon_children_real_father_{real_father_id}
             }}
         """))
@@ -161,7 +161,7 @@ def generate_pregnancy_effects(characters, child_ids, mother_ids, indent):
             # {mother_id}
             {mother_condition} = {{
                 limit = {{
-                    has_character_flag = is_{mother_id}
+                    has_inactive_trait = is_{mother_id}
                     scope:canon_father = {{
                         {pregnancy_trigger}
                     }}
@@ -197,7 +197,7 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
                     limit = {{
                         agot_canon_children_child_pregnancy_trigger = {{
                             ID = {child_id}
-                            FLAG = is_{child_id}
+                            TRAIT = is_{child_id}
                             BIRTH_YEAR = agot_canon_children_birth_year_{child_id}
                         }}
                     }}
@@ -209,7 +209,7 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
         # Lifecycle
         agot_canon_children_life_cycle_effect = {{
             MOTHER = scope:canon_mother
-            FINAL_CHILD_FLAG = is_{child_ids[-1]}
+            FINAL_CHILD_TRAIT = is_{child_ids[-1]}
             FINAL_CHILD_ID = {child_ids[-1]}
         }}
     """))

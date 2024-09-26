@@ -116,7 +116,7 @@ def create_birth_effect(character: dict, chained_child_fathers: list) -> str:
                 agot_canon_children_after_birth_effect = {{
                     NAME_PRIMARY = "{character['name']['primary']}"
                     NAME_ALT = "{character['name']['alt']}"
-                    FLAG = "is_{character['id']}"
+                    TRAIT = "is_{character['id']}"
                     DNA = "Dummy_{character['id']}"
                 }}
             }}
@@ -146,7 +146,7 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list) -> st
                     agot_canon_children_after_birth_effect = {{
                         NAME_PRIMARY = "{character['name']['primary']}"
                         NAME_ALT = "{character['name']['alt']}"
-                        FLAG = "is_{character['id']}"
+                        TRAIT = "is_{character['id']}"
                         DNA = "Dummy_{character['id']}"
                     }}
                     {inject_data(character, chained_child_fathers, 5)}
