@@ -18,10 +18,6 @@ def process_lines():
     characters = {}
 
     for i, line in enumerate(lines):
-        # TEMP
-        # if len(characters) > 30:
-        #     break
-
         if not line or line[0] == '#':
             continue
         
@@ -36,7 +32,7 @@ def process_lines():
         if is_line_canon_child:
             character = process_character(lines, character_start_index)
 
-            if character is None:
+            if character is None or character["skipped"] is True:
                 continue
 
             has_mother = character["mother"] != ""
@@ -53,25 +49,28 @@ def process_lines():
                 continue
             
             characters[character["id"]] = character
+            print(f'\rProcessed: {character["id"]} - {character["name"]["primary"]}', end='\x1b[2K')
 
-    print(len(characters))
+    print(f'\r{len(characters)} characters processed', end='')
     
     fathers, mothers = find_ancestries(characters)
 
-    with open(path + '/output/agot_canon_children_story_cycles.txt', 'w') as f:
+    with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
         f.write(generate_story_cycles(characters, fathers, mothers))
 
-    with open(path + '/output/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
+    with open(path + '/output/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
         f.write(generate_birth_effects(characters, fathers, mothers))
 
-    with open(path + '/output/00_agot_canon_children_values.txt', 'w') as f:
+    with open(path + '/output/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
         f.write(generate_script_values(characters))
 
-    with open(path + '/output/canon_children_dummy_characters.txt', 'w') as f:
+    with open(path + '/output/history/characters/canon_children_dummy_characters.txt', 'w') as f:
         f.write(generate_dummy_characters(characters))
 
 
-folder_path = path + '/characters/small'
-lines = file.read_text_files_to_lines(folder_path)
+# folder_path = path + '/characters/small'
+folder_path = 'C:/Users/Jeroen/Documents/GitHub/agot/history/characters'
+excluded_files = ['00_agot_char_dragons.txt']
+lines = file.read_text_files_to_lines(folder_path, excluded_files)
 
 process_lines()
