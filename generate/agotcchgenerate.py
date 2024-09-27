@@ -28,7 +28,7 @@ def process_character_lines(lines, dnas):
     character_start_index = 0
 
     characters = {}
-    dragonriders = []
+    exception_characters = [] # Characters that aren't canon children but need their own inactive trait
 
     for i, line in enumerate(lines):
         if not line or line[0] == '#':
@@ -36,7 +36,7 @@ def process_character_lines(lines, dnas):
         
         is_line_character_name = "\tname = " in line
 
-        canon_statuses = ["canon_status_canon", "canon_status_semicanon"] # ... canon_status_mentioned
+        canon_statuses = ["canon_status_canon", "canon_status_semicanon", "canon_status_mentioned"]
         is_line_canon_child = any(status in line for status in canon_statuses)
 
         if is_line_character_name:
@@ -45,8 +45,11 @@ def process_character_lines(lines, dnas):
         if is_line_canon_child:
             character = process_character(lines, character_start_index)
 
-            if character is None or character["skipped"] is True:
-                continue
+            if character["dragons"]["is_dragonrider"] or character["skipped"]:
+                exception_characters.append(character["id"])
+
+            # if character is None:
+            #     continue
 
             has_mother = character["mother"] != ""
             has_father = character["father"] != "" or character["real_father"] != ""
@@ -61,8 +64,8 @@ def process_character_lines(lines, dnas):
                 # TODO handle characters with only a mother (eg Maege Mormont's children)
                 continue
 
-            if character["dragons"]["is_dragonrider"]:
-                dragonriders.append(character["id"])
+            if character["dragons"]["is_dragonrider"] or character["skipped"]:
+                exception_characters.append(character["id"])
             
             characters[character["id"]] = character
             print(f'\rProcessed: {character["id"]} - {character["name"]["primary"]}', end='\x1b[2K')
@@ -71,7 +74,7 @@ def process_character_lines(lines, dnas):
     
     fathers, mothers = find_ancestries(characters)
 
-    all_ids = set(characters.keys()).union(fathers.keys(), mothers.keys(), dragonriders)
+    all_ids = set(characters.keys()).union(fathers.keys(), mothers.keys(), exception_characters)
 
     # with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
     with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/agot_canon_children_story_cycles.txt', 'w', encoding="utf-8-sig") as f:

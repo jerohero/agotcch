@@ -50,7 +50,7 @@ def process_character(lines, character_start_index):
         if is_after_adulthood:
             if "trait = dragonrider" in line:
                 character["dragons"]["is_dragonrider"] = True
-            continue
+            return character
 
         # Some history after the child's birth should be ignored
         is_birth_block = current_year_block == 0 or current_year_block == character["birth"]
@@ -68,7 +68,7 @@ def process_character(lines, character_start_index):
             key, value = key.strip(), value.split("#", 1)[0].replace("{", "").replace("}", "").strip() # Remove comments and whitespaces
 
             if "canon_children_skip" in key and value == "yes":
-                return None
+                return character
 
             if key in key_action_map:
                 key_action_map[key](character, value)
