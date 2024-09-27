@@ -64,11 +64,13 @@ def create_base_birth_effect(characters: dict, mothers_to_children: dict) -> str
 
         for j, child_id in enumerate(mothers_to_children[mother]):
             child = characters[child_id]
+
             if "twin" in child["traits"]["inherited"]:
-                twin_birth_effects = handle_twin_births(child, twins, characters)
                 if twin_birth_effects:
+                    twin_birth_effects = [] # Will cause issues if there are multiple sets of twins, but it's a rare edge case so we'll just skip it for now
                     continue
 
+                twin_birth_effects = handle_twin_births(child, twins, characters)
             child_effects.append(create_child_effect(j, child, twin_birth_effects))
 
         setup_effects.append(textwrap.dedent(f"""
@@ -119,8 +121,8 @@ def create_birth_effect(character: dict, chained_child_fathers: list, has_dna: b
                 {"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
                     NAME_MALE = "{name_male}"
                     NAME_FEMALE = "{name_female}"
-                    TRAIT = "is_{character["id"].lower()}"{ f'''
-                    DNA = "Dummy_{character["id"]}"''' if has_dna else "" }
+                    TRAIT = is_{character["id"].lower()}{ f'''
+                    DNA = Dummy_{character["id"]}''' if has_dna else "" }
                 }}
             }}
             {inject_data(character, chained_child_fathers)}
@@ -152,8 +154,8 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list, has_d
                     {"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
                         NAME_MALE = "{name_male}"
                         NAME_FEMALE = "{name_female}"
-                        TRAIT = "is_{character["id"].lower()}"{ f'''
-                        DNA = "Dummy_{character["id"]}"''' if has_dna else "" }
+                        TRAIT = is_{character["id"].lower()}{ f'''
+                        DNA = Dummy_{character["id"]}''' if has_dna else "" }
                     }}
                     {inject_data(character, chained_child_fathers, 5)}
                 }}
@@ -189,7 +191,7 @@ def create_child_effect(index: int, child: dict, twin_birth_effects: list) -> st
     return textwrap.dedent(f"""
         {"if" if index == 0 else "else_if"} = {{
             limit = {{ agot_canon_children_check_pregnancy_child_trigger = {{ FLAG = is_{child['id'].lower()} }} }}
-            agot_canon_children_{child['id'].lower()}_birth_effect = yes{textwrap.indent(''.join(twin_birth_effects), INDENT * 5).rstrip()}
+            agot_canon_children_{child['id'].lower()}_birth_effect = yes{textwrap.indent(''.join(twin_birth_effects), INDENT * 3).rstrip()}
         }}
     """)
 
