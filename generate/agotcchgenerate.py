@@ -8,6 +8,7 @@ from script_values import generate_script_values
 from dummy_characters import generate_dummy_characters
 from triggers import generate_triggers
 from traits import generate_traits
+from accessories import generate_accessories
 from character import process_character
 from lookups import *
 
@@ -73,26 +74,37 @@ def process_character_lines(lines, dnas):
     all_ids = set(characters.keys()).union(fathers.keys(), mothers.keys(), dragonriders)
 
     # with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
-    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/agot_canon_children_story_cycles.txt', 'w', encoding="utf-8-sig") as f:
+        print('Generating story cycles...')
         f.write(generate_story_cycles(characters, fathers, mothers))
 
     # with open(path + '/output/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
-    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w', encoding="utf-8-sig") as f:
+        print('Generating birth effects...')
         f.write(generate_birth_effects(characters, fathers, mothers, dnas))
 
     # with open(path + '/output/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
-    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/script_values/00_agot_canon_children_values.txt', 'w', encoding="utf-8-sig") as f:
+        print('Generating script values...')
         f.write(generate_script_values(characters))
 
     # with open(path + '/output/history/characters/canon_children_dummy_characters.txt', 'w') as f:
-    with open('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/agot_canon_children_dummy_characters.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/agot_canon_children_dummy_characters.txt', 'w', encoding="utf-8-sig") as f:
+        print('Generating dummy characters...')
         f.write(generate_dummy_characters(characters, dnas))
 
-    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_scripted_triggers_canon_characters.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_scripted_triggers_canon_characters.txt', 'w', encoding="utf-8-sig") as f:
+        print('Generating triggers...')
         f.write(generate_triggers(all_ids))
         
-    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w') as f:
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w', encoding="utf-8-sig") as f:
+        print('Generating traits...')
         f.write(generate_traits(all_ids))
+
+    portrait_modifiers = generate_accessories(all_ids)
+    with open('C:/Users/Jeroen/Documents/GitHub/agot/gfx/portraits/portrait_modifiers/02_all_agot_characters.txt', 'w', encoding="utf-8-sig") as f:
+        print('Generating portrait modifiers...')
+        f.write(portrait_modifiers)
 
 
 # characters_folder_path = path + '/characters/small'

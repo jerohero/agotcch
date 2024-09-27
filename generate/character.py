@@ -48,7 +48,8 @@ def process_character(lines, character_start_index):
 
         # History after adulthood (16+) should be ignored
         if is_after_adulthood:
-            character["dragons"]["is_dragonrider"] = "trait = dragonrider" in line
+            if "trait = dragonrider" in line:
+                character["dragons"]["is_dragonrider"] = True
             continue
 
         # Some history after the child's birth should be ignored
