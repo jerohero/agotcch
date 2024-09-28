@@ -198,7 +198,8 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
 						agot_canon_children_child_pregnancy_trigger = {{
 							ID = {child_id}
 							TRAIT = is_{child_id.lower()}
-							BIRTH_YEAR = agot_canon_children_birth_year_{child_id.lower()}
+							BIRTH_YEAR = {child["birth"]}
+							BIRTH_YEAR_MIN = {child["birth"] - 1}
 						}}
 					}}
 					{pregnancy_effect}

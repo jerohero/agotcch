@@ -87,9 +87,9 @@ def process_character_lines(lines, dnas):
 		f.write(generate_birth_effects(characters, fathers, mothers, dnas))
 
 	# with open(path + '/output/common/script_values/00_agot_canon_children_values.txt', 'w') as f:
-	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/script_values/00_agot_canon_children_values.txt', 'w', encoding="utf-8-sig") as f:
-		print('Generating script values...')
-		f.write(generate_script_values(characters))
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/script_values/00_agot_canon_children_values.txt', 'w', encoding="utf-8-sig") as f:
+	# 	print('Generating script values...')
+	# 	f.write(generate_script_values(characters))
 
 	# with open(path + '/output/history/characters/canon_children_dummy_characters.txt', 'w') as f:
 	with open('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/agot_canon_children_dummy_characters.txt', 'w', encoding="utf-8-sig") as f:
