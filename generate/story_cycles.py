@@ -124,7 +124,7 @@ def generate_pregnancy_effect(child, indent):
 	if child["real_father"] == "":
 		effect = textwrap.dedent(f"""
 			agot_canon_children_force_pregnancy_effect = {{
-				CHILD_FLAG = flag:is_{child["id"].lower()}
+				CHILD_FLAG = is_{child["id"].lower()}
 				IS_FEMALE = {is_female}
 				FATHER = scope:canon_father
 				BIRTH_FLAG = {birth_flag}
@@ -133,7 +133,7 @@ def generate_pregnancy_effect(child, indent):
 	else:
 		effect = textwrap.dedent(f"""
 			agot_canon_children_force_bastard_pregnancy_basic_effect = {{
-				CHILD_FLAG = flag:is_{child["id"].lower()}
+				CHILD_FLAG = is_{child["id"].lower()}
 				IS_FEMALE = {is_female}
 				REAL_FATHER = {
 					f"scope:canon_father.var:agot_canon_children_real_father_{child['real_father'].lower()}" if is_bastard_with_assumed_father  
@@ -151,11 +151,17 @@ def generate_pregnancy_effects(characters, child_ids, mother_ids, indent):
 	effects = []
 
 	for mother_index, mother_id in enumerate(mother_ids):
-		first_child = characters[child_ids[0]]
+		mother_child_ids = [child_id for child_id in child_ids if characters[child_id]["mother"] == mother_id]
+
+		first_child = characters[mother_child_ids[0]]
 		mother_condition = "if" if mother_index == 0 else "else_if"
 
+		if mother_id == "Baratheon_rs_1":
+			print('\n')
+			print(first_child)
+
 		pregnancy_trigger = generate_pregnancy_trigger(first_child["bastard"]["is_known"], indent)
-		children_effects = generate_children_effects(characters, child_ids, mother_id, indent)
+		children_effects = generate_children_effects(characters, mother_child_ids, mother_id, indent)
 
 		effects.append(textwrap.dedent(f"""
 			# {mother_id}
