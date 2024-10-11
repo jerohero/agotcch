@@ -138,12 +138,12 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list, has_d
 		agot_canon_children_{character["id"].lower()}_birth_effect = {{
 			create_character = {{
 				name = "{character['name']['primary']}"
-				father = scope:child.father
+				father = {'scope:child.father' if character['father'] else 'scope:child.real_father'}
 				mother = scope:child.mother
 				gender = {'female' if character['is_female'] else 'male'}
-				faith = scope:child.father.faith
-				culture = scope:child.father.culture
-				dynasty_house = scope:child.father.house
+				faith = {'scope:child.father' if character['father'] else 'scope:child.real_father'}.faith
+				culture = {'scope:child.father' if character['father'] else 'scope:child.real_father'}.culture
+				dynasty_house = {'scope:child.father' if character['father'] else 'scope:child.real_father'}.house
 				employer = scope:child.mother.employer
 
 				random_traits = no
@@ -165,7 +165,8 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list, has_d
 
 def inject_data(character: dict, chained_child_fathers: list, indent: int = 3) -> str:
 	data_parts = [
-		get_culture(),
+		get_culture(character),
+		get_location(),
 		get_flags(character),
 		get_inactive_traits(character),
 		get_nickname(character),
@@ -191,13 +192,17 @@ def create_child_effect(index: int, child: dict, twin_birth_effects: list) -> st
 	return textwrap.dedent(f"""
 		{"if" if index == 0 else "else_if"} = {{
 			limit = {{ agot_canon_children_check_pregnancy_child_trigger = {{ FLAG = is_{child['id'].lower()} }} }}
-			agot_canon_children_{child['id'].lower()}_birth_effect = yes{textwrap.indent(''.join(twin_birth_effects), INDENT * 3).rstrip()}
+			agot_canon_children_{child['id'].lower()}_birth_effect = yes{textwrap.indent(''.join(twin_birth_effects[::-1]), INDENT * 3).rstrip()}
 		}}
 	""")
 
-def get_culture():
+def get_culture(character):
+	if not character['father']:
+		return 'set_culture_same_as = scope:real_father\n'
 	return 'set_culture_same_as = scope:father\n'
 
+def get_location():
+	return 'set_location = scope:mother\n'
 
 def get_flags(character):
 	flags = ['add_character_flag = has_scripted_appearance']
