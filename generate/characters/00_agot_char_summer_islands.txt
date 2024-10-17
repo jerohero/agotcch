@@ -1,0 +1,71 @@
+﻿#### Summer Islander Characters ####
+Xho_1 = {
+	name = Jalabhar # Canon, Jalabhar Xho, Exiled Prince of the Red Flower Vale
+	dynasty = dynn_Xho
+	#dna = Xho_1
+
+	# father=122304000
+	# mother=422304000
+
+	martial = 6
+	diplomacy = 5
+	intrigue = 2
+	stewardship = 2
+	learning = 5
+	prowess = 8
+
+	#religion = summer_rel AGOT TODO
+	religion = princely_arbiter
+	culture = jhalani
+
+	trait = education_diplomacy_2
+	trait = bossy 
+
+	trait = arrogant
+	trait = generous
+	trait = gregarious
+	trait = fashionable #he's drippy 
+
+	disallow_random_traits = yes
+
+	8268.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	} 
+	8284.1.1 = {
+		#add_spouse=130304029 #Rotumu
+		trait = education_martial_prowess_3
+		trait = lifestyle_hunter 
+		add_trait_xp = {
+			trait = lifestyle_hunter
+			track = hunter
+			value = {
+				integer_range = {
+					min = medium_lifestyle_random_xp_low
+					max = medium_lifestyle_random_xp_high
+				}
+			}
+		}
+	}
+	8289.6.1 = {
+		employer = Baratheon_2 #Robert Baratheon
+		#add_claim=k_summer_islands
+		#add_claim=d_red_flower_vale
+	}
+	8298.10.28 = { 
+		employer = Baratheon_5 #Joffrey Baratheon
+	}
+	8300.1.2 = {
+		employer = Baratheon_7 # Tommen Baratheon
+	}
+	8300.5.17 = {	#Imprisoned by Qyburn
+		effect = {
+			title:e_the_iron_throne.holder = {
+				imprison = {
+					target = ROOT
+					type = house_arrest
+				}
+			}
+		}
+	}
+}

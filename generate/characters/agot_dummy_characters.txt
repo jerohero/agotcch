@@ -1,0 +1,1629 @@
+﻿##AGOT Dummy Characters
+
+AGOT_At_Sea_Siren_1 = {
+	name = "Siren" #
+	# dna = AGOT_At_Sea_Siren
+	religion = the_seven_main
+	culture = crownlander
+
+	25.1.20 = {
+		birth = yes
+	}
+	30.1.1 = { death = yes }
+}
+
+Great_Other = {
+	name = Great_Other
+	religion = cold_gods
+	culture = others
+
+	8300.1.1  = {
+		birth = yes
+	}
+}
+
+fix_the_histories = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	trait = education_martial_3
+	trait = education_martial_prowess_4
+	trait = ambitious
+	trait = brave
+	trait = callous
+	trait = diligent
+
+	8000.1.1 = {
+		birth = yes
+	}
+}
+
+plc_1 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_1 = {
+	name = Tyroshi_F_Name_1
+	religion = weeping_lady
+	culture = tyroshi
+
+	female = yes
+
+	8225.1.1 = {
+		birth = yes
+	}
+}
+
+plc_2 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_2 = {
+	name = Hartalari_M_Name_1
+	religion = rhllor
+	culture = hartalari
+
+	8218.1.1 = {
+		birth = yes
+	}
+}
+
+plc_3 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+plc_4 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_4 = {
+	name = Hartalari_M_Name_2
+	religion = rhllor
+	culture = hartalari
+
+	8250.1.1 = {
+		birth = yes
+	}
+}
+
+plc_5 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_5 = {
+	name = Hartalari_F_Name_1
+	religion = rhllor
+	culture = hartalari
+
+	female = yes
+
+	8232.1.1 = {
+		birth = yes
+	}
+}
+
+plc_6 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_6 = {
+	name = Hartalari_M_Name_3
+	religion = trios
+	culture = hartalari
+
+	8238.1.1 = {
+		birth = yes
+	}
+}
+
+plc_7 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_7 = {
+	name = Hartalari_M_Name_4
+	religion = rhllor
+	culture = hartalari
+
+	8219.1.1 = {
+		birth = yes
+	}
+}
+
+plc_8 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_8 = {
+	name = Hartalari_F_Name_2
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	8227.1.1 = {
+		birth = yes
+	}
+}
+
+plc_9 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_9 = {
+	name = Hartalari_M_Name_5
+	religion = trios
+	culture = hartalari
+
+	8224.1.1 = {
+		birth = yes
+	}
+}
+
+plc_10 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_10 = {
+	name = Hartalari_F_Name_3
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	8242.1.1 = {
+		birth = yes
+	}
+}
+
+plc_11 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_11 = {
+	name = Hartalari_M_Name_6
+	religion = trios
+	culture = hartalari
+
+	8240.1.1 = {
+		birth = yes
+	}
+}
+
+plc_12 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_12 = {
+	name = Hartalari_M_Name_7
+	religion = rhllor
+	culture = hartalari
+
+	8219.1.1 = {
+		birth = yes
+	}
+}
+
+plc_13 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_13 = {
+	name = Hartalari_M_Name_8
+	religion = trios
+	culture = hartalari
+
+	8228.1.1 = {
+		birth = yes
+	}
+}
+
+
+plc_14 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_14 = {
+	name = Hartalari_M_Name_9
+	religion = weeping_lady
+	culture = hartalari
+
+	8235.1.1 = {
+		birth = yes
+	}
+}
+
+plc_15 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_15 = {
+	name = Hartalari_M_Name_10
+	religion = rhllor
+	culture = hartalari
+
+	8228.1.1 = {
+		birth = yes
+	}
+}
+
+plc_16 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_16 = {
+	name = Hartalari_M_Name_11
+	religion = rhllor
+	culture = hartalari
+
+	8221.1.1 = {
+		birth = yes
+	}
+}
+
+plc_17 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_17 = {
+	name = Hartalari_M_Name_12
+	religion = rhllor
+	culture = hartalari
+
+	8239.1.1 = {
+		birth = yes
+	}
+}
+
+plc_18 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_18 = {
+	name = Lyseni_M_Name_1
+	religion = trios
+	culture = lyseni
+
+	8224.1.1 = {
+		birth = yes
+	}
+}
+
+plc_19 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_19 = {
+	name = Hartalari_M_Name_13
+	religion = rhllor
+	culture = hartalari
+
+	8232.1.1 = {
+		birth = yes
+	}
+}
+
+plc_20 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+plc_21 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_21 = {
+	name = Volantene_F_Name_1
+	religion = rhllor
+	culture = volantene
+
+	female = yes
+
+	8242.1.1 = {
+		birth = yes
+	}
+}
+
+plc_22 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_22 = {
+	name = Volantene_F_Name_1
+	religion = rhllor
+	culture = volantene
+
+	female = yes
+
+	8242.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_pirate_1 = {
+	name = Braavos_F_Name_2
+	religion = weeping_lady
+	culture = braavosi
+
+	female = yes
+
+	8241.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_pirate_2 = {
+	name = Myrish_M_Name_2
+	religion = weeping_lady
+	culture = myrish
+
+	8221.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_pirate_3 = {
+	name = Tyroshi_M_Name_1
+	religion = trios
+	culture = tyroshi
+
+	8226.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_pirate_4 = {
+	name = Tyroshi_M_Name_2
+	religion = weeping_lady
+	culture = tyroshi
+
+	8232.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_pirate_5 = {
+	name = Pentoshi_M_Name_1
+	religion = princely_arbiter
+	culture = pentoshi
+
+	8237.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_pirate_6 = {
+	name = Tyroshi_M_Name_3
+	religion = rhllor
+	culture = tyroshi
+
+	8211.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_pirate_7 = {
+	name = Tyroshi_M_Name_3
+	religion = rhllor
+	culture = lyseni
+
+	female = yes
+
+	8242.1.1 = {
+		birth = yes
+	}
+}
+
+plc_23 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_andal_1 = {
+	name = Andalosi_F_Name_1
+	religion = rhllor
+	culture = andalosi
+
+	female = yes
+
+	8239.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_2 = {
+	name = Norvoshi_M_Name_1
+	religion = rhllor
+	culture = norvoshi
+
+	8227.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_3 = {
+	name = Norvoshi_M_Name_2
+	religion = rhllor
+	culture = norvoshi
+
+	8218.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_4 = {
+	name = Rhoynish_F_Name_1
+	religion = rhllor
+	culture = rhoynish
+
+	female = yes
+
+	8238.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_5 = {
+	name = Andalosi_M_Name_1
+	religion = rhllor
+	culture = andalosi
+
+	8229.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_6 = {
+	name = Braavos_M_Name_1
+	religion = trios
+	culture = braavosi
+
+	8216.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_7 = {
+	name = Braavos_F_Name_1
+	religion = weeping_lady
+	culture = braavosi
+
+	female = yes
+
+	8241.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_8 = {
+	name = Andalosi_M_Name_2
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8239.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_andal_9 = {
+	name = Andalosi_M_Name_3
+	religion = rhllor
+	culture = andalosi
+
+	8225.1.1 = {
+		birth = yes
+	}
+}
+
+plc_24 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_24 = {
+	name = Fangman_F_Name_1
+	religion = old_gods_frozen_shore
+	culture = fangman
+
+	female = yes
+
+	8242.1.1 = {
+		birth = yes
+	}
+	8279.1.1 = {
+		death = yes
+	}
+}
+
+plc_25 = {
+	name = "Siren"
+	religion = weeping_lady
+	culture = hartalari
+
+	female = yes
+
+	health = 1
+	trait = infirm
+	trait = cancer
+	trait = wounded_3
+
+	8000.1.1 = {
+		birth = yes
+	}
+	8258.12.21 = {
+		death = yes
+	}
+}
+
+starter_plc_25 = {
+	name = Myrish_M_Name_1
+	religion = weeping_lady
+	culture = myrish
+
+	8222.1.1 = {
+		birth = yes
+	}
+	8270.1.1 = {
+		death = yes
+	}
+}
+
+starter_plc_26 = {
+	name = Maiden_Twin_1
+	religion = rhllor
+	culture = hartalari
+
+	female = yes
+	trait = twin
+
+	8240.1.1 = {
+		birth = yes
+	}
+}
+
+starter_plc_27 = {
+	name = Maiden_Twin_2
+	religion = trios
+	culture = lyseni
+
+	female = yes
+	trait = twin
+
+	8240.1.1 = {
+		birth = yes
+	}
+}
+
+# Canon children
+Dummy_Stark_2 = {
+	name = Brandon
+	dna = Stark_2
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_3 = {
+	name = Eddard
+	dna = Stark_3
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_4 = {
+	name = Benjen
+	dna = Stark_4
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_5 = {
+	name = Lyanna
+	dna = Stark_5
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_6 = {
+	name = Robb
+	dna = Stark_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_8 = {
+	name = Sansa
+	dna = Stark_8
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_9 = {
+	name = Arya
+	dna = Stark_9
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_10 = {
+	name = Bran
+	dna = 8059
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Stark_11 = {
+	name = Rickon
+	dna = Stark_11
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Baratheon_2 = {
+	name = Robert
+	dna = Baratheon_2
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_3 = {
+	name = Stannis
+	dna = Baratheon_3
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_4 = {
+	name = Renly
+	dna = Baratheon_4
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_5 = {
+	name = Joffrey
+	dna = Baratheon_5
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_6 = {
+	name = Myrcella
+	dna = Baratheon_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_7 = {
+	name = Tommen
+	dna = Baratheon_7
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_8 = {
+	name = Edric
+	dna = Baratheon_8
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_9 = {
+	name = Gendry
+	dna = Baratheon_9
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_10 = {
+	name = Mya
+	dna = Baratheon_10
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_rs_6 = {
+	name = Bella
+	dna = Baratheon_rs_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_rs_4 = {
+	name = Barra
+	dna = Baratheon_rs_4
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Baratheon_13 = {
+	name = Shireen
+	dna = Baratheon_13
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Lannister_6 = {
+	name = Cersei
+	dna = Lannister_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Lannister_7 = {
+	name = Jaime
+	dna = Lannister_7
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Lannister_8 = {
+	name = Tyrion
+	dna = Lannister_8
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Lannister_14 = {
+	name = Joy
+	dna = Lannister_14
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Tully_2 = {
+	name = Edmund
+	dna = Tully_2
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tully_3 = {
+	name = Denys
+	dna = Tully_3
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tully_4 = {
+	name = Catelyn
+	dna = Tully_4
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tully_6 = {
+	name = Lysa
+	dna = Tully_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tully_7 = {
+	name = Edmure
+	dna = Tully_7
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tully_8 = {
+	name = Patrek
+	dna = Tully_8
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Tyrell_11 = {
+	name = Willas
+	dna = Tyrell_11
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tyrell_12 = {
+	name = Garlan
+	dna = Tyrell_12
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tyrell_13 = {
+	name = Loras
+	dna = Tyrell_13
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tyrell_14 = {
+	name = Margaery
+	dna = Tyrell_14
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Tarly_2 = {
+	name = Samwell
+	dna = Tarly_2
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tarly_3 = {
+	name = Talla
+	dna = Tarly_3
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tarly_4 = {
+	name = Samantha
+	dna = Tarly_4
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tarly_5 = {
+	name = Sansara
+	dna = Tarly_5
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Tarly_6 = {
+	name = Dickon
+	dna = Tarly_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Arryn_8 = {
+	name = Robert
+	dna = Arryn_8
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Westerling_2 = {
+	name = Jeyne
+	dna = Westerling_2
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Mormont_5 = {
+	name = Dacey
+	dna = Mormont_5
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Mormont_6 = {
+	name = Alysane
+	dna = Mormont_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Mormont_7 = {
+	name = Lyra
+	dna = Mormont_7
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Mormont_8 = {
+	name = Jorelle
+	dna = Mormont_8
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Mormont_9 = {
+	name = Lyanna
+	dna = Mormont_9
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Martell_9 = {
+	name = Arianne
+	dna = Martell_9
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Martell_10 = {
+	name = Quentyn
+	dna = Martell_10
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Martell_11 = {
+	name = Trystane
+	dna = Martell_11
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Poole_3 = {
+	name = Jeyne
+	dna = Poole_3
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Cassel_5 = {
+	name = Beth
+	dna = Cassel_5
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Dayne_7 = {
+	name = Edric
+	dna = Dayne_7
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Payne_16 = {
+	name = Podrick
+	dna = Payne_16
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Reed_2 = {
+	name = Meera
+	dna = Reed_2
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Reed_3 = {
+	name = Jojen
+	dna = Reed_3
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Manderly_9 = {
+	name = Wynafryd
+	dna = Manderly_9
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Manderly_10 = {
+	name = Wylla
+	dna = Manderly_10
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Karstark_16 = {
+	name = Harrion
+	dna = Karstark_16
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Karstark_17 = {
+	name = Eddard
+	dna = Karstark_17
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Karstark_18 = {
+	name = Torrhen
+	dna = Karstark_18
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Karstark_19 = {
+	name = Alys
+	dna = Karstark_19
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+
+Dummy_Forrester_3 = {
+	name = Rodrik
+	dna = Forrester_3
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Forrester_4 = {
+	name = Asher
+	dna = Forrester_4
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Forrester_5 = {
+	name = Mira
+	dna = Forrester_5
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Forrester_6 = {
+	name = Ethan
+	dna = Forrester_6
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Forrester_7 = {
+	name = Talia
+	dna = Forrester_7
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Forrester_8 = {
+	name = Ryon
+	dna = Forrester_8
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Forrester_30 = {
+	name = Josera
+	dna = Forrester_30
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}
+Dummy_Forrester_31 = {
+	name = Elsera
+	dna = Forrester_31
+	religion = the_seven_main
+	culture = northman
+	father = Ruin_Empress
+	118.1.1 = { birth = yes }
+	118.1.2 = { death = yes }
+}

@@ -1,0 +1,197 @@
+﻿animation_test_female = {
+	name = "Elvira"
+	female = yes
+	culture = "dragon"
+	dna = Stark_7
+	religion = "valyrian"
+
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_male = {
+	name = "Elvira"
+	dna = Stark_7
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_female_child = {
+	name = "Elvira"
+	female = yes
+	dna = Stark_7
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "810.8.26"
+	}
+}
+
+animation_test_male_child = {
+	name = "Elvira"
+	dna = Stark_7
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "810.8.26"
+	}
+}
+
+animation_test_dwarf_female = {
+	name = "Elvira"
+	female = yes
+	dna = Stark_7
+	trait = dwarf
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_dwarf_male = {
+	name = "Elvira"
+	dna = Stark_7
+	trait = dwarf
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_fat_dwarf_female = {
+	name = "Elvira"
+	female = yes
+	dna = Stark_7
+	trait = dwarf
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_fat_dwarf_male = {
+	name = "Elvira"
+	dna = Stark_7
+	trait = dwarf
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_female_pregnant = {
+	name = "Elvira"
+	female = yes
+	dna = Stark_7
+	trait = pregnant
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_muscular_female = {
+	name = "Elvira"
+	female = yes
+	dna = Stark_7
+	prowess = 15
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_muscular_male = {
+	name = "Elvira"
+	dna = Stark_7
+	prowess = 15
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_hunchbacked_female = {
+	name = "Elvira"
+	female = yes
+	dna = Stark_7
+	trait = hunchbacked
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}
+
+animation_test_hunchbacked_male = {
+	name = "Elvira"
+	dna = Stark_7
+	trait = hunchbacked
+	religion = "valyrian"
+	culture = "dragon"
+	
+	1.6.2 = {
+		birth = "800.6.2"
+	}
+	31.8.26 = {
+		death = "830.8.26"
+	}
+}

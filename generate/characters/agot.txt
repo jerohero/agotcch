@@ -1,0 +1,2399 @@
+﻿# ##AGOT
+## CK2AGOT Vanity Characters. Will revisit this when we have our own vanity characters. - Gaytriarch
+# vanity_Knuckey_1 = {
+# 	name = "Adam" #
+# 	dynasty = dynn_vanity_Knuckey #Knuckey
+
+# 	learning = 9
+# 	martial = 9
+# 	stewardship = 8
+# 	intrigue = 4
+# 	diplomacy = 4
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	trait = rude
+# 	trait = stubborn
+# 	trait = education_stewardship_3
+# 	trait = lunatic_1
+# 	#trait = hedonist #AGOT TODO trait doesn't exist anymore
+# 	#trait = falconer #AGOT TODO
+# 	trait = honest
+
+# 	8265.9.16 = { birth = yes }
+# 	8281.9.16 = {
+# 		trait = knight
+# 		trait = blademaster_2
+# 	}
+# }
+# vanity_MillerR_1 = {
+# 	name = "vanity_MillerR_1"
+# 	dynasty = dynn_vanity_MillerR #vanity_MillerR_1's Miller
+# 	#dna = "chaf00b0f00"
+# 	#properties = "0e0000"
+
+# 	martial = 8
+# 	diplomacy = 4
+# 	intrigue = 6
+# 	stewardship = 9
+# 	learning = 6
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = education_stewardship_4
+# 	trait = stubborn
+# 	#trait = familyperson # AGOT TODO 
+# 	trait = rude
+# 	trait = just
+# 	trait = gluttonous
+# 	trait = greedy
+# 	trait = lustful
+# 	trait = scholar
+# 	#trait = hedonist # AGOT TODO
+# 	#trait = arrogant # AGOT TODO
+# 	trait = diligent
+# 	trait = knight
+# 	trait = blademaster_3
+# 	trait = cynical
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+
+# 	8256.1.1 = { birth = yes }
+# 	8280.1.1 = { add_spouse = vanity_MillerR_Olivia }
+# }
+# vanity_MillerR_Olivia = {
+# 	name = "Olivia"
+# 	female = yes
+# 	#dna = "ddfab0dcb00"
+# 	#properties = "0b00h0"
+
+# 	martial = 4
+# 	diplomacy = 4
+# 	intrigue = 2
+# 	stewardship = 9
+# 	learning = 5
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = education_stewardship_4
+# 	trait = beauty_good_2
+# 	#trait = arrogant # AGOT TODO
+# 	trait = stubborn
+# 	trait = rude
+# 	trait = just
+# 	trait = diligent
+# 	#trait = falconer #AGOT TODO
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	trait = honest
+# 	trait = gregarious
+# 	trait = content
+# 	trait = cynical
+# 	trait = trusting
+# 	trait = fashionable
+
+# 	8254.1.1 = { birth = yes }
+# }
+# vanity_Minshull_1 = {
+# 	name = "Mark"
+# 	dynasty = dynn_vanity_Minshull
+
+# 	martial = 8
+# 	diplomacy = 5
+# 	intrigue = 6
+# 	stewardship = 6
+
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	trait = just
+# 	#trait = kind #AGOT TODO
+# 	trait = education_diplomacy_3
+
+# 	8251.9.30 = { birth = yes }
+# 	8270.1.1 = { add_spouse = vanity_Gosling_1 }
+# 	8318.1.1 = { death = yes }
+# }
+# vanity_Gosling_1 = {
+# 	name = "Tracey"
+# 	female = yes
+# 	dynasty = dynn_vanity_Gosling
+
+# 	martial = 6
+# 	diplomacy = 7
+# 	intrigue = 7
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = riverlander
+
+# 	trait = honest
+# 	trait = education_stewardship_3
+
+# 	8253.5.3 = { birth = yes }
+# 	8305.1.1 = { death = yes }
+# }
+# vanity_Minshull_2 = {
+# 	name = "Daniel"
+# 	dynasty = dynn_vanity_Minshull
+
+# 	martial = 6
+# 	diplomacy = 4
+# 	intrigue = 5
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	trait = just
+# 	trait = patient
+# 	#trait = intellect_good_3
+
+# 	father = vanity_Minshull_1
+# 	mother = vanity_Gosling_1
+
+# 	give_nickname = nick_the_lionheart
+
+# 	8272.7.12 = { birth = yes }
+# 	8352.1.2 = { death = yes }
+# }
+# vanity_Minshull_3 = {
+# 	name = "Ellen"
+# 	female = yes
+# 	dynasty = dynn_vanity_Minshull
+
+# 	martial = 4
+# 	diplomacy = 3
+# 	intrigue = 7
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	trait = lifestyle_gardener
+
+# 	father = vanity_Minshull_1
+# 	mother = vanity_Gosling_1
+
+# 	8275.2.19 = { birth = yes }
+# 	8370.1.1 = { death = yes }
+# }
+
+
+# ####################
+# # Alec's Family
+# vanity_Trevelyan_1 = {
+# 	name = "James"
+# 	dynasty = dynn_vanity_Trevelyan #Trevelyan
+
+# 	#trait = syphilitic #AGOT TODO
+# 	trait = education_intrigue_4
+# 	#trait = hedonist
+# 	trait = beauty_good_2
+# 	trait = lustful
+
+# 	religion = the_seven_main
+# 	culture = stone_dornish
+
+# 	8225.1.1 = { birth = yes }
+# 	8258.1.2 = { death = yes }
+# }
+# vanity_Trevelyan_2 = {
+# 	name = "Alec"
+# 	dynasty = dynn_vanity_Trevelyan #Trevelyan
+
+# 	#dna = "ddglfridbcr"
+# 	#properties = "0e00c"
+
+# 	diplomacy = 4
+# 	martial = 3
+# 	stewardship = 2
+# 	intrigue = 3
+# 	learning = 5
+
+# 	religion = the_seven_main
+# 	culture = northman
+# 	#culture = stone_dornish
+
+# 	trait = education_stewardship_4
+# 	#trait = familyperson #AGOT TODO
+# 	#trait = stressed #AGOT TODO
+# 	trait = just
+# 	#trait = arrogant #AGOT TODO
+# 	#trait = duelist #AGOT TODO
+# 	trait = patient 
+# 	trait = honest
+# 	trait = paranoid
+# 	#trait = quick
+# 	trait = greensight
+# 	trait = cynical
+# 	trait = gregarious
+
+# 	father = vanity_Trevelyan_1
+
+# 	8245.7.1 = {
+# 		birth = yes
+# 		effect = { set_culture = culture:stone_dornish }
+# 	}
+# 	8264.9.30 = {
+# 		add_spouse = vanity_Trevelyan_spouse_1
+# 		trait = blademaster_3
+# 	}
+# 	8298.1.2 = { death = yes }
+# }
+# vanity_Trevelyan_spouse_1 = {
+# 	name = "Xenia"
+# 	female = yes
+
+# 	religion = the_seven_main
+# 	culture = stone_dornish
+
+# 	trait = lustful
+# 	#trait = hedonist #AGOT TODO
+# 	#trait = cruel #AGOT TODO
+# 	trait = education_intrigue_3
+# 	trait = lunatic_1
+# 	trait = beauty_good_2
+# 	trait = arbitrary
+
+# 	8248.1.1 = { birth = yes }
+# 	8264.9.30 = { add_spouse = vanity_Trevelyan_2 }
+# 	8298.1.2 = { death = yes }
+# }
+# # Alec's offspring
+# vanity_Trevelyan_3 = {
+# 	name = "Spencer"
+# 	dynasty = dynn_vanity_Trevelyan #Trevelyan
+
+# 	religion = the_seven_main
+# 	culture = stone_dornish
+
+# 	trait = education_stewardship_4
+# 	trait = patient
+# 	#trait = arrogant #AGOT TODO
+# 	trait = gregarious
+# 	trait = just
+# 	trait = cynical
+# 	#trait = tall #AGOT TODO
+# 	#trait = familyperson #AGOT TODO
+# 	trait = blademaster_3
+
+# 	father = vanity_Trevelyan_2
+# 	mother = vanity_Trevelyan_spouse_1
+
+# 	8265.1.1 = { birth = yes }
+# 	8328.1.2 = { death = yes }
+# }
+# ####
+# vanity_Trevelyan_4 = {
+# 	name = "Fouro"
+# 	dynasty = dynn_vanity_Trevelyan #Trevelyan
+
+# 	religion = the_seven_main
+# 	culture = stone_dornish
+
+# 	trait = drunkard
+# 	trait = rude
+
+# 	father = vanity_Trevelyan_1
+
+# 	8249.1.1 = { birth = yes }
+# 	8298.1.2 = { death = yes }
+# }
+# vanity_Trevelyan_5 = {
+# 	name = "Andrew"
+# 	dynasty = dynn_vanity_Trevelyan #Trevelyan
+
+# 	religion = the_seven_main
+# 	culture = stone_dornish
+
+# 	#trait = stressed #AGOT TODO
+# 	trait = twin
+# 	trait = kinslayer_1
+# 	trait = scholar
+# 	trait = cynical
+# 	trait = ambitious
+# 	#trait = kind #AGOT TODO
+
+# 	father = vanity_Trevelyan_1
+
+# 	8250.1.1 = { birth = yes }
+# 	8298.1.2 = { death = yes }
+# }
+# vanity_Trevelyan_6 = {
+# 	name = "Joseph"
+# 	dynasty = dynn_vanity_Trevelyan #Trevelyan
+
+# 	religion = the_seven_main
+# 	culture = stone_dornish
+
+# 	trait = education_intrigue_4
+# 	trait = drunkard
+# 	trait = legitimized_bastard
+# 	trait = poet
+# 	trait = gluttonous
+# 	trait = ambitious
+# 	trait = patient
+# 	trait = rude
+
+# 	father = vanity_Trevelyan_1
+
+# 	8255.1.1 = { birth = yes }
+# 	8298.1.2 = { death = yes }
+# }
+# vanity_Trevelyan_7 = {
+# 	name = "Jay"
+# 	dynasty = dynn_vanity_Trevelyan #Trevelyan
+
+# 	religion = the_seven_main
+# 	culture = stone_dornish
+
+# 	#trait = homosexual # Not needed in CK3
+
+# 	father = vanity_Trevelyan_1
+
+# 	8257.1.2 = { birth = yes }
+# 	8298.1.2 = { death = yes }
+# }
+
+# ###################
+# # Galle and his immediate family
+# vanity_Hamilton_1 = {
+# 	name = "Lesley"
+# 	female = yes
+# 	dynasty = dynn_vanity_Hamilton
+# 	#dna = "cdhahjjeabp"
+# 	#properties = "0j00x"
+
+# 	religion = old_gods_south
+# 	culture = northman
+
+# 	stewardship = 3
+# 	diplomacy = 2
+# 	martial = 3
+# 	intrigue = 4
+# 	learning = 2
+
+# 	trait = education_stewardship_4
+# 	trait = diligent
+# 	trait = temperate
+# 	#trait = stressed #AGOT TODO (not needed)
+# 	trait = just
+# 	trait = patient
+# 	#trait = arrogant #AGOT TODO
+# 	trait = cynical
+# 	trait = ambitious
+
+# 	8246.5.2 = { birth = yes }
+# }
+# Hayes_18 = {
+# 	name = "Gregor"
+# 	dynasty = dynn_Hayes # Hayes
+# 	#dna = "aaamaucjbau"
+# 	#properties = "0h00h"
+
+# 	religion = old_gods_south
+# 	culture = krakenman
+
+# 	trait = education_martial_3
+# 	#trait = quick
+# 	trait = rude
+# 	trait = stubborn
+# 	trait = poet
+# 	trait = honest
+# 	trait = lazy
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	trait = cynical
+
+# 	father = Hayes_17
+# 	mother = vanity_Hamilton_1
+
+# 	8275.2.25 = { birth = yes } # Dates set so as to hit IRL age when the War of Five Kings starts
+# }
+# Hayes_19 = {
+# 	name = "Cathryn"
+# 	female = yes
+# 	dynasty = dynn_Hayes
+# 	#dna = "akhckxhcfcn"
+# 	#properties = "0e00h"
+
+# 	stewardship = 3
+# 	diplomacy = 2
+# 	martial = 3
+# 	intrigue = 4
+# 	learning = 2
+
+# 	religion = old_gods_south
+# 	culture = krakenman
+
+# 	trait = education_stewardship_3
+# 	trait = beauty_good_2
+# 	trait = diligent
+# 	trait = gregarious
+# 	trait = patient
+
+# 	father = Hayes_17
+# 	mother = vanity_Hamilton_1
+
+# 	8278.4.22 = { birth = yes }
+# }
+# Hayes_20 = {
+# 	name = "Joffrey"
+# 	dynasty = dynn_Hayes
+# 	#dna = "cfaieyjaagu"
+# 	#properties = "0e00h"
+
+# 	stewardship = 3
+# 	diplomacy = 2
+# 	martial = 3
+# 	intrigue = 4
+# 	learning = 2
+
+# 	religion = old_gods_south
+# 	culture = krakenman
+
+# 	trait = education_diplomacy_3
+# 	trait = beauty_good_2
+# 	#trait = hedonist AGOT TODO
+# 	trait = generous
+# 	trait = gregarious
+# 	trait = lazy
+# 	trait = brave
+
+# 	father = Hayes_17
+# 	mother = vanity_Hamilton_1
+
+# 	8281.12.19 = { birth = yes }
+# }
+# ###Rodri & co.
+# vanity_Albanese_1 = {
+# 	name = "Rodrigo"
+# 	dynasty = dynn_vanity_Albanese #Albanese
+
+# 	martial = 3
+# 	diplomacy = 5
+# 	intrigue = 5
+# 	stewardship = 4
+# 	learning = 5
+
+# 	religion = the_seven_main
+# 	culture = riverlander
+
+# 	trait = education_stewardship_3
+# 	trait = just
+# 	trait = lustful
+# 	trait = scholar
+# 	#trait = arrogant # AGOT TODO
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	#trait = quick
+# 	trait = brave
+
+# 	8255.2.25 = { birth = yes }
+# 	8275.1.1 = {
+# 		add_spouse = vanity_Albanese_spouse_1
+# 		trait = knight
+# 		trait = blademaster_3
+# 	}
+# }
+# vanity_Albanese_spouse_1 = {
+# 	name = "Marina"
+# 	female = yes
+
+# 	martial = 2
+# 	diplomacy = 0
+# 	intrigue = 6
+# 	stewardship = 7
+# 	learning = 7
+
+# 	religion = the_seven_main
+# 	culture = riverlander
+
+# 	trait = education_diplomacy_4
+# 	trait = beauty_good_2
+# 	trait = stubborn
+# 	trait = diligent
+# 	#trait = kind #AGOT TODO
+# 	trait = honest
+# 	trait = gregarious
+# 	trait = trusting
+# 	trait = fashionable
+
+# 	8254.5.12 = { birth = yes }
+# }
+# vanity_Albanese_2 = {
+# 	name = "Santiago"
+# 	dynasty = dynn_vanity_Albanese #Albanese
+
+# 	martial = 3
+# 	diplomacy = 3
+# 	intrigue = 3
+# 	stewardship = 4
+# 	learning = 4
+
+# 	religion = the_seven_main
+# 	culture = riverlander
+
+# 	#trait = kind #AGOT TODO
+# 	trait = just
+# 	#trait = intellect_good_3
+
+# 	father = vanity_Albanese_1
+# 	mother = vanity_Albanese_spouse_1
+
+# 	8275.8.20 = { birth = yes }
+# }
+# vanity_Albanese_3 = {
+# 	name = "Sofia"
+# 	dynasty = dynn_vanity_Albanese #Albanese
+# 	female = yes
+
+# 	religion = the_seven_main
+# 	culture = riverlander
+
+# 	father = vanity_Albanese_1
+# 	mother = vanity_Albanese_spouse_1
+
+# 	8282.1.1 = { birth = yes }
+# }
+# ###################
+# #dauncosony's immediate family
+
+# vanity_Trent_1 = {
+# 	name = "Larence"
+# 	dynasty = dynn_vanity_Trent # dauncosony
+
+# 	religion = old_gods_south
+# 	culture = northman
+
+# 	trait = strong
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	trait = stubborn
+
+# 	father = vanity_Trent_3
+# 	mother = vanity_Noyan_1
+
+# 	8274.9.12 = { birth = yes }
+# }
+# vanity_Trent_2 = {
+# 	name = "Cathryn"
+# 	female = yes
+# 	dynasty = dynn_vanity_Trent # dauncosony
+
+# 	religion = old_gods_south
+# 	culture = northman
+
+# 	father = vanity_Trent_3
+# 	mother = vanity_Noyan_1
+
+# 	8280.2.15 = { birth = yes }
+# }
+# vanity_Trent_3 = {
+# 	name = "Hosten"
+# 	dynasty = dynn_vanity_Trent # dauncosony
+
+# 	religion = old_gods_south
+# 	culture = northman
+
+# 	diplomacy = 4
+# 	martial = 3
+# 	stewardship = 3
+# 	intrigue = 2
+# 	learning = 5
+
+# 	trait = education_martial_4
+# 	#trait = familyperson #AGOT TODO
+# 	trait = drunkard
+# 	#trait = diligent
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	trait = brave
+# 	trait = ambitious
+
+# 	8256.6.14 = { birth = yes }
+# 	8276.6.2 = {
+# 		add_spouse = vanity_Noyan_1
+# 		trait = blademaster_3
+# 	}
+# }
+# vanity_Noyan_1 = {
+# 	name = "Kerryn"
+# 	female = yes
+# 	dynasty = dynn_vanity_Noyan # dauncosony
+
+# 	diplomacy = 3
+# 	martial = 4
+# 	stewardship = 4
+# 	intrigue = 2
+# 	learning = 5
+
+# 	religion = the_seven_main
+# 	culture = riverlander
+
+# 	trait = education_stewardship_4
+# 	trait = chaste
+# 	trait = fashionable
+# 	trait = greedy
+
+# 	8260.10.10 = { birth = yes }
+# 	8276.6.2 = { add_spouse = vanity_Trent_3 }
+# }
+# vanity_Trent_4 = {
+# 	name = "Sandor"
+# 	dynasty = dynn_vanity_Trent # dauncosony
+
+# 	religion = old_gods_south
+# 	culture = northman
+
+# 	trait = patient
+# 	trait = humble
+# 	trait = content
+
+# 	father = vanity_Trent_3
+# 	mother = vanity_Noyan_1
+
+# 	8276.9.6 = { birth = yes }
+# }
+
+# ###################
+# #Graymarch family
+
+# vanity_Graymarch_1 = {
+# 	name = "Reymand"
+# 	dynasty = dynn_vanity_Graymarch #Graymarch
+
+# 	martial = 6
+# 	diplomacy = 5
+# 	intrigue = 4
+# 	stewardship = 6
+# 	learning = 7
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = just
+# 	trait = diligent
+# 	trait = content
+# 	trait = honest
+
+# 	father = vanity_Graymarch_5
+
+# 	8222.1.1 = { birth = yes }
+# 	8247.1.1 = {
+# 		add_spouse = vanity_Graymarch_spouse_1
+# 		trait = knight
+# 		trait = blademaster_3
+# 	}
+# }
+# vanity_Graymarch_spouse_1 = {
+# 	name = "C�liandre"
+# 	female = yes
+
+# 	martial = 4
+# 	diplomacy = 9
+# 	intrigue = 6
+# 	stewardship = 12
+# 	learning = 10
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = honest
+# 	trait = education_stewardship_4
+# 	#trait = familyperson #AGOT TODO
+
+# 	8231.1.1 = { birth = yes }
+# }
+# vanity_Graymarch_2 = {
+# 	name = "Madden"
+# 	dynasty = dynn_vanity_Graymarch #Graymarch
+
+# 	martial = 4
+# 	diplomacy = 4
+# 	intrigue = 4
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	trait = rude
+# 	#trait = arrogant #AGOT TODO
+# 	trait = cynical
+# 	trait = drunkard
+
+# 	father = vanity_Graymarch_1
+# 	mother = vanity_Graymarch_spouse_1
+
+# 	8249.7.1 = { birth = yes }
+# }
+# vanity_Graymarch_3 = {
+# 	name = "William"
+# 	dynasty = dynn_vanity_Graymarch #Graymarch
+
+# 	martial = 3
+# 	diplomacy = 4
+# 	intrigue = 4
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = blademaster_3
+# 	trait = drunkard
+
+# 	father = vanity_Graymarch_1
+# 	mother = vanity_Graymarch_spouse_1
+
+# 	8258.1.1 = { birth = yes }
+# }
+
+# vanity_Graymarch_4 = {
+# 	name = "Rave"
+# 	dynasty = dynn_vanity_Graymarch #Graymarch
+
+# 	martial = 2
+# 	diplomacy = 4
+# 	intrigue = 5
+# 	stewardship = 6
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = bastard
+# 	give_nickname = nick_hill
+# 	trait = greensight
+# 	#trait = crow #AGOT TODO...?
+
+# 	father = vanity_Graymarch_1
+
+# 	8265.1.1 = { birth = yes }
+# }
+# vanity_Graymarch_5 = {
+# 	name = "Fabien"
+# 	dynasty = dynn_vanity_Graymarch #Graymarch
+
+# 	martial = 8
+# 	diplomacy = 6
+# 	intrigue = 7
+# 	stewardship = 8
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = knight
+
+# 	8199.1.1 = { birth = yes }
+# 	8245.1.1 = { death = yes }
+# }
+# vanity_Graymarch_6 = {
+# 	name = "Wylland"
+# 	dynasty = dynn_vanity_Graymarch #Graymarch
+
+# 	martial = 4
+# 	diplomacy = 8
+# 	intrigue = 12
+# 	stewardship = 7
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = septon
+# 	trait = education_stewardship_4
+# 	#trait = hedonist #AGOT TODO
+# 	trait = lustful 
+
+# 	father = vanity_Graymarch_5
+
+# 	8224.1.1 = { birth = yes }
+# }
+
+# ###################
+# ##Tribute to Garde de Nuit, House Pandroux (vanity_Pandred_1-45000210)
+
+# vanity_Pandred_1 = {
+# 	name = "Corbac"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 6
+# 	intrigue = 4
+# 	stewardship = 8
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	7959.1.1 = { birth = yes }
+# 	7980.1.1 = { add_spouse = vanity_Pandred_spouse_1 }
+# 	8000.5.1 = {
+# 		death = {
+# 			death_reason = death_battle #field of fire
+# 		}
+# 	}
+# }
+# vanity_Pandred_spouse_1 = {
+# 	name = "C�lilune"
+# 	female = yes
+
+# 	martial = 5
+# 	diplomacy = 3
+# 	intrigue = 2
+# 	stewardship = 6
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	7962.1.1 = { birth = yes }
+# 	8006.1.1 = { death = yes }
+# }
+# vanity_Pandred_2 = {
+# 	name = "Evrach"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 4
+# 	diplomacy = 3
+# 	intrigue = 7
+# 	stewardship = 6
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_1
+# 	mother = vanity_Pandred_spouse_1
+
+# 	7981.1.1 = { birth = yes }
+# 	8011.1.1 = { add_spouse = vanity_Pandred_spouse_2 }
+# 	8057.1.1 = { death = yes }
+# }
+# vanity_Pandred_spouse_2 = {
+# 	name = "Nymphadora"
+# 	female = yes
+
+# 	martial = 3
+# 	diplomacy = 6
+# 	intrigue = 3
+# 	stewardship = 6
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	7993.1.1 = { birth = yes }
+# 	8049.1.1 = { death = yes }
+# }
+# vanity_Pandred_3 = {
+# 	name = "Hanaver"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 3
+# 	diplomacy = 2
+# 	intrigue = 6
+# 	stewardship = 4
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_2
+# 	mother = vanity_Pandred_spouse_2
+
+# 	8014.1.1 = { birth = yes }
+# 	8029.1.1 = { add_spouse = vanity_Pandred_spouse_3 }
+# 	8054.1.1 = { death = yes }
+# }
+# vanity_Pandred_spouse_3 = {
+# 	name = "Nymeria"
+# 	female = yes
+
+# 	martial = 6
+# 	diplomacy = 5
+# 	intrigue = 4
+# 	stewardship = 7
+
+# 	religion = the_seven_main
+# 	culture = salt_dornish
+
+# 	8013.1.1 = { birth = yes }
+# 	8060.1.1 = { death = yes }
+# }
+
+# ###Sons of Huluce
+
+# vanity_Pandred_4 = {
+# 	name = "Huluce"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_2
+# 	mother = vanity_Pandred_spouse_2
+
+# 	8016.1.1 = { birth = yes }
+# 	8070.1.1 = { death = yes }
+# }
+# vanity_Pandred_5 = {
+# 	name = "Maeron"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 4
+# 	intrigue = 3
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = twin
+
+# 	father = vanity_Pandred_4
+
+# 	8040.1.1 = { birth = yes }
+# 	8091.1.1 = { death = yes }
+# }
+# vanity_Pandred_6 = {
+# 	name = "Maegor"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 4
+# 	intrigue = 5
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = twin
+
+# 	father = vanity_Pandred_4
+
+# 	8040.1.1 = { birth = yes }
+# 	8100.1.1 = { death = yes }
+# }
+# vanity_Pandred_7 = {
+# 	name = "Neith"
+# 	female = yes
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_5
+
+# 	8065.1.1 = { birth = yes }
+# 	8125.1.1 = { death = yes }
+# }
+
+# ###Son of Han
+
+# vanity_Pandred_8 = {
+# 	name = "Grendel"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 4
+# 	diplomacy = 6
+# 	intrigue = 6
+# 	stewardship = 6
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_3
+# 	mother = vanity_Pandred_spouse_3
+
+# 	8049.1.1 = { birth = yes }
+# 	8069.1.1 = { add_spouse = vanity_Pandred_spouse_4 }
+# 	8104.1.1 = { death = yes }
+# }
+# vanity_Pandred_spouse_4 = {
+# 	name = "Nonomas"
+# 	female = yes
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	8051.1.1 = { birth = yes }
+# 	8099.1.1 = { death = yes }
+# }
+# vanity_Pandred_9 = {
+# 	name = "Ereksen"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 2
+# 	diplomacy = 5
+# 	intrigue = 4
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_8
+# 	mother = vanity_Pandred_spouse_4
+
+# 	8071.1.1 = { birth = yes }
+# 	8093.1.1 = { add_spouse = vanity_Pandred_7 }
+# 	8141.1.1 = { death = yes }
+# }
+# vanity_Pandred_10 = {
+# 	name = "Kevan"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 3
+# 	intrigue = 5
+# 	stewardship = 4
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_9
+# 	mother = vanity_Pandred_7
+
+# 	8101.1.1 = { birth = yes }
+# 	8132.1.1 = { add_spouse = vanity_Pandred_spouse_5 }
+# 	8169.1.1 = { death = yes }
+# }
+# vanity_Pandred_spouse_5 = {
+# 	name = "Thistle"
+# 	female = yes
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	8111.1.1 = { birth = yes }
+# 	8192.1.1 = { death = yes }
+# }
+# vanity_Pandred_11 = {
+# 	name = "Hieron"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_9
+# 	mother = vanity_Pandred_7
+
+# 	8104.1.1 = { birth = yes }
+# 	8156.1.1 = { death = yes }
+# }
+# vanity_Pandred_12 = {
+# 	name = "Hawkin"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_9
+# 	mother = vanity_Pandred_7
+
+# 	8111.1.1 = { birth = yes }
+# 	8184.1.1 = { death = yes }
+# }
+# vanity_Pandred_13 = {
+# 	name = "Crys"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 7
+# 	diplomacy = 5
+# 	intrigue = 3
+# 	stewardship = 4
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_10
+# 	mother = vanity_Pandred_spouse_5
+
+# 	8135.1.1 = { birth = yes }
+# 	8160.1.1 = { add_spouse = vanity_Pandred_spouse_6 }
+# 	8195.1.1 = { death = yes }
+# }
+# vanity_Pandred_spouse_6 = {
+# 	name = "Ysalaine"
+# 	female = yes
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	8139.1.1 = { birth = yes }
+# 	8200.1.1 = { death = yes }
+# }
+# vanity_Pandred_14 = {
+# 	name = "Strannik"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 8
+# 	diplomacy = 3
+# 	intrigue = 6
+# 	stewardship = 6
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_13
+# 	mother = vanity_Pandred_spouse_6
+
+# 	8183.1.1 = { birth = yes }
+# 	8205.1.1 = { add_spouse = vanity_Pandred_spouse_7 }
+# 	8235.1.1 = { death = yes }
+# }
+# vanity_Pandred_spouse_7 = {
+# 	name = "Sharn"
+# 	female = yes
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	8190.1.1 = { birth = yes }
+# 	8237.1.1 = { death = yes }
+# }
+# vanity_Pandred_15 = {
+# 	name = "Cersei"
+# 	female = yes
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 5
+# 	diplomacy = 7
+# 	intrigue = 6
+# 	stewardship = 3
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_14
+# 	mother = vanity_Pandred_spouse_7
+
+# 	8206.1.1 = { birth = yes }
+# 	8242.1.1 = { death = yes }
+# }
+# vanity_Pandred_16 = {
+# 	name = "Fin"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 7
+# 	diplomacy = 5
+# 	intrigue = 5
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_14
+# 	mother = vanity_Pandred_spouse_7
+
+# 	trait = twin
+
+# 	8208.1.1 = { birth = yes }
+# 	8231.1.1 = { add_spouse = vanity_Pandred_spouse_8 }
+# 	8246.1.1 = { death = yes }
+# }
+# vanity_Pandred_spouse_8 = {
+# 	name = "Tanserke"
+# 	female = yes
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	8210.1.1 = { birth = yes }
+# 	8251.1.1 = { death = yes }
+# }
+# vanity_Pandred_17 = {
+# 	name = "Quemish"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 4
+# 	intrigue = 4
+# 	stewardship = 4
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_14
+# 	mother = vanity_Pandred_spouse_7
+
+# 	trait = twin
+
+# 	8208.1.1 = { birth = yes }
+# 	8254.1.1 = { death = yes }
+# }
+
+# ###Sons of Quemish
+
+# vanity_Pandred_18 = {
+# 	name = "Paran"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_17
+
+# 	8231.1.1 = { birth = yes }
+# 	8266.1.1 = { death = yes }
+# }
+# vanity_Pandred_19 = {
+# 	name = "Zeb"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_17
+
+# 	8234.1.1 = { birth = yes }
+# 	8261.1.1 = { death = yes }
+# }
+# vanity_Pandred_20 = {
+# 	name = "Casso"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_17
+
+# 	8236.1.1 = { birth = yes }
+# 	8269.1.1 = { death = yes }
+# }
+# vanity_Pandred_21 = {
+# 	name = "Brynwald"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = twin
+# 	trait = bastard
+
+# 	give_nickname = nick_flowers
+
+# 	father = vanity_Pandred_18
+
+# 	8265.1.1 = { birth = yes }
+# }
+# vanity_Pandred_22 = {
+# 	name = "Axymand"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = twin
+# 	trait = bastard
+
+# 	give_nickname = nick_flowers
+
+# 	father = vanity_Pandred_18
+
+# 	8265.1.1 = { birth = yes }
+# }
+
+# ### Current family
+
+# vanity_Pandred_23 = {
+# 	name = "Suwan"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 5
+# 	intrigue = 5
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_16
+# 	mother = vanity_Pandred_spouse_8
+
+# 	8235.1.1 = { birth = yes }
+# 	8256.1.1 = { add_spouse = vanity_Pandred_spouse_9 }
+# 	8283.1.1 = {
+# 		death = {
+# 			death_reason = death_battle #field of fire
+# 		}
+# 	}
+# }
+# vanity_Pandred_spouse_9 = {
+# 	name = "Asha"
+# 	female = yes
+
+# 	martial = 6
+
+# 	religion = the_seven_main
+# 	culture = ironborn
+
+# 	8232.1.1 = { birth = yes }
+# }
+# vanity_Pandred_24 = {
+# 	name = "Geoffray"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 8
+# 	intrigue = 7
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_23
+# 	mother = vanity_Pandred_spouse_9
+
+# 	8258.1.1 = { birth = yes }
+# 	8288.1.1 = { death = yes }
+# }
+# vanity_Pandred_25 = {
+# 	name = "Jon"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 5
+# 	intrigue = 4
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	father = vanity_Pandred_23
+# 	mother = vanity_Pandred_spouse_9
+
+# 	8270.1.1 = { birth = yes }
+# }
+# vanity_Pandred_26 = {
+# 	name = "Turlogh"
+# 	dynasty = dynn_vanity_Pandred #Pandroux
+
+# 	martial = 6
+# 	diplomacy = 5
+# 	intrigue = 4
+# 	stewardship = 5
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = bastard
+
+# 	give_nickname = nick_flowers
+
+# 	father = vanity_Pandred_1
+
+# 	7984.1.1 = { birth = yes }
+# 	8043.1.1 = { death = yes }
+# }
+# ###Jimthepocket/Valkyn
+# vanity_Valkyn_1 = {
+# 	name = "Elaine"
+# 	dynasty = dynn_vanity_Valkyn
+# 	female = yes
+
+# 	learning = 6
+# 	martial = 0
+# 	stewardship = 2
+# 	intrigue = 2
+# 	diplomacy = 7
+
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	trait = beauty_good_2
+# 	trait = weak
+# 	trait = education_diplomacy_1
+# 	#trait = kind #AGOT TODO
+# 	trait = lazy
+
+# 	8252.2.2 = { birth = yes }
+# 	8300.1.1 = { death = yes }
+# }
+# vanity_Valkyn_2 = {
+# 	name = "James"
+# 	dynasty = dynn_vanity_Valkyn
+
+# 	learning = 10
+# 	martial = 4
+# 	stewardship = 7
+# 	intrigue = 4
+# 	diplomacy = 5
+
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	#trait = intellect_good_3
+# 	trait = education_martial_3
+# 	trait = cynical
+# 	trait = rude
+# 	trait = stubborn
+# 	trait = just
+# 	trait = honest
+# 	trait = poet
+# 	#trait = cavalry_leader #AGOT TODO
+# 	trait = holy_warrior 
+
+# 	mother = vanity_Valkyn_1
+
+# 	8271.4.23 = { birth = yes }
+# 	8287.4.23 = {
+# 		trait = blademaster_2
+# 		trait = knight
+# 	}
+# 	8340.4.23 = { death = yes }
+# }
+# vanity_Valkyn_3 = {
+# 	name = "Rory"
+# 	dynasty = dynn_vanity_Valkyn
+
+# 	learning = 5
+# 	martial = 3
+# 	stewardship = 6
+# 	intrigue = 0
+# 	diplomacy = 6
+
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	trait = strong
+# 	trait = education_martial_2
+# 	#trait = aggressive_leader #AGOT TODO
+# 	trait = stubborn 
+# 	trait = gregarious
+
+# 	mother = vanity_Valkyn_1
+
+# 	8278.5.25 = { birth = yes }
+# 	8294.5.25 = {
+# 		trait = knight
+# 		trait = blademaster_3
+# 	}
+# }
+# vanity_Valkyn_4 = {
+# 	name = "Isla"
+# 	dynasty = dynn_vanity_Valkyn
+# 	#dna = "bmahidgfcbo"
+# 	female = yes
+
+# 	learning = 3
+# 	martial = 2
+# 	stewardship = 2
+# 	intrigue = 10
+# 	diplomacy = 4
+
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	trait = beauty_good_2
+# 	trait = education_intrigue_2
+# 	trait = greedy
+# 	trait = ambitious
+# 	#trait = selfish #AGOT TODO
+# 	trait = paranoid
+# 	trait = ruthless
+
+# 	mother = vanity_Valkyn_1
+
+# 	8283.5.14 = { birth = yes }
+# }
+# ###Blackbishop
+# vanity_Black_1 = {
+# 	name = "Bishop"
+# 	dynasty = dynn_vanity_Black
+
+# 	learning = 15
+# 	martial = 6
+# 	stewardship = 5
+# 	intrigue = 6
+# 	diplomacy = 4
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = nightswatch_historical
+# 	trait = arbitrary
+# 	#trait = envious #AGOT TODO
+# 	trait = temperate
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+
+# 	7980.1.1 = { birth = yes }
+# 	8040.1.1 = { death = yes }
+# }
+# ###cyrileom
+# vanity_Coenigct_1 = {
+# 	name = "Arstan"
+# 	#dna = "agacctfsfcc"
+# 	#properties = "eio00a00000"
+# 	dynasty = dynn_vanity_Coenigct
+
+# 	learning = 3
+# 	martial = 3
+# 	stewardship = 2
+# 	intrigue = 6
+# 	diplomacy = 4
+# 	religion = the_seven_main
+# 	culture = stormlander
+
+# 	trait = education_stewardship_3
+# 	#trait = duelist #AGOT TODO
+# 	trait = zealous
+# 	#trait = familyperson #AGOT TODO
+# 	trait = brave
+# 	trait = lustful
+# 	trait = ambitious
+# 	#trait = kind #AGOT TODO
+
+# 	8266.1.1 = { birth = yes }
+# 	8275.1.1 = {
+# 	}
+# 	8282.1.1 = {
+# 		trait = knight
+# 		trait = blademaster_3
+# 		trait = nightswatch_historical
+# 	}
+# }
+# ###xoatl
+# vanity_Dimaechrus_1 = {
+# 	name = "Davos"
+# 	dynasty = dynn_vanity_Dimaechrus
+
+# 	learning = 6
+# 	martial = 6
+# 	stewardship = 2
+# 	intrigue = 7
+# 	diplomacy = 7
+
+# 	religion = old_gods_south
+# 	culture = northman
+
+# 	# trait = quick
+# 	trait = weak
+# 	trait = just
+# 	8282.1.1 = {
+# 		birth = yes
+# 		employer = Qorgyle_2 # Qorgyle aka good old Jantos
+# 	}
+# 	8294.1.1 = {
+# 		employer = Mormont_2 # Jeor Mormont
+# 		trait = nightswatch_historical
+# 	}
+# }
+# ###kingslayer
+# vanity_Darkholme_1 = {
+# 	name = "Valarr"
+# 	dynasty = dynn_vanity_Darkholme
+
+# 	learning = 0
+# 	martial = 2
+# 	stewardship = 4
+# 	intrigue = 1
+# 	diplomacy = 5
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = tall
+# 	trait = strong
+# 	trait = education_martial_2
+# 	#trait = diligent
+# 	trait = authoritative
+# 	#trait = duelist #AGOT TODO
+# 	#trait = arrogant #AGOT TODO
+# 	trait = just
+# 	#trait = brave
+# 	#trait = honorable
+# 	#trait = flanker #AGOT TODO
+
+# 	8246.1.1 = { birth = yes }
+# 	8262.1.1 = {
+# 		trait = knight
+# 		trait = blademaster_3
+# 	}
+# 	8283.1.1 = {
+# 		death = { death_reason = death_battle }
+# 	}
+# }
+# vanity_Darkholme_2 = {
+# 	name = "Jaden"
+# 	dynasty = dynn_vanity_Darkholme
+
+# 	learning = 1
+# 	martial = 1
+# 	stewardship = 3
+# 	intrigue = 4
+# 	diplomacy = 4
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = tall #AGOT TODO
+# 	#trait = strong
+# 	trait = education_martial_2
+# 	#trait = diligent
+# 	#trait = authoritative #AGOT TODO
+# 	trait = lustful
+# 	trait = just
+# 	trait = brave
+# 	trait = honorable
+# 	trait = organizer
+# 	#trait = inspiring_leader
+
+# 	father = vanity_Darkholme_1
+
+# 	8267.1.1 = { birth = yes }
+# 	8283.1.1 = {
+# 		trait = blademaster_3
+# 		trait = knight
+# 		add_spouse = vanity_Darkholme_spouse_1
+# 	}
+# }
+# vanity_Darkholme_spouse_1 = {
+# 	name = "Emma"
+# 	female = yes
+
+# 	learning = 2
+# 	martial = 0
+# 	stewardship = 4
+# 	intrigue = 4
+# 	diplomacy = 4
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	trait = beauty_good_2
+# 	trait = education_diplomacy_2
+# 	#trait = diligent
+# 	trait = lustful
+# 	#trait = kind #AGOT TODO
+# 	trait = just
+# 	#trait = patient
+# 	trait = generous
+# 	trait = ambitious
+
+# 	8268.1.1 = { birth = yes }
+# }
+# vanity_Darkholme_3 = {
+# 	name = "Jacob"
+# 	dynasty = dynn_vanity_Darkholme
+
+# 	learning = 1
+# 	martial = 4
+# 	stewardship = 6
+# 	intrigue = 3
+# 	diplomacy = 3
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = tall #AGOT TODO
+# 	trait = education_stewardship_3
+# 	#trait = diligent
+# 	trait = patient
+# 	trait = humble
+# 	trait = just 
+# 	#trait = kind #AGOT TODO
+# 	trait = lustful
+# 	trait = honorable
+
+# 	father = vanity_Darkholme_2
+# 	mother = vanity_Darkholme_spouse_1
+
+# 	8284.1.1 = { birth = yes }
+# 	8299.1.1 = {
+# 		trait = blademaster_2
+# 		trait = knight
+# 	}
+# }
+# vanity_Darkholme_4 = {
+# 	name = "Alexander"
+# 	dynasty = dynn_vanity_Darkholme
+
+# 	learning = 0
+# 	martial = 2
+# 	stewardship = 1
+# 	intrigue = 1
+# 	diplomacy = 2
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	trait = twin
+# 	trait = strong
+# 	trait = education_martial_3
+# 	trait = diligent
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	#trait = arrogant #AGOT TODO
+# 	trait = zealous
+# 	trait = brave
+# 	trait = honorable
+# 	trait = lustful
+# 	#trait = inspiring_leader #AGOT TODO
+
+# 	father = vanity_Darkholme_2
+# 	mother = vanity_Darkholme_spouse_1
+
+# 	8286.1.1 = { birth = yes }
+# 	8302.1.1 = {
+# 		trait = blademaster_2
+# 		trait = knight
+# 	}
+# }
+# vanity_Darkholme_5 = {
+# 	name = "Rhaenys"
+# 	female = yes
+# 	dynasty = dynn_vanity_Darkholme
+
+# 	learning = 4
+# 	martial = 2
+# 	stewardship = 2
+# 	intrigue = 3
+# 	diplomacy = 5
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	trait = twin
+# 	trait = beauty_good_2
+# 	#trait = tall
+# 	trait = education_diplomacy_2
+# 	trait = blademaster_2
+# 	#trait = diligent
+# 	#trait = kind #AGOT TODO
+# 	trait = trusting
+# 	trait = deceitful
+# 	#trait = brave
+# 	trait = gregarious
+# 	# trait = honorable
+# 	#trait = lustful
+
+# 	father = vanity_Darkholme_2
+# 	mother = vanity_Darkholme_spouse_1
+
+# 	8286.1.1 = { birth = yes }
+# 	8302.1.1 = {
+# 		trait = knight
+# 	}
+# }
+# vanity_Darkholme_6 = {
+# 	name = "Gabriel"
+# 	dynasty = dynn_vanity_Darkholme
+
+# 	learning = 2
+# 	martial = 3
+# 	stewardship = 2
+# 	intrigue = 6
+# 	diplomacy = 2
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = quick
+# 	trait = strong
+# 	trait = education_intrigue_4
+# 	#trait = diligent
+# 	trait = deceitful
+# 	trait = paranoid
+# 	trait = cynical
+# 	#trait = kind #AGOT TODO
+# 	#trait = brave
+# 	#trait = gluttonous
+# 	trait = honorable
+# 	#trait = lustful
+
+# 	father = vanity_Darkholme_2
+# 	mother = vanity_Darkholme_spouse_1
+
+# 	8289.1.1 = { birth = yes }
+# 	8305.1.1 = {
+# 		trait = knight
+# 		trait = blademaster_2
+# 	}
+# }
+# vanity_Darkholme_7 = {
+# 	name = "Daemon"
+# 	dynasty = dynn_vanity_Darkholme
+
+# 	learning = 4
+# 	martial = 1
+# 	stewardship = 4
+# 	intrigue = 5
+# 	diplomacy = 2
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = tall #AGOT TODO
+# 	trait =education_stewardship_3
+# 	#trait = diligent
+# 	trait = temperate
+# 	#trait = deceitful
+# 	#trait = arrogant #AGOT TODO
+# 	#trait = just
+# 	trait = honorable # AGOT TODO opposite trait to deceitful
+
+# 	father = vanity_Darkholme_1
+
+# 	8268.1.1 = { birth = yes }
+# 	8284.1.1 = {
+# 		trait = knight
+# 		trait = blademaster_2
+# 	}
+# }
+# ####
+# 45000315 = {
+# 	name = "Tom Palmer"
+
+# 	#dna = "alaeikabbac"
+# 	#properties = "ac0ack00000"
+
+# 	learning = 4
+# 	martial = 2
+# 	stewardship = 3
+# 	intrigue = 4
+# 	diplomacy = 2
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = education_diplomacy_2
+# 	trait = lustful
+# 	#trait = kind #AGOT TODO
+# 	trait = just
+# 	trait = patient
+# 	trait = content
+
+# 	8268.1.1 = { birth = yes }
+# 	8275.1.1 = {
+# 		trait = nightswatch_historical
+# 	}
+# }
+# ###EviLaz
+# 45000316 = {
+# 	name = "Lazarus"
+
+# 	learning = 4
+# 	martial = 4
+# 	stewardship = 3
+# 	intrigue = 5
+# 	diplomacy = 2
+
+# 	religion = the_seven_main
+# 	culture = valeman
+
+# 	trait = bastard
+# 	trait = cynical
+# 	trait = lustful
+# 	trait = scarred
+
+# 	give_nickname = nick_stone
+
+# 	8280.1.1 = {
+# 		birth = yes
+# 		employer = Qorgyle_2 # Qorgyle aka good old Jantos
+# 	}
+# 	8294.1.1 = {
+# 		trait = nightswatch_historical
+# 	}
+# }
+# ###Gogkti
+# vanity_Droughtwell_1 = {
+# 	name = "Joshua"
+# 	dynasty = dynn_vanity_Droughtwell
+
+# 	learning = 4
+# 	martial = 3
+# 	stewardship = 3
+# 	intrigue = 5
+# 	diplomacy = 6
+
+# 	religion = dothraki_pagan
+# 	culture = sand_dornish
+
+# 	trait = education_martial_2
+# 	#trait = duelist #AGOT TODO
+# 	#trait = arrogant #AGOT TODO
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	#trait = cruel #AGOT TODO
+
+# 	8276.1.1 = {
+# 		birth = yes
+# 		employer = Qorgyle_2 # Qorgyle aka good old Jantos
+# 	}
+# 	8288.1.1 = {
+# 		employer = Mormont_2 #Jeor Mormont
+# 		trait = nightswatch_historical
+# 	}
+# }
+# ###Pande
+# vanity_Grammaton_1 = {
+# 	name = "Pandes"
+# 	dynasty = dynn_vanity_Grammaton
+
+# 	learning = 5
+# 	martial = 5
+# 	stewardship = 5
+# 	intrigue = 1
+# 	diplomacy = 5
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = quick
+# 	trait = lustful
+# 	trait = patient
+# 	trait = deceitful
+# 	#trait = ambitious
+# 	trait = education_intrigue_4
+
+# 	8274.11.17 = { birth = yes }
+# 	8290.11.17 = {
+# 		trait = knight
+# 		trait = blademaster_2
+# 		add_spouse = vanity_Grammaton_spouse_1
+# 		give_nickname = nick_the_spider
+# 	}
+# }
+# vanity_Grammaton_spouse_1 = {
+# 	name = "Sibylla"
+# 	female = yes
+
+# 	learning = 5
+# 	martial = 2
+# 	stewardship = 4
+# 	intrigue = 3
+# 	diplomacy = 3
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	trait = education_stewardship_3
+# 	trait = beauty_good_2
+# 	trait = temperate
+# 	trait = cynical
+# 	#trait = familyperson #AGOT TODO
+
+# 	8279.2.15 = { birth = yes }
+# }
+# vanity_Grammaton_2 = {
+# 	name = "Malant"
+# 	dynasty = dynn_vanity_Grammaton
+
+# 	learning = 5
+# 	martial = 5
+# 	stewardship = 5
+# 	intrigue = 5
+# 	diplomacy = 5
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = quick
+# 	trait = twin
+
+# 	mother = vanity_Grammaton_spouse_1
+# 	father = vanity_Grammaton_1
+
+# 	8295.2.15 = { birth = yes }
+# }
+# vanity_Grammaton_3 = {
+# 	name = "Matthew"
+# 	dynasty = dynn_vanity_Grammaton
+
+# 	learning = 5
+# 	martial = 5
+# 	stewardship = 5
+# 	intrigue = 5
+# 	diplomacy = 5
+
+# 	religion = the_seven_main
+# 	culture = westerosi_valyrian
+
+# 	#trait = quick
+# 	trait = twin
+
+# 	mother = vanity_Grammaton_spouse_1
+# 	father = vanity_Grammaton_1
+
+# 	8295.2.15 = { birth = yes }
+# }
+
+# ###KaiserBenjamin
+# vanity_Durante_1 = {
+# 	name = "Alighieri"
+# 	dynasty = dynn_vanity_Durante
+
+# 	learning = 8
+# 	martial = 6
+# 	stewardship = 2
+# 	intrigue = 4
+# 	diplomacy = 4
+
+# 	religion = the_seven_main
+# 	culture = westerman
+
+# 	give_nickname = nick_the_poet
+
+# 	trait = education_learning_3
+# 	trait = poet
+# 	trait = temperate
+# 	trait = diligent
+# 	#trait = arrogant #AGOT TODO
+# 	trait = zealous
+
+# 	8255.5.9 = { birth = yes }
+# 	8275.1.1 = {
+# 		trait = nightswatch_historical
+# 	}
+# }
+# ###Deaghaidh/Dea
+# vanity_Dea_1 = {
+# 	name = "Matthos"
+# 	dynasty = dynn_vanity_Dea
+# 	#dna = "bfcjjcdfdba"
+# 	#properties = "ce0cck"
+
+# 	learning = 4
+# 	martial = 4
+# 	stewardship = 4
+# 	intrigue = 4
+# 	diplomacy = 4
+
+# 	religion = old_gods_south
+# 	culture = hill_clansman
+
+# 	#trait = quick
+# 	trait = education_learning_4
+# 	trait = chaste
+# 	trait = gluttonous
+# 	trait = lazy
+# 	#trait = kind #AGOT TODO
+# 	trait = patient
+# 	trait = honest
+# 	trait = shy
+# 	trait = content
+# 	#trait = familyperson #AGOT TODO
+# 	trait = just
+# 	trait = craven
+
+# 	8269.1.1 = {
+# 		birth = yes
+# 		employer = Stark_1 # Rickard Stark
+# 	}
+# 	8284.1.1 = {
+# 		add_spouse = vanity_Dea_spouse_1
+# 		employer = Reed_1 # Howland Reed
+# 	}
+# 	8298.11.2 = {
+# 		employer = Stark_6 # Robb Stark
+# 	}
+# 	8299.11.5 = {
+# 		employer = Reed_1 # Howland Reed
+# 	}
+# }
+# vanity_Dea_spouse_1 = {
+# 	name = "Summer"
+# 	female = yes
+# 	#dna = "bceiciehbda"
+# 	#properties = "0e0epk"
+
+# 	learning = 4
+# 	martial = 4
+# 	stewardship = 4
+# 	intrigue = 4
+# 	diplomacy = 4
+
+# 	religion = old_gods_south
+# 	culture = crannogman
+
+# 	trait = education_intrigue_4
+# 	trait = beauty_good_2
+# 	trait = chaste
+# 	trait = brave
+# 	trait = shy
+# 	trait = just
+# 	trait = content
+# 	#trait = familyperson #AGOT TODO
+# 	trait = greensight
+
+# 	8268.1.1 = {
+# 		birth = yes
+# 		employer = Reed_22
+# 	}
+# 	# 8278.1.1 = {
+# 	# 	trait = eagle #AGOT TODO What is this even trying to do?
+# 	# }
+# 	8282.1.1 = {
+# 		trait = blademaster_3
+# 	}
+# 	8284.1.1 = {
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# 	8298.11.2 = {
+# 		employer = Stark_6 #Robb Stark
+# 	}
+# 	8299.11.5 = {
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# }
+# vanity_Dea_2 = {
+# 	name = "Mycah"
+# 	dynasty = dynn_vanity_Dea
+
+# 	religion = old_gods_south
+# 	culture = hill_clansman
+
+# 	trait = twin
+
+# 	father = vanity_Dea_1
+# 	mother = vanity_Dea_spouse_1
+
+# 	8284.1.1 = {
+# 		birth = yes
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# 	8298.11.2 = {
+# 		employer = Stark_6 #Robb Stark
+# 	}
+# 	8299.11.5 = {
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# }
+# vanity_Dea_3 = {
+# 	name = "Barba"
+# 	dynasty = dynn_vanity_Dea
+# 	female = yes
+
+# 	religion = old_gods_south
+# 	culture = hill_clansman
+
+# 	trait = twin
+
+# 	father = vanity_Dea_1
+# 	mother = vanity_Dea_spouse_1
+
+# 	8284.1.1 = {
+# 		birth = yes
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# 	8298.11.2 = {
+# 		employer = Stark_6 #Robb Stark
+# 	}
+# 	8299.11.5 = {
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# }
+# vanity_Dea_4 = {
+# 	name = "Joffrey"
+# 	dynasty = dynn_vanity_Dea
+
+# 	religion = old_gods_south
+# 	culture = hill_clansman
+
+# 	father = vanity_Dea_1
+# 	mother = vanity_Dea_spouse_1
+
+# 	8286.1.1 = {
+# 		birth = yes
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# 	8298.11.2 = {
+# 		employer = Stark_6 #Robb Stark
+# 	}
+# 	8299.11.5 = {
+# 		employer = Reed_1 #Howland Reed
+# 	}
+# }
+
+# ### vanity_Clohessy_1
+# vanity_Clohessy_1 = {
+# 	name = "Matthew"
+# 	#dna = "dmgjbodjcdg"
+# 	#properties = "0i0cck00000"
+# 	dynasty = dynn_vanity_Clohessy
+
+# 	learning = 4
+# 	martial = 3
+# 	stewardship = 2
+# 	intrigue = 1
+# 	diplomacy = 2
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = education_martial_3
+# 	trait = blademaster_3
+# 	trait = lustful
+# 	#trait = wroth # AGOTO TODO trait doesnt exist
+# 	trait = rude
+# 	trait = depressed_1
+
+# 	8268.1.28 = {
+# 		birth = yes
+# 		employer = Targaryen_3 # Dragonstone - Rhaegar Targaryen
+# 	}
+# 	8284.1.1 = {
+# 		employer = Baratheon_3 # Dragonstone - Stannis Baratheon
+# 	}
+# 	8286.1.1 = {
+# 		trait = nightswatch_historical
+# 	}
+# }
+# ###
+# vanity_Foxheart_1 = {
+# 	name = "Silvester"
+# 	#dna = "bgldezfebbp"
+# 	#properties = "fi0jek00000000ec"
+# 	dynasty = dynn_vanity_Foxheart
+
+# 	martial = 1
+# 	learning = 2
+# 	diplomacy = 1
+# 	intrigue = 2
+# 	stewardship = 2
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = honorable
+# 	trait = gluttonous
+# 	trait = patient
+# 	trait = honest
+# 	#trait = familyperson #AGOT TODO
+# 	trait = just
+# 	trait = humble
+# 	trait = gregarious
+# 	trait = generous
+# 	trait = brave
+# 	trait = bastard # for Flowers nickname
+
+
+
+# 	give_nickname = nick_flowers
+
+# 	8243.11.11 = { 
+# 		birth = yes
+# 		employer = Florent_1 #Brightwater keep
+# 	}
+# 	8259.11.11 = {
+# 		trait = blademaster_3
+# 		trait = education_diplomacy_3
+# 		trait = knight
+# 	}
+# 	8265.1.1 = { employer = Florent_2 }
+# 	8275.1.1 = {
+# 		#trait = is_fat #AGOT TODO
+# 		#effect = { # AGOT TODO
+# 		#	set_variable = { name = physique_variable value = 20 }
+# 		#	add_friend = vanity_Foxheart_2
+# 		#}
+# 	}
+# 	# 8295.1.1 = {
+# 	# 	trait = stressed #AGOT TODO (we dont need stressed anymore probaly)
+# 	# }
+# 	8299.1.30 = {
+# 		death = { death_reason = death_depressed }
+# 	}
+# }
+# vanity_Foxheart_2 = {
+# 	name = "Alesander" # vanity_Foxheart_2
+# 	#dna = "ahmcjziagcw"
+# 	#properties = "0queik00a00000db"
+# 	dynasty = dynn_vanity_Foxheart
+
+# 	martial = 1
+# 	learning = 2
+# 	diplomacy = 1
+# 	intrigue = 2
+# 	stewardship = 2
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+# 	trait = trusting
+# 	trait = honest
+# 	trait = cynical
+# 	trait = shy
+# 	trait = temperate
+# 	trait = bastard
+# 	#trait = arrogant #AGOT TODO
+# 	trait = honorable
+
+# 	father = vanity_Foxheart_1
+
+# 	give_nickname = nick_flowers
+
+# 	8275.8.5 = {
+# 		birth = yes
+# 		employer = Florent_2 #In Brightwater Keep
+# 		effect = { 
+# 			set_relation_friend = { reason = friend_generic_history target = character:vanity_Foxheart_1 }
+# 		}
+# 	}
+# 	8284.8.5 = { employer = Velaryon_2 } #Monford Velaryon
+# 	8291.8.5 = {
+# 		trait = education_martial_2
+# 		trait = blademaster_2
+# 		trait = knight
+# 		remove_trait = trusting
+# 		trait = paranoid
+# 		#trait = stressed #AGOT TODO
+# 		employer = Baratheon_2 #Robert Baratheon
+# 	}
+# 	8298.10.28 = { religion = rhllor }
+# 	8299.7.1 = { employer = Baratheon_3 } #Stannis Baratheon
+# 	8300.1.1 = {
+# 		trait = nightswatch_historical
+# 		employer = Mallister_6 #Denys Mallister in Shadow Tower, because Castle Black is too mainstream
+# 	}
+# }
+# ###Paxter Redwyne
+# vanity_Loch_1 = {
+# 	name = "Timotty"
+# 	dynasty = dynn_vanity_Loch
+# 	#dna = fgoglhowlrm
+# 	#properties = "vm0c0k00000"
+
+# 	martial = 2
+# 	diplomacy = 3
+# 	stewardship = 7
+# 	intrigue = 6
+# 	learning = 12
+
+# 	religion = the_seven_main
+# 	culture = reachman
+
+
+
+# 	disallow_random_traits = yes
+
+# 	8277.12.27 = { 
+# 		birth = yes 
+# 		employer = Redwyne_4 #Paxter Redwyne of course
+# 	}
+# 	8284.12.27 = {
+# 		trait = rowdy
+# 	}
+# 	#AGOT TODO traits
+# 	# 8286.12.27 = {
+# 	# 	trait = fussy
+# 	# 	trait = headache
+# 	# }
+# 	8288.12.27 = {
+# 		#trait = brooding #AGOT TODO
+# 		trait = depressed_1
+# 	}
+# 	8289.12.27 = {
+# 		remove_trait = rowdy
+# 		#trait = kind #AGOT TODO
+# 		#trait = wroth # AGOTO TODO trait doesnt exist
+# 		trait = scholar
+# 	}
+# 	8291.12.27 = {
+# 		#remove_trait = fussy #AGOT TODO?
+# 		trait = honest
+# 		trait = paranoid
+# 	}
+# 	8293.12.27 = {
+# 		trait = education_martial_2
+# 		#remove_trait = brooding #AGOT TODO
+# 		trait = cynical
+# 		trait = just
+# 	}
+# 	8297.12.27 = {
+# 		remove_trait = depressed_1
+# 	}
+# }

@@ -1,0 +1,1851 @@
+﻿############################           ANDALOS          ############################
+####################################################################################
+
+###### HOUSE GOLATHIS (id = dynn_golathis)
+############################
+### Heart 1-3
+###
+Golathis_22 = { 
+	name = Melane # a lord
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	7786.1.1 = { birth = yes }
+	7849.1.1 = { death = yes }
+}
+Golathis_21 = { 
+	name = Gylo # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	mother = Golathis_22
+ 
+	7812.1.1 = { birth = yes }
+	7863.1.1 = { death = yes }
+}
+Golathis_20 = { 
+	name = Terro # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_21
+ 
+	7835.1.1 = { birth = yes }
+	7882.1.1 = { death = yes }
+}
+Golathis_19 = { 
+	name = Vargo # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_20
+ 
+	7858.1.1 = { birth = yes }
+	7918.1.1 = { death = yes }
+}
+Golathis_18 = { 
+	name = Arzero # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_19
+ 
+	7888.1.1 = { birth = yes }
+	7948.1.1 = { death = yes }
+}
+Golathis_17 = { 
+	name = Mellario # a lord
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_18
+ 
+	7908.1.1 = { birth = yes }
+	7966.1.1 = { death = yes }
+}
+Golathis_16 = { 
+	name = Byan # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	mother = Golathis_17
+ 
+	7936.1.1 = { birth = yes }
+	7990.1.1 = { death = yes }
+}
+Golathis_15 = { 
+	name = Denzo # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_16
+ 
+	7965.1.1 = { birth = yes }
+	8020.1.1 = { death = yes }
+}
+Golathis_14 = { 
+	name = Mellario
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_15
+ 
+	7989.1.1 = { birth = yes }
+	8021.1.1 = { death = yes }
+}
+Golathis_13 = { 
+	name = Doro # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	mother = Golathis_14
+ 
+	8005.1.1 = { birth = yes }
+	8066.1.1 = { death = yes }
+}
+Golathis_12 = { 
+	name = Rego # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_13
+ 
+	8023.1.1 = { birth = yes }
+	8082.1.1 = { death = yes }
+}
+Golathis_11 = { 
+	name = Galeo # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_12
+ 
+	8041.1.1 = { birth = yes }
+	8097.1.1 = { death = yes }
+}
+Golathis_10 = { 
+	name = Gylo # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_11
+ 
+	8062.1.1 = { birth = yes }
+	8129.1.1 = { death = yes }
+}
+Golathis_9 = { 
+	name = Roro
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_10
+ 
+	8080.1.1 = { birth = yes }
+	8121.1.1 = { death = yes }
+}
+Golathis_8 = { 
+	name = Nelugo # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_9
+ 
+	8103.1.1 = { birth = yes }
+	8165.1.1 = { death = yes }
+}
+Golathis_7 = { 
+	name = Rogaro # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_8
+ 
+	8120.1.1 = { birth = yes }
+	8187.1.1 = { death = yes }
+}
+Golathis_6 = { 
+	name = Jaqmaq # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_7
+ 
+	8148.1.1 = { birth = yes }
+	8191.1.1 = { death = yes }
+}
+Golathis_5 = { 
+	name = Moreo # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_6
+ 
+	8174.1.1 = { birth = yes }
+	8226.1.1 = { death = yes }
+}
+
+###### HOUSE BELGYLE (id = dynn_Belgyle)
+############################
+### Heart 2
+###
+Belgyle_20 = { 
+	name = Ellaria # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	7795.1.1 = { birth = yes }
+	7855.1.1 = { death = yes }
+}
+Belgyle_19 = { 
+	name = Delonne # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_20
+ 
+	7826.1.1 = { birth = yes }
+	7895.1.1 = { death = yes }
+}
+Belgyle_18 = { 
+	name = Aryen
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_19
+ 
+	7856.1.1 = { birth = yes }
+	7889.1.1 = { death = yes }
+}
+Belgyle_17 = { 
+	name = Mallor # a lord
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_18
+ 
+	7878.1.1 = { birth = yes }
+	7925.1.1 = { death = yes }
+}
+Belgyle_16 = { 
+	name = Wylia # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_17
+ 
+	7907.1.1 = { birth = yes }
+	7947.1.1 = { death = yes }
+}
+Belgyle_15 = { 
+	name = Oberyn # a lord
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_16
+ 
+	7937.1.1 = { birth = yes }
+	7983.1.1 = { death = yes }
+}
+Belgyle_14 = { 
+	name = Gasoyne # a lord
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_15
+ 
+	7953.1.1 = { birth = yes }
+	8021.1.1 = { death = yes }
+}
+Belgyle_13 = { 
+	name = Elia # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_14
+ 
+	7969.1.1 = { birth = yes }
+	8033.1.1 = { death = yes }
+}
+Belgyle_12 = { 
+	name = Marei
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_13
+ 
+	7997.1.1 = { birth = yes }
+	8030.1.1 = { death = yes }
+}
+Belgyle_11 = { 
+	name = Dyanna # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_12
+ 
+	8023.1.1 = { birth = yes }
+	8076.1.1 = { death = yes }
+}
+Belgyle_10 = { 
+	name = Loreza # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_11
+ 
+	8042.1.1 = { birth = yes }
+	8108.1.1 = { death = yes }
+}
+Belgyle_9 = { 
+	name = Tanselia # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_10
+ 
+	8073.1.1 = { birth = yes }
+	8137.1.1 = { death = yes }
+}
+Belgyle_8 = { 
+	name = Trebor # a lord
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_9
+ 
+	8094.1.1 = { birth = yes }
+	8159.1.1 = { death = yes }
+}
+Belgyle_7 = { 
+	name = Corenna # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_8
+ 
+	8117.1.1 = { birth = yes }
+	8186.1.1 = { death = yes }
+}
+Belgyle_6 = { 
+	name = Nymeria # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_7
+ 
+	8138.1.1 = { birth = yes }
+	8198.1.1 = { death = yes }
+}
+Belgyle_5 = { 
+	name = Aryen # a lord
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	mother = Belgyle_6
+ 
+	8160.1.1 = { birth = yes }
+	8201.1.1 = { death = yes }
+}
+Belgyle_4 = { 
+	name = Elia # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_5
+ 
+	8186.1.1 = { birth = yes }
+	8207.1.1 = { add_matrilineal_spouse = Belgyle_rs_4 } 
+	8252.1.1 = { death = yes }
+}
+Belgyle_rs_4 = {
+	name = Rycas
+
+	religion = rhllor
+	culture = rhoynish
+
+	8186.1.1 = { birth = yes }
+	8252.1.1 = { death = yes }
+}
+
+###### HOUSE BAR DROX (id = dynn_Bar_Drox)
+############################
+### Heart 4
+###
+Bar_Drox_20 = { 
+	name = Gerold # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	7770.1.1 = { birth = yes }
+	7837.1.1 = { death = yes }
+}
+Bar_Drox_19 = { 
+	name = Clara # a lord
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_20
+ 
+	7789.1.1 = { birth = yes }
+	7847.1.1 = { death = yes }
+}
+Bar_Drox_18 = { 
+	name = Vorian # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	mother = Bar_Drox_19
+ 
+	7815.1.1 = { birth = yes }
+	7878.1.1 = { death = yes }
+}
+Bar_Drox_17 = { 
+	name = Hugo # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_18
+ 
+	7837.1.1 = { birth = yes }
+	7904.1.1 = { death = yes }
+}
+Bar_Drox_16 = { 
+	name = Rolland # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_17
+ 
+	7868.1.1 = { birth = yes }
+	7933.1.1 = { death = yes }
+}
+Bar_Drox_15 = { 
+	name = Vorian # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_16
+ 
+	7890.1.1 = { birth = yes }
+	7944.1.1 = { death = yes }
+}
+Bar_Drox_14 = { 
+	name = Argos # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_15
+ 
+	7920.1.1 = { birth = yes }
+	7978.1.1 = { death = yes }
+}
+Bar_Drox_13 = { 
+	name = Drox # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_14
+ 
+	7945.1.1 = { birth = yes }
+	7989.1.1 = { death = yes }
+}
+Bar_Drox_12 = { 
+	name = Rolland # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_13
+ 
+	7967.1.1 = { birth = yes }
+	8028.1.1 = { death = yes }
+}
+Bar_Drox_11 = { 
+	name = Togarion # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_12
+ 
+	7992.1.1 = { birth = yes }
+	8049.1.1 = { death = yes }
+}
+Bar_Drox_10 = { 
+	name = Qyle # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_11
+ 
+	8023.1.1 = { birth = yes }
+	8089.1.1 = { death = yes }
+}
+Bar_Drox_9 = { 
+	name = Drox # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_10
+ 
+	8053.1.1 = { birth = yes }
+	8120.1.1 = { death = yes }
+}
+Bar_Drox_8 = { 
+	name = Erreg # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_9
+ 
+	8080.1.1 = { birth = yes }
+	8131.1.1 = { death = yes }
+}
+Bar_Drox_7 = { 
+	name = Morgan # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_8
+ 
+	8096.1.1 = { birth = yes }
+	8147.1.1 = { death = yes }
+}
+Bar_Drox_6 = { 
+	name = Armistead # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_7
+ 
+	8123.1.1 = { birth = yes }
+	8192.1.1 = { death = yes }
+}
+Bar_Drox_5 = { 
+	name = Jaime
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_6
+ 
+	8152.1.1 = { birth = yes }
+	8195.1.1 = { death = yes }
+}
+
+###### HOUSE GALLIWICK (id = dynn_Galliwick)
+############################
+### Heart 5
+###
+Galliwick_21 = { 
+	name = Drox # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	7778.1.1 = { birth = yes }
+	7846.1.1 = { death = yes }
+}
+Galliwick_20 = { 
+	name = Rolland # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_21
+ 
+	7805.1.1 = { birth = yes }
+	7872.1.1 = { death = yes }
+}
+Galliwick_19 = { 
+	name = Rolland # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_20
+ 
+	7825.1.1 = { birth = yes }
+	7880.1.1 = { death = yes }
+}
+Galliwick_18 = { 
+	name = Robeson # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_19
+ 
+	7842.1.1 = { birth = yes }
+	7901.1.1 = { death = yes }
+}
+Galliwick_17 = { 
+	name = Gerold # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_18
+ 
+	7872.1.1 = { birth = yes }
+	7937.1.1 = { death = yes }
+}
+Galliwick_16 = { 
+	name = Armistead # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_17
+ 
+	7897.1.1 = { birth = yes }
+	7952.1.1 = { death = yes }
+}
+Galliwick_15 = { 
+	name = Erreg # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_16
+ 
+	7928.1.1 = { birth = yes }
+	7979.1.1 = { death = yes }
+}
+Galliwick_14 = { 
+	name = Qarlon # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_15
+ 
+	7952.1.1 = { birth = yes }
+	8007.1.1 = { death = yes }
+}
+Galliwick_13 = { 
+	name = Artys # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_14
+ 
+	7976.1.1 = { birth = yes }
+	8033.1.1 = { death = yes }
+}
+Galliwick_12 = { 
+	name = Rolland # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_13
+ 
+	8004.1.1 = { birth = yes }
+	8064.1.1 = { death = yes }
+}
+Galliwick_11 = { 
+	name = Armistead # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_12
+ 
+	8026.1.1 = { birth = yes }
+	8081.1.1 = { death = yes }
+}
+Galliwick_10 = { 
+	name = Qarlon # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_11
+ 
+	8048.1.1 = { birth = yes }
+	8112.1.1 = { death = yes }
+}
+Galliwick_9 = { 
+	name = Serella # a lord
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_10
+ 
+	8076.1.1 = { birth = yes }
+	8136.1.1 = { death = yes }
+}
+Galliwick_8 = { 
+	name = Morgan # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	mother = Galliwick_9
+ 
+	8100.1.1 = { birth = yes }
+	8150.1.1 = { death = yes }
+}
+Galliwick_7 = { 
+	name = Morgan # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_8
+ 
+	8120.1.1 = { birth = yes }
+	8188.1.1 = { death = yes }
+}
+Galliwick_6 = { 
+	name = Oswell # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_7
+ 
+	8146.1.1 = { birth = yes }
+	8194.1.1 = { death = yes }
+}
+
+###### HOUSE VOTYRIS (id = dynn_Votyris)
+############################
+### Heart 6
+###
+Votyris_22 = { 
+	name = Morgo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	7771.1.1 = { birth = yes }
+	7831.1.1 = { death = yes }
+}
+Votyris_21 = { 
+	name = Denzo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_22
+ 
+	7801.1.1 = { birth = yes }
+	7849.1.1 = { death = yes }
+}
+Votyris_20 = { 
+	name = Areo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_21
+ 
+	7827.1.1 = { birth = yes }
+	7895.1.1 = { death = yes }
+}
+Votyris_19 = { 
+	name = Areo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_20
+ 
+	7854.1.1 = { birth = yes }
+	7913.1.1 = { death = yes }
+}
+Votyris_18 = { 
+	name = Aurio # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_19
+ 
+	7883.1.1 = { birth = yes }
+	7952.1.1 = { death = yes }
+}
+Votyris_17 = { 
+	name = Bello
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_18
+ 
+	7899.1.1 = { birth = yes }
+	7959.1.1 = { death = yes }
+}
+Votyris_16 = { 
+	name = Jaqmaq # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_17
+ 
+	7918.1.1 = { birth = yes }
+	7969.1.1 = { death = yes }
+}
+Votyris_15 = { 
+	name = Marro # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_16
+ 
+	7936.1.1 = { birth = yes }
+	8002.1.1 = { death = yes }
+}
+Votyris_14 = { 
+	name = Denzo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_15
+ 
+	7960.1.1 = { birth = yes }
+	8020.1.1 = { death = yes }
+}
+Votyris_13 = { 
+	name = Bello
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_14
+ 
+	7977.1.1 = { birth = yes }
+	8024.1.1 = { death = yes }
+}
+Votyris_12 = { 
+	name = Sanjaro # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_13
+ 
+	8002.1.1 = { birth = yes }
+	8052.1.1 = { death = yes }
+}
+Votyris_11 = { 
+	name = Moreo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_12
+ 
+	8033.1.1 = { birth = yes }
+	8096.1.1 = { death = yes }
+}
+Votyris_10 = { 
+	name = Elora # a lord
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_11
+ 
+	8050.1.1 = { birth = yes }
+	8106.1.1 = { death = yes }
+}
+Votyris_9 = { 
+	name = Jaharo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	mother = Votyris_10
+ 
+	8066.1.1 = { birth = yes }
+	8123.1.1 = { death = yes }
+}
+Votyris_8 = { 
+	name = Noho # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_9
+ 
+	8092.1.1 = { birth = yes }
+	8146.1.1 = { death = yes }
+}
+Votyris_7 = { 
+	name = Melampo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_8
+ 
+	8112.1.1 = { birth = yes }
+	8172.1.1 = { death = yes }
+}
+
+###### HOUSE DEN REEVE (id = dynn_Den_Reeve)
+############################
+### Nest 1
+###
+Den_Reeve_21 = { 
+	name = Armistead # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	7783.1.1 = { birth = yes }
+	7844.1.1 = { death = yes }
+}
+Den_Reeve_20 = { 
+	name = Hugor # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_21
+ 
+	7813.1.1 = { birth = yes }
+	7869.1.1 = { death = yes }
+}
+Den_Reeve_19 = { 
+	name = Hugor # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_20
+ 
+	7833.1.1 = { birth = yes }
+	7891.1.1 = { death = yes }
+}
+Den_Reeve_18 = { 
+	name = Sanora # a lord
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_19
+ 
+	7859.1.1 = { birth = yes }
+	7920.1.1 = { death = yes }
+}
+Den_Reeve_17 = { 
+	name = Rylene # a lord
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	mother = Den_Reeve_18
+ 
+	7880.1.1 = { birth = yes }
+	7947.1.1 = { death = yes }
+}
+Den_Reeve_16 = { 
+	name = Oswell # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	mother = Den_Reeve_17
+ 
+	7909.1.1 = { birth = yes }
+	7969.1.1 = { death = yes }
+}
+Den_Reeve_15 = { 
+	name = Oswell # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_16
+ 
+	7928.1.1 = { birth = yes }
+	7987.1.1 = { death = yes }
+}
+Den_Reeve_14 = { 
+	name = Alester # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_15
+ 
+	7945.1.1 = { birth = yes }
+	7999.1.1 = { death = yes }
+}
+Den_Reeve_13 = { 
+	name = Oswell # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_14
+ 
+	7963.1.1 = { birth = yes }
+	8030.1.1 = { death = yes }
+}
+Den_Reeve_12 = { 
+	name = Drox # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_13
+ 
+	7993.1.1 = { birth = yes }
+	8059.1.1 = { death = yes }
+}
+Den_Reeve_11 = { 
+	name = Bronwyn # a lord
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_12
+ 
+	8015.1.1 = { birth = yes }
+	8073.1.1 = { death = yes }
+}
+Den_Reeve_10 = { 
+	name = Hugo # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	mother = Den_Reeve_11
+ 
+	8036.1.1 = { birth = yes }
+	8085.1.1 = { death = yes }
+}
+Den_Reeve_9 = { 
+	name = Oswell # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_10
+ 
+	8057.1.1 = { birth = yes }
+	8113.1.1 = { death = yes }
+}
+Den_Reeve_8 = { 
+	name = Vorian # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_9
+ 
+	8077.1.1 = { birth = yes }
+	8146.1.1 = { death = yes }
+}
+Den_Reeve_7 = { 
+	name = Hugor # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_8
+ 
+	8107.1.1 = { birth = yes }
+	8173.1.1 = { death = yes }
+}
+Den_Reeve_6 = { 
+	name = Alester # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_7
+ 
+	8134.1.1 = { birth = yes }
+	8198.1.1 = { death = yes }
+}
+Den_Reeve_5 = { 
+	name = Alester
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_6
+ 
+	8160.1.1 = { birth = yes }
+	8195.1.1 = { death = yes }
+}
+
+###### HOUSE DAELWELL (id = dynn_Daelwell)
+############################
+### Nest 3
+###
+Daelwell_22 = { 
+	name = Togarion # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	7758.1.1 = { birth = yes }
+	7810.1.1 = { death = yes }
+}
+Daelwell_21 = { 
+	name = Hugor # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_22
+ 
+	7784.1.1 = { birth = yes }
+	7850.1.1 = { death = yes }
+}
+Daelwell_20 = { 
+	name = Hugo # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_21
+ 
+	7809.1.1 = { birth = yes }
+	7870.1.1 = { death = yes }
+}
+Daelwell_19 = { 
+	name = Armistead # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_20
+ 
+	7837.1.1 = { birth = yes }
+	7903.1.1 = { death = yes }
+}
+Daelwell_18 = { 
+	name = Artys # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_19
+ 
+	7865.1.1 = { birth = yes }
+	7930.1.1 = { death = yes }
+}
+Daelwell_17 = { 
+	name = Gerold # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_18
+ 
+	7892.1.1 = { birth = yes }
+	7943.1.1 = { death = yes }
+}
+Daelwell_16 = { 
+	name = Robeson # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_17
+ 
+	7915.1.1 = { birth = yes }
+	7978.1.1 = { death = yes }
+}
+Daelwell_15 = { 
+	name = Erreg # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_16
+ 
+	7934.1.1 = { birth = yes }
+	8003.1.1 = { death = yes }
+}
+Daelwell_14 = { 
+	name = Vorian # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_15
+ 
+	7959.1.1 = { birth = yes }
+	8024.1.1 = { death = yes }
+}
+Daelwell_13 = { 
+	name = Armistead
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_14
+ 
+	7978.1.1 = { birth = yes }
+	8013.1.1 = { death = yes }
+}
+Daelwell_12 = { 
+	name = Argos # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_13
+ 
+	8006.1.1 = { birth = yes }
+	8073.1.1 = { death = yes }
+}
+Daelwell_11 = { 
+	name = Gerold # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_12
+ 
+	8026.1.1 = { birth = yes }
+	8089.1.1 = { death = yes }
+}
+Daelwell_10 = { 
+	name = Qarlon # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_11
+ 
+	8054.1.1 = { birth = yes }
+	8110.1.1 = { death = yes }
+}
+Daelwell_9 = { 
+	name = Robeson # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_10
+ 
+	8073.1.1 = { birth = yes }
+	8138.1.1 = { death = yes }
+}
+Daelwell_8 = { 
+	name = Argos # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_9
+ 
+	8104.1.1 = { birth = yes }
+	8166.1.1 = { death = yes }
+}
+Daelwell_7 = { 
+	name = Hugor # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_8
+ 
+	8125.1.1 = { birth = yes }
+	8184.1.1 = { death = yes }
+}
+Daelwell_6 = { 
+	name = Rolland # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_7
+ 
+	8146.1.1 = { birth = yes }
+	8199.1.1 = { death = yes }
+}
+
+###### HOUSE PARNELL (id = dynn_Parnell)
+############################
+### Nest 1
+###
+Parnell_22 = { 
+	name = Sipoto # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	7765.1.1 = { birth = yes }
+	7830.1.1 = { death = yes }
+}
+Parnell_21 = { 
+	name = Ado
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_22
+ 
+	7796.1.1 = { birth = yes }
+	7834.1.1 = { death = yes }
+}
+Parnell_20 = { 
+	name = Hermea # a lord
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_21
+ 
+	7821.1.1 = { birth = yes }
+	7876.1.1 = { death = yes }
+}
+Parnell_19 = { 
+	name = Orso # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	mother = Parnell_20
+ 
+	7847.1.1 = { birth = yes }
+	7908.1.1 = { death = yes }
+}
+Parnell_18 = { 
+	name = Pynto # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_19
+ 
+	7869.1.1 = { birth = yes }
+	7921.1.1 = { death = yes }
+}
+Parnell_17 = { 
+	name = Emyria # a lord
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_18
+ 
+	7890.1.1 = { birth = yes }
+	7958.1.1 = { death = yes }
+}
+Parnell_16 = { 
+	name = Bessaro
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	mother = Parnell_17
+ 
+	7914.1.1 = { birth = yes }
+	7955.1.1 = { death = yes }
+}
+Parnell_15 = { 
+	name = Pello # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_16
+ 
+	7933.1.1 = { birth = yes }
+	8000.1.1 = { death = yes }
+}
+Parnell_14 = { 
+	name = Essario # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_15
+ 
+	7964.1.1 = { birth = yes }
+	8032.1.1 = { death = yes }
+}
+Parnell_13 = { 
+	name = Izembaro # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_14
+ 
+	7992.1.1 = { birth = yes }
+	8041.1.1 = { death = yes }
+}
+Parnell_12 = { 
+	name = Ufredo # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_13
+ 
+	8012.1.1 = { birth = yes }
+	8063.1.1 = { death = yes }
+}
+Parnell_11 = { 
+	name = Benonio # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_12
+ 
+	8030.1.1 = { birth = yes }
+	8088.1.1 = { death = yes }
+}
+Parnell_10 = { 
+	name = Ollo # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_11
+ 
+	8049.1.1 = { birth = yes }
+	8097.1.1 = { death = yes }
+}
+Parnell_9 = { 
+	name = Essedaro # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_10
+ 
+	8069.1.1 = { birth = yes }
+	8126.1.1 = { death = yes }
+}
+Parnell_8 = { 
+	name = Roro # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_9
+ 
+	8093.1.1 = { birth = yes }
+	8160.1.1 = { death = yes }
+}
+Parnell_7 = { 
+	name = Ado
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_8
+ 
+	8112.1.1 = { birth = yes }
+	8156.1.1 = { death = yes }
+}
+Parnell_6 = { 
+	name = Uthero # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_7
+ 
+	8133.1.1 = { birth = yes }
+	8199.1.1 = { death = yes }
+}
+
+###### HOUSE MOREL (id = dynn_Morel)
+############################
+### Nest 5
+###
+Morel_20 = { 
+	name = Bellegere # a lord
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	7763.1.1 = { birth = yes }
+	7812.1.1 = { death = yes }
+}
+Morel_19 = { 
+	name = Fredo # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	mother = Morel_20
+ 
+	7790.1.1 = { birth = yes }
+	7827.1.1 = { death = yes }
+}
+Morel_18 = { 
+	name = Lotho # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_19
+ 
+	7821.1.1 = { birth = yes }
+	7889.1.1 = { death = yes }
+}
+Morel_17 = { 
+	name = Tycho # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_18
+ 
+	7851.1.1 = { birth = yes }
+	7903.1.1 = { death = yes }
+}
+Morel_16 = { 
+	name = Tormo # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_17
+ 
+	7882.1.1 = { birth = yes }
+	7949.1.1 = { death = yes }
+}
+Morel_15 = { 
+	name = Ferrego # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_16
+ 
+	7912.1.1 = { birth = yes }
+	7964.1.1 = { death = yes }
+}
+Morel_14 = { 
+	name = Lodovio # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_15
+ 
+	7940.1.1 = { birth = yes }
+	8001.1.1 = { death = yes }
+}
+Morel_13 = { 
+	name = Bessaro # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_14
+ 
+	7969.1.1 = { birth = yes }
+	8023.1.1 = { death = yes }
+}
+Morel_12 = { 
+	name = Elyo # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_13
+ 
+	7997.1.1 = { birth = yes }
+	8054.1.1 = { death = yes }
+}
+Morel_11 = { 
+	name = Errio # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_12
+ 
+	8025.1.1 = { birth = yes }
+	8094.1.1 = { death = yes }
+}
+Morel_10 = { 
+	name = Qarro
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_11
+ 
+	8043.1.1 = { birth = yes }
+	8083.1.1 = { death = yes }
+}
+Morel_9 = { 
+	name = Pereno # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_10
+ 
+	8066.1.1 = { birth = yes }
+	8118.1.1 = { death = yes }
+}
+Morel_8 = { 
+	name = Zonario # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_9
+ 
+	8092.1.1 = { birth = yes }
+	8153.1.1 = { death = yes }
+}
+Morel_7 = { 
+	name = Allaquo # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_8
+ 
+	8119.1.1 = { birth = yes }
+	8186.1.1 = { death = yes }
+}
+Morel_6 = { 
+	name = Eroea # a lord
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_7
+ 
+	8137.1.1 = { birth = yes }
+	8200.1.1 = { death = yes }
+}

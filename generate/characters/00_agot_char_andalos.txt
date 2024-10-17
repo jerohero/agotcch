@@ -1,0 +1,4990 @@
+﻿############################           ANDALOS          ############################
+####################################################################################
+
+###### HOUSE GOLATHIS (id = dynn_golathis)
+############################
+### Heart 1-3
+###
+Golathis_4 = { 
+	name = Mohor # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_5
+ 
+	8205.1.1 = { birth = yes }
+	8220.1.1 = { add_spouse = Golathis_rs_4 } 
+	8259.1.1 = { death = yes }
+}
+Golathis_rs_4 = {
+	name = Irea
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8205.1.1 = { birth = yes }
+	8259.1.1 = { death = yes }
+}
+Golathis_3 = { 
+	name = Aurio # a lord
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_4
+	mother = Golathis_rs_4
+ 
+	8221.1.1 = { birth = yes }
+	8237.1.1 = { add_spouse = Golathis_rs_3 } 
+	8266.1.1 = { death = yes }
+}
+Golathis_rs_3 = {
+	name = Mera
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8221.1.1 = { birth = yes }
+	8266.1.1 = { death = yes }
+}
+### Issue of Aurio
+Golathis_26 = { 
+	name = Irea
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_3
+	mother = Golathis_rs_3
+ 
+	8238.1.1 = { birth = yes }
+	8245.1.1 = { death = yes }
+}
+Golathis_2 = { 
+	name = Ralla # a lord
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_3
+	mother = Golathis_rs_3
+ 
+	8244.1.1 = { birth = yes }
+	8260.1.1 = { add_matrilineal_spouse = Golathis_rs_2 } 
+	8277.1.1 = { death = yes }
+}
+Golathis_rs_2 = {
+	name = Jaqen
+
+	religion = rhllor
+	culture = norvoshi
+
+	8244.1.1 = { birth = yes }
+	8277.1.1 = { death = yes }
+}
+### Issue of Ralla
+Golathis_1 = { 
+	name = Alaerys # a lord
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_rs_2
+	mother = Golathis_2
+ 
+	8261.1.1 = { birth = yes }
+	8291.1.1 = { add_matrilineal_spouse = Golathis_rs_1 } 
+}
+Golathis_rs_1 = {
+	name = Rallo
+
+	religion = rhllor
+	culture = norvoshi
+
+	8261.1.1 = { birth = yes }
+}
+Golathis_23 = { 
+	name = Moreo
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_rs_2
+	mother = Golathis_2
+ 
+	8267.1.1 = { birth = yes }
+	8293.1.1 = { add_spouse = Golathis_rs_23 } 
+	8297.1.1 = { death = yes }
+}
+Golathis_rs_23 = {
+	name = Ralla
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8267.1.1 = { birth = yes }
+	8297.1.1 = { death = yes }
+}
+Golathis_24 = { 
+	name = Varro
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_rs_2
+	mother = Golathis_2
+ 
+	8275.1.1 = { birth = yes }
+	8299.1.1 = { add_spouse = Golathis_rs_24 } 
+}
+Golathis_rs_24 = {
+	name = Emyria
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8275.1.1 = { birth = yes }
+}
+Golathis_25 = { 
+	name = Denzo
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_rs_2
+	mother = Golathis_2
+ 
+	8276.1.1 = { birth = yes }
+}
+### Issue of Moreo
+Golathis_27 = { 
+	name = Danara
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_23
+	mother = Golathis_rs_23
+ 
+	8296.1.1 = { birth = yes }
+}
+Golathis_28 = { 
+	name = Danara
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_rs_1
+	mother = Golathis_1
+ 
+	8295.1.1 = { birth = yes }
+}
+Golathis_29 = { 
+	name = Mylla
+	dynasty = dynn_golathis
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_rs_1
+	mother = Golathis_1
+ 
+	8297.1.1 = { birth = yes }
+}
+Golathis_30 = { 
+	name = Mero
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_rs_1
+	mother = Golathis_1
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Varro
+Golathis_31 = { 
+	name = Narbo
+	dynasty = dynn_golathis
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Golathis_24
+	mother = Golathis_rs_24
+ 
+	8299.1.1 = { birth = yes }
+}
+
+###### HOUSE BELGYLE (id = dynn_Belgyle)
+############################
+### Heart 2
+###
+Belgyle_3 = { 
+	name = Cyrenna # a lord
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_rs_4
+	mother = Belgyle_4
+ 
+	8208.1.1 = { birth = yes }
+	8235.1.1 = { add_matrilineal_spouse = Belgyle_rs_3 } 
+	8261.1.1 = { death = yes }
+}
+Belgyle_rs_3 = {
+	name = Ryon
+
+	religion = rhllor
+	culture = rhoynish
+
+	8208.1.1 = { birth = yes }
+	8261.1.1 = { death = yes }
+}
+Belgyle_25 = { 
+	name = Aron
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_rs_4
+	mother = Belgyle_4
+ 
+	8210.1.1 = { birth = yes }
+	8239.1.1 = { add_spouse = Belgyle_rs_25 } 
+	8265.1.1 = { death = yes }
+}
+Belgyle_rs_25 = {
+	name = Senelle
+	female = yes
+
+	religion = rhllor
+	culture = rhoynish
+
+	8210.1.1 = { birth = yes }
+	8265.1.1 = { death = yes }
+}
+### Issue of Cyrenna
+Belgyle_2 = { 
+	name = Dezyel # a lord
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_rs_3
+	mother = Belgyle_3
+ 
+	8236.1.1 = { birth = yes }
+	8257.1.1 = { add_spouse = Belgyle_rs_2 } 
+	8279.1.1 = { death = yes }
+}
+Belgyle_rs_2 = {
+	name = Myria
+	female = yes
+
+	religion = rhllor
+	culture = rhoynish
+
+	8236.1.1 = { birth = yes }
+	8279.1.1 = { death = yes }
+}
+### Issue of Dezyel
+Belgyle_1 = { 
+	name = Vorian # a lord
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_2
+	mother = Belgyle_rs_2
+ 
+	8258.1.1 = { birth = yes }
+	8286.1.1 = { add_spouse = Belgyle_rs_1 } 
+}
+Belgyle_rs_1 = {
+	name = Obara
+	female = yes
+
+	religion = rhllor
+	culture = rhoynish
+
+	8258.1.1 = { birth = yes }
+}
+Belgyle_21 = { 
+	name = Gasoyne
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_2
+	mother = Belgyle_rs_2
+ 
+	8260.1.1 = { birth = yes }
+	8285.1.1 = { add_spouse = Belgyle_rs_21 } 
+}
+Belgyle_rs_21 = {
+	name = Lynesse
+	female = yes
+
+	religion = rhllor
+	culture = rhoynish
+
+	8260.1.1 = { birth = yes }
+}
+Belgyle_22 = { 
+	name = Alleras
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_2
+	mother = Belgyle_rs_2
+ 
+	8269.1.1 = { birth = yes }
+	8289.1.1 = { add_spouse = Belgyle_rs_22 } 
+}
+Belgyle_rs_22 = {
+	name = Tyene
+	female = yes
+
+	religion = rhllor
+	culture = rhoynish
+
+	8269.1.1 = { birth = yes }
+}
+Belgyle_23 = { 
+	name = Dorea
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_2
+	mother = Belgyle_rs_2
+ 
+	8274.1.1 = { birth = yes }
+}
+Belgyle_24 = { 
+	name = Jynessa
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_2
+	mother = Belgyle_rs_2
+ 
+	8278.1.1 = { birth = yes }
+	8298.1.1 = { add_matrilineal_spouse = Belgyle_rs_24 } 
+}
+Belgyle_rs_24 = {
+	name = Gulyan
+
+	religion = rhllor
+	culture = rhoynish
+
+	8278.1.1 = { birth = yes }
+}
+### Issue of Jynessa
+Belgyle_26 = { 
+	name = Doran
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_rs_24
+	mother = Belgyle_24
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Alleras
+Belgyle_27 = { 
+	name = Dyanna
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_22
+	mother = Belgyle_rs_22
+ 
+	8292.1.1 = { birth = yes }
+}
+Belgyle_28 = { 
+	name = Mellei
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_22
+	mother = Belgyle_rs_22
+ 
+	8293.1.1 = { birth = yes }
+}
+Belgyle_29 = { 
+	name = Laria
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_22
+	mother = Belgyle_rs_22
+ 
+	8297.1.1 = { birth = yes }
+}
+Belgyle_30 = { 
+	name = Wylia
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_22
+	mother = Belgyle_rs_22
+ 
+	8298.1.1 = { birth = yes }
+}
+### Issue of Gasoyne
+Belgyle_31 = { 
+	name = Yandry
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_21
+	mother = Belgyle_rs_21
+ 
+	8294.1.1 = { birth = yes }
+}
+Belgyle_32 = { 
+	name = Symon
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_21
+	mother = Belgyle_rs_21
+ 
+	8297.1.1 = { birth = yes }
+}
+Belgyle_33 = { 
+	name = Daemyn
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_21
+	mother = Belgyle_rs_21
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Vorian
+Belgyle_34 = { 
+	name = Aryanne
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_1
+	mother = Belgyle_rs_1
+ 
+	8287.1.1 = { birth = yes }
+}
+Belgyle_35 = { 
+	name = Aron
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_1
+	mother = Belgyle_rs_1
+ 
+	8294.1.1 = { birth = yes }
+}
+Belgyle_36 = { 
+	name = Elia
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_1
+	mother = Belgyle_rs_1
+ 
+	8297.1.1 = { birth = yes }
+}
+Belgyle_37 = { 
+	name = Allar
+	dynasty = dynn_Belgyle
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_1
+	mother = Belgyle_rs_1
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Aron
+Belgyle_38 = { 
+	name = Aliandra
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_25
+	mother = Belgyle_rs_25
+ 
+	8248.1.1 = { birth = yes }
+	8296.1.1 = { death = yes }
+}
+Belgyle_39 = { 
+	name = Donyse
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_25
+	mother = Belgyle_rs_25
+ 
+	8256.1.1 = { birth = yes }
+}
+Belgyle_40 = { 
+	name = Dorea
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_25
+	mother = Belgyle_rs_25
+ 
+	8261.1.1 = { birth = yes }
+}
+Belgyle_41 = { 
+	name = Dorea
+	dynasty = dynn_Belgyle
+	female = yes
+ 
+	religion = rhllor
+	culture = rhoynish
+ 
+	father = Belgyle_25
+	mother = Belgyle_rs_25
+ 
+	8263.1.1 = { birth = yes }
+}
+
+###### HOUSE BAR DROX (id = dynn_Bar_Drox)
+############################
+### Heart 4
+###
+Bar_Drox_4 = { 
+	name = Corwyn # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_5
+ 
+	8174.1.1 = { birth = yes }
+	8192.1.1 = { add_spouse = Bar_Drox_rs_4 } 
+	8242.1.1 = { death = yes }
+}
+Bar_Drox_rs_4 = {
+	name = Parra
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8174.1.1 = { birth = yes }
+	8242.1.1 = { death = yes }
+}
+### Issue of Corwyn
+Bar_Drox_23 = { 
+	name = Erreg
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_4
+	mother = Bar_Drox_rs_4
+ 
+	8193.1.1 = { birth = yes }
+	8213.1.1 = { death = yes }
+}
+Bar_Drox_3 = { 
+	name = Alester # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_4
+	mother = Bar_Drox_rs_4
+ 
+	8198.1.1 = { birth = yes }
+	8217.1.1 = { add_spouse = Bar_Drox_rs_3 } 
+	8252.1.1 = { death = yes }
+}
+Bar_Drox_rs_3 = {
+	name = Parra
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8198.1.1 = { birth = yes }
+	8252.1.1 = { death = yes }
+}
+Bar_Drox_24 = { 
+	name = Hugo
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_4
+	mother = Bar_Drox_rs_4
+ 
+	8201.1.1 = { birth = yes }
+	8221.1.1 = { add_spouse = Bar_Drox_rs_24 } 
+	8255.1.1 = { death = yes }
+}
+Bar_Drox_rs_24 = {
+	name = Jane
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8201.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+Bar_Drox_25 = { 
+	name = Beth
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_4
+	mother = Bar_Drox_rs_4
+ 
+	8208.1.1 = { birth = yes }
+	8264.1.1 = { death = yes }
+}
+Bar_Drox_26 = { 
+	name = Arrana
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_4
+	mother = Bar_Drox_rs_4
+ 
+	8209.1.1 = { birth = yes }
+	8274.1.1 = { death = yes }
+}
+### Issue of Alester
+Bar_Drox_2 = { 
+	name = Artys # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_3
+	mother = Bar_Drox_rs_3
+ 
+	8218.1.1 = { birth = yes }
+	8238.1.1 = { add_spouse = Bar_Drox_rs_2 } 
+	8279.1.1 = { death = yes }
+}
+Bar_Drox_rs_2 = {
+	name = Elenei
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8218.1.1 = { birth = yes }
+	8279.1.1 = { death = yes }
+}
+### Issue of Artys
+Bar_Drox_1 = { 
+	name = Hugor # a lord
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_2
+	mother = Bar_Drox_rs_2
+ 
+	8239.1.1 = { birth = yes }
+	8269.1.1 = { add_spouse = Bar_Drox_rs_1 } 
+}
+Bar_Drox_rs_1 = {
+	name = Annara
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8239.1.1 = { birth = yes }
+}
+Bar_Drox_21 = { 
+	name = Hugo
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_2
+	mother = Bar_Drox_rs_2
+ 
+	8243.1.1 = { birth = yes }
+	8262.1.1 = { add_spouse = Bar_Drox_rs_21 } 
+	8279.1.1 = { death = yes }
+}
+Bar_Drox_rs_21 = {
+	name = Norella
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8243.1.1 = { birth = yes }
+	8279.1.1 = { death = yes }
+}
+Bar_Drox_22 = { 
+	name = Marsella
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_2
+	mother = Bar_Drox_rs_2
+ 
+	8246.1.1 = { birth = yes }
+}
+### Issue of Hugo
+Bar_Drox_27 = { 
+	name = Oswell
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_21
+	mother = Bar_Drox_rs_21
+ 
+	8265.1.1 = { birth = yes }
+	8292.1.1 = { add_spouse = Bar_Drox_rs_27 } 
+}
+Bar_Drox_rs_27 = {
+	name = Carina
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8265.1.1 = { birth = yes }
+}
+Bar_Drox_28 = { 
+	name = Qyle
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_21
+	mother = Bar_Drox_rs_21
+ 
+	8272.1.1 = { birth = yes }
+	8299.1.1 = { add_spouse = Bar_Drox_rs_28 } 
+}
+Bar_Drox_rs_28 = {
+	name = Idona
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8272.1.1 = { birth = yes }
+}
+Bar_Drox_29 = { 
+	name = Aryse
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_21
+	mother = Bar_Drox_rs_21
+ 
+	8274.1.1 = { birth = yes }
+}
+Bar_Drox_30 = { 
+	name = Armistead
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_21
+	mother = Bar_Drox_rs_21
+ 
+	8276.1.1 = { birth = yes }
+}
+### Issue of Hugor
+Bar_Drox_31 = { 
+	name = Qarlon
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_1
+	mother = Bar_Drox_rs_1
+ 
+	8269.1.1 = { birth = yes }
+	8296.1.1 = { add_spouse = Bar_Drox_rs_31 } 
+}
+Bar_Drox_rs_31 = {
+	name = Carina
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8269.1.1 = { birth = yes }
+}
+Bar_Drox_32 = { 
+	name = Else
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_1
+	mother = Bar_Drox_rs_1
+ 
+	8273.1.1 = { birth = yes }
+}
+Bar_Drox_33 = { 
+	name = Rienne
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_1
+	mother = Bar_Drox_rs_1
+ 
+	8282.1.1 = { birth = yes }
+}
+Bar_Drox_34 = { 
+	name = Qarlon
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_1
+	mother = Bar_Drox_rs_1
+ 
+	8283.1.1 = { birth = yes }
+}
+### Issue of Hugo
+Bar_Drox_35 = { 
+	name = Vorian
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_24
+	mother = Bar_Drox_rs_24
+ 
+	8225.1.1 = { birth = yes }
+	8248.1.1 = { add_spouse = Bar_Drox_rs_35 } 
+	8287.1.1 = { death = yes }
+}
+Bar_Drox_rs_35 = {
+	name = Sanora
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8225.1.1 = { birth = yes }
+	8287.1.1 = { death = yes }
+}
+Bar_Drox_36 = { 
+	name = Olyra
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_24
+	mother = Bar_Drox_rs_24
+ 
+	8230.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+Bar_Drox_37 = { 
+	name = Robeson
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_24
+	mother = Bar_Drox_rs_24
+ 
+	8231.1.1 = { birth = yes }
+	8250.1.1 = { add_spouse = Bar_Drox_rs_37 } 
+	8270.1.1 = { death = yes }
+}
+Bar_Drox_rs_37 = {
+	name = Damana
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8231.1.1 = { birth = yes }
+	8270.1.1 = { death = yes }
+}
+Bar_Drox_38 = { 
+	name = Erreg
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_24
+	mother = Bar_Drox_rs_24
+ 
+	8234.1.1 = { birth = yes }
+	8262.1.1 = { add_spouse = Bar_Drox_rs_38 } 
+	8297.1.1 = { death = yes }
+}
+Bar_Drox_rs_38 = {
+	name = Jeyne
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8234.1.1 = { birth = yes }
+	8297.1.1 = { death = yes }
+}
+### Issue of Oswell
+Bar_Drox_39 = { 
+	name = Brianne
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_27
+	mother = Bar_Drox_rs_27
+ 
+	8293.1.1 = { birth = yes }
+}
+Bar_Drox_40 = { 
+	name = Alester
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_27
+	mother = Bar_Drox_rs_27
+ 
+	8295.1.1 = { birth = yes }
+}
+Bar_Drox_41 = { 
+	name = Syrona
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_27
+	mother = Bar_Drox_rs_27
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Qyle
+Bar_Drox_42 = { 
+	name = Maris
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_28
+	mother = Bar_Drox_rs_28
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Qarlon
+Bar_Drox_43 = { 
+	name = Polianne
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_31
+	mother = Bar_Drox_rs_31
+ 
+	8298.1.1 = { birth = yes }
+}
+Bar_Drox_44 = { 
+	name = Elesa
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_31
+	mother = Bar_Drox_rs_31
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Vorian
+Bar_Drox_45 = { 
+	name = Oswell
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_35
+	mother = Bar_Drox_rs_35
+ 
+	8254.1.1 = { birth = yes }
+	8279.1.1 = { add_spouse = Bar_Drox_rs_45 } 
+}
+Bar_Drox_rs_45 = {
+	name = Junia
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8254.1.1 = { birth = yes }
+}
+Bar_Drox_46 = { 
+	name = Joffrey
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_35
+	mother = Bar_Drox_rs_35
+ 
+	8256.1.1 = { birth = yes }
+	8286.1.1 = { add_spouse = Bar_Drox_rs_46 } 
+}
+Bar_Drox_rs_46 = {
+	name = Galene
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8256.1.1 = { birth = yes }
+}
+Bar_Drox_47 = { 
+	name = Henrietta
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_35
+	mother = Bar_Drox_rs_35
+ 
+	8263.1.1 = { birth = yes }
+}
+Bar_Drox_48 = { 
+	name = Alester
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_35
+	mother = Bar_Drox_rs_35
+ 
+	8272.1.1 = { birth = yes }
+	8289.1.1 = { add_spouse = Bar_Drox_rs_48 } 
+}
+Bar_Drox_rs_48 = {
+	name = Karene
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8272.1.1 = { birth = yes }
+}
+### Issue of Robeson
+Bar_Drox_49 = { 
+	name = Tynissa
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_37
+	mother = Bar_Drox_rs_37
+ 
+	8252.1.1 = { birth = yes }
+	8283.1.1 = { death = yes }
+}
+Bar_Drox_50 = { 
+	name = Jyana
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_37
+	mother = Bar_Drox_rs_37
+ 
+	8262.1.1 = { birth = yes }
+}
+Bar_Drox_51 = { 
+	name = Argos
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_37
+	mother = Bar_Drox_rs_37
+ 
+	8263.1.1 = { birth = yes }
+	8283.1.1 = { add_spouse = Bar_Drox_rs_51 } 
+}
+Bar_Drox_rs_51 = {
+	name = Belissa
+	female = yes
+
+	religion = servants_of_the_star
+	culture = andalosi
+
+	8263.1.1 = { birth = yes }
+}
+Bar_Drox_52 = { 
+	name = Arwen
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_37
+	mother = Bar_Drox_rs_37
+ 
+	8267.1.1 = { birth = yes }
+}
+### Issue of Erreg
+Bar_Drox_53 = { 
+	name = Maris
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_38
+	mother = Bar_Drox_rs_38
+ 
+	8268.1.1 = { birth = yes }
+}
+Bar_Drox_54 = { 
+	name = Moryssa
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_38
+	mother = Bar_Drox_rs_38
+ 
+	8278.1.1 = { birth = yes }
+}
+Bar_Drox_55 = { 
+	name = Saryanna
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_38
+	mother = Bar_Drox_rs_38
+ 
+	8288.1.1 = { birth = yes }
+}
+Bar_Drox_56 = { 
+	name = Diana
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_38
+	mother = Bar_Drox_rs_38
+ 
+	8296.1.1 = { birth = yes }
+}
+### Issue of Oswell
+Bar_Drox_57 = { 
+	name = Argos
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_45
+	mother = Bar_Drox_rs_45
+ 
+	8288.1.1 = { birth = yes }
+}
+Bar_Drox_58 = { 
+	name = Norella
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_45
+	mother = Bar_Drox_rs_45
+ 
+	8296.1.1 = { birth = yes }
+}
+Bar_Drox_59 = { 
+	name = Jaime
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_45
+	mother = Bar_Drox_rs_45
+ 
+	8297.1.1 = { birth = yes }
+}
+Bar_Drox_60 = { 
+	name = Aryse
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_45
+	mother = Bar_Drox_rs_45
+ 
+	8298.1.1 = { birth = yes }
+}
+### Issue of Joffrey
+Bar_Drox_61 = { 
+	name = Damana
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_46
+	mother = Bar_Drox_rs_46
+ 
+	8293.1.1 = { birth = yes }
+}
+Bar_Drox_62 = { 
+	name = Erreg
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_46
+	mother = Bar_Drox_rs_46
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Alester
+Bar_Drox_63 = { 
+	name = Artys
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_48
+	mother = Bar_Drox_rs_48
+ 
+	8289.1.1 = { birth = yes }
+}
+Bar_Drox_64 = { 
+	name = Ronella
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_48
+	mother = Bar_Drox_rs_48
+ 
+	8292.1.1 = { birth = yes }
+}
+Bar_Drox_65 = { 
+	name = Vorian
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_48
+	mother = Bar_Drox_rs_48
+ 
+	8295.1.1 = { birth = yes }
+}
+Bar_Drox_66 = { 
+	name = Alanna
+	dynasty = dynn_Bar_Drox
+	female = yes
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_48
+	mother = Bar_Drox_rs_48
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Argos
+Bar_Drox_67 = { 
+	name = Joffrey
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_51
+	mother = Bar_Drox_rs_51
+ 
+	8292.1.1 = { birth = yes }
+}
+Bar_Drox_68 = { 
+	name = Morgan
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_51
+	mother = Bar_Drox_rs_51
+ 
+	8295.1.1 = { birth = yes }
+}
+Bar_Drox_69 = { 
+	name = Hugo
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_51
+	mother = Bar_Drox_rs_51
+ 
+	8296.1.1 = { birth = yes }
+}
+Bar_Drox_70 = { 
+	name = Qyle
+	dynasty = dynn_Bar_Drox
+ 
+	religion = servants_of_the_star
+	culture = andalosi
+ 
+	father = Bar_Drox_51
+	mother = Bar_Drox_rs_51
+ 
+	8298.1.1 = { birth = yes }
+}
+
+###### HOUSE GALLIWICK (id = dynn_Galliwick)
+############################
+### Heart 5
+###
+Galliwick_5 = { 
+	name = Alester # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_6
+ 
+	8172.1.1 = { birth = yes }
+	8238.1.1 = { death = yes }
+}
+Galliwick_4 = { 
+	name = Morgan # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_5
+ 
+	8200.1.1 = { birth = yes }
+	8217.1.1 = { add_spouse = Galliwick_rs_4 } 
+	8255.1.1 = { death = yes }
+}
+Galliwick_rs_4 = {
+	name = Jennis
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8200.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+### Issue of Morgan
+Galliwick_28 = { 
+	name = Idona
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_4
+	mother = Galliwick_rs_4
+ 
+	8218.1.1 = { birth = yes }
+	8270.1.1 = { death = yes }
+}
+Galliwick_3 = { 
+	name = Jaime # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_4
+	mother = Galliwick_rs_4
+ 
+	8222.1.1 = { birth = yes }
+	8238.1.1 = { add_spouse = Galliwick_rs_3 } 
+	8265.1.1 = { death = yes }
+}
+Galliwick_rs_3 = {
+	name = Roslin
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8222.1.1 = { birth = yes }
+	8265.1.1 = { death = yes }
+}
+Galliwick_29 = { 
+	name = Alanna
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_4
+	mother = Galliwick_rs_4
+ 
+	8226.1.1 = { birth = yes }
+	8275.1.1 = { death = yes }
+}
+### Issue of Jaime
+Galliwick_2 = { 
+	name = Gerold # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_3
+	mother = Galliwick_rs_3
+ 
+	8239.1.1 = { birth = yes }
+	8263.1.1 = { add_spouse = Galliwick_rs_2 } 
+	8277.1.1 = { death = yes }
+}
+Galliwick_rs_2 = {
+	name = Odette
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8239.1.1 = { birth = yes }
+	8277.1.1 = { death = yes }
+}
+Galliwick_25 = { 
+	name = Morgan
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_3
+	mother = Galliwick_rs_3
+ 
+	8247.1.1 = { birth = yes }
+	8278.1.1 = { add_spouse = Galliwick_rs_25 } 
+}
+Galliwick_rs_25 = {
+	name = Yorena
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8247.1.1 = { birth = yes }
+}
+Galliwick_26 = { 
+	name = Tynissa
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_3
+	mother = Galliwick_rs_3
+ 
+	8251.1.1 = { birth = yes }
+	8287.1.1 = { death = yes }
+}
+Galliwick_27 = { 
+	name = Karella
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_3
+	mother = Galliwick_rs_3
+ 
+	8256.1.1 = { birth = yes }
+	8299.1.1 = { death = yes }
+}
+### Issue of Gerold
+Galliwick_1 = { 
+	name = Hugor # a lord
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_2
+	mother = Galliwick_rs_2
+ 
+	trait = twin
+
+	8264.1.1 = { birth = yes }
+	8292.1.1 = { add_spouse = Galliwick_rs_1 } 
+}
+Galliwick_rs_1 = {
+	name = Rowena
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8264.1.1 = { birth = yes }
+}
+Galliwick_22 = { 
+	name = Morgan
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_2
+	mother = Galliwick_rs_2
+ 
+	trait = twin
+
+	8264.1.1 = { birth = yes }
+	8292.1.1 = { add_spouse = Galliwick_rs_22 } 
+}
+Galliwick_rs_22 = {
+	name = Jessamyn
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8264.1.1 = { birth = yes }
+}
+Galliwick_23 = { 
+	name = Alayne
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_2
+	mother = Galliwick_rs_2
+ 
+	8273.1.1 = { birth = yes }
+}
+Galliwick_24 = { 
+	name = Corwyn
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_2
+	mother = Galliwick_rs_2
+ 
+	8276.1.1 = { birth = yes }
+}
+### Issue of Morgan
+Galliwick_30 = { 
+	name = Serina
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_22
+	mother = Galliwick_rs_22
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Hugor
+Galliwick_31 = { 
+	name = Arria
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_1
+	mother = Galliwick_rs_1
+ 
+	8294.1.1 = { birth = yes }
+}
+Galliwick_32 = { 
+	name = Jacene
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_1
+	mother = Galliwick_rs_1
+ 
+	8296.1.1 = { birth = yes }
+}
+Galliwick_33 = { 
+	name = Parella
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_1
+	mother = Galliwick_rs_1
+ 
+	8297.1.1 = { birth = yes }
+}
+Galliwick_34 = { 
+	name = Qarlon
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_1
+	mother = Galliwick_rs_1
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Morgan
+Galliwick_35 = { 
+	name = Togarion
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_25
+	mother = Galliwick_rs_25
+ 
+	8281.1.1 = { birth = yes }
+	8298.1.1 = { add_spouse = Galliwick_rs_35 } 
+}
+Galliwick_rs_35 = {
+	name = Odette
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8281.1.1 = { birth = yes }
+}
+Galliwick_36 = { 
+	name = Sharra
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_25
+	mother = Galliwick_rs_25
+ 
+	8286.1.1 = { birth = yes }
+}
+Galliwick_37 = { 
+	name = Argos
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_25
+	mother = Galliwick_rs_25
+ 
+	8290.1.1 = { birth = yes }
+}
+Galliwick_38 = { 
+	name = Grisel
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_25
+	mother = Galliwick_rs_25
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Togarion
+Galliwick_39 = { 
+	name = Erreg
+	dynasty = dynn_Galliwick
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_35
+	mother = Galliwick_rs_35
+ 
+	8298.1.1 = { birth = yes }
+}
+Galliwick_40 = { 
+	name = Anya
+	dynasty = dynn_Galliwick
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Galliwick_35
+	mother = Galliwick_rs_35
+ 
+	8299.1.1 = { birth = yes }
+}
+
+###### HOUSE VOTYRIS (id = dynn_Votyris)
+############################
+### Heart 6
+###
+Votyris_6 = { 
+	name = Gylora # a lord
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_7
+ 
+	8143.1.1 = { birth = yes }
+	8212.1.1 = { death = yes }
+}
+Votyris_5 = { 
+	name = Valyro # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	mother = Votyris_6
+ 
+	8166.1.1 = { birth = yes }
+	8233.1.1 = { death = yes }
+}
+Votyris_4 = { 
+	name = Lotho # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_5
+ 
+	8194.1.1 = { birth = yes }
+	8210.1.1 = { add_spouse = Votyris_rs_4 } 
+	8263.1.1 = { death = yes }
+}
+Votyris_rs_4 = {
+	name = Syrea
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8194.1.1 = { birth = yes }
+	8263.1.1 = { death = yes }
+}
+### Issue of Lotho
+Votyris_26 = { 
+	name = Mylla
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_4
+	mother = Votyris_rs_4
+ 
+	8211.1.1 = { birth = yes }
+	8252.1.1 = { death = yes }
+}
+Votyris_27 = { 
+	name = Emyria
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_4
+	mother = Votyris_rs_4
+ 
+	8219.1.1 = { birth = yes }
+	8249.1.1 = { death = yes }
+}
+Votyris_3 = { 
+	name = Anto
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_4
+	mother = Votyris_rs_4
+ 
+	8224.1.1 = { birth = yes }
+	8244.1.1 = { add_spouse = Votyris_rs_3 } 
+	8263.1.1 = { death = yes }
+}
+Votyris_rs_3 = {
+	name = Shana
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8224.1.1 = { birth = yes }
+	8263.1.1 = { death = yes }
+}
+Votyris_28 = { 
+	name = Tormo
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_4
+	mother = Votyris_rs_4
+ 
+	8227.1.1 = { birth = yes }
+	8245.1.1 = { add_spouse = Votyris_rs_28 } 
+	8272.1.1 = { death = yes }
+}
+Votyris_rs_28 = {
+	name = Mellario
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8227.1.1 = { birth = yes }
+	8272.1.1 = { death = yes }
+}
+Votyris_29 = { 
+	name = Melane
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_4
+	mother = Votyris_rs_4
+ 
+	8235.1.1 = { birth = yes }
+}
+### Issue of Anto
+Votyris_2 = { 
+	name = Galeo # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_3
+	mother = Votyris_rs_3
+ 
+	8245.1.1 = { birth = yes }
+	8260.1.1 = { add_spouse = Votyris_rs_2 } 
+	8278.1.1 = { death = yes }
+}
+Votyris_rs_2 = {
+	name = Elora
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8245.1.1 = { birth = yes }
+	8278.1.1 = { death = yes }
+}
+### Issue of Galeo
+Votyris_1 = { 
+	name = Ubor # a lord
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_2
+	mother = Votyris_rs_2
+ 
+	8261.1.1 = { birth = yes }
+	8291.1.1 = { add_spouse = Votyris_rs_1 } 
+}
+Votyris_rs_1 = {
+	name = Elora
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8261.1.1 = { birth = yes }
+}
+Votyris_23 = { 
+	name = Bylar
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_2
+	mother = Votyris_rs_2
+ 
+	8264.1.1 = { birth = yes }
+	8289.1.1 = { add_spouse = Votyris_rs_23 } 
+}
+Votyris_rs_23 = {
+	name = Byanna
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8264.1.1 = { birth = yes }
+}
+Votyris_24 = { 
+	name = Mero
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_2
+	mother = Votyris_rs_2
+ 
+	8270.1.1 = { birth = yes }
+	8297.1.1 = { add_spouse = Votyris_rs_24 } 
+}
+Votyris_rs_24 = {
+	name = Emyria
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8270.1.1 = { birth = yes }
+}
+Votyris_25 = { 
+	name = Ralla
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_2
+	mother = Votyris_rs_2
+ 
+	8273.1.1 = { birth = yes }
+}
+### Issue of Mero
+Votyris_30 = { 
+	name = Ornela
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_24
+	mother = Votyris_rs_24
+ 
+	8299.1.1 = { birth = yes }
+}
+Votyris_31 = { 
+	name = Byanna
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_23
+	mother = Votyris_rs_23
+ 
+	8294.1.1 = { birth = yes }
+}
+Votyris_32 = { 
+	name = Jaharo
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_23
+	mother = Votyris_rs_23
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Ubor
+Votyris_33 = { 
+	name = Danara
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_1
+	mother = Votyris_rs_1
+ 
+	8298.1.1 = { birth = yes }
+}
+Votyris_34 = { 
+	name = Arana
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_1
+	mother = Votyris_rs_1
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Tormo
+Votyris_35 = { 
+	name = Mohor
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_28
+	mother = Votyris_rs_28
+ 
+	8253.1.1 = { birth = yes }
+	8281.1.1 = { add_spouse = Votyris_rs_35 } 
+}
+Votyris_rs_35 = {
+	name = Ornela
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8253.1.1 = { birth = yes }
+}
+Votyris_36 = { 
+	name = Uber
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_28
+	mother = Votyris_rs_28
+ 
+	8254.1.1 = { birth = yes }
+	8280.1.1 = { add_spouse = Votyris_rs_36 } 
+}
+Votyris_rs_36 = {
+	name = Danara
+	female = yes
+
+	religion = rhllor
+	culture = norvoshi
+
+	8254.1.1 = { birth = yes }
+}
+Votyris_37 = { 
+	name = Byanna
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_28
+	mother = Votyris_rs_28
+ 
+	8258.1.1 = { birth = yes }
+}
+Votyris_38 = { 
+	name = Syrea
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_28
+	mother = Votyris_rs_28
+ 
+	8266.1.1 = { birth = yes }
+}
+### Issue of Mohor
+Votyris_39 = { 
+	name = Torma
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_35
+	mother = Votyris_rs_35
+ 
+	8285.1.1 = { birth = yes }
+}
+Votyris_40 = { 
+	name = Areo
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_35
+	mother = Votyris_rs_35
+ 
+	8288.1.1 = { birth = yes }
+}
+Votyris_41 = { 
+	name = Uber
+	dynasty = dynn_Votyris
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_35
+	mother = Votyris_rs_35
+ 
+	8294.1.1 = { birth = yes }
+}
+Votyris_42 = { 
+	name = Syrea
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_35
+	mother = Votyris_rs_35
+ 
+	8298.1.1 = { birth = yes }
+}
+### Issue o Uber
+Votyris_43 = { 
+	name = Nohia
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_36
+	mother = Votyris_rs_36
+ 
+	8285.1.1 = { birth = yes }
+}
+Votyris_44 = { 
+	name = Shana
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_36
+	mother = Votyris_rs_36
+ 
+	8295.1.1 = { birth = yes }
+}
+Votyris_45 = { 
+	name = Mylla
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_36
+	mother = Votyris_rs_36
+ 
+	8297.1.1 = { birth = yes }
+}
+Votyris_46 = { 
+	name = Syrea
+	dynasty = dynn_Votyris
+	female = yes
+ 
+	religion = rhllor
+	culture = norvoshi
+ 
+	father = Votyris_36
+	mother = Votyris_rs_36
+ 
+	8298.1.1 = { birth = yes }
+}
+
+###### HOUSE DEN REEVE (id = dynn_Den_Reeve)
+############################
+### Nest 1
+###
+Den_Reeve_4 = { 
+	name = Argos # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_5
+ 
+	8181.1.1 = { birth = yes }
+	8197.1.1 = { add_spouse = Den_Reeve_rs_4 } 
+	8247.1.1 = { death = yes }
+}
+Den_Reeve_rs_4 = {
+	name = Tynissa
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8181.1.1 = { birth = yes }
+	8247.1.1 = { death = yes }
+}
+### Issue of Argos
+Den_Reeve_22 = { 
+	name = Vorian
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_4
+	mother = Den_Reeve_rs_4
+ 
+	8198.1.1 = { birth = yes }
+	8239.1.1 = { death = yes }
+}
+Den_Reeve_23 = { 
+	name = Armistead
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_4
+	mother = Den_Reeve_rs_4
+ 
+	8200.1.1 = { birth = yes }
+	8229.1.1 = { death = yes }
+}
+Den_Reeve_3 = { 
+	name = Drox # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_4
+	mother = Den_Reeve_rs_4
+ 
+	8204.1.1 = { birth = yes }
+	8225.1.1 = { add_spouse = Den_Reeve_rs_3 } 
+	8273.1.1 = { death = yes }
+}
+Den_Reeve_rs_3 = {
+	name = Olyra
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8204.1.1 = { birth = yes }
+	8273.1.1 = { death = yes }
+}
+Den_Reeve_24 = { 
+	name = Jaime
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_4
+	mother = Den_Reeve_rs_4
+ 
+	8205.1.1 = { birth = yes }
+	8223.1.1 = { add_spouse = Den_Reeve_rs_24 } 
+	8243.1.1 = { death = yes }
+}
+Den_Reeve_rs_24 = {
+	name = Cersei
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8205.1.1 = { birth = yes }
+	8243.1.1 = { death = yes }
+}
+### Issue of Drox (the father)
+Den_Reeve_2 = { 
+	name = Drox
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_3
+	mother = Den_Reeve_rs_3
+ 
+	8226.1.1 = { birth = yes }
+	8248.1.1 = { add_spouse = Den_Reeve_rs_2 } 
+	8261.1.1 = { death = yes }
+}
+Den_Reeve_rs_2 = {
+	name = Bessa
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8226.1.1 = { birth = yes }
+	8261.1.1 = { death = yes }
+}
+### Issue of Drox (the son)
+Den_Reeve_1 = { 
+	name = Corwin # a lord
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_2
+	mother = Den_Reeve_rs_2
+
+	trait = education_stewardship_4
+ 
+	8249.1.1 = { birth = yes }
+	8271.1.1 = { add_spouse = Den_Reeve_rs_1 } 
+}
+Den_Reeve_rs_1 = {
+	name = Rowena
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8249.1.1 = { birth = yes }
+}
+### Issue of Corwin
+Den_Reeve_25 = { 
+	name = Corwyn
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_1
+	mother = Den_Reeve_rs_1
+ 
+	8280.1.1 = { birth = yes }
+	8299.1.1 = { add_spouse = Den_Reeve_rs_25 } 
+}
+Den_Reeve_rs_25 = {
+	name = Meryne
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8280.1.1 = { birth = yes }
+}
+Den_Reeve_26 = { 
+	name = Moryssa
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_1
+	mother = Den_Reeve_rs_1
+ 
+	8284.1.1 = { birth = yes }
+}
+Den_Reeve_27 = { 
+	name = Alester
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_1
+	mother = Den_Reeve_rs_1
+ 
+	8289.1.1 = { birth = yes }
+}
+Den_Reeve_28 = { 
+	name = Sherene
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_1
+	mother = Den_Reeve_rs_1
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Jaime
+Den_Reeve_29 = { 
+	name = Alester
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_24
+	mother = Den_Reeve_rs_24
+ 
+	8229.1.1 = { birth = yes }
+	8257.1.1 = { add_spouse = Den_Reeve_rs_29 } 
+	8267.1.1 = { death = yes }
+}
+Den_Reeve_rs_29 = {
+	name = Serella
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8229.1.1 = { birth = yes }
+	8267.1.1 = { death = yes }
+}
+Den_Reeve_30 = { 
+	name = Karella
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_24
+	mother = Den_Reeve_rs_24
+ 
+	8236.1.1 = { birth = yes }
+	8294.1.1 = { death = yes }
+}
+Den_Reeve_31 = { 
+	name = Karella
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_24
+	mother = Den_Reeve_rs_24
+ 
+	8241.1.1 = { birth = yes }
+}
+Den_Reeve_32 = { 
+	name = Jaime
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_24
+	mother = Den_Reeve_rs_24
+ 
+	8242.1.1 = { birth = yes }
+	8267.1.1 = { add_spouse = Den_Reeve_rs_32 } 
+	8290.1.1 = { death = yes }
+}
+Den_Reeve_rs_32 = {
+	name = Janna
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8242.1.1 = { birth = yes }
+	8290.1.1 = { death = yes }
+}
+### Issue of Corwyn
+Den_Reeve_33 = { 
+	name = Benfria
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_25
+	mother = Den_Reeve_rs_25
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Alester
+Den_Reeve_34 = { 
+	name = Vorian
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_29
+	mother = Den_Reeve_rs_29
+ 
+	8258.1.1 = { birth = yes }
+	8283.1.1 = { add_spouse = Den_Reeve_rs_34 } 
+	8284.1.1 = { death = yes }
+}
+Den_Reeve_rs_34 = {
+	name = Elene
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8258.1.1 = { birth = yes }
+	8284.1.1 = { death = yes }
+}
+Den_Reeve_35 = { 
+	name = Qarlon
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_29
+	mother = Den_Reeve_rs_29
+ 
+	8263.1.1 = { birth = yes }
+	8293.1.1 = { add_spouse = Den_Reeve_rs_35 } 
+}
+Den_Reeve_rs_35 = {
+	name = Isabel
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8263.1.1 = { birth = yes }
+}
+Den_Reeve_36 = { 
+	name = Togarion
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_29
+	mother = Den_Reeve_rs_29
+ 
+	8265.1.1 = { birth = yes }
+	8283.1.1 = { add_spouse = Den_Reeve_rs_36 } 
+}
+Den_Reeve_rs_36 = {
+	name = Wylera
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8265.1.1 = { birth = yes }
+}
+Den_Reeve_37 = { 
+	name = Hugor
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_29
+	mother = Den_Reeve_rs_29
+ 
+	8266.1.1 = { birth = yes }
+	8287.1.1 = { add_spouse = Den_Reeve_rs_37 } 
+}
+Den_Reeve_rs_37 = {
+	name = Celianne
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8266.1.1 = { birth = yes }
+}
+### Issue of Jaime
+Den_Reeve_38 = { 
+	name = Robeson
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_32
+	mother = Den_Reeve_rs_32
+ 
+	8274.1.1 = { birth = yes }
+	8293.1.1 = { add_spouse = Den_Reeve_rs_38 } 
+}
+Den_Reeve_rs_38 = {
+	name = Mara
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8274.1.1 = { birth = yes }
+}
+Den_Reeve_39 = { 
+	name = Merisa
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_32
+	mother = Den_Reeve_rs_32
+ 
+	8284.1.1 = { birth = yes }
+}
+Den_Reeve_40 = { 
+	name = Corwyn
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_32
+	mother = Den_Reeve_rs_32
+ 
+	8285.1.1 = { birth = yes }
+}
+Den_Reeve_41 = { 
+	name = Cersei
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_32
+	mother = Den_Reeve_rs_32
+ 
+	8286.1.1 = { birth = yes }
+}
+### Issue of Vorian
+Den_Reeve_42 = { 
+	name = Morgan
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_34
+	mother = Den_Reeve_rs_34
+ 
+	8283.1.1 = { birth = yes }
+}
+### Issue of Qarlon
+Den_Reeve_43 = { 
+	name = Bellara
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_35
+	mother = Den_Reeve_rs_35
+ 
+	8294.1.1 = { birth = yes }
+}
+Den_Reeve_44 = { 
+	name = Erreg
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_35
+	mother = Den_Reeve_rs_35
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Togarion
+Den_Reeve_45 = { 
+	name = Jessamyn
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_36
+	mother = Den_Reeve_rs_36
+ 
+	8288.1.1 = { birth = yes }
+}
+Den_Reeve_46 = { 
+	name = Odette
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_36
+	mother = Den_Reeve_rs_36
+ 
+	8294.1.1 = { birth = yes }
+}
+Den_Reeve_47 = { 
+	name = Artys
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_36
+	mother = Den_Reeve_rs_36
+ 
+	8298.1.1 = { birth = yes }
+}
+Den_Reeve_48 = { 
+	name = Erreg
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_36
+	mother = Den_Reeve_rs_36
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Hugor
+Den_Reeve_49 = { 
+	name = Armistead
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_37
+	mother = Den_Reeve_rs_37
+ 
+	8292.1.1 = { birth = yes }
+}
+Den_Reeve_50 = { 
+	name = Vorian
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_37
+	mother = Den_Reeve_rs_37
+ 
+	8294.1.1 = { birth = yes }
+}
+Den_Reeve_51 = { 
+	name = Qarlon
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_37
+	mother = Den_Reeve_rs_37
+ 
+	8297.1.1 = { birth = yes }
+}
+Den_Reeve_52 = { 
+	name = Serena
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_37
+	mother = Den_Reeve_rs_37
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Robeson
+Den_Reeve_53 = { 
+	name = Argos
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_38
+	mother = Den_Reeve_rs_38
+ 
+	8294.1.1 = { birth = yes }
+}
+Den_Reeve_54 = { 
+	name = Yorena
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_38
+	mother = Den_Reeve_rs_38
+ 
+	8295.1.1 = { birth = yes }
+}
+Den_Reeve_55 = { 
+	name = Eddyne
+	dynasty = dynn_Den_Reeve
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_38
+	mother = Den_Reeve_rs_38
+ 
+	8297.1.1 = { birth = yes }
+}
+Den_Reeve_56 = { 
+	name = Morgan
+	dynasty = dynn_Den_Reeve
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Den_Reeve_38
+	mother = Den_Reeve_rs_38
+ 
+	8299.1.1 = { birth = yes }
+}
+
+###### HOUSE DAELWELL (id = dynn_Daelwell)
+############################
+### Nest 3
+###
+Daelwell_5 = { 
+	name = Corwyn # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_6
+ 
+	8164.1.1 = { birth = yes }
+	8233.1.1 = { death = yes }
+}
+Daelwell_4 = { 
+	name = Oswell # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_5
+ 
+	8194.1.1 = { birth = yes }
+	8211.1.1 = { add_spouse = Daelwell_rs_4 } 
+	8256.1.1 = { death = yes }
+}
+Daelwell_rs_4 = {
+	name = Odette
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8194.1.1 = { birth = yes }
+	8256.1.1 = { death = yes }
+}
+### Issue of Oswell
+Daelwell_3 = { 
+	name = Kalyra
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_4
+	mother = Daelwell_rs_4
+ 
+	8212.1.1 = { birth = yes }
+	8230.1.1 = { add_matrilineal_spouse = Daelwell_rs_3 } 
+	8257.1.1 = { death = yes }
+}
+Daelwell_rs_3 = {
+	name = Robeson
+
+	religion = rhllor
+	culture = andalosi
+
+	8212.1.1 = { birth = yes }
+	8257.1.1 = { death = yes }
+}
+Daelwell_27 = { 
+	name = Corwyn
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_4
+	mother = Daelwell_rs_4
+ 
+	8216.1.1 = { birth = yes }
+	8237.1.1 = { add_spouse = Daelwell_rs_27 } 
+	8279.1.1 = { death = yes }
+}
+Daelwell_rs_27 = {
+	name = Deana
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8216.1.1 = { birth = yes }
+	8279.1.1 = { death = yes }
+}
+Daelwell_28 = { 
+	name = Qarlon
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_4
+	mother = Daelwell_rs_4
+ 
+	8220.1.1 = { birth = yes }
+	8250.1.1 = { add_spouse = Daelwell_rs_28 } 
+	8255.1.1 = { death = yes }
+}
+Daelwell_rs_28 = {
+	name = Beth
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8220.1.1 = { birth = yes }
+	8255.1.1 = { death = yes }
+}
+Daelwell_29 = { 
+	name = Hugo
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_4
+	mother = Daelwell_rs_4
+ 
+	8226.1.1 = { birth = yes }
+	8250.1.1 = { add_spouse = Daelwell_rs_29 } 
+	8274.1.1 = { death = yes }
+}
+Daelwell_rs_29 = {
+	name = Galene
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8226.1.1 = { birth = yes }
+	8274.1.1 = { death = yes }
+}
+### Issue of Kalyra
+Daelwell_2 = { 
+	name = Drox # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_rs_3
+	mother = Daelwell_3
+ 
+	8231.1.1 = { birth = yes }
+	8253.1.1 = { add_spouse = Daelwell_rs_2 } 
+	8281.1.1 = { death = yes }
+}
+Daelwell_rs_2 = {
+	name = Rienne
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8231.1.1 = { birth = yes }
+	8281.1.1 = { death = yes }
+}
+Daelwell_26 = { 
+	name = Sherene
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_rs_3
+	mother = Daelwell_3
+ 
+	8238.1.1 = { birth = yes }
+	8294.1.1 = { death = yes }
+}
+### Issue of Drox
+Daelwell_23 = { 
+	name = Argos
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_2
+	mother = Daelwell_rs_2
+ 
+	8254.1.1 = { birth = yes }
+	8273.1.1 = { death = yes }
+}
+Daelwell_24 = { 
+	name = Kayla
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_2
+	mother = Daelwell_rs_2
+ 
+	8259.1.1 = { birth = yes }
+}
+Daelwell_1 = { 
+	name = Argos # a lord
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_2
+	mother = Daelwell_rs_2
+ 
+	8260.1.1 = { birth = yes }
+	8285.1.1 = { add_spouse = Daelwell_rs_1 } 
+}
+Daelwell_rs_1 = {
+	name = Janyce
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8260.1.1 = { birth = yes }
+}
+Daelwell_25 = { 
+	name = Joffrey
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_2
+	mother = Daelwell_rs_2
+ 
+	8265.1.1 = { birth = yes }
+	8293.1.1 = { add_spouse = Daelwell_rs_25 } 
+}
+Daelwell_rs_25 = {
+	name = Maery
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8265.1.1 = { birth = yes }
+}
+### Issue of Joffrey
+Daelwell_30 = { 
+	name = Jennis
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_25
+	mother = Daelwell_rs_25
+ 
+	8293.1.1 = { birth = yes }
+}
+Daelwell_31 = { 
+	name = Cissy
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_25
+	mother = Daelwell_rs_25
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Argos
+Daelwell_32 = { 
+	name = Joffrey
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_1
+	mother = Daelwell_rs_1
+ 
+	8286.1.1 = { birth = yes }
+}
+Daelwell_33 = { 
+	name = Oswell
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_1
+	mother = Daelwell_rs_1
+ 
+	8295.1.1 = { birth = yes }
+}
+Daelwell_34 = { 
+	name = Argos
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_1
+	mother = Daelwell_rs_1
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Hugo
+Daelwell_35 = { 
+	name = Argos
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_29
+	mother = Daelwell_rs_29
+ 
+	8250.1.1 = { birth = yes }
+	8279.1.1 = { add_spouse = Daelwell_rs_35 } 
+}
+Daelwell_rs_35 = {
+	name = Daria
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8250.1.1 = { birth = yes }
+}
+Daelwell_36 = { 
+	name = Drox
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_29
+	mother = Daelwell_rs_29
+ 
+	8253.1.1 = { birth = yes }
+	8274.1.1 = { add_spouse = Daelwell_rs_36 } 
+}
+Daelwell_rs_36 = {
+	name = Andara
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8253.1.1 = { birth = yes }
+}
+Daelwell_37 = { 
+	name = Vorian
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_29
+	mother = Daelwell_rs_29
+ 
+	8256.1.1 = { birth = yes }
+	8276.1.1 = { add_spouse = Daelwell_rs_37 } 
+}
+Daelwell_rs_37 = {
+	name = Desmona
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8256.1.1 = { birth = yes }
+}
+Daelwell_38 = { 
+	name = Moryssa
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_29
+	mother = Daelwell_rs_29
+ 
+	8264.1.1 = { birth = yes }
+	8297.1.1 = { death = yes }
+}
+### Issue of Qarlon
+Daelwell_39 = { 
+	name = Obyra
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_28
+	mother = Daelwell_rs_28
+ 
+	8250.1.1 = { birth = yes }
+}
+Daelwell_40 = { 
+	name = Danisa
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_28
+	mother = Daelwell_rs_28
+ 
+	8252.1.1 = { birth = yes }
+}
+Daelwell_41 = { 
+	name = Artys
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_28
+	mother = Daelwell_rs_28
+ 
+	8254.1.1 = { birth = yes }
+	8278.1.1 = { add_spouse = Daelwell_rs_41 } 
+}
+Daelwell_rs_41 = {
+	name = Lymaria
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8254.1.1 = { birth = yes }
+}
+### Issue of Corwyn
+Daelwell_42 = { 
+	name = Artys
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_27
+	mother = Daelwell_rs_27
+ 
+	8244.1.1 = { birth = yes }
+	8256.1.1 = { death = yes }
+}
+Daelwell_43 = { 
+	name = Brianne
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_27
+	mother = Daelwell_rs_27
+ 
+	8253.1.1 = { birth = yes }
+}
+Daelwell_44 = { 
+	name = Becca
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_27
+	mother = Daelwell_rs_27
+ 
+	8263.1.1 = { birth = yes }
+}
+Daelwell_45 = { 
+	name = Erreg
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_27
+	mother = Daelwell_rs_27
+ 
+	8269.1.1 = { birth = yes }
+	8295.1.1 = { add_spouse = Daelwell_rs_45 } 
+}
+Daelwell_rs_45 = {
+	name = Damana
+	female = yes
+
+	religion = rhllor
+	culture = andalosi
+
+	8269.1.1 = { birth = yes }
+}
+### Issue of Argos
+Daelwell_46 = { 
+	name = Obyra
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_35
+	mother = Daelwell_rs_35
+ 
+	8288.1.1 = { birth = yes }
+}
+Daelwell_47 = { 
+	name = Corrine
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_35
+	mother = Daelwell_rs_35
+ 
+	8295.1.1 = { birth = yes }
+}
+Daelwell_48 = { 
+	name = Damana
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_35
+	mother = Daelwell_rs_35
+ 
+	8296.1.1 = { birth = yes }
+}
+Daelwell_49 = { 
+	name = Elina
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_35
+	mother = Daelwell_rs_35
+ 
+	8297.1.1 = { birth = yes }
+}
+### Issue of Drox
+Daelwell_50 = { 
+	name = Barbara
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_36
+	mother = Daelwell_rs_36
+ 
+	8276.1.1 = { birth = yes }
+}
+Daelwell_51 = { 
+	name = Qarlon
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_36
+	mother = Daelwell_rs_36
+ 
+	8283.1.1 = { birth = yes }
+}
+Daelwell_52 = { 
+	name = Togarion
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_36
+	mother = Daelwell_rs_36
+ 
+	8284.1.1 = { birth = yes }
+}
+Daelwell_53 = { 
+	name = Roslin
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_36
+	mother = Daelwell_rs_36
+ 
+	8290.1.1 = { birth = yes }
+}
+### Issue of Vorian
+Daelwell_54 = { 
+	name = Lymaria
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_37
+	mother = Daelwell_rs_37
+ 
+	8279.1.1 = { birth = yes }
+}
+Daelwell_55 = { 
+	name = Erreg
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_37
+	mother = Daelwell_rs_37
+ 
+	8289.1.1 = { birth = yes }
+}
+Daelwell_56 = { 
+	name = Serella
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_37
+	mother = Daelwell_rs_37
+ 
+	8294.1.1 = { birth = yes }
+}
+Daelwell_57 = { 
+	name = Salanne
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_37
+	mother = Daelwell_rs_37
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Artys
+Daelwell_58 = { 
+	name = Alester
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_41
+	mother = Daelwell_rs_41
+ 
+	8287.1.1 = { birth = yes }
+}
+Daelwell_59 = { 
+	name = Serella
+	dynasty = dynn_Daelwell
+	female = yes
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_41
+	mother = Daelwell_rs_41
+ 
+	8288.1.1 = { birth = yes }
+}
+Daelwell_60 = { 
+	name = Qarlon
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_41
+	mother = Daelwell_rs_41
+ 
+	8294.1.1 = { birth = yes }
+}
+Daelwell_61 = { 
+	name = Erreg
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_41
+	mother = Daelwell_rs_41
+ 
+	8296.1.1 = { birth = yes }
+}
+### Issue of Erreg
+Daelwell_62 = { 
+	name = Drox
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_45
+	mother = Daelwell_rs_45
+ 
+	8297.1.1 = { birth = yes }
+}
+Daelwell_63 = { 
+	name = Vorian
+	dynasty = dynn_Daelwell
+ 
+	religion = rhllor
+	culture = andalosi
+ 
+	father = Daelwell_45
+	mother = Daelwell_rs_45
+ 
+	8299.1.1 = { birth = yes }
+}
+
+###### HOUSE PARNELL (id = dynn_Parnell)
+############################
+### Nest 1
+###
+Parnell_5 = { 
+	name = Pynto # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_6
+ 
+	8159.1.1 = { birth = yes }
+	8211.1.1 = { death = yes }
+}
+Parnell_4 = { 
+	name = Dorseo # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_5
+ 
+	8180.1.1 = { birth = yes }
+	8197.1.1 = { add_spouse = Parnell_rs_4 } 
+	8233.1.1 = { death = yes }
+}
+Parnell_rs_4 = {
+	name = Lanna
+	female = yes
+
+	religion = trios
+	culture = braavosi
+
+	8180.1.1 = { birth = yes }
+	8233.1.1 = { death = yes }
+}
+### Issue of Dorseo
+Parnell_26 = { 
+	name = Faro
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_4
+	mother = Parnell_rs_4
+ 
+	8198.1.1 = { birth = yes }
+	8215.1.1 = { death = yes }
+}
+Parnell_27 = { 
+	name = Danilo
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_4
+	mother = Parnell_rs_4
+ 
+	8200.1.1 = { birth = yes }
+	8210.1.1 = { death = yes }
+}
+Parnell_3 = { 
+	name = Mosadio # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_4
+	mother = Parnell_rs_4
+ 
+	8206.1.1 = { birth = yes }
+	8225.1.1 = { add_spouse = Parnell_rs_3 } 
+	8262.1.1 = { death = yes }
+}
+Parnell_rs_3 = {
+	name = Jyana
+	female = yes
+
+	religion = trios
+	culture = braavosi
+
+	8206.1.1 = { birth = yes }
+	8262.1.1 = { death = yes }
+}
+Parnell_28 = { 
+	name = Falyrio
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_4
+	mother = Parnell_rs_4
+ 
+	8207.1.1 = { birth = yes }
+	8226.1.1 = { add_spouse = Parnell_rs_28 } 
+	8269.1.1 = { death = yes }
+}
+Parnell_rs_28 = {
+	name = Retia
+	female = yes
+
+	religion = trios
+	culture = braavosi
+
+	8207.1.1 = { birth = yes }
+	8269.1.1 = { death = yes }
+}
+Parnell_29 = { 
+	name = Idana
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_4
+	mother = Parnell_rs_4
+ 
+	8215.1.1 = { birth = yes }
+	8275.1.1 = { death = yes }
+}
+### Issue of Mosadio
+Parnell_23 = { 
+	name = Trellio
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_3
+	mother = Parnell_rs_3
+ 
+	8226.1.1 = { birth = yes }
+	8253.1.1 = { death = yes }
+}
+Parnell_24 = { 
+	name = Allaro
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_3
+	mother = Parnell_rs_3
+ 
+	8229.1.1 = { birth = yes }
+	8230.1.1 = { death = yes }
+}
+Parnell_2 = { 
+	name = Nevio # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_3
+	mother = Parnell_rs_3
+ 
+	8234.1.1 = { birth = yes }
+	8256.1.1 = { add_spouse = Parnell_rs_2 } 
+	8276.1.1 = { death = yes }
+}
+Parnell_rs_2 = {
+	name = Brea
+	female = yes
+
+	religion = trios
+	culture = braavosi
+
+	8234.1.1 = { birth = yes }
+	8276.1.1 = { death = yes }
+}
+Parnell_25 = { 
+	name = Probio
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_3
+	mother = Parnell_rs_3
+ 
+	8237.1.1 = { birth = yes }
+	8258.1.1 = { add_spouse = Parnell_rs_25 } 
+	8285.1.1 = { death = yes }
+}
+Parnell_rs_25 = {
+	name = Valessa
+	female = yes
+
+	religion = trios
+	culture = braavosi
+
+	8237.1.1 = { birth = yes }
+	8285.1.1 = { death = yes }
+}
+### Issue of Nevio
+Parnell_1 = { 
+	name = Clarenzo # a lord
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_2
+	mother = Parnell_rs_2
+ 
+	8257.1.1 = { birth = yes }
+	8279.1.1 = { add_spouse = Parnell_rs_1 } 
+}
+Parnell_rs_1 = {
+	name = Bellenora
+	female = yes
+
+	religion = trios
+	culture = braavosi
+
+	8257.1.1 = { birth = yes }
+}
+### Issue of Clarenzo
+Parnell_30 = { 
+	name = Zanna
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_1
+	mother = Parnell_rs_1
+ 
+	8282.1.1 = { birth = yes }
+}
+Parnell_31 = { 
+	name = Tormo
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_1
+	mother = Parnell_rs_1
+ 
+	8288.1.1 = { birth = yes }
+}
+Parnell_32 = { 
+	name = Tenesio
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_1
+	mother = Parnell_rs_1
+ 
+	8295.1.1 = { birth = yes }
+}
+Parnell_33 = { 
+	name = Mylla
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_1
+	mother = Parnell_rs_1
+ 
+	8297.1.1 = { birth = yes }
+}
+### Issue of Probio
+Parnell_34 = { 
+	name = Hermea
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_25
+	mother = Parnell_rs_25
+ 
+	8260.1.1 = { birth = yes }
+	8295.1.1 = { death = yes }
+}
+Parnell_35 = { 
+	name = Doro
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_25
+	mother = Parnell_rs_25
+ 
+	8265.1.1 = { birth = yes }
+	8293.1.1 = { add_spouse = Parnell_rs_35 } 
+}
+Parnell_rs_35 = {
+	name = Emyria
+	female = yes
+
+	religion = trios
+	culture = braavosi
+
+	8265.1.1 = { birth = yes }
+}
+Parnell_36 = { 
+	name = Syneta
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_25
+	mother = Parnell_rs_25
+ 
+	8267.1.1 = { birth = yes }
+}
+Parnell_37 = { 
+	name = Essella
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_25
+	mother = Parnell_rs_25
+ 
+	8271.1.1 = { birth = yes }
+}
+### Issue of Falyrio
+Parnell_38 = { 
+	name = Orolantia
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_28
+	mother = Parnell_rs_28
+ 
+	8228.1.1 = { birth = yes }
+	8276.1.1 = { death = yes }
+}
+Parnell_39 = { 
+	name = Irea
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_28
+	mother = Parnell_rs_28
+ 
+	8232.1.1 = { birth = yes }
+	8257.1.1 = { death = yes }
+}
+Parnell_40 = { 
+	name = Danara
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_28
+	mother = Parnell_rs_28
+ 
+	8241.1.1 = { birth = yes }
+	8299.1.1 = { death = yes }
+}
+Parnell_41 = { 
+	name = Shana
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_28
+	mother = Parnell_rs_28
+ 
+	8244.1.1 = { birth = yes }
+}
+### Issue of Doro
+Parnell_42 = { 
+	name = Dorseo
+	dynasty = dynn_Parnell
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_35
+	mother = Parnell_rs_35
+ 
+	8294.1.1 = { birth = yes }
+}
+Parnell_43 = { 
+	name = Danara
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_35
+	mother = Parnell_rs_35
+ 
+	8295.1.1 = { birth = yes }
+}
+Parnell_44 = { 
+	name = Risina
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_35
+	mother = Parnell_rs_35
+ 
+	8298.1.1 = { birth = yes }
+}
+Parnell_45 = { 
+	name = Zabella
+	dynasty = dynn_Parnell
+	female = yes
+ 
+	religion = trios
+	culture = braavosi
+ 
+	father = Parnell_35
+	mother = Parnell_rs_35
+ 
+	8299.1.1 = { birth = yes }
+}
+
+###### HOUSE MOREL (id = dynn_Morel)
+############################
+### Nest 5
+###
+Morel_5 = { 
+	name = Loraro
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	mother = Morel_6
+ 
+	8156.1.1 = { birth = yes }
+	8207.1.1 = { death = yes }
+}
+Morel_4 = { 
+	name = Moredo # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_5
+ 
+	8186.1.1 = { birth = yes }
+	8207.1.1 = { add_spouse = Morel_rs_4 } 
+	8252.1.1 = { death = yes }
+}
+Morel_rs_4 = {
+	name = Serala
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8186.1.1 = { birth = yes }
+	8252.1.1 = { death = yes }
+}
+### Issue of Moredo
+Morel_3 = { 
+	name = Ferrego # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_4
+	mother = Morel_rs_4
+ 
+	trait = twin
+
+	8208.1.1 = { birth = yes }
+	8232.1.1 = { add_spouse = Morel_rs_3 } 
+	8276.1.1 = { death = yes }
+}
+Morel_rs_3 = {
+	name = Mylla
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8208.1.1 = { birth = yes }
+	8276.1.1 = { death = yes }
+}
+Morel_25 = { 
+	name = Dadello
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_4
+	mother = Morel_rs_4
+ 
+	trait = twin
+
+	8208.1.1 = { birth = yes }
+	8237.1.1 = { add_spouse = Morel_rs_25 } 
+	8240.1.1 = { death = yes }
+}
+Morel_rs_25 = {
+	name = Zanna
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8208.1.1 = { birth = yes }
+	8240.1.1 = { death = yes }
+}
+Morel_26 = { 
+	name = Jyana
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_4
+	mother = Morel_rs_4
+ 
+	8217.1.1 = { birth = yes }
+	8275.1.1 = { death = yes }
+}
+Morel_27 = { 
+	name = Jyana
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_4
+	mother = Morel_rs_4
+ 
+	8224.1.1 = { birth = yes }
+	8289.1.1 = { death = yes }
+}
+Morel_28 = { 
+	name = Luco
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_4
+	mother = Morel_rs_4
+ 
+	8230.1.1 = { birth = yes }
+	8250.1.1 = { add_spouse = Morel_rs_28 } 
+	8298.1.1 = { death = yes }
+}
+Morel_rs_28 = {
+	name = Syneta
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8230.1.1 = { birth = yes }
+	8298.1.1 = { death = yes }
+}
+### Issue of Ferrego
+Morel_21 = { 
+	name = Sellanora
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_3
+	mother = Morel_rs_3
+ 
+	8233.1.1 = { birth = yes }
+	8287.1.1 = { death = yes }
+}
+Morel_22 = { 
+	name = Zanna
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_3
+	mother = Morel_rs_3
+ 
+	8235.1.1 = { birth = yes }
+	8288.1.1 = { death = yes }
+}
+Morel_2 = { 
+	name = Tomarro
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_3
+	mother = Morel_rs_3
+ 
+	8238.1.1 = { birth = yes }
+	8261.1.1 = { add_spouse = Morel_rs_2 } 
+	8266.1.1 = { death = yes }
+}
+Morel_rs_2 = {
+	name = Irea
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8238.1.1 = { birth = yes }
+	8266.1.1 = { death = yes }
+}
+Morel_23 = { 
+	name = Tessario
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_3
+	mother = Morel_rs_3
+ 
+	8240.1.1 = { birth = yes }
+	8262.1.1 = { add_spouse = Morel_rs_23 } 
+}
+Morel_rs_23 = {
+	name = Ralla
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8240.1.1 = { birth = yes }
+}
+Morel_24 = { 
+	name = Tolomelo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_3
+	mother = Morel_rs_3
+ 
+	8248.1.1 = { birth = yes }
+	8275.1.1 = { add_spouse = Morel_rs_24 } 
+	8298.1.1 = { death = yes }
+}
+Morel_rs_24 = {
+	name = Essella
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8248.1.1 = { birth = yes }
+	8298.1.1 = { death = yes }
+}
+### Issue of Tomarro
+Morel_1 = { 
+	name = Luco # a lord
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_2
+	mother = Morel_rs_2
+ 
+	8262.1.1 = { birth = yes }
+	8293.1.1 = { add_spouse = Morel_rs_1 } 
+}
+Morel_rs_1 = {
+	name = Retia
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8262.1.1 = { birth = yes }
+}
+### Issue of Luco
+Morel_29 = { 
+	name = Wendeyne
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_1
+	mother = Morel_rs_1
+ 
+	8298.1.1 = { birth = yes }
+}
+Morel_30 = { 
+	name = Benonio
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_1
+	mother = Morel_rs_1
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Tolomelo
+Morel_31 = { 
+	name = Tertullo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_24
+	mother = Morel_rs_24
+ 
+	8284.1.1 = { birth = yes }
+}
+Morel_32 = { 
+	name = Danara
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_24
+	mother = Morel_rs_24
+ 
+	8290.1.1 = { birth = yes }
+}
+Morel_33 = { 
+	name = Serala
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_24
+	mother = Morel_rs_24
+ 
+	8292.1.1 = { birth = yes }
+}
+Morel_34 = { 
+	name = Marselo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_24
+	mother = Morel_rs_24
+ 
+	8295.1.1 = { birth = yes }
+}
+### Issue of Tessario
+Morel_35 = { 
+	name = Adelmo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_23
+	mother = Morel_rs_23
+ 
+	8264.1.1 = { birth = yes }
+	8287.1.1 = { add_spouse = Morel_rs_35 } 
+}
+Morel_rs_35 = {
+	name = Mysenda
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8264.1.1 = { birth = yes }
+}
+Morel_36 = { 
+	name = Dorseo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_23
+	mother = Morel_rs_23
+ 
+	8268.1.1 = { birth = yes }
+	8292.1.1 = { add_spouse = Morel_rs_36 } 
+}
+Morel_rs_36 = {
+	name = Marra
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8268.1.1 = { birth = yes }
+}
+Morel_37 = { 
+	name = Bellenora
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_23
+	mother = Morel_rs_23
+ 
+	8271.1.1 = { birth = yes }
+}
+Morel_38 = { 
+	name = Tycho
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_23
+	mother = Morel_rs_23
+ 
+	8275.1.1 = { birth = yes }
+	8295.1.1 = { add_spouse = Morel_rs_38 } 
+}
+Morel_rs_38 = {
+	name = Bellenora
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8275.1.1 = { birth = yes }
+}
+### Issue of Luco
+Morel_39 = { 
+	name = Clea
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_28
+	mother = Morel_rs_28
+ 
+	8254.1.1 = { birth = yes }
+}
+Morel_40 = { 
+	name = Lotharo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_28
+	mother = Morel_rs_28
+ 
+	8260.1.1 = { birth = yes }
+	8281.1.1 = { add_spouse = Morel_rs_40 } 
+}
+Morel_rs_40 = {
+	name = Melane
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8260.1.1 = { birth = yes }
+}
+Morel_41 = { 
+	name = Orolantia
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_28
+	mother = Morel_rs_28
+ 
+	8265.1.1 = { birth = yes }
+}
+Morel_42 = { 
+	name = Jyana
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_28
+	mother = Morel_rs_28
+ 
+	8273.1.1 = { birth = yes }
+}
+### Issue of Dadello
+Morel_43 = { 
+	name = Pynto
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_25
+	mother = Morel_rs_25
+ 
+	8239.1.1 = { birth = yes }
+	8258.1.1 = { add_spouse = Morel_rs_43 } 
+	8283.1.1 = { death = yes }
+}
+Morel_rs_43 = {
+	name = Annara
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8239.1.1 = { birth = yes }
+	8283.1.1 = { death = yes }
+}
+### Issue of Adelmo
+Morel_44 = { 
+	name = Retia
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_35
+	mother = Morel_rs_35
+ 
+	8295.1.1 = { birth = yes }
+}
+Morel_45 = { 
+	name = Narha
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_35
+	mother = Morel_rs_35
+ 
+	8298.1.1 = { birth = yes }
+}
+Morel_46 = { 
+	name = Marello
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_35
+	mother = Morel_rs_35
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Dorseo
+Morel_47 = { 
+	name = Irea
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_36
+	mother = Morel_rs_36
+ 
+	8293.1.1 = { birth = yes }
+}
+Morel_48 = { 
+	name = Marro
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_36
+	mother = Morel_rs_36
+ 
+	8297.1.1 = { birth = yes }
+}
+Morel_49 = { 
+	name = Tenesio
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_36
+	mother = Morel_rs_36
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Tycho
+Morel_50 = { 
+	name = Ferro
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_38
+	mother = Morel_rs_38
+ 
+	8297.1.1 = { birth = yes }
+}
+Morel_51 = { 
+	name = Mysenda
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_38
+	mother = Morel_rs_38
+ 
+	8298.1.1 = { birth = yes }
+}
+Morel_52 = { 
+	name = Marro
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_38
+	mother = Morel_rs_38
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Lotharo
+Morel_53 = { 
+	name = Lianna
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_40
+	mother = Morel_rs_40
+ 
+	8283.1.1 = { birth = yes }
+}
+Morel_54 = { 
+	name = Nello
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_40
+	mother = Morel_rs_40
+ 
+	8286.1.1 = { birth = yes }
+}
+Morel_55 = { 
+	name = Alfo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_40
+	mother = Morel_rs_40
+ 
+	8287.1.1 = { birth = yes }
+}
+Morel_56 = { 
+	name = Danilo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_40
+	mother = Morel_rs_40
+ 
+	8295.1.1 = { birth = yes }
+}
+### Issue of Pynto
+Morel_57 = { 
+	name = Isso
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_43
+	mother = Morel_rs_43
+ 
+	8264.1.1 = { birth = yes }
+	8287.1.1 = { add_spouse = Morel_rs_57 } 
+}
+Morel_rs_57 = {
+	name = Ralla
+	female = yes
+
+	religion = weeping_lady
+	culture = braavosi
+
+	8264.1.1 = { birth = yes }
+}
+Morel_58 = { 
+	name = Lianna
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_43
+	mother = Morel_rs_43
+ 
+	8273.1.1 = { birth = yes }
+}
+Morel_59 = { 
+	name = Melane
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_43
+	mother = Morel_rs_43
+ 
+	8276.1.1 = { birth = yes }
+}
+Morel_60 = { 
+	name = Syrella
+	dynasty = dynn_Morel
+	female = yes
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_43
+	mother = Morel_rs_43
+ 
+	8279.1.1 = { birth = yes }
+}
+### Issue of Isso
+Morel_61 = { 
+	name = Perezimo
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_57
+	mother = Morel_rs_57
+ 
+	8287.1.1 = { birth = yes }
+}
+Morel_62 = { 
+	name = Corso
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_57
+	mother = Morel_rs_57
+ 
+	8293.1.1 = { birth = yes }
+}
+Morel_63 = { 
+	name = Terro
+	dynasty = dynn_Morel
+ 
+	religion = weeping_lady
+	culture = braavosi
+ 
+	father = Morel_57
+	mother = Morel_rs_57
+ 
+	8299.1.1 = { birth = yes }
+}

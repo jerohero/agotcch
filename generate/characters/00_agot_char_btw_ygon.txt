@@ -1,0 +1,1474 @@
+﻿############################       YGON OLDFATHER       ############################
+####################################################################################
+
+###### CLAN OF YGON OLDFATHER (id = dynn_Boarhell)
+############################
+###
+###
+157017 = {
+	name = Ygon # Canon, AKA: Ygon Oldfather
+	dynasty = dynn_Boarhell
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	trait = education_martial_2
+
+	8225.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_canon
+	}
+	8239.1.1 = { trait = lustful }
+	8285.1.1 = { give_nickname = nick_the_oldfather }
+	8300.2.10 = { employer = 174345 } # Tormund Giantsbane
+	8300.8.17 = { employer = Stark_7 } # Jon Snow
+}
+### Marriages are in wives entries as a technical workaround
+### Ygon Oldfather's wives
+Boarhell_rs_1_1 = {
+	name = Haiga # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8230.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8246.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_2 = {
+	name = Carella # Mentioned, wives kidnapped on first raid
+	female = yes
+
+	religion = old_gods_south
+	culture = hill_clansman
+
+	8233.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8250.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_3 = {
+	name = Moreg # Mentioned, wives kidnapped on first raid
+	female = yes
+
+	religion = old_gods_south
+	culture = hill_clansman
+
+	8234.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8250.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_4 = {
+	name = Sara # Mentioned, wives kidnapped on second raid
+	female = yes
+
+	religion = old_gods_south
+	culture = northman
+
+	8240.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8256.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_5 = {
+	name = Cylla # Mentioned, wives kidnapped on second raid
+	female = yes
+
+	religion = old_gods_south
+	culture = northman
+
+	8241.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8256.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_6 = {
+	name = Jocelyn # Mentioned, wives kidnapped on second raid
+	female = yes
+
+	religion = old_gods_south
+	culture = northman
+
+	8239.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8256.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_7 = {
+	name = Orra # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8245.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8263.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_8 = {
+	name = Josera # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8245.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8263.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_9 = {
+	name = Elsera # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8247.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8263.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_10 = {
+	name = Arra # Mentioned, wives kidnapped on third raid
+	female = yes
+
+	religion = old_gods_btw
+	culture = hill_clansman
+
+	8251.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8272.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_11 = {
+	name = Danny # Mentioned, wives kidnapped on third raid
+	female = yes
+
+	religion = old_gods_btw
+	culture = hill_clansman
+
+	8256.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8272.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_12 = {
+	name = Brenna # Mentioned, wives kidnapped on third raid
+	female = yes
+
+	religion = old_gods_btw
+	culture = hill_clansman
+
+	8255.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8272.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_13 = {
+	name = Mariah # Mentioned, wives kidnapped on fourth raid
+	female = yes
+
+	religion = old_gods_btw
+	culture = northman
+
+	8263.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8280.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_14 = {
+	name = Skiyre # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8264.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8283.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_15 = {
+	name = Jiyr # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8262.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8283.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_16 = {
+	name = Frynne # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8265.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8287.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_17 = {
+	name = Dags # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8274.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8291.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+Boarhell_rs_1_18 = {
+	name = Latyu # Mentioned, local wife
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8295.1.1 = { add_spouse = 157017 } # Ygon Oldfather
+}
+### Issue of Ygon
+Boarhell_3 = { 
+	name = Adilla
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_1 # Haiga
+ 
+	8247.1.1 = { birth = yes }
+	8285.1.1 = { death = yes }
+}
+Boarhell_4 = { 
+	name = Brella
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_1 # Haiga
+ 
+	8248.1.1 = { birth = yes }
+}
+Boarhell_5 = { 
+	name = Skeyga
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_1 # Haiga
+ 
+	8249.1.1 = { birth = yes }
+	8287.1.1 = { death = yes }
+}
+Boarhell_6 = { 
+	name = Baurgard
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_3 # Moreg
+ 
+	8251.1.1 = { birth = yes }
+	8277.1.1 = { add_spouse = Boarhell_rs_6 } 
+	8297.1.1 = { death = yes }
+}
+Boarhell_rs_6 = {
+	name = Frynne
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8251.1.1 = { birth = yes }
+	8297.1.1 = { death = yes }
+}
+Boarhell_7 = { 
+	name = Hina
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_2 # Carella
+ 
+	8253.1.1 = { birth = yes }
+}
+Boarhell_8 = { 
+	name = Galt
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_2 # Carella
+ 
+	8255.1.1 = { birth = yes }
+	8286.1.1 = { add_spouse = Boarhell_rs_8 } 
+	8297.1.1 = { death = yes }
+}
+Boarhell_rs_8 = {
+	name = Johssi
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8255.1.1 = { birth = yes }
+	8297.1.1 = { death = yes }
+}
+Boarhell_9 = { 
+	name = Bael
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_4 # Sara
+ 
+	8257.1.1 = { birth = yes }
+	8281.1.1 = { add_spouse = Boarhell_rs_9 } 
+}
+Boarhell_rs_9 = {
+	name = Orra
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8257.1.1 = { birth = yes }
+}
+Boarhell_10 = { 
+	name = Dete
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_4 # Sara
+ 
+	8259.1.1 = { birth = yes }
+}
+Boarhell_11 = { 
+	name = Harma
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_4 # Sara
+ 
+	8261.1.1 = { birth = yes }
+}
+Boarhell_12 = { 
+	name = Fanna
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_6 # Jocelyn
+ 
+	8262.1.1 = { birth = yes }
+}
+Boarhell_13 = { 
+	name = Ana
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_4 # Sara
+ 
+	8263.1.1 = { birth = yes }
+}
+Boarhell_14 = { 
+	name = Eirk
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_8 # Josera
+ 
+	8264.1.1 = { birth = yes }
+	8291.1.1 = { add_spouse = Boarhell_rs_14 } 
+}
+Boarhell_rs_14 = {
+	name = Meri
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8264.1.1 = { birth = yes }
+}
+Boarhell_15 = { 
+	name = Orra
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_7 # Orra 
+ 
+	8266.1.1 = { birth = yes }
+}
+Boarhell_16 = { 
+	name = Dalla
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_8 # Josera
+ 
+	8268.1.1 = { birth = yes }
+}
+Boarhell_17 = { 
+	name = Ghilbag
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_9 # Elsera
+ 
+	8269.1.1 = { birth = yes }
+	8289.1.1 = { add_spouse = Boarhell_rs_17 } 
+	8299.1.1 = { death = yes }
+}
+Boarhell_rs_17 = {
+	name = Arrsa
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8269.1.1 = { birth = yes }
+	8299.1.1 = { death = yes }
+}
+Boarhell_18 = { 
+	name = Mors
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_8 # Josera
+ 
+	8270.1.1 = { birth = yes }
+	8290.1.1 = { add_spouse = Boarhell_rs_18 } 
+}
+Boarhell_rs_18 = {
+	name = Harra
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8270.1.1 = { birth = yes }
+}
+Boarhell_19 = { 
+	name = Crawn
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_9 # Elsera
+ 
+	8271.1.1 = { birth = yes }
+	8290.1.1 = { add_spouse = Boarhell_rs_19 } 
+}
+Boarhell_rs_19 = {
+	name = Metu
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8271.1.1 = { birth = yes }
+}
+Boarhell_20 = { 
+	name = Alfyn
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_10 # Arra
+ 
+	8273.1.1 = { birth = yes }
+	8295.1.1 = { add_spouse = Boarhell_rs_20 } 
+}
+Boarhell_rs_20 = {
+	name = Asarra
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8273.1.1 = { birth = yes }
+}
+Boarhell_21 = { 
+	name = Jeind
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_10 # Arra
+ 
+	8275.1.1 = { birth = yes }
+	8293.1.1 = { add_spouse = Boarhell_rs_21 } 
+}
+Boarhell_rs_21 = {
+	name = Skiyre
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8275.1.1 = { birth = yes }
+}
+Boarhell_22 = { 
+	name = Toregg
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_11 # Danny
+ 
+	8277.1.1 = { birth = yes }
+	8299.1.1 = { add_spouse = Boarhell_rs_22 } 
+}
+Boarhell_rs_22 = {
+	name = Skiyre
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8277.1.1 = { birth = yes }
+}
+Boarhell_23 = { 
+	name = Erne
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_12 # Brenna
+ 
+	8279.1.1 = { birth = yes }
+}
+Boarhell_24 = { 
+	name = Ygon
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_11 # Danny
+ 
+	8280.1.1 = { birth = yes }
+}
+Boarhell_25 = { 
+	name = Craster
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_13 # Mariah
+ 
+	8281.1.1 = { birth = yes }
+}
+Boarhell_26 = { 
+	name = Dolf
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_13 # Mariah
+ 
+	8283.1.1 = { birth = yes }
+}
+Boarhell_27 = { 
+	name = Jheka
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_14 # Skiyre
+ 
+	8284.1.1 = { birth = yes }
+}
+Boarhell_28 = { 
+	name = Galt
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_15 # Jiyr
+ 
+	8285.1.1 = { birth = yes }
+}
+Boarhell_29 = { 
+	name = Arrsa
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_14 # Skiyre
+ 
+	8286.1.1 = { birth = yes }
+}
+Boarhell_30 = { 
+	name = Timett
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_15 # Jiyr
+ 
+	8288.1.1 = { birth = yes }
+}
+Boarhell_31 = { 
+	name = Eik
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_14 # Skiyre
+ 
+	8289.1.1 = { birth = yes }
+}
+Boarhell_32 = { 
+	name = Maabs
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_16 # Frynne
+ 
+	8290.1.1 = { birth = yes }
+}
+Boarhell_33 = { 
+	name = Harma
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_14 # Skiyre
+ 
+	8291.1.1 = { birth = yes }
+}
+Boarhell_34 = { 
+	name = Ygon
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_17 # Dags
+ 
+	8292.1.1 = { birth = yes }
+}
+Boarhell_35 = { 
+	name = Arrana
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_17 # Dags
+ 
+	8294.1.1 = { birth = yes }
+}
+Boarhell_36 = { 
+	name = Cortah
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_17 # Dags
+ 
+	8296.1.1 = { birth = yes }
+}
+Boarhell_37 = { 
+	name = Arik
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_18 # Latyu
+ 
+	8297.1.1 = { birth = yes }
+}
+Boarhell_38 = { 
+	name = Harma
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_17 # Dags
+ 
+	8298.1.1 = { birth = yes }
+}
+Boarhell_39 = { 
+	name = Brella
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = 157017
+	mother = Boarhell_rs_1_18 # Latyu
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Baurgard, the first son
+Boarhell_40 = { 
+	name = Kyleg # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_6
+	mother = Boarhell_rs_6
+ 
+	8277.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8297.1.1 = { add_spouse = Boarhell_rs_40 } 
+}
+Boarhell_rs_40 = {
+	name = Orra
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8277.1.1 = { birth = yes }
+}
+Boarhell_41 = { 
+	name = Ferni # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_6
+	mother = Boarhell_rs_6
+ 
+	8278.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_42 = { 
+	name = Crittark # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_6
+	mother = Boarhell_rs_6
+ 
+	8280.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+	8298.1.1 = { add_spouse = Boarhell_rs_42 } 
+}
+Boarhell_rs_42 = {
+	name = Agmunra
+	female = yes
+
+	religion = old_gods_btw
+	culture = hornfoot
+
+	8280.1.1 = { birth = yes }
+}
+Boarhell_44 = { 
+	name = Gerrick # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_6
+	mother = Boarhell_rs_6
+ 
+	8284.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_45 = { 
+	name = Metu # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_6
+	mother = Boarhell_rs_6
+ 
+	8286.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Galt, the second son
+Boarhell_53 = { 
+	name = Dywen # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_8
+	mother = Boarhell_rs_8
+ 
+	8287.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_54 = { 
+	name = Haggon # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_8
+	mother = Boarhell_rs_8
+ 
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_55 = { 
+	name = Ardomor # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_8
+	mother = Boarhell_rs_8
+ 
+	8291.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_56 = { 
+	name = Granroc # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_8
+	mother = Boarhell_rs_8
+ 
+	8292.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_57 = { 
+	name = Arrsa # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_8
+	mother = Boarhell_rs_8
+ 
+	8293.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_58 = { 
+	name = Brearr # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_8
+	mother = Boarhell_rs_8
+ 
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_59 = { 
+	name = Cholvi # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_8
+	mother = Boarhell_rs_8
+ 
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Bael, the third son
+Boarhell_60 = { 
+	name = Alfyn # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_9
+	mother = Boarhell_rs_9
+ 
+	8282.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_62 = { 
+	name = Ferni # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_9
+	mother = Boarhell_rs_9
+ 
+	8285.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_64 = { 
+	name = Kimett # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_9
+	mother = Boarhell_rs_9
+ 
+	8289.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_65 = { 
+	name = Brella # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_9
+	mother = Boarhell_rs_9
+ 
+	8291.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_67 = { 
+	name = Harma # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_9
+	mother = Boarhell_rs_9
+ 
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_68 = { 
+	name = Howd # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_9
+	mother = Boarhell_rs_9
+ 
+	8295.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Eirk, the fourth son
+Boarhell_72 = { 
+	name = Devyn # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_14
+	mother = Boarhell_rs_14
+ 
+	8292.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_76 = { 
+	name = Mance # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_14
+	mother = Boarhell_rs_14
+ 
+	8298.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Ghilbag, the fifth son
+Boarhell_78 = { 
+	name = Hina # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_17
+	mother = Boarhell_rs_17
+ 
+	8290.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_79 = { 
+	name = Johssi # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_17
+	mother = Boarhell_rs_17
+ 
+	8292.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_81 = { 
+	name = Rettun # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_17
+	mother = Boarhell_rs_17
+ 
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_82 = { 
+	name = Arik # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_17
+	mother = Boarhell_rs_17
+ 
+	8297.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Mors, the sixth son
+Boarhell_84 = { 
+	name = Orra # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_18
+	mother = Boarhell_rs_18
+ 
+	8290.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_86 = { 
+	name = Regwal # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_18
+	mother = Boarhell_rs_18
+ 
+	8293.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_88 = { 
+	name = Brella # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_18
+	mother = Boarhell_rs_18
+ 
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Crawn, the seventh son
+Boarhell_91 = { 
+	name = Arik # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_19
+	mother = Boarhell_rs_19
+ 
+	8290.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_93 = { 
+	name = Galt # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_19
+	mother = Boarhell_rs_19
+ 
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_94 = { 
+	name = Hakye # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_19
+	mother = Boarhell_rs_19
+ 
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Alfyn, the eight son
+Boarhell_97 = { 
+	name = Zata # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_20
+	mother = Boarhell_rs_20
+ 
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_99 = { 
+	name = Brok # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_20
+	mother = Boarhell_rs_20
+ 
+	8299.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Jeind, the ninth son
+Boarhell_100 = { 
+	name = Regwal # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_21
+	mother = Boarhell_rs_21
+ 
+	8293.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_101 = { 
+	name = Bael # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_21
+	mother = Boarhell_rs_21
+ 
+	8294.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_102 = { 
+	name = Baurgard # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_21
+	mother = Boarhell_rs_21
+ 
+	8296.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+Boarhell_104 = { 
+	name = Meri # Mentioned
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_21
+	mother = Boarhell_rs_21
+ 
+	8298.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Toregg, the tenth son
+Boarhell_109 = { 
+	name = Stamm # Mentioned
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_22
+	mother = Boarhell_rs_22
+ 
+	8299.1.1 = { 
+		birth = yes 
+		add_character_flag = canon_status_mentioned
+	}
+}
+### Issue of Kyleg, great-grandchildren to Ygon Oldfather
+Boarhell_106 = { 
+	name = Cortah
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_40
+	mother = Boarhell_rs_40
+ 
+	8298.1.1 = { birth = yes }
+}
+Boarhell_107 = { 
+	name = Crittark 
+	dynasty = dynn_Boarhell
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_40
+	mother = Boarhell_rs_40
+ 
+	8299.1.1 = { birth = yes }
+}
+### Issue of Crittark, great-grandchildren to Ygon Oldfather
+Boarhell_108 = { 
+	name = Skeyga
+	dynasty = dynn_Boarhell
+	female = yes
+ 
+	religion = old_gods_btw
+	culture = hornfoot
+ 
+	father = Boarhell_42
+	mother = Boarhell_rs_42
+ 
+	8299.1.1 = { birth = yes }
+}
