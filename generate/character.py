@@ -18,6 +18,10 @@ physical_traits_dumpster = [
 	"inbred","weak","dull","impotent","spindly","scaly","albino","wheezing","bleeder","infertile","twin"
 ]
 
+character_flags_excemptions = [
+	"has_scripted_appearance",
+]
+
 def process_character(lines, character_start_index):
 	character = init_character()
 
@@ -65,9 +69,12 @@ def process_character(lines, character_start_index):
 					continue
 			
 			key, value = line.split("=", 1)
-			key, value = key.strip(), value.split("#", 1)[0].replace("{", "").replace("}", "").strip() # Remove comments and whitespaces
+			if "=" in value: # Handle other nested attributes
+				key, value = value.split("=", 1)
+			key, value = key.replace("{", "").replace("}", "").strip(), value.split("#", 1)[0].replace("{", "").replace("}", "").strip() # Remove comments and whitespaces
 
 			if "canon_children_skip" in key and value == "yes":
+				character["skipped"] = True
 				return character
 
 			if key in key_action_map:
@@ -177,7 +184,8 @@ def process_make_trait_inactive(character, value):
 	character["traits"]["inactive"].append(value)
 
 def process_add_character_flag(character, value):
-	character["flags"].append(value)
+	if value not in character_flags_excemptions:
+		character["flags"].append(value)
 
 def process_sexuality(character, value):
 	character["sexuality"] = value
@@ -200,7 +208,8 @@ def process_nickname(character, value):
 		character["nickname"] = value
 
 def process_death(character, value):
-	character["birth_options"]["is_stillborn"] = True if value == "yes" else False
+	is_stillborn = value in ["yes", "{ death_reason = death_delivery }"]
+	character["birth_options"]["is_stillborn"] = True if is_stillborn else False
 
 def process_canon_children_mother_dies(character, value):
 	character["birth_options"]["mother_dies"] = True if value == "yes" else False
@@ -210,9 +219,6 @@ def process_canon_children_alt_name(character, value):
 
 def process_canon_children_real_father_knows(character, value):
 	character["bastard"]["real_father_knows"] = True if value == "yes" else False
-
-def process_canon_children_skip(character, value):
-	character["skipped"] = True if value == "yes" else False
 
 key_action_map = {
 	"name": process_name,
@@ -236,6 +242,5 @@ key_action_map = {
 	"death": process_death,
 	"canon_children_mother_dies": process_canon_children_mother_dies,
 	"canon_children_alt_name": process_canon_children_alt_name,
-	"canon_children_real_father_knows": process_canon_children_real_father_knows,
-	"canon_children_skip": process_canon_children_skip
+	"canon_children_real_father_knows": process_canon_children_real_father_knows
 }

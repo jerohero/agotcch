@@ -110,7 +110,7 @@ def generate_pregnancy_trigger(is_first_child_bastard, indent):
 
 def generate_pregnancy_effect(child, indent):
 	is_female = "yes" if child["is_female"] else "no"
-	is_bastard_with_assumed_father = child["real_father"] != "" and child["father"] != ""
+	is_bastard_with_assumed_father = (child["real_father"] != "" and child["father"] != "") and (child["real_father"] != child["father"])
 
 	birth_flag = "birth_will_go_smoothly"
 
@@ -121,11 +121,12 @@ def generate_pregnancy_effect(child, indent):
 	elif child["birth_options"]["is_born_sickly"]:
 		birth_flag = "birth_child_will_become_sickly"
 
-	if child["real_father"] == "":
+	if child["real_father"] == "" and not child["bastard"]["is_known"]:
 		effect = textwrap.dedent(f"""
 			agot_canon_children_force_pregnancy_effect = {{
 				CHILD_FLAG = is_{child["id"].lower()}
 				IS_FEMALE = {is_female}
+				HAS_ALT_NAME = {"yes" if child["name"]["alt"] else "no"}
 				FATHER = scope:canon_father
 				BIRTH_FLAG = {birth_flag}
 			}}
@@ -135,11 +136,12 @@ def generate_pregnancy_effect(child, indent):
 			agot_canon_children_force_bastard_pregnancy_basic_effect = {{
 				CHILD_FLAG = is_{child["id"].lower()}
 				IS_FEMALE = {is_female}
+				HAS_ALT_NAME = {"yes" if child["name"]["alt"] else "no"}
 				REAL_FATHER = {
 					f"scope:canon_father.var:agot_canon_children_real_father_{child['real_father'].lower()}" if is_bastard_with_assumed_father  
 					else "scope:canon_father"
 				}
-				REAL_FATHER_KNOWS = {"yes" if child["bastard"]["real_father_knows"] else "no"}	
+				REAL_FATHER_KNOWS = {"yes" if child["bastard"]["real_father_knows"] else "no"}
 				KNOWN_BASTARD = {"yes" if child["bastard"]["is_known"] else "no"}
 			}}
 		""")

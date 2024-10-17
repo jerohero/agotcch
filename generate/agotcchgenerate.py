@@ -10,6 +10,7 @@ from triggers import generate_triggers
 from traits import generate_traits
 from accessories import generate_accessories
 from character import process_character
+from sheet import export_to_excel
 from lookups import *
 
 path = "C:/Users/Jeroen/Documents/Paradox Interactive/Crusader Kings III/mod/agotcch/generate"
@@ -108,6 +109,8 @@ def process_character_lines(lines, dnas):
 	with open('C:/Users/Jeroen/Documents/GitHub/agot/gfx/portraits/portrait_modifiers/02_all_agot_characters.txt', 'w', encoding="utf-8-sig") as f:
 		print('Generating portrait modifiers...')
 		f.write(portrait_modifiers)
+
+	export_to_excel(characters, "characters_export")
 
 
 # characters_folder_path = path + '/characters/small'
