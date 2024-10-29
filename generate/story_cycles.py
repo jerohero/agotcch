@@ -115,7 +115,7 @@ def generate_pregnancy_effect(child, indent):
 	birth_flag = "birth_will_go_smoothly"
 
 	if child["birth_options"]["is_stillborn"]:
-		birth_flag = "birth_will_be_stillborn"
+		birth_flag = "agot_birth_child_will_be_stillborn"
 	elif child["birth_options"]["mother_dies"]:
 		birth_flag = "agot_birth_mother_will_die"
 	elif child["birth_options"]["is_born_sickly"]:

@@ -43,6 +43,11 @@ def generate_accessories(ids: list) -> str:
 						},
 					},
 				})
+				
+				#if canon == "TRUE":
+				#    result["weight"]["modifier"].update({
+				#        f"is_character_{id.lower()}": True,
+				#    })
 				if id in ids:
 					result["weight"]["modifier"].update({
 						f"is_character_{id.lower()}": True,
@@ -52,6 +57,20 @@ def generate_accessories(ids: list) -> str:
 						"exists": f"character:{id}",
 						"this": f"character:{id}",
 					})
+					
+				if gender == "F":
+					result["weight"]["modifier"].update({
+						"is_female": True,
+					})
+				else:
+					result["weight"]["modifier"].update({
+						"is_male": True,
+					})
+			# else:
+				#    result["weight"]["modifier"].update({
+				#        "exists": f"character:{id}",
+				#        "this": f"character:{id}",
+				#    })
 				accessories = result["dna_modifiers"]["accessory"]
 				for key, value in overrides.items():
 					if "beard" in key and gender == "F":

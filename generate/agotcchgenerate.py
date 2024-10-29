@@ -20,7 +20,7 @@ def process_dna_lines(lines):
 
 	for i, line in enumerate(lines):
 		if "portrait_info" in line:
-			dnas.append(lines[i - 1].split(" = ")[0])
+			dnas.append(lines[i - 1].split(" = ")[0].replace("\ufeff", ""))
 
 	return dnas
 
