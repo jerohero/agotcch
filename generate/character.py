@@ -109,7 +109,8 @@ def init_character():
 		"flags": [],
 		"bastard": {
 			"is_known": False,
-			"real_father_knows": True
+			"real_father_knows": True,
+			"surname": ""
 		},
 		"birth_options": {
 			"is_born_sickly": False,
@@ -181,10 +182,13 @@ def process_trait(character, value):
 			character["birth_options"]["is_born_sickly"] = True
 
 def process_make_trait_inactive(character, value):
-	character["traits"]["inactive"].append(value)
+	if 'surname_' in value:
+		character["bastard"]["surname"] = value
+	else:
+		character["traits"]["inactive"].append(value)
 
 def process_add_character_flag(character, value):
-	if value not in character_flags_excemptions:
+	if value and value not in character_flags_excemptions:
 		character["flags"].append(value)
 
 def process_sexuality(character, value):

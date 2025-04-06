@@ -1,7 +1,21 @@
 import textwrap
 
-def generate_triggers(ids: list) -> str:
+def generate_triggers(ids: list, triggers_lines) -> str:
+	ids = ids[:]
 	triggers = []
+	base = []
+
+	for i, line in enumerate(triggers_lines):
+		if 'CANON CHILDREN TRIGGERS' in line:
+			break
+		base.append(line)
+		if "is_character_" in line:
+			trigger_name = line.split("is_character_")[1].split(" =")[0]
+			if trigger_name.capitalize() in ids:
+				ids.remove(trigger_name.capitalize())
+			
+	triggers.append(''.join(base))
+	triggers.append('# CANON CHILDREN TRIGGERS, AUTO GENERATED')
 
 	for character_id in ids:
 		trigger = textwrap.dedent(f"""
@@ -14,8 +28,8 @@ def generate_triggers(ids: list) -> str:
 					}}
 				}}
 			}}
-		""")
+		""").rstrip()
 
 		triggers.append(trigger)
 
-	return ''.join(triggers).strip()
+	return ''.join(triggers).rstrip()

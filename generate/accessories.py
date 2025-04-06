@@ -10,16 +10,17 @@ sh = doc.get_worksheet_by_id(578315992)
 data = sh.get_all_values()
 total = len(data)
 
-def generate_accessories(ids: list) -> str:
+def generate_accessories(canon_child_ids: list) -> str:
+	print("Generating portrait modifiers...")
 	results = {}
 	genes_templates = {
 		"custom_hair": ("hairstyles", "all_hairstyles"),
 		"custom_beards": ("beards", "all_beards"),
 	}
-	for i, row in tqdm(enumerate(data), total=total):
+	for i, row in enumerate(data):
 		if not i:
 			continue
-		(id, name, gender, dynasty, house, birth_date, death_date, culture, religion, has_dna, full_name, *_), dna, canon, custom = row, row[20], row[26], row[27]
+		(id, name, gender, dynasty, house, birth_date, death_date, culture, religion, *_), dna, canon, custom = row, row[21], row[27], row[28]
 		if not dna or custom == "TRUE":
 			continue
 		dna = ck.parse_text(dna)
@@ -44,13 +45,9 @@ def generate_accessories(ids: list) -> str:
 					},
 				})
 				
-				#if canon == "TRUE":
-				#    result["weight"]["modifier"].update({
-				#        f"is_character_{id.lower()}": True,
-				#    })
-				if id in ids:
+				if (canon == "TRUE") or (id in canon_child_ids):
 					result["weight"]["modifier"].update({
-						f"is_character_{id.lower()}": True,
+				       f"is_character_{id.lower()}": True,
 					})
 				else:
 					result["weight"]["modifier"].update({
