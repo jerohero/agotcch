@@ -125,7 +125,9 @@ def process_character_lines(lines, dnas):
 # characters_folder_path = path + '/characters/small'
 characters_folder_path = 'C:/Users/Jeroen/Documents/GitHub/agot/history/characters'
 excluded_character_files = ['00_agot_char_dragons.txt']
-character_lines = file.read_text_files_to_lines(characters_folder_path, excluded_character_files)
+only_character_files = [] # For debugging only
+character_lines = file.read_text_files_to_lines(characters_folder_path, excluded_character_files, only_character_files)
+# character_lines = file.read_text_file_to_lines('C:/Users/Jeroen/Documents/GitHub/agot/history/characters/00_agot_char_westerlands_ancestors.txt')
 
 dna_folder_path = 'C:/Users/Jeroen/Documents/GitHub/agot/common/dna_data'
 excluded_dna_files = ['agot_dna_dragons.txt']

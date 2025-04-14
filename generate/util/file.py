@@ -7,10 +7,14 @@ def read_text_file_to_lines(file_path):
             lines = file.readlines()
     return lines
 
-def read_text_files_to_lines(folder_path, excluded_files=[]):
+def read_text_files_to_lines(folder_path, excluded_files=[], only_files=[]):
     lines = []
     for filename in os.listdir(folder_path):
+        if only_files and filename not in only_files:
+            continue
+        if excluded_files and filename in excluded_files:
+            continue
         file_path = os.path.join(folder_path, filename)
-        if os.path.isfile(file_path) and filename.endswith('.txt') and filename not in excluded_files:
+        if os.path.isfile(file_path) and filename.endswith('.txt'):
             lines.extend(read_text_file_to_lines(file_path))
     return lines

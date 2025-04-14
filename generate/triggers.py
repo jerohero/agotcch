@@ -15,7 +15,7 @@ def generate_triggers(ids: list, triggers_lines) -> str:
 				ids.remove(trigger_name.capitalize())
 			
 	triggers.append(''.join(base))
-	triggers.append('# CANON CHILDREN TRIGGERS, AUTO GENERATED')
+	triggers.append('\n# CANON CHILDREN TRIGGERS, AUTO GENERATED')
 
 	for character_id in ids:
 		trigger = textwrap.dedent(f"""
