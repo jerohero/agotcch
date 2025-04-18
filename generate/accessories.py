@@ -5,13 +5,12 @@ import textwrap
 
 gc = gspread.service_account(filename="C:/Users/Jeroen/AppData/Roaming/gspread/api_config.json")
 doc = gc.open_by_key("1vfxW06Z-5TSwoMNLLVRlH9lX6QitVW8H3BEKQ_q6HHc")
-sh = doc.get_worksheet_by_id(578315992)
+sh = doc.get_worksheet_by_id(1620397751) # 578315992
 
 data = sh.get_all_values()
 total = len(data)
 
-def generate_accessories(canon_child_ids: list) -> str:
-	print("Generating portrait modifiers...")
+def generate_accessories() -> str:
 	results = {}
 	genes_templates = {
 		"custom_hair": ("hairstyles", "all_hairstyles"),
@@ -20,7 +19,9 @@ def generate_accessories(canon_child_ids: list) -> str:
 	for i, row in enumerate(data):
 		if not i:
 			continue
-		(id, name, gender, dynasty, house, birth_date, death_date, culture, religion, *_), dna, canon, custom = row, row[21], row[27], row[28]
+		# row[21], row[27], row[28]
+		# row[17], row[23], row[24]
+		(id, name, gender, dynasty, house, birth_date, death_date, culture, religion, *_), dna, canon, custom = row, row[17], row[23], row[24]
 		if not dna or custom == "TRUE":
 			continue
 		dna = ck.parse_text(dna)
@@ -44,17 +45,13 @@ def generate_accessories(canon_child_ids: list) -> str:
 						},
 					},
 				})
-				
-				if (canon == "TRUE") or (id in canon_child_ids):
-					result["weight"]["modifier"].update({
-				       f"is_character_{id.lower()}": True,
-					})
-				else:
-					result["weight"]["modifier"].update({
-						"exists": f"character:{id}",
-						"this": f"character:{id}",
-					})
-					
+				#if canon == "TRUE":
+				#    result["weight"]["modifier"].update({
+				#        f"is_character_{id.lower()}": True,
+				#    })
+				result["weight"]["modifier"].update({
+					f"is_character_{id.lower()}": True,
+				})
 				if gender == "F":
 					result["weight"]["modifier"].update({
 						"is_female": True,
@@ -94,7 +91,6 @@ def generate_accessories(canon_child_ids: list) -> str:
 					if gender == "F":
 						accessory["type"] = "female"
 					accessories.append(accessory)
-
 
 	portrait_modifiers = '\n' + ck.revert(results)
 	manual_modifiers = get_manual_modifiers()

@@ -166,6 +166,7 @@ def generate_pregnancy_effects(characters, child_ids, mother_ids, indent):
 		pregnancy_trigger = generate_pregnancy_trigger(first_child["bastard"]["is_known"], indent)
 		children_effects = generate_children_effects(characters, mother_child_ids, mother_id, indent)
 
+		# is_character_{mother_id.lower()} = yes
 		effects.append(textwrap.dedent(f"""
 			# {mother_id}
 			{mother_condition} = {{

@@ -19,7 +19,7 @@ def create_dummy_character(child):
 		Dummy_{child["id"]} = {{
 			name = {child["name"]["primary"]}
 			dna = {child["id"]}
-			religion = the_seven_main
+			religion = fots_seven
 			culture = northman
 			father = Ruin_Empress
 			118.1.1 = {{

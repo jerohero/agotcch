@@ -108,17 +108,18 @@ def process_character_lines(lines, dnas):
 	triggers_lines = file.read_text_file_to_lines(triggers_path)
 	with open(triggers_path, 'w', encoding="utf-8-sig") as f:
 		print('Generating triggers...')
-		f.write(generate_triggers(character_ids, triggers_lines))
+		f.write(generate_triggers(character_ids))
 		
 	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w', encoding="utf-8-sig") as f:
 		print('Generating traits...')
 		f.write(generate_traits(all_ids))
 
-	portrait_modifiers = generate_accessories(character_ids)
+	portrait_modifiers = generate_accessories()
 	with open('C:/Users/Jeroen/Documents/GitHub/agot/gfx/portraits/portrait_modifiers/02_all_agot_characters.txt', 'w', encoding="utf-8-sig") as f:
 		print('Generating portrait modifiers...')
 		f.write(portrait_modifiers)
 
+	print(f'\r{len(characters)} canon children added', end='')
 	export_to_excel(characters, "characters_export")
 
 
