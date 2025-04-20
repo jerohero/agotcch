@@ -67,6 +67,9 @@ def process_character_lines(lines, dnas):
 			elif not has_father:
 				# TODO handle characters with only a mother (eg Maege Mormont's children)
 				continue
+			elif "twin" in character["traits"]["inherited"] and character["bastard"]["is_known"]:
+				# TODO handle bastard twins (Martell_76, Velaryon_45, Baratheon_90, Baratheon_101, Forrester_30)
+				continue
 			
 			characters[character["id"]] = character
 			character_ids.append(character["id"])
@@ -104,23 +107,23 @@ def process_character_lines(lines, dnas):
 		print('Generating dummy characters...')
 		f.write(generate_dummy_characters(characters, dnas))
 
-	triggers_path = 'C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_scripted_triggers_canon_characters.txt'
-	triggers_lines = file.read_text_file_to_lines(triggers_path)
-	with open(triggers_path, 'w', encoding="utf-8-sig") as f:
-		print('Generating triggers...')
-		f.write(generate_triggers(character_ids))
+	# triggers_path = 'C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_scripted_triggers_canon_characters.txt'
+	# triggers_lines = file.read_text_file_to_lines(triggers_path)
+	# with open(triggers_path, 'w', encoding="utf-8-sig") as f:
+	# 	print('Generating triggers...')
+	# 	f.write(generate_triggers(character_ids))
 		
-	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w', encoding="utf-8-sig") as f:
-		print('Generating traits...')
-		f.write(generate_traits(all_ids))
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w', encoding="utf-8-sig") as f:
+	# 	print('Generating traits...')
+	# 	f.write(generate_traits(all_ids))
 
-	portrait_modifiers = generate_accessories()
-	with open('C:/Users/Jeroen/Documents/GitHub/agot/gfx/portraits/portrait_modifiers/02_all_agot_characters.txt', 'w', encoding="utf-8-sig") as f:
-		print('Generating portrait modifiers...')
-		f.write(portrait_modifiers)
+	# portrait_modifiers = generate_accessories()
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/gfx/portraits/portrait_modifiers/02_all_agot_characters.txt', 'w', encoding="utf-8-sig") as f:
+	# 	print('Generating portrait modifiers...')
+	# 	f.write(portrait_modifiers)
 
 	print(f'\r{len(characters)} canon children added', end='')
-	export_to_excel(characters, "characters_export")
+	export_to_excel(characters, "canon_children")
 
 
 # characters_folder_path = path + '/characters/small'

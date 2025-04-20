@@ -16,14 +16,14 @@ def generate_traits(ids: list) -> str:
 		"custom_beards": ("beards", "all_beards"),
 	}
 
-	for id in ids:
-		result = results.setdefault(f"is_{id.lower()}", {
-			"physical": "no",
-			"shown_in_ruler_designer": "no",
-			"name": "trait_hidden",
-			"desc": "trait_hidden_desc",
-			"icon": "pure_blooded.dds",
-		})
+	# for id in ids:
+	# 	result = results.setdefault(f"is_{id.lower()}", {
+	# 		"physical": "no",
+	# 		"shown_in_ruler_designer": "no",
+	# 		"name": "trait_hidden",
+	# 		"desc": "trait_hidden_desc",
+	# 		"icon": "pure_blooded.dds",
+	# 	})
 	for i, row in enumerate(data):
 		if not i:
 			continue
@@ -33,7 +33,7 @@ def generate_traits(ids: list) -> str:
 		(id, name, gender, dynasty, house, birth_date, death_date, culture, religion, *_), dna, canon, custom = row, row[17], row[23], row[24]
 		#if canon == "FALSE":
 		#    continue
-		if not dna and id not in ids:
+		if not dna:
 			continue
 		result = results.setdefault(f"is_{id.lower()}", {
 			"physical": "no",

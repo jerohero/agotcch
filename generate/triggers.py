@@ -16,16 +16,16 @@ def generate_triggers(ids: list) -> str:
 		"custom_beards": ("beards", "all_beards"),
 	}
 
-	for id in ids:
-		result = results.setdefault(f"is_character_{id.lower()}", {
-			"OR": {
-				"has_inactive_trait": f"is_{id.lower()}",
-				"AND": {
-					"exists": f"character:{id}",
-					"this": f"character:{id}",
-				}
-			}
-		})
+	# for id in ids:
+	# 	result = results.setdefault(f"is_character_{id.lower()}", {
+	# 		"OR": {
+	# 			"has_inactive_trait": f"is_{id.lower()}",
+	# 			"AND": {
+	# 				"exists": f"character:{id}",
+	# 				"this": f"character:{id}",
+	# 			}
+	# 		}
+	# 	})
 	for i, row in enumerate(data):
 		if not i:
 			continue
@@ -34,7 +34,7 @@ def generate_triggers(ids: list) -> str:
 		(id, name, gender, dynasty, house, birth_date, death_date, culture, religion, *_), dna, canon, custom = row, row[17], row[23], row[24]
 		#if canon == "FALSE":
 		#    continue
-		if not dna and id not in ids:
+		if not dna:
 			continue
 		result = results.setdefault(f"is_character_{id.lower()}", {
 			"OR": {

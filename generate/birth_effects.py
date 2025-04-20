@@ -80,7 +80,7 @@ def create_base_birth_effect(characters: dict, mothers_to_children: dict) -> str
 
 		setup_effects.append(textwrap.dedent(f"""
 			{"if" if i == 0 else "else_if"} = {{
-				limit = {{ scope:mother = {{ has_inactive_trait = is_{mother.lower()} }} }}
+				limit = {{ scope:mother = {{ has_character_flag = is_{mother.lower()} }} }}
 				{textwrap.indent(''.join(child_effects), INDENT * 4).rstrip()}
 			}}
 		""").rstrip())
@@ -126,7 +126,7 @@ def create_birth_effect(character: dict, chained_child_fathers: list, has_dna: b
 				{"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
 					NAME_MALE = "{name_male or 'NULL'}"
 					NAME_FEMALE = "{name_female or 'NULL'}"
-					TRAIT = is_{character["id"].lower()}{ f'''
+					FLAG = is_{character["id"].lower()}{ f'''
 					DNA = Dummy_{character["id"]}''' if has_dna else "" }
 				}}
 			}}
@@ -160,7 +160,7 @@ def create_twin_birth_effect(character: dict, chained_child_fathers: list, has_d
 					{"agot_canon_children_after_birth_effect" if has_dna else "agot_canon_children_after_birth_no_dna_effect"} = {{
 						NAME_MALE = "{name_male or 'NULL'}"
 						NAME_FEMALE = "{name_female or 'NULL'}"
-						TRAIT = is_{character["id"].lower()}{ f'''
+						FLAG = is_{character["id"].lower()}{ f'''
 						DNA = Dummy_{character["id"]}''' if has_dna else "" }
 					}}
 					{inject_data(character, chained_child_fathers, 5)}
@@ -277,14 +277,14 @@ def get_canon_mother_setup(character, chained_child_fathers):
 
 	for child_father in chained_child_fathers:
 		setup = textwrap.dedent(f"""
-			agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{child_father.lower()} SCOPE = father_{child_father.lower()} }}
+			agot_canon_children_get_canon_child_scope_effect = {{ FLAG = is_{child_father.lower()} SCOPE = father_{child_father.lower()} }}
 			if = {{
 				limit = {{ scope:father_{child_father.lower()} ?= {{ is_alive = yes }} }}
 				scope:father_{child_father.lower()} = {{
 					agot_canon_children_setup_mother_effect = {{
 						FATHER = scope:father_{child_father.lower()}
 						MOTHER = scope:child
-						MOTHER_TRAIT = is_{character["id"].lower()}
+						MOTHER_FLAG = is_{character["id"].lower()}
 						PREVENT_PREGNANCY = yes
 					}}
 				}}
@@ -305,14 +305,14 @@ def get_canon_father_setup(character, chained_child_fathers):
 			father_setup.append(f"\ncreate_story = story_agot_canon_children_{character['id'].lower()}")
 		else:
 			father_setup.append(textwrap.dedent(f"""
-				agot_canon_children_get_canon_child_scope_effect = {{ TRAIT = is_{child_father.lower()} SCOPE = father_{child_father.lower()} }}
+				agot_canon_children_get_canon_child_scope_effect = {{ FLAG = is_{child_father.lower()} SCOPE = father_{child_father.lower()} }}
 				if = {{
 					limit = {{ scope:father_{child_father.lower()} ?= {{ is_alive = yes }} }}
 					scope:father_{child_father.lower()} = {{
 						agot_canon_children_setup_real_father_effect = {{
 							FATHER = scope:father_{child_father.lower()}
 							REAL_FATHER = scope:child
-							REAL_FATHER_TRAIT = is_{character["id"].lower()}
+							REAL_FATHER_FLAG = is_{character["id"].lower()}
 							REAL_FATHER_VAR = agot_canon_children_real_father_{character["id"].lower()}
 						}}
 					}}
