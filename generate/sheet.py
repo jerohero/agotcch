@@ -50,19 +50,19 @@ def export_to_excel(characters: dict, file_name: str):
         sheet[f"F{sheet.max_row}"].fill = real_father_row_fill
 
     # Set column widths
-    column_widths = {
-        "A": 5,  # ID
-        "B": 5,  # Name
-        "C": 5, # Birth
-        "D": 5,  # Father ID
-        # "E": 1.5,  # Father Name
-        "E": 5,  # Mother ID
-        # "G": 1.5,  # Mother Name
-        "F": 5,  # Real Father ID
-        # "I": 1.5,  # Real Father Name
-    }
+    # column_widths = {
+    #     "A": 5,  # ID
+    #     "B": 5,  # Name
+    #     "C": 5, # Birth
+    #     "D": 5,  # Father ID
+    #     # "E": 1.5,  # Father Name
+    #     "E": 5,  # Mother ID
+    #     # "G": 1.5,  # Mother Name
+    #     "F": 5,  # Real Father ID
+    #     # "I": 1.5,  # Real Father Name
+    # }
 
-    for col, width in column_widths.items():
-        sheet.column_dimensions[col].width = width
+    # for col, width in column_widths.items():
+    #     sheet.column_dimensions[col].width = width
 
     workbook.save(f"{file_name}.xlsx")

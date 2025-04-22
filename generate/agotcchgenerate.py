@@ -55,6 +55,10 @@ def process_character_lines(lines, dnas):
 			# if character is None:
 			#     continue
 
+			# DEBUG
+			# if len(characters) >= 10:
+			# 	break
+
 			has_mother = character["mother"] != ""
 			has_father = character["father"] != "" or character["real_father"] != ""
 
@@ -67,10 +71,14 @@ def process_character_lines(lines, dnas):
 			elif not has_father:
 				# TODO handle characters with only a mother (eg Maege Mormont's children)
 				continue
+			elif character["birth"] < 8082:
+				# Skip characters born before first bookmark
+				continue
 			elif "twin" in character["traits"]["inherited"] and character["bastard"]["is_known"]:
 				# TODO handle bastard twins (Martell_76, Velaryon_45, Baratheon_90, Baratheon_101, Forrester_30)
 				continue
 			
+			character["index"] = len(characters) + 1
 			characters[character["id"]] = character
 			character_ids.append(character["id"])
 			print(f'\rProcessed: {character["id"]} - {character["name"]["primary"]}', end='\x1b[2K')
@@ -82,19 +90,44 @@ def process_character_lines(lines, dnas):
 
 	fathers, mothers, real_fathers = find_ancestries(characters)
 
-	all_ids = sorted(set(characters.keys()).union(
-		fathers.keys(), mothers.keys(), real_fathers.keys(), exception_characters
-	))
+	# all_ids = sorted(set(characters.keys()).union(
+	# 	fathers.keys(), mothers.keys(), real_fathers.keys(), exception_characters
+	# ))
+
+	story_cycles_file = generate_story_cycles(characters, fathers, mothers)
+	setup_cycles_event_file, base_birth_event_file, birth_events_file = generate_birth_effects(characters, fathers, mothers, dnas)
 
 	# with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
+	print('Generating story cycles...')
 	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/agot_canon_children_story_cycles.txt', 'w', encoding="utf-8-sig") as f:
-		print('Generating story cycles...')
-		f.write(generate_story_cycles(characters, fathers, mothers))
+		f.write(story_cycles_file)
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/canon_children/agot_canon_children_story_cycles_0.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(story_cycles_files[0])
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/canon_children/agot_canon_children_story_cycles_1.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(story_cycles_files[1])
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/canon_children/agot_canon_children_story_cycles_2.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(story_cycles_files[2])
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/canon_children/agot_canon_children_story_cycles_3.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(story_cycles_files[3])
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/story_cycles/canon_children/agot_canon_children_story_cycles_4.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(story_cycles_files[4])
 
 	# with open(path + '/output/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
-	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w', encoding="utf-8-sig") as f:
-		print('Generating birth effects...')
-		f.write(generate_birth_effects(characters, fathers, mothers, dnas))
+	print('Generating birth effects...')
+	with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_cycles_setup.txt', 'w', encoding="utf-8-sig") as f:
+		f.write(setup_cycles_event_file)
+	with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_births_base.txt', 'w', encoding="utf-8-sig") as f:
+		f.write(base_birth_event_file)
+	with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_births.txt', 'w', encoding="utf-8-sig") as f:
+		f.write(birth_events_file)
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/canon_children/00_agot_scripted_effects_canon_children_birth_1.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(birth_effects_files[1])
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/canon_children/00_agot_scripted_effects_canon_children_birth_2.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(birth_effects_files[2])
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/canon_children/00_agot_scripted_effects_canon_children_birth_3.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(birth_effects_files[3])
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/canon_children/00_agot_scripted_effects_canon_children_birth_4.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(birth_effects_files[4])
 
 	## Not being used
 	# with open(path + '/output/common/script_values/00_agot_canon_children_values.txt', 'w') as f:

@@ -88,6 +88,7 @@ def process_character(lines, character_start_index):
 def init_character():
 	return {
 		"id": "",
+		"index": 0,
 		"name": {
 			"primary": "",
 			"alt": ""
