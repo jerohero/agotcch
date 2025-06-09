@@ -18,10 +18,6 @@ physical_traits_dumpster = [
 	"inbred","weak","dull","impotent","spindly","scaly","albino","wheezing","bleeder","infertile","twin"
 ]
 
-character_flags_excemptions = [
-	"has_scripted_appearance",
-]
-
 def process_character(lines, character_start_index):
 	character = init_character()
 
@@ -96,6 +92,7 @@ def init_character():
 		"birth": 0,
 		"is_female": False,
 		"house": "",
+		"dna": "",
 		"father": "",
 		"real_father": "",
 		"mother": "",
@@ -108,6 +105,8 @@ def init_character():
 			"education": []
 		},
 		"flags": [],
+		"canon_status": "",
+		"has_scripted_appearance": False,
 		"bastard": {
 			"is_known": False,
 			"real_father_knows": True,
@@ -144,6 +143,9 @@ def process_name(character, value):
 def process_house(character, value):
 	character["house"] = value
 
+def process_dna(character, value):
+	character["dna"] = value
+
 def process_gender(character, value):
 	if value == "yes":
 		character["is_female"] = True
@@ -169,7 +171,7 @@ def process_effect_real_mother(character, value):
 def process_trait(character, value):
 	if value in childhood_personality_traits_dumpster:
 		character["traits"]["childhood"] = value
-	elif value in personality_traits_dumpster:
+	elif value in personality_traits_dumpster and value not in character["traits"]["education"]:
 		if len(character["traits"]["education"]) < 4:
 			character["traits"]["education"].append(value)
 	elif value in physical_traits_dumpster:
@@ -189,8 +191,13 @@ def process_make_trait_inactive(character, value):
 		character["traits"]["inactive"].append(value)
 
 def process_add_character_flag(character, value):
-	if value and value not in character_flags_excemptions:
-		character["flags"].append(value)
+	if value:
+		if value in ['canon_status_canon', 'canon_status_semicanon', 'canon_status_mentioned']:
+			character["canon_status"] = value
+		elif value == "has_scripted_appearance":
+			character["has_scripted_appearance"] = True
+		else:
+			character["flags"].append(value)
 
 def process_sexuality(character, value):
 	character["sexuality"] = value
@@ -229,6 +236,7 @@ key_action_map = {
 	"name": process_name,
 	"dynasty": process_house,
 	"dynasty_house": process_house,
+	"dna": process_dna,
 	"female": process_gender,
 	"father": process_father,
 	"real_father": process_real_father,

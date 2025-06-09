@@ -36,15 +36,23 @@ def generate_triggers(ids: list) -> str:
 		#    continue
 		if not dna:
 			continue
-		result = results.setdefault(f"is_character_{id.lower()}", {
-			"OR": {
-				"has_inactive_trait": f"is_{id.lower()}",
+		if id not in ids:
+			result = results.setdefault(f"is_character_{id.lower()}", {
 				"AND": {
 					"exists": f"character:{id}",
 					"this": f"character:{id}",
 				}
-			}
-		})
+			})
+		else:
+			result = results.setdefault(f"is_character_{id.lower()}", {
+				"OR": {
+					"has_inactive_trait": f"is_{id}",
+					"AND": {
+						"exists": f"character:{id}",
+						"this": f"character:{id}",
+					}
+				}
+			})
 	
 	triggers = '\n' + ck.revert(results)
 

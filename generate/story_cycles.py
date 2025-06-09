@@ -69,7 +69,7 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
 		textwrap.dedent(f"""
 		agot_cc_setup_father_effect = {{
 			FATHER = story_owner
-			FATHER_FLAG = is_{father_id.lower()}
+			FATHER_ID = {father_id}
 		}}
 		""")
 	]
@@ -83,8 +83,7 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
 		setup_lines.append(textwrap.dedent(f"""
 			agot_cc_setup_mother_effect = {{
 				FATHER = story_owner
-				MOTHER = character:{mother_id}
-				MOTHER_FLAG = is_{mother_id.lower()}
+				MOTHER_ID = {mother_id}
 				PREVENT_PREGNANCY = {"yes" if should_prevent_pregnancy else "no"}
 			}}
 		"""))
@@ -96,9 +95,8 @@ def generate_setup(father_id, mother_ids, real_father_ids, child_ids, characters
 		setup_lines.append(textwrap.dedent(f"""
 			agot_cc_setup_real_father_effect = {{
 				FATHER = story_owner
-				REAL_FATHER = character:{real_father_id}
-				REAL_FATHER_FLAG = is_{real_father_id.lower()}
-				REAL_FATHER_VAR = agot_cc_real_father_{real_father_id.lower()}
+				REAL_FATHER_ID = {real_father_id}
+				REAL_FATHER_VAR = agot_cc_real_father_{real_father_id}
 			}}
 		"""))
 
@@ -138,21 +136,22 @@ def generate_pregnancy_effect(child, indent):
 	if child["real_father"] == "" and not child["bastard"]["is_known"]:
 		effect = textwrap.dedent(f"""
 			agot_cc_force_pregnancy_effect = {{
-				CHILD_FLAG = is_{child["id"].lower()}
+				CHILD_ID = {child["id"]}
 				IS_FEMALE = {is_female}
 				HAS_ALT_NAME = {"yes" if child["name"]["alt"] else "no"}
-				FATHER = scope:canon_father
+				HAS_DNA = {"yes" if child["dna"] else "no"}
 				BIRTH_FLAG = {birth_flag}
 			}}
 		""")
 	else:
 		effect = textwrap.dedent(f"""
 			agot_cc_force_bastard_pregnancy_basic_effect = {{
-				CHILD_FLAG = is_{child["id"].lower()}
+				CHILD_ID = {child["id"]}
 				IS_FEMALE = {is_female}
 				HAS_ALT_NAME = {"yes" if child["name"]["alt"] else "no"}
+				HAS_DNA = {"yes" if child["dna"] else "no"}
 				REAL_FATHER = {
-					f"scope:canon_father.var:agot_cc_real_father_{child['real_father'].lower()}" if is_bastard_with_assumed_father  
+					f"scope:canon_father.var:agot_cc_real_father_{child['real_father']}" if is_bastard_with_assumed_father  
 					else "scope:canon_father"
 				}
 				REAL_FATHER_KNOWS = {"yes" if child["bastard"]["real_father_knows"] else "no"}
@@ -180,7 +179,7 @@ def generate_pregnancy_effects(characters, child_ids, mother_ids, indent):
 			# {mother_id}
 			{mother_condition} = {{
 				limit = {{
-					has_character_flag = is_{mother_id.lower()}
+					has_character_flag = {mother_id}
 					scope:canon_father = {{
 						{pregnancy_trigger}
 					}}
@@ -216,7 +215,6 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
 					limit = {{
 						agot_cc_child_pregnancy_trigger = {{
 							ID = {child_id}
-							FLAG = is_{child_id.lower()}
 							BIRTH_YEAR = {child["birth"]}
 							BIRTH_YEAR_MIN = {child["birth"] - 1}
 						}}
@@ -229,7 +227,6 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
 		# Lifecycle
 		agot_cc_life_cycle_effect = {{
 			MOTHER = scope:canon_mother
-			FINAL_CHILD_FLAG = is_{child_ids[-1].lower()}
 			FINAL_CHILD_ID = {child_ids[-1]}
 		}}
 	"""))

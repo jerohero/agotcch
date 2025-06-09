@@ -74,6 +74,9 @@ def process_character_lines(lines, dnas):
 			elif character["birth"] < 8082:
 				# Skip characters born before first bookmark
 				continue
+			elif "twin" in character["traits"]["inherited"]:
+				# TODO TEMP DISABLE TWINS UNTIL FIXED
+				continue
 			elif "twin" in character["traits"]["inherited"] and character["bastard"]["is_known"]:
 				# TODO handle bastard twins (Martell_76, Velaryon_45, Baratheon_90, Baratheon_101, Forrester_30)
 				continue
@@ -95,7 +98,7 @@ def process_character_lines(lines, dnas):
 	# ))
 
 	story_cycles_file = generate_story_cycles(characters, fathers, mothers)
-	setup_cycles_event_file, base_birth_event_file, birth_events_file = generate_birth_effects(characters, fathers, mothers, dnas)
+	setup_cycles_effect_file, birth_effect_file = generate_birth_effects(characters, fathers, mothers, dnas)
 
 	# with open(path + '/output/common/story_cycles/agot_canon_children_story_cycles.txt', 'w') as f:
 	print('Generating story cycles...')
@@ -114,12 +117,16 @@ def process_character_lines(lines, dnas):
 
 	# with open(path + '/output/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w') as f:
 	print('Generating birth effects...')
-	with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_cycles_setup.txt', 'w', encoding="utf-8-sig") as f:
-		f.write(setup_cycles_event_file)
-	with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_births_base.txt', 'w', encoding="utf-8-sig") as f:
-		f.write(base_birth_event_file)
-	with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_births.txt', 'w', encoding="utf-8-sig") as f:
-		f.write(birth_events_file)
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_cycles_setup.txt', 'w', encoding="utf-8-sig") as f:
+	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/00_agot_scripted_effects_canon_children_setup.txt', 'w', encoding="utf-8-sig") as f:
+		f.write(setup_cycles_effect_file)
+	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/00_agot_scripted_effects_canon_children_birth.txt', 'w', encoding="utf-8-sig") as f:
+		f.write(birth_effect_file)
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_births_base.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(base_birth_event_file)
+	# with open('C:/Users/Jeroen/Documents/GitHub/agot/events/agot_events/agot_events_canon_children_births.txt', 'w', encoding="utf-8-sig") as f:
+	# 	f.write(birth_events_file)
+
 	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/canon_children/00_agot_scripted_effects_canon_children_birth_1.txt', 'w', encoding="utf-8-sig") as f:
 	# 	f.write(birth_effects_files[1])
 	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_effects/canon_children/00_agot_scripted_effects_canon_children_birth_2.txt', 'w', encoding="utf-8-sig") as f:
@@ -140,20 +147,20 @@ def process_character_lines(lines, dnas):
 		print('Generating dummy characters...')
 		f.write(generate_dummy_characters(characters, dnas))
 
-	# triggers_path = 'C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_scripted_triggers_canon_characters.txt'
+	triggers_path = 'C:/Users/Jeroen/Documents/GitHub/agot/common/scripted_triggers/agot_canon_characters_triggers.txt'
 	# triggers_lines = file.read_text_file_to_lines(triggers_path)
-	# with open(triggers_path, 'w', encoding="utf-8-sig") as f:
-	# 	print('Generating triggers...')
-	# 	f.write(generate_triggers(character_ids))
+	with open(triggers_path, 'w', encoding="utf-8-sig") as f:
+		print('Generating triggers...')
+		f.write(generate_triggers(character_ids))
 		
-	# with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w', encoding="utf-8-sig") as f:
-	# 	print('Generating traits...')
-	# 	f.write(generate_traits(all_ids))
+	with open('C:/Users/Jeroen/Documents/GitHub/agot/common/traits/00_agot_canon_children_traits.txt', 'w', encoding="utf-8-sig") as f:
+		print('Generating traits...')
+		f.write(generate_traits(character_ids))
 
-	# portrait_modifiers = generate_accessories()
-	# with open('C:/Users/Jeroen/Documents/GitHub/agot/gfx/portraits/portrait_modifiers/02_all_agot_characters.txt', 'w', encoding="utf-8-sig") as f:
-	# 	print('Generating portrait modifiers...')
-	# 	f.write(portrait_modifiers)
+	portrait_modifiers = generate_accessories()
+	with open('C:/Users/Jeroen/Documents/GitHub/agot/gfx/portraits/portrait_modifiers/02_all_agot_characters.txt', 'w', encoding="utf-8-sig") as f:
+		print('Generating portrait modifiers...')
+		f.write(portrait_modifiers)
 
 	print(f'\r{len(characters)} canon children added', end='')
 	export_to_excel(characters, "canon_children")

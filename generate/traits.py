@@ -9,7 +9,7 @@ sh = doc.get_worksheet_by_id(1620397751)
 data = sh.get_all_values()
 total = len(data)
 
-def generate_traits(ids: list) -> str:
+def generate_traits(ids) -> str:
 	results = {}
 	genes_templates = {
 		"custom_hair": ("hairstyles", "all_hairstyles"),
@@ -33,9 +33,9 @@ def generate_traits(ids: list) -> str:
 		(id, name, gender, dynasty, house, birth_date, death_date, culture, religion, *_), dna, canon, custom = row, row[17], row[23], row[24]
 		#if canon == "FALSE":
 		#    continue
-		if not dna:
+		if not dna or id not in ids:
 			continue
-		result = results.setdefault(f"is_{id.lower()}", {
+		result = results.setdefault(f"is_{id}", {
 			"physical": "no",
 			"shown_in_ruler_designer": "no",
 			"name": "trait_hidden",

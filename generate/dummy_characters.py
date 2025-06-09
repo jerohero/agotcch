@@ -1,5 +1,7 @@
 import textwrap
 
+INDENT = '	'
+
 def generate_dummy_characters(characters, dnas):
 	dummy_characters = []
 	prefix = textwrap.dedent(f"""
@@ -9,23 +11,68 @@ def generate_dummy_characters(characters, dnas):
 	""").lstrip()
 
 	for child_id, child in characters.items():
-		if child_id in dnas:
-			dummy_characters.append(create_dummy_character(child))
+		dummy_characters.append(create_dummy_character(child))
 
 	return prefix + '\n' + ''.join(dummy_characters).lstrip()
 
+def get_canon_status_trait(child):
+	if child["canon_status"] == "canon_status_canon":
+		return "canon_status_canon_trait"
+	elif child["canon_status"] == "canon_status_semicanon":
+		return "canon_status_semicanon_trait"
+	elif child["canon_status"] == "canon_status_mentioned":
+		return "canon_status_mentioned_trait"
+	else:
+		return ""
+	
+# def get_childhood_trait(child):
+# 	childhood_trait = child["traits"]["childhood"]
+# 	if childhood_trait == "rowdy":
+# 		return "rowdy_dummy"
+# 	elif childhood_trait == "charming":
+# 		return "charming_dummy"
+# 	elif childhood_trait == "curious":
+# 		return "curious_dummy"
+# 	elif childhood_trait == "pensive":
+# 		return "pensive_dummy"
+# 	elif childhood_trait == "bossy":
+# 		return "bossy_dummy"
+	
+def get_education_traits(child):
+	education_traits = child["traits"]["education"]
+	return [f"\ntrait = {trait}" for trait in education_traits]
+
+def get_inactive_traits(child):
+	inactive_traits = child["traits"]["inactive"]
+	return [f"\ntrait = {trait}" for trait in inactive_traits]
+
+def get_inherited_traits(child):
+	inherited_traits = child["traits"]["inherited"]
+	return [f"\ntrait = {trait}" for trait in inherited_traits]
+
 def create_dummy_character(child):
-	return textwrap.dedent(f"""
-		Dummy_{child["id"]} = {{
-			name = {child["name"]["primary"]}
-			dna = {child["id"]}
-			religion = fots_seven
-			culture = northman
-			father = Ruin_Empress
-			118.1.1 = {{
-				birth = yes
-				add_character_flag = has_scripted_appearance
+	childhood_trait = child["traits"]["childhood"]
+
+	return textwrap.dedent('\n'.join(
+		line for line in f"""
+			Dummy_{child["id"]} = {{
+				name = {child["name"]["primary"]}
+				{ f"dna = {child['dna']}" if child["dna"] else ""}
+				{ "female = yes" if child["is_female"] else ""}
+				religion = fots_seven
+				culture = northman
+				father = Ruin_Empress
+				{ f"trait = {childhood_trait}" if childhood_trait else ""}
+				{ textwrap.indent(''.join(get_education_traits(child)), INDENT * 4) }
+				{ textwrap.indent(''.join(get_inactive_traits(child)), INDENT * 4) }
+				{ textwrap.indent(''.join(get_inherited_traits(child)), INDENT * 4) }
+				{ "trait = has_scripted_appearance_trait" if child["has_scripted_appearance"] else ""}
+				{ f"trait = is_{child['id']}" if child["dna"] else "" }
+				trait = { get_canon_status_trait(child) }
+				118.1.1 = {{
+					birth = yes
+				}}
+				118.1.2 = {{ death = yes }}
 			}}
-			118.1.2 = {{ death = yes }}
-		}}
-	""")
+		""".splitlines() if line.strip()
+	) + '\n')
