@@ -202,12 +202,20 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
 		if child["mother"] == mother_id:
 			child_condition = "if" if len(children_effects) == 0 else "else_if"
 			pregnancy_effect = generate_pregnancy_effect(child, indent)
+			real_father_trigger = ""
 
 			if "twin" in child["traits"]["inherited"]:
 				# Only create an effect for the first child of a pair of twins
 				if twin_pointer and twin_pointer["birth"] == child["birth"]:
 					continue
 				twin_pointer = child
+
+			if child["real_father"]:
+				real_father_trigger = textwrap.dedent(f"""
+					scope:canon_father.var:agot_cc_real_father_{child['real_father']} = {{
+						is_alive = yes
+					}}
+				""").rstrip()
 
 			children_effects.append(textwrap.dedent(f"""
 				# {child_id}{" (twin)" if "twin" in child["traits"]["inherited"] else ""} 
@@ -218,9 +226,11 @@ def generate_children_effects(characters, child_ids, mother_id, indent):
 							BIRTH_YEAR = {child["birth"]}
 							BIRTH_YEAR_MIN = {child["birth"] - 1}
 						}}
+						{real_father_trigger if real_father_trigger else ""}
 					}}
 					{pregnancy_effect}
 				}}
+				
 			""").rstrip())
 
 	children_effects.append(textwrap.dedent(f"""

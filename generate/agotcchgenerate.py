@@ -74,9 +74,9 @@ def process_character_lines(lines, dnas):
 			elif character["birth"] < 8082:
 				# Skip characters born before first bookmark
 				continue
-			elif "twin" in character["traits"]["inherited"]:
-				# TODO TEMP DISABLE TWINS UNTIL FIXED
-				continue
+			# elif "twin" in character["traits"]["inherited"]:
+			# 	# TODO TEMP DISABLE TWINS UNTIL FIXED
+			# 	continue
 			elif "twin" in character["traits"]["inherited"] and character["bastard"]["is_known"]:
 				# TODO handle bastard twins (Martell_76, Velaryon_45, Baratheon_90, Baratheon_101, Forrester_30)
 				continue
