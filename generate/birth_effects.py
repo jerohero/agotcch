@@ -1,5 +1,6 @@
 import textwrap
 from lookups import *
+import re
 
 INDENT = '	'
 
@@ -183,14 +184,14 @@ def create_birth_effect(characters: dict, mothers_to_children: dict, fathers_to_
 			
 	# 		child_effects.append(create_child_effect(child, twin_birth_effects))
 
-	return textwrap.dedent(f"""
+	return re.sub(r'\n\s*\n', '\n', textwrap.dedent(f"""
 		agot_canon_children_base_birth_effect = {{
 			if = {{
 				limit = {{ has_character_flag = agot_pregnancy_child_flag }}
 				{textwrap.indent(''.join(create_birth_effects(characters, mothers_to_children, fathers_to_children, chained_mothers, chained_fathers)), INDENT * 4).rstrip()}
 			}}
 		}}
-	""").rstrip()
+	""").rstrip())
 
 def create_twin_birth_event(character: dict, chained_child_fathers: list, has_dna: bool) -> str:
 	name_male = character["name"]["primary"] if not character['is_female'] else character["name"]["alt"]
@@ -202,7 +203,6 @@ def create_twin_birth_event(character: dict, chained_child_fathers: list, has_dn
 			hidden = yes
 			immediate = {{
 				create_character = {{
-					name = "{character['name']['primary']}"
 					age = 0
 					father = {'scope:father' if character['father'] else 'scope:real_father'}
 					mother = scope:mother
@@ -435,6 +435,27 @@ def get_canon_father_setup(character, chained_child_fathers):
 
 	return ''.join(father_setup)
 
+def create_setup_parent_effects(child: dict, chained_child_fathers: list) -> str:
+	setup_effects = ''
+	if child['is_female']:
+		for child_father in chained_child_fathers:
+			setup_effects += textwrap.dedent(f"""
+				agot_canon_children_setup_mother_effect = {{ ID = {child["id"]} FATHER_ID = {child_father} SCOPE = scope:child }}
+			""").rstrip()
+	if not child['is_female']:
+		for child_father in chained_child_fathers:
+			if child_father == child["id"]:
+				setup_effects += textwrap.dedent(f"""
+					agot_canon_children_setup_story_effect = {{ ID = {child["id"]} SCOPE = scope:child }}
+				""").rstrip()
+			else:
+				setup_effects += textwrap.dedent(f"""
+					agot_canon_children_setup_real_father_effect = {{ ID = {child["id"]} FATHER_ID = {child_father} SCOPE = scope:child }}
+				""").rstrip()
+
+	return setup_effects
+
+
 def create_birth_effects(characters: dict, mothers_to_children: dict, fathers_to_children: dict, chained_mothers: list, chained_fathers: list) -> list:
 	birth_effects = []
 
@@ -443,29 +464,21 @@ def create_birth_effects(characters: dict, mothers_to_children: dict, fathers_to
 		mother_twins = [child for child in mothers_to_children[child["mother"]] if "twin" in characters[child]["traits"]["inherited"]]
 		child_twins = [twin for twin in mother_twins if twin != child["id"] and characters[twin]["birth"] == child["birth"]]
 
-		setup_effects = ''
-		if child['is_female']:
-			for child_father in chained_child_fathers:
-				setup_effects += textwrap.dedent(f"""
-					agot_canon_children_setup_mother_effect = {{ ID = {child["id"]} FATHER_ID = {child_father} }}
-				""").rstrip()
-		if not child['is_female']:
-			for child_father in chained_child_fathers:
-				if child_father == child["id"]:
-					setup_effects += f"\ncreate_story = story_agot_cc_{child['id'].lower()}"
-				else:
-					setup_effects += textwrap.dedent(f"""
-						agot_canon_children_setup_real_father_effect = {{ ID = {child["id"]} FATHER_ID = {child_father} }}
-					""").rstrip()
-
-
 		# { ''.join([f"agot_canon_children_universal_twin_birth_effect = {{ ID = {child_twins['id']} }}\n" for twin in child_twins]) } # Haven't tested multiple twins yet
+		twin = characters[child_twins[0]] if len(child_twins) > 0 else None
+
+		setup_effects = ''
+		setup_effects += create_setup_parent_effects(child, chained_child_fathers)
+		if twin:
+			setup_effects += create_setup_parent_effects(twin, chained_child_fathers)
+
 		birth_effect = textwrap.dedent(f"""
 			{"if" if i == 0 else "else_if"} = {{
 				limit = {{ var:agot_pregnancy_child_flag = flag:{child["id"]} }}
 				agot_canon_children_universal_birth_effect = {{ ID = {child["id"]} SCOPE = scope:child }}
 				{ f"agot_canon_children_dna_effect = {{ ID = {child['id']} SCOPE = scope:child }}" if child["dna"] else "" }
-				{ f"agot_canon_children_universal_twin_birth_effect = {{ ID = {child_twins[0]} }}" if len(child_twins) > 0 else "" }
+				{ f"agot_canon_children_universal_twin_birth_effect = {{ ID = {twin['id']} IS_FEMALE = { 'yes' if twin['is_female'] else 'no' } }}" if twin else "" }
+				{ f"agot_canon_children_dna_effect = {{ ID = {twin['id']} SCOPE = scope:child_2 }}" if (twin and twin["dna"]) else "" }
 				{ textwrap.indent(''.join(setup_effects), INDENT * 4).rstrip()}
 			}}
 		""").rstrip()

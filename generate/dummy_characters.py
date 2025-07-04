@@ -13,6 +13,9 @@ def generate_dummy_characters(characters, dnas):
 	for child_id, child in characters.items():
 		dummy_characters.append(create_dummy_character(child))
 
+		if child["name"]["alt"]:
+			dummy_characters.append(create_dummy_character(child))
+
 	return prefix + '\n' + ''.join(dummy_characters).lstrip()
 
 def get_canon_status_trait(child):
@@ -50,8 +53,17 @@ def get_inherited_traits(child):
 	inherited_traits = child["traits"]["inherited"]
 	return [f"\ntrait = {trait}" for trait in inherited_traits]
 
-def create_dummy_character(child):
+def create_dummy_character(child, is_alt_gender=False):
 	childhood_trait = child["traits"]["childhood"]
+
+	if is_alt_gender:
+		return textwrap.dedent('\n'.join(
+			line for line in f"""
+				Dummy_{child["id"]}_alt = {{
+					name = {child["name"]["alt"]}
+				}}
+			"""
+		))
 
 	return textwrap.dedent('\n'.join(
 		line for line in f"""
